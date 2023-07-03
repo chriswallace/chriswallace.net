@@ -1,0 +1,57 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  @apply mb-6;
+}
+
+h1 {
+  @apply text-3xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+h3 {
+  @apply text-lg;
+}
+
+h4,
+h5,
+h6 {
+  @apply text-base;
+}
+
+a {
+  text-decoration-line: underline;
+  text-decoration-color: rgb(109, 193, 109);
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: auto;
+}
+
+a:hover {
+  text-decoration-color: black;
+}
+
+article {
+  @apply pt-24 sm:pt-32 pb-16 max-w-prose;
+}
+
+article li {
+  @apply list-disc list-outside ml-4 pl-2 mb-3;
+}
+
+.navigation {
+  @apply py-10;
+}
+
+.navigation h1 {
+  @apply text-2xl;
+}
