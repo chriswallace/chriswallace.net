@@ -19,8 +19,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Chris Wallace is a design executive who helps companies build high-performing remote teams.
   He is the founder of UltraDAO, a community of artists and creators, and the project lead for
   Woodies, a media and entertainment brand in the web3 space.
-baseurl: "chriswallace.github.io" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://chriswallace.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: chriswallace
 github_username: chriswallace
 
