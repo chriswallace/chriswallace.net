@@ -4,7 +4,13 @@ title: About
 permalink: /about/
 ---
 
-Chris Wallace is a design executive who helps companies build high-performing remote product design teams. He is the founder of UltraDAO, a community of artists and creators, and the project lead for Woodies, a media and entertainment brand in the web3 space.
+<div class="extendo">
+
+<img src="/assets/images/profile-photo.jpg" alt="Chris Wallace" class="md:float-right md:ml-6 mb-6 md:max-w-[280px] rounded-md">
+
+<p>Chris Wallace is a design executive who helps companies build high-performing remote product design teams. He is the founder of UltraDAO, a community of artists and creators, and the project lead for Woodies, a media and entertainment brand in the web3 space.</p>
+
+</div>
 
 ## Interviews
 

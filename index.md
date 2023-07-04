@@ -12,4 +12,3 @@ Hi. I'm Chris, a former agency design executive building blockchain-based produc
 - [CV / Résumé](/resume)
 - [Active Projects](/projects)
 - [Art](/art)
-- [Twitter](https://twitter.com/chriswallace) / [Instagram](https://instagram.com/chriswallace7)
