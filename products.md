@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Projects
-permalink: /projects/
+title: Products
+permalink: /products/
 ---
 
 Below are some of the ongoing projects I've been working on over the past couple years that I maintain.

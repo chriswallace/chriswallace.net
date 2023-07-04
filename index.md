@@ -3,12 +3,12 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Design leader from the future.
+title: Designing the future.
 ---
 
-Hi. I'm Chris, a former agency design executive building blockchain-based products and brands. I am the founder of [UltraDAO](https://ultradao.org), a community of artists and creators, and project lead for [Woodies](https://woodiesofficial.com), a media and entertainment brand in the web3 space.
+Hi. I'm Chris, a design agency veteran building blockchain-based products and brands. I'm currently taking on new consulting work with established companies and startups, especially those focused on new web3 initiatives and design team formation. If you're ready to develop a strong strategy for your next project, please don't hesitate to <a href="mailto:chris@ultradao.org">email me</a>.
 
 - [About](/about)
 - [CV / Résumé](/resume)
-- [Active Projects](/projects)
+- [Products](/products)
 - [Art](/art)
