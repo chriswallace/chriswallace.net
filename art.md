@@ -4,14 +4,13 @@ title: Art
 permalink: /art/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Since 2021, I've been creating digital art, exploring concepts that I find unique and interesting.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+<div class="gallery">
+    <img src="/assets/images/example-2.jpg" alt="">
+    <img src="/assets/images/example-3.jpg" alt="">
+</div>
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+- [The Geometry of Rain](https://www.fxhash.xyz/generative/26011) - a generative art experiment co-created with GPT-4, an AI chatbot that wrote all the code for this long-form fxhash collection
 
-[jekyll-organization]: https://github.com/jekyll
+- [AI Art](https://foundation.app/@FewHearts) - I've been releasing AI-generated paintings under pseudonym FewHearts as an outlet for creativity.

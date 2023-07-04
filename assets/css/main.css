@@ -12,21 +12,21 @@ p {
 }
 
 h1 {
-  @apply text-3xl;
+  @apply text-4xl;
 }
 
 h2 {
-  @apply text-xl;
+  @apply text-2xl mt-12 mb-4;
 }
 
 h3 {
-  @apply text-lg;
+  @apply text-2xl mt-8 mb-4;
 }
 
 h4,
 h5,
 h6 {
-  @apply text-base;
+  @apply text-base font-bold pb-2 mt-6 mb-2 border-b-2 border-stone-500;
 }
 
 a {
@@ -45,7 +45,11 @@ article {
 }
 
 article li {
-  @apply list-disc list-outside ml-4 pl-2 mb-3;
+  @apply list-disc list-outside ml-4 pl-2;
+}
+
+article ul{
+  @apply mb-12;
 }
 
 .navigation {
@@ -53,5 +57,9 @@ article li {
 }
 
 .navigation h1 {
-  @apply text-2xl;
+  @apply text-base uppercase;
+}
+
+.gallery{
+  @apply grid grid-cols-2 gap-4 mt-10 mb-8;
 }
