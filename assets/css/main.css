@@ -40,6 +40,10 @@ a:hover {
   text-decoration-color: black;
 }
 
+.container{
+  @apply w-[calc(100%-2rem)];
+}
+
 article {
   @apply pt-24 sm:pt-32 pb-16 max-w-prose;
 }
@@ -58,6 +62,10 @@ article ul{
 
 .navigation h1 {
   @apply text-base uppercase;
+}
+
+.navigation h1 a{
+    text-decoration: none;
 }
 
 .gallery{
