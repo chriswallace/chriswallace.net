@@ -3,10 +3,10 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Design leader, artist, art collector, and curator.
+title: Design leader sent from the future.
 ---
 
-Chris Wallace is a design executive who helps companies build high-performing remote product design teams. He is the founder of [UltraDAO](https://ultradao.org), a community of artists and creators, and the project lead for [Woodies](https://woodiesofficial.com), a media and entertainment brand in the web3 space.
+Hi. I'm Chris, a former agency design executive building blockchain-based products and brands. I am the founder of [UltraDAO](https://ultradao.org), a community of artists and creators, and project lead for [Woodies](https://woodiesofficial.com), a media and entertainment brand in the web3 space.
 
 - [About](/about)
 - [CV / Résumé](/resume)
