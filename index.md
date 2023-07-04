@@ -12,4 +12,4 @@ Chris Wallace is a design executive who helps companies build high-performing re
 - [CV / Résumé](/resume)
 - [Active Projects](/projects)
 - [Art](/art)
-- [Twitter](https//twitter.com/chriswallace) / [Instagram](https://instagram.com/chriswallace7)
+- [Twitter](https://twitter.com/chriswallace) / [Instagram](https://instagram.com/chriswallace7)
