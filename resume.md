@@ -67,51 +67,58 @@ Here are a few links to projects I’ve worked on in a creative direction and pr
 
 #### [Twelve Days of CryptoArt](https://twelvedays.ultradao.org)
 
-Role: Curation, Branding, Web Design, Full Stack Development
-Year: 2023
+<p class="mb-0">Role: Curation, Branding, Web Design, Full Stack Development</p>
+<p>Year: 2023</p>
 
 Branded, curated, designed, and engineered Twelve Days of CryptoArt, a blind art collecting event exhibiting new artworks from a diverse group of artists. Engineered the full web application using modern technologies, including Sveltekit, JavaScript/TypeScript, Sass, Tailwind, Prisma, PostgreSQL, Redis.
 
 #### [UltraDAO](https://ultradao.org)
 
-Role: Branding, Web Design, Full Stack Development
-Year: 2021-2023
+<p class="mb-0">Role: Branding, Web Design, Full Stack Development</p>
+<p>Year: 2021-2023</p>
 
 Created the branding, design language, and website for UltraDAO, including writing all content. Engineered website using Jekyll, Sass, JavaScript, and Tailwind.
 
+#### [Woodies](https://woodiesofficial.com)
+
+<p class="mb-0">Role: Design, Front-end Engineering</p>
+<p>Year: 2021-2023</p>
+
+Designed the website, including multiple iterations as we released new features and media. Contributed HTML/CSS/JavaScript to some sections throughout.
+
 #### [Woodies: Origin](https://www.youtube.com/watch?v=encMCWoBc3o)
 
-Role: Executive Creative Direction
-Year: 2022
+<p class="mb-0">Role: Executive Creative Direction</p>
+<p>Year: 2022</p>
 
 Hired and directed an international media production company to create a Hollywood-grade animated short film, engrossing fans in the Woodies universe within a span of six months and a budget of approximately $500,000.
 
 #### [California DMV Website Redesign](https://dmv.ca.gov)
 
-Role: Executive Creative Direction
-Year: 2020
+<p class="mb-0">Role: Executive Creative Direction</p>
+<p>Year: 2020</p>
 
 Led a landmark project for our agency: a comprehensive redesign of the California DMV website. Assembled and guided the design team behind this task. The revamped site was met with resounding approval from both the public and DMV staff.
 
 #### [Google Site Kit](https://sitekit.withgoogle.com)
 
-Role: Executive Creative Direction
-Year: 2019
+<p class="mb-0">Role: Executive Creative Direction</p>
+<p>Year: 2019</p>
 
 In partnership with Google, launched a WordPress plugin that integrates Google's suite of products in one location. Site Kit quickly gained adoption among website owners, thanks to a design language that strikingly represented both Google's identity and the WordPress admin environment.
 
 #### 10up Brand & Recruiting Videos
 
-Links: [Brand Video](https://vimeo.com/284765957), [Recruiting Video](https://vimeo.com/284768433)
-Role: Executive Creative Direction
-Year: 2018
+<p class="mb-0">Links: <a href="(https://vimeo.com/284765957">Brand Video</a>, <a href="https://vimeo.com/284768433">Recruiting Video</a></p>
+<p class="mb-0">Role: Executive Creative Direction</p>
+<p>Year: 2018</p>
 
 Pitched the idea of creating two marketingh videos for 10up: one for prospective clients and a second for prospective employees. With our annual company meetup in Jackson Hole, Wyoming as the backdrop, we flew a video crew, key client stakeholders, and team members out to film interviews and B-roll. Functioned both as an Executive Producer and Creative Director for the project.
 
 #### [GoDaddy Go Theme](https://www.godaddy.com/wordpress-themes)
 
-Role: Executive Creative Direction
-Year: 2019
+<p class="mb-0">Role: Executive Creative Direction</p>
+<p>Year: 2019</p>
 
 Collaborated with two senior designers on a project for returning client, GoDaddy. Developed a computational design system capable of producing an endless variety of themes, resulting in a surge in user signups and WordPress users for GoDaddy. Assisted the client and internal designers with valuable insights, critiqued design progress, and worked closely with the engineering team to ensure optimal implementation of our work.
 

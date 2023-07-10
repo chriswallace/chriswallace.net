@@ -80,19 +80,7 @@ article ul {
 }
 
 .navigation ul {
-  @apply grid grid-cols-3 gap-4;
-}
-
-.navigation li:first-child {
-  @apply justify-self-start;
-}
-
-.navigation li {
-  @apply justify-self-center;
-}
-
-.navigation li:last-child {
-  @apply justify-self-end;
+  @apply flex justify-between items-center gap-4;
 }
 
 .gallery {
@@ -102,10 +90,6 @@ article ul {
 .social-button {
   @apply p-2 bg-white inline-block rounded-md border border-stone-200;
   line-height: 1;
-}
-
-.social-button span {
-  @apply sm:hidden;
 }
 
 .social-button:hover {
