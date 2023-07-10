@@ -6,7 +6,7 @@ permalink: /about/
 
 <div class="extendo">
 
-<img src="/assets/images/profile-photo.jpg" alt="Chris Wallace" class="md:float-right md:ml-6 mb-6 md:max-w-[280px] rounded-md">
+<img src="/assets/images/profile-photo.jpg" alt="Chris Wallace" class="md:float-right md:ml-6 mb-6 rounded-md max-w-md">
 
 <p>Chris Wallace is an innovative creative and co-founder of UltraDAO, a decentralized artist collective that explores the intersection of art, technology, and storytelling through the lens of blockchain and NFTs. From the establishment of a culturally significant NFT artwork collection to the inception of intellectual property, Chris's ventures have transformed the narrative of blockchain technology in the creative world.</p>
 

@@ -4,90 +4,116 @@ title: CV / Résumé
 permalink: /resume/
 ---
 
-## Introduction
+<p>
 
-I am a two-time Emmy-nominated design leader with 15+ years as an executive, designer, and remote design team leader. Through agency contracts, I've worked with major tech and media organizations including Google, Microsoft, Facebook, ESPN, the Boston Globe, Saturday Evening Post, AMC Networks and more with deep experience designing effective web apps, products, and editorial experiences.
+<svg class="feather feather-download inline" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+
+<a class="inline" href="/assets/downloads/chris-wallace-web3-blockchain-creative-director.pdf" download> Download as PDF</a>
+
+</p>
+
+## Professional Summary
+
+An Emmy-nominated design executive with over 15 years of remote leadership in creative direction and design. Distinguished track record in pioneering innovative web applications, products, and editorial experiences for high-profile tech and media organizations like Google, Microsoft, Facebook, ESPN, the Boston Globe, AMC Networks, among others. Proven proficiency in implementing blockchain and AI technologies to develop novel digital ownership solutions in the realm of art and collectibles.
 
 ### Work Experience
 
 #### CEO at UltraDAO Studios / _2021-Present_ / _Remote_
 
-Established a decentralized creative studio releasing digital collectibles and art products. I lead a group of talented digital artists, project managers, and developers creating Woodies, a collection of nearly 10,000 unique digital collectibles and 3D characters. Also, acting as lead curator, delivered multiple high value digital art projects across a range of genres.
+Founded a decentralized web3 creative studio focused on digital art products and collectibles. Supervised a team of digital artists, project managers, and developers, leading the creation of Woodies, a series of 10,000 unique digital collectibles and 3D characters.
 
-- Built multiple product brands from the ground up, including ULTRAPASS, Woodies, and Twelve Days of CryptoArt
-- Drove multi-million dollar revenue in the first six months
+- Steered the growth of product brands from inception including ULTRAPASS, Woodies, and Twelve Days of CryptoArt
+- Generated multimillion-dollar revenue within the first six months
+- Oversaw the planting of one million trees in Sub-Saharan Africa via Trees for the Future
+- Awarded "Best Environmental Initiative from an NFT project" at NFT NYC 2022
+- Executive Creative Director for multiple creative projects including Woodies Generative Characters, Woodies: Origin (animated short film), Woodies 3D, and more
 
 #### VP, Experience Design at 10up / _2017-2021_ / _Remote_
 
-Led the design discipline across an international agency of 250+ supporting teams across three continents and 7 countries. Set the vision for design at the company, moving toward strong cross-discipline/client collaboration and co-design practices. Worked with senior leaders on company-wide initiatives, design programs, and process improvements. Hired designers and leaders, directly managed directors and co-managed designers.
+Directed the design discipline for a global agency of 250+ staff spanning three continents and 16 countries. Orchestrated design vision, emphasizing collaboration and co-design practices.
 
-- Successfully hired key design leaders supporting designers across the US and EMEA
-- Grew design team from 5 to 20 across 7 countries and 12 time zones
-- Helped support and grow agency revenue of ~95% in four years
-- Implemented inclusive hiring practices successfully diversifying team composition
-- Expanded team capabilities to meet client needs, offering new design services like content design, illustration, video production, and more
-- Introduced design operations, increasing team productivity and defining new standards across an international design team
+- Grew the design team from 5 to 20 professionals, stationed across 12 time zones
+- Contributed to a near doubling of agency revenue (~95%) within four years
+- Successfully diversified team composition through inclusive hiring practices
+- Expanded design services to incorporate content design, illustration, video production, and more
 
 #### Co-Founder/Principal Creative at Lift UX / _2009-2017_ / _Remote_
 
-Grew and managed a small team of designers and engineers building apps and websites for a wide range of clients like AMC Networks, Frito-Lay, The Next Web, and GoDaddy. Built up a design template product division and commercial WordPress theme division through the following web brands.
+Steered a boutique team of designers and engineers, crafting apps and websites for diverse clients such as AMC Networks, Frito-Lay, and GoDaddy.
 
-- Pioneered interactive second screen apps for television series like The Walking Dead Story Sync (Emmy Award Nominee for Outstanding Interactive Program—2013) and Breaking Bad Story Sync
-- Received an Emmy Award nomination Mad Men: The Fan Cut for Outstanding Creative Achievement in Interactive Media – Social TV Experience—2015
+- Launched innovative interactive second-screen apps for acclaimed TV series, earning two Emmy nominations
 - Hired and managed a small team of full-time and contract designers
-- Grew product division website traffic to 2 million visitors per month
-- Acquired in 2017 by 10up
+- Grew website traffic for the product division to 2 million monthly visitors
+- Successfully acquired by 10up in 2017
 
 #### Front-End Developer at Enterprise Rent-A-Car / _2007-2009_ / _St. Louis, MO_
 
-- Developed front-end interfaces and experiences (HTML, CSS, and Javascript) in B2B applications and B2C websites. Worked directly with UX designers, Visual Designers, and back-end Java engineers to implement new applications and iterations.
-- Partnered with Visual Designers to turn interface designs into coded, interactive prototypes for testing and review by product managers
-- Collaborated with back-end engineers to implement code into applications
-- Managed weekly deployments for images and HTML used on enterprise.com and other consumer-facing applications
-- Engaged in QA support and monthly release cycles
+Developed front-end interfaces for B2B applications and B2C websites, liaising with UX designers and back-end Java engineers to execute new applications.
+
+- Managed weekly deployments for enterprise.com and other customer-facing applications
+- Provided QA support for monthly release cycles
 
 #### Senior E-Commerce Web Designer at Network Solutions / _2006-2007_ / _Belleville, IL_
 
-I designed and wrote front-end code for e-commerce storefronts for small businesses (it was like the first Shopify). Much of my time was spent working directly with clients, managing their projects to a strict two- or four-week timeline and creating themes to their specifications.
+Designed and developed front-end code for e-commerce storefronts for small businesses, maintaining stringent project timelines and adhering to client specifications.
 
 #### Webmaster at St. Louis Christian College / _2005-2006_ / _St. Louis, MO_
 
-As web content owner, I was responsible for the design, development, and maintenance of our website and all visual communications. I was the first designer and led the production of a quarterly full-color newsletter, banner and magazine ads, posters, brochures, as well as all our web graphics and applications. In my tenure, the school experienced 60% growth and by the next school year, the campus was filled to capacity with a total growth nearing 200%.
+As the primary web content owner, designed, developed, and maintained the college's online presence. During my tenure, the college witnessed a 60% growth rate, reaching full campus capacity the following year.
 
-## Recent Work
+## Selected Works
 
 Here are a few links to projects I’ve worked on in a creative direction and production design capacity. The links referenced fore each are live, up-to-date, and entirely designed by me and my team.
 
-#### [Woodies: Origin](https://www.youtube.com/watch?v=encMCWoBc3o) / _Executive Creative Director_
+#### [Twelve Days of CryptoArt](https://twelvedays.ultradao.org)
 
-Over the course of approximately six months, I hired and directed an international media production company in the creation of an animated short film with a budget of approximately $500,000. The result is a Hollywood-caliber short film that immerses fans in the Woodies universe.
+Role: Curation, Branding, Web Design, Full Stack Development
+Year: 2023
 
-#### [California DMV Website Redesign](https://dmv.ca.gov) / _Executive Creative Director_
+Branded, curated, designed, and engineered Twelve Days of CryptoArt, a blind art collecting event exhibiting new artworks from a diverse group of artists. Engineered the full web application using modern technologies, including Sveltekit, JavaScript/TypeScript, Sass, Tailwind, Prisma, PostgreSQL, Redis.
 
-In early 2020, I worked on the largest project in our agency’s history, completing a massive redesign of the California DMV website. I hired and oversaw the design work for the team who executed on this work. The redesign was met with overwhelmingly positive reviews from the public and and DMV team.
+#### [UltraDAO](https://ultradao.org)
 
-#### [StoryCorps Google Doodle](https://storycorps.org/google-doodle) / _Lead Designer_
+Role: Branding, Web Design, Full Stack Development
+Year: 2021-2023
 
-In 2019, our client, StoryCorps, asked for help putting together a landing page that would be linked to a new Google Doodle for Veteran’s Day. I worked directly with our stakeholder to design this page and ultimately helped drive massive awareness of StoryCorp and their mission to archive America’s oral history through voice recordings.
+Created the branding, design language, and website for UltraDAO, including writing all content. Engineered website using Jekyll, Sass, JavaScript, and Tailwind.
 
-#### [Google Site Kit](https://sitekit.withgoogle.com) / _Executive Creative Director_
+#### [Woodies: Origin](https://www.youtube.com/watch?v=encMCWoBc3o)
 
-In 2019, we worked with Google to launch a plugin for WordPress site owners that unifies their Google suite of products in one place. This new product, dubbed Site Kit by Google, would become the official Google WordPress plugin and be download by hundreds of thousands of website owners in just a few short months. I worked with our lead designer to produce a design language that was both uniquely Google but also fitting for the WordPress admin, a balance that was quite difficult to strike.
+Role: Executive Creative Direction
+Year: 2022
 
-#### 10up Brand & Recruiting Videos / _Executive Producer_
+Hired and directed an international media production company to create a Hollywood-grade animated short film, engrossing fans in the Woodies universe within a span of six months and a budget of approximately $500,000.
 
-[Brand Video](https://vimeo.com/284765957)
-[Recruiting Video](https://vimeo.com/284768433)
+#### [California DMV Website Redesign](https://dmv.ca.gov)
 
-In 2018, I pitched the idea of creating two videos for 10up: one for our potential clients and a second for potential employees to meet and learn more about us. Using our annual company meetup in Jackson Hole, Wyoming as the backdrop, we flew a video crew out for a few days to capture footage and interview clients and team members. I functioned both as an Executive Producer and Creative Director for the project.
+Role: Executive Creative Direction
+Year: 2020
 
-#### [GoDaddy Go Theme](https://www.godaddy.com/wordpress-themes) / _Executive Creative Director_
+Led a landmark project for our agency: a comprehensive redesign of the California DMV website. Assembled and guided the design team behind this task. The revamped site was met with resounding approval from both the public and DMV staff.
 
-In 2019, I worked with two senior designers on a project for returning client, GoDaddy. With thousands of customers, GoDaddy needed our help architecting a system with computational design powering an endless array of themes. If you click through the link above, you’ll see what appears to be hundreds of different website templates but it’s all powered by the Go WordPress theme.
+#### [Google Site Kit](https://sitekit.withgoogle.com)
 
-Having contributed directly to the exact same type of project for GoDaddy many years earlier, my role in this was to advise both the client and our internal designers on how to be successful in crafting this theme framework. I critiqued design progress every week and offered insight that helped guide them along the way. I also worked directly with the engineering team to ensure they understood the design direction and the ideal way to implement our work.
+Role: Executive Creative Direction
+Year: 2019
 
-This new theme has powered a massive spike in user signups and WordPress users for GoDaddy and was praised by the CEO during an earnings report.
+In partnership with Google, launched a WordPress plugin that integrates Google's suite of products in one location. Site Kit quickly gained adoption among website owners, thanks to a design language that strikingly represented both Google's identity and the WordPress admin environment.
+
+#### 10up Brand & Recruiting Videos
+
+Links: [Brand Video](https://vimeo.com/284765957), [Recruiting Video](https://vimeo.com/284768433)
+Role: Executive Creative Direction
+Year: 2018
+
+Pitched the idea of creating two marketingh videos for 10up: one for prospective clients and a second for prospective employees. With our annual company meetup in Jackson Hole, Wyoming as the backdrop, we flew a video crew, key client stakeholders, and team members out to film interviews and B-roll. Functioned both as an Executive Producer and Creative Director for the project.
+
+#### [GoDaddy Go Theme](https://www.godaddy.com/wordpress-themes)
+
+Role: Executive Creative Direction
+Year: 2019
+
+Collaborated with two senior designers on a project for returning client, GoDaddy. Developed a computational design system capable of producing an endless variety of themes, resulting in a surge in user signups and WordPress users for GoDaddy. Assisted the client and internal designers with valuable insights, critiqued design progress, and worked closely with the engineering team to ensure optimal implementation of our work.
 
 ## Skills
 
