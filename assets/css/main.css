@@ -12,7 +12,7 @@ p {
 }
 
 h1 {
-  @apply text-4xl;
+  @apply text-4xl max-w-4xl;
 }
 
 h2 {
@@ -40,7 +40,7 @@ a:hover {
   text-decoration-color: black;
 }
 
-.container{
+.container {
   @apply w-[calc(100%-2rem)];
 }
 
@@ -53,15 +53,15 @@ article ul,
 article h3,
 article h4,
 article h5,
-article h6{
-  @apply max-w-xl;
+article h6 {
+  @apply max-w-3xl;
 }
 
 article li {
   @apply list-disc list-outside ml-4 pl-2;
 }
 
-article ul{
+article ul {
   @apply mb-12;
 }
 
@@ -73,52 +73,60 @@ article ul{
   @apply text-base uppercase m-0;
 }
 
-.navigation h1 a{
+.navigation h1 a {
   @apply m-0 mr-4;
   text-decoration: none;
   text-decoration-thickness: 0;
 }
 
-.navigation ul{
-  @apply sm:flex sm:gap-2 sm:items-center sm:text-right;
+.navigation ul {
+  @apply grid grid-cols-3 gap-4;
 }
 
-.navigation li{
-  @apply inline;
+.navigation li:first-child {
+  @apply justify-self-start;
 }
 
-.navigation li:first-child{
-  @apply sm:mr-auto;
+.navigation li {
+  @apply justify-self-center;
 }
 
-.navigation li:first-child,
-.navigation li:nth-of-type(2){
-  @apply mb-2 block;
+.navigation li:last-child {
+  @apply justify-self-end;
 }
 
-.navigation li:nth-of-type(2){
-  @apply mr-2 mb-6 sm:mb-2;
-}
-
-.gallery{
+.gallery {
   @apply grid grid-cols-2 gap-4 mt-10 mb-8;
 }
 
-.social-button{
+.social-button {
   @apply p-2 bg-white inline-block rounded-md border border-stone-200;
   line-height: 1;
 }
 
-.social-button span{
+.social-button span {
   @apply sm:hidden;
 }
 
-.social-button:hover{
+.social-button:hover {
   @apply bg-stone-200;
 }
 
-.social-button svg{
+.social-button svg {
   width: 18px;
   height: 18px;
   display: inline-block;
+}
+
+.image-collage {
+  @apply sm:flex mb-10 pt-6 gap-2 overflow-x-hidden relative;
+}
+
+.image-collage img {
+  @apply rounded-md max-h-[272px];
+}
+
+.image-collage img:nth-child(2),
+.image-collage img:nth-child(3) {
+  @apply hidden sm:block;
 }
