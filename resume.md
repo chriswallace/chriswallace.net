@@ -16,7 +16,7 @@ permalink: /resume/
 
 An Emmy-nominated design executive with over 15 years of remote leadership in creative direction and design. Distinguished track record in pioneering innovative web applications, products, and editorial experiences for high-profile tech and media organizations like Google, Microsoft, Facebook, ESPN, the Boston Globe, AMC Networks, among others. Proven proficiency in implementing blockchain and AI technologies to develop novel digital ownership solutions in the realm of art and collectibles.
 
-### Work Experience
+## Work Experience
 
 #### CEO at UltraDAO Studios / _2021-Present_ / _Remote_
 

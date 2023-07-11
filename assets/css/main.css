@@ -12,21 +12,21 @@ p {
 }
 
 h1 {
-  @apply text-4xl max-w-4xl;
+  @apply text-3xl sm:text-4xl max-w-4xl;
 }
 
 h2 {
-  @apply text-2xl mt-12 mb-4;
+  @apply text-2xl mt-16 sm:mt-24 mb-4;
 }
 
 h3 {
-  @apply text-2xl mt-8 mb-4;
+  @apply text-2xl mt-8 sm:mt-16 mb-4;
 }
 
 h4,
 h5,
 h6 {
-  @apply text-base font-bold pb-2 mt-6 mb-2 border-b-2 border-stone-500;
+  @apply text-base font-bold pb-2 mt-6 sm:mt-12 mb-2 border-b-2 border-stone-500;
 }
 
 a {
@@ -45,7 +45,7 @@ a:hover {
 }
 
 article {
-  @apply pt-24 sm:pt-32 pb-16;
+  @apply pt-12 sm:pt-24 sm:pt-32 pb-16;
 }
 
 article p,
@@ -66,15 +66,20 @@ article ul {
 }
 
 .navigation {
-  @apply py-10;
+  @apply py-4 md:py-6;
 }
 
 .navigation h1 {
   @apply text-base uppercase m-0;
 }
 
+.navigation h1,
+.navigation a {
+  @apply text-xs sm:text-sm md:text-base;
+}
+
 .navigation h1 a {
-  @apply m-0 mr-4;
+  @apply m-0;
   text-decoration: none;
   text-decoration-thickness: 0;
 }
@@ -88,8 +93,12 @@ article ul {
 }
 
 .social-button {
-  @apply p-2 bg-white inline-block rounded-md border border-stone-200;
+  @apply p-2 ml-2 bg-white inline-block rounded-md border border-stone-200;
   line-height: 1;
+}
+
+.social-button:first-child {
+  @apply ml-0;
 }
 
 .social-button:hover {
@@ -103,7 +112,7 @@ article ul {
 }
 
 .image-collage {
-  @apply sm:flex mb-10 pt-6 gap-2 overflow-x-hidden relative;
+  @apply sm:flex mb-6 sm:mb-10 pt-2 sm:pt-6 gap-2 overflow-x-hidden relative;
 }
 
 .image-collage img {
