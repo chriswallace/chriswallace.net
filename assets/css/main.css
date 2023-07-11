@@ -123,3 +123,23 @@ article ul {
 .image-collage img:nth-child(3) {
   @apply hidden sm:block;
 }
+
+.card-zoom {
+  @apply block items-end no-underline rounded-md relative flex aspect-[3/4] items-end justify-center overflow-hidden shadow-xl rounded-md;
+}
+
+.card-zoom:hover .card-zoom-image {
+  @apply scale-110;
+}
+
+.card-zoom-image {
+  @apply absolute w-full h-full transition-all duration-500 ease-in-out transform bg-center bg-cover z-0;
+}
+
+.card-zoom-text {
+  @apply text-white mb-0 p-6 z-10 w-full relative;
+}
+
+.card-zoom-text h2 {
+  @apply leading-tight block text-sm sm:text-base m-0 mr-6;
+}

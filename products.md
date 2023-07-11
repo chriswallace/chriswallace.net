@@ -4,8 +4,43 @@ title: Products
 permalink: /products/
 ---
 
-Below are some of the ongoing projects I've been working on over the past couple years that I maintain.
+Since 2021, I've been producing a small group of digital products alongside a stellar team of artists, creators, and engineers at <a href="https://ultradao.org">UltraDAO</a>.
 
-- [Twelve Days of CryptoArt](https://twelvedays.ultradao.org) - I curate, design, and develop the app for this fun art collecting event. It involves a blind art reveal where collectors can choose their favorite piece to own, later learning who the artist behind the piece is.
-
-- [Woodies](https://woodiesofficial.com) - I am the project lead for Woodies, a web3 entertainment brand and NFT collection with over 4,000 collectors. With 3D models, tremendous lore, and commercial licensing/ownership for each character, offering one of the most interesting and value-driven brands in web3. Plus we've donated over $250,000 to plant one million trees.
+<div class="grid gap-2 md:gap-4 grid-cols-2 md:grid-cols-4 mt-12">
+  <a href="https://woodiesofficial.com" class="card-zoom" target="_blank">
+    <div
+      class="card-zoom-image"
+      style="background-image: url('/assets/images/card-woodies.jpg')"
+    ></div>
+    <div class="card-zoom-text">
+      <h2>Woodies</h2>
+    </div>
+  </a>
+  <a href="https://ultradao.org/ultrapass" class="card-zoom" target="_blank">
+    <div
+      class="card-zoom-image"
+      style="background-image: url('/assets/images/card-ultrapass.jpg')"
+    ></div>
+    <div class="card-zoom-text">
+      <h2>ULTRAPASS</h2>
+    </div>
+  </a>
+  <a href="https://ultradao.org/curated" class="card-zoom" target="_blank">
+    <div
+      class="card-zoom-image"
+      style="background-image: url('/assets/images/card-curated.jpg')"
+    ></div>
+    <div class="card-zoom-text">
+      <h2>Ultra Curated</h2>
+    </div>
+  </a>
+  <a href="https://twelvedays.ultradao.org" class="card-zoom" target="_blank">
+    <div
+      class="card-zoom-image"
+      style="background-image: url('/assets/images/card-twelve-days.jpg')"
+    ></div>
+    <div class="card-zoom-text">
+      <h2>Twelve Days of CryptoArt</h2>
+    </div>
+  </a>
+</div>
