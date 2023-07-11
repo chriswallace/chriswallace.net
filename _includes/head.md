@@ -8,5 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css" />
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
   {% seo title=false %}
 </head>
