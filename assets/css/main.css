@@ -70,12 +70,12 @@ article ul {
 }
 
 .navigation h1 {
-  @apply text-base uppercase m-0;
+  @apply uppercase m-0;
 }
 
 .navigation h1,
 .navigation a {
-  @apply text-xs sm:text-sm md:text-base;
+  @apply text-sm md:text-base;
 }
 
 .navigation h1 a {
@@ -109,6 +109,7 @@ article ul {
   width: 18px;
   height: 18px;
   display: inline-block;
+  fill: black;
 }
 
 .image-collage {
@@ -142,4 +143,65 @@ article ul {
 
 .card-zoom-text h2 {
   @apply leading-tight block text-sm sm:text-base m-0 mr-6;
+}
+
+footer {
+  @apply py-8 border-t-2 border-gray-700;
+}
+
+footer p {
+  @apply leading-snug text-gray-600 text-xs;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    @apply bg-gray-800 text-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    @apply text-white;
+  }
+
+  a {
+    text-decoration-color: rgb(193, 109, 109);
+  }
+
+  a:hover {
+    text-decoration-color: white;
+  }
+
+  h4,
+  h5,
+  h6 {
+    @apply border-stone-200;
+  }
+
+  .social-button {
+    @apply bg-gray-700 border-stone-700;
+  }
+
+  .social-button:hover {
+    @apply bg-stone-500;
+  }
+
+  .card-zoom-text {
+    @apply text-gray-200;
+  }
+
+  .social-button svg {
+    fill: white;
+  }
+
+  footer {
+    @apply border-gray-400;
+  }
+
+  footer p {
+    @apply text-gray-300;
+  }
 }
