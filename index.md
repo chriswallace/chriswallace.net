@@ -12,7 +12,7 @@ title: Designing the future of Web3, blockchain, and artificial intelligence.
     <img src="/assets/images/cw-media-3.jpg" alt="">
 </div>
 
-Hi. I'm Chris, Executive Creative Director and design agency veteran. For the past two years, I've been developing digital collectibles, IP, and art projects featuring immutable ownership and provenance. As the founder of UltraDAO and Woodies, I bootstrapped a decentralized creative studio and created a successful IP franchise alongside talented artists, animators, and creators.
+Hi. I'm Chris, Executive Creative Director and design agency veteran. For the past two years, I've been developing digital collectibles, IP, and art projects featuring immutable ownership and provenance. As founder of UltraDAO and Woodies, I bootstrapped a decentralized creative studio and created a successful IP franchise alongside talented artists, animators, and creators.
 
 I'm currently taking on new consulting work with established companies and startups, especially those focused on new web3 initiatives and design team formation.
 
