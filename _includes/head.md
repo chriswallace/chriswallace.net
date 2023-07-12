@@ -9,5 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css" />
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
+  <meta property="og:image" content="/assets/images/chris-wallace.jpg" />
   {% seo title=false %}
 </head>
