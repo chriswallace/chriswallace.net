@@ -89,7 +89,7 @@ article ul {
 }
 
 .gallery {
-  @apply grid grid-cols-2 gap-4 mt-10 mb-8;
+  @apply grid grid-cols-3 gap-4 mt-10 mb-8;
 }
 
 .social-button {
