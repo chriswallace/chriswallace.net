@@ -2,12 +2,14 @@
   "scripts": {
     "jekyll:serve": "bundle exec jekyll serve --incremental --watch",
     "jekyll:build": "bundle exec jekyll build",
-    "css:build": "npx tailwindcss -i ./assets/css/main.css -o ./assets/main.css --minify"
+    "css:build": "npx tailwindcss -i ./assets/css/main.css -o ./assets/main.css --minify",
+    "css:watch": "nodemon -e css -x 'npm run css:build'"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.14",
     "cssnano": "^6.0.1",
+    "nodemon": "^3.0.1",
     "postcss": "^8.4.24",
     "postcss-import": "^15.1.0",
     "tailwindcss": "^3.3.2"
