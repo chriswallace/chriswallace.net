@@ -63,7 +63,7 @@ As the primary web content owner, designed, developed, and maintained the colleg
 
 ## Selected Works
 
-Here are a few links to projects I’ve worked on in a creative direction and production design capacity. The links referenced fore each are live, up-to-date, and entirely designed by me and my team.
+Here are a few links to projects I’ve worked on in a creative direction and production design capacity. The links referenced for each are live, up-to-date, and entirely designed by me and my team.
 
 ### [Twelve Days of CryptoArt](https://twelvedays.ultradao.org)
 
