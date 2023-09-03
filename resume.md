@@ -18,15 +18,15 @@ An Emmy-nominated design executive with over 15 years of remote leadership in cr
 
 ## Work Experience
 
-### CEO at UltraDAO Studios / _2021-Present_ / _Remote_
+### Executive Director & Design Lead at UltraDAO Studios / _2021-Present_ / _Remote_
 
-Founded a decentralized web3 creative studio focused on digital art products and collectibles. Supervised a team of digital artists, project managers, and developers, leading the creation of Woodies, a series of 10,000 unique digital collectibles and 3D characters.
+Founded a decentralized web3 creative studio focused on digital art products and collectibles. Managed a team of digital artists, project managers, and developers, leading the creation of Woodies, a series of 10,000 unique digital collectibles and 3D characters.
 
 - Steered the growth of product brands from inception including ULTRAPASS, Woodies, and Twelve Days of CryptoArt
 - Generated multimillion-dollar revenue within the first six months
 - Oversaw the planting of one million trees in Sub-Saharan Africa via Trees for the Future
 - Awarded "Best Environmental Initiative from an NFT project" at NFT NYC 2022
-- Executive Creative Director for multiple creative projects including Woodies Generative Characters, Woodies: Origin (animated short film), Woodies 3D, and more
+- Creative Director on multiple projects including Woodies Generative Characters, Woodies: Origin (animated short film), Woodies 3D, and more
 
 ### VP, Experience Design at 10up / _2017-2021_ / _Remote_
 
@@ -35,7 +35,7 @@ Directed the design discipline for a global agency of 250+ staff spanning three 
 - Grew the design team from 5 to 20 professionals, stationed across 12 time zones
 - Contributed to a near doubling of agency revenue (~95%) within four years
 - Successfully diversified team composition through inclusive hiring practices
-- Expanded design services to incorporate content design, illustration, video production, and more
+- Expanded design services to incorporate content design, illustration, and more
 
 ### Co-Founder/Principal Creative at Lift UX / _2009-2017_ / _Remote_
 
