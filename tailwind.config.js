@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Orbit", "sans-serif"],
+        sans: ["Bricolage Grotesque", "sans-serif"],
       },
       fontSize: {
         "2xl": [
@@ -12,7 +12,7 @@ module.exports = {
           {
             lineHeight: "1.3",
             letterSpacing: "-0.01em",
-            fontWeight: "300",
+            fontWeight: "500",
           },
         ],
         "3xl": [
@@ -20,7 +20,7 @@ module.exports = {
           {
             lineHeight: "1.4",
             letterSpacing: "-0.02em",
-            fontWeight: "300",
+            fontWeight: "500",
           },
         ],
         "4xl": [
@@ -28,7 +28,7 @@ module.exports = {
           {
             lineHeight: "1.4",
             letterSpacing: "-0.02em",
-            fontWeight: "300",
+            fontWeight: "500",
           },
         ],
       },

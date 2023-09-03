@@ -6,21 +6,15 @@ permalink: /about/
 
 <div class="extendo">
 
-<img src="/assets/images/profile-photo.jpg" alt="Chris Wallace" class="md:float-right md:ml-6 mb-6 rounded-md max-w-md w-full">
+<img src="/assets/images/profile-photo.jpg" alt="Chris Wallace" class="md:float-right md:ml-12 mb-12 rounded-md max-w-md w-full">
 
-<p>Chris Wallace is an innovative creative and co-founder of UltraDAO, a decentralized artist collective that explores the intersection of art, technology, and storytelling through the lens of blockchain and NFTs. From the establishment of a culturally significant NFT artwork collection to the inception of intellectual property, Chris's ventures have transformed the narrative of blockchain technology in the creative world.</p>
+<p>Born and raised in St. Louis, MO, I was diagnosed at 19 with testicular cancer. I was forced to drop out of college and endure aggressive chemotherapy, all while expecting my first child with my girlfriend of five years. Faced with these hardships at such a young age, I joined the workforce, not just to survive, but to provide for my growing family. Those first few years were difficult but critical in teaching me vital skills as a young designer and technologist.</p>
 
-<p>One of the most notable contributions Chris has made to the NFT space is the "Woodies" project. Woodies is a 10K generative Profile Picture (PFP) project that unfolds an environmental narrative through seven core characters, each owned by members of the UltraDAO community and other individuals around the globe. The project, with its strong environmental narrative and lore building, has revolutionized the way stories are told, harnessing the collective imagination of the community to shape the narrative.</p>
+<p>In 2009, I co-founded Lift UX, a design agency that transcended traditional boundaries. We earned multiple Emmy nominations for our innovative apps for TV shows like The Walking Dead, Breaking Bad, and Mad Men. In 2017, the agency was acquired by 10up, a leading WordPress digital agency. There, I led an international team, gaining invaluable experiences while working with companies like Facebook, Google, and Microsoft, as well as with organizations such as The Boston Globe and the California DMV.</p>
 
-<p>Chris, along with his dedicated team, has crafted a fascinating world through Woodies, ensuring that the community plays a central role in the storytelling process. The group has released an animated short titled "Woodies Origin" that incorporates high-quality visual production, an orchestral soundtrack, and an impactful message about environmental conservation, setting new standards for web3 entertainment.</p>
+<p>Desiring a new challenge, I left my corporate role in 2021 to venture into the exciting world of web3, founding UltraDAO. This decentralized art collective has been at the forefront of integrating blockchain technology into the creative sector. Our project, Woodies, rapidly gained traction, bringing in millions in revenue in just a few months.</p>
 
-<p>In addition to the creation of a captivating narrative, Woodies has also implemented an innovative model of intellectual property ownership. The owners of generative Woodies characters maintain full rights over their characters, fostering an environment of autonomy and creativity where the entire collection can benefit from the individual initiatives of its members.</p>
-
-<p>Beyond Woodies, Chris and UltraDAO have pioneered novel ways of appreciating NFT art through projects like "Twelve Days of CryptoArt," which challenges traditional concepts of art ownership and value through blind minting. This project underscores Chris's vision for a more interactive, emotional, and engaging minting experience, a stark contrast to the often transactional nature of the crypto art market.</p>
-
-<p>Despite the volatility of the NFT art market, Chris's commitment to the long-term sustainability of the industry is evident. He has expressed concerns about the balance of power between creators and collectors and the tendency of marketplaces to prioritize short-term gains over long-term viability. His focus remains on creating spaces that appreciate art and are financially sustainable.</p>
-
-<p>Leaving the confines of the traditional design industry, Chris has wholeheartedly embraced the liberating opportunities of web3. His vision for Woodies and UltraDAO is an industry that values collaboration over centralisation, where creators don’t need to seek permission to express their creativity. His ambitions include releasing television series, movies, books, and games, all while enabling the community to contribute to and advance the narrative.</p>
+<p>Over the past two years, my team and I have released transformative digital, blockchain-powered art experiences like the Twelve Days of CryptoArt, Legends of Wondermist, a short film titled Woodies: Origin, and the upcoming Woodies NEMESIS project. Each project serves as a step toward a future where art and technology not only co-exist but thrive together, telling stories that engage and inspire.</p>
 
 </div>
 

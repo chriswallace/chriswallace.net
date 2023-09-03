@@ -12,21 +12,21 @@ p {
 }
 
 h1 {
-  @apply text-3xl sm:text-4xl max-w-4xl;
+  @apply text-2xl sm:text-3xl max-w-3xl;
 }
 
 h2 {
-  @apply text-2xl mt-16 sm:mt-24 mb-4;
+  @apply text-2xl mt-12 sm:mt-16 mb-8;
 }
 
 h3 {
-  @apply text-2xl mt-8 sm:mt-16 mb-4;
+  @apply text-base mb-2 font-bold;
 }
 
 h4,
 h5,
 h6 {
-  @apply text-base font-bold pb-2 mt-6 sm:mt-12 mb-2 border-b-2 border-stone-500;
+  @apply text-base font-bold pb-2 mt-6 sm:mt-12 mb-2;
 }
 
 a {
@@ -57,12 +57,8 @@ article h6 {
   @apply max-w-3xl;
 }
 
-article li {
-  @apply list-disc list-outside ml-4 pl-2;
-}
-
 article ul {
-  @apply mb-12;
+  @apply mb-12 list-disc ml-4 pl-2;
 }
 
 .navigation {
