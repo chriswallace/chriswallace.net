@@ -14,7 +14,7 @@ permalink: /resume/
 
 ## Professional Summary
 
-An Emmy-nominated design executive with over 15 years of remote leadership in creative direction and design. Distinguished track record in pioneering innovative web applications, products, and editorial experiences for high-profile tech and media organizations like Google, Microsoft, Facebook, ESPN, the Boston Globe, AMC Networks, among others. Proven proficiency in implementing blockchain and AI technologies to develop novel digital ownership solutions in the realm of art and collectibles.
+<p class="sub-heading">An Emmy-nominated design executive with over 15 years of remote leadership in creative direction and design. Distinguished track record in pioneering innovative web applications, products, and editorial experiences for high-profile tech and media organizations like Google, Microsoft, Facebook, ESPN, the Boston Globe, AMC Networks, among others. Proven proficiency in implementing blockchain and AI technologies to develop novel digital ownership solutions in the realm of art and collectibles.</p>
 
 ## Work Experience
 
@@ -62,8 +62,6 @@ Designed and developed front-end code for e-commerce storefronts for small busin
 As the primary web content owner, designed, developed, and maintained the college's online presence. During my tenure, the college witnessed a 60% growth rate, reaching full campus capacity the following year.
 
 ## Selected Works
-
-Here are a few links to projects I’ve worked on in a creative direction and production design capacity. The links referenced for each are live, up-to-date, and entirely designed by me and my team.
 
 ### [Twelve Days of CryptoArt](https://twelvedays.ultradao.org)
 

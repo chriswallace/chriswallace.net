@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+body{
+  @apply font-light;
+}
+
 h1,
 h2,
 h3,
@@ -11,8 +15,17 @@ p {
   @apply mb-6;
 }
 
+p{
+  @apply text-gray-700;
+}
+
 h1 {
-  @apply text-2xl sm:text-3xl max-w-3xl;
+  @apply text-3xl sm:text-4xl max-w-3xl;
+
+}
+
+.sub-heading{
+  @apply text-lg sm:text-xl font-light;
 }
 
 h2 {
@@ -20,7 +33,7 @@ h2 {
 }
 
 h3 {
-  @apply text-base mb-2 font-bold;
+  @apply text-base mb-2 font-bold mt-6 sm:mt-12;
 }
 
 h4,
@@ -30,6 +43,7 @@ h6 {
 }
 
 a {
+  @apply font-normal;
   text-decoration-line: underline;
   text-decoration-color: rgb(109, 193, 109);
   text-decoration-thickness: 2px;
@@ -71,17 +85,21 @@ article ul {
 
 .navigation h1,
 .navigation a {
-  @apply text-sm md:text-base;
+  @apply text-base md:text-lg;
 }
 
 .navigation h1 a {
-  @apply m-0;
+  @apply m-0 font-light;
   text-decoration: none;
   text-decoration-thickness: 0;
 }
 
 .navigation ul {
   @apply flex justify-between items-center gap-4;
+}
+
+.home-title{
+  @apply text-3xl mb-4;
 }
 
 .gallery {
@@ -142,14 +160,15 @@ article ul {
 }
 
 footer {
-  @apply py-8 border-t-2 border-gray-700;
+  @apply py-8 border-t-2 border-gray-200;
 }
 
 footer p {
-  @apply leading-snug text-gray-600 text-xs;
+  @apply leading-snug text-gray-600 text-sm;
 }
 
 @media (prefers-color-scheme: dark) {
+
   body {
     @apply bg-gray-800 text-white;
   }
@@ -158,12 +177,16 @@ footer p {
   h2,
   h3,
   h4,
-  h5,
-  p {
+  h5 {
     @apply text-white;
   }
 
+  p{
+    @apply text-gray-400;
+  }
+
   a {
+    @apply text-white;
     text-decoration-color: rgb(193, 109, 109);
   }
 
@@ -175,6 +198,10 @@ footer p {
   h5,
   h6 {
     @apply border-stone-200;
+  }
+
+  .home-title{
+    @apply text-white;
   }
 
   .social-button {
