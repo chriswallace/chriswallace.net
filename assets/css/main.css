@@ -15,7 +15,7 @@ p {
   @apply mb-6;
 }
 
-p{
+p,ul,li{
   @apply text-gray-700;
 }
 
@@ -54,12 +54,16 @@ a:hover {
   text-decoration-color: black;
 }
 
+hr{
+  @apply w-[40px] border-gray-600 border-t-2 h-2 pb-6;
+}
+
 .container {
   @apply w-[calc(100%-2rem)];
 }
 
 article {
-  @apply pt-12 sm:pt-24 sm:pt-32 pb-16;
+  @apply pt-4 sm:pt-8 sm:pt-16 pb-16;
 }
 
 article p,
@@ -102,12 +106,16 @@ article ul {
   @apply text-3xl mb-4;
 }
 
+.refresh-btn{
+  @apply bg-gray-200 text-black px-4 py-2 rounded-md hover:bg-gray-300;
+}
+
 .gallery {
   @apply grid grid-cols-3 gap-4 mt-10 mb-8;
 }
 
 .social-button {
-  @apply p-2 ml-2 bg-white inline-block rounded-md border border-stone-200;
+  @apply p-1 px-2 ml-2 bg-white inline-block rounded-md border border-stone-200;
   line-height: 1;
 }
 
@@ -159,6 +167,10 @@ article ul {
   @apply leading-tight block text-sm sm:text-base m-0 mr-6;
 }
 
+.back-btn{
+  @apply text-gray-500 font-light mb-2 inline-block text-lg;
+}
+
 footer {
   @apply py-8 border-t-2 border-gray-200;
 }
@@ -181,7 +193,7 @@ footer p {
     @apply text-white;
   }
 
-  p{
+  p,ul,li{
     @apply text-gray-400;
   }
 
@@ -192,6 +204,14 @@ footer p {
 
   a:hover {
     text-decoration-color: white;
+  }
+
+  hr{
+    @apply border-gray-300;
+  }
+
+  li a{
+    @apply font-light;
   }
 
   h4,
@@ -212,6 +232,10 @@ footer p {
     @apply bg-stone-500;
   }
 
+  .refresh-btn{
+    @apply bg-gray-400;
+  }
+
   .card-zoom-text {
     @apply text-gray-200;
   }
@@ -220,8 +244,16 @@ footer p {
     fill: white;
   }
 
+  .sub-heading{
+    @apply text-black;
+  }
+
+  .back-btn{
+    @apply text-gray-200;
+  }
+
   footer {
-    @apply border-gray-400;
+    @apply border-gray-600;
   }
 
   footer p {

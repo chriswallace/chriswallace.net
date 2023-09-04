@@ -8,7 +8,9 @@ permalink: /about/
 
 <img src="/assets/images/profile-photo.jpg" alt="Chris Wallace" class="md:float-right md:ml-12 mb-12 rounded-md max-w-md w-full">
 
-<p class="sub-heading">Born and raised in St. Louis, MO, I was diagnosed at 19 with testicular cancer. I was forced to drop out of college and endure aggressive chemotherapy, all while expecting my first child with my girlfriend of five years. Faced with these hardships at such a young age, I joined the workforce, not just to survive, but to provide for my growing family. Those first few years were difficult but critical in teaching me vital skills as a young designer and technologist.</p>
+<p class="sub-heading">Born and raised in St. Louis, MO, I was diagnosed at 19 with testicular cancer. I was forced to drop out of college and endure aggressive chemotherapy, all while expecting my first child with my girlfriend of five years. Faced with these hardships at such a young age, I joined the workforce, not just to survive, but to provide for my growing family.</p>
+
+<hr>
 
 <p>In 2009, I co-founded Lift UX, a design agency that transcended traditional boundaries. We earned multiple Emmy nominations for our innovative apps for TV shows like The Walking Dead, Breaking Bad, and Mad Men. In 2017, the agency was acquired by 10up, a leading WordPress digital agency. There, I led an international team, gaining invaluable experiences while working with companies like Facebook, Google, and Microsoft, as well as with organizations such as The Boston Globe and the California DMV.</p>
 
