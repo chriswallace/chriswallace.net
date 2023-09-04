@@ -245,7 +245,7 @@ footer p {
   }
 
   .sub-heading{
-    @apply text-black;
+    @apply text-white;
   }
 
   .back-btn{
