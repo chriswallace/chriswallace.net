@@ -8,7 +8,7 @@ permalink: /art/interplay
 
 <div class="grid md:grid-cols-2 gap-8">
 
-<div class="text-ellipsis">
+<div>
 <a href="/art" class="back-btn">Art</a>
 <h1>Interplay</h1>
 
@@ -20,7 +20,7 @@ permalink: /art/interplay
 
 <p id="metadata"></p>
 
-<p id="hash" class="text-sm text-ellipsis"></p>
+<p id="hash" class="text-sm text-ellipsis overflow-hidden whitespace-nowrap w-[320px] md:w-full"></p>
 
 </div>
 <div>
