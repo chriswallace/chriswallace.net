@@ -7,7 +7,7 @@ layout: default
 👋 &nbsp; Hi. I'm Chris.
 </p>
   <h1 class="sub-heading">
-    {{ page.title | escape }}
+    {{ page.description | escape }}
   </h1>
   <div class="{{ page.markdown }} max-w-none">
     {{ content }}

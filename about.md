@@ -25,3 +25,11 @@ permalink: /about/
 - [Chris Wallace's plan to bring Hollywood production quality to web3](https://www.culture3.xyz/posts/chris-wallace-and-his-plan-to-bring-hollywood-production-quality-into-web3)
 - [The Woodies PFP and a Guide to HEN Collecting with Chris Wallace with Kevin Rose](https://podcasts.proof.xyz/artist-spotlight-woodies-artist-and-collector-chris-wallace/)
 - [The future of decentralized IP](https://www.youtube.com/watch?v=xKiwjL7zzTc)
+
+<ul class="text-2xl list-none mt-12 ml-0 pl-0">
+    <li><a class="font-light" href="/">Home</a></li>
+    <li class="selected">About</li>
+    <li><a class="font-light" href="/resume">CV / Résumé</a></li>
+    <li><a class="font-light" href="/products">Products</a></li>
+    <li><a class="font-light" href="/art">Art</a></li>
+</ul>

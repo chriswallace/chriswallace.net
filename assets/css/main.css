@@ -2,7 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-body{
+body {
   @apply font-light;
 }
 
@@ -15,16 +15,17 @@ p {
   @apply mb-6;
 }
 
-p,ul,li{
+p,
+ul,
+li {
   @apply text-gray-700;
 }
 
 h1 {
   @apply text-3xl sm:text-4xl max-w-3xl;
-
 }
 
-.sub-heading{
+.sub-heading {
   @apply text-lg sm:text-xl font-light;
 }
 
@@ -33,7 +34,7 @@ h2 {
 }
 
 h3 {
-  @apply text-base mb-2 font-bold mt-6 sm:mt-12;
+  @apply text-base mb-2 text-gray-600 font-normal mt-6 sm:mt-12;
 }
 
 h4,
@@ -54,7 +55,7 @@ a:hover {
   text-decoration-color: black;
 }
 
-hr{
+hr {
   @apply w-[40px] border-gray-600 border-t-2 h-2 pb-6;
 }
 
@@ -102,11 +103,11 @@ article ul {
   @apply flex justify-between items-center gap-4;
 }
 
-.home-title{
-  @apply text-3xl mb-4;
+.home-title {
+  @apply text-3xl mb-6;
 }
 
-.refresh-btn{
+.refresh-btn {
   @apply bg-gray-200 text-black px-4 py-2 rounded-md hover:bg-gray-300;
 }
 
@@ -167,7 +168,7 @@ article ul {
   @apply leading-tight block text-sm sm:text-base m-0 mr-6;
 }
 
-.back-btn{
+.back-btn {
   @apply text-gray-500 font-light mb-2 inline-block text-lg;
 }
 
@@ -180,7 +181,6 @@ footer p {
 }
 
 @media (prefers-color-scheme: dark) {
-
   body {
     @apply bg-gray-800 text-white;
   }
@@ -193,7 +193,9 @@ footer p {
     @apply text-white;
   }
 
-  p,ul,li{
+  p,
+  ul,
+  li {
     @apply text-gray-400;
   }
 
@@ -206,12 +208,16 @@ footer p {
     text-decoration-color: white;
   }
 
-  hr{
+  hr {
     @apply border-gray-300;
   }
 
-  li a{
+  li a {
     @apply font-light;
+  }
+
+  h3 {
+    @apply text-gray-200;
   }
 
   h4,
@@ -220,7 +226,7 @@ footer p {
     @apply border-stone-200;
   }
 
-  .home-title{
+  .home-title {
     @apply text-white;
   }
 
@@ -232,7 +238,7 @@ footer p {
     @apply bg-stone-500;
   }
 
-  .refresh-btn{
+  .refresh-btn {
     @apply bg-gray-400;
   }
 
@@ -244,11 +250,11 @@ footer p {
     fill: white;
   }
 
-  .sub-heading{
-    @apply text-white;
+  .sub-heading {
+    @apply text-gray-300;
   }
 
-  .back-btn{
+  .back-btn {
     @apply text-gray-200;
   }
 

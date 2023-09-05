@@ -16,9 +16,7 @@
 title: Chris Wallace
 email: chriswallace7@proton.me
 description: >- # this means to ignore newlines until "baseurl:"
-  Chris Wallace is a design executive who helps companies build high-performing remote teams.
-  He is the founder of UltraDAO, a community of artists and creators, and the project lead for
-  Woodies, a media and entertainment brand in the web3 space.
+  Design executive building companies in web3. Agency veteran working with Google, Facebook, Microsoft, AMC Networks, and many more.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://chriswallace.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: chriswallace

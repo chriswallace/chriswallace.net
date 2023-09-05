@@ -2,3 +2,5 @@ node_modules
 _site
 .jekyll-metadata
 .DS_Store
+vendor
+.bundle

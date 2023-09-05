@@ -14,7 +14,7 @@ permalink: /resume/
 
 ## Professional Summary
 
-<p class="sub-heading">An Emmy-nominated design executive with over 15 years of remote leadership in creative direction and design. Distinguished track record in pioneering innovative web applications, products, and editorial experiences for high-profile tech and media organizations like Google, Microsoft, Facebook, ESPN, the Boston Globe, AMC Networks, among others. Proven proficiency in implementing blockchain and AI technologies to develop novel digital ownership solutions in the realm of art and collectibles.</p>
+<p>I am an Emmy-nominated design executive with over 15 years of remote leadership in creative direction and design. Distinguished track record in pioneering innovative web applications, products, and editorial experiences for high-profile tech and media organizations like Google, Microsoft, Facebook, ESPN, the Boston Globe, AMC Networks, among others. Design leadership expertise includes hiring, team building, management, and mentorship, elevating the quality of product organization-wide. Proven proficiency in blockchain and AI design solutions and digital ownership of art and collectibles.</p>
 
 ## Work Experience
 
@@ -142,3 +142,11 @@ Attended Missouri State University (formerly Southwest Missouri State) for Graph
 ### Saint Louis Christian College / _Florissant, MO_ / _2002-2004_
 
 Attended Saint Louis Christian College with a focus on General and Biblical Studies.
+
+<ul class="text-2xl list-none mt-12 ml-0 pl-0">
+    <li><a class="font-light" href="/">Home</a></li>
+    <li><a class="font-light" href="/about">About</a></li>
+    <li class="selected">CV / Résumé</li>
+    <li><a class="font-light" href="/products">Products</a></li>
+    <li><a class="font-light" href="/art">Art</a></li>
+</ul>
