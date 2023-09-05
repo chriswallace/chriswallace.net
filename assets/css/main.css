@@ -63,7 +63,7 @@ hr{
 }
 
 article {
-  @apply pt-4 sm:pt-8 sm:pt-16 pb-16;
+  @apply pt-16 pb-16;
 }
 
 article p,
