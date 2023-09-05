@@ -34,7 +34,6 @@
         const delay = element.getAttribute('data-delay') || 0;
             setTimeout(() => {
               element.classList.add('visible');
-              console.log(element);
             }, delay);
         });
     });
