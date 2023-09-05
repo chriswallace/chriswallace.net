@@ -48,7 +48,7 @@ permalink: /products/
 <ul class="text-2xl list-none mt-12 ml-0 pl-0">
     <li><a class="font-light" href="/">Home</a></li>
     <li><a class="font-light" href="/about">About</a></li>
-    <li><a class="font-light" href="/products">CV / Résumé</a></li>
+    <li><a class="font-light" href="/resume">CV / Résumé</a></li>
     <li class="selected">Products</li>
     <li><a class="font-light" href="/art">Art</a></li>
 </ul>
