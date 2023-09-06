@@ -24,7 +24,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       let delay = 0;
       const step = 100; // Delay increment in milliseconds
-        document.querySelectorAll('.footer, p, h1, h2, h3, h4, h5, h6, ul, ol, hr, blockquote, video, img, .card-zoom').forEach((element) => {
+        document.querySelectorAll('.footer, p, h1, h2, h3, h4, h5, h6, ul, ol, hr, blockquote, video, img, iframe, .card-zoom').forEach((element) => {
             element.classList.add('fade-in');
             element.setAttribute('data-delay', delay);
             delay += step;

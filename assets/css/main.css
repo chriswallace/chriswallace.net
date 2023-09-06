@@ -172,6 +172,30 @@ article ul {
   @apply text-gray-500 font-light mb-2 inline-block text-lg;
 }
 
+.gallery-single-wide{
+  @apply mx-auto sm:max-w-[65%] mb-12 sm:mb-24;
+}
+
+.gallery-single-wide-portrait{
+  @apply mx-auto sm:max-w-[45%] mb-12 sm:mb-24;
+}
+
+.gallery-double-wide{
+  @apply grid grid-cols-2 gap-4 mb-12 sm:mb-24;
+}
+
+.gallery-triple-wide{
+  @apply grid grid-cols-3 gap-4 mb-12 sm:mb-24;
+}
+
+.gallery-quadruple-wide{
+  @apply grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12 sm:mb-24;
+}
+
+.gallery-quadruple-wide-trip-small{
+  @apply grid grid-cols-3 sm:grid-cols-4 gap-4 mb-12 sm:mb-24;
+}
+
 footer {
   @apply py-8 border-t-2 border-gray-200;
 }

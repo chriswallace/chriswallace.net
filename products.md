@@ -4,7 +4,7 @@ title: Products
 permalink: /products/
 ---
 
-<p class="sub-heading">Since 2021, I've been producing a small group of digital products alongside a stellar team of artists, creators, and engineers at <a href="https://ultradao.org">UltraDAO</a>.</p>
+<p class="sub-heading">Since 2021, I've been producing a small group of digital products alongside a stellar team of artists, creators, and engineers at <a href="https://ultradao.org">UltraDAO</a>. These are a few of the active products I am developing.</p>
 
 <div class="grid gap-2 md:gap-4 grid-cols-2 md:grid-cols-4 mt-12">
   <a href="https://woodiesofficial.com" class="card-zoom" target="_blank">

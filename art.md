@@ -4,7 +4,7 @@ title: Art
 permalink: /art/
 ---
 
-<p class="sub-heading">Since 2021, I've been creating digital art and minting it on the Ethereum and Tezos blockchains. Most recently, I've primarily explored AI-collaborative art in recent months, learning from ChatGPT about complex algorithms that can produce beautiful works.</p>
+<p class="sub-heading">Since 2021, I've minted digital art it on the Ethereum and Tezos blockchains. Recently, I've primarily explored AI-collaborative art, creating complex algorithms that produce beautiful works.</p>
 
 <h2><a href="/art/interplay">Interplay</a></h2>
 <p>Fusing the unpredictability of complex mathematical equations with the intentionality of artistic expression, Interplay challenges the viewer to find order within the apparent disorder. This captivating visual journey aims to evoke a sense of unity between seemingly opposing forces, ultimately inviting the observer to reflect on the delicate equilibrium that governs both art and life itself.</p>
