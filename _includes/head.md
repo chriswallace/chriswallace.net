@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  document.querySelectorAll('.footer, p, h1, h2, h3, h4, h5, h6, ul, ol, hr, blockquote, video, img, iframe, .card-zoom').forEach((element) => {
+  document.querySelectorAll('body, .footer, p, h1, h2, h3, h4, h5, h6, ul, ol, hr, blockquote, video, img, iframe, canvas, .card-zoom, .back-btn').forEach((element) => {
     element.classList.add('fade-in');
     delay += step;
 

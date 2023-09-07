@@ -1,10 +1,15 @@
 ---
-layout: page
+layout: default
 title: The Wallace Collection
 permalink: /art/collection/
 ---
 
-<p class="sub-heading">A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains.</p>
+<article>
+
+<a href="/art" class="back-btn">Art</a>
+<h1>The Wallace Collection</h1>
+
+<p class="sub-heading">A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains. These code-powered works are represented mostly in static images, however some pieces are live code to attempt a faithful reproduction of the intended artistic output where possible.</p>
 
 <hr>
 
@@ -239,3 +244,5 @@ permalink: /art/collection/
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-f5b7-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210142&amp;w=1024&amp;s=6bf954b22decaf249078a2fcb15f3ea4" alt="unbuilt #43" /><img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-f7c3-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210199&amp;w=1024&amp;s=53c07605a534165fe815557cd800339b" alt="unbuilt #197" />
     </div>
 </div>
+
+</article>
