@@ -53,16 +53,18 @@ document.addEventListener('DOMContentLoaded', () => {
 <hr>
 
 <div>
-    <h3 class="collection-title">Manolo Gamboa Naon</h3>
-    <div class="gallery-flex">
-        <div style="flex: 1;">
-            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-9fe7-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685693791&amp;w=1024&amp;s=09b7e581d85382e19d6f37db7456c724" alt="Tempo de Amor" loading="lazy">
-        </div>
-        <div style="flex: 1;">
-            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-a505-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691540384&amp;w=1024&amp;s=2559b82ad035ad28ea0e8732bf4f1852" alt="en llamas" loading="lazy">
-        </div>
-        <div style="flex: 1.50146628;">
-            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-b3ab-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685693324&amp;w=1024&amp;s=e2374169937be59305cf0213c7432d16" alt="furia" loading="lazy">
+    <div>
+        <h3 class="collection-title">Manolo Gamboa Naon</h3>
+        <div class="gallery-flex">
+            <div style="flex: 1;">
+                <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-9fe7-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685693791&amp;w=1024&amp;s=09b7e581d85382e19d6f37db7456c724" alt="Tempo de Amor" loading="lazy">
+            </div>
+            <div style="flex: 1;">
+                <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-a505-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691540384&amp;w=1024&amp;s=2559b82ad035ad28ea0e8732bf4f1852" alt="en llamas" loading="lazy">
+            </div>
+            <div style="flex: 1.50146628;">
+                <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-b3ab-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685693324&amp;w=1024&amp;s=e2374169937be59305cf0213c7432d16" alt="furia" loading="lazy">
+            </div>
         </div>
     </div>
     <div class="gallery-double-wide">
@@ -95,16 +97,18 @@ document.addEventListener('DOMContentLoaded', () => {
             <img class="w-full h-auto" src="/assets/images/collection/8-18-54-51.gif" alt="8 18 54 51" loading="lazy">
         </div>
     </div>
-    <h3 class="collection-title">Quasi Dragon Studies by Harvey Rayner</h3>
-    <div class="gallery-flex">
-        <div style="flex: 0.8661133;">
-            <img src="/assets/images/collection/generate-preview_a7893293-2a16-4cd1-8909-1a0b71163de3.png" alt="Quasi Dragon Studies #252" loading="lazy">
-        </div>
-        <div style="flex: 0.2886666;">
-            <img src="/assets/images/collection/generate-preview_4ce2f068-9bf1-4aa8-845a-1514d8c49e99.png" alt="Quasi Dragon Studies #255" loading="lazy">
-        </div>
-        <div style="flex: 0.2886666;">
-            <img src="/assets/images/collection/generate-preview_70205dd1-e715-460d-8a54-d2152013774b.png" alt="Quasi Dragon Studies #254" loading="lazy">
+    <div>
+        <h3 class="collection-title">Quasi Dragon Studies by Harvey Rayner</h3>
+        <div class="gallery-flex">
+            <div style="flex: 0.8661133;">
+                <img src="/assets/images/collection/generate-preview_a7893293-2a16-4cd1-8909-1a0b71163de3.png" alt="Quasi Dragon Studies #252" loading="lazy">
+            </div>
+            <div style="flex: 0.2886666;">
+                <img src="/assets/images/collection/generate-preview_4ce2f068-9bf1-4aa8-845a-1514d8c49e99.png" alt="Quasi Dragon Studies #255" loading="lazy">
+            </div>
+            <div style="flex: 0.2886666;">
+                <img src="/assets/images/collection/generate-preview_70205dd1-e715-460d-8a54-d2152013774b.png" alt="Quasi Dragon Studies #254" loading="lazy">
+            </div>
         </div>
     </div>
     <h3 class="collection-title">Michaël Zancan</h3>
@@ -161,32 +165,34 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-302-0x48b17a2c46007471b3eb72d16268eaecdd1502b7-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116127&amp;w=1024&amp;s=4c870eb175b865797385c2a6efaff8ab" alt="Susurro Lenis" loading="lazy">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-23d-0x48b17a2c46007471b3eb72d16268eaecdd1502b7-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115510&amp;w=1024&amp;s=c81e173c27bdeeecdf6517723c193acd" alt="Rusticus Romaineus" loading="lazy">
     </div>
-    <h3 class="collection-title">Iskra Velitchkova</h3>
-    <div class="gallery-flex">
-        <div style="flex: 1;">
-            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-ba2c6-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684815056&amp;q=100&amp;w=1024&amp;s=879f0103e8b0de4f4ed192383a0404fe" alt="🐥🪱 - A bird as if a worm as a bird as a worm | for Bird and Worm Society" loading="lazy">
+    <div>
+        <h3 class="collection-title">Iskra Velitchkova</h3>
+        <div class="gallery-flex">
+            <div style="flex: 1;">
+                <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-ba2c6-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684815056&amp;q=100&amp;w=1024&amp;s=879f0103e8b0de4f4ed192383a0404fe" alt="🐥🪱 - A bird as if a worm as a bird as a worm | for Bird and Worm Society" loading="lazy">
+            </div>
+            <div style="flex:1.10583153;">
+                <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-2d770-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684209563&amp;q=100&amp;w=1024&amp;s=5716c8070f2aa090ec97804859d3a017" alt="The very first B I R D S " loading="lazy">
+            </div>
+            <div style="flex:0.726756565;">
+                <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-35313-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1686053010&amp;w=1024&amp;s=a58f93644e4dcb0bd6e2b30364598dcd" alt="H20thB" loading="lazy">
+            </div>
         </div>
-        <div style="flex:1.10583153;">
-            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-2d770-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684209563&amp;q=100&amp;w=1024&amp;s=5716c8070f2aa090ec97804859d3a017" alt="The very first B I R D S " loading="lazy">
+        <div class="gallery-flex">
+            <div style="flex: 1;">
+                <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-2846-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210161&amp;w=1024&amp;s=c5a04f7db553ef19d2a4d2d22c7a4f42" alt="GenerativO Sov I" loading="lazy">
+            </div>
+            <div style="flex: 1;">
+                <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-284a-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210129&amp;w=1024&amp;s=1f01462f8593c7e25888cee8b71f91da" alt="GenerativO Sov III" loading="lazy">
+            </div>
         </div>
-        <div style="flex:0.726756565;">
-            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-35313-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1686053010&amp;w=1024&amp;s=a58f93644e4dcb0bd6e2b30364598dcd" alt="H20thB" loading="lazy">
-        </div>
-    </div>
-    <div class="gallery-flex">
-        <div style="flex: 1;">
-            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-2846-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210161&amp;w=1024&amp;s=c5a04f7db553ef19d2a4d2d22c7a4f42" alt="GenerativO Sov I" loading="lazy">
-        </div>
-        <div style="flex: 1;">
-            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-284a-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210129&amp;w=1024&amp;s=1f01462f8593c7e25888cee8b71f91da" alt="GenerativO Sov III" loading="lazy">
-        </div>
-    </div>
-    <div class="gallery-flex">
-        <div style="flex: 1;">
-            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-c85e7b5c36fc675ba5f02f4e9587021f1ad78d35cd443d4b77b5ade8a05f5747-0xd8eed224e1b358fa6f7b167124c2c1afe42275b4-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115738&amp;w=1024&amp;s=c69f0b218b9dc83de27bf0ad43e79654" alt="Hypothetically Micro #83" loading="lazy">
-        </div>
-        <div style="flex:2.01972387;">
-            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-85a36-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210135&amp;w=1024&amp;s=0fd221c34fcbbfcb4823be7f652b7cc2" alt="BOSKË" loading="lazy">
+        <div class="gallery-flex">
+            <div style="flex: 1;">
+                <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-c85e7b5c36fc675ba5f02f4e9587021f1ad78d35cd443d4b77b5ade8a05f5747-0xd8eed224e1b358fa6f7b167124c2c1afe42275b4-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115738&amp;w=1024&amp;s=c69f0b218b9dc83de27bf0ad43e79654" alt="Hypothetically Micro #83" loading="lazy">
+            </div>
+            <div style="flex:2.01972387;">
+                <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-85a36-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210135&amp;w=1024&amp;s=0fd221c34fcbbfcb4823be7f652b7cc2" alt="BOSKË" loading="lazy">
+            </div>
         </div>
     </div>
     <div>
@@ -420,16 +426,18 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-5-0x70ec58ec3a2ad80300a81968753aee56ebda89a1-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1689814988&amp;w=1024&amp;s=d157f0ac20334b3f4d1fa83c4c48364a" alt="Claire Silver - Anthropogeny" loading="lazy">
         </div>
     </div>
-    <h3 class="collection-title">Matthias Isaaksen</h3>
-    <div class="gallery-flex">
-        <div style="flex: 1;">
-            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-a884d-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691590892&amp;w=1024&amp;s=098b9c597a99a4a2263ddddc418d2a8e" alt="Extramundane" loading="lazy">
-        </div>
-        <div style="flex: 0.8;">
-            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-aa632-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685693258&amp;w=1024&amp;s=caec5516d64516cb9ea508d4d0271e1f" alt="Inside World" loading="lazy">
-        </div>
-        <div style="flex: 0.6611865;">
-            <img src="/assets/images/collection/in-dis-harmony-new-found-freedom.jpg" alt="In Disharmony, New Found Freedom" loading="lazy">
+    <div>
+        <h3 class="collection-title">Matthias Isaaksen</h3>
+        <div class="gallery-flex">
+            <div style="flex: 1;">
+                <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-a884d-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691590892&amp;w=1024&amp;s=098b9c597a99a4a2263ddddc418d2a8e" alt="Extramundane" loading="lazy">
+            </div>
+            <div style="flex: 0.8;">
+                <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-aa632-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685693258&amp;w=1024&amp;s=caec5516d64516cb9ea508d4d0271e1f" alt="Inside World" loading="lazy">
+            </div>
+            <div style="flex: 0.6611865;">
+                <img src="/assets/images/collection/in-dis-harmony-new-found-freedom.jpg" alt="In Disharmony, New Found Freedom" loading="lazy">
+            </div>
         </div>
     </div>
     <h3 class="collection-title">Factura by Matthias Isaaksen</h3>
