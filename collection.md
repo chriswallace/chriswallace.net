@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
         <div style="flex: 1.77774687;">
             <h3 class="collection-title">kaiC by p1xelfool</h3>
-            <img _ngcontent-vdp-c97="" src="https://assets.objkt.media/file/assets-003/QmUYBMZshxre8Gc99BzgD68MhHGWqyhhk3xFeeTY7RzYxh/artifact" alt="kaiC">
+            <img _ngcontent-vdp-c97="" src="https://ipfs.io/ipfs/QmUYBMZshxre8Gc99BzgD68MhHGWqyhhk3xFeeTY7RzYxh/" alt="kaiC">
         </div>
         <div style="flex:1;">
             <h3 class="collection-title">8 18 54 51 by Kim Asendorf</h3>
@@ -344,11 +344,11 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="gallery-double-wide">
         <div>
             <h3 class="collection-title">Etched Sinuosity #2 by Saskia Freeke</h3>
-            <iframe allow="accelerometer; camera; gyroscope; microphone; xr-spatial-tracking; midi;" class="aspect-square w-full" sandbox="allow-scripts allow-downloads allow-same-origin" scrolling="" src="https://assets.objkt.media/file/assets-003/QmbdemW25i8uqXa4okK5jKXP3EDvezeT27tfEgoZcK8shZ/artifact/index.html?objkt=126675&amp;creator=tz1R592HZH4cFAYdNcVntGfXBMB7tGu9xDGN&amp;viewer=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU&amp;danger=ignored"></iframe>
+            <iframe allow="accelerometer; camera; gyroscope; microphone; xr-spatial-tracking; midi;" class="aspect-square w-full" sandbox="allow-scripts allow-downloads allow-same-origin" scrolling="" src="https://ipfs.io/ipfs/QmbdemW25i8uqXa4okK5jKXP3EDvezeT27tfEgoZcK8shZ/"></iframe>
         </div>
         <div>
             <h3 class="collection-title">Fluctuating Paragon #3 by Saskia Freeke</h3>
-            <iframe allow="accelerometer; camera; gyroscope; microphone; xr-spatial-tracking; midi;" class="aspect-square w-full" sandbox="allow-scripts allow-downloads allow-same-origin" scrolling="" src="https://assets.objkt.media/file/assets-003/QmZoGW3fJhgm5j5ijBK31rWFwJ1CYvkFDBXxwmfPX6bKyQ/artifact/index.html?objkt=320515&creator=tz1R592HZH4cFAYdNcVntGfXBMB7tGu9xDGN&viewer=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU&danger=ignored"></iframe>
+            <iframe allow="accelerometer; camera; gyroscope; microphone; xr-spatial-tracking; midi;" class="aspect-square w-full" sandbox="allow-scripts allow-downloads allow-same-origin" scrolling="" src="https://ipfs.io/ipfs/QmZoGW3fJhgm5j5ijBK31rWFwJ1CYvkFDBXxwmfPX6bKyQ/"></iframe>
         </div>
     </div>
     <div class="gallery-double-wide">
