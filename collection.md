@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
     <div>
         <h3 class="collection-title">Iskra Velitchkova</h3>
-        <div class="gallery-flex">
+        <div class="gallery-flex sm:mb-4">
             <div style="flex: 1;">
                 <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-ba2c6-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684815056&amp;q=100&amp;w=1024&amp;s=879f0103e8b0de4f4ed192383a0404fe" alt="🐥🪱 - A bird as if a worm as a bird as a worm | for Bird and Worm Society" loading="lazy">
             </div>
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-35313-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1686053010&amp;w=1024&amp;s=a58f93644e4dcb0bd6e2b30364598dcd" alt="H20thB" loading="lazy">
             </div>
         </div>
-        <div class="gallery-flex">
+        <div class="gallery-flex sm:mb-4">
             <div style="flex: 1;">
                 <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-2846-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210161&amp;w=1024&amp;s=c5a04f7db553ef19d2a4d2d22c7a4f42" alt="GenerativO Sov I" loading="lazy">
             </div>
