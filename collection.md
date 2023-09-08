@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <div>
     <h3 class="collection-title">Manolo Gamboa Naon</h3>
-    <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
+    <div class="gallery-flex">
         <div style="flex: 1;">
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-9fe7-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685693791&amp;w=1024&amp;s=09b7e581d85382e19d6f37db7456c724" alt="Tempo de Amor" loading="lazy">
         </div>
@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-137237-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684247024&amp;w=1024&amp;s=e9b0cdd6a0cc6766485a4aa7ab70f0d6" alt="Acequia #219" loading="lazy">
         </div>
     </div>
-    <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
-        <div style="flex: 1.77774687;">
+    <div class="sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+        <div style="flex: 1.77774687;" class="mb-12 sm:mb-0">
             <h3 class="collection-title">kaiC by p1xelfool</h3>
             <img _ngcontent-vdp-c97="" src="https://ipfs.io/ipfs/QmUYBMZshxre8Gc99BzgD68MhHGWqyhhk3xFeeTY7RzYxh/" alt="kaiC">
         </div>
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </div>
     <h3 class="collection-title">Quasi Dragon Studies by Harvey Rayner</h3>
-    <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
+    <div class="gallery-flex">
         <div style="flex: 0.8661133;">
             <img src="/assets/images/collection/generate-preview_a7893293-2a16-4cd1-8909-1a0b71163de3.png" alt="Quasi Dragon Studies #252" loading="lazy">
         </div>
@@ -138,10 +138,10 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
     <h3 class="collection-title">Entretiempos by Marcelo Soria-Rodríguez</h3>
     <div class="gallery-quadruple-wide">
-        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1c21-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685114871&amp;w=1024&amp;s=25c52dbb29ec896d5957a065c51c44a4" alt="entretiempos #865" loading="lazy">
-        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1b72-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115459&amp;w=1024&amp;s=7e4bbb08932e92a90c91750cba334431" alt="entretiempos #690" loading="lazy">
-        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1b4e-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115827&amp;w=1024&amp;s=fa46252de2dce87b7e089af29b7c26ed" alt="entretiempos #654" loading="lazy">
-        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1a85-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115871&amp;w=1024&amp;s=7485848d6b4f2df1499f51e73b868843" alt="entretiempos #453" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1c21-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685114871&amp;w=1024&amp;s=25c52dbb29ec896d5957a065c51c44a4" alt="entretiempos #865" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1b72-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115459&amp;w=1024&amp;s=7e4bbb08932e92a90c91750cba334431" alt="entretiempos #690" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1b4e-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115827&amp;w=1024&amp;s=fa46252de2dce87b7e089af29b7c26ed" alt="entretiempos #654" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1a85-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115871&amp;w=1024&amp;s=7485848d6b4f2df1499f51e73b868843" alt="entretiempos #453" loading="lazy">
     </div>
     <h3 class="collection-title">Escape by Iskra Velitchkova</h3>
     <div class="gallery-double-wide">
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-23d-0x48b17a2c46007471b3eb72d16268eaecdd1502b7-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115510&amp;w=1024&amp;s=c81e173c27bdeeecdf6517723c193acd" alt="Rusticus Romaineus" loading="lazy">
     </div>
     <h3 class="collection-title">Iskra Velitchkova</h3>
-    <div class="flex gap-2 sm:gap-4 mb-2 sm:mb-4">
+    <div class="gallery-flex">
         <div style="flex: 1;">
             <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-ba2c6-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684815056&amp;q=100&amp;w=1024&amp;s=879f0103e8b0de4f4ed192383a0404fe" alt="🐥🪱 - A bird as if a worm as a bird as a worm | for Bird and Worm Society" loading="lazy">
         </div>
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-35313-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1686053010&amp;w=1024&amp;s=a58f93644e4dcb0bd6e2b30364598dcd" alt="H20thB" loading="lazy">
         </div>
     </div>
-    <div class="flex gap-2 sm:gap-4 mb-2 sm:mb-4">
+    <div class="gallery-flex">
         <div style="flex: 1;">
             <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-2846-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210161&amp;w=1024&amp;s=c5a04f7db553ef19d2a4d2d22c7a4f42" alt="GenerativO Sov I" loading="lazy">
         </div>
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-284a-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210129&amp;w=1024&amp;s=1f01462f8593c7e25888cee8b71f91da" alt="GenerativO Sov III" loading="lazy">
         </div>
     </div>
-    <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
+    <div class="gallery-flex">
         <div style="flex: 1;">
             <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-c85e7b5c36fc675ba5f02f4e9587021f1ad78d35cd443d4b77b5ade8a05f5747-0xd8eed224e1b358fa6f7b167124c2c1afe42275b4-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115738&amp;w=1024&amp;s=c69f0b218b9dc83de27bf0ad43e79654" alt="Hypothetically Micro #83" loading="lazy">
         </div>
@@ -189,35 +189,37 @@ document.addEventListener('DOMContentLoaded', () => {
             <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-85a36-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210135&amp;w=1024&amp;s=0fd221c34fcbbfcb4823be7f652b7cc2" alt="BOSKË" loading="lazy">
         </div>
     </div>
-    <h3 class="collection-title">Qubibi</h3>
-    <div class="flex gap-2 sm:gap-4 mb-2 sm:mb-4">
-        <div style="flex: 1;">
-            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-22864-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210134&amp;w=1024&amp;s=236b0ae0420da8085d104737b0bb8a4d" alt="MMZ ERRR 3 B" loading="lazy">
+    <div>
+        <h3 class="collection-title">Qubibi</h3>
+        <div class="gallery-flex">
+            <div style="flex: 1;">
+                <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-22864-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210134&amp;w=1024&amp;s=236b0ae0420da8085d104737b0bb8a4d" alt="MMZ ERRR 3 B" loading="lazy">
+            </div>
+            <div style="flex: 1;">
+                <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-90-KT19rTtzjSczSjfmAx4dESY5BecDHKJwB8Ww-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1694184781&amp;w=1024&amp;s=7a398841d98b7beaf8ee6f7b3546d811" alt="230907s01cBp30003000" loading="lazy">
+            </div>
         </div>
-        <div style="flex: 1;">
-            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-90-KT19rTtzjSczSjfmAx4dESY5BecDHKJwB8Ww-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1694184781&amp;w=1024&amp;s=7a398841d98b7beaf8ee6f7b3546d811" alt="230907s01cBp30003000" loading="lazy">
+        <div class="gallery-flex">
+            <div style="flex: 0.4;">
+                <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-8f8fe-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210214&amp;w=1024&amp;s=4048347589513027ccd2bf1ff238955f" alt="MMZ 197 G" loading="lazy">
+            </div>
+            <div style="flex: 0.5;">
+                <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-1f161ff8-0xc3ce0b793d15a4777f96afb4c03744c9a25583d0-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116187&amp;w=1024&amp;s=13bd6fb0e8a2e040dbe0d07eac2f3742" alt="wwz uu15M7kj722Ho #51" loading="lazy">
+            </div>
+            <div style="flex: 0.710617627;">
+                <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-7de69-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210115&amp;w=1024&amp;s=497548c4b0363c96d86dbf860160045a" alt="MMZ 188 D" loading="lazy">
+            </div>
         </div>
-    </div>
-    <div class="flex gap-2 sm:gap-4 mb-2 sm:mb-4">
-        <div style="flex: 0.4;">
-            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-8f8fe-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210214&amp;w=1024&amp;s=4048347589513027ccd2bf1ff238955f" alt="MMZ 197 G" loading="lazy">
+        <div class="gallery-quadruple-wide">
+            <img class="sm:col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-8d-KT19rTtzjSczSjfmAx4dESY5BecDHKJwB8Ww-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1694183971&amp;w=1024&amp;s=fe70ee4e30f1c48ed41c52724b1e6427" alt="230830s19pQh37003700" loading="lazy">
+            <img class="sm:col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-22-KT19rTtzjSczSjfmAx4dESY5BecDHKJwB8Ww-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210241&amp;w=1024&amp;s=1daab1256969695039d0e2f7c19bf5bb" alt="220831k03zWf35003500" loading="lazy">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-9a696-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210190&amp;w=1024&amp;s=3189c16d1bb7696e105c07728816b6fe" alt="MMZ 204 B" loading="lazy">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-1d53d-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210216&amp;w=1024&amp;s=677e71fbe91876d34d8ea564361af19f" alt="MMZ 47" loading="lazy">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-9a83c-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210130&amp;w=1024&amp;s=6011f16953462ab9d944d1e2a67ec83e" alt="MMZ 207 B" loading="lazy">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-9a83e-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210184&amp;w=1024&amp;s=885d9ad8cc7a29b6a2269bc871a9f303" alt="MMZ 207 D" loading="lazy">
+            <img class="sm:col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-23172-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210139&amp;w=1024&amp;s=fe773b4a2499e39ef827d7b2103b05f7" alt="MMZ 64" loading="lazy">
+            <img class="sm:col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-7237c-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210213&amp;w=1024&amp;s=59ffb35d42773df3b78bee0a67d7aac5" alt="MMZ 181 A" loading="lazy">
         </div>
-        <div style="flex: 0.5;">
-            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-1f161ff8-0xc3ce0b793d15a4777f96afb4c03744c9a25583d0-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116187&amp;w=1024&amp;s=13bd6fb0e8a2e040dbe0d07eac2f3742" alt="wwz uu15M7kj722Ho #51" loading="lazy">
-        </div>
-        <div style="flex: 0.710617627;">
-            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-7de69-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210115&amp;w=1024&amp;s=497548c4b0363c96d86dbf860160045a" alt="MMZ 188 D" loading="lazy">
-        </div>
-    </div>
-    <div class="gallery-quadruple-wide">
-        <img class="sm:col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-8d-KT19rTtzjSczSjfmAx4dESY5BecDHKJwB8Ww-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1694183971&amp;w=1024&amp;s=fe70ee4e30f1c48ed41c52724b1e6427" alt="230830s19pQh37003700" loading="lazy">
-        <img class="sm:col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-22-KT19rTtzjSczSjfmAx4dESY5BecDHKJwB8Ww-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210241&amp;w=1024&amp;s=1daab1256969695039d0e2f7c19bf5bb" alt="220831k03zWf35003500" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-9a696-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210190&amp;w=1024&amp;s=3189c16d1bb7696e105c07728816b6fe" alt="MMZ 204 B" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-1d53d-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210216&amp;w=1024&amp;s=677e71fbe91876d34d8ea564361af19f" alt="MMZ 47" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-9a83c-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210130&amp;w=1024&amp;s=6011f16953462ab9d944d1e2a67ec83e" alt="MMZ 207 B" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-9a83e-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210184&amp;w=1024&amp;s=885d9ad8cc7a29b6a2269bc871a9f303" alt="MMZ 207 D" loading="lazy">
-        <img class="sm:col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-23172-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210139&amp;w=1024&amp;s=fe773b4a2499e39ef827d7b2103b05f7" alt="MMZ 64" loading="lazy">
-        <img class="sm:col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-7237c-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210213&amp;w=1024&amp;s=59ffb35d42773df3b78bee0a67d7aac5" alt="MMZ 181 A" loading="lazy">
     </div>
     <h3 class="collection-title">Olivier Bodini</h3>
     <div class="gallery-double-wide">
@@ -241,26 +243,26 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
     <h3 class="collection-title">Unfolded by Lars Wander</h3>
     <div class="gallery-six-wide">
-        <div class="sm:col-span-3">
+        <div class="col-span-3">
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-26108-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210208&amp;w=1024&amp;s=7fccfb4f6d9989cc3ab91b2b86e240fb" alt="Unfolded #3" loading="lazy">
         </div>
-        <div class="sm:col-span-3">
+        <div class="col-span-3">
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-26122-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210233&amp;w=1024&amp;s=963e007d5c860bf7f013ad93498dd021" alt="Unfolded #20" loading="lazy">
         </div>
         <img class="col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-26163-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210113&amp;w=1024&amp;s=01c9ca371b94cf37418c31dbde6e0458" alt="Unfolded #74" loading="lazy">
         <img class="col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-26147-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210138&amp;w=1024&amp;s=54fb816920e03222ae9d15d7355eeb7a" alt="Unfolded #52" loading="lazy">
         <img class="col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-2610e-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210141&amp;w=1024&amp;s=4b73647c3cd397d0ba1b16107174a2ad" alt="Unfolded #5" loading="lazy">
     </div>
-    <div class="gallery-triple-wide">
-        <div>
+    <div class="sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+        <div class="mb-12 sm:mb-0" style="flex: 1;">
             <h3 class="collection-title">Acoustic Drift by Joshua Bagley</h3>
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-132f2-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684209897&amp;w=1024&amp;s=5ebc50fabd72d5f70b0de14f632d0dc3" alt="Acoustic Drift" loading="lazy">
         </div>
-        <div>
+        <div class="mb-12 sm:mb-0" style="flex: 1;">
             <h3 class="collection-title">Fold #223 by rudxane</h3>
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-f431f-0xaf40b66072fe00cacf5a25cd1b7f1688cde20f2f-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691510432&amp;w=1024&amp;s=2385cffd309796daf75e9c9988175e80" alt="Fold #223" loading="lazy">
         </div>
-        <div>
+        <div class="mb-12 sm:mb-0" style="flex: 1;">
             <h3 class="collection-title">Diverse Mix by Thomas Lin Pedersen</h3>
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-ae83-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685694228&amp;w=1024&amp;s=8566dddce25fa71268b825df0bb68971" alt="Diverse Mix" loading="lazy">
         </div>
@@ -342,8 +344,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-be78b-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210130&amp;w=1024&amp;s=38d750608dbb325f7df2c8906043eb12" alt="Microgravity #1214" loading="lazy">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-bac26-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210212&amp;w=1024&amp;s=ad87d045b0ee3dda06e546e2e637bb8c" alt="Microgravity #360" loading="lazy">
     </div>
-    <div class="gallery-double-wide">
-        <div>
+    <div class="sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+        <div class="mb-12 sm:mb-0" style="flex:1;">
             <h3 class="collection-title">Etched Sinuosity #2 by Saskia Freeke</h3>
             <iframe allow="accelerometer; camera; gyroscope; microphone; xr-spatial-tracking; midi;" class="aspect-square w-full" sandbox="allow-scripts allow-downloads allow-same-origin" scrolling="" src="https://ipfs.io/ipfs/QmbdemW25i8uqXa4okK5jKXP3EDvezeT27tfEgoZcK8shZ/"></iframe>
         </div>
@@ -352,8 +354,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <iframe allow="accelerometer; camera; gyroscope; microphone; xr-spatial-tracking; midi;" class="aspect-square w-full" sandbox="allow-scripts allow-downloads allow-same-origin" scrolling="" src="https://ipfs.io/ipfs/QmZoGW3fJhgm5j5ijBK31rWFwJ1CYvkFDBXxwmfPX6bKyQ/"></iframe>
         </div>
     </div>
-    <div class="gallery-double-wide">
-        <div>
+    <div class="sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+        <div class="mb-12 sm:mb-0" style="flex:1;">
             <h3 class="collection-title">Asemica #632 by Emily Edelman, Dima Ofman, Andrew Badr</h3>
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-c4751f8-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115265&amp;w=1024&amp;s=0d8594ae0f78cc91b58d3a82d8db9c9b" alt="Asemica #632" loading="lazy">
         </div>
@@ -419,7 +421,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </div>
     <h3 class="collection-title">Matthias Isaaksen</h3>
-    <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
+    <div class="gallery-flex">
         <div style="flex: 1;">
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-a884d-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691590892&amp;w=1024&amp;s=098b9c597a99a4a2263ddddc418d2a8e" alt="Extramundane" loading="lazy">
         </div>
@@ -460,13 +462,15 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-ec619-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210235&amp;w=1024&amp;s=b1da13343b6b3423ab2929c6e2d98ac4" alt="Millefoglie #169" />
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-ec5d4-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210132&amp;w=1024&amp;s=75432a4ce140c1b47b3b08fcacc1440b" alt="Millefoglie #104" />
     </div>
-    <h3 class="collection-title">Fields by Erik Swahn</h3>
-    <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
-        <div style="flex: 1;">
-            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-a7555b4f-0x1dbe39e071f2e580c1c0c49cfb19b9edb5b89b2d-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116093&amp;w=1024&amp;s=9e0406ba3378b29bb599b8c6b6320bfd" alt="Fields #648" />
-        </div>
-        <div style="flex: 1.6;">
-            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-2f418d7b-0x1dbe39e071f2e580c1c0c49cfb19b9edb5b89b2d-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116050&amp;w=1024&amp;s=1732fe85c381d8a16bdbd7441cc67198" alt="Fields #695" />
+    <div>
+        <h3 class="collection-title">Fields by Erik Swahn</h3>
+        <div class="gallery-flex">
+            <div style="flex: 1;">
+                <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-a7555b4f-0x1dbe39e071f2e580c1c0c49cfb19b9edb5b89b2d-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116093&amp;w=1024&amp;s=9e0406ba3378b29bb599b8c6b6320bfd" alt="Fields #648" />
+            </div>
+            <div style="flex: 1.6;">
+                <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-2f418d7b-0x1dbe39e071f2e580c1c0c49cfb19b9edb5b89b2d-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116050&amp;w=1024&amp;s=1732fe85c381d8a16bdbd7441cc67198" alt="Fields #695" />
+            </div>
         </div>
     </div>
     <h3 class="collection-title">Cathedral Study by Eric di Giuli</h3>
@@ -474,11 +478,13 @@ document.addEventListener('DOMContentLoaded', () => {
         <iframe src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000377" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
         <iframe src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000363" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
     </div>
+    <!--
     <h3 class="mb-0">Ir/rational Beauty by Yazid</h3>
-    <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
+    <div class="gallery-flex">
         <iframe src="https://gateway.fxhash2.xyz/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM/?fxhash=ooMkJ1sbnrjd1rU25bUmuKjHUAqU3s1AEZA3KypMiHcLjM5uGes&fxiteration=107&fxminter=tz1ZFsnAQ8UorVbyiMcTP63djTMDcj3rrSc3" loading="lazy" sandbox="allow-scripts allow-same-origin"  class="aspect-[3/4]" style="flex: 0.833125;"></iframe>
         <iframe src="https://gateway.fxhash2.xyz/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM/?fxhash=ooz5Rf6wR1CkCNPWY3hdDrNThjfy7gHfBRVfzHjyd9W2z1AE2nF&fxiteration=65&fxminter=tz1gLeXAGc1Rho2UTE246xD26SapeyztMF8E" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-[4/3]" style="flex: 1.6194332;"></iframe>
     </div>
+    -->
     <h3 class="collection-title">Tych by rudxane</h3>
     <div class="gallery-triple-wide">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-20b4f-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691754007&amp;w=1024&amp;s=acf6572df776dcb7e03b3f778fd22f5f" alt="Tych #185" loading="lazy">
@@ -493,10 +499,10 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
     <h3 class="collection-title">Tesseract by Studio Yorktown</h3>
     <div class="gallery-quadruple-wide">
-        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-acf82-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210123&amp;w=1024&amp;s=bc1a3fe9ef0dde865699f49bf167a723" alt="Tesseract #365" />
-        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-ad3a9-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691920929&amp;w=1024&amp;s=56d2c55594d8bf7c4804e9292ca8dcce" alt="Tesseract #431" />
-        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-acf8d-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210146&amp;w=1024&amp;s=36070c97145ecf998b6d7f91c9a2eaae" alt="Tesseract #369" />
-        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-ad124-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210141&amp;w=1024&amp;s=078a428db673891e984c16624637c6c6" alt="Tesseract #388" />
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-acf82-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210123&amp;w=1024&amp;s=bc1a3fe9ef0dde865699f49bf167a723" alt="Tesseract #365" />
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-ad3a9-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691920929&amp;w=1024&amp;s=56d2c55594d8bf7c4804e9292ca8dcce" alt="Tesseract #431" />
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-acf8d-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210146&amp;w=1024&amp;s=36070c97145ecf998b6d7f91c9a2eaae" alt="Tesseract #369" />
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-ad124-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210141&amp;w=1024&amp;s=078a428db673891e984c16624637c6c6" alt="Tesseract #388" />
     </div>
     <h3 class="collection-title">Catharsis by Dario Lanza</h3>
     <div class="gallery-quadruple-wide">
@@ -518,7 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-1d34-0xb80fbf6cdb49c33dc6ae4ca11af8ac47b0b4c0f3-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116114&amp;w=1024&amp;s=7c7bf83227db165794e16298d3004a43" alt="Shield" loading="lazy">
     </div>
     <h3 class="collection-title">unbuilt by Jacek Markusiewicz</h3>
-    <div class="gallery-quadruple-wide">
+    <div class="gallery-quadruple-wide-trip-small">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-f81c-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210114&amp;w=1024&amp;s=5e722a0249dd125fa028f8636ff46a82" alt="unbuilt #238" />
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-f77c-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210146&amp;w=1024&amp;s=028a74b1430d3460ca3d9a98227285dd" alt="unbuilt #176" />
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-f7d9-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210125&amp;w=1024&amp;s=895e8021aa94dcd690b28ddb0dfaaab5" alt="unbuilt #206" />
