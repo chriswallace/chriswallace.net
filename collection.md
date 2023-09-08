@@ -1,6 +1,7 @@
 ---
 layout: default
 title: The Wallace Collection
+description: A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains. These code-powered works are represented mostly in static images, however some pieces are live code to attempt a faithful reproduction of the intended artistic output where possible.
 permalink: /art/collection/
 ---
 
