@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/main.css?version=1.21" />
+  <link rel="stylesheet" href="/assets/main.css?version=1.22" />
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
   <meta property="og:image" content="/assets/images/chris-wallace.jpg" />
   {% seo title=false %}
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, delay);
   }
   let delay = 0;
-  const step = 40; 
+  const step = 40;
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -46,7 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
     delay += step;
 
     observer.observe(element);
-  });
+
 });
-  </script>
+});
+</script>
+
 </head>

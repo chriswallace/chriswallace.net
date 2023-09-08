@@ -359,7 +359,7 @@
 
     //---- /do not edit the following code
     </script>
-  <body>
+  <body class="fade-in">
     <div class="container max-w-6xl mx-auto lg:px-0">
       {% include header.md %} {{ content }} {% include footer.md %}
     </div>

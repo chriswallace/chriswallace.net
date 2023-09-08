@@ -4,9 +4,47 @@ title: The Wallace Collection
 permalink: /art/collection/
 ---
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Select all images on the page
+  const images = document.querySelectorAll('img');
+
+  // Create a tooltip element
+  const tooltip = document.createElement('div');
+  tooltip.style.position = 'absolute';
+  tooltip.style.backgroundColor = 'black';
+  tooltip.style.color = 'white';
+  tooltip.style.padding = '5px 10px';
+  tooltip.style.borderRadius = '5px';
+  tooltip.style.display = 'none';
+  tooltip.style.zIndex = '9999';
+  document.body.appendChild(tooltip);
+
+  // Attach event listeners to each image
+  images.forEach((img) => {
+    img.addEventListener('mouseover', function(event) {
+      const altText = this.getAttribute('alt');
+      if (altText) {
+        tooltip.textContent = altText;
+        tooltip.style.display = 'block';
+      }
+    });
+
+    img.addEventListener('mousemove', function(event) {
+      tooltip.style.left = event.pageX + 10 + 'px';
+      tooltip.style.top = event.pageY + 10 + 'px';
+    });
+
+    img.addEventListener('mouseout', function() {
+      tooltip.style.display = 'none';
+    });
+  });
+});
+</script>
 <article>
 
 <a href="/art" class="back-btn">Art</a>
+
 <h1>The Wallace Collection</h1>
 
 <p class="sub-heading">A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains. These code-powered works are represented mostly in static images, however some pieces are live code to attempt a faithful reproduction of the intended artistic output where possible.</p>
@@ -15,9 +53,16 @@ permalink: /art/collection/
 
 <div>
     <h3 class="collection-title">Manolo Gamboa Naon</h3>
-    <div class="gallery-double-wide">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-9fe7-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685693791&amp;w=1024&amp;s=09b7e581d85382e19d6f37db7456c724" alt="Tempo de Amor" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-a505-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691540384&amp;w=1024&amp;s=2559b82ad035ad28ea0e8732bf4f1852" alt="en llamas" loading="lazy">
+    <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
+        <div style="flex: 1;">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-9fe7-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685693791&amp;w=1024&amp;s=09b7e581d85382e19d6f37db7456c724" alt="Tempo de Amor" loading="lazy">
+        </div>
+        <div style="flex: 1;">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-a505-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691540384&amp;w=1024&amp;s=2559b82ad035ad28ea0e8732bf4f1852" alt="en llamas" loading="lazy">
+        </div>
+        <div style="flex: 1.50146628;">
+            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-b3ab-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685693324&amp;w=1024&amp;s=e2374169937be59305cf0213c7432d16" alt="furia" loading="lazy">
+        </div>
     </div>
     <div class="gallery-double-wide">
         <div>
@@ -35,18 +80,28 @@ permalink: /art/collection/
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-5e-0x845dd2a7ee2a92a0518ab2135365ed63fdba0c88-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116086&amp;w=1024&amp;s=e0d6d164a737090f7c0c15aacfc28e21" alt="QQL #94" loading="lazy">
         </div>
         <div>
+            <h3 class="collection-title">Acequia #219 by Rich Poole and Rick Crane</h3>
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-137237-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684247024&amp;w=1024&amp;s=e9b0cdd6a0cc6766485a4aa7ab70f0d6" alt="Acequia #219" loading="lazy">
+        </div>
+    </div>
+    <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
+        <div style="flex: 1.77774687;">
+            <h3 class="collection-title">kaiC by p1xelfool</h3>
+            <img _ngcontent-vdp-c97="" src="https://assets.objkt.media/file/assets-003/QmUYBMZshxre8Gc99BzgD68MhHGWqyhhk3xFeeTY7RzYxh/artifact" alt="kaiC">
+        </div>
+        <div style="flex:1;">
             <h3 class="collection-title">8 18 54 51 by Kim Asendorf</h3>
             <img class="w-full h-auto" src="/assets/images/collection/8-18-54-51.gif" alt="8 18 54 51" loading="lazy">
         </div>
     </div>
     <h3 class="collection-title">Quasi Dragon Studies by Harvey Rayner</h3>
-    <div class="flex gap-2 sm:gap-4">
+    <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
         <div style="flex: 0.8661133;">
-            <img src="/assets/images/collection/generate-preview_a7893293-2a16-4cd1-8909-1a0b71163de3.png" alt="Quasi Dragon Studies #252" loading="lazy">   
-        </div>        
-        <div style="flex: 0.2886666;">         
+            <img src="/assets/images/collection/generate-preview_a7893293-2a16-4cd1-8909-1a0b71163de3.png" alt="Quasi Dragon Studies #252" loading="lazy">
+        </div>
+        <div style="flex: 0.2886666;">
             <img src="/assets/images/collection/generate-preview_4ce2f068-9bf1-4aa8-845a-1514d8c49e99.png" alt="Quasi Dragon Studies #255" loading="lazy">
-        </div>        
+        </div>
         <div style="flex: 0.2886666;">
             <img src="/assets/images/collection/generate-preview_70205dd1-e715-460d-8a54-d2152013774b.png" alt="Quasi Dragon Studies #254" loading="lazy">
         </div>
@@ -69,13 +124,23 @@ permalink: /art/collection/
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-aa07-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684229228&amp;w=1024&amp;s=028d6581bba5ee64c28234b73a50ed6f" alt="contrapuntos #500" loading="lazy">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-7c17-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210139&amp;w=1024&amp;s=edbaf3e19b6f8337c4cd6a7f49babeba" alt="contrapuntos #367" loading="lazy">
     </div>
-    <h3 class="collection-title">Entretiempos by Marcelo Soria-Rodríguez</h3>
+    <h3 class="collection-title">Bravura by dmarchi</h3>
     <div class="gallery-triple-wide">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1c21-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685114871&amp;w=1024&amp;s=25c52dbb29ec896d5957a065c51c44a4" alt="entretiempos #865" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1c7e-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115129&amp;w=1024&amp;s=8627446f6dfd61458cc99a757758570a" alt="entretiempos #958" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1b72-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115459&amp;w=1024&amp;s=7e4bbb08932e92a90c91750cba334431" alt="entretiempos #690" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1b4e-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115827&amp;w=1024&amp;s=fa46252de2dce87b7e089af29b7c26ed" alt="entretiempos #654" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1a85-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115871&amp;w=1024&amp;s=7485848d6b4f2df1499f51e73b868843" alt="entretiempos #453" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-6b4ab-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210120&amp;w=1024&amp;s=952e211039626f284dea98e01372d723" alt="Bravura #90" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-6b4a3-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210235&amp;w=1024&amp;s=d878e6ac145a412a612b54658ce87c66" alt="Bravura #82" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-6b4a2-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210216&amp;w=1024&amp;s=2b2605a0e2b9c65b459cdb710030344d" alt="Bravura #81" loading="lazy">
+    </div>
+    <h3 class="collection-title">Gerhard and Richter by Richard Nadler and Leander Herzog</h3>
+    <div class="gallery-double-wide">
+        <iframe src="https://gateway.fxhash2.xyz/ipfs/QmW7Cj5QMG2FFVGMcRKGFhW4V1113seN6iX5FwQrKqTHSM/?fxhash=oo3iCxnjsGQU6Jx4xZpf4Zfc3EPoXWkYhsqXTyGwnGQQKWUjrDB&fxiteration=368&fxminter=tz1Yw6YSydH7qb4vERwxAmSnsihfRcVvnLL3" sandbox="allow-scripts allow-same-origin allow-modals" class="aspect-square w-full" allow="accelerometer *; camera *; gyroscope *; microphone *; xr-spatial-tracking *;"></iframe>
+        <iframe src="https://gateway.fxhash2.xyz/ipfs/QmQzbsQM9hd6vc821LmpHCkLXv18fZfhbJf6ygyVhqWB5a/?fxhash=opQ7z15XLoNzWauyGgashqrsyB6zenAjUHpPBAsvMe6dknwj4JQ&fxiteration=399&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" sandbox="allow-scripts allow-same-origin allow-modals" class="aspect-square w-full" allow="accelerometer *; camera *; gyroscope *; microphone *; xr-spatial-tracking *;"></iframe>
+    </div>
+    <h3 class="collection-title">Entretiempos by Marcelo Soria-Rodríguez</h3>
+    <div class="gallery-quadruple-wide">
+        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1c21-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685114871&amp;w=1024&amp;s=25c52dbb29ec896d5957a065c51c44a4" alt="entretiempos #865" loading="lazy">
+        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1b72-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115459&amp;w=1024&amp;s=7e4bbb08932e92a90c91750cba334431" alt="entretiempos #690" loading="lazy">
+        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1b4e-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115827&amp;w=1024&amp;s=fa46252de2dce87b7e089af29b7c26ed" alt="entretiempos #654" loading="lazy">
+        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-fea1a85-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115871&amp;w=1024&amp;s=7485848d6b4f2df1499f51e73b868843" alt="entretiempos #453" loading="lazy">
     </div>
     <h3 class="collection-title">Escape by Iskra Velitchkova</h3>
     <div class="gallery-double-wide">
@@ -95,20 +160,63 @@ permalink: /art/collection/
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-302-0x48b17a2c46007471b3eb72d16268eaecdd1502b7-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116127&amp;w=1024&amp;s=4c870eb175b865797385c2a6efaff8ab" alt="Susurro Lenis" loading="lazy">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-23d-0x48b17a2c46007471b3eb72d16268eaecdd1502b7-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115510&amp;w=1024&amp;s=c81e173c27bdeeecdf6517723c193acd" alt="Rusticus Romaineus" loading="lazy">
     </div>
+    <h3 class="collection-title">Iskra Velitchkova</h3>
+    <div class="flex gap-2 sm:gap-4 mb-2 sm:mb-4">
+        <div style="flex: 1;">
+            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-ba2c6-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684815056&amp;q=100&amp;w=1024&amp;s=879f0103e8b0de4f4ed192383a0404fe" alt="🐥🪱 - A bird as if a worm as a bird as a worm | for Bird and Worm Society" loading="lazy">
+        </div>
+        <div style="flex:1.10583153;">
+            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-2d770-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684209563&amp;q=100&amp;w=1024&amp;s=5716c8070f2aa090ec97804859d3a017" alt="The very first B I R D S " loading="lazy">
+        </div>
+        <div style="flex:0.726756565;">
+            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-35313-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1686053010&amp;w=1024&amp;s=a58f93644e4dcb0bd6e2b30364598dcd" alt="H20thB" loading="lazy">
+        </div>
+    </div>
+    <div class="flex gap-2 sm:gap-4 mb-2 sm:mb-4">
+        <div style="flex: 1;">
+            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-2846-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210161&amp;w=1024&amp;s=c5a04f7db553ef19d2a4d2d22c7a4f42" alt="GenerativO Sov I" loading="lazy">
+        </div>
+        <div style="flex: 1;">
+            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-284a-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210129&amp;w=1024&amp;s=1f01462f8593c7e25888cee8b71f91da" alt="GenerativO Sov III" loading="lazy">
+        </div>
+    </div>
+    <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
+        <div style="flex: 1;">
+            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-c85e7b5c36fc675ba5f02f4e9587021f1ad78d35cd443d4b77b5ade8a05f5747-0xd8eed224e1b358fa6f7b167124c2c1afe42275b4-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115738&amp;w=1024&amp;s=c69f0b218b9dc83de27bf0ad43e79654" alt="Hypothetically Micro #83" loading="lazy">
+        </div>
+        <div style="flex:2.01972387;">
+            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-85a36-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210135&amp;w=1024&amp;s=0fd221c34fcbbfcb4823be7f652b7cc2" alt="BOSKË" loading="lazy">
+        </div>
+    </div>
     <h3 class="collection-title">Qubibi</h3>
+    <div class="flex gap-2 sm:gap-4 mb-2 sm:mb-4">
+        <div style="flex: 1;">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-22864-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210134&amp;w=1024&amp;s=236b0ae0420da8085d104737b0bb8a4d" alt="MMZ ERRR 3 B" loading="lazy">
+        </div>
+        <div style="flex: 1;">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-90-KT19rTtzjSczSjfmAx4dESY5BecDHKJwB8Ww-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1694184781&amp;w=1024&amp;s=7a398841d98b7beaf8ee6f7b3546d811" alt="230907s01cBp30003000" loading="lazy">
+        </div>
+    </div>
+    <div class="flex gap-2 sm:gap-4 mb-2 sm:mb-4">
+        <div style="flex: 0.4;">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-8f8fe-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210214&amp;w=1024&amp;s=4048347589513027ccd2bf1ff238955f" alt="MMZ 197 G" loading="lazy">
+        </div>
+        <div style="flex: 0.5;">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-1f161ff8-0xc3ce0b793d15a4777f96afb4c03744c9a25583d0-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116187&amp;w=1024&amp;s=13bd6fb0e8a2e040dbe0d07eac2f3742" alt="wwz uu15M7kj722Ho #51" loading="lazy">
+        </div>
+        <div style="flex: 0.710617627;">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-7de69-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210115&amp;w=1024&amp;s=497548c4b0363c96d86dbf860160045a" alt="MMZ 188 D" loading="lazy">
+        </div>
+    </div>
     <div class="gallery-quadruple-wide">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-8f8fe-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210214&amp;w=1024&amp;s=4048347589513027ccd2bf1ff238955f" alt="MMZ 197 G" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-1f161ff8-0xc3ce0b793d15a4777f96afb4c03744c9a25583d0-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116187&amp;w=1024&amp;s=13bd6fb0e8a2e040dbe0d07eac2f3742" alt="wwz uu15M7kj722Ho #51" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-7de69-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210115&amp;w=1024&amp;s=497548c4b0363c96d86dbf860160045a" alt="MMZ 188 D" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-22864-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210134&amp;w=1024&amp;s=236b0ae0420da8085d104737b0bb8a4d" alt="MMZ ERRR 3 B" loading="lazy">
+        <img class="sm:col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-8d-KT19rTtzjSczSjfmAx4dESY5BecDHKJwB8Ww-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1694183971&amp;w=1024&amp;s=fe70ee4e30f1c48ed41c52724b1e6427" alt="230830s19pQh37003700" loading="lazy">
+        <img class="sm:col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-22-KT19rTtzjSczSjfmAx4dESY5BecDHKJwB8Ww-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210241&amp;w=1024&amp;s=1daab1256969695039d0e2f7c19bf5bb" alt="220831k03zWf35003500" loading="lazy">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-9a696-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210190&amp;w=1024&amp;s=3189c16d1bb7696e105c07728816b6fe" alt="MMZ 204 B" loading="lazy">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-1d53d-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210216&amp;w=1024&amp;s=677e71fbe91876d34d8ea564361af19f" alt="MMZ 47" loading="lazy">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-9a83c-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210130&amp;w=1024&amp;s=6011f16953462ab9d944d1e2a67ec83e" alt="MMZ 207 B" loading="lazy">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-9a83e-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210184&amp;w=1024&amp;s=885d9ad8cc7a29b6a2269bc871a9f303" alt="MMZ 207 D" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-22-KT19rTtzjSczSjfmAx4dESY5BecDHKJwB8Ww-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210241&amp;w=1024&amp;s=1daab1256969695039d0e2f7c19bf5bb" alt="220831k03zWf35003500" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-23172-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210139&amp;w=1024&amp;s=fe773b4a2499e39ef827d7b2103b05f7" alt="MMZ 64" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-7237c-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210213&amp;w=1024&amp;s=59ffb35d42773df3b78bee0a67d7aac5" alt="MMZ 181 A" loading="lazy">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-7b7c8-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210245&amp;w=1024&amp;s=8b7bcf34ad8e5dd1d08d7f3ec76a1181" alt="hw2111041939png1936x2897" loading="lazy">
+        <img class="sm:col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-23172-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210139&amp;w=1024&amp;s=fe773b4a2499e39ef827d7b2103b05f7" alt="MMZ 64" loading="lazy">
+        <img class="sm:col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-7237c-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210213&amp;w=1024&amp;s=59ffb35d42773df3b78bee0a67d7aac5" alt="MMZ 181 A" loading="lazy">
     </div>
     <h3 class="collection-title">Olivier Bodini</h3>
     <div class="gallery-double-wide">
@@ -130,11 +238,23 @@ permalink: /art/collection/
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-3fb4-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210139&amp;w=1024&amp;s=165230f8200753773f01981b442e2a01" alt="Loom #163" />
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-500a-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210148&amp;w=1024&amp;s=8fe840875d5cce40f65dee5901836e00" alt="Loom #424" />
     </div>
+    <h3 class="collection-title">Unfolded by Lars Wander</h3>
+    <div class="gallery-six-wide">
+        <div class="sm:col-span-3">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-26108-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210208&amp;w=1024&amp;s=7fccfb4f6d9989cc3ab91b2b86e240fb" alt="Unfolded #3" loading="lazy">
+        </div>
+        <div class="sm:col-span-3">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-26122-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210233&amp;w=1024&amp;s=963e007d5c860bf7f013ad93498dd021" alt="Unfolded #20" loading="lazy">
+        </div>
+        <img class="col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-26163-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210113&amp;w=1024&amp;s=01c9ca371b94cf37418c31dbde6e0458" alt="Unfolded #74" loading="lazy">
+        <img class="col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-26147-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210138&amp;w=1024&amp;s=54fb816920e03222ae9d15d7355eeb7a" alt="Unfolded #52" loading="lazy">
+        <img class="col-span-2" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-2610e-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210141&amp;w=1024&amp;s=4b73647c3cd397d0ba1b16107174a2ad" alt="Unfolded #5" loading="lazy">
+    </div>
     <div class="gallery-triple-wide">
         <div>
             <h3 class="collection-title">Acoustic Drift by Joshua Bagley</h3>
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-132f2-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684209897&amp;w=1024&amp;s=5ebc50fabd72d5f70b0de14f632d0dc3" alt="Acoustic Drift" loading="lazy">
-        </div>  
+        </div>
         <div>
             <h3 class="collection-title">Fold #223 by rudxane</h3>
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-f431f-0xaf40b66072fe00cacf5a25cd1b7f1688cde20f2f-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691510432&amp;w=1024&amp;s=2385cffd309796daf75e9c9988175e80" alt="Fold #223" loading="lazy">
@@ -150,6 +270,48 @@ permalink: /art/collection/
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-3d0935-0x32d4be5ee74376e08038d652d4dc26e62c67f436-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115341&amp;w=1024&amp;s=1aa9284e01fa1754e30a25038939cff9" alt="Elefante #53" loading="lazy">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-3d0910-0x32d4be5ee74376e08038d652d4dc26e62c67f436-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115188&amp;w=1024&amp;s=3e0169bffefa0b99a1363143ea1776fd" alt="Elefante #16" loading="lazy">
     </div>
+    <h3 class="collection-title">Zbageti by Melissa Wiederrecht</h3>
+    <div class="gallery-triple-wide">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-1063d8-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684211702&amp;w=1024&amp;s=bdc364e60f9ab00758521616ace5ebfa" alt="Zbageti #79" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-1063d2-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210124&amp;w=1024&amp;s=34783a43a2f32df026e175d509190386" alt="Zbageti #73" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-1063be-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210217&amp;w=1024&amp;s=36a3889e350d0375e757582fc503db7c" alt="Zbageti #53" loading="lazy">
+    </div>
+    <h3 class="collection-title">Shapes on a Plane by Mount Vitruvius</h3>
+    <div class="gallery-triple-wide">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-dca43-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210214&amp;w=1024&amp;s=0ade8705476da66e9efd443df0eb50c3" alt="Shapes on a Plane #455" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-dc9b6-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210113&amp;w=1024&amp;s=1b2646edd09760a485b7223a72d94290" alt="Shapes on a Plane #314" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-dca4e-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210132&amp;w=1024&amp;s=b1d91ee9ea85d906954f1f820b38bcb4" alt="Shapes on a Plane #466" loading="lazy">
+    </div>
+    <h3 class="collection-title">Obscured by Nadieh Bremer</h3>
+    <div class="gallery-triple-wide">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-325-KT1S23ui1PKU5G3V52Ds2NyNnPgxJbZhUY6y-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210200&amp;w=1024&amp;s=8c1fde5c08d7a2d2fb6fa213baec0770" alt="Obscured 02f0" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-311-KT1S23ui1PKU5G3V52Ds2NyNnPgxJbZhUY6y-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210152&amp;w=1024&amp;s=c413a78bc96ff7029f49a7345d832cba" alt="Obscured 3d53" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-2d9-KT1S23ui1PKU5G3V52Ds2NyNnPgxJbZhUY6y-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210141&amp;w=1024&amp;s=94643eb1befffedd95d67fc1db4bf51d" alt="Obscured 43f3" loading="lazy">
+    </div>
+    <h3 class="collection-title">Deconstructions by DistCollective</h3>
+    <div class="gallery-triple-wide">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-ac20f-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684211968&amp;w=1024&amp;s=74431915bf46454d17bb5a166184fc92" alt="Deconstructions #43" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-ac2c2-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210137&amp;w=1024&amp;s=1491b6fbc6ba9f99d2d30bb3951c9090" alt="Deconstructions #217" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-ac2c9-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210143&amp;w=1024&amp;s=ab8aa5540237669977e99357c414d184" alt="Deconstructions #224" loading="lazy">
+    </div>
+    <h3 class="collection-title">Chepertom</h3>
+    <div class="gallery-triple-wide">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-69112-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210143&amp;w=1024&amp;s=e32f84d5113db09d68cc79571e9a8804" alt="Circuit_Bending_3.RAD" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-80917-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210180&amp;w=1024&amp;s=2de73e9a42103dd9ae4c628d4e6854b0" alt="Purple.RAD" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-2-KT1So5S57PAN8HvwBQVXHqcBsCXbPZDjKbSM-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210179&amp;w=1024&amp;s=8e051b7b0adf5980a304b712f04daaf6" alt="16.RAD" loading="lazy">
+    </div>
+    <h3 class="collection-title">Assembling Machine by Tyler Boswell</h3>
+    <div class="gallery-triple-wide">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-106e9f-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210137&amp;w=1024&amp;s=babb4566ad53f7fe0c3c836d9fe2fd0e" alt="ASSEMBLING MACHINE #243" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-106e31-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210134&amp;w=1024&amp;s=90deb3be1fb0c234d4ea2ed6a4bfd504" alt="ASSEMBLING MACHINE #134" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-106df7-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210117&amp;w=1024&amp;s=3866771689883ba6ea38978b6d1593d9" alt="ASSEMBLING MACHINE #76" loading="lazy">
+    </div>
+    <h3 class="collection-title">Impressions of Order by nbswwit</h3>
+    <div class="gallery-triple-wide">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-11d70a-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210210&amp;w=1024&amp;s=a7b41fd66b6d56bdf9e956ae2db8f5d9" alt="Impressions of Order #79" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-11d72e-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210123&amp;w=1024&amp;s=ff5b26f85ebbc6b8302b1128eee9d956" alt="Impressions of Order #113" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-11d79a-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210135&amp;w=1024&amp;s=e6ee1aa7b1c0ec20464168059e6de117" alt="Impressions of Order #215" loading="lazy">
+    </div>
     <div class="gallery-double-wide">
         <div>
             <h3 class="collection-title">Crude Figures by Kjetil Golid</h3>
@@ -159,6 +321,66 @@ permalink: /art/collection/
             <h3 class="collection-title">STRINGS PROTOTYPE #13 by IX Shells</h3>
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-f-0xa5f3bbd51a133cd42e0c404a74b4bee07c001012-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685114779&amp;w=1024&amp;s=fe0dc5afa5643e9d11491c6b8ac85e40" alt="STRINGS PROTOTYPE :::..._ #13/20" loading="lazy">
         </div>
+    </div>
+    <div class="gallery-double-wide">
+        <div>
+            <h3 class="collection-title">Nothing Remains #63 by Brendan Dawes</h3>
+            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-108ba3-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210114&amp;w=1024&amp;s=5c10564816ecc9e75ba9ba2c1527fadc" alt="Nothing Remains #63" loading="lazy">
+        </div>
+        <div>
+            <h3 class="collection-title">Bardez #149 by Nat Sarkissian</h3>
+            <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-eb556-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210139&amp;w=1024&amp;s=1b71b4bd587eae945345d32e445f951c" alt="Bardez #149" loading="lazy">
+        </div>
+    </div>
+    <h3 class="collection-title">Microgravity by Ryan Bell</h3>
+    <div class="gallery-triple-wide">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-b903e-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1692062061&amp;w=1024&amp;s=a2a36cf3dcc2be9403d58ffb9a69d420" alt="Microgravity #268" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-bc763-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210219&amp;w=1024&amp;s=142bcbbc34741a3b86dfd4a2dd553540" alt="Microgravity #531" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-bd946-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210231&amp;w=1024&amp;s=0d722b4d4cdc4858384b26e32ff9736c" alt="Microgravity #713" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-be5d1-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210136&amp;w=1024&amp;s=088b65862acc723495b9c15c36ffa2d9" alt="Microgravity #1099" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-be78b-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210130&amp;w=1024&amp;s=38d750608dbb325f7df2c8906043eb12" alt="Microgravity #1214" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-bac26-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210212&amp;w=1024&amp;s=ad87d045b0ee3dda06e546e2e637bb8c" alt="Microgravity #360" loading="lazy">
+    </div>
+    <div class="gallery-double-wide">
+        <div>
+            <h3 class="collection-title">Etched Sinuosity #2 by Saskia Freeke</h3>
+            <iframe allow="accelerometer; camera; gyroscope; microphone; xr-spatial-tracking; midi;" class="aspect-square w-full" sandbox="allow-scripts allow-downloads allow-same-origin" scrolling="" src="https://assets.objkt.media/file/assets-003/QmbdemW25i8uqXa4okK5jKXP3EDvezeT27tfEgoZcK8shZ/artifact/index.html?objkt=126675&amp;creator=tz1R592HZH4cFAYdNcVntGfXBMB7tGu9xDGN&amp;viewer=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU&amp;danger=ignored"></iframe>
+        </div>
+        <div>
+            <h3 class="collection-title">Fluctuating Paragon #3 by Saskia Freeke</h3>
+            <iframe allow="accelerometer; camera; gyroscope; microphone; xr-spatial-tracking; midi;" class="aspect-square w-full" sandbox="allow-scripts allow-downloads allow-same-origin" scrolling="" src="https://assets.objkt.media/file/assets-003/QmZoGW3fJhgm5j5ijBK31rWFwJ1CYvkFDBXxwmfPX6bKyQ/artifact/index.html?objkt=320515&creator=tz1R592HZH4cFAYdNcVntGfXBMB7tGu9xDGN&viewer=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU&danger=ignored"></iframe>
+        </div>
+    </div>
+    <div class="gallery-double-wide">
+        <div>
+            <h3 class="collection-title">Asemica #632 by Emily Edelman, Dima Ofman, Andrew Badr</h3>
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-c4751f8-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115265&amp;w=1024&amp;s=0d8594ae0f78cc91b58d3a82d8db9c9b" alt="Asemica #632" loading="lazy">
+        </div>
+        <div>
+            <h3 class="collection-title">ertdfgcvb</h3>
+            <img src="https://storage.googleapis.com/prod-token-content/4-b398-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation" alt="ABCDEFGHIJKLMNOPQRSTUVWXYZ" loading="lazy">
+        </div>
+    </div>
+    <h3 class="collection-title">Cosmic Type by Mark Webster</h3>
+    <div class="gallery-triple-wide">
+        <iframe src="https://gateway.fxhash2.xyz/ipfs/Qmc82PoP6NHKm47YM131W7KoNzQeG1Y9aK5zcT6XSeAuiy/?fxhash=opDHtTdB8PW7rv2aH83HJiiUBVJ2f2F9a6YMTE1A4bPrw2Kh4Fz&fxiteration=163&fxminter=tz1eHtSYDmFePHvZYHQZvQLk1kpvfcMFdLeJ" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
+        <iframe src="https://gateway.fxhash2.xyz/ipfs/Qmc82PoP6NHKm47YM131W7KoNzQeG1Y9aK5zcT6XSeAuiy/?fxhash=ooqXZigratr7VFpBPzhiUSwpKXyQ5VFHv77yf58HWkLhXzmQnBw&fxiteration=242&fxminter=tz1TbpNqZHiiyrip1NMPioM5vwRxoz8UXabj" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
+        <iframe src="https://gateway.fxhash2.xyz/ipfs/Qmc82PoP6NHKm47YM131W7KoNzQeG1Y9aK5zcT6XSeAuiy/?fxhash=onws1HjExouNprzkaJBgJAevLBcjSpmCkMRvHaX96aD1SZwhuia&fxiteration=268&fxminter=tz1TSdoeS5udkYmVr1cEpErTqxGVrC3Kcd2J" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
+    </div>
+    <h3 class="collection-title">Hypertype by Mark Webster</h3>
+    <div class="gallery-double-wide">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-7c-0xbb5471c292065d3b01b2e81e299267221ae9a250-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685114824&amp;w=1024&amp;s=5e13bbb9dd3f322cfd80286d703e5a92" alt="Hypertype #124" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-39-0xbb5471c292065d3b01b2e81e299267221ae9a250-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115751&amp;w=1024&amp;s=c2dab9906154b1b8a874ab6587c3133c" alt="Hypertype #57" loading="lazy">
+    </div>
+    <h3 class="collection-title">Hyperspacers by Stranger in the Q</h3>
+    <div class="gallery-double-wide">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-f8d8e-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210135&amp;w=1024&amp;s=957ef57f925866b68a194e8c1f6b73e2" alt="Hyperspacers #335" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-f8d6d-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210121&amp;w=1024&amp;s=69604d0ac03dab4bd42733664b926a6c" alt="Hyperspacers #334" loading="lazy">
+    </div>
+    <h3 class="collection-title">adrift by Jacek Markusiewicz</h3>
+    <div class="gallery-double-wide">
+        <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-11c0a7-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210136&amp;w=1024&amp;s=eb3716a49ae4f35fa681ab11235f987a" alt="adrift #146" loading="lazy">
+        <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-11c609-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1692062068&amp;w=1024&amp;s=0b7bc0a8aeb6c40770a740c0ceec15ce" alt="adrift #228" loading="lazy">
     </div>
     <h3 class="collection-title">RGB Elementary Cellular Automaton by Ciphrd</h3>
     <div class="gallery-double-wide">
@@ -170,8 +392,33 @@ permalink: /art/collection/
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-53488-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210147&amp;w=1024&amp;s=7ca167b4e4e2c6b6f35dacc194791a3b" alt="CSRSNT-ZAAI-23-of-64.png" loading="lazy">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-3a44c-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210137&amp;w=1024&amp;s=0e20e8ca1feead8598a9e11697b09b56" alt="CSRSNT-QAAI-18-of-32.png" loading="lazy">
     </div>
+    <h3 class="collection-title">Punktwelt by Erik Swahn</h3>
+    <div class="gallery-double-wide">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-143c40-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684230973&amp;w=1024&amp;s=f360e54018f86297b24caf901194a35c" alt="Punktwelt #420" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-143cdd-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684230990&amp;w=1024&amp;s=9faadcdea4f00e68284b581b4c392f34" alt="Punktwelt #556" loading="lazy">
+    </div>
+    <h3 class="collection-title">Primitives by Aranda/Lasch</h3>
+    <div class="gallery-double-wide">
+        <iframe src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/368000242" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
+        <iframe src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/368000049" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
+    </div>
+    <h3 class="collection-title">Hypergiraffes by Piter Pasma</h3>
+    <div class="gallery-double-wide">
+        <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-10ff0-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210144&amp;w=1024&amp;s=66ff2e0375fbb278dbf4d1021efe9e84" alt="Hypergiraffe #151" loading="lazy">
+        <img class="sc-a7460964-0 flHabD" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-10fee-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210127&amp;w=1024&amp;s=66200af3069e235dd201057d9fc0cd85" alt="Hypergiraffe #150" loading="lazy">
+    </div>
+    <div class="gallery-double-wide">
+        <div>
+            <h3 class="collection-title">Computational Specimen No. 2 by Sarah Ridgley</h3>
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-2ca27-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210224&amp;w=1024&amp;s=d85b5472fbe8316ca3a184b5760f94b4" alt="Computational Specimen No. 2" loading="lazy">
+        </div>
+        <div>
+            <h3 class="collection-title"> Anthropogeny by Claire Silver</h3>
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-5-0x70ec58ec3a2ad80300a81968753aee56ebda89a1-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1689814988&amp;w=1024&amp;s=d157f0ac20334b3f4d1fa83c4c48364a" alt="Claire Silver - Anthropogeny" loading="lazy">
+        </div>
+    </div>
     <h3 class="collection-title">Matthias Isaaksen</h3>
-    <div class="flex gap-2 sm:gap-4">
+    <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
         <div style="flex: 1;">
             <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-a884d-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691590892&amp;w=1024&amp;s=098b9c597a99a4a2263ddddc418d2a8e" alt="Extramundane" loading="lazy">
         </div>
@@ -195,6 +442,12 @@ permalink: /art/collection/
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-bd-0x0e42ffbac75bcc30cd0015f8aaa608539ba35fbb-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685114805&amp;w=1024&amp;s=5d5df41428a9dc66d24c6940b7aef27b" alt="Mind the Gap #189" loading="lazy">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-72-0x0e42ffbac75bcc30cd0015f8aaa608539ba35fbb-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116029&amp;w=1024&amp;s=59f279192cea49e5f504b04b6c7bd4ee" alt="Mind the Gap #114" loading="lazy">
     </div>
+    <h3 class="collection-title">de|growth:generations by Jacek Markusiewicz</h3>
+    <div class="gallery-triple-wide">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-663ef-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210137&amp;w=1024&amp;s=148bd7103b65b9a022984b5bf6bec016" alt="de|growth:generations #68" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-66415-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210118&amp;w=1024&amp;s=b9fb9f6ecd29a02f2379d768c06e3fcc" alt="de|growth:generations #106" loading="lazy">
+        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-663e0-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210234&amp;w=1024&amp;s=3c34ea7ac87b1e8f0f3ac05f5e96e3b2" alt="de|growth:generations #53" loading="lazy">
+    </div>
     <h3 class="collection-title">Elevation by Andreas Rau</h3>
     <div class="gallery-triple-wide">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-dd98b-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210121&amp;w=1024&amp;s=f56c50b593caa715e61192b87fb5ddd4" alt="Elevation #257" loading="lazy" />
@@ -207,9 +460,13 @@ permalink: /art/collection/
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-ec5d4-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210132&amp;w=1024&amp;s=75432a4ce140c1b47b3b08fcacc1440b" alt="Millefoglie #104" />
     </div>
     <h3 class="collection-title">Fields by Erik Swahn</h3>
-    <div class="gallery-double-wide">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-a7555b4f-0x1dbe39e071f2e580c1c0c49cfb19b9edb5b89b2d-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116093&amp;w=1024&amp;s=9e0406ba3378b29bb599b8c6b6320bfd" alt="Fields #648" />
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-2f418d7b-0x1dbe39e071f2e580c1c0c49cfb19b9edb5b89b2d-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116050&amp;w=1024&amp;s=1732fe85c381d8a16bdbd7441cc67198" alt="Fields #695" />
+    <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
+        <div style="flex: 1;">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-a7555b4f-0x1dbe39e071f2e580c1c0c49cfb19b9edb5b89b2d-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116093&amp;w=1024&amp;s=9e0406ba3378b29bb599b8c6b6320bfd" alt="Fields #648" />
+        </div>
+        <div style="flex: 1.6;">
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-2f418d7b-0x1dbe39e071f2e580c1c0c49cfb19b9edb5b89b2d-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116050&amp;w=1024&amp;s=1732fe85c381d8a16bdbd7441cc67198" alt="Fields #695" />
+        </div>
     </div>
     <h3 class="collection-title">Cathedral Study by Eric di Giuli</h3>
     <div class="gallery-double-wide">
@@ -217,9 +474,9 @@ permalink: /art/collection/
         <iframe src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000363" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
     </div>
     <h3 class="mb-0">Ir/rational Beauty by Yazid</h3>
-    <div class="gallery-double-wide">
-        <iframe src="https://gallery.infura-ipfs.io/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM?fxhash=ooMkJ1sbnrjd1rU25bUmuKjHUAqU3s1AEZA3KypMiHcLjM5uGes" loading="lazy" sandbox="allow-scripts allow-same-origin"  class="aspect-[3/4] w-full"></iframe>
-        <iframe src="https://gallery.infura-ipfs.io/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM?fxhash=ooz5Rf6wR1CkCNPWY3hdDrNThjfy7gHfBRVfzHjyd9W2z1AE2nF" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-[4/3] w-full"></iframe>
+    <div class="flex gap-2 sm:gap-4 mb-12 md:mb-24">
+        <iframe src="https://gateway.fxhash2.xyz/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM/?fxhash=ooMkJ1sbnrjd1rU25bUmuKjHUAqU3s1AEZA3KypMiHcLjM5uGes&fxiteration=107&fxminter=tz1ZFsnAQ8UorVbyiMcTP63djTMDcj3rrSc3" loading="lazy" sandbox="allow-scripts allow-same-origin"  class="aspect-[3/4]" style="flex: 0.833125;"></iframe>
+        <iframe src="https://gateway.fxhash2.xyz/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM/?fxhash=ooz5Rf6wR1CkCNPWY3hdDrNThjfy7gHfBRVfzHjyd9W2z1AE2nF&fxiteration=65&fxminter=tz1gLeXAGc1Rho2UTE246xD26SapeyztMF8E" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-[4/3]" style="flex: 1.6194332;"></iframe>
     </div>
     <h3 class="collection-title">Tych by rudxane</h3>
     <div class="gallery-triple-wide">
@@ -234,13 +491,11 @@ permalink: /art/collection/
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-20a5c-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210125&amp;w=1024&amp;s=170532700d7ae140a5e5b260c0c53ba3" alt="Tych #91" loading="lazy">
     </div>
     <h3 class="collection-title">Tesseract by Studio Yorktown</h3>
-    <div class="gallery-triple-wide">
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-acf82-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210123&amp;w=1024&amp;s=bc1a3fe9ef0dde865699f49bf167a723" alt="Tesseract #365" />
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-ad3a9-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691920929&amp;w=1024&amp;s=56d2c55594d8bf7c4804e9292ca8dcce" alt="Tesseract #431" />
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-acf8d-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210146&amp;w=1024&amp;s=36070c97145ecf998b6d7f91c9a2eaae" alt="Tesseract #369" />
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-ad124-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210141&amp;w=1024&amp;s=078a428db673891e984c16624637c6c6" alt="Tesseract #388" />
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-71bd-KT1LjmAdYQCLBjwv4S2oFkEzyHVkomAf5MrW-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685609215&amp;w=1024&amp;s=4466696671e039e64c642be810636cd8" alt="Tesseract x Studio Captain" />
-        <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-6f29-KT1LjmAdYQCLBjwv4S2oFkEzyHVkomAf5MrW-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1692060693&amp;w=1024&amp;s=e9948c467291fa07d278a8a733db4734" alt="Tesseract x Kato Trofimova" />
+    <div class="gallery-quadruple-wide">
+        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-acf82-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210123&amp;w=1024&amp;s=bc1a3fe9ef0dde865699f49bf167a723" alt="Tesseract #365" />
+        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-ad3a9-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691920929&amp;w=1024&amp;s=56d2c55594d8bf7c4804e9292ca8dcce" alt="Tesseract #431" />
+        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-acf8d-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210146&amp;w=1024&amp;s=36070c97145ecf998b6d7f91c9a2eaae" alt="Tesseract #369" />
+        <img class="col-span-2 sm:col-span-1" src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-ad124-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210141&amp;w=1024&amp;s=078a428db673891e984c16624637c6c6" alt="Tesseract #388" />
     </div>
     <h3 class="collection-title">Catharsis by Dario Lanza</h3>
     <div class="gallery-quadruple-wide">
@@ -275,6 +530,7 @@ permalink: /art/collection/
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-f7ab-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210116&amp;w=1024&amp;s=c4cf69f01e4014e9c21a4c581c9f9e11" alt="unbuilt #190" />
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-f5b7-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210142&amp;w=1024&amp;s=6bf954b22decaf249078a2fcb15f3ea4" alt="unbuilt #43" /><img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-f7c3-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210199&amp;w=1024&amp;s=53c07605a534165fe815557cd800339b" alt="unbuilt #197" />
     </div>
+
 </div>
 
 </article>
