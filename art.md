@@ -4,7 +4,26 @@ title: Art
 permalink: /art/
 ---
 
-<p class="sub-heading">Since 2021, I've minted digital art on the Ethereum and Tezos blockchains. Recently, I've been exploring AI-collaborative art, creating complex algorithms that produce beautiful works. I'm also an avid collector with over 6,000 pieces acquired. <a href="/art/collection">View my collection</a>.</p>
+<p class="sub-heading">Since 2021, I've minted digital art on the Ethereum and Tezos blockchains. Recently, I've been exploring AI-collaborative art, creating complex algorithms that produce beautiful works. I'm also an avid collector with over 6,000 pieces acquired.</p>
+
+<h2><a href="/art/collection">The Wallace Collection</a></h2>
+<p class="mb-8">Explore a curated selection of pieces from the Wallace family's digital collection. These pieces were acquired over a period of two and a half years, containing art from some of the leading creative coders in the world, including Tyler Hobbs, IX Shells, Casey Reas, Manolo Gamboa Naon, Iskra Velitchkova, and more.</p>
+
+<div class="gallery-flex mb-6 sm:mb-12">
+    <div style="flex: 0.66666667;">
+        <a href="/art/collection"><img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-137237-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684247024&amp;w=1024&amp;s=e9b0cdd6a0cc6766485a4aa7ab70f0d6" alt="Acequia #219" class="max-w-full h-auto" loading="lazy"></a>
+    </div>
+    <div style="flex: 0.8;">
+        <a href="/art/collection"><img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-c4751f8-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115265&amp;w=1024&amp;s=0d8594ae0f78cc91b58d3a82d8db9c9b" alt="Asemica #632" loading="lazy"></a>
+    </div>
+    <div style="flex: 0.5;">
+        <a href="/art/collection"><img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-1f161ff8-0xc3ce0b793d15a4777f96afb4c03744c9a25583d0-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116187&amp;w=1024&amp;s=13bd6fb0e8a2e040dbe0d07eac2f3742" class="max-w-full h-auto" alt="wwz uu15M7kj722Ho #51" loading="lazy"></a>
+    </div>
+    <div style="flex: 1;">
+        <a href="/art/collection"><img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-23ac1-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684211701&amp;w=1024&amp;s=255f0e7795081acb279d8a672d97cb14" alt="Garden, Monoliths #125" loading="lazy" class="max-w-full h-auto"></a>
+    </div>
+</div>
+
 
 <h2><a href="/art/interplay">Interplay</a></h2>
 <p>Fusing the unpredictability of complex mathematical equations with the intentionality of artistic expression, Interplay challenges the viewer to find order within the apparent disorder. This captivating visual journey aims to evoke a sense of unity between seemingly opposing forces, ultimately inviting the observer to reflect on the delicate equilibrium that governs both art and life itself.</p>
