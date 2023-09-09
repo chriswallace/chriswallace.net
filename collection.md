@@ -6,40 +6,61 @@ permalink: /art/collection/
 ---
 
 <script>
+function webglSupport() {
+  try {
+    var canvas = document.createElement('canvas');
+    return !!(window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
+  } catch (e) {
+    return false;
+  }
+}
+function isMobile() {
+  return /Mobi|Android/i.test(navigator.userAgent);
+}
 document.addEventListener('DOMContentLoaded', () => {
-  // Select all images on the page
-  const images = document.querySelectorAll('img');
+    // Select all images on the page
+    const images = document.querySelectorAll('img');
 
-  // Create a tooltip element
-  const tooltip = document.createElement('div');
-  tooltip.style.position = 'absolute';
-  tooltip.style.backgroundColor = 'black';
-  tooltip.style.color = 'white';
-  tooltip.style.padding = '5px 10px';
-  tooltip.style.borderRadius = '5px';
-  tooltip.style.display = 'none';
-  tooltip.style.zIndex = '9999';
-  document.body.appendChild(tooltip);
+    // Create a tooltip element
+    const tooltip = document.createElement('div');
+    tooltip.style.position = 'absolute';
+    tooltip.style.backgroundColor = 'black';
+    tooltip.style.color = 'white';
+    tooltip.style.padding = '5px 10px';
+    tooltip.style.borderRadius = '5px';
+    tooltip.style.display = 'none';
+    tooltip.style.zIndex = '9999';
+    document.body.appendChild(tooltip);
 
-  // Attach event listeners to each image
-  images.forEach((img) => {
-    img.addEventListener('mouseover', function(event) {
-      const altText = this.getAttribute('alt');
-      if (altText) {
-        tooltip.textContent = altText;
-        tooltip.style.display = 'block';
-      }
+    // Attach event listeners to each image
+    images.forEach((img) => {
+        img.addEventListener('mouseover', function(event) {
+            const altText = this.getAttribute('alt');
+            if (altText) {
+            tooltip.textContent = altText;
+            tooltip.style.display = 'block';
+            }
+        });
+
+        img.addEventListener('mousemove', function(event) {
+            tooltip.style.left = event.pageX + 10 + 'px';
+            tooltip.style.top = event.pageY + 10 + 'px';
+        });
+
+        img.addEventListener('mouseout', function() {
+            tooltip.style.display = 'none';
+        });
     });
 
-    img.addEventListener('mousemove', function(event) {
-      tooltip.style.left = event.pageX + 10 + 'px';
-      tooltip.style.top = event.pageY + 10 + 'px';
-    });
-
-    img.addEventListener('mouseout', function() {
-      tooltip.style.display = 'none';
-    });
-  });
+    if (!isMobile() && webglSupport()) {
+        let iframes = document.getElementsByClassName('live-code');
+        Array.from(iframes).forEach((iframe) => {
+            let dataSrc = iframe.getAttribute('data-src');
+            if (dataSrc) {
+                iframe.src = dataSrc;
+            }
+        });
+    }
 });
 </script>
 <article>
@@ -135,10 +156,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-6b4a3-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210235&amp;w=1024&amp;s=d878e6ac145a412a612b54658ce87c66" alt="Bravura #82" loading="lazy">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-6b4a2-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210216&amp;w=1024&amp;s=2b2605a0e2b9c65b459cdb710030344d" alt="Bravura #81" loading="lazy">
     </div>
-    <h3 class="collection-title">Gerhard and Richter by Richard Nadler and Leander Herzog</h3>
-    <div class="gallery-double-wide">
-        <iframe src="https://gateway.fxhash2.xyz/ipfs/QmW7Cj5QMG2FFVGMcRKGFhW4V1113seN6iX5FwQrKqTHSM/?fxhash=oo3iCxnjsGQU6Jx4xZpf4Zfc3EPoXWkYhsqXTyGwnGQQKWUjrDB&fxiteration=368&fxminter=tz1Yw6YSydH7qb4vERwxAmSnsihfRcVvnLL3" sandbox="allow-scripts allow-same-origin allow-modals" class="aspect-square w-full" allow="accelerometer *; camera *; gyroscope *; microphone *; xr-spatial-tracking *;"></iframe>
-        <iframe src="https://gateway.fxhash2.xyz/ipfs/QmQzbsQM9hd6vc821LmpHCkLXv18fZfhbJf6ygyVhqWB5a/?fxhash=opQ7z15XLoNzWauyGgashqrsyB6zenAjUHpPBAsvMe6dknwj4JQ&fxiteration=399&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" sandbox="allow-scripts allow-same-origin allow-modals" class="aspect-square w-full" allow="accelerometer *; camera *; gyroscope *; microphone *; xr-spatial-tracking *;"></iframe>
+    <div class="sm:block hidden">
+        <h3 class="collection-title">Gerhard and Richter by Richard Nadler and Leander Herzog</h3>
+        <div class="gallery-double-wide">
+            <iframe data-src="https://gateway.fxhash2.xyz/ipfs/QmW7Cj5QMG2FFVGMcRKGFhW4V1113seN6iX5FwQrKqTHSM/?fxhash=oo3iCxnjsGQU6Jx4xZpf4Zfc3EPoXWkYhsqXTyGwnGQQKWUjrDB&fxiteration=368&fxminter=tz1Yw6YSydH7qb4vERwxAmSnsihfRcVvnLL3" sandbox="allow-scripts allow-same-origin allow-modals" class="aspect-square w-full live-code" allow="accelerometer *; camera *; gyroscope *; microphone *; xr-spatial-tracking *;"></iframe>
+            <iframe data-src="https://gateway.fxhash2.xyz/ipfs/QmQzbsQM9hd6vc821LmpHCkLXv18fZfhbJf6ygyVhqWB5a/?fxhash=opQ7z15XLoNzWauyGgashqrsyB6zenAjUHpPBAsvMe6dknwj4JQ&fxiteration=399&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" sandbox="allow-scripts allow-same-origin allow-modals" class="aspect-square w-full live-code" allow="accelerometer *; camera *; gyroscope *; microphone *; xr-spatial-tracking *;"></iframe>
+        </div>
     </div>
     <h3 class="collection-title">Entretiempos by Marcelo Soria-Rodríguez</h3>
     <div class="gallery-quadruple-wide">
@@ -350,14 +373,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-be78b-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210130&amp;w=1024&amp;s=38d750608dbb325f7df2c8906043eb12" alt="Microgravity #1214" loading="lazy">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-bac26-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210212&amp;w=1024&amp;s=ad87d045b0ee3dda06e546e2e637bb8c" alt="Microgravity #360" loading="lazy">
     </div>
-    <div class="sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+    <div class="sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24 sm:visible hidden">
         <div class="mb-12 sm:mb-0" style="flex:1;">
             <h3 class="collection-title">Etched Sinuosity #2 by Saskia Freeke</h3>
-            <iframe allow="accelerometer; camera; gyroscope; microphone; xr-spatial-tracking; midi;" class="aspect-square w-full" sandbox="allow-scripts allow-downloads allow-same-origin" scrolling="" src="https://ipfs.io/ipfs/QmbdemW25i8uqXa4okK5jKXP3EDvezeT27tfEgoZcK8shZ/"></iframe>
+            <iframe allow="accelerometer; camera; gyroscope; microphone; xr-spatial-tracking; midi;" class="aspect-square w-full live-code" sandbox="allow-scripts allow-downloads allow-same-origin" scrolling="" data-src="https://ipfs.io/ipfs/QmbdemW25i8uqXa4okK5jKXP3EDvezeT27tfEgoZcK8shZ/"></iframe>
         </div>
-        <div>
+        <div style="flex: 1;">
             <h3 class="collection-title">Fluctuating Paragon #3 by Saskia Freeke</h3>
-            <iframe allow="accelerometer; camera; gyroscope; microphone; xr-spatial-tracking; midi;" class="aspect-square w-full" sandbox="allow-scripts allow-downloads allow-same-origin" scrolling="" src="https://ipfs.io/ipfs/QmZoGW3fJhgm5j5ijBK31rWFwJ1CYvkFDBXxwmfPX6bKyQ/"></iframe>
+            <iframe allow="accelerometer; camera; gyroscope; microphone; xr-spatial-tracking; midi;" class="aspect-square w-full live-code" sandbox="allow-scripts allow-downloads allow-same-origin" scrolling="" data-src="https://ipfs.io/ipfs/QmZoGW3fJhgm5j5ijBK31rWFwJ1CYvkFDBXxwmfPX6bKyQ/"></iframe>
         </div>
     </div>
     <div class="sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
@@ -370,11 +393,13 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="https://storage.googleapis.com/prod-token-content/4-b398-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation" alt="ABCDEFGHIJKLMNOPQRSTUVWXYZ" loading="lazy">
         </div>
     </div>
-    <h3 class="collection-title">Cosmic Type by Mark Webster</h3>
-    <div class="gallery-triple-wide">
-        <iframe src="https://gateway.fxhash2.xyz/ipfs/Qmc82PoP6NHKm47YM131W7KoNzQeG1Y9aK5zcT6XSeAuiy/?fxhash=opDHtTdB8PW7rv2aH83HJiiUBVJ2f2F9a6YMTE1A4bPrw2Kh4Fz&fxiteration=163&fxminter=tz1eHtSYDmFePHvZYHQZvQLk1kpvfcMFdLeJ" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
-        <iframe src="https://gateway.fxhash2.xyz/ipfs/Qmc82PoP6NHKm47YM131W7KoNzQeG1Y9aK5zcT6XSeAuiy/?fxhash=ooqXZigratr7VFpBPzhiUSwpKXyQ5VFHv77yf58HWkLhXzmQnBw&fxiteration=242&fxminter=tz1TbpNqZHiiyrip1NMPioM5vwRxoz8UXabj" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
-        <iframe src="https://gateway.fxhash2.xyz/ipfs/Qmc82PoP6NHKm47YM131W7KoNzQeG1Y9aK5zcT6XSeAuiy/?fxhash=onws1HjExouNprzkaJBgJAevLBcjSpmCkMRvHaX96aD1SZwhuia&fxiteration=268&fxminter=tz1TSdoeS5udkYmVr1cEpErTqxGVrC3Kcd2J" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
+    <div class="sm:block hidden">
+        <h3 class="collection-title">Cosmic Type by Mark Webster</h3>
+        <div class="gallery-triple-wide">
+            <iframe data-src="https://gateway.fxhash2.xyz/ipfs/Qmc82PoP6NHKm47YM131W7KoNzQeG1Y9aK5zcT6XSeAuiy/?fxhash=opDHtTdB8PW7rv2aH83HJiiUBVJ2f2F9a6YMTE1A4bPrw2Kh4Fz&fxiteration=163&fxminter=tz1eHtSYDmFePHvZYHQZvQLk1kpvfcMFdLeJ" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full live-code"></iframe>
+            <iframe data-src="https://gateway.fxhash2.xyz/ipfs/Qmc82PoP6NHKm47YM131W7KoNzQeG1Y9aK5zcT6XSeAuiy/?fxhash=ooqXZigratr7VFpBPzhiUSwpKXyQ5VFHv77yf58HWkLhXzmQnBw&fxiteration=242&fxminter=tz1TbpNqZHiiyrip1NMPioM5vwRxoz8UXabj" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full live-code"></iframe>
+            <iframe src="https://gateway.fxhash2.xyz/ipfs/Qmc82PoP6NHKm47YM131W7KoNzQeG1Y9aK5zcT6XSeAuiy/?fxhash=onws1HjExouNprzkaJBgJAevLBcjSpmCkMRvHaX96aD1SZwhuia&fxiteration=268&fxminter=tz1TSdoeS5udkYmVr1cEpErTqxGVrC3Kcd2J" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full live-code"></iframe>
+        </div>
     </div>
     <h3 class="collection-title">Hypertype by Mark Webster</h3>
     <div class="gallery-double-wide">
@@ -406,10 +431,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-143c40-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684230973&amp;w=1024&amp;s=f360e54018f86297b24caf901194a35c" alt="Punktwelt #420" loading="lazy">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-143cdd-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684230990&amp;w=1024&amp;s=9faadcdea4f00e68284b581b4c392f34" alt="Punktwelt #556" loading="lazy">
     </div>
-    <h3 class="collection-title">Primitives by Aranda/Lasch</h3>
-    <div class="gallery-double-wide">
-        <iframe src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/368000242" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
-        <iframe src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/368000049" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
+    <div class="sm:block hidden">
+        <h3 class="collection-title">Primitives by Aranda/Lasch</h3>
+        <div class="gallery-double-wide">
+            <iframe data-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/368000242" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full live-code"></iframe>
+            <iframe data-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/368000049" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full live-code"></iframe>
+        </div>
     </div>
     <h3 class="collection-title">Hypergiraffes by Piter Pasma</h3>
     <div class="gallery-double-wide">
@@ -481,18 +508,20 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         </div>
     </div>
-    <h3 class="collection-title">Cathedral Study by Eric di Giuli</h3>
-    <div class="gallery-double-wide">
-        <iframe src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000377" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
-        <iframe src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000363" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full"></iframe>
+    <div class="sm:block hidden">
+        <h3 class="collection-title">Cathedral Study by Eric di Giuli</h3>
+        <div class="gallery-double-wide">
+            <iframe data-src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000377" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full live-code"></iframe>
+            <iframe data-src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000363" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-square w-full live-code"></iframe>
+        </div>
     </div>
-    <!--
-    <h3 class="mb-0">Ir/rational Beauty by Yazid</h3>
-    <div class="gallery-flex">
-        <iframe src="https://gateway.fxhash2.xyz/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM/?fxhash=ooMkJ1sbnrjd1rU25bUmuKjHUAqU3s1AEZA3KypMiHcLjM5uGes&fxiteration=107&fxminter=tz1ZFsnAQ8UorVbyiMcTP63djTMDcj3rrSc3" loading="lazy" sandbox="allow-scripts allow-same-origin"  class="aspect-[3/4]" style="flex: 0.833125;"></iframe>
-        <iframe src="https://gateway.fxhash2.xyz/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM/?fxhash=ooz5Rf6wR1CkCNPWY3hdDrNThjfy7gHfBRVfzHjyd9W2z1AE2nF&fxiteration=65&fxminter=tz1gLeXAGc1Rho2UTE246xD26SapeyztMF8E" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-[4/3]" style="flex: 1.6194332;"></iframe>
+    <div class="sm:block hidden">
+        <h3 class="mb-0">Ir/rational Beauty by Yazid</h3>
+        <div class="gallery-flex">
+            <iframe data-src="https://gateway.fxhash2.xyz/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM/?fxhash=ooMkJ1sbnrjd1rU25bUmuKjHUAqU3s1AEZA3KypMiHcLjM5uGes&fxiteration=107&fxminter=tz1ZFsnAQ8UorVbyiMcTP63djTMDcj3rrSc3" loading="lazy" sandbox="allow-scripts allow-same-origin"  class="aspect-[3/4] live-code" style="flex: 0.833125;"></iframe>
+            <iframe data-src="https://gateway.fxhash2.xyz/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM/?fxhash=ooz5Rf6wR1CkCNPWY3hdDrNThjfy7gHfBRVfzHjyd9W2z1AE2nF&fxiteration=65&fxminter=tz1gLeXAGc1Rho2UTE246xD26SapeyztMF8E" loading="lazy" sandbox="allow-scripts allow-same-origin" class="aspect-[4/3] live-code" style="flex: 1.6194332;"></iframe>
+        </div>
     </div>
-    -->
     <h3 class="collection-title">Tych by rudxane</h3>
     <div class="gallery-triple-wide">
         <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-20b4f-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1691754007&amp;w=1024&amp;s=acf6572df776dcb7e03b3f778fd22f5f" alt="Tych #185" loading="lazy">
