@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
     <div>
         <h3 class="collection-title">Qubibi</h3>
-        <div class="gallery-flex">
+        <div class="gallery-flex mb-0 sm:mb-4">
             <div style="flex: 1;">
                 <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-22864-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-animation?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210134&amp;w=1024&amp;s=236b0ae0420da8085d104737b0bb8a4d" alt="MMZ ERRR 3 B" loading="lazy">
             </div>
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F4-90-KT19rTtzjSczSjfmAx4dESY5BecDHKJwB8Ww-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1694184781&amp;w=1024&amp;s=7a398841d98b7beaf8ee6f7b3546d811" alt="230907s01cBp30003000" loading="lazy">
             </div>
         </div>
-        <div class="gallery-flex">
+        <div class="gallery-flex mb-0 sm:mb-4">
             <div style="flex: 0.4;">
                 <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-8f8fe-KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684210214&amp;w=1024&amp;s=4048347589513027ccd2bf1ff238955f" alt="MMZ 197 G" loading="lazy">
             </div>
