@@ -162,7 +162,7 @@ permalink: /art/collection/
     </div>
     <div>
       <h3 class="collection-title">Quasi Dragon Studies by Harvey Rayner</h3>
-      <div class="gallery-row gallery-flex">
+      <div class="gallery-row gallery-flex mb-2 sm:mb-4">
         <div style="flex: 0.8661133">
           <img alt="Quasi Dragon Studies #252" src="https://ik.imagekit.io/UltraDAO/wallace/quasi_dragon_studies_252.png?tr=w-100,q-20,bl-6" />
         </div>
@@ -174,7 +174,7 @@ permalink: /art/collection/
         </div>
       </div>
       <div class="gallery-row gallery-single-wide">
-          <img alt="Quasi Dragon Studies #289" src="https://ik.imagekit.io/UltraDAO/wallace/quasi_dragon_studies_289.png?tr=w-100,q-20,bl-6" />
+          <img alt="Quasi Dragon Studies #289" src="https://ik.imagekit.io/UltraDAO/wallace/quasi_dragon_studies_289.jpg?tr=w-100,q-20,bl-6" />
       </div>
     </div>
     <h3 class="collection-title">Michaël Zancan</h3>
