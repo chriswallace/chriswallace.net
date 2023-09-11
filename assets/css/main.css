@@ -181,7 +181,7 @@ article ul {
 }
 
 .gallery-single-wide {
-  @apply mx-auto sm:max-w-[65%] mb-12 sm:mb-24;
+  @apply mx-auto mb-12 sm:mb-24;
 }
 
 .gallery-single-wide-portrait {

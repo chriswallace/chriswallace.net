@@ -121,6 +121,10 @@ permalink: /art/collection/
         </div>
       </div>
     </div>
+    <h3 class="collection-title">centrifugal / omni (i) by Marcelo Soria-Rodgriguez</h3>
+    <div class="gallery-row gallery-single-wide">
+        <img alt="centrifugal / omni (i) by Marcelo Soria-Rodgriguez" src="https://ik.imagekit.io/UltraDAO/wallace/centrifugal.png?tr=w-100,q-20,bl-6" />
+    </div>
     <div class="gallery-row gallery-double-wide">
       <div>
         <h3 class="collection-title">Reticulum by Harvey Rayner</h3>
@@ -168,6 +172,9 @@ permalink: /art/collection/
         <div style="flex: 0.2886666">
           <img alt="Quasi Dragon Studies #254" src="https://ik.imagekit.io/UltraDAO/wallace/quasi_dragon_studies_254.png?tr=w-100,q-20,bl-6" />
         </div>
+      </div>
+      <div class="gallery-row gallery-single-wide">
+          <img alt="Quasi Dragon Studies #289" src="https://ik.imagekit.io/UltraDAO/wallace/quasi_dragon_studies_289.png?tr=w-100,q-20,bl-6" />
       </div>
     </div>
     <h3 class="collection-title">Michaël Zancan</h3>
@@ -416,6 +423,12 @@ permalink: /art/collection/
       <img alt="Creatures #127" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_127.png?tr=w-100,q-20,bl-6" />
       <img alt="Creatures #191" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_191.png?tr=w-100,q-20,bl-6" />
       <img alt="Creatures #113" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_113.png?tr=w-100,q-20,bl-6" />
+    </div>
+    <h3 class="collection-title">Emotional Shell by William Watkins</h3>
+    <div class="gallery-row gallery-triple-wide">
+      <img alt="Emotional Shell #166" src="https://ik.imagekit.io/UltraDAO/wallace/emotional_shell_166.png?tr=w-100,q-20,bl-6" />
+      <img alt="Emotional Shell #182" src="https://ik.imagekit.io/UltraDAO/wallace/emotional_shell_182.png?tr=w-100,q-20,bl-6" />
+      <img alt="Emotional Shell #196" src="https://ik.imagekit.io/UltraDAO/wallace/emotional_shell_196.png?tr=w-100,q-20,bl-6" />
     </div>
     <div class="gallery-row gallery-double-wide">
       <div>
