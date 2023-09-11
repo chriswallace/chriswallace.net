@@ -476,9 +476,11 @@ permalink: /art/collection/
         </h3>
         <img alt="Asemica #632" src="https://ik.imagekit.io/UltraDAO/wallace/asemica_632.png?tr=w-100,q-20,bl-6" />
       </div>
-      <div style="flex: 0.833333333">
-        <h3 class="collection-title">ertdfgcvb</h3>
-        <img alt="ABCDEFGHIJKLMNOPQRSTUVWXYZ" src="https://ik.imagekit.io/UltraDAO/wallace/abcdefghijklmnopqrstuvwxyz.gif?tr=w-100,q-20,bl-6" />
+      <div style="flex: 0.714">
+        <h3 class="collection-title">
+          Inland Emotions #22 by Ferdinand Dervieux
+        </h3>
+        <img alt="Inland Emotions #22" src="https://ik.imagekit.io/UltraDAO/wallace/inland_emotions_22.png?tr=w-100,q-20,bl-6" />
       </div>
     </div>
     <div class="sm:block hidden">
