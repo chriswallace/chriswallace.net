@@ -410,6 +410,13 @@ permalink: /art/collection/
       <img alt="Impressions of Order #113" src="https://ik.imagekit.io/UltraDAO/wallace/impressions_of_order_113.png?tr=w-100,q-20,bl-6" />
       <img alt="Impressions of Order #215" src="https://ik.imagekit.io/UltraDAO/wallace/impressions_of_order_215.png?tr=w-100,q-20,bl-6" />
     </div>
+    <h3 class="collection-title">Creatures by Florian Zumbrunn</h3>
+    <div class="gallery-row gallery-double-wide">
+      <img alt="Creatures #141" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_141.png?tr=w-100,q-20,bl-6" />
+      <img alt="Creatures #127" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_127.png?tr=w-100,q-20,bl-6" />
+      <img alt="Creatures #191" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_191.png?tr=w-100,q-20,bl-6" />
+      <img alt="Creatures #113" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_113.png?tr=w-100,q-20,bl-6" />
+    </div>
     <div class="gallery-row gallery-double-wide">
       <div>
         <h3 class="collection-title">Crude Figures by Kjetil Golid</h3>
@@ -481,29 +488,6 @@ permalink: /art/collection/
           Inland Emotions #22 by Ferdinand Dervieux
         </h3>
         <img alt="Inland Emotions #22" src="https://ik.imagekit.io/UltraDAO/wallace/inland_emotions_22.png?tr=w-100,q-20,bl-6" />
-      </div>
-    </div>
-    <div class="sm:block hidden">
-      <h3 class="collection-title">Cosmic Type by Mark Webster</h3>
-      <div class="gallery-row gallery-triple-wide">
-        <iframe
-          class="aspect-square w-full live-code"
-          data-src="https://gateway.fxhash2.xyz/ipfs/Qmc82PoP6NHKm47YM131W7KoNzQeG1Y9aK5zcT6XSeAuiy/?fxhash=opDHtTdB8PW7rv2aH83HJiiUBVJ2f2F9a6YMTE1A4bPrw2Kh4Fz&amp;fxiteration=163&amp;fxminter=tz1eHtSYDmFePHvZYHQZvQLk1kpvfcMFdLeJ"
-          sandbox="allow-scripts allow-same-origin"
-        >
-        </iframe>
-        <iframe
-          class="aspect-square w-full live-code"
-          data-src="https://gateway.fxhash2.xyz/ipfs/Qmc82PoP6NHKm47YM131W7KoNzQeG1Y9aK5zcT6XSeAuiy/?fxhash=ooqXZigratr7VFpBPzhiUSwpKXyQ5VFHv77yf58HWkLhXzmQnBw&amp;fxiteration=242&amp;fxminter=tz1TbpNqZHiiyrip1NMPioM5vwRxoz8UXabj"
-          sandbox="allow-scripts allow-same-origin"
-        >
-        </iframe>
-        <iframe
-          class="aspect-square w-full live-code"
-          sandbox="allow-scripts allow-same-origin"
-          src="https://gateway.fxhash2.xyz/ipfs/Qmc82PoP6NHKm47YM131W7KoNzQeG1Y9aK5zcT6XSeAuiy/?fxhash=onws1HjExouNprzkaJBgJAevLBcjSpmCkMRvHaX96aD1SZwhuia&amp;fxiteration=268&amp;fxminter=tz1TSdoeS5udkYmVr1cEpErTqxGVrC3Kcd2J"
-        >
-        </iframe>
       </div>
     </div>
     <h3 class="collection-title">Hypertype by Mark Webster</h3>
