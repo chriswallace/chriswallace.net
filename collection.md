@@ -775,7 +775,7 @@ permalink: /art/collection/
             </div>
         </div>
         <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
-            <div class="mb-12 sm:mb-0" style="flex:1;">
+            <div class="mb-12 sm:mb-0" style="flex:0.8;">
                 <h3 class="collection-title">
                     Asemica #632 by Emily Edelman, Dima Ofman, Andrew Badr
                 </h3>
@@ -783,7 +783,7 @@ permalink: /art/collection/
                     src="https://ik.imagekit.io/UltraDAO/wallace/asemica_632.png?tr=w-400,q-70"
                     srcset="https://ik.imagekit.io/UltraDAO/wallace/asemica_632.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/asemica_632.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/asemica_632.png?tr=w-800,q-70 800w" />
             </div>
-            <div>
+            <div style="flex:0.833333333;">
                 <h3 class="collection-title">
                     ertdfgcvb
                 </h3>
