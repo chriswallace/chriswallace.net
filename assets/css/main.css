@@ -176,6 +176,10 @@ article ul {
   @apply text-gray-500 font-light mb-2 inline-block text-lg;
 }
 
+.gallery-row img {
+  @apply min-w-full;
+}
+
 .gallery-single-wide {
   @apply mx-auto sm:max-w-[65%] mb-12 sm:mb-24;
 }
@@ -214,16 +218,16 @@ article ul {
   @apply min-w-full;
 }
 
-.gallery-flex{
+.gallery-flex {
   @apply flex gap-2 sm:gap-4;
 }
 
-.gallery-flex:last-of-type{
+.gallery-flex:last-of-type {
   @apply mb-12 md:mb-24;
 }
 
 .gallery-flex img,
-.gallery-flex iframe{
+.gallery-flex iframe {
   @apply mb-2 sm:mb-0;
 }
 

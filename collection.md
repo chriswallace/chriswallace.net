@@ -81,7 +81,7 @@ permalink: /art/collection/
             <h3 class="collection-title">
                 Manolo Gamboa Naon
             </h3>
-            <div class="gallery-flex">
+            <div class="gallery-row gallery-flex">
                 <div style="flex: 1;">
                     <img alt="Tempo de Amor" loading="lazy"
                         sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
@@ -102,7 +102,7 @@ permalink: /art/collection/
                 </div>
             </div>
         </div>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <div>
                 <h3 class="collection-title">
                     Reticulum by Harvey Rayner
@@ -121,7 +121,7 @@ permalink: /art/collection/
                     srcset="https://ik.imagekit.io/UltraDAO/wallace/dragons_489.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/dragons_489.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/dragons_489.png?tr=w-800,q-70 800w" />
             </div>
         </div>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <div>
                 <h3 class="collection-title">
                     QQL #94 by Tyler Hobbs and Dandelion Wist
@@ -139,7 +139,7 @@ permalink: /art/collection/
                     srcset="https://ik.imagekit.io/UltraDAO/wallace/acequia_219.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/acequia_219.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/acequia_219.png?tr=w-800,q-70 800w" />
             </div>
         </div>
-        <div class="sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+        <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
             <div class="mb-12 sm:mb-0" style="flex: 1.77774687;">
                 <h3 class="collection-title">
                     kaiC by p1xelfool
@@ -162,7 +162,7 @@ permalink: /art/collection/
             <h3 class="collection-title">
                 Quasi Dragon Studies by Harvey Rayner
             </h3>
-            <div class="gallery-flex">
+            <div class="gallery-row gallery-flex">
                 <div style="flex: 0.8661133;">
                     <img alt="Quasi Dragon Studies #252" loading="lazy"
                         sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
@@ -186,7 +186,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Michaël Zancan
         </h3>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <img alt="Garden, Monoliths #125" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/garden_monoliths_125.jpg?tr=w-400,q-70"
@@ -207,7 +207,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Piter Pasma
         </h3>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <img alt="Chaos Candy Plasma Vent" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/chaos_candy_plasma_vent.png?tr=w-400,q-70"
@@ -220,7 +220,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Contrapuntos by Marcelo Soria-Rodríguez
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="contrapuntos #364" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_364.png?tr=w-400,q-70"
@@ -237,7 +237,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Bravura by dmarchi
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="Bravura #90" loading="lazy" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/bravura_90.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/bravura_90.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/bravura_90.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/bravura_90.png?tr=w-800,q-70 800w" />
@@ -252,7 +252,7 @@ permalink: /art/collection/
             <h3 class="collection-title">
                 Gerhard and Richter by Richard Nadler and Leander Herzog
             </h3>
-            <div class="gallery-double-wide">
+            <div class="gallery-row gallery-double-wide">
                 <iframe allow="accelerometer *; camera *; gyroscope *; microphone *; xr-spatial-tracking *;"
                     class="aspect-square w-full live-code"
                     data-src="https://gateway.fxhash2.xyz/ipfs/QmW7Cj5QMG2FFVGMcRKGFhW4V1113seN6iX5FwQrKqTHSM/?fxhash=oo3iCxnjsGQU6Jx4xZpf4Zfc3EPoXWkYhsqXTyGwnGQQKWUjrDB&amp;fxiteration=368&amp;fxminter=tz1Yw6YSydH7qb4vERwxAmSnsihfRcVvnLL3"
@@ -268,7 +268,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Entretiempos by Marcelo Soria-Rodríguez
         </h3>
-        <div class="gallery-quadruple-wide">
+        <div class="gallery-row gallery-quadruple-wide">
             <img alt="entretiempos #865" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_865.png?tr=w-400,q-70"
@@ -289,7 +289,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Escape by Iskra Velitchkova
         </h3>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <img alt="Escape #255" loading="lazy" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/escape_255.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/escape_255.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/escape_255.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/escape_255.png?tr=w-800,q-70 800w" />
@@ -300,7 +300,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Helena Sarin
         </h3>
-        <div class="gallery-quadruple-wide">
+        <div class="gallery-row gallery-quadruple-wide">
             <div class="sm:col-span-2">
                 <img alt="Cats of Latentscaux" loading="lazy"
                     sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
@@ -331,7 +331,7 @@ permalink: /art/collection/
             <h3 class="collection-title">
                 Iskra Velitchkova
             </h3>
-            <div class="gallery-flex sm:mb-4">
+            <div class="gallery-row gallery-flex sm:mb-4">
                 <div style="flex: 1;">
                     <img alt="🐥🪱 - A bird as if a worm as a bird as a worm | for Bird and Worm Society"
                         class="sc-a7460964-0 flHabD" loading="lazy"
@@ -352,7 +352,7 @@ permalink: /art/collection/
                         srcset="https://ik.imagekit.io/UltraDAO/wallace/h20thb.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/h20thb.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/h20thb.png?tr=w-800,q-70 800w" />
                 </div>
             </div>
-            <div class="gallery-flex sm:mb-4">
+            <div class="gallery-row gallery-flex sm:mb-4">
                 <div style="flex: 1;">
                     <img alt="GenerativO Sov I" class="sc-a7460964-0 flHabD" loading="lazy"
                         sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
@@ -366,7 +366,7 @@ permalink: /art/collection/
                         srcset="https://ik.imagekit.io/UltraDAO/wallace/generativo_sov_iii.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/generativo_sov_iii.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/generativo_sov_iii.png?tr=w-800,q-70 800w" />
                 </div>
             </div>
-            <div class="gallery-flex">
+            <div class="gallery-row gallery-flex">
                 <div style="flex: 1;">
                     <img alt="Hypothetically Micro #83" class="sc-a7460964-0 flHabD" loading="lazy"
                         sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
@@ -385,7 +385,7 @@ permalink: /art/collection/
             <h3 class="collection-title">
                 Qubibi
             </h3>
-            <div class="gallery-flex mb-0 sm:mb-4">
+            <div class="gallery-row gallery-flex mb-0 sm:mb-4">
                 <div style="flex: 1;">
                     <img alt="MMZ ERRR 3 B" loading="lazy"
                         sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
@@ -399,7 +399,7 @@ permalink: /art/collection/
                         srcset="https://ik.imagekit.io/UltraDAO/wallace/230907s01cbp30003000.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/230907s01cbp30003000.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/230907s01cbp30003000.png?tr=w-800,q-70 800w" />
                 </div>
             </div>
-            <div class="gallery-flex mb-0 sm:mb-4">
+            <div class="gallery-row gallery-flex mb-0 sm:mb-4">
                 <div style="flex: 0.4;">
                     <img alt="MMZ 197 G" loading="lazy"
                         sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
@@ -419,7 +419,7 @@ permalink: /art/collection/
                         srcset="https://ik.imagekit.io/UltraDAO/wallace/mmz_188_d.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/mmz_188_d.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/mmz_188_d.png?tr=w-800,q-70 800w" />
                 </div>
             </div>
-            <div class="gallery-quadruple-wide">
+            <div class="gallery-row gallery-quadruple-wide">
                 <img alt="230830s19pQh37003700" class="sm:col-span-2" loading="lazy"
                     sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                     src="https://ik.imagekit.io/UltraDAO/wallace/230830s19pqh37003700.png?tr=w-400,q-70"
@@ -453,7 +453,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Olivier Bodini
         </h3>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <img alt="The sky is so colorful tonight" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/the_sky_is_so_colorful_tonight.png?tr=w-400,q-70"
@@ -466,7 +466,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Loom by Andreas Rau
         </h3>
-        <div class="gallery-quadruple-wide-trip-small">
+        <div class="gallery-row gallery-quadruple-wide-trip-small">
             <img alt="Loom #389" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/loom_389.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/loom_389.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/loom_389.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/loom_389.png?tr=w-800,q-70 800w" />
@@ -507,7 +507,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Unfolded by Lars Wander
         </h3>
-        <div class="gallery-six-wide">
+        <div class="gallery-row gallery-six-wide">
             <div class="col-span-3">
                 <img alt="Unfolded #3" loading="lazy" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                     src="https://ik.imagekit.io/UltraDAO/wallace/unfolded_3.png?tr=w-400,q-70"
@@ -531,7 +531,7 @@ permalink: /art/collection/
                 src="https://ik.imagekit.io/UltraDAO/wallace/unfolded_52.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/unfolded_52.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/unfolded_52.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/unfolded_52.png?tr=w-800,q-70 800w" />
         </div>
-        <div class="sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+        <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
             <div class="mb-12 sm:mb-0" style="flex: 1;">
                 <h3 class="collection-title">
                     Acoustic Drift by Joshua Bagley
@@ -561,7 +561,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Elefante by Michael Connolly
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="Elefante #60" loading="lazy" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/elefante_60.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/elefante_60.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/elefante_60.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/elefante_60.png?tr=w-800,q-70 800w" />
@@ -575,7 +575,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Zbageti by Melissa Wiederrecht
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="Zbageti #79" loading="lazy" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/zbageti_79.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/zbageti_79.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/zbageti_79.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/zbageti_79.png?tr=w-800,q-70 800w" />
@@ -589,7 +589,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Shapes on a Plane by Mount Vitruvius
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="Shapes on a Plane #455" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/shapes_on_a_plane_455.png?tr=w-400,q-70"
@@ -606,7 +606,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Obscured by Nadieh Bremer
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="Obscured 02f0" loading="lazy" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/obscured_02f0.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/obscured_02f0.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/obscured_02f0.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/obscured_02f0.png?tr=w-800,q-70 800w" />
@@ -620,7 +620,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Deconstructions by DistCollective
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="Deconstructions #43" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/deconstructions_43.png?tr=w-400,q-70"
@@ -637,7 +637,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Chepertom
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="Circuit_Bending_3.RAD" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/circuit_bending_3_rad.png?tr=w-400,q-70"
@@ -652,7 +652,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Assembling Machine by Tyler Boswell
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="ASSEMBLING MACHINE #243" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_243.png?tr=w-400,q-70"
@@ -669,7 +669,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Impressions of Order by nbswwit
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="Impressions of Order #79" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/impressions_of_order_79.png?tr=w-400,q-70"
@@ -683,7 +683,7 @@ permalink: /art/collection/
                 src="https://ik.imagekit.io/UltraDAO/wallace/impressions_of_order_215.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/impressions_of_order_215.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/impressions_of_order_215.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/impressions_of_order_215.png?tr=w-800,q-70 800w" />
         </div>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <div>
                 <h3 class="collection-title">
                     Crude Figures by Kjetil Golid
@@ -703,7 +703,7 @@ permalink: /art/collection/
                     srcset="https://ik.imagekit.io/UltraDAO/wallace/strings_prototype_13_20.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/strings_prototype_13_20.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/strings_prototype_13_20.png?tr=w-800,q-70 800w" />
             </div>
         </div>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <div>
                 <h3 class="collection-title">
                     Nothing Remains #63 by Brendan Dawes
@@ -726,7 +726,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Microgravity by Ryan Bell
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="Microgravity #268" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_268.png?tr=w-400,q-70"
@@ -752,7 +752,7 @@ permalink: /art/collection/
                 src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_360.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/microgravity_360.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/microgravity_360.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/microgravity_360.png?tr=w-800,q-70 800w" />
         </div>
-        <div class="sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24 sm:visible hidden">
+        <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24 sm:visible hidden">
             <div class="mb-12 sm:mb-0" style="flex:1;">
                 <h3 class="collection-title">
                     Etched Sinuosity #2 by Saskia Freeke
@@ -774,7 +774,7 @@ permalink: /art/collection/
                 </iframe>
             </div>
         </div>
-        <div class="sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+        <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
             <div class="mb-12 sm:mb-0" style="flex:1;">
                 <h3 class="collection-title">
                     Asemica #632 by Emily Edelman, Dima Ofman, Andrew Badr
@@ -797,7 +797,7 @@ permalink: /art/collection/
             <h3 class="collection-title">
                 Cosmic Type by Mark Webster
             </h3>
-            <div class="gallery-triple-wide">
+            <div class="gallery-row gallery-triple-wide">
                 <iframe class="aspect-square w-full live-code"
                     data-src="https://gateway.fxhash2.xyz/ipfs/Qmc82PoP6NHKm47YM131W7KoNzQeG1Y9aK5zcT6XSeAuiy/?fxhash=opDHtTdB8PW7rv2aH83HJiiUBVJ2f2F9a6YMTE1A4bPrw2Kh4Fz&amp;fxiteration=163&amp;fxminter=tz1eHtSYDmFePHvZYHQZvQLk1kpvfcMFdLeJ"
                     loading="lazy" sandbox="allow-scripts allow-same-origin">
@@ -814,7 +814,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Hypertype by Mark Webster
         </h3>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <img alt="Hypertype #124" loading="lazy" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/hypertype_124.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/hypertype_124.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/hypertype_124.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/hypertype_124.png?tr=w-800,q-70 800w" />
@@ -825,7 +825,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Hyperspacers by Stranger in the Q
         </h3>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <img alt="Hyperspacers #335" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/hyperspacers_335.png?tr=w-400,q-70"
@@ -838,7 +838,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             adrift by Jacek Markusiewicz
         </h3>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <img alt="adrift #146" class="sc-a7460964-0 flHabD" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/adrift_146.png?tr=w-400,q-70"
@@ -851,7 +851,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             RGB Elementary Cellular Automaton by Ciphrd
         </h3>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <img alt="RGB Elementary Cellular Automaton #366" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/rgb_elementary_cellular_automaton_366.png?tr=w-400,q-70"
@@ -864,7 +864,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Caesuras / Casey Reas
         </h3>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <img alt="CSRSNT-ZAAI-23-of-64.png" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/csrsnt_zaai_23_of_64_png.png?tr=w-400,q-70"
@@ -877,7 +877,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Punktwelt by Erik Swahn
         </h3>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <img alt="Punktwelt #420" loading="lazy" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/punktwelt_420.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/punktwelt_420.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/punktwelt_420.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/punktwelt_420.png?tr=w-800,q-70 800w" />
@@ -889,7 +889,7 @@ permalink: /art/collection/
             <h3 class="collection-title">
                 Primitives by Aranda/Lasch
             </h3>
-            <div class="gallery-double-wide">
+            <div class="gallery-row gallery-double-wide">
                 <iframe class="aspect-square w-full live-code"
                     data-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/368000242"
                     loading="lazy" sandbox="allow-scripts allow-same-origin">
@@ -903,7 +903,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Hypergiraffes by Piter Pasma
         </h3>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <img alt="Hypergiraffe #151" class="sc-a7460964-0 flHabD" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/hypergiraffe_151.png?tr=w-400,q-70"
@@ -913,7 +913,7 @@ permalink: /art/collection/
                 src="https://ik.imagekit.io/UltraDAO/wallace/hypergiraffe_150.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/hypergiraffe_150.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/hypergiraffe_150.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/hypergiraffe_150.png?tr=w-800,q-70 800w" />
         </div>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <div>
                 <h3 class="collection-title">
                     Computational Specimen No. 2 by Sarah Ridgley
@@ -937,7 +937,7 @@ permalink: /art/collection/
             <h3 class="collection-title">
                 Matthias Isaaksen
             </h3>
-            <div class="gallery-flex">
+            <div class="gallery-row gallery-flex">
                 <div style="flex: 1;">
                     <img alt="Extramundane" loading="lazy"
                         sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
@@ -961,7 +961,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Factura by Matthias Isaaksen
         </h3>
-        <div class="gallery-quadruple-wide">
+        <div class="gallery-row gallery-quadruple-wide">
             <img alt="Factura #402" loading="lazy" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/factura_402.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/factura_402.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/factura_402.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/factura_402.png?tr=w-800,q-70 800w" />
@@ -978,7 +978,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Mind the Gap by MountVitruvius
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="Mind the Gap #490" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/mind_the_gap_490.png?tr=w-400,q-70"
@@ -995,7 +995,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             de|growth:generations by Jacek Markusiewicz
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="de|growth:generations #68" loading="lazy"
                 sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/de_growth_generations_68.png?tr=w-400,q-70"
@@ -1012,7 +1012,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Elevation by Andreas Rau
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="Elevation #257" loading="lazy" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/elevation_257.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/elevation_257.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/elevation_257.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/elevation_257.png?tr=w-800,q-70 800w" />
@@ -1026,7 +1026,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Millefoglie by Stefan Contiero
         </h3>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <img alt="Millefoglie #169" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/millefoglie_169.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/millefoglie_169.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/millefoglie_169.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/millefoglie_169.png?tr=w-800,q-70 800w" />
@@ -1038,7 +1038,7 @@ permalink: /art/collection/
             <h3 class="collection-title">
                 Fields by Erik Swahn
             </h3>
-            <div class="gallery-flex">
+            <div class="gallery-row gallery-flex">
                 <div style="flex: 1;">
                     <img alt="Fields #648" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                         src="https://ik.imagekit.io/UltraDAO/wallace/fields_648.png?tr=w-400,q-70"
@@ -1055,7 +1055,7 @@ permalink: /art/collection/
             <h3 class="collection-title">
                 Cathedral Study by Eric di Giuli
             </h3>
-            <div class="gallery-double-wide">
+            <div class="gallery-row gallery-double-wide">
                 <iframe class="aspect-square w-full live-code"
                     data-src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000377"
                     loading="lazy" sandbox="allow-scripts allow-same-origin">
@@ -1070,7 +1070,7 @@ permalink: /art/collection/
             <h3 class="mb-0">
                 Ir/rational Beauty by Yazid
             </h3>
-            <div class="gallery-flex">
+            <div class="gallery-row gallery-flex">
                 <iframe class="aspect-[3/4] live-code"
                     data-src="https://gateway.fxhash2.xyz/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM/?fxhash=ooMkJ1sbnrjd1rU25bUmuKjHUAqU3s1AEZA3KypMiHcLjM5uGes&amp;fxiteration=107&amp;fxminter=tz1ZFsnAQ8UorVbyiMcTP63djTMDcj3rrSc3"
                     loading="lazy" sandbox="allow-scripts allow-same-origin" style="flex: 0.833125;">
@@ -1084,7 +1084,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Tych by rudxane
         </h3>
-        <div class="gallery-triple-wide">
+        <div class="gallery-row gallery-triple-wide">
             <img alt="Tych #185" loading="lazy" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/tych_185.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/tych_185.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/tych_185.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/tych_185.png?tr=w-800,q-70 800w" />
@@ -1116,7 +1116,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Tesseract by Studio Yorktown
         </h3>
-        <div class="gallery-quadruple-wide">
+        <div class="gallery-row gallery-quadruple-wide">
             <img alt="Tesseract #365" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/tesseract_365.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/tesseract_365.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/tesseract_365.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/tesseract_365.png?tr=w-800,q-70 800w" />
@@ -1133,7 +1133,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Catharsis by Dario Lanza
         </h3>
-        <div class="gallery-quadruple-wide">
+        <div class="gallery-row gallery-quadruple-wide">
             <img alt="Catharsis #633 - This Is Always" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/catharsis_633_this_is_always.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/catharsis_633_this_is_always.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/catharsis_633_this_is_always.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/catharsis_633_this_is_always.png?tr=w-800,q-70 800w" />
@@ -1151,7 +1151,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             For Algernon by Elsif
         </h3>
-        <div class="gallery-quadruple-wide">
+        <div class="gallery-row gallery-quadruple-wide">
             <img alt="For Algernon #207" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/for_algernon_207.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/for_algernon_207.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/for_algernon_207.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/for_algernon_207.png?tr=w-800,q-70 800w" />
@@ -1168,7 +1168,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             Morphology by Emily Xie
         </h3>
-        <div class="gallery-double-wide">
+        <div class="gallery-row gallery-double-wide">
             <img alt="LUNA" loading="lazy" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/luna.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/luna.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/luna.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/luna.png?tr=w-800,q-70 800w" />
@@ -1179,7 +1179,7 @@ permalink: /art/collection/
         <h3 class="collection-title">
             unbuilt by Jacek Markusiewicz
         </h3>
-        <div class="gallery-quadruple-wide-trip-small">
+        <div class="gallery-row gallery-quadruple-wide-trip-small">
             <img alt="unbuilt #238" sizes="(max-width: 400px) 200px, (max-width: 800px) 400px, 800px"
                 src="https://ik.imagekit.io/UltraDAO/wallace/unbuilt_238.png?tr=w-400,q-70"
                 srcset="https://ik.imagekit.io/UltraDAO/wallace/unbuilt_238.png?tr=w-200,q-70 200w,                                    https://ik.imagekit.io/UltraDAO/wallace/unbuilt_238.png?tr=w-400,q-70 400w,                                    https://ik.imagekit.io/UltraDAO/wallace/unbuilt_238.png?tr=w-800,q-70 800w" />
