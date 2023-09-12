@@ -288,11 +288,10 @@ footer p {
 #fullscreen-viewer .live-code-btn{
   color: rgba(255, 255, 255, 0.7);
   background-color: black;
-  padding: 8px 12px;
+  padding: 10px 15px;
   display: inline-block;
   font-weight: 600;
   cursor: pointer;
-  margin: 10px;
 }
 
 #fullscreen-viewer .close-btn{
