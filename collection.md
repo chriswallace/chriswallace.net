@@ -307,10 +307,10 @@ permalink: /art/collection/
     </div>
     <h3 class="collection-title">Entretiempos by Marcelo Soria-Rodríguez</h3>
     <div class="gallery-row gallery-quadruple-wide">
-      <img alt="entretiempos #865" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_865.png?tr=w-100,q-20,bl-6" />
-      <img alt="entretiempos #690" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_690.png?tr=w-100,q-20,bl-6" />
-      <img alt="entretiempos #654" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_654.png?tr=w-100,q-20,bl-6" />
-      <img alt="entretiempos #453" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_453.png?tr=w-100,q-20,bl-6" />
+      <img alt="entretiempos #865" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_865.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000865" />
+      <img alt="entretiempos #690" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_690.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000690" />
+      <img alt="entretiempos #654" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_654.png?tr=w-100,q-20,bl-6"  data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000654"/>
+      <img alt="entretiempos #453" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_453.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000453" />
     </div>
     <h3 class="collection-title">Escape by Iskra Velitchkova</h3>
     <div class="gallery-row gallery-double-wide">
@@ -497,9 +497,9 @@ permalink: /art/collection/
     </div>
     <h3 class="collection-title">Assembling Machine by Tyler Boswell</h3>
     <div class="gallery-row gallery-triple-wide">
-      <img alt="ASSEMBLING MACHINE #243" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_243.png?tr=w-100,q-20,bl-6" />
-      <img alt="ASSEMBLING MACHINE #134" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_134.png?tr=w-100,q-20,bl-6" />
-      <img alt="ASSEMBLING MACHINE #76" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_76.png?tr=w-100,q-20,bl-6" />
+      <img alt="ASSEMBLING MACHINE #243" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_243.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmYKuXYG5tG7sLnpw5mqGsLLYeWyyvEwTP3nTqP4xCMzAA/?fxhash=onsHGPnXVZQCv6fqG9zghvQRnMjeJzBi6dQEM9L66ahHpu1HBNh&fxiteration=243&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+      <img alt="ASSEMBLING MACHINE #134" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_134.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmYKuXYG5tG7sLnpw5mqGsLLYeWyyvEwTP3nTqP4xCMzAA/?fxhash=oohnvir5YZNSfoL9dDk7DFv2YqZ5rXUN76H8g1wseBiTtGenynn&fxiteration=134&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+      <img alt="ASSEMBLING MACHINE #76" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_76.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmYKuXYG5tG7sLnpw5mqGsLLYeWyyvEwTP3nTqP4xCMzAA/?fxhash=ooAWwe6oKSCYYCZvfrpfKLa7QvP7kDGZm5ZTU8vYK4yGwYRuMEH&fxiteration=76&fxminter=tz1RkdvMZvkQpFvLqK23Q126o8JUKqYtneTV" />
     </div>
     <h3 class="collection-title">Impressions of Order by nbswwit</h3>
     <div class="gallery-row gallery-triple-wide">
@@ -509,10 +509,10 @@ permalink: /art/collection/
     </div>
     <h3 class="collection-title">Creatures by Florian Zumbrunn</h3>
     <div class="gallery-row gallery-double-wide">
-      <img alt="Creatures #141" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_141.png?tr=w-100,q-20,bl-6" />
-      <img alt="Creatures #127" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_127.png?tr=w-100,q-20,bl-6" />
-      <img alt="Creatures #191" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_191.png?tr=w-100,q-20,bl-6" />
-      <img alt="Creatures #113" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_113.png?tr=w-100,q-20,bl-6" />
+      <img alt="Creatures #141" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_141.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPTF1mT8YLXh4oVYW6micr6GhQnW97TdP5a35nkVSaAUT/?fxhash=oopsHkuf85vJx84dpYcoYtE7Cu8ka2tDH1kZ1iDkFSHNxrTm2Vp&fxiteration=141&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+      <img alt="Creatures #127" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_127.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPTF1mT8YLXh4oVYW6micr6GhQnW97TdP5a35nkVSaAUT/?fxhash=onujP3yD1ttQd7AyiFKVdf6V6txxcUxiH75Wj3EWE9hxpZFGtnB&fxiteration=127&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+      <img alt="Creatures #191" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_191.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPTF1mT8YLXh4oVYW6micr6GhQnW97TdP5a35nkVSaAUT/?fxhash=opC6i8MeDuzzJR9T2QNZNXoHJtJWZeYDwzutiCwWasE6bMevfxB&fxiteration=191&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+      <img alt="Creatures #113" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_113.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPTF1mT8YLXh4oVYW6micr6GhQnW97TdP5a35nkVSaAUT/?fxhash=ooMM9bC8CPNnLvMEXSCo1PduUusG2k2swBCtvMrnvQYZEnBsPzX&fxiteration=113&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
     </div>
     <h3 class="collection-title">Emotional Shell by William Watkins</h3>
     <div class="gallery-row gallery-triple-wide">
@@ -534,22 +534,22 @@ permalink: /art/collection/
       <div>
         <h3 class="collection-title">Nothing Remains #63 by Brendan Dawes</h3>
         <img alt="Nothing Remains #63"
-          class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/nothing_remains_63.png?tr=w-100,q-20,bl-6" />
+          class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/nothing_remains_63.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUWF9oPMxzvdLn1ALiWiQvgwYX1QyFKxC2tm1Wi3rwfCS/?fxhash=ooYiA95QeRkDGLzE1aucuQ48sdjPCWij1bqKru8R8PqSqLXn3ZT&fxiteration=63&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
       </div>
       <div>
         <h3 class="collection-title">Bardez #149 by Nat Sarkissian</h3>
         <img alt="Bardez #149"
-          class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/bardez_149.png?tr=w-100,q-20,bl-6" />
+          class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/bardez_149.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmaquYUaZjhab8HHoU7bpeoZ6hHv6JuEC7vkjBFMVqnS3G/?fxhash=oomSFsGqaC9Ge1Smux3f74F77ki7hyNPvwrBLAUa3BfRznKRdxx&fxiteration=149&fxminter=tz1enGoKdJHrWUNrX6PbafrASnQ7Utju1xyB" />
       </div>
     </div>
     <h3 class="collection-title">Microgravity by Ryan Bell</h3>
     <div class="gallery-row gallery-triple-wide">
-      <img alt="Microgravity #268" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_268.png?tr=w-100,q-20,bl-6" />
-      <img alt="Microgravity #531" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_531.png?tr=w-100,q-20,bl-6" />
-      <img alt="Microgravity #713" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_713.png?tr=w-100,q-20,bl-6" />
-      <img alt="Microgravity #1099" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_1099.png?tr=w-100,q-20,bl-6" />
-      <img alt="Microgravity #1214" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_1214.png?tr=w-100,q-20,bl-6" />
-      <img alt="Microgravity #360" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_360.png?tr=w-100,q-20,bl-6" />
+      <img alt="Microgravity #268" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_268.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQQXDgS4MPBwMQC5qxcPkX7AAP26zDRsrgUYoY2XGQ38K/?fxhash=opTQghq2fQ1hVuYfLpxaMq2T3cmgbwJ3WjHDqPXqo5Lqd1kaG4C&fxiteration=268&fxminter=KT1CxP2oa1LbWuviJKGuEvSAxdkyL8nSJNy7" />
+      <img alt="Microgravity #531" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_531.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQQXDgS4MPBwMQC5qxcPkX7AAP26zDRsrgUYoY2XGQ38K/?fxhash=oo9s3XioqKsiAVDdwpogxvbpidXY2etSDMsbhcfjSnFF6eL6MMk&fxiteration=531&fxminter=KT1CxP2oa1LbWuviJKGuEvSAxdkyL8nSJNy7" />
+      <img alt="Microgravity #713" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_713.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQQXDgS4MPBwMQC5qxcPkX7AAP26zDRsrgUYoY2XGQ38K/?fxhash=op3bekNoqSFdL27bXKoBqNfFAkho55z2PM1XoaEtav7i84Ayk6r&fxiteration=713&fxminter=tz1i9LF7KGqioctoUQvYALoB8Mov9XzRKUN9" />
+      <img alt="Microgravity #1099" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_1099.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQQXDgS4MPBwMQC5qxcPkX7AAP26zDRsrgUYoY2XGQ38K/?fxhash=onwyAQb1MKA9XW1FnG34HYWtJP3VKbfdtHr5ZWiZBPbVqSNwT9t&fxiteration=1099&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+      <img alt="Microgravity #1214" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_1214.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQQXDgS4MPBwMQC5qxcPkX7AAP26zDRsrgUYoY2XGQ38K/?fxhash=ooWHMitTQ6VSEKrtrLc87L6a5HNxmHjj8fmnFi3vMJCMHHfTtnV&fxiteration=1214&fxminter=tz1P4iM5y89uzQomRZPZ7XFuHV6Uw3b7YTQ9" />
+      <img alt="Microgravity #360" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_360.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQQXDgS4MPBwMQC5qxcPkX7AAP26zDRsrgUYoY2XGQ38K/?fxhash=opFBgf1mEnMBaufrxcgkXm8L4URwTCRyJP1i5eRm2WTY23g7J61&fxiteration=360&fxminter=KT1CxP2oa1LbWuviJKGuEvSAxdkyL8nSJNy7" />
     </div>
     <div
       class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24 sm:visible hidden"
@@ -584,13 +584,13 @@ permalink: /art/collection/
         <h3 class="collection-title">
           Asemica #632 by Emily Edelman, Dima Ofman, Andrew Badr
         </h3>
-        <img alt="Asemica #632" src="https://ik.imagekit.io/UltraDAO/wallace/asemica_632.png?tr=w-100,q-20,bl-6" />
+        <img alt="Asemica #632" src="https://ik.imagekit.io/UltraDAO/wallace/asemica_632.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/206000632" />
       </div>
       <div style="flex: 0.714">
         <h3 class="collection-title">
           Inland Emotions #22 by Ferdinand Dervieux
         </h3>
-        <img alt="Inland Emotions #22" src="https://ik.imagekit.io/UltraDAO/wallace/inland_emotions_22.png?tr=w-100,q-20,bl-6" />
+        <img alt="Inland Emotions #22" src="https://ik.imagekit.io/UltraDAO/wallace/inland_emotions_22.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmcZjX5D9DmXRhnoqk4wSE8KkBebzx55pZhdMT7TASEctJ/?fxhash=ooSuimey7CLGzhmWbQsgoHr3tbWyw3FqLstRLTYHWy7tNABJrao&fxiteration=22&fxminter=tz1ZRjuE2STA75rzXr78GcXNUZhYubwxaTYd" />
       </div>
     </div>
     <h3 class="collection-title">Hypertype by Mark Webster</h3>
@@ -679,16 +679,16 @@ permalink: /art/collection/
     </div>
     <h3 class="collection-title">Factura by Matthias Isaaksen</h3>
     <div class="gallery-row gallery-quadruple-wide">
-      <img alt="Factura #402" src="https://ik.imagekit.io/UltraDAO/wallace/factura_402.png?tr=w-100,q-20,bl-6" />
-      <img alt="Factura #842" src="https://ik.imagekit.io/UltraDAO/wallace/factura_842.png?tr=w-100,q-20,bl-6" />
-      <img alt="Factura #996" src="https://ik.imagekit.io/UltraDAO/wallace/factura_996.png?tr=w-100,q-20,bl-6" />
-      <img alt="Factura #252" src="https://ik.imagekit.io/UltraDAO/wallace/factura_252.png?tr=w-100,q-20,bl-6" />
+      <img alt="Factura #402" src="https://ik.imagekit.io/UltraDAO/wallace/factura_402.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live-render?slug=factura&tokenId=402" />
+      <img alt="Factura #842" src="https://ik.imagekit.io/UltraDAO/wallace/factura_842.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live-render?slug=factura&tokenId=842" />
+      <img alt="Factura #996" src="https://ik.imagekit.io/UltraDAO/wallace/factura_996.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live-render?slug=factura&tokenId=996" />
+      <img alt="Factura #252" src="https://ik.imagekit.io/UltraDAO/wallace/factura_252.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live-render?slug=factura&tokenId=252" />
     </div>
     <h3 class="collection-title">Mind the Gap by MountVitruvius</h3>
     <div class="gallery-row gallery-triple-wide">
-      <img alt="Mind the Gap #490" src="https://ik.imagekit.io/UltraDAO/wallace/mind_the_gap_490.png?tr=w-100,q-20,bl-6" />
-      <img alt="Mind the Gap #189" src="https://ik.imagekit.io/UltraDAO/wallace/mind_the_gap_189.png?tr=w-100,q-20,bl-6" />
-      <img alt="Mind the Gap #114" src="https://ik.imagekit.io/UltraDAO/wallace/mind_the_gap_114.png?tr=w-100,q-20,bl-6" />
+      <img alt="Mind the Gap #490" src="https://ik.imagekit.io/UltraDAO/wallace/mind_the_gap_490.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live-render?slug=mind-the-gap&tokenId=490" />
+      <img alt="Mind the Gap #189" src="https://ik.imagekit.io/UltraDAO/wallace/mind_the_gap_189.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live-render?slug=mind-the-gap&tokenId=189" />
+      <img alt="Mind the Gap #114" src="https://ik.imagekit.io/UltraDAO/wallace/mind_the_gap_114.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live-render?slug=mind-the-gap&tokenId=114" />
     </div>
     <h3 class="collection-title">
       de|growth:generations by Jacek Markusiewicz
@@ -777,10 +777,10 @@ permalink: /art/collection/
     </div>
     <h3 class="collection-title">Catharsis by Dario Lanza</h3>
     <div class="gallery-row gallery-quadruple-wide">
-      <img alt="Catharsis #633 - This Is Always" src="https://ik.imagekit.io/UltraDAO/wallace/catharsis_633_this_is_always.png?tr=w-100,q-20,bl-6" />
-      <img alt="Catharsis #468 - Pick Up Sticks" src="https://ik.imagekit.io/UltraDAO/wallace/catharsis_468_pick_up_sticks.png?tr=w-100,q-20,bl-6" />
-      <img alt="Catharsis #711 - I'm Yours" src="https://ik.imagekit.io/UltraDAO/wallace/catharsis_711_i_m_yours.png?tr=w-100,q-20,bl-6" />
-      <img alt="Catharsis #100 - Away in a Manger" src="https://ik.imagekit.io/UltraDAO/wallace/catharsis_100_away_in_a_manger.png?tr=w-100,q-20,bl-6" />
+      <img alt="Catharsis #633 - This Is Always" src="https://ik.imagekit.io/UltraDAO/wallace/catharsis_633_this_is_always.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live-render?slug=catharsis&tokenId=633" />
+      <img alt="Catharsis #468 - Pick Up Sticks" src="https://ik.imagekit.io/UltraDAO/wallace/catharsis_468_pick_up_sticks.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live-render?slug=catharsis&tokenId=468" />
+      <img alt="Catharsis #711 - I'm Yours" src="https://ik.imagekit.io/UltraDAO/wallace/catharsis_711_i_m_yours.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live-render?slug=catharsis&tokenId=711" />
+      <img alt="Catharsis #100 - Away in a Manger" src="https://ik.imagekit.io/UltraDAO/wallace/catharsis_100_away_in_a_manger.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live-render?slug=catharsis&tokenId=100" />
     </div>
     <h3 class="collection-title">For Algernon by Elsif</h3>
     <div class="gallery-row gallery-quadruple-wide">
@@ -791,8 +791,8 @@ permalink: /art/collection/
     </div>
     <h3 class="collection-title">Morphology by Emily Xie</h3>
     <div class="gallery-row gallery-double-wide">
-      <img alt="LUNA" src="https://ik.imagekit.io/UltraDAO/wallace/luna.png?tr=w-100,q-20,bl-6" />
-      <img alt="Shield" src="https://ik.imagekit.io/UltraDAO/wallace/shield.png?tr=w-100,q-20,bl-6" />
+      <img alt="LUNA" src="https://ik.imagekit.io/UltraDAO/wallace/luna.png?tr=w-100,q-20,bl-6" data-iframe-src="https://ethblock.art/canvas/blockart/7647" />
+      <img alt="Shield" src="https://ik.imagekit.io/UltraDAO/wallace/shield.png?tr=w-100,q-20,bl-6" data-iframe-src="https://ethblock.art/canvas/blockart/7476" />
     </div>
     <h3 class="collection-title">unbuilt by Jacek Markusiewicz</h3>
     <div class="gallery-row gallery-quadruple-wide-trip-small">
