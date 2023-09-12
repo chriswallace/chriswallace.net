@@ -40,153 +40,161 @@ permalink: /art/collection/
   };
 
   document.addEventListener('DOMContentLoaded', () => {
-      // Select all images on the page
-      const images = document.querySelectorAll('img');
+    // Select all images on the page
+    const images = document.querySelectorAll('img');
 
-      // Create a tooltip element
-      const tooltip = document.createElement('div');
-      tooltip.style.position = 'absolute';
-      tooltip.style.backgroundColor = 'black';
-      tooltip.style.color = 'white';
-      tooltip.style.padding = '5px 10px';
-      tooltip.style.borderRadius = '5px';
-      tooltip.style.display = 'none';
-      tooltip.style.zIndex = '9999';
-      document.body.appendChild(tooltip);
+    // Create a tooltip element
+    const tooltip = document.createElement('div');
+    tooltip.style.position = 'absolute';
+    tooltip.style.backgroundColor = 'black';
+    tooltip.style.color = 'white';
+    tooltip.style.padding = '5px 10px';
+    tooltip.style.borderRadius = '5px';
+    tooltip.style.display = 'none';
+    tooltip.style.zIndex = '9999';
+    document.body.appendChild(tooltip);
 
-      // Initialize IntersectionObserver
-      const imgObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                  const img = entry.target;
-                  setSrcSetAndSizes(img); // Call your function to set srcset and sizes
-                  observer.unobserve(img); // Stop observing this image
-              }
-          });
-      }, { rootMargin: '0px 0px 200px 0px' });  // Trigger if the image gets within 200px of the viewport
-
-      // Attach event listeners to each image
-      images.forEach((img) => {
-          imgObserver.observe(img);  // Start observing this image
-
-          img.addEventListener('mouseover', function (event) {
-              const altText = this.getAttribute('alt');
-              if (altText) {
-                  tooltip.textContent = altText;
-                  tooltip.style.display = 'block';
-              }
-          });
-
-          img.addEventListener('mousemove', function (event) {
-              tooltip.style.left = event.pageX + 10 + 'px';
-              tooltip.style.top = event.pageY + 10 + 'px';
-          });
-
-          img.addEventListener('mouseout', function () {
-              tooltip.style.display = 'none';
-          });
-
-          // Create a wrapper div around the image
-          const wrapperDiv = document.createElement('div');
-          wrapperDiv.classList.add('image-wrapper');
-          img.parentNode.insertBefore(wrapperDiv, img);
-          wrapperDiv.appendChild(img);
-
-          // Create the maximize icon
-          const maximizeIcon = document.createElement('div');
-          maximizeIcon.classList.add('maximize-icon');
-          maximizeIcon.textContent = '[+]';
-          wrapperDiv.appendChild(maximizeIcon);
-
-          const goFullscreen = () => {
-            const viewer = document.getElementById('fullscreen-viewer');
-
-            // Create a new image with higher resolution based on screen dimensions
-            const newImg = document.createElement('img');
-            const currentSrc = img.getAttribute('src');
-            const highResSrc = currentSrc.replace(/w-\d+/, `w-${window.innerWidth*2}`).replace(/q-\d+/, 'q-90');
-
-            newImg.setAttribute('src', highResSrc);
-
-            const currentIframeSrc = img.getAttribute('data-iframe-src');
-            const currentIframeSize = img.getAttribute('data-iframe-size');
-
-            const newDiv = document.createElement('div');
-
-            if(currentIframeSize)
-              overrideSize = true;
-
-            viewer.innerHTML = '';
-            viewer.appendChild(newDiv);
-            newDiv.appendChild(newImg);
-            newDiv.appendChild(createCloseButton());
-
-            viewer.className = '';
-
-            if (currentIframeSrc)
-              newDiv.appendChild(createViewLiveCodeButton(currentIframeSrc, newImg, overrideSize));
-
-            // For fullscreen
-            if (viewer.requestFullscreen) {
-              viewer.requestFullscreen();
+    // Initialize IntersectionObserver
+    const imgObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                setSrcSetAndSizes(img); // Call your function to set srcset and sizes
+                observer.unobserve(img); // Stop observing this image
             }
-          };
-
-          // Listen for clicks on the maximize icon
-          maximizeIcon.addEventListener('click', goFullscreen);
-      });
-
-      if (!isMobile() && webglSupport()) {
-          let iframes = document.getElementsByClassName('live-code');
-          Array.from(iframes).forEach((iframe) => {
-              let dataSrc = iframe.getAttribute('data-src');
-              if (dataSrc) {
-                  iframe.src = dataSrc;
-              }
-          });
-      }
-
-      function createCloseButton() {
-        const closeButton = document.createElement('button');
-        closeButton.textContent = 'Close';
-        closeButton.className = 'close-btn';
-        closeButton.addEventListener('click', () => {
-          document.exitFullscreen();
-          const viewer = document.getElementById('fullscreen-viewer');
-          viewer.className = 'hidden';
         });
-        return closeButton;
-      }
+    }, { rootMargin: '0px 0px 200px 0px' });  // Trigger if the image gets within 200px of the viewport
 
-      function createViewLiveCodeButton(iframeSrc, img) {  // Pass the img element as an argument
-          const viewCodeButton = document.createElement('button');
-          viewCodeButton.textContent = 'View Live';
-          viewCodeButton.className = 'live-code-btn';
-          viewCodeButton.addEventListener('click', () => {
-              if (iframeSrc) {
-                  const imgWidth = img.offsetWidth;  // Fetch the rendered width of the image
-                  const imgHeight = img.offsetHeight;  // Fetch the rendered height of the image
-                  const newDiv = document.createElement('div');
-                  const iframe = document.createElement('iframe');
-                  iframe.setAttribute('src', iframeSrc);
-                  if( overrideSize ){
-                    iframe.setAttribute('width', window.innerWidth);  // Set the iframe width to match the image
-                    iframe.setAttribute('height', window.innerHeight);  // Set the iframe height to match the image
-                  } else{
-                    iframe.setAttribute('width', imgWidth);  // Set the iframe width to match the image
-                    iframe.setAttribute('height', imgHeight);  // Set the iframe height to match the image
-                  }
-                  const viewer = document.getElementById('fullscreen-viewer');
-                  viewer.innerHTML = '';
-                  viewer.appendChild(newDiv);
-                  newDiv.appendChild(iframe);
-                  newDiv.appendChild(createCloseButton());
-              }
-          });
-          return viewCodeButton;
-      }
+    // Attach event listeners to each image
+    images.forEach((img) => {
+        imgObserver.observe(img);  // Start observing this image
 
+        img.addEventListener('mouseover', function (event) {
+            const altText = this.getAttribute('alt');
+            if (altText) {
+                tooltip.textContent = altText;
+                tooltip.style.display = 'block';
+            }
+        });
 
+        img.addEventListener('mousemove', function (event) {
+            tooltip.style.left = event.pageX + 10 + 'px';
+            tooltip.style.top = event.pageY + 10 + 'px';
+        });
+
+        img.addEventListener('mouseout', function () {
+            tooltip.style.display = 'none';
+        });
+
+        // Create a wrapper div around the image
+        const wrapperDiv = document.createElement('div');
+        wrapperDiv.classList.add('image-wrapper');
+        img.parentNode.insertBefore(wrapperDiv, img);
+        wrapperDiv.appendChild(img);
+
+        // Create the maximize icon
+        const maximizeIcon = document.createElement('div');
+        maximizeIcon.classList.add('maximize-icon');
+        maximizeIcon.textContent = '[+]';
+        wrapperDiv.appendChild(maximizeIcon);
+
+        const goFullscreen = () => {
+          const viewer = document.getElementById('fullscreen-viewer');
+
+          // Create a new image with higher resolution based on screen dimensions
+          const newImg = document.createElement('img');
+          const currentSrc = img.getAttribute('src');
+
+          // Check if the image is a GIF
+          const isGif = currentSrc.endsWith('.gif') || currentSrc.includes('.gif?');
+
+          // Generate high-res URL conditionally
+          let highResSrc;
+          if (isGif) {
+            // If it's a GIF, do not add image size
+            highResSrc = currentSrc.replace(/w-\d+,?/, '');
+          } else {
+            // If it's not a GIF, add image size
+            highResSrc = currentSrc.replace(/w-\d+/, `w-${window.innerWidth*2}`).replace(/q-\d+/, 'q-90');
+          }
+
+          newImg.src = highResSrc;
+          newImg.setAttribute('src', highResSrc);
+
+          const currentIframeSrc = img.getAttribute('data-iframe-src');
+          const currentIframeSize = img.getAttribute('data-iframe-size');
+
+          const newDiv = document.createElement('div');
+
+          viewer.innerHTML = '';
+          viewer.appendChild(newDiv);
+          newDiv.appendChild(newImg);
+          newDiv.appendChild(createCloseButton());
+
+          viewer.className = '';
+
+          if (currentIframeSrc)
+            newDiv.appendChild(createViewLiveCodeButton(currentIframeSrc, newImg, currentIframeSize));
+
+          // For fullscreen
+          if (viewer.requestFullscreen) {
+            viewer.requestFullscreen();
+          }
+        };
+
+        // Listen for clicks on the maximize icon
+        maximizeIcon.addEventListener('click', goFullscreen);
+    });
+
+    if (!isMobile() && webglSupport()) {
+        let iframes = document.getElementsByClassName('live-code');
+        Array.from(iframes).forEach((iframe) => {
+            let dataSrc = iframe.getAttribute('data-src');
+            if (dataSrc) {
+                iframe.src = dataSrc;
+            }
+        });
+    }
+
+    function createCloseButton() {
+      const closeButton = document.createElement('button');
+      closeButton.textContent = 'Close';
+      closeButton.className = 'close-btn';
+      closeButton.addEventListener('click', () => {
+        document.exitFullscreen();
+        const viewer = document.getElementById('fullscreen-viewer');
+        viewer.className = 'hidden';
+      });
+      return closeButton;
+    }
+
+    function createViewLiveCodeButton(iframeSrc, img, currentIframeSize) {
+        const viewCodeButton = document.createElement('button');
+        viewCodeButton.textContent = 'View Live';
+        viewCodeButton.className = 'live-code-btn';
+        viewCodeButton.addEventListener('click', () => {
+            if (iframeSrc) {
+                const imgWidth = img.offsetWidth;
+                const imgHeight = img.offsetHeight;
+                const newDiv = document.createElement('div');
+                const iframe = document.createElement('iframe');
+                iframe.setAttribute('src', iframeSrc);
+                if( currentIframeSize === 'fullscreen' ){
+                  iframe.setAttribute('width', window.innerWidth);  // Set the iframe width to match the image
+                  iframe.setAttribute('height', window.innerHeight);  // Set the iframe height to match the image
+                } else{
+                  iframe.setAttribute('width', imgWidth);  // Set the iframe width to match the image
+                  iframe.setAttribute('height', imgHeight);  // Set the iframe height to match the image
+                }
+                const viewer = document.getElementById('fullscreen-viewer');
+                viewer.innerHTML = '';
+                viewer.appendChild(newDiv);
+                newDiv.appendChild(iframe);
+                newDiv.appendChild(createCloseButton());
+            }
+        });
+        return viewCodeButton;
+    }
   });
 
 </script>
