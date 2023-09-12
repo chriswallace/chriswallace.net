@@ -117,6 +117,8 @@ permalink: /art/collection/
             newDiv.appendChild(newImg);
             newDiv.appendChild(createCloseButton());
 
+            viewer.className = '';
+
             if (currentIframeSrc)
               newDiv.appendChild(createViewLiveCodeButton(currentIframeSrc, newImg));
 
@@ -146,6 +148,8 @@ permalink: /art/collection/
         closeButton.className = 'close-btn';
         closeButton.addEventListener('click', () => {
           document.exitFullscreen();
+          const viewer = document.getElementById('fullscreen-viewer');
+          viewer.className = 'hidden';
         });
         return closeButton;
       }
@@ -809,4 +813,4 @@ permalink: /art/collection/
   </div>
 </article>
 
-<div id="fullscreen-viewer"></div>
+<div id="fullscreen-viewer" class="hidden"></div>

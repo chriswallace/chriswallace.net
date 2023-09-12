@@ -299,6 +299,9 @@ footer p {
   bottom: 0;
 }
 
+#fullscreen-viewer.hidden{
+  display: none;
+}
 
 @media (prefers-color-scheme: dark) {
   body {
