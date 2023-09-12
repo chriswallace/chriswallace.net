@@ -184,6 +184,10 @@ article ul {
   @apply mx-auto mb-12 sm:mb-24;
 }
 
+.gallery-single-wide-constrained{
+  @apply mx-auto mb-12 sm:mb-24 sm:max-w-[66%];
+}
+
 .gallery-single-wide-portrait {
   @apply mx-auto sm:max-w-[45%] mb-12 sm:mb-24;
 }
