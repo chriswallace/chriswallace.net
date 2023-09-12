@@ -6,97 +6,176 @@ permalink: /art/collection/
 ---
 
 <script>
-    function webglSupport() {
-        try {
-            var canvas = document.createElement('canvas');
-            return !!(window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
-        } catch (e) {
-            return false;
-        }
-    }
-    function isMobile() {
-        return /Mobi|Android/i.test(navigator.userAgent);
-    }
+  function webglSupport() {
+      try {
+          var canvas = document.createElement('canvas');
+          return !!(window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
+      } catch (e) {
+          return false;
+      }
+  }
+  function isMobile() {
+      return /Mobi|Android/i.test(navigator.userAgent);
+  }
 
-    // Function to set srcset and sizes
-    const setSrcSetAndSizes = (img) => {
-        const renderedWidth = img.clientWidth;
-        const base_url = "https://ik.imagekit.io/UltraDAO/wallace/";
-        const img_name = img.src.split('/').pop().split('?')[0];
+  // Function to set srcset and sizes
+  const setSrcSetAndSizes = (img) => {
+      const renderedWidth = img.clientWidth;
+      const base_url = "https://ik.imagekit.io/UltraDAO/wallace/";
+      const img_name = img.src.split('/').pop().split('?')[0];
 
-        const srcsetStr = `${base_url}${img_name}?tr=w-${renderedWidth},q-70 1x,
-                           ${base_url}${img_name}?tr=w-${renderedWidth * 2},q-70 2x,
-                           ${base_url}${img_name}?tr=w-${renderedWidth * 3},q-70 3x`;
+      const srcsetStr = `${base_url}${img_name}?tr=w-${renderedWidth},q-70 1x,
+                          ${base_url}${img_name}?tr=w-${renderedWidth * 2},q-70 2x,
+                          ${base_url}${img_name}?tr=w-${renderedWidth * 3},q-70 3x`;
 
-        // This should reflect your actual layout rules in your CSS
-        const sizesStr = `(max-width: 400px) ${renderedWidth}px,
-                          (max-width: 800px) ${renderedWidth * 2}px,
-                          (max-width: 1200px) ${renderedWidth * 3}px,
-                          ${renderedWidth * 4}px`;
+      // This should reflect your actual layout rules in your CSS
+      const sizesStr = `(max-width: 400px) ${renderedWidth}px,
+                        (max-width: 800px) ${renderedWidth * 2}px,
+                        (max-width: 1200px) ${renderedWidth * 3}px,
+                        ${renderedWidth * 4}px`;
 
-        img.src = `${base_url}${img_name}?tr=w-${renderedWidth},q-70`;
-        img.srcset = srcsetStr;
-        img.sizes = sizesStr;
-    };
+      img.src = `${base_url}${img_name}?tr=w-${renderedWidth},q-70`;
+      img.srcset = srcsetStr;
+      img.sizes = sizesStr;
+  };
 
-    document.addEventListener('DOMContentLoaded', () => {
-        // Select all images on the page
-        const images = document.querySelectorAll('img');
+  document.addEventListener('DOMContentLoaded', () => {
+      // Select all images on the page
+      const images = document.querySelectorAll('img');
 
-        // Create a tooltip element
-        const tooltip = document.createElement('div');
-        tooltip.style.position = 'absolute';
-        tooltip.style.backgroundColor = 'black';
-        tooltip.style.color = 'white';
-        tooltip.style.padding = '5px 10px';
-        tooltip.style.borderRadius = '5px';
-        tooltip.style.display = 'none';
-        tooltip.style.zIndex = '9999';
-        document.body.appendChild(tooltip);
+      // Create a tooltip element
+      const tooltip = document.createElement('div');
+      tooltip.style.position = 'absolute';
+      tooltip.style.backgroundColor = 'black';
+      tooltip.style.color = 'white';
+      tooltip.style.padding = '5px 10px';
+      tooltip.style.borderRadius = '5px';
+      tooltip.style.display = 'none';
+      tooltip.style.zIndex = '9999';
+      document.body.appendChild(tooltip);
 
-        // Initialize IntersectionObserver
-        const imgObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    setSrcSetAndSizes(img); // Call your function to set srcset and sizes
-                    observer.unobserve(img); // Stop observing this image
-                }
-            });
-        }, { rootMargin: '0px 0px 200px 0px' });  // Trigger if the image gets within 200px of the viewport
+      // Initialize IntersectionObserver
+      const imgObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  const img = entry.target;
+                  setSrcSetAndSizes(img); // Call your function to set srcset and sizes
+                  observer.unobserve(img); // Stop observing this image
+              }
+          });
+      }, { rootMargin: '0px 0px 200px 0px' });  // Trigger if the image gets within 200px of the viewport
 
-        // Attach event listeners to each image
-        images.forEach((img) => {
-            imgObserver.observe(img);  // Start observing this image
+      // Attach event listeners to each image
+      images.forEach((img) => {
+          imgObserver.observe(img);  // Start observing this image
 
-            img.addEventListener('mouseover', function (event) {
-                const altText = this.getAttribute('alt');
-                if (altText) {
-                    tooltip.textContent = altText;
-                    tooltip.style.display = 'block';
-                }
-            });
+          img.addEventListener('mouseover', function (event) {
+              const altText = this.getAttribute('alt');
+              if (altText) {
+                  tooltip.textContent = altText;
+                  tooltip.style.display = 'block';
+              }
+          });
 
-            img.addEventListener('mousemove', function (event) {
-                tooltip.style.left = event.pageX + 10 + 'px';
-                tooltip.style.top = event.pageY + 10 + 'px';
-            });
+          img.addEventListener('mousemove', function (event) {
+              tooltip.style.left = event.pageX + 10 + 'px';
+              tooltip.style.top = event.pageY + 10 + 'px';
+          });
 
-            img.addEventListener('mouseout', function () {
-                tooltip.style.display = 'none';
-            });
+          img.addEventListener('mouseout', function () {
+              tooltip.style.display = 'none';
+          });
+
+          // Create a wrapper div around the image
+          const wrapperDiv = document.createElement('div');
+          wrapperDiv.classList.add('image-wrapper');
+          img.parentNode.insertBefore(wrapperDiv, img);
+          wrapperDiv.appendChild(img);
+
+          // Create the maximize icon
+          const maximizeIcon = document.createElement('div');
+          maximizeIcon.classList.add('maximize-icon');
+          maximizeIcon.textContent = '[+]';
+          wrapperDiv.appendChild(maximizeIcon);
+
+          const goFullscreen = () => {
+            const viewer = document.getElementById('fullscreen-viewer');
+            
+            // Create a new image with higher resolution based on screen dimensions
+            const newImg = document.createElement('img');
+            const currentSrc = img.getAttribute('src');
+            const highResSrc = currentSrc.replace(/w-\d+/, `w-${window.innerWidth*2}`).replace(/q-\d+/, 'q-90');
+            
+            newImg.setAttribute('src', highResSrc);
+            
+            const currentIframeSrc = img.getAttribute('data-iframe-src');
+            
+            const newDiv = document.createElement('div');
+
+            viewer.innerHTML = '';
+            viewer.appendChild(newDiv);
+            newDiv.appendChild(newImg);
+            newDiv.appendChild(createCloseButton());
+
+            if (currentIframeSrc)
+              newDiv.appendChild(createViewLiveCodeButton(currentIframeSrc, newImg));
+
+            // For fullscreen
+            if (viewer.requestFullscreen) {
+              viewer.requestFullscreen();
+            }
+          };
+
+          // Listen for clicks on the maximize icon
+          maximizeIcon.addEventListener('click', goFullscreen);
+      });
+
+      if (!isMobile() && webglSupport()) {
+          let iframes = document.getElementsByClassName('live-code');
+          Array.from(iframes).forEach((iframe) => {
+              let dataSrc = iframe.getAttribute('data-src');
+              if (dataSrc) {
+                  iframe.src = dataSrc;
+              }
+          });
+      }
+
+      function createCloseButton() {
+        const closeButton = document.createElement('button');
+        closeButton.textContent = 'Close';
+        closeButton.className = 'close-btn';
+        closeButton.addEventListener('click', () => {
+          document.exitFullscreen();
         });
+        return closeButton;
+      }
 
-        if (!isMobile() && webglSupport()) {
-            let iframes = document.getElementsByClassName('live-code');
-            Array.from(iframes).forEach((iframe) => {
-                let dataSrc = iframe.getAttribute('data-src');
-                if (dataSrc) {
-                    iframe.src = dataSrc;
-                }
-            });
-        }
-    });
+      function createViewLiveCodeButton(iframeSrc, img) {  // Pass the img element as an argument
+          const viewCodeButton = document.createElement('button');
+          viewCodeButton.textContent = 'View Live';
+          viewCodeButton.className = 'live-code-btn';
+          viewCodeButton.addEventListener('click', () => {
+              if (iframeSrc) {
+                  const imgWidth = img.offsetWidth;  // Fetch the rendered width of the image
+                  const imgHeight = img.offsetHeight;  // Fetch the rendered height of the image
+                  const newDiv = document.createElement('div');
+                  const iframe = document.createElement('iframe');
+                  iframe.setAttribute('src', iframeSrc);
+                  iframe.setAttribute('width', imgWidth);  // Set the iframe width to match the image
+                  iframe.setAttribute('height', imgHeight);  // Set the iframe height to match the image
+                  const viewer = document.getElementById('fullscreen-viewer');
+                  viewer.innerHTML = '';
+                  viewer.appendChild(newDiv);
+                  newDiv.appendChild(iframe);
+                  newDiv.appendChild(createCloseButton());
+              }
+          });
+          return viewCodeButton;
+      }
+
+
+  });
+
 </script>
 <article>
   <a class="back-btn" href="/art"> Art </a>
@@ -132,7 +211,7 @@ permalink: /art/collection/
       </div>
       <div>
         <h3 class="collection-title">Dragons #489 by William Mapan</h3>
-        <img alt="Dragons #489" src="https://ik.imagekit.io/UltraDAO/wallace/dragons_489.png?tr=w-100,q-20,bl-6" />
+        <img alt="Dragons #489" src="https://ik.imagekit.io/UltraDAO/wallace/dragons_489.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmeKNachzan9TamxbYmfhDfjkur7gbs1EEtGqMpsmyubeb/?fxhash=op8GW9Zq63p4qWsNRHS47QciYW5spKFTzMTroSMxH4EuBYaNAY7&fxiteration=489&fxminter=tz1P5jYGVw7JZLM7CNnFxGk1bSZaQovMrzfo" />
       </div>
     </div>
     <div class="gallery-row gallery-double-wide">
@@ -140,13 +219,13 @@ permalink: /art/collection/
         <h3 class="collection-title">
           QQL #94 by Tyler Hobbs and Dandelion Wist
         </h3>
-        <img alt="QQL #94" src="https://ik.imagekit.io/UltraDAO/wallace/qql_94.png?tr=w-100,q-20,bl-6" />
+        <img alt="QQL #94" src="https://ik.imagekit.io/UltraDAO/wallace/qql_94.png?tr=w-100,q-20,bl-6" data-iframe-src="https://qql.art/generator/0x8367a713bc14212ab1bb8c55a778e43e50b8b9277706fa5e6368ffff10c10c32" />
       </div>
       <div>
         <h3 class="collection-title">
           Acequia #219 by Rich Poole and Rick Crane
         </h3>
-        <img alt="Acequia #219" src="https://ik.imagekit.io/UltraDAO/wallace/acequia_219.png?tr=w-100,q-20,bl-6" />
+        <img alt="Acequia #219" src="https://ik.imagekit.io/UltraDAO/wallace/acequia_219.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUBXzcPTme2wwfjp52Wy6Ty8oS25qguo7DLjfAMW9eRQK/?fxhash=ooQWjKEjqYfYtS5BfRMwu31Zz8ZCHDcptbtaCqvhoq9QCSHZwYW&fxiteration=219&fxminter=tz1PHnydn2z7dtW5AZUmEcGfUyN9vBqR7q4W" />
       </div>
     </div>
     <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
@@ -162,26 +241,26 @@ permalink: /art/collection/
     </div>
     <div>
       <h3 class="collection-title">Quasi Dragon Studies by Harvey Rayner</h3>
-      <div class="gallery-row gallery-flex mb-2 sm:mb-4">
+      <div class="gallery-row gallery-flex sm:mb-4">
         <div style="flex: 0.8661133">
-          <img alt="Quasi Dragon Studies #252" src="https://ik.imagekit.io/UltraDAO/wallace/quasi_dragon_studies_252.png?tr=w-100,q-20,bl-6" />
+          <img alt="Quasi Dragon Studies #252" src="https://ik.imagekit.io/UltraDAO/wallace/quasi_dragon_studies_252.png?tr=w-100,q-20,bl-6" data-iframe-src="https://public-bucket-verse-dev.s3.eu-west-1.amazonaws.com/genart/go/index.html?payload=eyJoYXNoIjoiMHhlZjcyZDg1N2FjYjRlN2VhMGZhNjg0YjM2NTdkNDM3YzMzOTU4MzdhMzU5YzMxZDViMmM1YjIzYWMxZGVmOTEyIiwiZWRpdGlvbk51bWJlciI6MjUyLCJ0b3RhbEVkaXRpb25zIjowLCJpbnB1dCI6eyIkcXVhc2lfZHJhZ29uczpjb21wb3NpdGUiOiI2NjA0NDIyKzAsMHg2MzMzNzM3ZmIxMzBmMWIwNGE4MWI4ZDg4MTE2NmM2ODY0ZTg2NGYyMWRkOTM0ZmQ3MDIzMzVkNmY3NTFkNmZmfjB4ZTc4ZGY1NDE2YTgwNzZhMGRmZWVlYjNmOTllZjY0ODg5OTA1Y2UwNmFjNDFhZDUyNzAwMmM2MDVhZmU1MDZlOCwweDQ5NDRlY2Q4MWQ0YWI5ZjMxNzIyYzZhZTIyZjFlMjYxOTI3NzVmZTI5MWIxYjkxNWQ3ZDk3ODg5ODk2NGEwYjR%2BMCwweDZhNGY4ZDY5OTUxZDgwZmEyMjgzNzIyOGYzZDQ2Yjg2ZTRmN2IzZmU3NjlhNDNjN2EyNjBjZGEyMWY4MTgzZmJ%2BMHg0N2I3ZjNjMjk0M2JiYmRhNzEwYTk0MzkyM2E2YzdlNzkwZmRkMDU3NDM1ZDM2NGU4OWJkMjM5ZDlmYWI5YmM3LEwwIn19" />
         </div>
         <div style="flex: 0.2886666">
-          <img alt="Quasi Dragon Studies #255" src="https://ik.imagekit.io/UltraDAO/wallace/quasi_dragon_studies_255.png?tr=w-100,q-20,bl-6" />
+          <img alt="Quasi Dragon Studies #255" src="https://ik.imagekit.io/UltraDAO/wallace/quasi_dragon_studies_255.png?tr=w-100,q-20,bl-6" data-iframe-src="https://public-bucket-verse-dev.s3.eu-west-1.amazonaws.com/genart/go/index.html?payload=eyJoYXNoIjoiMHgxMDQ5MThlMDg2MDg1ZWVmMWRiYjQ2MzUwN2Y5Mjk0ODA4NDI2YzRhOTBiMzQzM2ExNzEyZWI3ZDE1OWRjZGFmIiwiZWRpdGlvbk51bWJlciI6MjU1LCJ0b3RhbEVkaXRpb25zIjowLCJpbnB1dCI6eyIkcXVhc2lfZHJhZ29uczpjb21wb3NpdGUiOiI0MDg0KzB4ZDVkMGYzODEwYTNiZTBiNDc3MmIyZmMwMTljYmM5YmUwYTc3MGVkM2JiZDNiYjkyZTM1N2ZjNTQxNTIwMjA0Nn5MMHgyNjFlNDQxOThiZGJiY2JkYTg1OTE4ZTBiYzk0ZmI1ODFlOWVjMTA4NmUyZWFkMDkxNmFmMjcyMGI2M2I5Mzg1In19" />
         </div>
         <div style="flex: 0.2886666">
-          <img alt="Quasi Dragon Studies #254" src="https://ik.imagekit.io/UltraDAO/wallace/quasi_dragon_studies_254.png?tr=w-100,q-20,bl-6" />
+          <img alt="Quasi Dragon Studies #254" src="https://ik.imagekit.io/UltraDAO/wallace/quasi_dragon_studies_254.png?tr=w-100,q-20,bl-6" data-iframe-src="https://public-bucket-verse-dev.s3.eu-west-1.amazonaws.com/genart/go/index.html?payload=eyJoYXNoIjoiMHgxYjE1ZjBlOTA4NjRjMmE1ZDQ0Y2NlMjljMGJmODI5MTk0ZDRkODVlZjY0N2Y2NDIxNTEzYmZmNWNmMmQxMTYwIiwiZWRpdGlvbk51bWJlciI6MjU0LCJ0b3RhbEVkaXRpb25zIjowLCJpbnB1dCI6eyIkcXVhc2lfZHJhZ29uczpjb21wb3NpdGUiOiI0MDY2KzB4ZDk2ZjEzMGNkMGMwNjc3NWNkYzUwZDg3NzQxM2E2NjVmYTFjODg1NjRlYmNjYjdmOGZkY2FmYzU4MDg3ODY5Y35MMHg0NWU4YTljNzY3ZmExODdmYzk4Zjc2MWQ4ZWU1NzAzYmIyOTcwYjhlZGQ4MzZhZDY1ODRmNTQzM2M0MzU2OWQwIn19" />
         </div>
       </div>
       <div class="gallery-row gallery-single-wide">
-          <img alt="Quasi Dragon Studies #289" src="https://ik.imagekit.io/UltraDAO/wallace/quasi_dragon_studies_289.jpg?tr=w-100,q-20,bl-6" />
+          <img alt="Quasi Dragon Studies #289" src="https://ik.imagekit.io/UltraDAO/wallace/quasi_dragon_studies_289.jpg?tr=w-100,q-20,bl-6" data-iframe-src="https://public-bucket-verse-dev.s3.eu-west-1.amazonaws.com/genart/go/index.html?payload=eyJoYXNoIjoiMHgyZjkzYjI0YTJlYWMzMDM4Yjg4YmZjMzM3NzE2NzA4MTFmNGJhMzY2NTk1NGE1NGE4NmVjMGVmNDg2M2EzYmE1IiwiZWRpdGlvbk51bWJlciI6Mjg5LCJ0b3RhbEVkaXRpb25zIjowLCJpbnB1dCI6eyIkcXVhc2lfZHJhZ29uczpjb21wb3NpdGUiOiI0NjQwNisweDcwNmM3YzFmZjM3OTNhY2FjMWQxMzFmOGZjNGEzM2QyZDIxY2U2OTM5YTdmNjg3MDM3ZTMzN2NkOWRhNGZlNjUsMHg2Y2MwZTg4NDg1ZTM0YzFiMGRhYjM0ZDYyMmFkZGViZDJhZDYyY2RkNjFjMDA2Y2E1OWU5NmRiZDQ1ZjY0MzcxLEwweDNmZjkwOGE2ZDAxYTVmMTdiNDQyZTJkMWRkMWVlMTIzN2ZkNDk4YWJmZDI5NzU0ZDY0MGZjZDk0MjQ3MGEwNjYifX0%3D" />
       </div>
     </div>
     <h3 class="collection-title">Michaël Zancan</h3>
     <div class="gallery-row gallery-double-wide">
-      <img alt="Garden, Monoliths #125" src="https://ik.imagekit.io/UltraDAO/wallace/garden_monoliths_125.jpg?tr=w-100,q-20,bl-6" />
-      <img alt="(kinder)Garden, Monuments #23" src="https://ik.imagekit.io/UltraDAO/wallace/_kinder_garden_monuments_23.jpg?tr=w-100,q-20,bl-6" />
-      <img alt="A Bugged Forest #169" src="https://ik.imagekit.io/UltraDAO/wallace/a_bugged_forest_169.png?tr=w-100,q-20,bl-6" />
+      <img alt="Garden, Monoliths #125" src="https://ik.imagekit.io/UltraDAO/wallace/garden_monoliths_125.jpg?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmeuWoPt7WNMhTxMTZmumPqqw8zcCCd1K14wCHR2WoH6b2/?fxhash=ooqSn7h2GrHCn3XmNDTif3JXWnZ2DyqiSJ4YNcGuedguN6G7Y8V&fxiteration=125&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+      <img alt="(kinder)Garden, Monuments #23" src="https://ik.imagekit.io/UltraDAO/wallace/_kinder_garden_monuments_23.jpg?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmZvfCTkkAfJeWQE1ZjEKc2mZkfnNwkcA6Y2fMBcBBpPNZ/?fxhash=ooYtH4EyXP4xxd6RpX5cocqYbnTQsH9vZFxs8EPX32DhcUm1KPg&fxiteration=23&fxminter=tz1i6asBhhj3DjWLShhJaCncePohqmkw9WW9" />
+      <img alt="A Bugged Forest #169" src="https://ik.imagekit.io/UltraDAO/wallace/a_bugged_forest_169.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmebKrkUNabQq1Yhp1QrK2EUPbUctrphu9xEmiz23bQDgM/?fxhash=onsrts5KruP2eZrtca7eFu1DJTpjbenxwaHh9DX9Vpm7ped8k6P&fxiteration=169&fxminter=tz1Q22BiuDFqfvWhMqa5txLA6zGKrqLS6Yj1" />
       <img alt="Everything, made simple" src="https://ik.imagekit.io/UltraDAO/wallace/everything_made_simple.png?tr=w-100,q-20,bl-6" />
     </div>
     <h3 class="collection-title">Piter Pasma</h3>
@@ -191,9 +270,9 @@ permalink: /art/collection/
     </div>
     <h3 class="collection-title">Contrapuntos by Marcelo Soria-Rodríguez</h3>
     <div class="gallery-row gallery-triple-wide">
-      <img alt="contrapuntos #364" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_364.png?tr=w-100,q-20,bl-6" />
-      <img alt="contrapuntos #500" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_500.png?tr=w-100,q-20,bl-6" />
-      <img alt="contrapuntos #367" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_367.png?tr=w-100,q-20,bl-6" />
+      <img alt="contrapuntos #364" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_364.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfTQFEgcgYDohPJLJWWnrKeRMBYrRP8JF79k6kveuXEv2/?fxhash=opEBz3AH9YrPfFWShDASLAmqw6t5e3oqsNuS9fRFZ39kczBBwsi&fxiteration=364&fxminter=tz2SM2qp42H8kQchmfvexZ6G8qUHBXUbr4zK" />
+      <img alt="contrapuntos #500" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_500.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfTQFEgcgYDohPJLJWWnrKeRMBYrRP8JF79k6kveuXEv2/?fxhash=ooZyxJbjLAs4EW7q2p231sY1FpLVTWWqdPYfcgB5wJWSNn8WREP&fxiteration=500&fxminter=tz1bafXvnKt87p1yXPV3vvVpe6gyD7BCdjyh" />
+      <img alt="contrapuntos #367" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_367.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfTQFEgcgYDohPJLJWWnrKeRMBYrRP8JF79k6kveuXEv2/?fxhash=ooYKyTPwVLrK6ZmB9mFAiCTnKjRUooJbGmB5NcHXa44uskCMQBq&fxiteration=367&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
     </div>
     <h3 class="collection-title">Bravura by dmarchi</h3>
     <div class="gallery-row gallery-triple-wide">
@@ -306,18 +385,22 @@ permalink: /art/collection/
         </div>
       </div>
       <div class="gallery-row gallery-quadruple-wide">
-        <img alt="230830s19pQh37003700"
-          class="sm:col-span-2" src="https://ik.imagekit.io/UltraDAO/wallace/230830s19pqh37003700.png?tr=w-100,q-20,bl-6" />
-        <img alt="220831k03zWf35003500"
-          class="sm:col-span-2" src="https://ik.imagekit.io/UltraDAO/wallace/220831k03zwf35003500.png?tr=w-100,q-20,bl-6" />
+        <div class="sm:col-span-2">
+          <img alt="230830s19pQh37003700" src="https://ik.imagekit.io/UltraDAO/wallace/230830s19pqh37003700.png?tr=w-100,q-20,bl-6" />
+        </div>
+        <div class="sm:col-span-2">
+          <img alt="220831k03zWf35003500" src="https://ik.imagekit.io/UltraDAO/wallace/220831k03zwf35003500.png?tr=w-100,q-20,bl-6" />
+        </div>
         <img alt="MMZ 204 B" src="https://ik.imagekit.io/UltraDAO/wallace/mmz_204_b.png?tr=w-100,q-20,bl-6" />
         <img alt="MMZ 47" src="https://ik.imagekit.io/UltraDAO/wallace/mmz_47.png?tr=w-100,q-20,bl-6" />
         <img alt="MMZ 207 B" src="https://ik.imagekit.io/UltraDAO/wallace/mmz_207_b.png?tr=w-100,q-20,bl-6" />
         <img alt="MMZ 207 D" src="https://ik.imagekit.io/UltraDAO/wallace/mmz_207_d.png?tr=w-100,q-20,bl-6" />
-        <img alt="MMZ 64"
-          class="sm:col-span-2" src="https://ik.imagekit.io/UltraDAO/wallace/mmz_64.png?tr=w-100,q-20,bl-6" />
-        <img alt="MMZ 181 A"
-          class="sm:col-span-2" src="https://ik.imagekit.io/UltraDAO/wallace/mmz_181_a.png?tr=w-100,q-20,bl-6" />
+        <div class="sm:col-span-2">
+          <img alt="MMZ 64" src="https://ik.imagekit.io/UltraDAO/wallace/mmz_64.png?tr=w-100,q-20,bl-6" />
+        </div>
+        <div class="sm:col-span-2">
+          <img alt="MMZ 181 A" src="https://ik.imagekit.io/UltraDAO/wallace/mmz_181_a.png?tr=w-100,q-20,bl-6" />
+        </div>
       </div>
     </div>
     <h3 class="collection-title">Olivier Bodini</h3>
@@ -348,12 +431,15 @@ permalink: /art/collection/
       <div class="col-span-3">
         <img alt="Unfolded #20" src="https://ik.imagekit.io/UltraDAO/wallace/unfolded_20.png?tr=w-100,q-20,bl-6" />
       </div>
-      <img alt="Unfolded #74"
-        class="col-span-2" src="https://ik.imagekit.io/UltraDAO/wallace/unfolded_74.png?tr=w-100,q-20,bl-6" />
-      <img alt="Unfolded #52"
-        class="col-span-2" src="https://ik.imagekit.io/UltraDAO/wallace/unfolded_52.png?tr=w-100,q-20,bl-6" />
-      <img alt="Unfolded #5"
-        class="col-span-2" src="https://ik.imagekit.io/UltraDAO/wallace/unfolded_52.png?tr=w-100,q-20,bl-6" />
+      <div class="col-span-2">
+        <img alt="Unfolded #74" src="https://ik.imagekit.io/UltraDAO/wallace/unfolded_74.png?tr=w-100,q-20,bl-6" />
+      </div>
+      <div class="col-span-2">
+        <img alt="Unfolded #52" src="https://ik.imagekit.io/UltraDAO/wallace/unfolded_52.png?tr=w-100,q-20,bl-6" />
+      </div>
+      <div class="col-span-2">
+        <img alt="Unfolded #5" src="https://ik.imagekit.io/UltraDAO/wallace/unfolded_52.png?tr=w-100,q-20,bl-6" />
+      </div>
     </div>
     <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
       <div class="mb-12 sm:mb-0" style="flex: 1">
@@ -371,9 +457,9 @@ permalink: /art/collection/
     </div>
     <h3 class="collection-title">Elefante by Michael Connolly</h3>
     <div class="gallery-row gallery-triple-wide">
-      <img alt="Elefante #60" src="https://ik.imagekit.io/UltraDAO/wallace/elefante_60.png?tr=w-100,q-20,bl-6" />
-      <img alt="Elefante #53" src="https://ik.imagekit.io/UltraDAO/wallace/elefante_53.png?tr=w-100,q-20,bl-6" />
-      <img alt="Elefante #16" src="https://ik.imagekit.io/UltraDAO/wallace/elefante_16.png?tr=w-100,q-20,bl-6" />
+      <img alt="Elefante #60" src="https://ik.imagekit.io/UltraDAO/wallace/elefante_60.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x32d4be5ee74376e08038d652d4dc26e62c67f436/4000060" />
+      <img alt="Elefante #53" src="https://ik.imagekit.io/UltraDAO/wallace/elefante_53.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x32d4be5ee74376e08038d652d4dc26e62c67f436/4000053" />
+      <img alt="Elefante #16" src="https://ik.imagekit.io/UltraDAO/wallace/elefante_16.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x32d4be5ee74376e08038d652d4dc26e62c67f436/4000016" />
     </div>
     <h3 class="collection-title">Zbageti by Melissa Wiederrecht</h3>
     <div class="gallery-row gallery-triple-wide">
@@ -722,3 +808,5 @@ permalink: /art/collection/
 
   </div>
 </article>
+
+<div id="fullscreen-viewer"></div>
