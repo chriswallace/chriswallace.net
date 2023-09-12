@@ -456,11 +456,11 @@ permalink: /art/collection/
         <h3 class="collection-title">Acoustic Drift by Joshua Bagley</h3>
         <img alt="Acoustic Drift" src="https://ik.imagekit.io/UltraDAO/wallace/acoustic_drift.png?tr=w-100,q-20,bl-6" />
       </div>
-      <div class="mb-12 sm:mb-0" style="flex: 1">
+      <div class="mb-12 sm:mb-0" style="flex: 0.7497">
         <h3 class="collection-title">Fold #223 by rudxane</h3>
         <img alt="Fold #223" src="https://ik.imagekit.io/UltraDAO/wallace/fold_223.png?tr=w-100,q-20,bl-6" />
       </div>
-      <div class="mb-12 sm:mb-0" style="flex: 1">
+      <div class="mb-12 sm:mb-0" style="flex: 1.4128">
         <h3 class="collection-title">Diverse Mix by Thomas Lin Pedersen</h3>
         <img alt="Diverse Mix" src="https://ik.imagekit.io/UltraDAO/wallace/diverse_mix.png?tr=w-100,q-20,bl-6" />
       </div>
@@ -484,7 +484,7 @@ permalink: /art/collection/
       <img alt="Shapes on a Plane #466" src="https://ik.imagekit.io/UltraDAO/wallace/shapes_on_a_plane_466.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbEUqHpEy1GeFqq8vBmqgX1uh1AMCEitbkgh87tAGhtbs/?fxhash=ooGhDsQTKdcj7K4RoAE9rNM4CrkXzsGXooTMrckqgzzFRHkFsAA&fxiteration=466&fxminter=tz1ZBaLTSVfe9oYev9j8zPCVnUdvqirRZnEE" />
     </div>
     <h3 class="collection-title">Obscured by Nadieh Bremer</h3>
-    <div class="gallery-row gallery-triple-wide">
+    <div class="gallery-row gallery-triple-wide-single-small">
       <img alt="Obscured 02f0" src="https://ik.imagekit.io/UltraDAO/wallace/obscured_02f0.png?tr=w-100,q-20,bl-6" />
       <img alt="Obscured 3d53" src="https://ik.imagekit.io/UltraDAO/wallace/obscured_3d53.png?tr=w-100,q-20,bl-6" />
       <img alt="Obscured 43f3" src="https://ik.imagekit.io/UltraDAO/wallace/obscured_43f3.png?tr=w-100,q-20,bl-6" />
@@ -496,7 +496,7 @@ permalink: /art/collection/
       <img alt="Deconstructions #224" src="https://ik.imagekit.io/UltraDAO/wallace/deconstructions_224.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmT9mnqtMpyEegioKRbaMfmNgqDHS7GixRna6PMCsdQTmC/?fxhash=op6cKZRihz7BkeyjtqztDNMVvumLveMGDfhW9SA5Dt1eik2DVjf&fxiteration=224&fxminter=tz1QsBw8pXSHit9pVmZE4npfJcbE4xi7HUgg" />
     </div>
     <h3 class="collection-title">Chepertom</h3>
-    <div class="gallery-row gallery-triple-wide">
+    <div class="gallery-row gallery-triple-wide-single-small">
       <img alt="Circuit_Bending_3.RAD" src="https://ik.imagekit.io/UltraDAO/wallace/circuit_bending_3_rad.png?tr=w-100,q-20,bl-6" />
       <img alt="Purple.RAD" src="https://ik.imagekit.io/UltraDAO/wallace/purple_rad.png?tr=w-100,q-20,bl-6" />
       <img alt="16.RAD" src="https://ik.imagekit.io/UltraDAO/wallace/16_rad.jpg?tr=w-100,q-20,bl-6" />
@@ -513,6 +513,18 @@ permalink: /art/collection/
       <img alt="Impressions of Order #113" src="https://ik.imagekit.io/UltraDAO/wallace/impressions_of_order_113.png?tr=w-100,q-20,bl-6" />
       <img alt="Impressions of Order #215" src="https://ik.imagekit.io/UltraDAO/wallace/impressions_of_order_215.png?tr=w-100,q-20,bl-6" />
     </div>
+    <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+      <div style="flex: 0.5994;">
+        <h3 class="collection-title">Leggenda #489 by Stefano Contiero</h3>
+        <img alt="Leggenda #489"
+          class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/leggenda_489.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x13aae6f9599880edbb7d144bb13f1212cee99533/1000489" />
+      </div>
+      <div style="flex: 1;">
+        <h3 class="collection-title">Nothing Remains #63 by Brendan Dawes</h3>
+        <img alt="Nothing Remains #63"
+          class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/nothing_remains_63.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUWF9oPMxzvdLn1ALiWiQvgwYX1QyFKxC2tm1Wi3rwfCS/?fxhash=ooYiA95QeRkDGLzE1aucuQ48sdjPCWij1bqKru8R8PqSqLXn3ZT&fxiteration=63&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+      </div>
+    </div>
     <h3 class="collection-title">Creatures by Florian Zumbrunn</h3>
     <div class="gallery-row gallery-double-wide">
       <img alt="Creatures #141" src="https://ik.imagekit.io/UltraDAO/wallace/creatures_141.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPTF1mT8YLXh4oVYW6micr6GhQnW97TdP5a35nkVSaAUT/?fxhash=oopsHkuf85vJx84dpYcoYtE7Cu8ka2tDH1kZ1iDkFSHNxrTm2Vp&fxiteration=141&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
@@ -526,23 +538,23 @@ permalink: /art/collection/
       <img alt="Emotional Shell #182" src="https://ik.imagekit.io/UltraDAO/wallace/emotional_shell_182.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmdKRyS1mm88TSaLyJLCZHJqxbdBkXoU5yikwJHCnSP1zY/?fxhash=opGgUT2w2UCTPgHLAhyitF7vmg8Jw2UAUNWUaC43UPaTZUJc9em&fxiteration=182&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
       <img alt="Emotional Shell #196" src="https://ik.imagekit.io/UltraDAO/wallace/emotional_shell_196.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmdKRyS1mm88TSaLyJLCZHJqxbdBkXoU5yikwJHCnSP1zY/?fxhash=ooutepZeWPupCeTX4g9FMSBQY9jf96F4W5v5d52gdVeAgdvGY9Z&fxiteration=196&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
     </div>
-    <div class="gallery-row gallery-double-wide">
-      <div>
+    <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+      <div style="flex: 1.5006;">
         <h3 class="collection-title">Crude Figures by Kjetil Golid</h3>
         <img alt="Crude Figures" src="https://ik.imagekit.io/UltraDAO/wallace/crude_figures.png?tr=w-100,q-20,bl-6" />
       </div>
-      <div>
+      <div style="flex: 1.7777;">
         <h3 class="collection-title">STRINGS PROTOTYPE #13 by IX Shells</h3>
         <img alt="STRINGS PROTOTYPE :::..._ #13/20" src="https://ik.imagekit.io/UltraDAO/wallace/strings_prototype_13_20.png?tr=w-100,q-20,bl-6" />
       </div>
     </div>
-    <div class="gallery-row gallery-double-wide">
-      <div>
-        <h3 class="collection-title">Nothing Remains #63 by Brendan Dawes</h3>
-        <img alt="Nothing Remains #63"
-          class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/nothing_remains_63.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUWF9oPMxzvdLn1ALiWiQvgwYX1QyFKxC2tm1Wi3rwfCS/?fxhash=ooYiA95QeRkDGLzE1aucuQ48sdjPCWij1bqKru8R8PqSqLXn3ZT&fxiteration=63&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+    <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+      <div style="flex: 0.7493;">
+        <h3 class="collection-title">Impasto #204 by MJ Lindow</h3>
+        <img alt="Impasto #204"
+          class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/impasto_204.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.grailers.com/api/grail/1/live/204" />
       </div>
-      <div>
+      <div style="flex: 1;">
         <h3 class="collection-title">Bardez #149 by Nat Sarkissian</h3>
         <img alt="Bardez #149"
           class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/bardez_149.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmaquYUaZjhab8HHoU7bpeoZ6hHv6JuEC7vkjBFMVqnS3G/?fxhash=oomSFsGqaC9Ge1Smux3f74F77ki7hyNPvwrBLAUa3BfRznKRdxx&fxiteration=149&fxminter=tz1enGoKdJHrWUNrX6PbafrASnQ7Utju1xyB" />
@@ -558,7 +570,7 @@ permalink: /art/collection/
       <img alt="Microgravity #360" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_360.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQQXDgS4MPBwMQC5qxcPkX7AAP26zDRsrgUYoY2XGQ38K/?fxhash=opFBgf1mEnMBaufrxcgkXm8L4URwTCRyJP1i5eRm2WTY23g7J61&fxiteration=360&fxminter=KT1CxP2oa1LbWuviJKGuEvSAxdkyL8nSJNy7" />
     </div>
     <div
-      class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24 sm:visible hidden"
+      class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24"
     >
       <div class="mb-12 sm:mb-0" style="flex: 1">
         <h3 class="collection-title">Etched Sinuosity #2 by Saskia Freeke</h3>
@@ -698,7 +710,7 @@ permalink: /art/collection/
       <img alt="Elevation #79" src="https://ik.imagekit.io/UltraDAO/wallace/elevation_79.png?tr=w-100,q-20,bl-6" />
       <img alt="Elevation #124" src="https://ik.imagekit.io/UltraDAO/wallace/elevation_124.png?tr=w-100,q-20,bl-6" />
     </div>
-    <h3 class="collection-title">Millefoglie by Stefan Contiero</h3>
+    <h3 class="collection-title">Millefoglie by Stefano Contiero</h3>
     <div class="gallery-row gallery-double-wide">
       <img alt="Millefoglie #169" src="https://ik.imagekit.io/UltraDAO/wallace/millefoglie_169.png?tr=w-100,q-20,bl-6" />
       <img alt="Millefoglie #104" src="https://ik.imagekit.io/UltraDAO/wallace/millefoglie_104.png?tr=w-100,q-20,bl-6" />
