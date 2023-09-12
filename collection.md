@@ -109,8 +109,12 @@ permalink: /art/collection/
             newImg.setAttribute('src', highResSrc);
 
             const currentIframeSrc = img.getAttribute('data-iframe-src');
+            const currentIframeSize = img.getAttribute('data-iframe-size');
 
             const newDiv = document.createElement('div');
+
+            if(currentIframeSize)
+              overrideSize = true;
 
             viewer.innerHTML = '';
             viewer.appendChild(newDiv);
@@ -120,7 +124,7 @@ permalink: /art/collection/
             viewer.className = '';
 
             if (currentIframeSrc)
-              newDiv.appendChild(createViewLiveCodeButton(currentIframeSrc, newImg));
+              newDiv.appendChild(createViewLiveCodeButton(currentIframeSrc, newImg, overrideSize));
 
             // For fullscreen
             if (viewer.requestFullscreen) {
@@ -165,8 +169,13 @@ permalink: /art/collection/
                   const newDiv = document.createElement('div');
                   const iframe = document.createElement('iframe');
                   iframe.setAttribute('src', iframeSrc);
-                  iframe.setAttribute('width', imgWidth);  // Set the iframe width to match the image
-                  iframe.setAttribute('height', imgHeight);  // Set the iframe height to match the image
+                  if( overrideSize ){
+                    iframe.setAttribute('width', window.innerWidth);  // Set the iframe width to match the image
+                    iframe.setAttribute('height', window.innerHeight);  // Set the iframe height to match the image
+                  } else{
+                    iframe.setAttribute('width', imgWidth);  // Set the iframe width to match the image
+                    iframe.setAttribute('height', imgHeight);  // Set the iframe height to match the image
+                  }
                   const viewer = document.getElementById('fullscreen-viewer');
                   viewer.innerHTML = '';
                   viewer.appendChild(newDiv);
@@ -295,8 +304,8 @@ permalink: /art/collection/
         Gerhard and Richter by Richard Nadler and Leander Herzog
       </h3>
       <div class="gallery-row gallery-double-wide">
-        <img alt="Gerhard #368" src="https://ik.imagekit.io/UltraDAO/wallace/gerhard_368.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmW7Cj5QMG2FFVGMcRKGFhW4V1113seN6iX5FwQrKqTHSM/?fxhash=oo3iCxnjsGQU6Jx4xZpf4Zfc3EPoXWkYhsqXTyGwnGQQKWUjrDB&fxiteration=368&fxminter=tz1Yw6YSydH7qb4vERwxAmSnsihfRcVvnLL3" />
-        <img alt="Richter #399" src="https://ik.imagekit.io/UltraDAO/wallace/richter_399.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQzbsQM9hd6vc821LmpHCkLXv18fZfhbJf6ygyVhqWB5a/?fxhash=opQ7z15XLoNzWauyGgashqrsyB6zenAjUHpPBAsvMe6dknwj4JQ&amp;fxiteration=399&amp;fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+        <img alt="Gerhard #368" src="https://ik.imagekit.io/UltraDAO/wallace/gerhard_368.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmW7Cj5QMG2FFVGMcRKGFhW4V1113seN6iX5FwQrKqTHSM/?fxhash=oo3iCxnjsGQU6Jx4xZpf4Zfc3EPoXWkYhsqXTyGwnGQQKWUjrDB&fxiteration=368&fxminter=tz1Yw6YSydH7qb4vERwxAmSnsihfRcVvnLL3" data-iframe-size="fullscreen" />
+        <img alt="Richter #399" src="https://ik.imagekit.io/UltraDAO/wallace/richter_399.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQzbsQM9hd6vc821LmpHCkLXv18fZfhbJf6ygyVhqWB5a/?fxhash=opQ7z15XLoNzWauyGgashqrsyB6zenAjUHpPBAsvMe6dknwj4JQ&amp;fxiteration=399&amp;fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" data-iframe-size="fullscreen" />
       </div>
     </div>
     <h3 class="collection-title">Entretiempos by Marcelo Soria-Rodríguez</h3>
@@ -528,7 +537,7 @@ permalink: /art/collection/
       <div>
         <h3 class="collection-title">Nothing Remains #63 by Brendan Dawes</h3>
         <img alt="Nothing Remains #63"
-          class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/nothing_remains_63.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUWF9oPMxzvdLn1ALiWiQvgwYX1QyFKxC2tm1Wi3rwfCS/?fxhash=ooYiA95QeRkDGLzE1aucuQ48sdjPCWij1bqKru8R8PqSqLXn3ZT&fxiteration=63&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+          class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/nothing_remains_63.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUWF9oPMxzvdLn1ALiWiQvgwYX1QyFKxC2tm1Wi3rwfCS/?fxhash=ooYiA95QeRkDGLzE1aucuQ48sdjPCWij1bqKru8R8PqSqLXn3ZT&fxiteration=63&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" data-iframe-size="fullscreen" />
       </div>
       <div>
         <h3 class="collection-title">Bardez #149 by Nat Sarkissian</h3>
@@ -550,13 +559,13 @@ permalink: /art/collection/
     >
       <div class="mb-12 sm:mb-0" style="flex: 1">
         <h3 class="collection-title">Etched Sinuosity #2 by Saskia Freeke</h3>
-        <img alt="Etched Sinuosity #2" src="https://ik.imagekit.io/UltraDAO/wallace/etched_sinuosity_2.png?tr=w-100,q-20,bl-6" data-iframe-src="https://ipfs.io/ipfs/QmbdemW25i8uqXa4okK5jKXP3EDvezeT27tfEgoZcK8shZ/" />
+        <img alt="Etched Sinuosity #2" src="https://ik.imagekit.io/UltraDAO/wallace/etched_sinuosity_2.png?tr=w-100,q-20,bl-6" data-iframe-src="https://ipfs.io/ipfs/QmbdemW25i8uqXa4okK5jKXP3EDvezeT27tfEgoZcK8shZ/"  data-iframe-size="fullscreen" />
       </div>
       <div style="flex: 1">
         <h3 class="collection-title">
           Fluctuating Paragon #3 by Saskia Freeke
         </h3>
-        <img alt="Fluctuating Paragon #3" src="https://ik.imagekit.io/UltraDAO/wallace/fluctuating_paragon_3.png?tr=w-100,q-20,bl-6" data-iframe-src="https://ipfs.io/ipfs/QmZoGW3fJhgm5j5ijBK31rWFwJ1CYvkFDBXxwmfPX6bKyQ/" />
+        <img alt="Fluctuating Paragon #3" src="https://ik.imagekit.io/UltraDAO/wallace/fluctuating_paragon_3.png?tr=w-100,q-20,bl-6" data-iframe-src="https://ipfs.io/ipfs/QmZoGW3fJhgm5j5ijBK31rWFwJ1CYvkFDBXxwmfPX6bKyQ/"  data-iframe-size="fullscreen" />
       </div>
     </div>
     <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
@@ -691,8 +700,8 @@ permalink: /art/collection/
     <div class="sm:block hidden">
       <h3 class="collection-title">Cathedral Study by Eric di Giuli</h3>
       <div class="gallery-row gallery-double-wide">
-          <img alt="Cathedral Study #363" src="https://ik.imagekit.io/UltraDAO/wallace/cathedral_study_363.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000363" />
-          <img alt="Cathedral Study #377" src="https://ik.imagekit.io/UltraDAO/wallace/cathedral_study_377.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000377" />
+          <img alt="Cathedral Study #363" src="https://ik.imagekit.io/UltraDAO/wallace/cathedral_study_363.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000363"  data-iframe-size="fullscreen" />
+          <img alt="Cathedral Study #377" src="https://ik.imagekit.io/UltraDAO/wallace/cathedral_study_377.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000377"  data-iframe-size="fullscreen" />
       </div>
     </div>
     <div>
@@ -741,8 +750,8 @@ permalink: /art/collection/
     </div>
     <h3 class="collection-title">Morphology by Emily Xie</h3>
     <div class="gallery-row gallery-double-wide">
-      <img alt="LUNA" src="https://ik.imagekit.io/UltraDAO/wallace/luna.png?tr=w-100,q-20,bl-6" data-iframe-src="https://ethblock.art/canvas/blockart/7647" />
-      <img alt="Shield" src="https://ik.imagekit.io/UltraDAO/wallace/shield.png?tr=w-100,q-20,bl-6" data-iframe-src="https://ethblock.art/canvas/blockart/7476" />
+      <img alt="LUNA" src="https://ik.imagekit.io/UltraDAO/wallace/luna.png?tr=w-100,q-20,bl-6" data-iframe-src="https://ethblock.art/canvas/blockart/7647" data-iframe-size="fullscreen" />
+      <img alt="Shield" src="https://ik.imagekit.io/UltraDAO/wallace/shield.png?tr=w-100,q-20,bl-6" data-iframe-src="https://ethblock.art/canvas/blockart/7476" data-iframe-size="fullscreen" />
     </div>
     <h3 class="collection-title">unbuilt by Jacek Markusiewicz</h3>
     <div class="gallery-row gallery-quadruple-wide-trip-small">
