@@ -104,6 +104,29 @@ permalink: /art/collection/
           // Create a new image with higher resolution based on screen dimensions
           const newImg = document.createElement('img');
           const currentSrc = img.getAttribute('src');
+          const currentIframeSrc = img.getAttribute('data-iframe-src');
+          const currentIframeSize = img.getAttribute('data-iframe-size');
+
+          // If data-iframe-size is set to "fullscreen", skip the fullscreen image and directly show live code
+          if (currentIframeSize === 'fullscreen' && currentIframeSrc) {
+              const newDiv = document.createElement('div');
+              const iframe = document.createElement('iframe');
+              iframe.setAttribute('src', currentIframeSrc);
+              iframe.setAttribute('style', 'position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100vw; height: 100vh;');  // Set the iframe width to match the image
+              iframe.setAttribute('width', '100%');  // Set the iframe width to match the image
+              iframe.setAttribute('height', '100%');  // Set the iframe width to match the image
+              viewer.innerHTML = '';
+              viewer.appendChild(newDiv);
+              newDiv.appendChild(iframe);
+              newDiv.appendChild(createCloseButton());
+
+              viewer.className = '';
+
+              if (viewer.requestFullscreen) {
+                  viewer.requestFullscreen();
+              }
+              return;  // Skip the rest of the function
+          }
 
           // Check if the image is a GIF
           const isGif = currentSrc.endsWith('.gif') || currentSrc.includes('.gif?');
@@ -120,9 +143,6 @@ permalink: /art/collection/
 
           newImg.src = highResSrc;
           newImg.setAttribute('src', highResSrc);
-
-          const currentIframeSrc = img.getAttribute('data-iframe-src');
-          const currentIframeSize = img.getAttribute('data-iframe-size');
 
           const newDiv = document.createElement('div');
 
