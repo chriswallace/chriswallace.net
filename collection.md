@@ -243,15 +243,11 @@ permalink: /art/collection/
     </div>
     <div class="gallery-row gallery-double-wide">
       <div>
-        <h3 class="collection-title">
-          Bent #175 by ippsketch
-        </h3>
+        <h3 class="collection-title">Bent #175 by ippsketch</h3>
         <img alt="Bent #175" src="https://ik.imagekit.io/UltraDAO/wallace/bent_175.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/214000175" />
       </div>
       <div>
-        <h3 class="collection-title">
-          Acequia #219 by Rich Poole and Rick Crane
-        </h3>
+        <h3 class="collection-title">Acequia #219 by Rich Poole and Rick Crane</h3>
         <img alt="Acequia #219" src="https://ik.imagekit.io/UltraDAO/wallace/acequia_219.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUBXzcPTme2wwfjp52Wy6Ty8oS25qguo7DLjfAMW9eRQK/?fxhash=ooQWjKEjqYfYtS5BfRMwu31Zz8ZCHDcptbtaCqvhoq9QCSHZwYW&fxiteration=219&fxminter=tz1PHnydn2z7dtW5AZUmEcGfUyN9vBqR7q4W" />
       </div>
     </div>
@@ -574,31 +570,23 @@ permalink: /art/collection/
       <img alt="Microgravity #1214" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_1214.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQQXDgS4MPBwMQC5qxcPkX7AAP26zDRsrgUYoY2XGQ38K/?fxhash=ooWHMitTQ6VSEKrtrLc87L6a5HNxmHjj8fmnFi3vMJCMHHfTtnV&fxiteration=1214&fxminter=tz1P4iM5y89uzQomRZPZ7XFuHV6Uw3b7YTQ9" />
       <img alt="Microgravity #360" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_360.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQQXDgS4MPBwMQC5qxcPkX7AAP26zDRsrgUYoY2XGQ38K/?fxhash=opFBgf1mEnMBaufrxcgkXm8L4URwTCRyJP1i5eRm2WTY23g7J61&fxiteration=360&fxminter=KT1CxP2oa1LbWuviJKGuEvSAxdkyL8nSJNy7" />
     </div>
-    <div
-      class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24"
-    >
+    <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
       <div class="mb-12 sm:mb-0" style="flex: 1">
         <h3 class="collection-title">Etched Sinuosity #2 by Saskia Freeke</h3>
         <img alt="Etched Sinuosity #2" src="https://ik.imagekit.io/UltraDAO/wallace/etched_sinuosity_2.png?tr=w-100,q-20,bl-6" data-iframe-src="https://ipfs.io/ipfs/QmbdemW25i8uqXa4okK5jKXP3EDvezeT27tfEgoZcK8shZ/"  data-iframe-size="fullscreen" />
       </div>
       <div style="flex: 1">
-        <h3 class="collection-title">
-          Fluctuating Paragon #3 by Saskia Freeke
-        </h3>
+        <h3 class="collection-title">Fluctuating Paragon #3 by Saskia Freeke</h3>
         <img alt="Fluctuating Paragon #3" src="https://ik.imagekit.io/UltraDAO/wallace/fluctuating_paragon_3.png?tr=w-100,q-20,bl-6" data-iframe-src="https://ipfs.io/ipfs/QmZoGW3fJhgm5j5ijBK31rWFwJ1CYvkFDBXxwmfPX6bKyQ/"  data-iframe-size="fullscreen" />
       </div>
     </div>
     <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
       <div class="mb-12 sm:mb-0" style="flex: 0.8">
-        <h3 class="collection-title">
-          Asemica #632 by Emily Edelman, Dima Ofman, Andrew Badr
-        </h3>
+        <h3 class="collection-title">Asemica #632 by Emily Edelman, Dima Ofman, Andrew Badr</h3>
         <img alt="Asemica #632" src="https://ik.imagekit.io/UltraDAO/wallace/asemica_632.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/206000632" />
       </div>
       <div style="flex: 0.714">
-        <h3 class="collection-title">
-          Inland Emotions #22 by Ferdinand Dervieux
-        </h3>
+        <h3 class="collection-title">Inland Emotions #22 by Ferdinand Dervieux</h3>
         <img alt="Inland Emotions #22" src="https://ik.imagekit.io/UltraDAO/wallace/inland_emotions_22.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmcZjX5D9DmXRhnoqk4wSE8KkBebzx55pZhdMT7TASEctJ/?fxhash=ooSuimey7CLGzhmWbQsgoHr3tbWyw3FqLstRLTYHWy7tNABJrao&fxiteration=22&fxminter=tz1ZRjuE2STA75rzXr78GcXNUZhYubwxaTYd" />
       </div>
     </div>
@@ -619,9 +607,7 @@ permalink: /art/collection/
       <img alt="adrift #228"
         class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/adrift_228.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmW8512aUAxA9V1qfaedSf4reS8FR3BPs1CE5SWfkohmQJ/?fxhash=oosbQ74rEzXrdEa6gQumQbY6DS5jzDNZbmi6vFvk3U513BXvSjk&fxiteration=228&fxminter=tz1MH7vTRc4yXkttnoU93CYqiZfhEzk7C17a" />
     </div>
-    <h3 class="collection-title">
-      RGB Elementary Cellular Automaton by Ciphrd
-    </h3>
+    <h3 class="collection-title">RGB Elementary Cellular Automaton by Ciphrd</h3>
     <div class="gallery-row gallery-double-wide">
       <img alt="RGB Elementary Cellular Automaton #366" src="https://ik.imagekit.io/UltraDAO/wallace/rgb_elementary_cellular_automaton_366.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmZmjHDjbZ1YufMffyisn1hZ5ssiJN4uMGi2wtLqqsbAmw/?fxhash=opEEJx1xuUxqbkF8xQ9id39zDkdaNydWyErJd2a8qmwSQ91BxTY&fxiteration=366&fxminter=tz2EZC7yLhS8uf4U66XfNzimP1pdeiSTNGXx" />
       <img alt="RGB Elementary Cellular Automaton #474" src="https://ik.imagekit.io/UltraDAO/wallace/rgb_elementary_cellular_automaton_474.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmZmjHDjbZ1YufMffyisn1hZ5ssiJN4uMGi2wtLqqsbAmw/?fxhash=opAj58MXzLN2wRdW64vvsChUgB4ABzGbie8H4M4GmLq8jPbxh4n&fxiteration=474&fxminter=tz2EZC7yLhS8uf4U66XfNzimP1pdeiSTNGXx" />
@@ -630,6 +616,15 @@ permalink: /art/collection/
     <div class="gallery-row gallery-double-wide">
       <img alt="CSRSNT-ZAAI-23-of-64.png" src="https://ik.imagekit.io/UltraDAO/wallace/csrsnt_zaai_23_of_64_png.png?tr=w-100,q-20,bl-6" />
       <img alt="CSRSNT-QAAI-18-of-32.png" src="https://ik.imagekit.io/UltraDAO/wallace/csrsnt_qaai_18_of_32_png.png?tr=w-100,q-20,bl-6" />
+    </div>
+    <h3 class="collection-title">Axiomata by Vazk0</h3>
+    <div class="gallery-row gallery-triple-wide">
+      <img alt="Axiomata #24" src="https://ik.imagekit.io/UltraDAO/wallace/axiomata_24.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qmcr8Egyt6Zmrd5mU7QKdjGNwum6jCrU96Kyz3rkvLYFuy/?fxhash=opEKK9wE32BarTZ9z92b3BMvsPgwbPX6ZPXe2WkoyEQaQ1tLeUN&fxiteration=24&fxminter=tz1UAJXZuZRDquX5zHkDoNDEFv1KQRKicsQp" />
+      <img alt="Axiomata #99" src="https://ik.imagekit.io/UltraDAO/wallace/axiomata_99.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qmcr8Egyt6Zmrd5mU7QKdjGNwum6jCrU96Kyz3rkvLYFuy/?fxhash=oouWrPzugC2ETewGJ1wEfUKq6nZh6h62917BfY2hSpz1ZKsEMqq&fxiteration=99&fxminter=tz1MMaPJBnSPpVHHv1zPv57fcubyj5h9yUFf" />
+      <img alt="Axiomata #157" src="https://ik.imagekit.io/UltraDAO/wallace/axiomata_157.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qmcr8Egyt6Zmrd5mU7QKdjGNwum6jCrU96Kyz3rkvLYFuy/?fxhash=opPGfp8zGbUG92DCtefw4JN5x6sBZiNpHNYQsCm3jdJMvFgFvsr&fxiteration=157&fxminter=tz1RT94jREafiHzgtmkKbiVnDynriUYEi62D" />
+      <img alt="Axiomata #186" src="https://ik.imagekit.io/UltraDAO/wallace/axiomata_186.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qmcr8Egyt6Zmrd5mU7QKdjGNwum6jCrU96Kyz3rkvLYFuy/?fxhash=op8YYzWn8H8vwiQQ2fUz4ngpnYvq8Z6GMP8uCa236KmeATMtpYT&fxiteration=186&fxminter=tz1MMaPJBnSPpVHHv1zPv57fcubyj5h9yUFf" />
+      <img alt="Axiomata #232" src="https://ik.imagekit.io/UltraDAO/wallace/axiomata_232.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qmcr8Egyt6Zmrd5mU7QKdjGNwum6jCrU96Kyz3rkvLYFuy/?fxhash=ooubuDW1YdbsHcJdkfYuqSPt1yArc75u545hewYiwZZHvevJaRJ&fxiteration=232&fxminter=tz1auz1pxbirGzwkLvHXrhsqpknf18RFyaUF" />
+      <img alt="Axiomata #257" src="https://ik.imagekit.io/UltraDAO/wallace/axiomata_257.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qmcr8Egyt6Zmrd5mU7QKdjGNwum6jCrU96Kyz3rkvLYFuy/?fxhash=oob9HgfVjEBuPL9XJQ4zJKQcm6bLSUrNKL5jicy4LcuoqR5447u&fxiteration=257&fxminter=tz1g7yHGuouPVADrrx3zH62v6ZzC7gEPjoyj" />
     </div>
     <h3 class="collection-title">Punktwelt by Erik Swahn</h3>
     <div class="gallery-row gallery-double-wide">
@@ -650,9 +645,7 @@ permalink: /art/collection/
     </div>
     <div class="gallery-row gallery-double-wide">
       <div>
-        <h3 class="collection-title">
-          Computational Specimen No. 2 by Sarah Ridgley
-        </h3>
+        <h3 class="collection-title">Computational Specimen No. 2 by Sarah Ridgley</h3>
         <img alt="Computational Specimen No. 2" src="https://ik.imagekit.io/UltraDAO/wallace/computational_specimen_no_2.png?tr=w-100,q-20,bl-6" />
       </div>
       <div>
@@ -687,9 +680,7 @@ permalink: /art/collection/
       <img alt="Mind the Gap #189" src="https://ik.imagekit.io/UltraDAO/wallace/mind_the_gap_189.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live/mind-the-gap/0x1598a0506148707ec1568c4ec81a3ad1548cf63c1702864e6cb614b362dffba8" />
       <img alt="Mind the Gap #114" src="https://ik.imagekit.io/UltraDAO/wallace/mind_the_gap_114.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live/mind-the-gap/0xc7ae95796d2e0c710d1d9c60fd0cbfd5f2af7dd1d243c30372c5b6021f8d07f2" />
     </div>
-    <h3 class="collection-title">
-      de|growth:generations by Jacek Markusiewicz
-    </h3>
+    <h3 class="collection-title">de|growth:generations by Jacek Markusiewicz</h3>
     <div class="gallery-row gallery-triple-wide">
       <img alt="de|growth:generations #53" src="https://ik.imagekit.io/UltraDAO/wallace/de_growth_generations_53.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPndRrQqQ44UdbnmEdhcbJJH6JdvfDZUX6snV5yGshpBY/?fxhash=onzCsVcDsbPGqqvTs7UBHTpta3vZkum4mCThUcSfo4jiGmArNRa&fxiteration=53&fxminter=tz1TAXf13ik4SmoRu6qY6GJimxmA5Hv1j61s" />
       <img alt="de|growth:generations #68" src="https://ik.imagekit.io/UltraDAO/wallace/de_growth_generations_68.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPndRrQqQ44UdbnmEdhcbJJH6JdvfDZUX6snV5yGshpBY/?fxhash=onj6gYFih7i54AcmHc6BbNQ3tsGabBzTF2Y9Rr23XY8VRaqJzPz&fxiteration=68&fxminter=tz1MYyqWDsZZwNF7kotQQ5bovsvkSoi5gr5K" />
