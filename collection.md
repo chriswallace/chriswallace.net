@@ -683,7 +683,7 @@ permalink: /art/collection/
     </div>
     <h3 class="collection-title">Mind the Gap by MountVitruvius</h3>
     <div class="gallery-row gallery-triple-wide">
-      <img alt="Mind the Gap #490" src="https://ik.imagekit.io/UltraDAO/wallace/mind_the_gap_490.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live/mind-the-gap/0x1a49b98ff575a8f5e61d34eca0c97d285a4d0dfc65515441a3dda02a30825a1dr" />
+      <img alt="Mind the Gap #490" src="https://ik.imagekit.io/UltraDAO/wallace/mind_the_gap_490.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live/mind-the-gap/0x1a49b98ff575a8f5e61d34eca0c97d285a4d0dfc65515441a3dda02a30825a1d" />
       <img alt="Mind the Gap #189" src="https://ik.imagekit.io/UltraDAO/wallace/mind_the_gap_189.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live/mind-the-gap/0x1598a0506148707ec1568c4ec81a3ad1548cf63c1702864e6cb614b362dffba8" />
       <img alt="Mind the Gap #114" src="https://ik.imagekit.io/UltraDAO/wallace/mind_the_gap_114.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.gmstudio.art/live/mind-the-gap/0xc7ae95796d2e0c710d1d9c60fd0cbfd5f2af7dd1d243c30372c5b6021f8d07f2" />
     </div>
