@@ -104,6 +104,29 @@ permalink: /art/collection/
           // Create a new image with higher resolution based on screen dimensions
           const newImg = document.createElement('img');
           const currentSrc = img.getAttribute('src');
+          const currentIframeSrc = img.getAttribute('data-iframe-src');
+          const currentIframeSize = img.getAttribute('data-iframe-size');
+
+          // If data-iframe-size is set to "fullscreen", skip the fullscreen image and directly show live code
+          if (currentIframeSize === 'fullscreen' && currentIframeSrc) {
+              const newDiv = document.createElement('div');
+              const iframe = document.createElement('iframe');
+              iframe.setAttribute('src', currentIframeSrc);
+              iframe.setAttribute('style', 'position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100vw; height: 100vh;');  // Set the iframe width to match the image
+              iframe.setAttribute('width', '100%');  // Set the iframe width to match the image
+              iframe.setAttribute('height', '100%');  // Set the iframe width to match the image
+              viewer.innerHTML = '';
+              viewer.appendChild(newDiv);
+              newDiv.appendChild(iframe);
+              newDiv.appendChild(createCloseButton());
+
+              viewer.className = '';
+
+              if (viewer.requestFullscreen) {
+                  viewer.requestFullscreen();
+              }
+              return;  // Skip the rest of the function
+          }
 
           // Check if the image is a GIF
           const isGif = currentSrc.endsWith('.gif') || currentSrc.includes('.gif?');
@@ -120,9 +143,6 @@ permalink: /art/collection/
 
           newImg.src = highResSrc;
           newImg.setAttribute('src', highResSrc);
-
-          const currentIframeSrc = img.getAttribute('data-iframe-src');
-          const currentIframeSize = img.getAttribute('data-iframe-size');
 
           const newDiv = document.createElement('div');
 
@@ -518,7 +538,7 @@ permalink: /art/collection/
       <div style="flex: 1;">
         <h3 class="collection-title">Nothing Remains #63 by Brendan Dawes</h3>
         <img alt="Nothing Remains #63"
-          class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/nothing_remains_63.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUWF9oPMxzvdLn1ALiWiQvgwYX1QyFKxC2tm1Wi3rwfCS/?fxhash=ooYiA95QeRkDGLzE1aucuQ48sdjPCWij1bqKru8R8PqSqLXn3ZT&fxiteration=63&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+          class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/nothing_remains_63.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUWF9oPMxzvdLn1ALiWiQvgwYX1QyFKxC2tm1Wi3rwfCS/?fxhash=ooYiA95QeRkDGLzE1aucuQ48sdjPCWij1bqKru8R8PqSqLXn3ZT&fxiteration=63&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" data-iframe-size="fullscreen" />
       </div>
     </div>
     <h3 class="collection-title">Creatures by Florian Zumbrunn</h3>
