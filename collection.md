@@ -124,6 +124,10 @@ permalink: /art/collection/
           // Remove the loader when the image finishes loading
           newImg.onload = () => {
             loader.remove();
+
+            if (currentIframeSrc)
+              newDiv.appendChild(createViewLiveCodeButton(currentIframeSrc, newImg, currentIframeSize));
+            
           };
 
           // If data-iframe-size is set to "fullscreen", skip the fullscreen image and directly show live code
@@ -169,9 +173,6 @@ permalink: /art/collection/
           newDiv.appendChild(newImg);
 
           viewer.className = '';
-
-          if (currentIframeSrc)
-            newDiv.appendChild(createViewLiveCodeButton(currentIframeSrc, newImg, currentIframeSize));
 
           // For fullscreen
           if (viewer.requestFullscreen) {
