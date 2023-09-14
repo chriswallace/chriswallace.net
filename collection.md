@@ -78,7 +78,18 @@ permalink: /art/collection/
         });
 
         img.addEventListener('mousemove', function (event) {
-            tooltip.style.left = event.pageX + 10 + 'px';
+            const tooltipWidth = tooltip.offsetWidth;
+            const windowWidth = window.innerWidth;
+            
+            if (event.pageX + tooltipWidth + 20 > windowWidth) {
+                // Tooltip would go off the right edge of the screen
+                // Show tooltip to the left of the cursor instead
+                tooltip.style.left = (event.pageX - tooltipWidth - 10) + 'px';
+            } else {
+                // Normal behavior
+                tooltip.style.left = event.pageX + 10 + 'px';
+            }
+
             tooltip.style.top = event.pageY + 10 + 'px';
         });
 
@@ -92,11 +103,14 @@ permalink: /art/collection/
         img.parentNode.insertBefore(wrapperDiv, img);
         wrapperDiv.appendChild(img);
 
-        // Create the maximize icon
         const maximizeIcon = document.createElement('div');
         maximizeIcon.classList.add('maximize-icon');
         maximizeIcon.textContent = '[+]';
-        wrapperDiv.appendChild(maximizeIcon);
+
+        if (!isMobile() && webglSupport()) {
+          // Create the maximize icon
+          wrapperDiv.appendChild(maximizeIcon);
+        }
 
         const goFullscreen = () => {
           const viewer = document.getElementById('fullscreen-viewer');
@@ -107,25 +121,27 @@ permalink: /art/collection/
           const currentIframeSrc = img.getAttribute('data-iframe-src');
           const currentIframeSize = img.getAttribute('data-iframe-size');
 
+          // Remove the loader when the image finishes loading
+          newImg.onload = () => {
+            loader.remove();
+          };
+
           // If data-iframe-size is set to "fullscreen", skip the fullscreen image and directly show live code
           if (currentIframeSize === 'fullscreen' && currentIframeSrc) {
-              const newDiv = document.createElement('div');
-              const iframe = document.createElement('iframe');
-              iframe.setAttribute('src', currentIframeSrc);
-              iframe.setAttribute('style', 'position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100vw; height: 100vh;');  // Set the iframe width to match the image
-              iframe.setAttribute('width', '100%');  // Set the iframe width to match the image
-              iframe.setAttribute('height', '100%');  // Set the iframe width to match the image
-              viewer.innerHTML = '';
-              viewer.appendChild(newDiv);
-              newDiv.appendChild(iframe);
-              newDiv.appendChild(createCloseButton());
+            const newDiv = document.createElement('div');
+            const iframe = document.createElement('iframe');
+            iframe.setAttribute('src', currentIframeSrc);
+            iframe.setAttribute('style', 'position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100vw; height: 100vh;');
+            viewer.innerHTML = '';
+            viewer.appendChild(newDiv);
+            newDiv.appendChild(iframe);
 
-              viewer.className = '';
+            viewer.className = '';
 
-              if (viewer.requestFullscreen) {
-                  viewer.requestFullscreen();
-              }
-              return;  // Skip the rest of the function
+            if (viewer.requestFullscreen) {
+              viewer.requestFullscreen();
+            }
+            return; // Skip the rest of the function
           }
 
           // Check if the image is a GIF
@@ -134,11 +150,9 @@ permalink: /art/collection/
           // Generate high-res URL conditionally
           let highResSrc;
           if (isGif) {
-            // If it's a GIF, do not add image size
             highResSrc = currentSrc.replace(/w-\d+,?/, '');
           } else {
-            // If it's not a GIF, add image size
-            highResSrc = currentSrc.replace(/w-\d+/, `w-${window.innerWidth*2}`).replace(/q-\d+/, 'q-90');
+            highResSrc = currentSrc.replace(/w-\d+/, `w-${window.innerWidth * 2}`).replace(/q-\d+/, 'q-90');
           }
 
           newImg.src = highResSrc;
@@ -147,9 +161,12 @@ permalink: /art/collection/
           const newDiv = document.createElement('div');
 
           viewer.innerHTML = '';
+          // Create and add the loader
+          const loader = document.createElement('div');
+          loader.className = 'loader';
+          viewer.appendChild(loader);
           viewer.appendChild(newDiv);
           newDiv.appendChild(newImg);
-          newDiv.appendChild(createCloseButton());
 
           viewer.className = '';
 
@@ -162,8 +179,9 @@ permalink: /art/collection/
           }
         };
 
-        // Listen for clicks on the maximize icon
-        maximizeIcon.addEventListener('click', goFullscreen);
+        if (!isMobile() && webglSupport()) {
+          maximizeIcon.addEventListener('click', goFullscreen);
+        }
     });
 
     if (!isMobile() && webglSupport()) {
@@ -174,18 +192,6 @@ permalink: /art/collection/
                 iframe.src = dataSrc;
             }
         });
-    }
-
-    function createCloseButton() {
-      const closeButton = document.createElement('button');
-      closeButton.textContent = 'Close';
-      closeButton.className = 'close-btn';
-      closeButton.addEventListener('click', () => {
-        document.exitFullscreen();
-        const viewer = document.getElementById('fullscreen-viewer');
-        viewer.className = 'hidden';
-      });
-      return closeButton;
     }
 
     function createViewLiveCodeButton(iframeSrc, img, currentIframeSize) {
@@ -216,7 +222,6 @@ permalink: /art/collection/
         return viewCodeButton;
     }
   });
-
 </script>
 <article>
   <a class="back-btn" href="/art"> Art </a>
@@ -550,7 +555,7 @@ permalink: /art/collection/
     </div>
     <h3 class="collection-title">Emotional Shell by William Watkins</h3>
     <div class="gallery-row gallery-triple-wide">
-      <img alt="Emotional Shell #166" src="https://ik.imagekit.io/UltraDAO/wallace/emotional_shell_166.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmdKRyS1mm88TSaLyJLCZHJqxbdBkXoU5yikwJHCnSP1zY/?fxhash=oo4Rb2UARkYy6wvTz6kUZTyjdYPUYR91QMnWwA2wTDgVkHCq58v" />
+      <img alt="Emotional Shell #166" src="https://ik.imagekit.io/UltraDAO/wallace/emotional_shell_166.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmdKRyS1mm88TSaLyJLCZHJqxbdBkXoU5yikwJHCnSP1zY/?fxhash=opWn3qjpqHzjVQhi6oSbGXyzxbERLJs6VHj1yut9qJsQ7eP7NV9&fxiteration=166&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
       <img alt="Emotional Shell #182" src="https://ik.imagekit.io/UltraDAO/wallace/emotional_shell_182.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmdKRyS1mm88TSaLyJLCZHJqxbdBkXoU5yikwJHCnSP1zY/?fxhash=opGgUT2w2UCTPgHLAhyitF7vmg8Jw2UAUNWUaC43UPaTZUJc9em&fxiteration=182&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
       <img alt="Emotional Shell #196" src="https://ik.imagekit.io/UltraDAO/wallace/emotional_shell_196.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmdKRyS1mm88TSaLyJLCZHJqxbdBkXoU5yikwJHCnSP1zY/?fxhash=ooutepZeWPupCeTX4g9FMSBQY9jf96F4W5v5d52gdVeAgdvGY9Z&fxiteration=196&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
     </div>
