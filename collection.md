@@ -525,7 +525,7 @@ permalink: /art/collection/
         <img alt="Unfolded #52" src="https://ik.imagekit.io/UltraDAO/wallace/unfolded_52.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNhLK8N1w19yUqTKTt9PrUzhp58icUyPkwypogrv2kdbo/?fxhash=opXp5TUziRhyVdtZAiw5rPyY9PBVSmUmv8VCWEiAeAYF6fdSbCm&fxiteration=52&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
       </div>
       <div class="col-span-2">
-        <img alt="Unfolded #5" src="https://ik.imagekit.io/UltraDAO/wallace/unfolded_52.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNhLK8N1w19yUqTKTt9PrUzhp58icUyPkwypogrv2kdbo/?fxhash=ooLhP974TGZjM1hhBJXoQMy9YEV9Vh5vRtk7KmBnaRrP4pyatqR&fxiteration=5&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+        <img alt="Unfolded #5" src="https://ik.imagekit.io/UltraDAO/wallace/unfolded_5.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNhLK8N1w19yUqTKTt9PrUzhp58icUyPkwypogrv2kdbo/?fxhash=ooLhP974TGZjM1hhBJXoQMy9YEV9Vh5vRtk7KmBnaRrP4pyatqR&fxiteration=5&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
       </div>
     </div>
     <h3 class="collection-title">Michael Connolly</h3>
