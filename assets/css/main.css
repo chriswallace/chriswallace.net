@@ -108,7 +108,7 @@ article ul {
 }
 
 .collection-title {
-  @apply mb-4 sm:mb-6 text-xs font-light sm:font-medium md:text-base;
+  @apply mt-0 mb-4 sm:mb-6 text-xs font-light sm:font-medium md:text-base;
 }
 
 .refresh-btn {
@@ -196,12 +196,20 @@ article ul {
   @apply grid grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-4 mb-12 sm:mb-24;
 }
 
+.gallery-double-wide-single-small {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 mb-12 sm:mb-24;
+}
+
 .gallery-triple-wide {
   @apply grid grid-cols-3 gap-2 sm:gap-4 mb-12 sm:mb-24;
 }
 
 .gallery-triple-wide-single-small {
   @apply grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4 mb-12 sm:mb-24;
+}
+
+.gallery-triple-wide-double-small {
+  @apply grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 mb-12 sm:mb-24;
 }
 
 .gallery-quadruple-wide {
