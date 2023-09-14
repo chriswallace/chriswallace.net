@@ -715,7 +715,7 @@ permalink: /art/collection/
     </div>
     <div>
       <h3 class="collection-title">Matthias Isaaksen</h3>
-      <div class="gallery-row sm:gallery-flex">
+      <div class="gallery-row gallery-flex">
         <div class="mb-4 sm:mb-0" style="flex: 1">
           <img alt="Extramundane" src="https://ik.imagekit.io/UltraDAO/wallace/extramundane.jpg?tr=w-100,q-20,bl-6" />
         </div>
