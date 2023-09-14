@@ -199,8 +199,10 @@ permalink: /art/collection/
       if (isGif) {
         highResSrc = currentSrc.replace(/w-\d+,?/, '');
       } else {
-        highResSrc = currentSrc.replace(/w-\d+/, `w-${window.innerWidth * 2}`).replace(/q-\d+/, 'q-90').replace(/,bl-\d+/, '');
+        highResSrc = currentSrc.replace(/w-\d+/, `w-${window.innerWidth * 2}`).replace(/q-\d+/, 'q-90');
       }
+
+      highResSrc = highResSrc.replace(/,bl-\d+/, '');
 
       newImg.src = highResSrc;
       newImg.setAttribute('src', highResSrc);
