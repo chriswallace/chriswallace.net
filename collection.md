@@ -107,7 +107,6 @@ permalink: /art/collection/
 
       const maximizeIcon = document.createElement('div');
       maximizeIcon.classList.add('maximize-icon');
-      maximizeIcon.textContent = '[+]';
 
       if (!isMobile() && webglSupport()) {
         wrapperDiv.appendChild(maximizeIcon);
@@ -272,7 +271,7 @@ permalink: /art/collection/
   });
 </script>
 <article>
-  <a class="back-btn" href="/art"> Art </a>
+  <a class="back-btn" href="/art">Art</a>
   <h1>The Wallace Collection</h1>
   <p class="sub-heading">
     A selection of generative artworks currently held in my family's private collection. These works are represented mostly in static images, however some pieces are the live code to provide the intended artistic impact.
