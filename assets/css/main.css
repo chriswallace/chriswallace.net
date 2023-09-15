@@ -112,7 +112,7 @@ caption{
 }
 
 .collection-title {
-  @apply mt-0 mb-4 sm:mb-6 text-lg font-medium sm:font-bold;
+  @apply mt-0 mb-4 sm:mb-6 text-lg font-medium;
 }
 
 .refresh-btn {
