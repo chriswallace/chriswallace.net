@@ -80,6 +80,10 @@ article ul {
   @apply mb-12 list-disc ml-4 pl-2;
 }
 
+caption{
+  @apply text-base text-gray-400 mt-4 mb-6 inline-block;
+}
+
 .navigation {
   @apply py-4 md:py-6;
 }
@@ -108,7 +112,7 @@ article ul {
 }
 
 .collection-title {
-  @apply mt-0 mb-4 sm:mb-6 text-xs font-light sm:font-medium md:text-base;
+  @apply mt-0 mb-4 sm:mb-6 text-lg font-medium sm:font-bold;
 }
 
 .refresh-btn {
@@ -247,14 +251,6 @@ article ul {
   @apply mb-2 sm:mb-0;
 }
 
-footer {
-  @apply py-8 border-t-2 border-gray-200;
-}
-
-footer p {
-  @apply leading-snug text-gray-600 text-sm;
-}
-
 .image-wrapper {
   position: relative;
 }
@@ -284,6 +280,14 @@ footer p {
 
 .image-wrapper:hover .maximize-icon {
   display: block; /* Show on hover */
+}
+
+footer {
+  @apply py-8 border-t-2 border-gray-200;
+}
+
+footer p {
+  @apply leading-snug text-gray-600 text-sm;
 }
 
 #fullscreen-viewer {

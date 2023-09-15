@@ -1,7 +1,7 @@
 ---
 layout: default
 title: The Wallace Collection
-description: A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains. These code-powered works are represented mostly in static images, however some pieces are live code to attempt a faithful reproduction of the intended artistic output where possible.
+description: A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains. In full-screen mode, press your keyboard's &larr; and &rarr; buttons to browse all works.
 permalink: /art/collection/
 ---
 
@@ -107,6 +107,13 @@ permalink: /art/collection/
 
       const maximizeIcon = document.createElement('div');
       maximizeIcon.classList.add('maximize-icon');
+
+      if (isMobile()) {
+        const caption = document.createElement('caption');
+        caption.innerHTML = img.alt;
+        wrapperDiv.appendChild(caption);
+      }
+
 
       if (!isMobile() && webglSupport()) {
         wrapperDiv.appendChild(maximizeIcon);
@@ -274,7 +281,7 @@ permalink: /art/collection/
   <a class="back-btn" href="/art">Art</a>
   <h1>The Wallace Collection</h1>
   <p class="sub-heading">
-    A selection of generative artworks currently held in my family's private collection. These works are represented mostly in static images, however some pieces are the live code to provide the intended artistic impact.
+    A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains. Press your keyboard's &larr; and &rarr; buttons to browse works in full-screen mode.
   </p>
   <hr class="mb-24" />
   <div>
@@ -310,7 +317,7 @@ permalink: /art/collection/
     <div class="gallery-row gallery-double-wide-single-small">
       <div class="mb-12 sm:mb-0">
         <h3 class="collection-title">Harvey Rayner</h3>
-        <img alt="Reticulum by Harvey Rayner" src="https://ik.imagekit.io/UltraDAO/wallace/reticulum_by_harvey_rayner.jpg?tr=w-100,q-20,bl-6" />
+        <img alt="Reticulum" src="https://ik.imagekit.io/UltraDAO/wallace/reticulum_by_harvey_rayner.jpg?tr=w-100,q-20,bl-6" />
       </div>
       <div class="mb-12 sm:mb-0">
         <h3 class="collection-title">William Mapan</h3>
