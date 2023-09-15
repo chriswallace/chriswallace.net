@@ -258,11 +258,17 @@ permalink: /art/collection/
                 viewer.innerHTML = '';
                 viewer.appendChild(newDiv);
                 newDiv.appendChild(iframe);
-                newDiv.appendChild(createCloseButton());
             }
         });
         return viewCodeButton;
     }
+
+    document.addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement) {
+        // We have exited fullscreen mode
+        viewer.className = 'hidden';
+      }
+    });
   });
 </script>
 <article>
