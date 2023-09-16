@@ -6,9 +6,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/main.css?version=1.31" />
-  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css?version=1.32" />
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
   <meta property="og:image" content="/assets/images/chris-wallace.jpg" />
   {% seo title=false %}
   <style type="text/css">
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  document.querySelectorAll('body, .footer, p, h1, h2, h3, h4, h5, h6, ul, ol, hr, blockquote, video, img, iframe, canvas, .card-zoom, .back-btn').forEach((element) => {
+  document.querySelectorAll('.footer, p, h1, h2, h3, h4, h5, h6, ul, ol, hr, blockquote, video, img, iframe, canvas, .card-zoom, .back-btn').forEach((element) => {
     element.classList.add('fade-in');
     delay += step;
 

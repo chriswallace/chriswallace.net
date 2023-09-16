@@ -8,9 +8,10 @@ permalink: /art/collection/
 <script>
   let viewer, currentIndex = null;  // Declare it globally
 
+  var canvas = document.createElement('canvas');
+
   function webglSupport() {
       try {
-          var canvas = document.createElement('canvas');
           return !!(window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
       } catch (e) {
           return false;
@@ -277,6 +278,95 @@ permalink: /art/collection/
     });
   });
 </script>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  const playButton = document.getElementById('playButton');
+  const pauseButton = document.getElementById('pauseButton');;
+  const nextButton = document.getElementById('nextButton');
+  const prevButton = document.getElementById('prevButton');
+  const volumeControl = document.getElementById('volumeControl');
+
+  let audioElement = document.getElementById("audioElement");
+  
+  // Add event listeners for buttons
+  document.getElementById("playButton").addEventListener("click", function() {
+    audioElement.play();
+  });
+  
+  document.getElementById("pauseButton").addEventListener("click", function() {
+    audioElement.pause();
+  });
+
+  const tracks = [
+    { src: '/assets/audio/2022.mp3', title: 'GENESIS #2022', artist: 'omgkirby' },
+    { src: '/assets/audio/477.mp3', title: 'Channel Tres #477', artist: 'omgkirby' },
+    { src: '/assets/audio/990.mp3', title: 'GENESIS #990', artist: 'omgkirby' },
+    { src: '/assets/audio/481.mp3', title: 'Channel Tres #481', artist: 'omgkirby' }
+  ];
+
+  let currentTrackIndex = 0;
+
+  const trackInfo = document.getElementById('trackInfo');
+
+  trackInfo.className = 'stopped';
+
+  function loadTrack(index) {
+    console.log(`Loading track at index ${index}: ${tracks[index].src}`);
+    audioElement.src = tracks[index].src;
+    trackInfo.innerHTML = tracks[index].title + " by " + tracks[index].artist;
+  }
+
+  function playTrack() {
+    pauseButton.className = 'visible';
+    playButton.className = 'hidden';
+    trackInfo.className = 'playing';
+    audioElement.play();
+  }
+
+  function pauseTrack() {
+    audioElement.pause();
+    playButton.className = 'visible';
+    pauseButton.className = 'hidden';
+    trackInfo.className = 'stopped';
+  }
+
+  function nextTrack() {
+    currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+    loadTrack(currentTrackIndex);
+    playTrack();
+  }
+
+  function prevTrack() {
+    currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
+    loadTrack(currentTrackIndex);
+    playTrack();
+  }
+
+  pauseButton.className = 'hidden';
+  playButton.className = 'visible';
+
+  playButton.addEventListener('click', playTrack);
+  pauseButton.addEventListener('click', pauseTrack);
+  nextButton.addEventListener('click', nextTrack);
+  prevButton.addEventListener('click', prevTrack);
+  volumeControl.addEventListener('input', (event) => {
+    audioElement.volume = event.target.value;
+  });
+
+  audioElement.addEventListener('ended', nextTrack);
+
+  loadTrack(currentTrackIndex);
+
+  trackInfo.addEventListener('mouseover', function() {
+    this.style.animationPlayState = 'paused';
+  });
+
+  trackInfo.addEventListener('mouseout', function() {
+    this.style.animationPlayState = 'running';
+  });
+
+});
+</script>
 <article>
   <a class="back-btn" href="/art">Art</a>
   <h1>The Wallace Collection</h1>
@@ -317,7 +407,7 @@ permalink: /art/collection/
     <div class="gallery-row gallery-double-wide-single-small">
       <div class="mb-12 sm:mb-0">
         <h3 class="collection-title">Harvey Rayner</h3>
-        <img alt="Reticulum" src="https://ik.imagekit.io/UltraDAO/wallace/reticulum_by_harvey_rayner.jpg?tr=w-100,q-20,bl-6" />
+        <img alt="Reticulumgit " src="https://ik.imagekit.io/UltraDAO/wallace/reticulum_by_harvey_rayner.jpg?tr=w-100,q-20,bl-6" />
       </div>
       <div class="mb-12 sm:mb-0">
         <h3 class="collection-title">William Mapan</h3>
@@ -863,3 +953,20 @@ permalink: /art/collection/
 </article>
 
 <div id="fullscreen-viewer" class="hidden"></div>
+
+<div id="musicPlayer" class="music-player">
+  <audio id="audioElement" src=""></audio>
+  <div class="trackActivityContainer">
+    <div class="trackActivity">
+      <div class="infoBox">
+        <div id="trackInfo" class="marquee">
+        </div>
+      </div>
+    </div>
+  </div>
+  <button id="playButton"><i></i> <span>Play</span></button>
+  <button id="pauseButton"><i></i> <span>Pause</span></button>
+  <button id="prevButton"><i></i> <span>Previous</span></button>
+  <button id="nextButton"><i></i> <span>Next</span></button>
+  <input id="volumeControl" type="range" min="0" max="1" step="0.1">
+</div>
