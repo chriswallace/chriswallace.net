@@ -1,385 +1,33 @@
 ---
 layout: default
 title: The Wallace Collection
-description: A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains. In full-screen mode, press your keyboard's &larr; and &rarr; buttons to browse all works.
+description: A selection of generative artworks from my family's private collection on the Tezos and Ethereum blockchains. In full-screen mode, press your keyboard's &larr; and &rarr; buttons to browse all works.
 permalink: /art/collection/
 ---
 
-<script>
-  let viewer, currentIndex = null;  // Declare it globally
-
-  var canvas = document.createElement('canvas');
-
-  function webglSupport() {
-      try {
-          return !!(window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
-      } catch (e) {
-          return false;
-      }
-  }
-  function isMobile() {
-      return /Mobi|Android/i.test(navigator.userAgent);
-  }
-
-  // Function to set srcset and sizes
-  const setSrcSetAndSizes = (img) => {
-      const renderedWidth = img.clientWidth;
-      const base_url = "https://ik.imagekit.io/UltraDAO/wallace/";
-      const img_name = img.src.split('/').pop().split('?')[0];
-
-      const srcsetStr = `${base_url}${img_name}?tr=w-${renderedWidth},q-70 1x,
-                          ${base_url}${img_name}?tr=w-${renderedWidth * 2},q-70 2x,
-                          ${base_url}${img_name}?tr=w-${renderedWidth * 3},q-70 3x`;
-
-      // This should reflect your actual layout rules in your CSS
-      const sizesStr = `(max-width: 400px) ${renderedWidth}px,
-                        (max-width: 800px) ${renderedWidth * 2}px,
-                        (max-width: 1200px) ${renderedWidth * 3}px,
-                        ${renderedWidth * 4}px`;
-
-      img.src = `${base_url}${img_name}?tr=w-${renderedWidth},q-70`;
-      img.srcset = srcsetStr;
-      img.sizes = sizesStr;
-  };
-
-  document.addEventListener('DOMContentLoaded', () => {
-    // Select all images on the page
-    const images = document.querySelectorAll('img');
-
-    // Create a tooltip element
-    const tooltip = document.createElement('div');
-    tooltip.style.position = 'absolute';
-    tooltip.style.backgroundColor = 'black';
-    tooltip.style.color = 'white';
-    tooltip.style.padding = '5px 10px';
-    tooltip.style.borderRadius = '5px';
-    tooltip.style.display = 'none';
-    tooltip.style.zIndex = '9999';
-    document.body.appendChild(tooltip);
-
-    // Initialize IntersectionObserver
-    const imgObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                setSrcSetAndSizes(img); // Call your function to set srcset and sizes
-                observer.unobserve(img); // Stop observing this image
-            }
-        });
-    }, { rootMargin: '0px 0px 200px 0px' });  // Trigger if the image gets within 200px of the viewport
-
-    // Attach event listeners to each image
-    images.forEach((img, index) => {
-      imgObserver.observe(img);  // Start observing this image
-
-      img.addEventListener('mouseover', function (event) {
-          const altText = this.getAttribute('alt');
-          if (altText) {
-              tooltip.textContent = altText;
-              tooltip.style.display = 'block';
-          }
-      });
-
-      img.addEventListener('mousemove', function (event) {
-          const tooltipWidth = tooltip.offsetWidth;
-          const windowWidth = window.innerWidth;  
-          
-          if (event.pageX + tooltipWidth + 20 > windowWidth) {
-              // Tooltip would go off the right edge of the screen
-              // Show tooltip to the left of the cursor instead
-              tooltip.style.left = (event.pageX - tooltipWidth - 10) + 'px';
-          } else {
-              // Normal behavior
-              tooltip.style.left = event.pageX + 10 + 'px';
-          }
-
-          tooltip.style.top = event.pageY + 10 + 'px';
-      });
-
-      img.addEventListener('mouseout', function () {
-          tooltip.style.display = 'none';
-      });
-
-      // Create a wrapper div around the image
-      const wrapperDiv = document.createElement('div');
-      wrapperDiv.classList.add('image-wrapper');
-      img.parentNode.insertBefore(wrapperDiv, img);
-      wrapperDiv.appendChild(img);
-
-      const maximizeIcon = document.createElement('div');
-      maximizeIcon.classList.add('maximize-icon');
-
-      if (isMobile()) {
-        const caption = document.createElement('caption');
-        caption.innerHTML = img.alt;
-        wrapperDiv.appendChild(caption);
-      }
-
-
-      if (!isMobile() && webglSupport()) {
-        wrapperDiv.appendChild(maximizeIcon);
-        maximizeIcon.addEventListener('click', () => goFullscreen(img, index));
-      }
-    });
-
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'ArrowLeft') {
-          navigateArtwork(-1);
-      } else if (event.key === 'ArrowRight') {
-          navigateArtwork(1);
-      }
-    });
-    
-    const navigateArtwork = (step) => {
-      if (currentIndex === null) return;
-
-      console.log(currentIndex);
-      
-      const totalImages = images.length;
-      let newIndex = currentIndex + step;
-
-      console.log(newIndex);
-
-      if (newIndex < 0 || newIndex >= totalImages) {
-          return;
-      }
-
-      images[currentIndex].removeAttribute("data-is-current");
-      goFullscreen(images[newIndex], newIndex);
-    };
-    
-    const goFullscreen = (img, index) => {
-      viewer = document.getElementById("fullscreen-viewer");
-      
-      if (!viewer) {
-          viewer = document.createElement("div");
-          viewer.id = "fullscreen-viewer";
-          viewer.className = "hidden";
-          document.body.appendChild(viewer);
-      }
-
-      // Declare loader here before the newImg.onload function
-      const loader = document.createElement('div');
-      loader.className = 'loader';
-
-      // Create a new image with higher resolution based on screen dimensions
-      const newImg = document.createElement('img');
-      const currentSrc = img.getAttribute('src');
-
-      const currentIframeSrc = img.getAttribute('data-iframe-src');
-      const currentIframeSize = img.getAttribute('data-iframe-size');
-
-      img.setAttribute("data-is-current","yes");
-
-      // Remove the loader when the image finishes loading
-      newImg.onload = () => {
-        loader.remove();
-
-        if (currentIframeSrc)
-          newDiv.appendChild(createViewLiveCodeButton(currentIframeSrc, newImg, currentIframeSize));
-        
-      };
-
-      // If data-iframe-size is set to "fullscreen", skip the fullscreen image and directly show live code
-      if (currentIframeSize === 'fullscreen' && currentIframeSrc) {
-        const newDiv = document.createElement('div');
-        const iframe = document.createElement('iframe');
-        iframe.setAttribute('src', currentIframeSrc);
-        iframe.setAttribute('style', 'position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100vw; height: 100vh;');
-        viewer.innerHTML = '';
-        viewer.appendChild(newDiv);
-        newDiv.appendChild(iframe);
-
-        viewer.className = '';
-
-        if (viewer.requestFullscreen) {
-          viewer.requestFullscreen();
-        }
-        return; // Skip the rest of the function
-      }
-
-      // Check if the image is a GIF
-      const isGif = currentSrc.endsWith('.gif') || currentSrc.includes('.gif?');
-
-      // Generate high-res URL conditionally
-      let highResSrc;
-      if (isGif) {
-        highResSrc = currentSrc.replace(/w-\d+,?/, '');
-      } else {
-        highResSrc = currentSrc.replace(/w-\d+/, `w-${window.innerWidth * 2}`).replace(/q-\d+/, 'q-90');
-      }
-
-      highResSrc = highResSrc.replace(/,bl-\d+/, '');
-
-      newImg.src = highResSrc;
-      newImg.setAttribute('src', highResSrc);
-
-      const newDiv = document.createElement('div');
-
-      viewer.innerHTML = '';
-
-      img.setAttribute("data-is-current", "true");
-      currentIndex = index;
-
-      viewer.appendChild(loader);
-      viewer.appendChild(newDiv);
-      newDiv.appendChild(newImg);
-
-      viewer.className = '';
-
-      // For fullscreen
-      if (viewer.requestFullscreen) {
-        viewer.requestFullscreen();
-      }
-    };
-
-    if (!isMobile() && webglSupport()) {
-        let iframes = document.getElementsByClassName('live-code');
-        Array.from(iframes).forEach((iframe) => {
-            let dataSrc = iframe.getAttribute('data-src');
-            if (dataSrc) {
-                iframe.src = dataSrc;
-            }
-        });
-    }
-
-    function createViewLiveCodeButton(iframeSrc, img, currentIframeSize) {
-        const viewCodeButton = document.createElement('button');
-        viewCodeButton.textContent = 'View Live';
-        viewCodeButton.className = 'live-code-btn';
-        viewCodeButton.addEventListener('click', () => {
-            if (iframeSrc) {
-                const imgWidth = img.offsetWidth;
-                const imgHeight = img.offsetHeight;
-                const newDiv = document.createElement('div');
-                const iframe = document.createElement('iframe');
-                iframe.setAttribute('src', iframeSrc);
-                if( currentIframeSize === 'fullscreen' ){
-                  iframe.setAttribute('width', window.innerWidth);  // Set the iframe width to match the image
-                  iframe.setAttribute('height', window.innerHeight);  // Set the iframe height to match the image
-                } else{
-                  iframe.setAttribute('width', imgWidth);  // Set the iframe width to match the image
-                  iframe.setAttribute('height', imgHeight);  // Set the iframe height to match the image
-                }
-                const viewer = document.getElementById('fullscreen-viewer');
-                viewer.innerHTML = '';
-                viewer.appendChild(newDiv);
-                newDiv.appendChild(iframe);
-            }
-        });
-        return viewCodeButton;
-    }
-
-    document.addEventListener('fullscreenchange', () => {
-      if (!document.fullscreenElement) {
-        // We have exited fullscreen mode
-        viewer.className = 'hidden';
-      }
-    });
-  });
-</script>
-<script>
-window.addEventListener('DOMContentLoaded', (event) => {
-  const playButton = document.getElementById('playButton');
-  const pauseButton = document.getElementById('pauseButton');;
-  const nextButton = document.getElementById('nextButton');
-  const prevButton = document.getElementById('prevButton');
-  const volumeControl = document.getElementById('volumeControl');
-
-  let audioElement = document.getElementById("audioElement");
-  
-  // Add event listeners for buttons
-  document.getElementById("playButton").addEventListener("click", function() {
-    audioElement.play();
-  });
-  
-  document.getElementById("pauseButton").addEventListener("click", function() {
-    audioElement.pause();
-  });
-
-  const tracks = [
-    { src: '/assets/audio/2022.mp3', title: 'GENESIS #2022', artist: 'omgkirby' },
-    { src: '/assets/audio/477.mp3', title: 'Channel Tres #477', artist: 'omgkirby' },
-    { src: '/assets/audio/990.mp3', title: 'GENESIS #990', artist: 'omgkirby' },
-    { src: '/assets/audio/481.mp3', title: 'Channel Tres #481', artist: 'omgkirby' }
-  ];
-
-  let currentTrackIndex = 0;
-
-  const trackInfo = document.getElementById('trackInfo');
-
-  trackInfo.className = 'stopped';
-
-  function loadTrack(index) {
-    console.log(`Loading track at index ${index}: ${tracks[index].src}`);
-    audioElement.src = tracks[index].src;
-    trackInfo.innerHTML = tracks[index].title + " by " + tracks[index].artist;
-  }
-
-  function playTrack() {
-    pauseButton.className = 'visible';
-    playButton.className = 'hidden';
-    trackInfo.className = 'playing';
-    audioElement.play();
-  }
-
-  function pauseTrack() {
-    audioElement.pause();
-    playButton.className = 'visible';
-    pauseButton.className = 'hidden';
-    trackInfo.className = 'stopped';
-  }
-
-  function nextTrack() {
-    currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
-    loadTrack(currentTrackIndex);
-    playTrack();
-  }
-
-  function prevTrack() {
-    currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
-    loadTrack(currentTrackIndex);
-    playTrack();
-  }
-
-  pauseButton.className = 'hidden';
-  playButton.className = 'visible';
-
-  playButton.addEventListener('click', playTrack);
-  pauseButton.addEventListener('click', pauseTrack);
-  nextButton.addEventListener('click', nextTrack);
-  prevButton.addEventListener('click', prevTrack);
-  volumeControl.addEventListener('input', (event) => {
-    audioElement.volume = event.target.value;
-  });
-
-  audioElement.addEventListener('ended', nextTrack);
-
-  loadTrack(currentTrackIndex);
-
-  trackInfo.addEventListener('mouseover', function() {
-    this.style.animationPlayState = 'paused';
-  });
-
-  trackInfo.addEventListener('mouseout', function() {
-    this.style.animationPlayState = 'running';
-  });
-
-});
-</script>
+<script src="/assets/js/gallery-viewer.js"></script>
+<script src="/assets/js/player.js"></script>
 <article>
   <a class="back-btn" href="/art">Art</a>
   <h1>The Wallace Collection</h1>
   <p class="sub-heading">
-    A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains. Press your keyboard's &larr; and &rarr; buttons to browse works in full-screen mode.
+    A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains.
   </p>
-  <hr class="mb-24" />
+  <p>
+    <strong>Fullscreen browser:</strong> Enter fullscreen viewer by clicking the maximize icon on any image. Browse using &larr; and &rarr; keyboard buttons.
+  </p>
+  
+  <p class="mb-2"><strong>Zen mode:</strong> Experience the collection alongside a curated playlist of generative music by omgkirby.</p>
+  
+  <p class="mb-12"><button id="autoPlayCollection" class="button"><i></i> Enter zen mode</button> </p>
+  
+  <hr class="mb-12" />
   <div>
     <div>
       <h3 class="artist-title">Manolo Gamboa Naon</h3>
-      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-4">
         <div class="mb-4 sm:mb-0" style="flex: 1">
-          <img alt="Tempo de Amor" src="https://ik.imagekit.io/UltraDAO/wallace/tempo_de_amor.jpg?tr=w-100,q-70,bl=6" />
+          <img alt="Tempo de Amor" src="https://ik.imagekit.io/UltraDAO/wallace/tempo_de_amor.jpg?tr=w-100,q-20,bl=6" />
         </div>
         <div class="mb-4 sm:mb-0" style="flex: 1">
           <img alt="en llamas" src="https://ik.imagekit.io/UltraDAO/wallace/en_llamas.jpg?tr=w-100,q-20,bl-6" />
@@ -387,6 +35,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
         <div style="flex: 1.50146628">
           <img alt="furia"
             class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/furia.jpg?tr=w-100,q-20,bl-6" />
+        </div>
+      </div>
+    </div>
+      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+        <div class="mb-4 sm:mb-0" style="flex: 1">
+          <img alt="eyelid" src="https://ik.imagekit.io/UltraDAO/wallace/eyelid.jpg?tr=w-100,q-20,bl=6" />
+        </div>
+        <div class="mb-4 sm:mb-0" style="flex: 1">
+          <img alt="mantra" src="https://ik.imagekit.io/UltraDAO/wallace/mantra.jpg?tr=w-100,q-20,bl-6" />
+        </div>
+        <div style="flex: 1">
+          <img alt="ppt02"
+            class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/ppt02.png?tr=w-100,q-20,bl-6" />
         </div>
       </div>
     </div>
