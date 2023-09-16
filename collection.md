@@ -407,7 +407,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     <div class="gallery-row gallery-double-wide-single-small">
       <div class="mb-12 sm:mb-0">
         <h3 class="artist-title">Harvey Rayner</h3>
-        <img alt="Reticulumgit " src="https://ik.imagekit.io/UltraDAO/wallace/reticulum_by_harvey_rayner.jpg?tr=w-100,q-20,bl-6" />
+        <img alt="Reticulum" src="https://ik.imagekit.io/UltraDAO/wallace/reticulum_by_harvey_rayner.jpg?tr=w-100,q-20,bl-6" />
       </div>
       <div class="mb-12 sm:mb-0">
         <h3 class="artist-title">William Mapan</h3>
@@ -617,7 +617,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     <h3 class="artist-title">Olivier Bodini</h3>
     <div class="gallery-row gallery-double-wide">
       <img alt="The sky is so colorful tonight" src="https://ik.imagekit.io/UltraDAO/wallace/the_sky_is_so_colorful_tonight.png?tr=w-100,q-20,bl-6" />
-      <img alt="A black sun over the war by Olivier Bodini" src="https://ik.imagekit.io/UltraDAO/wallace/a_black_sun_over_the_war_by_olivier_bodini.png?tr=w-100,q-20,bl-6" />
+      <img alt="A black sun over the war" src="https://ik.imagekit.io/UltraDAO/wallace/a_black_sun_over_the_war_by_olivier_bodini.png?tr=w-100,q-20,bl-6" />
     </div>
     <h3 class="artist-title">Lars Wander</h3>
     <h4 class="collection-title">Unfolded</h4>
