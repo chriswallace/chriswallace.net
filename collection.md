@@ -32,22 +32,20 @@ permalink: /art/collection/
         <div class="mb-4 sm:mb-0" style="flex: 1">
           <img alt="en llamas" src="https://ik.imagekit.io/UltraDAO/wallace/en_llamas.jpg?tr=w-100,q-20,bl-6" />
         </div>
-        <div style="flex: 1.50146628">
-          <img alt="furia"
-            class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/furia.jpg?tr=w-100,q-20,bl-6" />
+        <div style="flex: 1">
+          <img alt="eyelid" src="https://ik.imagekit.io/UltraDAO/wallace/eyelid.jpg?tr=w-100,q-20,bl=6" />
         </div>
       </div>
     </div>
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
         <div class="mb-4 sm:mb-0" style="flex: 1">
-          <img alt="eyelid" src="https://ik.imagekit.io/UltraDAO/wallace/eyelid.jpg?tr=w-100,q-20,bl=6" />
+          <img alt="ppt02" src="https://ik.imagekit.io/UltraDAO/wallace/ppt02.png?tr=w-100,q-20,bl-6" />
         </div>
-        <div class="mb-4 sm:mb-0" style="flex: 1">
-          <img alt="mantra" src="https://ik.imagekit.io/UltraDAO/wallace/mantra.jpg?tr=w-100,q-20,bl-6" />
+        <div class="mb-4 sm:mb-0" style="flex: 1.50146628">
+          <img alt="furia" src="https://ik.imagekit.io/UltraDAO/wallace/furia.jpg?tr=w-100,q-20,bl-6" />
         </div>
         <div style="flex: 1">
-          <img alt="ppt02"
-            class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/ppt02.png?tr=w-100,q-20,bl-6" />
+          <img alt="mantra" src="https://ik.imagekit.io/UltraDAO/wallace/mantra.jpg?tr=w-100,q-20,bl-6" />
         </div>
       </div>
     </div>
