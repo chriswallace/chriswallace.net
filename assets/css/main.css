@@ -2,6 +2,42 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@font-face {
+  font-family: 'DS Digital';
+  src: url('/assets/fonts/ds-digi-webfont.woff2') format('woff2'),
+       url('/assets/fonts/ds-digi-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'DS Digital';
+  src: url('/assets/fonts/ds-digib-webfont.woff2') format('woff2'),
+       url('/assets/fonts/ds-digib-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'DS Digital';
+  src: url('/assets/fonts/ds-digii-webfont.woff2') format('woff2'),
+       url('/assets/fonts/ds-digii-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'DS Digital';
+  src: url('/assets/fonts/ds-digit-webfont.woff2') format('woff2'),
+       url('/assets/fonts/ds-digit-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+
+}
+
 body {
   @apply font-light;
 }
@@ -260,34 +296,34 @@ caption{
 }
 
 .music-player {
-  @apply flex gap-2;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 8px 18px;
+  @apply flex gap-0 z-20 fixed bottom-0 sm:transform sm:translate-x-[-50%] p-2 pb-6 sm:pb-2 left-0 right-0 sm:left-[50%] sm:right-auto bg-white border-solid sm:rounded-t-md z-10 sm:border-t-2 sm:border-gray-200 text-white;
   background-image: linear-gradient(to bottom, rgb(255,255,255), rgb(222,222,222));
-  color: white;
-  border-radius: 5px 5px 0 0;
-  z-index: 9999;
   border-width: 1px 1px 0 1px;
   border-color: rgba(0,0,0,0.5);
-  border-style: solid;
 }
 
 .music-player span{
-  display: none;
+  @apply hidden;
 }
 
 .music-player input[type="range"]{
-  position: relative;
-  top: -1px;
-  width: 66px;
+  @apply relative top-[-1px] w-[74px] sm:w-[66px];
 }
 
 .music-player button{
   flex: 1;
   margin-top: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+#playButton,
+#pauseButton{
+  margin-left: 4px;
+}
+
+#nextButton{
+  margin-right: 8px;
 }
 
 .music-player i {
@@ -299,10 +335,11 @@ caption{
 }
 
 .trackActivityContainer{
+  @apply w-[50%];
   padding: 4px 8px; 
   font-weight: bold; 
   margin-right: 5px; 
-  border-radius: 5px;
+  border-radius: 3px;
   background-image: linear-gradient(to bottom, rgb(32, 158, 16), rgb(52, 212, 31)); 
   color: #263e17; 
   position: relative;
@@ -316,7 +353,7 @@ caption{
   right: 1px;
   bottom: 18px;
   background-image: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.26));
-  border-radius: 4px 4px 20% 20%;
+  border-radius: 1px 1px 20% 20%;
   z-index: 12;
 }
 .trackActivity{
@@ -327,11 +364,12 @@ caption{
 .infoBox{
   width: 140px; 
   flex: 7;
-  font-size: 19px;
+  font-size: 18px;
   height: 30px;
   line-height: 1.75;
   overflow: hidden;
-  font-family: 'Teko', sans-serif;;
+  font-family: 'DS Digital', monospace;
+  font-style: italic;
 }
 
 #musicVisualizer{
@@ -380,10 +418,6 @@ caption{
 
 #prevButton i {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxuczp4PSJodHRwOi8vbnMuYWRvYmUuY29tL0V4dGVuc2liaWxpdHkvMS4wLyIgeG1sbnM6aT0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4bWxuczpncmFwaD0iaHR0cDovL25zLmFkb2JlLmNvbS9HcmFwaHMvMS4wLyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMCAxMjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwMCAxMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3dpdGNoPjxmb3JlaWduT2JqZWN0IHJlcXVpcmVkRXh0ZW5zaW9ucz0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PGcgaTpleHRyYW5lb3VzPSJzZWxmIj48cGF0aCBkPSJNNS4xLDU0LjhsNDUsMzBjMy45LDIuNiw5LTAuMiw5LTQuOFY2NS4zbDI5LjMsMTkuNWMzLjksMi42LDktMC4yLDktNC44VjIwYzAtNC42LTUuMi03LjQtOS00LjhMNTkuMiwzNC43VjIwICAgIGMwLTQuNi01LjItNy40LTktNC44bC00NSwzMEMxLjYsNDcuNSwxLjYsNTIuNSw1LjEsNTQuOHoiLz48L2c+PC9zd2l0Y2g+PC9zdmc+");
-}
-
-.music-player button{
-  margin-right: 4px;
 }
 
 #fullScreenDiv {
