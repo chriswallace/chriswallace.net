@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/main.css?version=1.34" />
+  <link rel="stylesheet" href="/assets/main.css?version=1.35" />
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
   <meta property="og:image" content="/assets/images/chris-wallace.jpg" />
   {% seo title=false %}
