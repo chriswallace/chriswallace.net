@@ -187,39 +187,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const goFullscreen = (img, index, shouldAutoRotate = false) => {
     viewer = document.getElementById("fullscreen-viewer");
-
+  
     if (!viewer) {
       viewer = document.createElement("div");
       viewer.id = "fullscreen-viewer";
       document.body.appendChild(viewer);
     }
-
-    // Add the fade-out class to initiate the fade-out transition
+  
     viewer.classList.add('fade-out');
-
-    // Use setTimeout to wait until the fade-out transition is complete
+  
     setTimeout(() => {
-      // Declare loader here before the newImg.onload function
       const loader = document.createElement('div');
       loader.className = 'loader';
-
-      // Create a new image with higher resolution based on screen dimensions
+  
       const newImg = document.createElement('img');
       const currentSrc = img.getAttribute('src');
-
       const currentIframeSrc = img.getAttribute('data-iframe-src');
       const currentIframeSize = img.getAttribute('data-iframe-size');
-
-      img.setAttribute("data-is-current", "yes");
-
+  
+      // Reset the data-is-current attribute for all images before setting for the current image
+      document.querySelectorAll("[data-is-current='true']").forEach(el => el.setAttribute("data-is-current", "false"));
+      img.setAttribute("data-is-current", "true");
+  
       newImg.onload = () => {
         loader.remove();
         if (currentIframeSrc)
           newDiv.appendChild(createViewLiveCodeButton(currentIframeSrc, newImg, currentIframeSize));
       };
-
+  
       viewer.classList.remove("hidden");
-
+      currentIndex = index;
+  
       if (currentIframeSize === 'fullscreen' && currentIframeSrc) {
         const newDiv = document.createElement('div');
         const iframe = document.createElement('iframe');
@@ -232,49 +230,40 @@ document.addEventListener('DOMContentLoaded', () => {
         if (viewer.requestFullscreen) {
           viewer.requestFullscreen();
         }
-        return; // Skip the rest of the function
+        return;
       }
-
-      // Check if the image is a GIF
-      const isGif = currentSrc.endsWith('.gif') || currentSrc.includes('.gif?');
-
-      // Generate high-res URL conditionally
+  
       let highResSrc;
+      const isGif = currentSrc.endsWith('.gif') || currentSrc.includes('.gif?');
       if (isGif) {
         highResSrc = currentSrc.replace(/w-\d+,?/, '');
       } else {
         highResSrc = currentSrc.replace(/w-\d+/, `w-${window.innerWidth * 2}`).replace(/q-\d+/, 'q-90');
       }
-      
       highResSrc = highResSrc.replace(/,bl-\d+/, '');
-
+  
       newImg.src = highResSrc;
       newImg.setAttribute('src', highResSrc);
-
+  
       const newDiv = document.createElement('div');
-
+  
       viewer.innerHTML = '';
-      img.setAttribute("data-is-current", "true");
-      currentIndex = index;
-
       viewer.appendChild(loader);
       viewer.appendChild(newDiv);
       newDiv.appendChild(newImg);
-
-      // Remove the fade-out class to initiate the fade-in transition
+  
       viewer.classList.remove('fade-out');
-
-      // For fullscreen
+  
       if (viewer.requestFullscreen) {
         viewer.requestFullscreen();
       }
-
+  
       if (shouldAutoRotate) {
         autoRotateNextArtwork();
       }
-
-    }, 750); // The timeout should be the same as your transition duration in the CSS (500 ms equals 0.5s)
-  };
+  
+    }, 750);
+  };  
 
   if (!isMobile() && webglSupport()) {
     let iframes = document.getElementsByClassName('live-code');
