@@ -67,9 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Check whether the current artwork is an iframe-based work or static image
     if (currentImg.getAttribute('data-iframe-src')) {
-      delay = 25000; // 25 seconds for iframe-based works
+      delay = 14000; // 25 seconds for iframe-based works
     } else {
-      delay = 15000; // 15 seconds for static images
+      delay = 10000; // 15 seconds for static images
     }
 
     // Preload next image if it's not an iframe-based work
