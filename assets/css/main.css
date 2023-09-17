@@ -357,8 +357,9 @@ caption {
   font-weight: bold;
   margin-right: 5px;
   border-radius: 3px;
-  background-image: linear-gradient(to bottom, rgb(32, 158, 16), rgb(52, 212, 31));
-  color: #263e17;
+  background-image: linear-gradient(to bottom, #34603e, rgb(48, 143, 60));
+  color:  rgb(52, 212, 31);
+  text-shadow: 0 0 5px rgba(52, 212, 31,0.3);
   position: relative;
 }
 
@@ -369,7 +370,7 @@ caption {
   left: 1px;
   right: 1px;
   bottom: 18px;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.26));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
   border-radius: 1px 1px 20% 20%;
   z-index: 12;
 }
