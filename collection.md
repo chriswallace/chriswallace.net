@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: full-width
 title: The Wallace Collection
 description: A selection of generative artworks from my family's private collection on the Tezos and Ethereum blockchains. In full-screen mode, press your keyboard's &larr; and &rarr; buttons to browse all works.
 permalink: /art/collection/
@@ -222,6 +222,12 @@ permalink: /art/collection/
     <img alt="#364" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_364.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfTQFEgcgYDohPJLJWWnrKeRMBYrRP8JF79k6kveuXEv2/?fxhash=opEBz3AH9YrPfFWShDASLAmqw6t5e3oqsNuS9fRFZ39kczBBwsi&fxiteration=364&fxminter=tz2SM2qp42H8kQchmfvexZ6G8qUHBXUbr4zK" />
     <img alt="#500" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_500.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfTQFEgcgYDohPJLJWWnrKeRMBYrRP8JF79k6kveuXEv2/?fxhash=ooZyxJbjLAs4EW7q2p231sY1FpLVTWWqdPYfcgB5wJWSNn8WREP&fxiteration=500&fxminter=tz1bafXvnKt87p1yXPV3vvVpe6gyD7BCdjyh" />
     <img alt="#367" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_367.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfTQFEgcgYDohPJLJWWnrKeRMBYrRP8JF79k6kveuXEv2/?fxhash=ooYKyTPwVLrK6ZmB9mFAiCTnKjRUooJbGmB5NcHXa44uskCMQBq&fxiteration=367&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+  </div>
+  <h3 class="artist-title">Iskra Velitchkova &amp; Zach Lieberman</h3>
+  <h4 class="collection-title">horizon(te)s</h4>
+  <div class="gallery-row gallery-double-wide">
+    <img alt="#102" src="https://ik.imagekit.io/UltraDAO/wallace/horizontes_102.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmePX7dqW9WFdm1rvNc5hmVmyJ2JdWbKxpCGzyEFPTCuRT/?fxhash=onfko6ovFsLHGrggVnxWzqTAuJY4MirvwaRj1qDw9ihbwkvUPTT&fxiteration=102&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+    <img alt="#375" src="https://ik.imagekit.io/UltraDAO/wallace/horizontes_375.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmePX7dqW9WFdm1rvNc5hmVmyJ2JdWbKxpCGzyEFPTCuRT/?fxhash=oo4owQ54cBxxXecJ11EWWKWUqL22qXVuhX3945BmRA5QW88o9Nq&fxiteration=375&fxminter=tz1f1c3zAG6v2agecY7o4dk84STEyggsoDUm" />
   </div>
   <h3 class="artist-title">dmarchi</h3>
   <h4 class="collection-title">Bravura</h4>
