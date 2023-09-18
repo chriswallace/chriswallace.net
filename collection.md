@@ -17,7 +17,7 @@ permalink: /art/collection/
     <strong>Fullscreen browser:</strong> Enter fullscreen viewer by clicking the maximize icon on any image. Browse using &larr; and &rarr; keyboard buttons.
   </p>
 
-  <p class="mb-4"><strong>Zen mode:</strong> Experience the collection alongside a curated playlist of generative music by omgkirby.</p>
+  <p class="mb-4"><strong>Zen mode:</strong> Experience the collection alongside a curated selection of songs.</p>
 
   <p class="mb-12"><button id="autoPlayCollection" class="button"><i></i> Enter zen mode</button> </p>
 
