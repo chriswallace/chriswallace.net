@@ -143,7 +143,6 @@ permalink: /resume/
 <ul>
   <li class="fade-in-element">Best Environmental Initiative from an NFT project at NFT NYC 2022</li>
   <li class="fade-in-element">Two Emmy Nominations for Second-Screen Apps</li>
-  <li class="fade-in-element">Webby Award: Best Visual Design - Aesthetic for AMC Network</li>
 </ul>
 
 <h2 class="fade-in-element">Contact</h2>
