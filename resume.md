@@ -136,14 +136,7 @@ permalink: /resume/
 <h2 class="fade-in-element">Education</h2>
 
 <h3 class="fade-in-element">Missouri State University / <em>Springfield, MO</em></h3>
-<p class="fade-in-element">Bachelor of Fine Arts in Graphic Design, 2005</p>
-
-<h2 class="fade-in-element">Certifications</h2>
-
-<ul>
-  <li class="fade-in-element">Professional Scrum Master (PSM I)</li>
-  <li class="fade-in-element">Design Leadership by Cooper Professional Education</li>
-</ul>
+<p class="fade-in-element">Graphic Design, 2004</p>
 
 <h2 class="fade-in-element">Awards & Recognitions</h2>
 
