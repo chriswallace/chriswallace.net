@@ -18,11 +18,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   const tracks = [
     {
-      src: "/assets/audio/Cody_Martin_Building_Legacies_instrumental_3_15.mp3",
-      title: "Building Legacies",
-      artist: "Cody Martin",
-    },
-    {
       src: "/assets/audio/Corolina_Combo_Mind_Adventures_instrumental_2_33.mp3",
       title: "Combo Mind Adventures",
       artist: "Corolina",
