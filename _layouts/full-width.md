@@ -4,7 +4,7 @@
   <body>
     <div class="mx-6 lg:px-0">
       {% include header.md %}
-      <div class="container-lg fade-in-element">
+      <div class="container-lg">
         {{ content }}
       </div>
       {% include footer.md %}
