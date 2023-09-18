@@ -2,6 +2,16 @@ module.exports = {
   mode: "jit",
   content: ["**/*.{html,md}"],
   theme: {
+    container: {
+      center: true, // centers the container by default
+      padding: "0", // adds 1rem of padding on each side of the container
+      screens: {
+        sm: "1280px",
+        md: "1280px",
+        lg: "1280px",
+        xl: "1280px",
+      },
+    },
     extend: {
       fontFamily: {
         sans: ["Bricolage Grotesque", "sans-serif"],

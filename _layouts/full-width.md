@@ -3,7 +3,11 @@
   {% include head.md %}
   <body>
     <div class="mx-6 lg:px-0">
-      {% include header.md %} {{ content }} {% include footer.md %}
+      {% include header.md %}
+      <div class="container-lg fade-in-element">
+        {{ content }}
+      </div>
+      {% include footer.md %}
     </div>
   </body>
 </html>

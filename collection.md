@@ -7,22 +7,22 @@ permalink: /art/collection/
 
 <script src="/assets/js/gallery-viewer.js"></script>
 <script src="/assets/js/player.js"></script>
-<article class="container-lg">
-  <a class="back-btn" href="/art">Art</a>
-  <h1>The Wallace Collection</h1>
-  <p class="sub-heading">
+<article>
+  <a class="back-btn fade-in-element" href="/art">Art</a>
+  <h1 class="fade-in-element">The Wallace Collection</h1>
+  <p class="sub-heading fade-in-element">
     A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains.
   </p>
-  <p>
+  <p class="fade-in-element">
     <strong>Fullscreen browser:</strong> Enter fullscreen viewer by clicking the maximize icon on any image. Browse using &larr; and &rarr; keyboard buttons.
   </p>
 
-  <p class="mb-4"><strong>Zen mode:</strong> Experience the collection alongside a curated selection of songs.</p>
+  <p class="mb-4 fade-in-element"><strong>Zen mode:</strong> Experience the collection alongside a curated selection of songs.</p>
 
-  <p class="mb-12"><button id="autoPlayCollection" class="button"><i></i> Enter zen mode</button> </p>
+  <p class="mb-12 fade-in-element"><button id="autoPlayCollection" class="button"><i></i> Enter zen mode</button> </p>
 
-  <hr class="mb-12" />
-  <div>
+  <hr class="mb-12 fade-in-element" />
+  <div class="art-collection">
     <div>
       <h3 class="artist-title">Manolo Gamboa Naon</h3>
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-4">

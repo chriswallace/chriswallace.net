@@ -11,42 +11,50 @@
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
   <meta property="og:image" content="/assets/images/chris-wallace.jpg" />
   {% seo title=false %}
-  <style type="text/css">
-    .fade-in {
+  <style>
+  .fade-in-element,
+  .art-collection img,
+  .art-collection h3,
+  .art-collection h4 {
       opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-    .fade-in.visible {
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .fade-in-element.visible,
+  .art-collection img.visible,
+  .art-collection h3.visible,
+  .art-collection h4.visible {
       opacity: 1;
-    }
+      transform: translateY(0);
+  }
   </style>
-  <script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function() {
-    // Function to handle fade-in
-    function handleFadeIn(element, delay) {
-      setTimeout(() => {
-        element.classList.add('visible');
-      }, delay);
-    }
-    let delay = 0;
-    const step = 40;
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const delay = 0;
-          handleFadeIn(entry.target, delay);
-          observer.unobserve(entry.target);
-        }
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      let observerIndex = 0; // Declare a separate index for IntersectionObserver
+
+      const elements = document.querySelectorAll('.fade-in-element,.art-collection img,.art-collection h3,.art-collection h4');
+      const fadeIn = (el, delay) => {
+          setTimeout(() => {
+              el.classList.add('visible');
+          }, delay);
+      };
+      elements.forEach((el, index) => {
+          const delay = index * Math.round((300 / (elements.length / 4))); // 300ms delay for cascading effect
+          fadeIn(el, delay);
       });
+      const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+              const delay = observerIndex * 100;  // 100ms delay for cascading effect
+              if (entry.isIntersecting) {
+                  fadeIn(entry.target, delay);
+                  observer.unobserve(entry.target);
+              }
+              observerIndex++;  // Increment the observerIndex after each entry
+          });
+      });
+      elements.forEach(el => observer.observe(el));
     });
-    document.querySelectorAll('.footer, p, h1, h2, h3, h4, h5, h6, ul, ol, hr, blockquote, video, img, iframe, canvas, .card-zoom, .back-btn').forEach((element) => {
-      element.classList.add('fade-in');
-      delay += step;
 
-      observer.observe(element);
-    });
-
-});
 </script>
 
 </head>
