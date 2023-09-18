@@ -148,7 +148,7 @@ permalink: /resume/
 <h2 class="fade-in-element">Contact</h2>
 
 <p class="mb-0 fade-in-element">Email: <a href="mailto:chriswallace7@protonmail.com">chriswallace7@protonmail.com</a></p>
-<p class="fade-in-element">LinkedIn: <a href="https://www.linkedin.com/in/chriswallace7">www.linkedin.com/in/chriswallace7</a></p>
+<p class="fade-in-element">LinkedIn: <a href="https://www.linkedin.com/in/chriswallace2">www.linkedin.com/in/chriswallace2</a></p>
 
 <h2 class="fade-in-element">References</h2>
 
