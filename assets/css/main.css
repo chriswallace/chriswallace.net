@@ -3,39 +3,35 @@
 @import "tailwindcss/utilities";
 
 @font-face {
-  font-family: 'DS Digital';
-  src: url('/assets/fonts/ds-digi-webfont.woff2') format('woff2'),
-    url('/assets/fonts/ds-digi-webfont.woff') format('woff');
+  font-family: "DS Digital";
+  src: url("/assets/fonts/ds-digi-webfont.woff2") format("woff2"),
+    url("/assets/fonts/ds-digi-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
-  font-family: 'DS Digital';
-  src: url('/assets/fonts/ds-digib-webfont.woff2') format('woff2'),
-    url('/assets/fonts/ds-digib-webfont.woff') format('woff');
+  font-family: "DS Digital";
+  src: url("/assets/fonts/ds-digib-webfont.woff2") format("woff2"),
+    url("/assets/fonts/ds-digib-webfont.woff") format("woff");
   font-weight: bold;
   font-style: normal;
-
 }
 
 @font-face {
-  font-family: 'DS Digital';
-  src: url('/assets/fonts/ds-digii-webfont.woff2') format('woff2'),
-    url('/assets/fonts/ds-digii-webfont.woff') format('woff');
+  font-family: "DS Digital";
+  src: url("/assets/fonts/ds-digii-webfont.woff2") format("woff2"),
+    url("/assets/fonts/ds-digii-webfont.woff") format("woff");
   font-weight: normal;
   font-style: italic;
-
 }
 
 @font-face {
-  font-family: 'DS Digital';
-  src: url('/assets/fonts/ds-digit-webfont.woff2') format('woff2'),
-    url('/assets/fonts/ds-digit-webfont.woff') format('woff');
+  font-family: "DS Digital";
+  src: url("/assets/fonts/ds-digit-webfont.woff2") format("woff2"),
+    url("/assets/fonts/ds-digit-webfont.woff") format("woff");
   font-weight: bold;
   font-style: italic;
-
 }
 
 body {
@@ -97,6 +93,10 @@ hr {
 
 .container {
   @apply w-[calc(100%-2rem)];
+}
+
+.container-lg {
+  @apply max-w-[1600px];
 }
 
 article {
@@ -164,7 +164,7 @@ caption {
   @apply mb-4 font-light text-gray-400;
 }
 
-.artist-title+h4 {
+.artist-title + h4 {
   @apply -mt-4;
 }
 
@@ -206,7 +206,7 @@ caption {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzYiIGhlaWdodD0iOTUiIHZpZXdCb3g9IjAgMCA3NiA5NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcxLjggNDEuMDk0OEwxMiAxLjI5NDgxQzYuOSAtMi4xMDUxOSAwIDEuNTk0ODEgMCA3LjY5NDgxVjg3LjE5NDhDMCA5My4zOTQ4IDYuOSA5Ni45OTQ4IDEyIDkzLjU5NDhMNzEuOCA1My43OTQ4Qzc2LjMgNTAuODk0OCA3Ni4zIDQ0LjA5NDggNzEuOCA0MS4wOTQ4WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==")
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzYiIGhlaWdodD0iOTUiIHZpZXdCb3g9IjAgMCA3NiA5NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcxLjggNDEuMDk0OEwxMiAxLjI5NDgxQzYuOSAtMi4xMDUxOSAwIDEuNTk0ODEgMCA3LjY5NDgxVjg3LjE5NDhDMCA5My4zOTQ4IDYuOSA5Ni45OTQ4IDEyIDkzLjU5NDhMNzEuOCA1My43OTQ4Qzc2LjMgNTAuODk0OCA3Ni4zIDQ0LjA5NDggNzEuOCA0MS4wOTQ4WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==");
 }
 
 .image-collage {
@@ -314,7 +314,11 @@ caption {
 
 .music-player {
   @apply flex gap-0 z-20 fixed bottom-0 sm:transform sm:translate-x-[-50%] p-2 pb-6 sm:pb-2 left-0 right-0 sm:left-[50%] sm:right-auto bg-white border-solid sm:rounded-t-md z-10 sm:border-t-2 sm:border-gray-200 text-white;
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(222, 222, 222));
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255),
+    rgb(222, 222, 222)
+  );
   border-width: 1px 1px 0 1px;
   border-color: rgba(0, 0, 0, 0.5);
 }
@@ -358,8 +362,8 @@ caption {
   margin-right: 5px;
   border-radius: 3px;
   background-image: linear-gradient(to bottom, #34603e, rgb(48, 143, 60));
-  color:  rgb(52, 212, 31);
-  text-shadow: 0 0 5px rgba(52, 212, 31,0.3);
+  color: rgb(52, 212, 31);
+  text-shadow: 0 0 5px rgba(52, 212, 31, 0.3);
   position: relative;
 }
 
@@ -370,7 +374,11 @@ caption {
   left: 1px;
   right: 1px;
   bottom: 18px;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.2)
+  );
   border-radius: 1px 1px 20% 20%;
   z-index: 12;
 }
@@ -387,7 +395,7 @@ caption {
   height: 30px;
   line-height: 1.75;
   overflow: hidden;
-  font-family: 'DS Digital', monospace;
+  font-family: "DS Digital", monospace;
   font-style: italic;
 }
 
@@ -395,7 +403,7 @@ caption {
   flex: 1;
 }
 
-.infoBox>div {
+.infoBox > div {
   overflow: hidden;
   white-space: nowrap;
   width: auto;
@@ -425,7 +433,7 @@ caption {
 }
 
 #playButton i {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxuczp4PSJodHRwOi8vbnMuYWRvYmUuY29tL0V4dGVuc2liaWxpdHkvMS4wLyIgeG1sbnM6aT0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4bWxuczpncmFwaD0iaHR0cDovL25zLmFkb2JlLmNvbS9HcmFwaHMvMS4wLyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMCAxMjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwMCAxMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3dpdGNoPjxmb3JlaWduT2JqZWN0IHJlcXVpcmVkRXh0ZW5zaW9ucz0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PGcgaTpleHRyYW5lb3VzPSJzZWxmIj48cGF0aCBkPSJNODQuMiw0My42TDI0LjQsMy44Yy01LjEtMy40LTEyLDAuMy0xMiw2LjR2NzkuNWMwLDYuMiw2LjksOS44LDEyLDYuNGw1OS44LTM5LjhDODguNyw1My40LDg4LjcsNDYuNiw4NC4yLDQzLjZ6Ii8+PC9nPjwvc3dpdGNoPjwvc3ZnPg==")
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxuczp4PSJodHRwOi8vbnMuYWRvYmUuY29tL0V4dGVuc2liaWxpdHkvMS4wLyIgeG1sbnM6aT0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4bWxuczpncmFwaD0iaHR0cDovL25zLmFkb2JlLmNvbS9HcmFwaHMvMS4wLyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMCAxMjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwMCAxMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3dpdGNoPjxmb3JlaWduT2JqZWN0IHJlcXVpcmVkRXh0ZW5zaW9ucz0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PGcgaTpleHRyYW5lb3VzPSJzZWxmIj48cGF0aCBkPSJNODQuMiw0My42TDI0LjQsMy44Yy01LjEtMy40LTEyLDAuMy0xMiw2LjR2NzkuNWMwLDYuMiw2LjksOS44LDEyLDYuNGw1OS44LTM5LjhDODguNyw1My40LDg4LjcsNDYuNiw4NC4yLDQzLjZ6Ii8+PC9nPjwvc3dpdGNoPjwvc3ZnPg==");
 }
 
 #pauseButton i {
@@ -627,7 +635,7 @@ footer p {
     @apply bg-gray-700 border-stone-700 hover:bg-gray-500;
   }
 
-  #autoPlayCollection i{
+  #autoPlayCollection i {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzYiIGhlaWdodD0iOTUiIHZpZXdCb3g9IjAgMCA3NiA5NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcxLjggNDEuMDk0OEwxMiAxLjI5NDgxQzYuOSAtMi4xMDUxOSAwIDEuNTk0ODEgMCA3LjY5NDgxVjg3LjE5NDhDMCA5My4zOTQ4IDYuOSA5Ni45OTQ4IDEyIDkzLjU5NDhMNzEuOCA1My43OTQ4Qzc2LjMgNTAuODk0OCA3Ni4zIDQ0LjA5NDggNzEuOCA0MS4wOTQ4WiIgZmlsbD0iI0FCQUJCMiIvPgo8L3N2Zz4K");
   }
 

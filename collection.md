@@ -7,7 +7,7 @@ permalink: /art/collection/
 
 <script src="/assets/js/gallery-viewer.js"></script>
 <script src="/assets/js/player.js"></script>
-<article>
+<article class="container-lg">
   <a class="back-btn" href="/art">Art</a>
   <h1>The Wallace Collection</h1>
   <p class="sub-heading">
@@ -16,11 +16,11 @@ permalink: /art/collection/
   <p>
     <strong>Fullscreen browser:</strong> Enter fullscreen viewer by clicking the maximize icon on any image. Browse using &larr; and &rarr; keyboard buttons.
   </p>
-  
+
   <p class="mb-4"><strong>Zen mode:</strong> Experience the collection alongside a curated playlist of generative music by omgkirby.</p>
-  
+
   <p class="mb-12"><button id="autoPlayCollection" class="button"><i></i> Enter zen mode</button> </p>
-  
+
   <hr class="mb-12" />
   <div>
     <div>
