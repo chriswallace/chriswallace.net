@@ -17,10 +17,11 @@ permalink: /art/collection/
     <strong>Fullscreen browser:</strong> Enter fullscreen viewer by clicking the maximize icon on any image. Browse using &larr; and &rarr; keyboard buttons.
   </p>
 
-  <p class="mb-4 fade-in-element hidden sm:visible"><strong>Zen mode:</strong> Experience the collection alongside a curated selection of songs.</p>
-
-  <p class="mb-12 fade-in-element hidden sm:visible"><button id="autoPlayCollection" class="button"><i></i> Enter zen mode</button> </p>
-
+  <div id="zenMode" class="hidden sm:block">
+    <p class="mb-4 fade-in-element"><strong>Zen mode:</strong> Experience the collection alongside a curated selection of songs.</p>
+    <p class="mb-12 fade-in-element"><button id="autoPlayCollection" class="button"><i></i> Enter zen mode</button> </p>
+  </div>
+  
   <hr class="mb-12 fade-in-element" />
 
   <div class="art-collection">

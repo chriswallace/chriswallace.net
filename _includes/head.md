@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/main.css?version=1.39" />
+  <link rel="stylesheet" href="/assets/main.css?version=1.4" />
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
   <meta property="og:image" content="/assets/images/chris-wallace.jpg" />
   {% seo title=false %}
@@ -31,7 +31,6 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       let observerIndex = 0; // Declare a separate index for IntersectionObserver
-
       const elements = document.querySelectorAll('.fade-in-element,.art-collection img,.art-collection h3,.art-collection h4');
       const fadeIn = (el, delay) => {
           setTimeout(() => {
@@ -56,5 +55,4 @@
     });
 
 </script>
-
 </head>
