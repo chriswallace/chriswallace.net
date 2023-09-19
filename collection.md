@@ -177,7 +177,7 @@ permalink: /art/collection/
             <img alt="DenCity #476" src="https://ik.imagekit.io/UltraDAO/wallace/dencity_476.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPaFpXKhSLdbFmrXXoogFngkzaXZAht1VREi5gCGMwc1A/?fxhash=ooNXn3HmgnwjxJW1z3tgzgMWNKtZv96M9KVcdEH9eKy9Z2Uncnf&fxiteration=476&fxminter=tz1Sq1PXa7hvr1zJNNGN8Ay8DKAvZsLauHL8" />
          </div>
          <div class="mb-12 sm:mb-0" style="flex: 1">
-            <h3 class="artist-title">KilledByAPixzel</h3>
+            <h3 class="artist-title">KilledByAPixel</h3>
             <img alt="Auto Park #361"
                class="w-full h-auto" src="https://ik.imagekit.io/UltraDAO/wallace/auto_park_361.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmegN3BLLX6cuPB3hPcy8CwFnrB66eje1kJ6oyoDhNzaZK/?fxhash=opDTmR5siYBviEtK4ABfrpGPpjMWXkR7cpv2ZTkKAAAwFNCHM58&fxiteration=361&fxminter=tz1cHceCnSrCc6KmC83fgqwVK85actWf41gd" />
          </div>
