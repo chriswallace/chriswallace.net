@@ -619,16 +619,16 @@ permalink: /art/collection/
         <h4 class="collection-title">Florilegium</h4>
          <div class="gallery-row gallery-flex">
             <div class="mb-4 sm:mb-0" style="flex: 0.8">
-               <img alt="#26" src="https://ik.imagekit.io/UltraDAO/wallace/florilegium_26.jpg?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNfYmn4pZrYUA1fVcvePXBFtgMqGms2UQEy8o9d5bfREC/?fxhash=oobNVRWFaHtUedhGrdUmycEkkvoqgQaLtx9ecRsRFfnRvmLnijP&fxiteration=26&fxminter=tz1e4YJE8dcbAnZfMntiW96ZbjYMGMwFdqWs" />
+               <img alt="#26" src="https://ik.imagekit.io/UltraDAO/wallace/florilegium_26.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNfYmn4pZrYUA1fVcvePXBFtgMqGms2UQEy8o9d5bfREC/?fxhash=oobNVRWFaHtUedhGrdUmycEkkvoqgQaLtx9ecRsRFfnRvmLnijP&fxiteration=26&fxminter=tz1e4YJE8dcbAnZfMntiW96ZbjYMGMwFdqWs" />
             </div>
             <div class="mb-4 sm:mb-0" style="flex: 0.8">
-               <img alt="#150" src="https://ik.imagekit.io/UltraDAO/wallace/florilegium_150.jpg?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNfYmn4pZrYUA1fVcvePXBFtgMqGms2UQEy8o9d5bfREC/?fxhash=oo51MwCpjY272BU8ffJScMzH18mvX3YzeV1WEES3Eq6yYGr3d8V&fxiteration=150&fxminter=tz1XAivmYefSRJGWX9sG8wJmAwdihhaLJ8fa" />
+               <img alt="#150" src="https://ik.imagekit.io/UltraDAO/wallace/florilegium_150.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNfYmn4pZrYUA1fVcvePXBFtgMqGms2UQEy8o9d5bfREC/?fxhash=oo51MwCpjY272BU8ffJScMzH18mvX3YzeV1WEES3Eq6yYGr3d8V&fxiteration=150&fxminter=tz1XAivmYefSRJGWX9sG8wJmAwdihhaLJ8fa" />
             </div>
             <div class="mb-4 sm:mb-0" style="flex: 0.8">
-               <img alt="#148" src="https://ik.imagekit.io/UltraDAO/wallace/florilegium_148.jpg?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNfYmn4pZrYUA1fVcvePXBFtgMqGms2UQEy8o9d5bfREC/?fxhash=oobdwJAHhCds4LMk7s4PCZYe5bivu1oNoPaiBbGd1EyTAVZCyEw&fxiteration=148&fxminter=tz1cHceCnSrCc6KmC83fgqwVK85actWf41gd" />
+               <img alt="#148" src="https://ik.imagekit.io/UltraDAO/wallace/florilegium_148.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNfYmn4pZrYUA1fVcvePXBFtgMqGms2UQEy8o9d5bfREC/?fxhash=oobdwJAHhCds4LMk7s4PCZYe5bivu1oNoPaiBbGd1EyTAVZCyEw&fxiteration=148&fxminter=tz1cHceCnSrCc6KmC83fgqwVK85actWf41gd" />
             </div>
             <div style="flex: 0.8">
-               <img alt="#107" src="https://ik.imagekit.io/UltraDAO/wallace/florilegium_107.jpg?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNfYmn4pZrYUA1fVcvePXBFtgMqGms2UQEy8o9d5bfREC/?fxhash=oog2aPUGTuDqq4TaZWi8gmvz1Pz2n4jPwvG9EZ8dWsLxABAWr27&fxiteration=107&fxminter=tz1XAFvpynqgRBizrYs12fBt563NSHm9FWve" />
+               <img alt="#107" src="https://ik.imagekit.io/UltraDAO/wallace/florilegium_107.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNfYmn4pZrYUA1fVcvePXBFtgMqGms2UQEy8o9d5bfREC/?fxhash=oog2aPUGTuDqq4TaZWi8gmvz1Pz2n4jPwvG9EZ8dWsLxABAWr27&fxiteration=107&fxminter=tz1XAFvpynqgRBizrYs12fBt563NSHm9FWve" />
             </div>
          </div>
       </div>
