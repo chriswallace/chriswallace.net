@@ -152,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isMobile()) {
       const caption = document.createElement('caption');
+      caption.classList.add('fade-in-element');
       caption.innerHTML = img.alt;
       wrapperDiv.appendChild(caption);
     }
