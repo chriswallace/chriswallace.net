@@ -745,19 +745,29 @@ permalink: /art/collection/
    </div>
 </article>
 <div id="fullscreen-viewer" class="hidden"></div>
-<div id="musicPlayer" class="music-player">
-   <audio id="audioElement" src=""></audio>
-   <div class="trackActivityContainer">
-      <div class="trackActivity">
-         <div class="infoBox">
-            <div id="trackInfo" class="marquee">
+<div class="utility-bar">
+  <div class="page-title-container">
+    <div id="pageTitle" class="page-title">The Wallace Collection</div>
+  </div>
+  <div class="music-player-container">
+    <div id="musicPlayer" class="music-player">
+        <audio id="audioElement" src=""></audio>
+        <div class="trackActivityContainer">
+            <div class="trackActivity">
+              <div class="infoBox">
+                  <div id="trackInfo" class="marquee">
+                  </div>
+              </div>
             </div>
-         </div>
-      </div>
-   </div>
-   <button id="playButton"><i></i> <span>Play</span></button>
-   <button id="pauseButton"><i></i> <span>Pause</span></button>
-   <button id="prevButton"><i></i> <span>Previous</span></button>
-   <button id="nextButton"><i></i> <span>Next</span></button>
-   <input id="volumeControl" type="range" min="0" max="1" step="0.1">
+        </div>
+        <button id="playButton"><i></i> <span>Play</span></button>
+        <button id="pauseButton"><i></i> <span>Pause</span></button>
+        <button id="prevButton"><i></i> <span>Previous</span></button>
+        <button id="nextButton"><i></i> <span>Next</span></button>
+        <input id="volumeControl" type="range" min="0" max="1" step="0.1">
+    </div>
+  </div>
+  <div class="to-top">
+    <button id="backToTop" title="Go to top"><i></i></button>
+  </div>
 </div>

@@ -202,7 +202,7 @@ caption {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzYiIGhlaWdodD0iOTUiIHZpZXdCb3g9IjAgMCA3NiA5NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcxLjggNDEuMDk0OEwxMiAxLjI5NDgxQzYuOSAtMi4xMDUxOSAwIDEuNTk0ODEgMCA3LjY5NDgxVjg3LjE5NDhDMCA5My4zOTQ4IDYuOSA5Ni45OTQ4IDEyIDkzLjU5NDhMNzEuOCA1My43OTQ4Qzc2LjMgNTAuODk0OCA3Ni4zIDQ0LjA5NDggNzEuOCA0MS4wOTQ4WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==");
+  background-image: url("/assets/images/icons/play-dark.svg");
 }
 
 .image-collage {
@@ -308,15 +308,49 @@ caption {
   @apply mb-12 md:mb-24;
 }
 
+.utility-bar{
+  @apply fixed left-0 right-0 bottom-0 sm:grid sm:grid-cols-4 items-center pb-8 sm:pb-0 bg-white z-10;
+}
+
+.page-title{
+  @apply text-sm font-bold ml-3 uppercase leading-tight float-left opacity-0;
+}
+
+#backToTop {
+  @apply mr-3 p-2 z-10 opacity-0;
+  cursor: pointer;
+  color: #222;
+  border: none;
+  border-radius: 4px;
+  flex: 0.5;
+  float: right;
+  border-radius: 400px;
+  border: 1px solid rgba(0,0,0, 0.3);
+}
+
+.page-title-container,
+.to-top{
+  @apply hidden sm:block;
+}
+
+.page-title,
+#backToTop{
+  transition: opacity 0.5s ease-in-out;
+}
+
+#backToTop i{
+  @apply block w-[20px] h-[20px] bg-center bg-no-repeat bg-contain;
+  background-image: url("/assets/images/icons/arrow-up-dark.svg");
+}
+
+.music-player-container{
+  @apply col-span-2;
+}
+
 .music-player {
-  @apply flex gap-0 z-20 fixed bottom-0 sm:transform sm:translate-x-[-50%] p-2 pb-6 sm:pb-2 left-0 right-0 sm:left-[50%] sm:right-auto bg-white border-solid sm:rounded-t-md z-10 sm:border-t-2 sm:border-gray-200 text-white;
-  background-image: linear-gradient(
-    to bottom,
-    rgb(255, 255, 255),
-    rgb(222, 222, 222)
-  );
-  border-width: 1px 1px 0 1px;
-  border-color: rgba(0, 0, 0, 0.5);
+  @apply flex gap-0 p-3 text-white mx-auto;
+  flex: 6;
+  max-width: 440px;
 }
 
 .music-player span {
@@ -324,7 +358,7 @@ caption {
 }
 
 .music-player input[type="range"] {
-  @apply relative top-[-1px] w-[74px] sm:w-[66px] mr-2;
+  @apply relative top-[1px] w-[74px] sm:w-[66px] mr-2;
 }
 
 .music-player button {
@@ -429,19 +463,19 @@ caption {
 }
 
 #playButton i {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxuczp4PSJodHRwOi8vbnMuYWRvYmUuY29tL0V4dGVuc2liaWxpdHkvMS4wLyIgeG1sbnM6aT0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4bWxuczpncmFwaD0iaHR0cDovL25zLmFkb2JlLmNvbS9HcmFwaHMvMS4wLyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMCAxMjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwMCAxMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3dpdGNoPjxmb3JlaWduT2JqZWN0IHJlcXVpcmVkRXh0ZW5zaW9ucz0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PGcgaTpleHRyYW5lb3VzPSJzZWxmIj48cGF0aCBkPSJNODQuMiw0My42TDI0LjQsMy44Yy01LjEtMy40LTEyLDAuMy0xMiw2LjR2NzkuNWMwLDYuMiw2LjksOS44LDEyLDYuNGw1OS44LTM5LjhDODguNyw1My40LDg4LjcsNDYuNiw4NC4yLDQzLjZ6Ii8+PC9nPjwvc3dpdGNoPjwvc3ZnPg==");
+  background-image: url("/assets/images/icons/play-dark.svg");
 }
 
 #pauseButton i {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxuczp4PSJodHRwOi8vbnMuYWRvYmUuY29tL0V4dGVuc2liaWxpdHkvMS4wLyIgeG1sbnM6aT0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4bWxuczpncmFwaD0iaHR0cDovL25zLmFkb2JlLmNvbS9HcmFwaHMvMS4wLyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMCAxMjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwMCAxMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3dpdGNoPjxmb3JlaWduT2JqZWN0IHJlcXVpcmVkRXh0ZW5zaW9ucz0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PGcgaTpleHRyYW5lb3VzPSJzZWxmIj48Zz48cGF0aCBkPSJNMzUuNiwyLjVIMTMuM2MtMi4xLDAtMy45LDEuNy0zLjksMy45djg3LjNjMCwyLjEsMS43LDMuOSwzLjksMy45aDIyLjJjMi4xLDAsMy45LTEuNywzLjktMy45VjYuNCAgICAgQzM5LjQsNC4yLDM3LjcsMi41LDM1LjYsMi41eiIvPjxwYXRoIGQ9Ik04Ni43LDIuNUg2NC40Yy0yLjEsMC0zLjksMS43LTMuOSwzLjl2ODcuM2MwLDIuMSwxLjcsMy45LDMuOSwzLjloMjIuMmMyLjEsMCwzLjktMS43LDMuOS0zLjlWNi40ICAgICBDOTAuNSw0LjIsODguOCwyLjUsODYuNywyLjV6Ii8+PC9nPjwvZz48L3N3aXRjaD48L3N2Zz4=");
+  background-image: url("/assets/images/icons/pause-dark.svg");
 }
 
 #nextButton i {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxuczp4PSJodHRwOi8vbnMuYWRvYmUuY29tL0V4dGVuc2liaWxpdHkvMS4wLyIgeG1sbnM6aT0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4bWxuczpncmFwaD0iaHR0cDovL25zLmFkb2JlLmNvbS9HcmFwaHMvMS4wLyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMCAxMjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwMCAxMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3dpdGNoPjxmb3JlaWduT2JqZWN0IHJlcXVpcmVkRXh0ZW5zaW9ucz0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PGcgaTpleHRyYW5lb3VzPSJzZWxmIj48cGF0aCBkPSJNOTQuOSw0NS4ybC00NS0zMGMtMy45LTIuNi05LDAuMi05LDQuOHYxNC42TDExLjUsMTUuMmMtMy45LTIuNi05LDAuMi05LDQuOFY4MGMwLDQuNiw1LjIsNy40LDksNC44bDI5LjMtMTkuNVY4MCAgICBjMCw0LjYsNS4yLDcuNCw5LDQuOGw0NS0zMEM5OC40LDUyLjUsOTguNCw0Ny41LDk0LjksNDUuMnoiLz48L2c+PC9zd2l0Y2g+PC9zdmc+");
+  background-image: url("/assets/images/icons/next-dark.svg");
 }
 
 #prevButton i {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxuczp4PSJodHRwOi8vbnMuYWRvYmUuY29tL0V4dGVuc2liaWxpdHkvMS4wLyIgeG1sbnM6aT0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4bWxuczpncmFwaD0iaHR0cDovL25zLmFkb2JlLmNvbS9HcmFwaHMvMS4wLyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMCAxMjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwMCAxMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3dpdGNoPjxmb3JlaWduT2JqZWN0IHJlcXVpcmVkRXh0ZW5zaW9ucz0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PGcgaTpleHRyYW5lb3VzPSJzZWxmIj48cGF0aCBkPSJNNS4xLDU0LjhsNDUsMzBjMy45LDIuNiw5LTAuMiw5LTQuOFY2NS4zbDI5LjMsMTkuNWMzLjksMi42LDktMC4yLDktNC44VjIwYzAtNC42LTUuMi03LjQtOS00LjhMNTkuMiwzNC43VjIwICAgIGMwLTQuNi01LjItNy40LTktNC44bC00NSwzMEMxLjYsNDcuNSwxLjYsNTIuNSw1LjEsNTQuOHoiLz48L2c+PC9zd2l0Y2g+PC9zdmc+");
+  background-image: url("/assets/images/icons/previous-dark.svg");
 }
 
 #fullScreenDiv {
@@ -488,11 +522,11 @@ caption {
 }
 
 footer {
-  @apply py-8 border-t-2 border-gray-200;
+  @apply py-8 pb-16 border-t-2 border-gray-200;
 }
 
 footer p {
-  @apply leading-snug text-gray-600 text-sm;
+  @apply leading-snug text-gray-600 text-sm text-center;
 }
 
 #fullscreen-viewer {
@@ -632,7 +666,8 @@ footer p {
   }
 
   #autoPlayCollection i {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzYiIGhlaWdodD0iOTUiIHZpZXdCb3g9IjAgMCA3NiA5NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcxLjggNDEuMDk0OEwxMiAxLjI5NDgxQzYuOSAtMi4xMDUxOSAwIDEuNTk0ODEgMCA3LjY5NDgxVjg3LjE5NDhDMCA5My4zOTQ4IDYuOSA5Ni45OTQ4IDEyIDkzLjU5NDhMNzEuOCA1My43OTQ4Qzc2LjMgNTAuODk0OCA3Ni4zIDQ0LjA5NDggNzEuOCA0MS4wOTQ4WiIgZmlsbD0iI0FCQUJCMiIvPgo8L3N2Zz4K");
+    background-image: url("/assets/images/icons/play-light.svg");
+    opacity: 0.4;
   }
 
   .social-button:hover {
@@ -666,4 +701,52 @@ footer p {
   footer p {
     @apply text-gray-300;
   }
+
+  .utility-bar{
+    background-image: linear-gradient(
+      to bottom,
+      rgb(55, 55, 55),
+      rgb(44, 44,44)
+    );
+  }
+  .trackActivityContainer {
+    @apply w-[50%];
+    padding: 4px 8px;
+    font-weight: bold;
+    margin-right: 5px;
+    border-radius: 3px;
+    background-image: linear-gradient(to bottom, #632665, rgb(128, 30, 134));
+    color: rgb(222, 154, 226);
+    text-shadow: 0 0 5px rgb(211, 39, 221);
+    box-shadow: inset 0 0 8px rgba(157,34,163,0.5), inset 0 0 16px rgb(157,34,163);
+    position: relative;
+  }
+
+  .trackActivityContainer:after {
+    opacity: 0.3;
+  }
+
+  #playButton i {
+    background-image: url("/assets/images/icons/play-light.svg");
+  }
+  
+  #pauseButton i {
+    background-image: url("/assets/images/icons/pause-light.svg");
+  }
+  
+  #nextButton i {
+    background-image: url("/assets/images/icons/next-light.svg");
+  }
+  
+  #prevButton i {
+    background-image: url("/assets/images/icons/previous-light.svg");
+  }
+
+  #backToTop {
+    border-color: rgb(135, 135, 135);
+  }
+
+  #backToTop i{
+    background-image: url("/assets/images/icons/arrow-up-light.svg");
+  }  
 }

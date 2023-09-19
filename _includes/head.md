@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/main.css?version=1.4" />
+  <link rel="stylesheet" href="/assets/main.css?version=1.41" />
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
   <meta property="og:image" content="/assets/images/chris-wallace.jpg" />
   {% seo title=false %}
@@ -86,6 +86,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Start observing each element
   elements.forEach(el => observer.observe(el));
+
+  if (!isMobile()) {
+    const backToTopButton = document.getElementById('backToTop');
+    const pageTitle = document.getElementById('pageTitle');
+
+    // Scroll to top when button is clicked
+    backToTopButton.addEventListener('click', function() {
+      window.scroll({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Toggle button's visibility based on scroll position
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 200) { // Show button after 200px of scrolling
+        backToTopButton.style.opacity = 1;
+        pageTitle.style.opacity = 1;
+      } else {
+        backToTopButton.style.opacity = 0;
+        pageTitle.style.opacity = 0;
+      }
+    });
+  }
 });
 </script>
 </head>
