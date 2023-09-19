@@ -5,6 +5,7 @@ description: A selection of generative artworks from my family's private collect
 permalink: /art/collection/
 ---
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.min.js"></script>
 <script src="/assets/js/gallery-viewer.js"></script>
 <script src="/assets/js/player.js"></script>
 <article>
@@ -315,7 +316,6 @@ permalink: /art/collection/
         </div>
       </div>
     </div>
-
     <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
       <div class="mb-12 sm:mb-0" style="flex: 1.1847">
         <h3 class="artist-title">William Watkins</h3>
