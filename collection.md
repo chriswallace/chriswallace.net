@@ -144,6 +144,19 @@ permalink: /art/collection/
       <img alt="#151"
         class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/hypergiraffe_151.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qmf5wUbLTDKNkpgxZWVXkv21HiiRzA2TMA6ohjVYNZs9BV/?fxhash=oojkx3w5hpSK7c1FGprbGDg1hAjUJQUuro4pjxG9hfBNMRHgiew&fxiteration=151&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
     </div>
+    <h3 class="artist-title">Ferdinand Dervieux</h3>
+    <h4 class="collection-title">The Past Ahead</h4>
+    <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+      <div style="flex: 1">
+        <img alt="#226" src="https://ik.imagekit.io/UltraDAO/wallace/the_past_ahead_226.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbkxCeeebYb1XaJ6b95tEpzXLvYXyvCUah4G4ef8uSFiT/?fxhash=oonyufzLqBzHK2AgaXpqFuqd1KrCBzCP4LrXvX2agJ1qaB9W9jP&fxiteration=226&fxminter=tz1UAJXZuZRDquX5zHkDoNDEFv1KQRKicsQp" />
+      </div>
+      <div style="flex: 0.71375">
+        <img alt="#227" src="https://ik.imagekit.io/UltraDAO/wallace/the_past_ahead_227.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbkxCeeebYb1XaJ6b95tEpzXLvYXyvCUah4G4ef8uSFiT/?fxhash=opFbqSUAiLrkyBeecjFP3JUEFTCyBiRcPV29vU8TnRJvsZTpzTY&fxiteration=227&fxminter=tz1TQgbghNyRaW21NnkzN2m49QysKUn36neS" />
+      </div>
+      <div style="flex: 0.5">
+        <img alt="#36" src="https://ik.imagekit.io/UltraDAO/wallace/the_past_ahead_36.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbkxCeeebYb1XaJ6b95tEpzXLvYXyvCUah4G4ef8uSFiT/?fxhash=ooB2MayahHnprdnTW6yACkM7ikcBgumFYFHFfBbJtMTdTg7FmbC&fxiteration=36&fxminter=tz1ZhdmUaPA6BVNde8bA9FUhhwaBmMjsMMJB" />
+      </div>
+    </div>
     <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
       <div class="mb-12 sm:mb-0" style="flex: 1.77774687">
         <h3 class="artist-title">p1xelfool</h3>
