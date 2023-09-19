@@ -614,6 +614,18 @@ permalink: /art/collection/
          <img alt="#68" src="https://ik.imagekit.io/UltraDAO/wallace/de_growth_generations_68.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPndRrQqQ44UdbnmEdhcbJJH6JdvfDZUX6snV5yGshpBY/?fxhash=onj6gYFih7i54AcmHc6BbNQ3tsGabBzTF2Y9Rr23XY8VRaqJzPz&fxiteration=68&fxminter=tz1MYyqWDsZZwNF7kotQQ5bovsvkSoi5gr5K" />
          <img alt="#106" src="https://ik.imagekit.io/UltraDAO/wallace/de_growth_generations_106.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPndRrQqQ44UdbnmEdhcbJJH6JdvfDZUX6snV5yGshpBY/?fxhash=onhppds8U2JcqL8VWbwwKoxy6jj9tnk8RdkNQxCWq6jVasDTSGR&fxiteration=106&fxminter=tz1ZuRLk8zSwHB9T9FzDQqsiryXprLrH5xF2" />
       </div>
+      <div>
+         <h3 class="artist-title">AutoEclectus</h3>
+        <h4 class="collection-title">Florilegium</h4>
+         <div class="gallery-row gallery-flex">
+            <div class="mb-4 sm:mb-0" style="flex: 1">
+               <img alt="#26" src="https://ik.imagekit.io/UltraDAO/wallace/florilegium_26.jpg?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNfYmn4pZrYUA1fVcvePXBFtgMqGms2UQEy8o9d5bfREC/?fxhash=oobNVRWFaHtUedhGrdUmycEkkvoqgQaLtx9ecRsRFfnRvmLnijP&fxiteration=26&fxminter=tz1e4YJE8dcbAnZfMntiW96ZbjYMGMwFdqWs" />
+               <img alt="#150" src="https://ik.imagekit.io/UltraDAO/wallace/florilegium_150.jpg?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNfYmn4pZrYUA1fVcvePXBFtgMqGms2UQEy8o9d5bfREC/?fxhash=oo51MwCpjY272BU8ffJScMzH18mvX3YzeV1WEES3Eq6yYGr3d8V&fxiteration=150&fxminter=tz1XAivmYefSRJGWX9sG8wJmAwdihhaLJ8fa" />
+               <img alt="#148" src="https://ik.imagekit.io/UltraDAO/wallace/florilegium_148.jpg?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNfYmn4pZrYUA1fVcvePXBFtgMqGms2UQEy8o9d5bfREC/?fxhash=oobdwJAHhCds4LMk7s4PCZYe5bivu1oNoPaiBbGd1EyTAVZCyEw&fxiteration=148&fxminter=tz1cHceCnSrCc6KmC83fgqwVK85actWf41gd" />
+               <img alt="#107" src="https://ik.imagekit.io/UltraDAO/wallace/florilegium_107.jpg?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNfYmn4pZrYUA1fVcvePXBFtgMqGms2UQEy8o9d5bfREC/?fxhash=oog2aPUGTuDqq4TaZWi8gmvz1Pz2n4jPwvG9EZ8dWsLxABAWr27&fxiteration=107&fxminter=tz1XAFvpynqgRBizrYs12fBt563NSHm9FWve" />
+            </div>
+         </div>
+      </div>
       <h3 class="artist-title">Andreas Rau</h3>
       <h4 class="collection-title">Elevation</h4>
       <div class="gallery-row gallery-triple-wide">
