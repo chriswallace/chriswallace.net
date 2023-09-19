@@ -171,6 +171,11 @@ permalink: /art/collection/
             <img alt="#36" src="https://ik.imagekit.io/UltraDAO/wallace/the_past_ahead_36.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbkxCeeebYb1XaJ6b95tEpzXLvYXyvCUah4G4ef8uSFiT/?fxhash=ooB2MayahHnprdnTW6yACkM7ikcBgumFYFHFfBbJtMTdTg7FmbC&fxiteration=36&fxminter=tz1ZhdmUaPA6BVNde8bA9FUhhwaBmMjsMMJB" />
          </div>
       </div>
+      <div class="gallery-row gallery-single-wide">
+         <h3 class="artist-title">Brian Gawlik</h3>
+         <h4 class="collection-title">River Prairie #66</h4>
+         <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/river_prairie_66.png?tr=w-100,q-20,bl-6" />
+      </div>
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
          <div class="mb-12 sm:mb-0" style="flex: 0.66625">
             <h3 class="artist-title">Hevey</h3>
