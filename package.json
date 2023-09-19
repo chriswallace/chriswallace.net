@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "jekyll:serve": "bundle exec jekyll serve --incremental --watch",
+    "jekyll:serve": "bundle exec jekyll serve --incremental --watch --ssl-key ssl/localhost.key --ssl-cert ssl/localhost.crt",
     "jekyll:build": "bundle exec jekyll build",
     "css:build": "npx tailwindcss -i ./assets/css/main.css -o ./assets/main.css --minify",
     "css:watch": "nodemon -e css -x 'npm run css:build'"
