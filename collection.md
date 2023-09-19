@@ -18,10 +18,11 @@ permalink: /art/collection/
     <strong>Fullscreen browser:</strong> Enter fullscreen viewer by clicking the maximize icon on any image. Browse using &larr; and &rarr; keyboard buttons.
   </p>
 
-  <p class="mb-4 fade-in-element"><strong>Zen mode:</strong> Experience the collection alongside a curated selection of songs.</p>
-
-  <p class="mb-12 fade-in-element"><button id="autoPlayCollection" class="button"><i></i> Enter zen mode</button> </p>
-
+  <div id="zenMode" class="hidden sm:block">
+    <p class="mb-4 fade-in-element"><strong>Zen mode:</strong> Experience the collection alongside a curated selection of songs.</p>
+    <p class="mb-12 fade-in-element"><button id="autoPlayCollection" class="button"><i></i> Enter zen mode</button> </p>
+  </div>
+  
   <hr class="mb-12 fade-in-element" />
 
   <div class="art-collection">
@@ -143,6 +144,35 @@ permalink: /art/collection/
         class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/hypergiraffe_150.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qmf5wUbLTDKNkpgxZWVXkv21HiiRzA2TMA6ohjVYNZs9BV/?fxhash=oo2TiFFUP9uzPZeC4BDAcscZn1cT3pyCkmcDozALyZk8oJNxHyQ&fxiteration=150&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
       <img alt="#151"
         class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/hypergiraffe_151.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qmf5wUbLTDKNkpgxZWVXkv21HiiRzA2TMA6ohjVYNZs9BV/?fxhash=oojkx3w5hpSK7c1FGprbGDg1hAjUJQUuro4pjxG9hfBNMRHgiew&fxiteration=151&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+    </div>
+    <h3 class="artist-title">idflood</h3>
+    <h4 class="collection-title">Box Packing</h4>
+    <div class="gallery-row gallery-triple-wide-double-small">
+      <img alt="#146"
+        class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/box_packing_146.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSVvvcYbRM2Z49ZtDmUDv1pzMqnQwnBHdykw4UrVvCCzr/?fxhash=oniaEcAWsEPVxU4JYcVanbZy8mYGvQXnAcRVwXV4Df7mMMvqjpd&fxiteration=146&fxminter=tz1RwGXWUsq6aPte3UVLFRKzmyNYdmkmCSa8" />
+      <img alt="#345"
+        class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/box_packing_345.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSVvvcYbRM2Z49ZtDmUDv1pzMqnQwnBHdykw4UrVvCCzr/?fxhash=ooPoTGADXMHRKeFBEGnUvV8yknhSbQAHso1sZTtB3C2VaqrcPWM&fxiteration=345&fxminter=tz1SVSyJQCCDuKppgDsYK2mJ3bN6qkpj98NQ" />
+      <img alt="#395"
+        class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/box_packing_395.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSVvvcYbRM2Z49ZtDmUDv1pzMqnQwnBHdykw4UrVvCCzr/?fxhash=onpmqFAhNqzLvWjg4FbSxiS8tSgnGbpC9Y4iNeZFFhYdTRWWNhb&fxiteration=395&fxminter=tz1RB3poJD9r5cLXjzZPJ2RuR8eeLYWXMLDN" />
+      <img alt="#407"
+        class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/box_packing_407.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSVvvcYbRM2Z49ZtDmUDv1pzMqnQwnBHdykw4UrVvCCzr/?fxhash=ookQhHn8whDPppKBUyitFsVfgKEpnQXo75m2Zjzxm2yHsNwuzrF&fxiteration=407&fxminter=tz1QoRvfK6rYFGUsDuU5EQSjPYLDY2n6nYT8" />
+      <img alt="#409"
+        class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/box_packing_409.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSVvvcYbRM2Z49ZtDmUDv1pzMqnQwnBHdykw4UrVvCCzr/?fxhash=opAENAfnrxzQYYK3GzXyTq7NkxLmKa1PAGpLAswVosZo9PHCRxy&fxiteration=409&fxminter=tz1LSjfgjLXmbp6VtPx7Tptxuh3Ljjbqj2Py" />
+      <img alt="#442"
+        class="sc-a7460964-0 flHabD" src="https://ik.imagekit.io/UltraDAO/wallace/box_packing_442.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSVvvcYbRM2Z49ZtDmUDv1pzMqnQwnBHdykw4UrVvCCzr/?fxhash=oo4UNPrU3ni7o2fCS2c3FSXGYXQrdeipygXGdJkfDo1MWHMnLr4&fxiteration=442&fxminter=tz1cd8EPfy73UBthRtPUHnveEd9aoUbiQM3S" />
+    </div>
+    <h3 class="artist-title">Ferdinand Dervieux</h3>
+    <h4 class="collection-title">The Past Ahead</h4>
+    <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+      <div style="flex: 1">
+        <img alt="#226" src="https://ik.imagekit.io/UltraDAO/wallace/the_past_ahead_226.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbkxCeeebYb1XaJ6b95tEpzXLvYXyvCUah4G4ef8uSFiT/?fxhash=oonyufzLqBzHK2AgaXpqFuqd1KrCBzCP4LrXvX2agJ1qaB9W9jP&fxiteration=226&fxminter=tz1UAJXZuZRDquX5zHkDoNDEFv1KQRKicsQp" />
+      </div>
+      <div style="flex: 0.71375">
+        <img alt="#227" src="https://ik.imagekit.io/UltraDAO/wallace/the_past_ahead_227.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbkxCeeebYb1XaJ6b95tEpzXLvYXyvCUah4G4ef8uSFiT/?fxhash=opFbqSUAiLrkyBeecjFP3JUEFTCyBiRcPV29vU8TnRJvsZTpzTY&fxiteration=227&fxminter=tz1TQgbghNyRaW21NnkzN2m49QysKUn36neS" />
+      </div>
+      <div style="flex: 0.5">
+        <img alt="#36" src="https://ik.imagekit.io/UltraDAO/wallace/the_past_ahead_36.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbkxCeeebYb1XaJ6b95tEpzXLvYXyvCUah4G4ef8uSFiT/?fxhash=ooB2MayahHnprdnTW6yACkM7ikcBgumFYFHFfBbJtMTdTg7FmbC&fxiteration=36&fxminter=tz1ZhdmUaPA6BVNde8bA9FUhhwaBmMjsMMJB" />
+      </div>
     </div>
     <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
       <div class="mb-12 sm:mb-0" style="flex: 1.77774687">
@@ -363,6 +393,13 @@ permalink: /art/collection/
       <img alt="#79" src="https://ik.imagekit.io/UltraDAO/wallace/zbageti_79.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSiNazFMBbanXs6yHrEMLvaZFJc3JJixDPvM7CGSfARSh/?fxhash=onwPHU4MN9uPVFKwBPfPD7QcJ8FFgM3dqYKRHJWN7ZEvffMoqwc&fxiteration=79&fxminter=tz1NoMeiJPBThC9R6mBghNr3kfvVaw7Xr48p" />
       <img alt="#73" src="https://ik.imagekit.io/UltraDAO/wallace/zbageti_73.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSiNazFMBbanXs6yHrEMLvaZFJc3JJixDPvM7CGSfARSh/?fxhash=oniG3c6DiZGQaZg3YQPTFHd3FJio89i5AP1DC6TyBNoca9YH26Y&fxiteration=73&fxminter=tz1QYY9R3DxHSqZeEZ3JwGa48UKoBWyWiTCY" />
       <img alt="#53" src="https://ik.imagekit.io/UltraDAO/wallace/zbageti_53.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSiNazFMBbanXs6yHrEMLvaZFJc3JJixDPvM7CGSfARSh/?fxhash=opWubTuX4VK8zRCSsXoAZ3epM4CRv6b7jrrHn198ZwdyzamTJYV&fxiteration=53&fxminter=tz1aGS2uW4xHV67aZKsSUk7dGXDhT6SCixX9" />
+    </div>
+    <h3 class="artist-title">Hevey</h3>
+    <h4 class="collection-title">Fireworks</h4>
+    <div class="gallery-row gallery-triple-wide">
+      <img alt="#28" src="https://ik.imagekit.io/UltraDAO/wallace/fireworks_28.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfLziRacqz3CQKmcDmqoxsxdzCKr1pyCXMwGtHkz5HSrh/?fxhash=ooV9MVCb6FbVG23UjUw1jStFgsvHFt7YAdjoVjpHEiMuJbQu1tB&fxiteration=28&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+      <img alt="#29" src="https://ik.imagekit.io/UltraDAO/wallace/fireworks_29.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfLziRacqz3CQKmcDmqoxsxdzCKr1pyCXMwGtHkz5HSrh/?fxhash=oo6SrnLNjKaReNZ4CkKpK9t4ueHUyfYkwHvjdsb65o9hFm65Ciy&fxiteration=29&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+      <img alt="#31" src="https://ik.imagekit.io/UltraDAO/wallace/fireworks_31.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfLziRacqz3CQKmcDmqoxsxdzCKr1pyCXMwGtHkz5HSrh/?fxhash=ooYox9RJa2QEKo48jVnHMxDvF43LWdpAvAne7q3UghAJpwqSBSW&fxiteration=31&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
     </div>
     <h3 class="artist-title">Mount Vitruvius</h3>
     <h4 class="collection-title">Mind the Gap</h4>

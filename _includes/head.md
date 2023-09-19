@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/main.css?version=1.39" />
+  <link rel="stylesheet" href="/assets/main.css?version=1.4" />
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
   <meta property="og:image" content="/assets/images/chris-wallace.jpg" />
   {% seo title=false %}
@@ -29,32 +29,63 @@
   }
   </style>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      let observerIndex = 0; // Declare a separate index for IntersectionObserver
+document.addEventListener('DOMContentLoaded', function() {
+  let observerIndex = 0; // Declare a separate index for IntersectionObserver
 
-      const elements = document.querySelectorAll('.fade-in-element,.art-collection img,.art-collection h3,.art-collection h4');
-      const fadeIn = (el, delay) => {
-          setTimeout(() => {
-              el.classList.add('visible');
-          }, delay);
-      };
-      elements.forEach((el, index) => {
-          const delay = index * Math.round((300 / (elements.length / 4))); // 300ms delay for cascading effect
-          fadeIn(el, delay);
-      });
-      const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-              const delay = observerIndex * 100;  // 100ms delay for cascading effect
-              if (entry.isIntersecting) {
-                  fadeIn(entry.target, delay);
-                  observer.unobserve(entry.target);
-              }
-              observerIndex++;  // Increment the observerIndex after each entry
-          });
-      });
-      elements.forEach(el => observer.observe(el));
+  function scrollStop (callback, refresh = 66) {
+
+    // Make sure a valid callback was provided
+    if (!callback || typeof callback !== 'function') return;
+
+    // Setup scrolling variable
+    let isScrolling;
+
+    // Listen for scroll events
+    window.addEventListener('scroll', function (event) {
+
+      // Clear our timeout throughout the scroll
+      window.clearTimeout(isScrolling);
+
+      // Set a timeout to run after scrolling ends
+      isScrolling = setTimeout(callback, refresh);
+
+	  }, false);
+
+  }
+
+  // Select the elements you want to observe
+  const elements = document.querySelectorAll('.fade-in-element,.art-collection img,.art-collection h3,.art-collection h4');
+
+  scrollStop(function(){
+    observerIndex = 0;
+  });
+  
+  const fadeIn = (el, delay) => {
+    setTimeout(() => {
+      el.classList.add('visible');
+    }, delay);
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      // Only trigger if the entry is intersecting
+      if (entry.isIntersecting) {
+        const delay = observerIndex * 50;  // 100ms delay for cascading effect
+        fadeIn(entry.target, delay);
+
+        console.log(delay);
+        
+        // Unobserve the current target
+        observer.unobserve(entry.target);
+
+        // Increment observerIndex only when an element becomes visible
+        observerIndex++;
+      }
     });
+  });
 
+  // Start observing each element
+  elements.forEach(el => observer.observe(el));
+});
 </script>
-
 </head>
