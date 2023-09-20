@@ -504,6 +504,16 @@ permalink: /art/collection/
          </div>
       </div>
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+        <div style="flex: 1.4537;">
+            <h3 class="artist-title">Zach Lieberman</h3>
+            <img alt="curve lines extended study" src="https://ik.imagekit.io/UltraDAO/wallace/curve_lines_extended_study.png?tr=w-100,q-20,bl-6" />
+        </div>
+        <div style="flex: 1;">
+          <h3 class="artist-title">Matt DesLaurier</h3>
+          <img alt="RANGES02" src="https://ik.imagekit.io/UltraDAO/wallace/RANGES02.gif?tr=w-100,q-20,bl-6" />
+        </div>
+      </div>
+      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
          <div class="mb-12 sm:mb-0" style="flex: 0.7493;">
             <h3 class="artist-title">MJ Lindow</h3>
             <img alt="Impasto #204" src="https://ik.imagekit.io/UltraDAO/wallace/impasto_204.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.grailers.com/api/grail/1/live/204" />
@@ -593,19 +603,35 @@ permalink: /art/collection/
       </div>
       <h3 class="artist-title">Erik Swahn</h3>
       <h4 class="collection-title">Punktwelt</h4>
-      <div class="gallery-row gallery-double-wide">
-         <img alt="#420" src="https://ik.imagekit.io/UltraDAO/wallace/punktwelt_420.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmTjgrNyaH3iS8msm4jAFzkyCnvepoWSMxuAtejvdLAY4g/?fxhash=ooJ6N5ivCcz2CGj5NaCZJR9oWK7jx2Sc7ne5YaPMrH46TaYttQF&fxiteration=420&fxminter=tz1YM5Zu4zgEyaHi5EzLbyLoPak8rqJHU5Sh" />
-         <img alt="#556" src="https://ik.imagekit.io/UltraDAO/wallace/punktwelt_556.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmTjgrNyaH3iS8msm4jAFzkyCnvepoWSMxuAtejvdLAY4g/?fxhash=oomDR7hB3a9vKz5ZyEhS9D6BQeEZSaVDi8VvATqyRZxRjhoxRyw&fxiteration=556&fxminter=tz1eUCrnJdQUuY6C5DsEKGxKPL6EtYzXtDXD" />
+      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-6 sm:mb-12">
+        <div style="flex: 1;">
+          <img alt="#420" src="https://ik.imagekit.io/UltraDAO/wallace/punktwelt_420.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmTjgrNyaH3iS8msm4jAFzkyCnvepoWSMxuAtejvdLAY4g/?fxhash=ooJ6N5ivCcz2CGj5NaCZJR9oWK7jx2Sc7ne5YaPMrH46TaYttQF&fxiteration=420&fxminter=tz1YM5Zu4zgEyaHi5EzLbyLoPak8rqJHU5Sh" />
+         </div>
+        <div style="flex: 1;">
+          <img alt="#556" src="https://ik.imagekit.io/UltraDAO/wallace/punktwelt_556.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmTjgrNyaH3iS8msm4jAFzkyCnvepoWSMxuAtejvdLAY4g/?fxhash=oomDR7hB3a9vKz5ZyEhS9D6BQeEZSaVDi8VvATqyRZxRjhoxRyw&fxiteration=556&fxminter=tz1eUCrnJdQUuY6C5DsEKGxKPL6EtYzXtDXD" />
+        </div>
       </div>
+      <h4 class="collection-title">Farbteiler</h4>
+      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+        <div class="mb-4 sm:mb-0" style="flex: 0.7079">
+            <img alt="#2" src="https://ik.imagekit.io/UltraDAO/wallace/farbteiler_2.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPKcPEZJVZ4RoPC6JFZYWiErbUTDvW1NEYeB9k1UyeKF8/?fxhash=ooYuM7M4eegE3Na3d3Z6AkLuy44i5hSb6zP49KDPVyjEUfb4pxj&fxiteration=2&fxminter=tz1XZ8qGWQ4MukcDsgrNzUZ9VubmCRZaYGMX" />
+        </div>
+        <div class="mb-4 sm:mb-0" style="flex: 1.4159">
+            <img alt="#397" src="https://ik.imagekit.io/UltraDAO/wallace/farbteiler_397.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPKcPEZJVZ4RoPC6JFZYWiErbUTDvW1NEYeB9k1UyeKF8/?fxhash=onnF18Cniax5grYYbMYTmmvqUWrWvPPtQFCsYQSgmqDL9iMFp2F&fxiteration=397&fxminter=tz1LrJ318RRULKZUp1xgyBQdo6LyjZWvqhdz" />
+        </div>
+        <div style="flex: 1.4159">
+          <img alt="#209" src="https://ik.imagekit.io/UltraDAO/wallace/farbteiler_209.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPKcPEZJVZ4RoPC6JFZYWiErbUTDvW1NEYeB9k1UyeKF8/?fxhash=ooc7vkR2f8xrTpBedi5oDfF62KqvbT4jiekatSzW5ynim7tqPL3&fxiteration=209&fxminter=tz1bgQizGuDnp2SwbwAoULxxitZor1FAH7Tk" />
+        </div>
+    </div>
       <div class="gallery-row gallery-double-wide">
-         <div>
+          <div>
             <h3 class="artist-title">Sarah Ridgley</h3>
             <img alt="Computational Specimen No. 2" src="https://ik.imagekit.io/UltraDAO/wallace/computational_specimen_no_2.png?tr=w-100,q-20,bl-6" />
-         </div>
-         <div>
+          </div>
+          <div>
             <h3 class="artist-title">Claire Silver</h3>
             <img alt="Claire Silver - Anthropogeny" src="https://ik.imagekit.io/UltraDAO/wallace/claire_silver_anthropogeny.png?tr=w-100,q-20,bl-6" />
-         </div>
+          </div>
       </div>
       <div>
          <h3 class="artist-title">Matthias Isaaksen</h3>
