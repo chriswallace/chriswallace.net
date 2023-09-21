@@ -23,8 +23,56 @@ permalink: /art/collection/
    </div>
    <hr class="mb-12 fade-in-element" />
    <div class="art-collection">
-      <div>
+      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+         <div class="mb-12 sm:mb-0" style="flex: 1">
+            <h3 class="artist-title">Joshua Bagley</h3>
+            <h4 class="collection-title">Acoustic Drift</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/acoustic_drift.png?tr=w-100,q-20,bl-6" />
+         </div>
+         <div class="mb-12 sm:mb-0" style="flex: 0.7497">
+            <h3 class="artist-title">rudxane</h3>
+            <h4 class="collection-title">Fold #223</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/fold_223.png?tr=w-100,q-20,bl-6" />
+         </div>
+         <div style="flex: 1.4128">
+            <h3 class="artist-title">Thomas Lin Pedersen</h3>
+            <h4 class="collection-title">Diverse Mix</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/diverse_mix.png?tr=w-100,q-20,bl-6" />
+         </div>
+      </div>
+      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+         <div class="mb-12 sm:mb-0" style="flex: 0.7995">
+            <h3 class="artist-title">Tyler Hobbs &amp; Dandelion Wist</h3>
+            <h4 class="collection-title">QQL #94</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/qql_94.png?tr=w-100,q-20,bl-6" data-iframe-src="https://qql.art/generator/0x8367a713bc14212ab1bb8c55a778e43e50b8b9277706fa5e6368ffff10c10c32" />
+         </div>
+         <div class="mb-12 sm:mb-0" style="flex: 0.7497">
+            <h3 class="artist-title">ippsketch</h3>
+            <h4 class="collection-title">Bent #175</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/bent_175.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/214000175" />
+         </div>
+         <div style="flex: 0.66666">
+            <h3 class="artist-title">Rich Poole &amp; Rick Crane</h3>
+            <h4 class="collection-title">Acequia #219</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/acequia_219.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUBXzcPTme2wwfjp52Wy6Ty8oS25qguo7DLjfAMW9eRQK/?fxhash=ooQWjKEjqYfYtS5BfRMwu31Zz8ZCHDcptbtaCqvhoq9QCSHZwYW&fxiteration=219&fxminter=tz1PHnydn2z7dtW5AZUmEcGfUyN9vBqR7q4W" />
+         </div>
+      </div>
+      <h3 class="artist-title">OxBenj</h3>
+      <h4 class="collection-title">Temporality</h4>
+      <div class="gallery-row gallery-triple-wide">
+         <img alt="#36" src="https://ik.imagekit.io/UltraDAO/wallace/temporality_36.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/bafybeid7jfhsdqv6b7t4h644ekifopwoaugceoqor7geo2io6g4sb2wxru/?fxhash=ooFxA7Q6w6Tf3v6XcmfyUEtZbhq8QuGYBJ8LuFEBicqg7deutr5&fxiteration=36&fxminter=tz1hLSfpKec7dXp6rjAPKNJBYd4d2HLAQ5Wd" />
+         <img alt="#46" src="https://ik.imagekit.io/UltraDAO/wallace/temporality_46.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/bafybeid7jfhsdqv6b7t4h644ekifopwoaugceoqor7geo2io6g4sb2wxru/?fxhash=opE8UhLGWbLbhAyYRFkmXTFR9Vw1X94xp3iUaxti2jN4UjvTSaZ&fxiteration=46&fxminter=tz1cEBf7EwhAXGUtdrqSejMQFhvfkttuA3Dg" />
+         <img alt="#47" src="https://ik.imagekit.io/UltraDAO/wallace/temporality_47.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/bafybeid7jfhsdqv6b7t4h644ekifopwoaugceoqor7geo2io6g4sb2wxru/?fxhash=op2ZFqUPvVgDVz4mn2mJqamRvvLmmhRBEQYKnFU2yUMJRL6rmpG&fxiteration=47&fxminter=tz1eNdfJ8BQmUkwsSm1pZmDBAAMdNqYrTZm2" />
+      </div>
+      <h3 class="artist-title">Stefano Contiero</h3>
+      <h4 class="collection-title">Millefoglie</h4>
+      <div class="gallery-row gallery-double-wide">
+         <img alt="#104" src="https://ik.imagekit.io/UltraDAO/wallace/millefoglie_104.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmRp3MfQD5jcKNmuW4AQJfqfxch6XoiSBvHJueWCS3SgTe/?fxhash=ooitS7uceSyzmtwwrtfgyXBVW1Pgr3jS1smZJRycGS6nXYU4A31&fxiteration=104&fxminter=tz1QYf4nhmUhpDoty7iCir4r4gQa4SWVW5Hq" />
+         <img alt="#169" src="https://ik.imagekit.io/UltraDAO/wallace/millefoglie_169.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmRp3MfQD5jcKNmuW4AQJfqfxch6XoiSBvHJueWCS3SgTe/?fxhash=onvxyAGE4GADhRs3GvqWAjiyHZgX5FvzVsx1uPnThXNUwFUmCh8&fxiteration=169&fxminter=tz1cyMJ3E59Q4E9yqEXGUQ4xs9RNsuwAWDQ6" />
+      </div>
+     <div>
          <h3 class="artist-title">Manolo Gamboa Naon</h3>
+         <h4 class="collection-title">Various Works, 2021</h4>
          <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-4">
             <div class="mb-4 sm:mb-0" style="flex: 1">
                <img alt="Tempo de Amor" src="https://ik.imagekit.io/UltraDAO/wallace/tempo_de_amor.jpg?tr=w-100,q-20,bl=6" />
@@ -48,42 +96,74 @@ permalink: /art/collection/
             <img alt="mantra" src="https://ik.imagekit.io/UltraDAO/wallace/mantra.jpg?tr=w-100,q-20,bl-6" />
          </div>
       </div>
+      <h3 class="artist-title">Landlines Art</h3>
+      <h4 class="collection-title">Anfractuous</h4>
+      <div class="gallery-row gallery-triple-wide">
+         <img alt="#327" src="https://ik.imagekit.io/UltraDAO/wallace/anfractuous_327.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/bafybeignufixdkelc3vrordbmwxurup2dz5cmj6bsmxbl5z3kepxrjgwdq/?fxhash=ooLu9UbqVVMZHtDi1ooEZSSMDVYj3hAHAWVgutV2M38aJegDhhD&fxiteration=327&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU&fxparamsUpdate=7a4767da41949d5609890e7f71b576af314dafe6#0x013fb999999999999a3fb999999999999a3fbd2f1a9fbe76c9000f01014022000000000000400000000000000000000000000000003ff00000000000003fe7ae147ae147ae3fb999999999999a01013fbf3b645a1cac0800cccc99190098d9333300ffbf32730098d9ff7f0098d9999900ffbfb6ad00cccc98d900248923c900da766cdb00662698d900cc4c32b300cc4c65a60066269999006626cc8c00cc4c327300333399590066263333006666ff3f00ff7f6626009999cc4c0032b3333300cccc991900cccc991900aa6a99990054959999005495888800ff7f9999005495999900ffbf999900ffbf888800aaaa8888005555777700ff3f888800ff3f9999005555666600ff3f5555005555555500aa6a555500aaaa555500ffbf555500ff3f666600ff3f777700aaaaaaaa00ff3f777700ff3f777700ff3f777700ff3f777700ff3f777700ff3f777700ff3f777700ff3f777700aaaaaaaa00ff3f7777000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004036000000000000" />
+         <img alt="#331" src="https://ik.imagekit.io/UltraDAO/wallace/anfractuous_331.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/bafybeignufixdkelc3vrordbmwxurup2dz5cmj6bsmxbl5z3kepxrjgwdq/?fxhash=ootdvy7nNJuPB4puPfx628VvhbnWJtGVL2Rn4K2HGHKUmq3nHm9&fxiteration=331&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU&fxparamsUpdate=c857ea33f5fe419cebfbc3d55219f84711211949#0x003fd00000000000003fa999999999999a3fb999999999999a0212000140220000000000003ff00000000000003fcae147ae147ae13ff00000000000003fdd70a3d70a3d713fe999999999999a00043fc5a1cac083126f003333cccc006666cccc00ff7fffbf0065a6cccc00cccccccc00ffbf32b300cccc999900ffbfff7f00cccc666600ccccff3f0032b3cc4c0065a6662600cc8c333300ff7fcc4c0099593333003333333300cc4c66660033333273003333ff7f00cc4c999900333332b3003333cccc003333cccc00991965a6003333cccc003333cccc003333cccc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004037000000000000" />
+         <img alt="#336" src="https://ik.imagekit.io/UltraDAO/wallace/anfractuous_336.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/bafybeignufixdkelc3vrordbmwxurup2dz5cmj6bsmxbl5z3kepxrjgwdq/?fxhash=oohv8QSSE9aUHN6L745DVAC9XAmcjJjPFXE5rRpUjiv4kp3MCMG&fxiteration=336&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU&fxparamsUpdate=f6b287b0dae5e13f319f339f05ca5a131219e89e#0x0200000000000000003fae353f7ced91683fc999999999999a001400013ff000000000000040080000000000003fdccccccccccccd3ff00000000000003ff00000000000003fe000000000000000013fc7ae147ae147ae006d5b48d200248923c90091a448d20048d248d200ffbfb6ad0091646d9b00dab62489004892da760023c9916400dab648520023c9ff3f00dab6b62d00b66d2449006d5bdb3600b62ddb3600b62d244900ff3f916400b62dff7f00b62d91a400b62ddab600b62d48d200244948d2006d5b48d200da76ffbf00da76ffbf00b62ddb3600da76ffbf00da7623c900da7648d200b66d248900ff7fda7600ff7fda76000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004038000000000000" />
+         <img alt="#338" src="https://ik.imagekit.io/UltraDAO/wallace/anfractuous_338.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/bafybeignufixdkelc3vrordbmwxurup2dz5cmj6bsmxbl5z3kepxrjgwdq/?fxhash=op1sy7JZoVm9B4pzWWng2nxij2QDUw9Xvd3camvUsTBFEKraB8D&fxiteration=338&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU&fxparamsUpdate=c153073aa55b685914b058231371eee12db82feb#0x0000000000000000003fb8d4fdf3b645a23fc999999999999a00130001402200000000000040080000000000003fb1eb851eb851ec3ff00000000000003fe199999999999a3fb999999999999a01043fd000000000000000ffbfb62d00b6adb62d002489db3600b66d92240024499224009959eb51009224244900b62db66d0066665b8f00ff3fd6a300b62d6cdb006d5bffbf0091646cdb00da766cdb0099998ec200dab66cdb0048d26cdb00cccc8ec200ccccd6a300dab64892006cdbff7f0023c991640065a6285c0048d2b62d00dab6b62d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004039000000000000" />
+         <img alt="#342" src="https://ik.imagekit.io/UltraDAO/wallace/anfractuous_342.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/bafybeignufixdkelc3vrordbmwxurup2dz5cmj6bsmxbl5z3kepxrjgwdq/?fxhash=ooBkaDoUoQ5BJkTdqkFCkAJ82exRhP91fuKNqncpd4vE9zsFAkL&fxiteration=342&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU&fxparamsUpdate=bfd139c58fe31ee91941383eb951b592ed09c86c#0x0100000000000000003fb999999999999a3fc999999999999a02000001402200000000000040080000000000003fe23d70a3d70a3d3ff00000000000003ff00000000000003fe000000000000000043fc374bc6a7ef9db00b66dff3f00da76ff3f00ff7fb62d006d9bb62d00b6adff3f0023c9b62d0048d26d5b006d9b24890048d291a400ffbf48d2006d9b23c900da76dab600b66ddab600b66d48d200485248d2002449ffbf00b62d48d200b62d91a4009164ff7f00db36da7600ff3f916400b62d485200db36b62d004852b62d009164ff3f00b66dff3f002409922400b62db62d00ff3f6d1b006d1b485200ff7fda7600ff7fda7600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000403a000000000000" />
+         <img alt="#343" src="https://ik.imagekit.io/UltraDAO/wallace/anfractuous_343.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/bafybeignufixdkelc3vrordbmwxurup2dz5cmj6bsmxbl5z3kepxrjgwdq/?fxhash=onkLG3T2mjdyEQnpD32wFEzEp5AEjyViPTjshxb78UeVuMZ1cP9&fxiteration=343&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU&fxparamsUpdate=1a4616f222e6ed6719c585389155cdf1fd5cade6#0x0000000000000000003f916872b020c49c3fc999999999999a000b0001400000000000000040000000000000003fc70a3d70a3d70a3ff00000000000003ff00000000000003fe000000000000001013fbdf3b645a1cac10023c948d20048d248d20048d2ffbf0023c9b6ad0048d26d9b00b6ad248900ffbfda7600da7691640048d248520048d2b62d00ffbfdb3600b6adb62d006d9bdb3600da76b62d009164ff3f00db36b62d00b62db62d00b62dff3f00ff3f485200db369164002449da7600b62d248900b62d489200db3691a400b62d23c900db3648d200ff7f489200916448d200248948d2004892ffbf006d9bffbf00ffbf48d20023c948d200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004040800000000000" />
+      </div>
+      <h3 class="artist-title">Marcelo Soria-Rodríguez</h3>
+      <h4 class="collection-title">contrapuntos</h4>
+      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-6 sm:mb-12">
+         <div style="flex: 1;">
+            <img alt="#364" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_364.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfTQFEgcgYDohPJLJWWnrKeRMBYrRP8JF79k6kveuXEv2/?fxhash=opEBz3AH9YrPfFWShDASLAmqw6t5e3oqsNuS9fRFZ39kczBBwsi&fxiteration=364&fxminter=tz2SM2qp42H8kQchmfvexZ6G8qUHBXUbr4zK" />
+         </div>
+         <div style="flex: 1;">
+            <img alt="#500" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_500.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfTQFEgcgYDohPJLJWWnrKeRMBYrRP8JF79k6kveuXEv2/?fxhash=ooZyxJbjLAs4EW7q2p231sY1FpLVTWWqdPYfcgB5wJWSNn8WREP&fxiteration=500&fxminter=tz1bafXvnKt87p1yXPV3vvVpe6gyD7BCdjyh" />
+         </div>
+         <div style="flex: 1;">
+            <img alt="#367" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_367.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfTQFEgcgYDohPJLJWWnrKeRMBYrRP8JF79k6kveuXEv2/?fxhash=ooYKyTPwVLrK6ZmB9mFAiCTnKjRUooJbGmB5NcHXa44uskCMQBq&fxiteration=367&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+         </div>
+      </div>
+      <h4 class="collection-title">entretiempos</h4>
+      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-6 sm:mb-12">
+         <div style="flex: 1;">
+            <img alt="#865" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_865.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000865" />
+         </div>
+         <div style="flex: 1;">
+            <img alt="#690" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_690.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000690" />
+         </div>
+         <div style="flex: 1;">
+            <img alt="#654" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_654.png?tr=w-100,q-20,bl-6"    data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000654"/>
+         </div>
+         <div style="flex: 1;">
+            <img alt="#453" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_453.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000453" />
+         </div>
+      </div>
+      <h4 class="collection-title">el inefable momento</h4>
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
-         <div class="mb-12 sm:mb-0" style="flex: 1">
-            <h3 class="artist-title">Joshua Bagley</h3>
-            <img alt="Acoustic Drift" src="https://ik.imagekit.io/UltraDAO/wallace/acoustic_drift.png?tr=w-100,q-20,bl-6" />
+         <div style="flex: 1;">
+            <img alt="#620" src="https://ik.imagekit.io/UltraDAO/wallace/el_inefable_momento_620.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/bafybeigy6uzd2ek24fmcziglha7m47dhug3bqgbadvlwoxw4iktm5fpceu/?fxhash=onjoHpv5HPTmc1spTs5ohqqPaYpVKNQnGaCqq5xnQjiuNfYzCUM&fxiteration=620&fxminter=KT1CxP2oa1LbWuviJKGuEvSAxdkyL8nSJNy7" />
          </div>
-         <div class="mb-12 sm:mb-0" style="flex: 0.7497">
-            <h3 class="artist-title">rudxane</h3>
-            <img alt="Fold #223" src="https://ik.imagekit.io/UltraDAO/wallace/fold_223.png?tr=w-100,q-20,bl-6" />
+         <div style="flex: 1;">
+            <img alt="#797" src="https://ik.imagekit.io/UltraDAO/wallace/el_inefable_momento_797.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/bafybeigy6uzd2ek24fmcziglha7m47dhug3bqgbadvlwoxw4iktm5fpceu/?fxhash=opVEcbXVDu9T3WmjMYbUQvX2PvWqteekKNYJnQwfqfbYvQTGmNo&fxiteration=797&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
          </div>
-         <div style="flex: 1.4128">
-            <h3 class="artist-title">Thomas Lin Pedersen</h3>
-            <img alt="Diverse Mix" src="https://ik.imagekit.io/UltraDAO/wallace/diverse_mix.png?tr=w-100,q-20,bl-6" />
+         <div style="flex: 1;">
+            <img alt="#1089" src="https://ik.imagekit.io/UltraDAO/wallace/el_inefable_momento_1089.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/bafybeigy6uzd2ek24fmcziglha7m47dhug3bqgbadvlwoxw4iktm5fpceu/?fxhash=ooKw6R6xNNi7q85jtCKM6nVVe3sDSqrkFKmx7YrGARHATb76vL7&fxiteration=1089&fxminter=tz1VdRFNxALoiYPbD7LWdacZQSVcc2YudM6D" />
          </div>
+      </div>
+      <h3 class="artist-title">Studio Yorktown</h3>
+      <h4 class="collection-title">Tesseract</h4>
+      <div class="gallery-row gallery-quadruple-wide">
+         <img alt="#365" src="https://ik.imagekit.io/UltraDAO/wallace/tesseract_365.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbdyFbir7XfKo3u2YAEgvqJdoYQUqmEs8ffD4NeEUuvCN/?fxhash=onztbAytiMdUZnnZJ3ne8o1rYSDPvAEkGYbdHXr78QBGhmnaaTu&fxiteration=365&fxminter=tz1ZBrF4AbTyhrncrF7n7ajDMQQKEx6wbSsy" />
+         <img alt="#369" src="https://ik.imagekit.io/UltraDAO/wallace/tesseract_369.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbdyFbir7XfKo3u2YAEgvqJdoYQUqmEs8ffD4NeEUuvCN/?fxhash=opQDR4pVkuae6wJfsphu4QyaPm6ijT1TQ6486SyzpjkJ5Ub92wR&fxiteration=369&fxminter=tz1ZBrF4AbTyhrncrF7n7ajDMQQKEx6wbSsy" />
+         <img alt="#388" src="https://ik.imagekit.io/UltraDAO/wallace/tesseract_388.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbdyFbir7XfKo3u2YAEgvqJdoYQUqmEs8ffD4NeEUuvCN/?fxhash=opQnQRXBpaKTe6aCWs4Gahgp1QTB3hYKSYdH368Tg5NcAhjz2nD&fxiteration=388&fxminter=tz1ZBrF4AbTyhrncrF7n7ajDMQQKEx6wbSsy" />
+         <img alt="#431" src="https://ik.imagekit.io/UltraDAO/wallace/tesseract_431.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbdyFbir7XfKo3u2YAEgvqJdoYQUqmEs8ffD4NeEUuvCN/?fxhash=onmvNgvkRop5NSoVmQznmzNybspKJjkctJd4jfFppQA6iHSpym5&fxiteration=431&fxminter=tz2VQpR54qqKN397dD8XWXfT5jEMrRYD8Bgs" />
       </div>
       <div class="gallery-row gallery-double-wide-single-small">
          <div class="mb-12 sm:mb-0">
             <h3 class="artist-title">Harvey Rayner</h3>
-            <img alt="Reticulum" src="https://ik.imagekit.io/UltraDAO/wallace/reticulum_by_harvey_rayner.jpg?tr=w-100,q-20,bl-6" />
+            <h4 class="collection-title">Reticulum</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/reticulum_by_harvey_rayner.jpg?tr=w-100,q-20,bl-6" />
          </div>
          <div class="mb-12 sm:mb-0">
             <h3 class="artist-title">William Mapan</h3>
-            <img alt="Dragons #489" src="https://ik.imagekit.io/UltraDAO/wallace/dragons_489.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmeKNachzan9TamxbYmfhDfjkur7gbs1EEtGqMpsmyubeb/?fxhash=op8GW9Zq63p4qWsNRHS47QciYW5spKFTzMTroSMxH4EuBYaNAY7&fxiteration=489&fxminter=tz1P5jYGVw7JZLM7CNnFxGk1bSZaQovMrzfo" />
-         </div>
-      </div>
-      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
-         <div class="mb-12 sm:mb-0" style="flex: 0.7995">
-            <h3 class="artist-title">Tyler Hobbs &amp; Dandelion Wist</h3>
-            <img alt="QQL #94" src="https://ik.imagekit.io/UltraDAO/wallace/qql_94.png?tr=w-100,q-20,bl-6" data-iframe-src="https://qql.art/generator/0x8367a713bc14212ab1bb8c55a778e43e50b8b9277706fa5e6368ffff10c10c32" />
-         </div>
-         <div class="mb-12 sm:mb-0" style="flex: 0.7497">
-            <h3 class="artist-title">ippsketch</h3>
-            <img alt="Bent #175" src="https://ik.imagekit.io/UltraDAO/wallace/bent_175.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/214000175" />
-         </div>
-         <div style="flex: 0.66666">
-            <h3 class="artist-title">Rich Poole &amp; Rick Crane</h3>
-            <img alt="Acequia #219" src="https://ik.imagekit.io/UltraDAO/wallace/acequia_219.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUBXzcPTme2wwfjp52Wy6Ty8oS25qguo7DLjfAMW9eRQK/?fxhash=ooQWjKEjqYfYtS5BfRMwu31Zz8ZCHDcptbtaCqvhoq9QCSHZwYW&fxiteration=219&fxminter=tz1PHnydn2z7dtW5AZUmEcGfUyN9vBqR7q4W" />
+            <h4 class="collection-title">Dragons #489</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/dragons_489.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmeKNachzan9TamxbYmfhDfjkur7gbs1EEtGqMpsmyubeb/?fxhash=op8GW9Zq63p4qWsNRHS47QciYW5spKFTzMTroSMxH4EuBYaNAY7&fxiteration=489&fxminter=tz1P5jYGVw7JZLM7CNnFxGk1bSZaQovMrzfo" />
          </div>
       </div>
       <h3 class="artist-title">Aranda/Lasch</h3>
@@ -117,6 +197,7 @@ permalink: /art/collection/
          </div>
       </div>
       <h3 class="artist-title">Michaël Zancan</h3>
+      <h4 class="collection-title">Various Works, 2021 - 2023</h4>
       <div class="gallery-row gallery-double-wide">
          <img alt="Garden, Monoliths #125" src="https://ik.imagekit.io/UltraDAO/wallace/garden_monoliths_125.jpg?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmeuWoPt7WNMhTxMTZmumPqqw8zcCCd1K14wCHR2WoH6b2/?fxhash=ooqSn7h2GrHCn3XmNDTif3JXWnZ2DyqiSJ4YNcGuedguN6G7Y8V&fxiteration=125&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
          <img alt="(kinder)Garden, Monuments #23" src="https://ik.imagekit.io/UltraDAO/wallace/_kinder_garden_monuments_23.jpg?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmZvfCTkkAfJeWQE1ZjEKc2mZkfnNwkcA6Y2fMBcBBpPNZ/?fxhash=ooYtH4EyXP4xxd6RpX5cocqYbnTQsH9vZFxs8EPX32DhcUm1KPg&fxiteration=23&fxminter=tz1i6asBhhj3DjWLShhJaCncePohqmkw9WW9" />
@@ -124,6 +205,7 @@ permalink: /art/collection/
          <img alt="Everything, made simple" src="https://ik.imagekit.io/UltraDAO/wallace/everything_made_simple.png?tr=w-100,q-20,bl-6" />
       </div>
       <h3 class="artist-title">Piter Pasma</h3>
+      <h4 class="collection-title">Various Works, 2021 - 2023</h4>
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-6 sm:mb-12">
          <div style="flex: 1">
             <img alt="Chaos Candy Plasma Vent" src="https://ik.imagekit.io/UltraDAO/wallace/chaos_candy_plasma_vent.png?tr=w-100,q-20,bl-6" />
@@ -139,6 +221,16 @@ permalink: /art/collection/
       <div class="gallery-row gallery-double-wide">
          <img alt="#150" src="https://ik.imagekit.io/UltraDAO/wallace/hypergiraffe_150.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qmf5wUbLTDKNkpgxZWVXkv21HiiRzA2TMA6ohjVYNZs9BV/?fxhash=oo2TiFFUP9uzPZeC4BDAcscZn1cT3pyCkmcDozALyZk8oJNxHyQ&fxiteration=150&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
          <img alt="#151" src="https://ik.imagekit.io/UltraDAO/wallace/hypergiraffe_151.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qmf5wUbLTDKNkpgxZWVXkv21HiiRzA2TMA6ohjVYNZs9BV/?fxhash=oojkx3w5hpSK7c1FGprbGDg1hAjUJQUuro4pjxG9hfBNMRHgiew&fxiteration=151&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+      </div>
+      <h3 class="artist-title">Marcelo Soria-Rodriguez</h3>
+      <h4 class="collection-title">Various Works, 2022 - 2023</h4>
+      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+         <div style="flex:1.6658">
+            <img alt="centrifugal / omni (i)" src="https://ik.imagekit.io/UltraDAO/wallace/centrifugal.png?tr=w-100,q-20,bl-6" />
+         </div>
+         <div style="flex:1">
+            <img alt="failed studies on straight lines #1" src="https://ik.imagekit.io/UltraDAO/wallace/failed_studies_on_straight_lines_1.jpg?tr=w-100,q-20,bl-6" />
+         </div>
       </div>
       <h3 class="artist-title">Ferdinand Dervieux</h3>
       <h4 class="collection-title">The Past Ahead</h4>
@@ -161,32 +253,35 @@ permalink: /art/collection/
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
          <div class="mb-12 sm:mb-0" style="flex: 0.66625">
             <h3 class="artist-title">Hevey</h3>
-            <img alt="DenCity #476" src="https://ik.imagekit.io/UltraDAO/wallace/dencity_476.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPaFpXKhSLdbFmrXXoogFngkzaXZAht1VREi5gCGMwc1A/?fxhash=ooNXn3HmgnwjxJW1z3tgzgMWNKtZv96M9KVcdEH9eKy9Z2Uncnf&fxiteration=476&fxminter=tz1Sq1PXa7hvr1zJNNGN8Ay8DKAvZsLauHL8" />
+            <h4 class="collection-title">DenCity #476</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/dencity_476.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmPaFpXKhSLdbFmrXXoogFngkzaXZAht1VREi5gCGMwc1A/?fxhash=ooNXn3HmgnwjxJW1z3tgzgMWNKtZv96M9KVcdEH9eKy9Z2Uncnf&fxiteration=476&fxminter=tz1Sq1PXa7hvr1zJNNGN8Ay8DKAvZsLauHL8" />
          </div>
          <div class="mb-12 sm:mb-0" style="flex: 1">
             <h3 class="artist-title">KilledByAPixel</h3>
-            <img alt="Auto Park #361"
-               class="w-full h-auto" src="https://ik.imagekit.io/UltraDAO/wallace/auto_park_361.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmegN3BLLX6cuPB3hPcy8CwFnrB66eje1kJ6oyoDhNzaZK/?fxhash=opDTmR5siYBviEtK4ABfrpGPpjMWXkR7cpv2ZTkKAAAwFNCHM58&fxiteration=361&fxminter=tz1cHceCnSrCc6KmC83fgqwVK85actWf41gd" />
+            <h4 class="collection-title">Auto Park #361</h4>
+            <img alt="" class="w-full h-auto" src="https://ik.imagekit.io/UltraDAO/wallace/auto_park_361.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmegN3BLLX6cuPB3hPcy8CwFnrB66eje1kJ6oyoDhNzaZK/?fxhash=opDTmR5siYBviEtK4ABfrpGPpjMWXkR7cpv2ZTkKAAAwFNCHM58&fxiteration=361&fxminter=tz1cHceCnSrCc6KmC83fgqwVK85actWf41gd" />
          </div>
          <div style="flex: 1">
             <h3 class="artist-title">Lunarean</h3>
-            <img alt="Heat Death #543"
-               class="w-full h-auto" src="https://ik.imagekit.io/UltraDAO/wallace/heat_death_543.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbXCxAvSDdhcyHEEhrdcD6cpduuQqNZHpntkD55e7hf2i/?fxhash=onmEVoGiJDKJ7t3WHqaPGwdif1S3frdHGG7nGWa9nBgex68dQtm&fxiteration=543&fxminter=KT1CxP2oa1LbWuviJKGuEvSAxdkyL8nSJNy7" />
+            <h4 class="collection-title">Heat Death #543</h4>
+            <img alt="" class="w-full h-auto" src="https://ik.imagekit.io/UltraDAO/wallace/heat_death_543.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbXCxAvSDdhcyHEEhrdcD6cpduuQqNZHpntkD55e7hf2i/?fxhash=onmEVoGiJDKJ7t3WHqaPGwdif1S3frdHGG7nGWa9nBgex68dQtm&fxiteration=543&fxminter=KT1CxP2oa1LbWuviJKGuEvSAxdkyL8nSJNy7" />
          </div>
       </div>
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
          <div class="mb-12 sm:mb-0" style="flex: 1.77774687">
             <h3 class="artist-title">p1xelfool</h3>
-            <img alt="kaiC" src="https://ik.imagekit.io/UltraDAO/wallace/kaic.gif?tr=w-100,q-20,bl-6" />
+            <h4 class="collection-title">kaiC</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/kaic.gif?tr=w-100,q-20,bl-6" />
          </div>
          <div style="flex: 1">
             <h3 class="artist-title">Kim Asendorf</h3>
-            <img alt="8 18 54 51"
-               class="w-full h-auto" src="https://ik.imagekit.io/UltraDAO/wallace/8_18_54_51.gif?tr=w-100,q-20,bl-6" />
+            <h4 class="collection-title">8 18 54 51</h4>
+            <img alt="" class="w-full h-auto" src="https://ik.imagekit.io/UltraDAO/wallace/8_18_54_51.gif?tr=w-100,q-20,bl-6" />
          </div>
       </div>
       <div>
          <h3 class="artist-title">Qubibi</h3>
+         <h4 class="collection-title">Various Works, 2021 - 2023</h4>
          <div class="gallery-row gallery-flex mb-0 sm:mb-4">
             <div style="flex: 1">
                <img alt="MMZ ERRR 3 B" src="https://ik.imagekit.io/UltraDAO/wallace/mmz_errr_3_b.gif?tr=w-100,q-20,bl-6" />
@@ -247,24 +342,16 @@ permalink: /art/collection/
             <img alt="#34" src="https://ik.imagekit.io/UltraDAO/wallace/kyma_34.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qmd3B5bUi7k1GuaJ8xX1squcX6sopfEQrPbDeTHU2iE6SX/?fxhash=ookDFnm5ZWRVNCQe9gvPfYrdyQaFVs7EH3LUyKSxrkVaqi7zEa7&fxiteration=34&fxminter=tz1PB9bzCecPNF9Tp6Gy6KunwxxFA7wqJ4E6" />
          </div>
       </div>
-      <h3 class="artist-title">Marcelo Soria-Rodríguez</h3>
-      <h4 class="collection-title">contrapuntos</h4>
-      <div class="gallery-row gallery-triple-wide">
-         <img alt="#364" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_364.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfTQFEgcgYDohPJLJWWnrKeRMBYrRP8JF79k6kveuXEv2/?fxhash=opEBz3AH9YrPfFWShDASLAmqw6t5e3oqsNuS9fRFZ39kczBBwsi&fxiteration=364&fxminter=tz2SM2qp42H8kQchmfvexZ6G8qUHBXUbr4zK" />
-         <img alt="#500" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_500.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfTQFEgcgYDohPJLJWWnrKeRMBYrRP8JF79k6kveuXEv2/?fxhash=ooZyxJbjLAs4EW7q2p231sY1FpLVTWWqdPYfcgB5wJWSNn8WREP&fxiteration=500&fxminter=tz1bafXvnKt87p1yXPV3vvVpe6gyD7BCdjyh" />
-         <img alt="#367" src="https://ik.imagekit.io/UltraDAO/wallace/contrapuntos_367.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfTQFEgcgYDohPJLJWWnrKeRMBYrRP8JF79k6kveuXEv2/?fxhash=ooYKyTPwVLrK6ZmB9mFAiCTnKjRUooJbGmB5NcHXa44uskCMQBq&fxiteration=367&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
-      </div>
       <h3 class="artist-title">Iskra Velitchkova &amp; Zach Lieberman</h3>
       <h4 class="collection-title">horizon(te)s</h4>
       <div class="gallery-row gallery-double-wide">
          <img alt="#102" src="https://ik.imagekit.io/UltraDAO/wallace/horizontes_102.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmePX7dqW9WFdm1rvNc5hmVmyJ2JdWbKxpCGzyEFPTCuRT/?fxhash=onfko6ovFsLHGrggVnxWzqTAuJY4MirvwaRj1qDw9ihbwkvUPTT&fxiteration=102&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
          <img alt="#375" src="https://ik.imagekit.io/UltraDAO/wallace/horizontes_375.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmePX7dqW9WFdm1rvNc5hmVmyJ2JdWbKxpCGzyEFPTCuRT/?fxhash=oo4owQ54cBxxXecJ11EWWKWUqL22qXVuhX3945BmRA5QW88o9Nq&fxiteration=375&fxminter=tz1f1c3zAG6v2agecY7o4dk84STEyggsoDUm" />
       </div>
-      <h3 class="artist-title">
-        Frederik Vanhoutte
-      </h3>
+      <h3 class="artist-title">Frederik Vanhoutte</h3>
+      <h4 class="collection-title">IsoTetris III 210715</h4>
       <div class="gallery-row gallery-single-wide">
-        <img alt="IsoTetris III 210715" src="https://ik.imagekit.io/UltraDAO/wallace/IsoTetris_III_210715.png?tr=w-100,q-20,bl-6" />
+        <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/IsoTetris_III_210715.png?tr=w-100,q-20,bl-6" />
       </div>
       <h3 class="artist-title">dmarchi</h3>
       <h4 class="collection-title">Bravura</h4>
@@ -282,27 +369,27 @@ permalink: /art/collection/
          <img alt="#167" src="https://ik.imagekit.io/UltraDAO/wallace/spatial_curvatures_167.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x32d4be5ee74376e08038d652d4dc26e62c67f436/7000167" />
       </div>
       <div>
-         <h3 class="artist-title">
-            Richard Nadler &amp; Leander Herzog
-         </h3>
+         <h3 class="artist-title">Richard Nadler &amp; Leander Herzog</h3>
+         <h4 class="collection-title">Gerhard &amp; Richter</h4>
          <div class="gallery-row gallery-double-wide">
-            <img alt="Gerhard #368" src="https://ik.imagekit.io/UltraDAO/wallace/gerhard_368.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmW7Cj5QMG2FFVGMcRKGFhW4V1113seN6iX5FwQrKqTHSM/?fxhash=oo3iCxnjsGQU6Jx4xZpf4Zfc3EPoXWkYhsqXTyGwnGQQKWUjrDB&fxiteration=368&fxminter=tz1Yw6YSydH7qb4vERwxAmSnsihfRcVvnLL3" data-iframe-size="fullscreen" />
-            <img alt="Richter #399" src="https://ik.imagekit.io/UltraDAO/wallace/richter_399.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQzbsQM9hd6vc821LmpHCkLXv18fZfhbJf6ygyVhqWB5a/?fxhash=opQ7z15XLoNzWauyGgashqrsyB6zenAjUHpPBAsvMe6dknwj4JQ&amp;fxiteration=399&amp;fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" data-iframe-size="fullscreen" />
+            <img alt="#368" src="https://ik.imagekit.io/UltraDAO/wallace/gerhard_368.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmW7Cj5QMG2FFVGMcRKGFhW4V1113seN6iX5FwQrKqTHSM/?fxhash=oo3iCxnjsGQU6Jx4xZpf4Zfc3EPoXWkYhsqXTyGwnGQQKWUjrDB&fxiteration=368&fxminter=tz1Yw6YSydH7qb4vERwxAmSnsihfRcVvnLL3" data-iframe-size="fullscreen" />
+            <img alt="#399" src="https://ik.imagekit.io/UltraDAO/wallace/richter_399.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQzbsQM9hd6vc821LmpHCkLXv18fZfhbJf6ygyVhqWB5a/?fxhash=opQ7z15XLoNzWauyGgashqrsyB6zenAjUHpPBAsvMe6dknwj4JQ&amp;fxiteration=399&amp;fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" data-iframe-size="fullscreen" />
          </div>
       </div>
-      <h3 class="artist-title">Marcelo Soria-Rodríguez</h3>
-      <h4 class="collection-title">entretiempos</h4>
-      <div class="gallery-row gallery-quadruple-wide">
-         <img alt="#865" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_865.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000865" />
-         <img alt="#690" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_690.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000690" />
-         <img alt="#654" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_654.png?tr=w-100,q-20,bl-6"  data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000654"/>
-         <img alt="#453" src="https://ik.imagekit.io/UltraDAO/wallace/entretiempos_453.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000453" />
-      </div>
-      <div class="gallery-row gallery-single-wide-constrained">
-         <h3 class="artist-title">Marcelo Soria-Rodgriguez</h3>
-         <img alt="centrifugal / omni (i) by Marcelo Soria-Rodgriguez" src="https://ik.imagekit.io/UltraDAO/wallace/centrifugal.png?tr=w-100,q-20,bl-6" />
+     <div>
+         <h3 class="artist-title">Erik Swahn</h3>
+         <h4 class="collection-title">Fields</h4>
+         <div class="gallery-row gallery-flex">
+            <div style="flex: 1">
+               <img alt="#648" src="https://ik.imagekit.io/UltraDAO/wallace/fields_648.png?tr=w-100,q-20,bl-6" data-iframe-src="https://1p.infura-ipfs.io/ipfs/QmaZjrAunVrZNHozBv9AUR2CjxwZj4qsg3kFgiU7egsZRc/?payload=eyJoYXNoIjoiMHg3ZDdkMTIyMGFmMDg1OWExMjYwMWRmODE4MmU5MGQ3NzRjZThjOGM1YmMyMjFiZTE5MGUwMDNjMTBjNGM4MDhmIiwiZWRpdGlvbk51bWJlciI6MCwidG90YWxFZGl0aW9ucyI6MCwidXNlcklucHV0IjpudWxsfQ%3D%3D" />
+            </div>
+            <div style="flex: 1.25">
+               <img alt="#695" src="https://ik.imagekit.io/UltraDAO/wallace/fields_695.png?tr=w-100,q-20,bl-6" data-iframe-src="https://1p.infura-ipfs.io/ipfs/QmaZjrAunVrZNHozBv9AUR2CjxwZj4qsg3kFgiU7egsZRc/?payload=eyJoYXNoIjoiMHhlMTkwZThlYmQ4NDg5N2QwYzhmYjM2MWE4Njg0NjkwM2ExOTNmNjBjMWEwYTdhNGI3NTFhNzhhMjI3OTAzOWUwIiwiZWRpdGlvbk51bWJlciI6MCwidG90YWxFZGl0aW9ucyI6MCwidXNlcklucHV0IjpudWxsfQ%3D%3D" />
+            </div>
+         </div>
       </div>
       <h3 class="artist-title">Helena Sarin</h3>
+      <h4 class="collection-title">Various Works, 2021 - 2023</h4>
       <div class="gallery-row gallery-quadruple-wide">
          <div class="sm:col-span-2">
             <img alt="Cats of Latentscaux" src="https://ik.imagekit.io/UltraDAO/wallace/cats_of_latentscaux.png?tr=w-100,q-20,bl-6" />
@@ -318,19 +405,23 @@ permalink: /art/collection/
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
         <div style="flex: 0.5994;">
             <h3 class="artist-title">Stefano Contiero</h3>
-            <img alt="Leggenda #489" src="https://ik.imagekit.io/UltraDAO/wallace/leggenda_489.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x13aae6f9599880edbb7d144bb13f1212cee99533/1000489" />
+            <h4 class="collection-title">Leggenda #489</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/leggenda_489.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x13aae6f9599880edbb7d144bb13f1212cee99533/1000489" />
         </div>
         <div style="flex: 0.7">
-          <h3 class="artist-title">Antigoon</h3>
-          <img alt="Bandeau #2" src="https://ik.imagekit.io/UltraDAO/wallace/bandeau_2.png?tr=w-100,q-20,bl-6" />
+            <h3 class="artist-title">Antigoon</h3>
+            <h4 class="collection-title">Bandeau #2</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/bandeau_2.png?tr=w-100,q-20,bl-6" />
         </div>
         <div style="flex: 0.7">
-          <h3 class="artist-title">Aluan Wang</h3>
-          <img alt="chaos memory #154" src="https://ik.imagekit.io/UltraDAO/wallace/chaos_memory_154.png?tr=w-100,q-20,bl-6" />
+            <h3 class="artist-title">Aluan Wang</h3>
+            <h4 class="collection-title">chaos memory #154</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/chaos_memory_154.png?tr=w-100,q-20,bl-6" />
         </div>
       </div>
       <div>
          <h3 class="artist-title">Iskra Velitchkova</h3>
+         <h4 class="collection-title">Various Works, 2021 - 2022</h4>
          <div class="gallery-row gallery-flex sm:mb-4">
             <div style="flex: 1">
                <img alt="🐥🪱" src="https://ik.imagekit.io/UltraDAO/wallace/_a_bird_as_if_a_worm_as_a_bird_as_a_worm_for_bird_and_worm_society.png?tr=w-100,q-20,bl-6" />
@@ -362,17 +453,43 @@ permalink: /art/collection/
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
          <div class="mb-12 sm:mb-0" style="flex: 1.1847">
             <h3 class="artist-title">William Watkins</h3>
-            <img alt="Anachronous #212" src="https://ik.imagekit.io/UltraDAO/wallace/anachronous_212.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUppEx69BMuCvDw8BgzvtQJpm5nfcPsRnfC9sQHYYowNG/?fxhash=onjuo24vNBuAqmgqRWZvbLqeSBWGZjDDDN2zCw9eZq11HGAxSwn&fxiteration=212&fxminter=tz1TQwgFBgLjz5YGrjAUMg8r9eTMwbkeZqM7" data-iframe-size="fullscreen"  />
+            <h4 class="collection-title">Anachronous #212</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/anachronous_212.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUppEx69BMuCvDw8BgzvtQJpm5nfcPsRnfC9sQHYYowNG/?fxhash=onjuo24vNBuAqmgqRWZvbLqeSBWGZjDDDN2zCw9eZq11HGAxSwn&fxiteration=212&fxminter=tz1TQwgFBgLjz5YGrjAUMg8r9eTMwbkeZqM7" data-iframe-size="fullscreen"  />
          </div>
          <div style="flex: 0.7689">
             <h3 class="artist-title">Arsiliath &amp; Monotau</h3>
-            <img alt="Chrysalis #442" src="https://ik.imagekit.io/UltraDAO/wallace/chrysalis_442.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmaPzWywTwfJFV65wU49zGVJgn6rsFE7bVLH2fT3x7XQ64/?fxhash=onfPCR9zN8TxF9ibSUcCnEUDQcWxzp2ESXgwiSSdegyDTZK7e8M&fxiteration=442&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" data-iframe-size="fullscreen" />
+            <h4 class="collection-title">Chrysalis #442</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/chrysalis_442.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmaPzWywTwfJFV65wU49zGVJgn6rsFE7bVLH2fT3x7XQ64/?fxhash=onfPCR9zN8TxF9ibSUcCnEUDQcWxzp2ESXgwiSSdegyDTZK7e8M&fxiteration=442&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" data-iframe-size="fullscreen" />
          </div>
       </div>
-      <h3 class="artist-title">Olivier Bodini</h3>
-      <div class="gallery-row gallery-double-wide">
-         <img alt="The sky is so colorful tonight" src="https://ik.imagekit.io/UltraDAO/wallace/the_sky_is_so_colorful_tonight.png?tr=w-100,q-20,bl-6" />
-         <img alt="A black sun over the war" src="https://ik.imagekit.io/UltraDAO/wallace/a_black_sun_over_the_war_by_olivier_bodini.png?tr=w-100,q-20,bl-6" />
+      <h3 class="artist-title">Olivier Bodini / MunstrA</h3>
+      <h4 class="collection-title">Various Works, 2022-2023</h4>
+      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-4">
+         <div class="mb-12 sm:mb-0" style="flex: 1.01516">
+            <img alt="The sky is so colorful tonight" src="https://ik.imagekit.io/UltraDAO/wallace/the_sky_is_so_colorful_tonight.png?tr=w-100,q-20,bl-6" />
+         </div>
+         <div class="mb-12 sm:mb-0" style="flex: 1">
+            <img alt="A black sun over the war" src="https://ik.imagekit.io/UltraDAO/wallace/a_black_sun_over_the_war_by_olivier_bodini.png?tr=w-100,q-20,bl-6" />
+         </div>
+      </div>
+      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-4">
+         <div class="mb-12 sm:mb-0" style="flex: 1">
+            <img alt="Weird Animal" src="https://ik.imagekit.io/UltraDAO/wallace/weird_animal.png?tr=w-100,q-20,bl-6" />
+         </div>
+        <div style="flex: 1.33689">
+            <img alt="MilleFleurs" src="https://ik.imagekit.io/UltraDAO/wallace/millefleurs.png?tr=w-100,q-20,bl-6" />
+         </div>
+         <div class="mb-12 sm:mb-0" style="flex: 1">
+            <img alt="Positive Vibes" src="https://ik.imagekit.io/UltraDAO/wallace/positive_vibes.png?tr=w-100,q-20,bl-6" />
+         </div>
+      </div>
+      <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
+         <div class="mb-12 sm:mb-0" style="flex: 1.0475">
+            <img alt="Under the sea..." src="https://ik.imagekit.io/UltraDAO/wallace/under_the_sea.png?tr=w-100,q-20,bl-6" />
+         </div>
+         <div style="flex: 1.0114">
+            <img alt="Another life" src="https://ik.imagekit.io/UltraDAO/wallace/another_life.png?tr=w-100,q-20,bl-6" />
+         </div>
       </div>
       <h3 class="artist-title">Lars Wander</h3>
       <h4 class="collection-title">Unfolded</h4>
@@ -393,6 +510,19 @@ permalink: /art/collection/
             <img alt="#5" src="https://ik.imagekit.io/UltraDAO/wallace/unfolded_5.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmNhLK8N1w19yUqTKTt9PrUzhp58icUyPkwypogrv2kdbo/?fxhash=ooLhP974TGZjM1hhBJXoQMy9YEV9Vh5vRtk7KmBnaRrP4pyatqR&fxiteration=5&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
          </div>
       </div>
+      <h3 class="artist-title">rudxane</h3>
+      <h4 class="collection-title">Tych</h4>
+      <div class="gallery-row gallery-triple-wide">
+         <img alt="#91" src="https://ik.imagekit.io/UltraDAO/wallace/tych_91.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=oohULZpYZ42J22qAmyngtx5bhL7yPo7WAAN4oN4qfhy55vNn2JH&fxiteration=91&fxminter=tz1Yh2AR1dzaamNdkuoiYqGkpe8PwVX2JeHb" />
+         <img alt="#123" src="https://ik.imagekit.io/UltraDAO/wallace/tych_123.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=ooTdjrPnkjGa9pGCoeUmcTeFnWvdM3JLXr7PbobPkgAFs7KkYKC&fxiteration=123&fxminter=tz2EZC7yLhS8uf4U66XfNzimP1pdeiSTNGXx" />
+         <img alt="#195" src="https://ik.imagekit.io/UltraDAO/wallace/tych_195.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=oneiRtMv2L8DuhCvXP4mufrc1owSxx9AmRZyRyW4bfmq7a6CPt9&fxiteration=195&fxminter=tz1RPZp6NLzn7x4g7jhqHtCkhCQVnhbVMj8y" />
+         <img alt="#305" src="https://ik.imagekit.io/UltraDAO/wallace/tych_305.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=ong755x7VfQCxqG8UtCyGDVqyqVyEyZByYCxKLhwaUZzpsigzTy&fxiteration=305&fxminter=tz1LokKdPXHGxPuD2hKq7JPQeZy5BiV7VxGK" />
+         <img alt="#99" src="https://ik.imagekit.io/UltraDAO/wallace/tych_99.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=oo4FWcVEFpnu2Gm7EpPPWKTQcgVJbuviKs62rYtvFEKE9U2fgFT&fxiteration=99&fxminter=tz1iMAT1obCnntPpmief2g3MS2kNnDesqDs5" />
+         <img alt="#176" src="https://ik.imagekit.io/UltraDAO/wallace/tych_176.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=ooQVXJnQpLUivry6uCQdidYJ4FcG9WUJdxZo2iMnYg4nwAHAoWA&fxiteration=176&fxminter=tz1UPdmE4NUqdJrVnhuXuuzb6WN27Evi7ac4" />
+         <img alt="#185" src="https://ik.imagekit.io/UltraDAO/wallace/tych_185.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=opHmKM1gghde1TZ7r1vS6dZPntruyhwF59Njp8Ld5Y6wuKdXt1x&fxiteration=185&fxminter=tz2Sj1asuMEYxmgNubyaULEb8DtUsvF2BbG5" />
+         <img alt="#190" src="https://ik.imagekit.io/UltraDAO/wallace/tych_190.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=ooWnjVAcZsxEQZGLe74UkNtsa1tNXVaHEcVFnSxeqNWdsukW7dU&fxiteration=190&fxminter=tz1TQSKJmsS3SW57jFVrrRckEi1HZMgAjRxp" />
+         <img alt="#309" src="https://ik.imagekit.io/UltraDAO/wallace/tych_309.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=ooujn95TxXnCJRCXsYwKzzgDQgJSd6ywtvpNCcGUx3quTaRZCXk&fxiteration=309&fxminter=tz1ZhdmUaPA6BVNde8bA9FUhhwaBmMjsMMJB" />
+      </div>
       <!--
       <h3 class="artist-title">Melissa Wiederrecht</h3>
       <h4 class="collection-title">Zbageti</h4>
@@ -407,7 +537,26 @@ permalink: /art/collection/
          <img alt="#29" src="https://ik.imagekit.io/UltraDAO/wallace/fireworks_29.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfLziRacqz3CQKmcDmqoxsxdzCKr1pyCXMwGtHkz5HSrh/?fxhash=oo6SrnLNjKaReNZ4CkKpK9t4ueHUyfYkwHvjdsb65o9hFm65Ciy&fxiteration=29&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
          <img alt="#31" src="https://ik.imagekit.io/UltraDAO/wallace/fireworks_31.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfLziRacqz3CQKmcDmqoxsxdzCKr1pyCXMwGtHkz5HSrh/?fxhash=ooYox9RJa2QEKo48jVnHMxDvF43LWdpAvAne7q3UghAJpwqSBSW&fxiteration=31&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
          <img alt="#28" src="https://ik.imagekit.io/UltraDAO/wallace/fireworks_28.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmfLziRacqz3CQKmcDmqoxsxdzCKr1pyCXMwGtHkz5HSrh/?fxhash=ooV9MVCb6FbVG23UjUw1jStFgsvHFt7YAdjoVjpHEiMuJbQu1tB&fxiteration=28&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+      </div>
+      <h3 class="artist-title">Tyler Boswell</h3>
+      <h4 class="collection-title">ASSEMBLING MACHINE</h4>
+      <div class="gallery-row gallery-triple-wide">
+         <img alt="#243" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_243.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmYKuXYG5tG7sLnpw5mqGsLLYeWyyvEwTP3nTqP4xCMzAA/?fxhash=onsHGPnXVZQCv6fqG9zghvQRnMjeJzBi6dQEM9L66ahHpu1HBNh&fxiteration=243&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+         <img alt="#76" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_76.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmYKuXYG5tG7sLnpw5mqGsLLYeWyyvEwTP3nTqP4xCMzAA/?fxhash=ooAWwe6oKSCYYCZvfrpfKLa7QvP7kDGZm5ZTU8vYK4yGwYRuMEH&fxiteration=76&fxminter=tz1RkdvMZvkQpFvLqK23Q126o8JUKqYtneTV" />
+         <img alt="#134" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_134.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmYKuXYG5tG7sLnpw5mqGsLLYeWyyvEwTP3nTqP4xCMzAA/?fxhash=oohnvir5YZNSfoL9dDk7DFv2YqZ5rXUN76H8g1wseBiTtGenynn&fxiteration=134&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
       </div>-->
+      <div>
+         <h3 class="artist-title">Yazid</h3>
+         <h4 class="collection-title">Ir/rational Beauty</h4>
+         <div class="gallery-row gallery-flex">
+            <div style="flex: 0.833125">
+               <img alt="#107" src="https://ik.imagekit.io/UltraDAO/wallace/irrational_beauty_107.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM/?fxhash=ooMkJ1sbnrjd1rU25bUmuKjHUAqU3s1AEZA3KypMiHcLjM5uGes&amp;fxiteration=107&amp;fxminter=tz1ZFsnAQ8UorVbyiMcTP63djTMDcj3rrSc3" />
+            </div>
+            <div style="flex: 1.6194332">
+               <img alt="#65" src="https://ik.imagekit.io/UltraDAO/wallace/irrational_beauty_65.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM/?fxhash=ooz5Rf6wR1CkCNPWY3hdDrNThjfy7gHfBRVfzHjyd9W2z1AE2nF&amp;fxiteration=65&amp;fxminter=tz1gLeXAGc1Rho2UTE246xD26SapeyztMF8E" />
+            </div>
+         </div>
+      </div>
       <h3 class="artist-title">Nadieh Bremer</h3>
       <h4 class="collection-title">Obscured</h4>
       <div class="gallery-row gallery-triple-wide-single-small">
@@ -428,13 +577,6 @@ permalink: /art/collection/
          <img alt="#43" src="https://ik.imagekit.io/UltraDAO/wallace/deconstructions_43.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmT9mnqtMpyEegioKRbaMfmNgqDHS7GixRna6PMCsdQTmC/?fxhash=oocmJ2aLFbHP1gzhZQaRy245d9zkTgd9bZypisnxpQBmJCPYR7J&fxiteration=43&fxminter=tz1QsBw8pXSHit9pVmZE4npfJcbE4xi7HUgg" />
          <img alt="#217" src="https://ik.imagekit.io/UltraDAO/wallace/deconstructions_217.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmT9mnqtMpyEegioKRbaMfmNgqDHS7GixRna6PMCsdQTmC/?fxhash=opa7aptHLCEv5mfqhsx1huB29pzhRsg9fvSdBG9t6FQSARPSTNW&fxiteration=217&fxminter=tz1fQWvoT1SL9K518tzf3miJ1DtXGN7DYdoD" />
          <img alt="#224" src="https://ik.imagekit.io/UltraDAO/wallace/deconstructions_224.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmT9mnqtMpyEegioKRbaMfmNgqDHS7GixRna6PMCsdQTmC/?fxhash=op6cKZRihz7BkeyjtqztDNMVvumLveMGDfhW9SA5Dt1eik2DVjf&fxiteration=224&fxminter=tz1QsBw8pXSHit9pVmZE4npfJcbE4xi7HUgg" />
-      </div>
-      <h3 class="artist-title">Tyler Boswell</h3>
-      <h4 class="collection-title">ASSEMBLING MACHINE</h4>
-      <div class="gallery-row gallery-triple-wide">
-         <img alt="#243" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_243.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmYKuXYG5tG7sLnpw5mqGsLLYeWyyvEwTP3nTqP4xCMzAA/?fxhash=onsHGPnXVZQCv6fqG9zghvQRnMjeJzBi6dQEM9L66ahHpu1HBNh&fxiteration=243&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
-         <img alt="#76" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_76.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmYKuXYG5tG7sLnpw5mqGsLLYeWyyvEwTP3nTqP4xCMzAA/?fxhash=ooAWwe6oKSCYYCZvfrpfKLa7QvP7kDGZm5ZTU8vYK4yGwYRuMEH&fxiteration=76&fxminter=tz1RkdvMZvkQpFvLqK23Q126o8JUKqYtneTV" />
-         <img alt="#134" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_134.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmYKuXYG5tG7sLnpw5mqGsLLYeWyyvEwTP3nTqP4xCMzAA/?fxhash=oohnvir5YZNSfoL9dDk7DFv2YqZ5rXUN76H8g1wseBiTtGenynn&fxiteration=134&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
       </div>
       <h3 class="artist-title">Mount Vitruvius</h3>
       <h4 class="collection-title">Mind the Gap</h4>
@@ -473,6 +615,7 @@ permalink: /art/collection/
          <img alt="#215" src="https://ik.imagekit.io/UltraDAO/wallace/impressions_of_order_215.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmVmLjioMSXFNfJUWzrdMdUdcyGpmxoweNZB9rvYTJcXso/?fxhash=oneGvmLR74A2najLdLav8BGgCqYQRTorqmWrNH8FCGw2fF7Xy7d&fxiteration=215&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
       </div>
       <h3 class="artist-title">Chepertom</h3>
+      <h4 class="collection-title">RAD</h4>
       <div class="gallery-row gallery-triple-wide-single-small">
          <img alt="Circuit_Bending_3.RAD" src="https://ik.imagekit.io/UltraDAO/wallace/circuit_bending_3_rad.png?tr=w-100,q-20,bl-6" />
          <img alt="Purple.RAD" src="https://ik.imagekit.io/UltraDAO/wallace/purple_rad.png?tr=w-100,q-20,bl-6" />
@@ -496,31 +639,37 @@ permalink: /art/collection/
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
          <div class="mb-12 sm:mb-0" style="flex: 1.5006;">
             <h3 class="artist-title">Kjetil Golid</h3>
-            <img alt="Crude Figures" src="https://ik.imagekit.io/UltraDAO/wallace/crude_figures.png?tr=w-100,q-20,bl-6" />
+            <h4 class="collection-title">Crude Figures</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/crude_figures.png?tr=w-100,q-20,bl-6" />
          </div>
          <div style="flex: 1.7777;">
             <h3 class="artist-title">Ix Shells</h3>
-            <img alt="STRINGS PROTOTYPE :::..._ #13/20" src="https://ik.imagekit.io/UltraDAO/wallace/strings_prototype_13_20.png?tr=w-100,q-20,bl-6" />
+            <h4 class="collection-title">STRINGS PROTOTYPE :::..._ #13/20</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/strings_prototype_13_20.png?tr=w-100,q-20,bl-6" />
          </div>
       </div>
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
         <div style="flex: 1.4537;">
             <h3 class="artist-title">Zach Lieberman</h3>
-            <img alt="curve lines extended study" src="https://ik.imagekit.io/UltraDAO/wallace/curve_lines_extended_study.png?tr=w-100,q-20,bl-6" />
+            <h4 class="collection-title">curve lines extended study</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/curve_lines_extended_study.png?tr=w-100,q-20,bl-6" />
         </div>
         <div style="flex: 1;">
           <h3 class="artist-title">Matt DesLaurier</h3>
-          <img alt="RANGES02" src="https://ik.imagekit.io/UltraDAO/wallace/RANGES02.gif?tr=w-100,q-20,bl-6" />
+            <h4 class="collection-title">RANGES02</h4>
+          <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/RANGES02.gif?tr=w-100,q-20,bl-6" />
         </div>
       </div>
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
          <div class="mb-12 sm:mb-0" style="flex: 0.7493;">
             <h3 class="artist-title">MJ Lindow</h3>
-            <img alt="Impasto #204" src="https://ik.imagekit.io/UltraDAO/wallace/impasto_204.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.grailers.com/api/grail/1/live/204" />
+            <h4 class="collection-title">Impasto #204</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/impasto_204.png?tr=w-100,q-20,bl-6" data-iframe-src="https://www.grailers.com/api/grail/1/live/204" />
          </div>
          <div style="flex: 1;">
             <h3 class="artist-title">Nat Sarkissian</h3>
-            <img alt="Bardez #149" src="https://ik.imagekit.io/UltraDAO/wallace/bardez_149.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmaquYUaZjhab8HHoU7bpeoZ6hHv6JuEC7vkjBFMVqnS3G/?fxhash=oomSFsGqaC9Ge1Smux3f74F77ki7hyNPvwrBLAUa3BfRznKRdxx&fxiteration=149&fxminter=tz1enGoKdJHrWUNrX6PbafrASnQ7Utju1xyB" />
+            <h4 class="collection-title">Bardez #149</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/bardez_149.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmaquYUaZjhab8HHoU7bpeoZ6hHv6JuEC7vkjBFMVqnS3G/?fxhash=oomSFsGqaC9Ge1Smux3f74F77ki7hyNPvwrBLAUa3BfRznKRdxx&fxiteration=149&fxminter=tz1enGoKdJHrWUNrX6PbafrASnQ7Utju1xyB" />
          </div>
       </div>
       <h3 class="artist-title">Ryan Bell</h3>
@@ -534,12 +683,13 @@ permalink: /art/collection/
          <img alt="#360" src="https://ik.imagekit.io/UltraDAO/wallace/microgravity_360.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQQXDgS4MPBwMQC5qxcPkX7AAP26zDRsrgUYoY2XGQ38K/?fxhash=opFBgf1mEnMBaufrxcgkXm8L4URwTCRyJP1i5eRm2WTY23g7J61&fxiteration=360&fxminter=KT1CxP2oa1LbWuviJKGuEvSAxdkyL8nSJNy7" />
       </div>
       <h3 class="artist-title">Saskia Freeke</h3>
+      <h4 class="collection-title">Various Works, 2021</h4>
       <div class="gallery-row hidden sm:visible sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
          <div class="mb-12 sm:mb-0" style="flex: 1">
-            <img alt="Etched Sinuosity #2" src="https://ik.imagekit.io/UltraDAO/wallace/etched_sinuosity_2.png?tr=w-100,q-20,bl-6" data-iframe-src="https://ipfs.io/ipfs/QmbdemW25i8uqXa4okK5jKXP3EDvezeT27tfEgoZcK8shZ/"  data-iframe-size="fullscreen" />
+            <img alt="Etched Sinuosity #2" src="https://ik.imagekit.io/UltraDAO/wallace/etched_sinuosity_2.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbdemW25i8uqXa4okK5jKXP3EDvezeT27tfEgoZcK8shZ/"  data-iframe-size="fullscreen" />
          </div>
          <div style="flex: 1">
-            <img alt="Fluctuating Paragon #3" src="https://ik.imagekit.io/UltraDAO/wallace/fluctuating_paragon_3.png?tr=w-100,q-20,bl-6" data-iframe-src="https://ipfs.io/ipfs/QmZoGW3fJhgm5j5ijBK31rWFwJ1CYvkFDBXxwmfPX6bKyQ/"  data-iframe-size="fullscreen" />
+            <img alt="Fluctuating Paragon #3" src="https://ik.imagekit.io/UltraDAO/wallace/fluctuating_paragon_3.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmZoGW3fJhgm5j5ijBK31rWFwJ1CYvkFDBXxwmfPX6bKyQ/"  data-iframe-size="fullscreen" />
          </div>
       </div>
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
@@ -577,6 +727,7 @@ permalink: /art/collection/
          <img alt="#474" src="https://ik.imagekit.io/UltraDAO/wallace/rgb_elementary_cellular_automaton_474.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmZmjHDjbZ1YufMffyisn1hZ5ssiJN4uMGi2wtLqqsbAmw/?fxhash=opAj58MXzLN2wRdW64vvsChUgB4ABzGbie8H4M4GmLq8jPbxh4n&fxiteration=474&fxminter=tz2EZC7yLhS8uf4U66XfNzimP1pdeiSTNGXx" />
       </div>
       <h3 class="artist-title">Caesuras / Casey Reas</h3>
+         <h4 class="collection-title">CSRSNT</h4>
       <div class="gallery-row gallery-double-wide">
          <img alt="CSRSNT-ZAAI-23-of-64.png" src="https://ik.imagekit.io/UltraDAO/wallace/csrsnt_zaai_23_of_64_png.png?tr=w-100,q-20,bl-6" />
          <img alt="CSRSNT-QAAI-18-of-32.png" src="https://ik.imagekit.io/UltraDAO/wallace/csrsnt_qaai_18_of_32_png.png?tr=w-100,q-20,bl-6" />
@@ -626,15 +777,18 @@ permalink: /art/collection/
       <div class="gallery-row gallery-double-wide">
           <div>
             <h3 class="artist-title">Sarah Ridgley</h3>
-            <img alt="Computational Specimen No. 2" src="https://ik.imagekit.io/UltraDAO/wallace/computational_specimen_no_2.png?tr=w-100,q-20,bl-6" />
+            <h4 class="collection-title">Computational Specimen No. 2</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/computational_specimen_no_2.png?tr=w-100,q-20,bl-6" />
           </div>
           <div>
             <h3 class="artist-title">Claire Silver</h3>
-            <img alt="Claire Silver - Anthropogeny" src="https://ik.imagekit.io/UltraDAO/wallace/claire_silver_anthropogeny.png?tr=w-100,q-20,bl-6" />
+            <h4 class="collection-title">Anthropogeny</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/claire_silver_anthropogeny.png?tr=w-100,q-20,bl-6" />
           </div>
       </div>
       <div>
          <h3 class="artist-title">Matthias Isaaksen</h3>
+         <h4 class="collection-title">Various Works, 2022</h4>
          <div class="gallery-row gallery-flex">
             <div class="mb-4 sm:mb-0" style="flex: 1">
                <img alt="Extramundane" src="https://ik.imagekit.io/UltraDAO/wallace/extramundane.jpg?tr=w-100,q-20,bl-6" />
@@ -686,24 +840,6 @@ permalink: /art/collection/
          <img alt="#124" src="https://ik.imagekit.io/UltraDAO/wallace/elevation_124.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmV3SFEnf9gxak2giZRnwH4PZS8bKXSKP1hJuSFhSNus6W/?fxhash=onkTjXg9HAf5dZ3teY9jVJSsef75vsNvNeCMiKJAixVkdLZi1iL&fxiteration=124&fxminter=tz1g2sRossPoJnMjSE44BLJwCozcBZUjyg3f" />
          <img alt="#257" src="https://ik.imagekit.io/UltraDAO/wallace/elevation_257.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmV3SFEnf9gxak2giZRnwH4PZS8bKXSKP1hJuSFhSNus6W/?fxhash=opPfEzc1uS5ESKuymCcmfPm1tsgHBhtDRQTWZrQFJ7kXymbdz5E&fxiteration=257&fxminter=tz1bu8SP1NdxoLyHx2BzfCK9eFu1UgAvvPaG" />
       </div>
-      <h3 class="artist-title">Stefano Contiero</h3>
-      <h4 class="collection-title">Millefoglie</h4>
-      <div class="gallery-row gallery-double-wide">
-         <img alt="#104" src="https://ik.imagekit.io/UltraDAO/wallace/millefoglie_104.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmRp3MfQD5jcKNmuW4AQJfqfxch6XoiSBvHJueWCS3SgTe/?fxhash=ooitS7uceSyzmtwwrtfgyXBVW1Pgr3jS1smZJRycGS6nXYU4A31&fxiteration=104&fxminter=tz1QYf4nhmUhpDoty7iCir4r4gQa4SWVW5Hq" />
-         <img alt="#169" src="https://ik.imagekit.io/UltraDAO/wallace/millefoglie_169.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmRp3MfQD5jcKNmuW4AQJfqfxch6XoiSBvHJueWCS3SgTe/?fxhash=onvxyAGE4GADhRs3GvqWAjiyHZgX5FvzVsx1uPnThXNUwFUmCh8&fxiteration=169&fxminter=tz1cyMJ3E59Q4E9yqEXGUQ4xs9RNsuwAWDQ6" />
-      </div>
-      <div>
-         <h3 class="artist-title">Erik Swahn</h3>
-         <h4 class="collection-title">Fields</h4>
-         <div class="gallery-row gallery-flex">
-            <div style="flex: 1">
-               <img alt="#648" src="https://ik.imagekit.io/UltraDAO/wallace/fields_648.png?tr=w-100,q-20,bl-6" data-iframe-src="https://1p.infura-ipfs.io/ipfs/QmaZjrAunVrZNHozBv9AUR2CjxwZj4qsg3kFgiU7egsZRc/?payload=eyJoYXNoIjoiMHg3ZDdkMTIyMGFmMDg1OWExMjYwMWRmODE4MmU5MGQ3NzRjZThjOGM1YmMyMjFiZTE5MGUwMDNjMTBjNGM4MDhmIiwiZWRpdGlvbk51bWJlciI6MCwidG90YWxFZGl0aW9ucyI6MCwidXNlcklucHV0IjpudWxsfQ%3D%3D" />
-            </div>
-            <div style="flex: 1.25">
-               <img alt="#695" src="https://ik.imagekit.io/UltraDAO/wallace/fields_695.png?tr=w-100,q-20,bl-6" data-iframe-src="https://1p.infura-ipfs.io/ipfs/QmaZjrAunVrZNHozBv9AUR2CjxwZj4qsg3kFgiU7egsZRc/?payload=eyJoYXNoIjoiMHhlMTkwZThlYmQ4NDg5N2QwYzhmYjM2MWE4Njg0NjkwM2ExOTNmNjBjMWEwYTdhNGI3NTFhNzhhMjI3OTAzOWUwIiwiZWRpdGlvbk51bWJlciI6MCwidG90YWxFZGl0aW9ucyI6MCwidXNlcklucHV0IjpudWxsfQ%3D%3D" />
-            </div>
-         </div>
-      </div>
       <div>
          <h3 class="artist-title">Eric di Giuli</h3>
          <h4 class="collection-title">Cathedral Study</h4>
@@ -711,39 +847,6 @@ permalink: /art/collection/
             <img alt="#363" src="https://ik.imagekit.io/UltraDAO/wallace/cathedral_study_363.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000363"  data-iframe-size="fullscreen" />
             <img alt="#377" src="https://ik.imagekit.io/UltraDAO/wallace/cathedral_study_377.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000377"  data-iframe-size="fullscreen" />
          </div>
-      </div>
-      <div>
-         <h3 class="artist-title">Yazid</h3>
-         <h4 class="collection-title">Ir/rational Beauty</h4>
-         <div class="gallery-row gallery-flex">
-            <div style="flex: 0.833125">
-               <img alt="#107" src="https://ik.imagekit.io/UltraDAO/wallace/irrational_beauty_107.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM/?fxhash=ooMkJ1sbnrjd1rU25bUmuKjHUAqU3s1AEZA3KypMiHcLjM5uGes&amp;fxiteration=107&amp;fxminter=tz1ZFsnAQ8UorVbyiMcTP63djTMDcj3rrSc3" />
-            </div>
-            <div style="flex: 1.6194332">
-               <img alt="#65" src="https://ik.imagekit.io/UltraDAO/wallace/irrational_beauty_65.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qme5QKF1t4AbpGDMKQjWfyx8v8YLG1gyk55aA6evFyuaVM/?fxhash=ooz5Rf6wR1CkCNPWY3hdDrNThjfy7gHfBRVfzHjyd9W2z1AE2nF&amp;fxiteration=65&amp;fxminter=tz1gLeXAGc1Rho2UTE246xD26SapeyztMF8E" />
-            </div>
-         </div>
-      </div>
-      <h3 class="artist-title">rudxane</h3>
-      <h4 class="collection-title">Tych</h4>
-      <div class="gallery-row gallery-triple-wide">
-         <img alt="#91" src="https://ik.imagekit.io/UltraDAO/wallace/tych_91.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=oohULZpYZ42J22qAmyngtx5bhL7yPo7WAAN4oN4qfhy55vNn2JH&fxiteration=91&fxminter=tz1Yh2AR1dzaamNdkuoiYqGkpe8PwVX2JeHb" />
-         <img alt="#123" src="https://ik.imagekit.io/UltraDAO/wallace/tych_123.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=ooTdjrPnkjGa9pGCoeUmcTeFnWvdM3JLXr7PbobPkgAFs7KkYKC&fxiteration=123&fxminter=tz2EZC7yLhS8uf4U66XfNzimP1pdeiSTNGXx" />
-         <img alt="#195" src="https://ik.imagekit.io/UltraDAO/wallace/tych_195.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=oneiRtMv2L8DuhCvXP4mufrc1owSxx9AmRZyRyW4bfmq7a6CPt9&fxiteration=195&fxminter=tz1RPZp6NLzn7x4g7jhqHtCkhCQVnhbVMj8y" />
-         <img alt="#305" src="https://ik.imagekit.io/UltraDAO/wallace/tych_305.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=ong755x7VfQCxqG8UtCyGDVqyqVyEyZByYCxKLhwaUZzpsigzTy&fxiteration=305&fxminter=tz1LokKdPXHGxPuD2hKq7JPQeZy5BiV7VxGK" />
-         <img alt="#99" src="https://ik.imagekit.io/UltraDAO/wallace/tych_99.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=oo4FWcVEFpnu2Gm7EpPPWKTQcgVJbuviKs62rYtvFEKE9U2fgFT&fxiteration=99&fxminter=tz1iMAT1obCnntPpmief2g3MS2kNnDesqDs5" />
-         <img alt="#176" src="https://ik.imagekit.io/UltraDAO/wallace/tych_176.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=ooQVXJnQpLUivry6uCQdidYJ4FcG9WUJdxZo2iMnYg4nwAHAoWA&fxiteration=176&fxminter=tz1UPdmE4NUqdJrVnhuXuuzb6WN27Evi7ac4" />
-         <img alt="#185" src="https://ik.imagekit.io/UltraDAO/wallace/tych_185.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=opHmKM1gghde1TZ7r1vS6dZPntruyhwF59Njp8Ld5Y6wuKdXt1x&fxiteration=185&fxminter=tz2Sj1asuMEYxmgNubyaULEb8DtUsvF2BbG5" />
-         <img alt="#190" src="https://ik.imagekit.io/UltraDAO/wallace/tych_190.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=ooWnjVAcZsxEQZGLe74UkNtsa1tNXVaHEcVFnSxeqNWdsukW7dU&fxiteration=190&fxminter=tz1TQSKJmsS3SW57jFVrrRckEi1HZMgAjRxp" />
-         <img alt="#309" src="https://ik.imagekit.io/UltraDAO/wallace/tych_309.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmQ3QyNMoCKEukSjW4TXzzr264pGDmZSGiwGfNg6aCPJcn/?fxhash=ooujn95TxXnCJRCXsYwKzzgDQgJSd6ywtvpNCcGUx3quTaRZCXk&fxiteration=309&fxminter=tz1ZhdmUaPA6BVNde8bA9FUhhwaBmMjsMMJB" />
-      </div>
-      <h3 class="artist-title">Studio Yorktown</h3>
-      <h4 class="collection-title">Tesseract</h4>
-      <div class="gallery-row gallery-quadruple-wide">
-         <img alt="#365" src="https://ik.imagekit.io/UltraDAO/wallace/tesseract_365.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbdyFbir7XfKo3u2YAEgvqJdoYQUqmEs8ffD4NeEUuvCN/?fxhash=onztbAytiMdUZnnZJ3ne8o1rYSDPvAEkGYbdHXr78QBGhmnaaTu&fxiteration=365&fxminter=tz1ZBrF4AbTyhrncrF7n7ajDMQQKEx6wbSsy" />
-         <img alt="#369" src="https://ik.imagekit.io/UltraDAO/wallace/tesseract_369.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbdyFbir7XfKo3u2YAEgvqJdoYQUqmEs8ffD4NeEUuvCN/?fxhash=opQDR4pVkuae6wJfsphu4QyaPm6ijT1TQ6486SyzpjkJ5Ub92wR&fxiteration=369&fxminter=tz1ZBrF4AbTyhrncrF7n7ajDMQQKEx6wbSsy" />
-         <img alt="#388" src="https://ik.imagekit.io/UltraDAO/wallace/tesseract_388.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbdyFbir7XfKo3u2YAEgvqJdoYQUqmEs8ffD4NeEUuvCN/?fxhash=opQnQRXBpaKTe6aCWs4Gahgp1QTB3hYKSYdH368Tg5NcAhjz2nD&fxiteration=388&fxminter=tz1ZBrF4AbTyhrncrF7n7ajDMQQKEx6wbSsy" />
-         <img alt="#431" src="https://ik.imagekit.io/UltraDAO/wallace/tesseract_431.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmbdyFbir7XfKo3u2YAEgvqJdoYQUqmEs8ffD4NeEUuvCN/?fxhash=onmvNgvkRop5NSoVmQznmzNybspKJjkctJd4jfFppQA6iHSpym5&fxiteration=431&fxminter=tz2VQpR54qqKN397dD8XWXfT5jEMrRYD8Bgs" />
       </div>
       <h3 class="artist-title">Dario Lanza</h3>
       <h4 class="collection-title">Catharsis</h4>
