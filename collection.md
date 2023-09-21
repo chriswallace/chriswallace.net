@@ -655,7 +655,7 @@ permalink: /art/collection/
             <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/curve_lines_extended_study.png?tr=w-100,q-20,bl-6" />
         </div>
         <div style="flex: 1;">
-          <h3 class="artist-title">Matt DesLaurier</h3>
+          <h3 class="artist-title">Matt DesLauriers</h3>
             <h4 class="collection-title">RANGES02</h4>
           <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/RANGES02.gif?tr=w-100,q-20,bl-6" />
         </div>
