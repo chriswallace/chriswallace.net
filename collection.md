@@ -682,11 +682,13 @@ permalink: /art/collection/
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
          <div class="mb-12 sm:mb-0" style="flex: 1;">
             <h3 class="artist-title">Mikkel Hartmann</h3>
-            <img alt="They Took Over The Ocean" src="https://ik.imagekit.io/UltraDAO/wallace/they_took_over_the_ocean.png?tr=w-100,q-20,bl-6" />
+            <h4 class="collection-title">They Took Over The Ocean</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/they_took_over_the_ocean.png?tr=w-100,q-20,bl-6" />
          </div>
          <div style="flex: 1;">
             <h3 class="artist-title">Brendan Dawes</h3>
-            <img alt="Nothing Remains #63" src="https://ik.imagekit.io/UltraDAO/wallace/nothing_remains_63.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUWF9oPMxzvdLn1ALiWiQvgwYX1QyFKxC2tm1Wi3rwfCS/?fxhash=ooYiA95QeRkDGLzE1aucuQ48sdjPCWij1bqKru8R8PqSqLXn3ZT&fxiteration=63&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" data-iframe-size="fullscreen" />
+            <h4 class="collection-title">Nothing Remains #63</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/nothing_remains_63.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUWF9oPMxzvdLn1ALiWiQvgwYX1QyFKxC2tm1Wi3rwfCS/?fxhash=ooYiA95QeRkDGLzE1aucuQ48sdjPCWij1bqKru8R8PqSqLXn3ZT&fxiteration=63&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" data-iframe-size="fullscreen" />
          </div>
       </div>
       <h3 class="artist-title">MJ Lindow</h3>
