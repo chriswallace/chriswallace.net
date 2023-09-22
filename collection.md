@@ -391,6 +391,14 @@ permalink: /art/collection/
             <img alt="#34" src="https://ik.imagekit.io/UltraDAO/wallace/kyma_34.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/Qmd3B5bUi7k1GuaJ8xX1squcX6sopfEQrPbDeTHU2iE6SX/?fxhash=ookDFnm5ZWRVNCQe9gvPfYrdyQaFVs7EH3LUyKSxrkVaqi7zEa7&fxiteration=34&fxminter=tz1PB9bzCecPNF9Tp6Gy6KunwxxFA7wqJ4E6" />
          </div>
       </div>
+      <div>
+         <h3 class="artist-title">Eric di Giuli</h3>
+         <h4 class="collection-title">Cathedral Study</h4>
+         <div class="gallery-row gallery-double-wide">
+            <img alt="#363" src="https://ik.imagekit.io/UltraDAO/wallace/cathedral_study_363.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000363"  data-iframe-size="fullscreen" />
+            <img alt="#377" src="https://ik.imagekit.io/UltraDAO/wallace/cathedral_study_377.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000377"  data-iframe-size="fullscreen" />
+         </div>
+      </div>
       <h3 class="artist-title">Iskra Velitchkova &amp; Zach Lieberman</h3>
       <h4 class="collection-title">horizon(te)s</h4>
       <div class="gallery-row gallery-double-wide">
@@ -903,14 +911,6 @@ permalink: /art/collection/
          <img alt="#79" src="https://ik.imagekit.io/UltraDAO/wallace/elevation_79.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmV3SFEnf9gxak2giZRnwH4PZS8bKXSKP1hJuSFhSNus6W/?fxhash=op1sGUf8kGvuWrVFt7U4L7ZeMWf4BzrM3PjjyeY3TpSiy4vcbWF&fxiteration=79&fxminter=tz1W7bVjUmtwDb5rhHtauJszAfQqHao4Lhvj" />
          <img alt="#124" src="https://ik.imagekit.io/UltraDAO/wallace/elevation_124.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmV3SFEnf9gxak2giZRnwH4PZS8bKXSKP1hJuSFhSNus6W/?fxhash=onkTjXg9HAf5dZ3teY9jVJSsef75vsNvNeCMiKJAixVkdLZi1iL&fxiteration=124&fxminter=tz1g2sRossPoJnMjSE44BLJwCozcBZUjyg3f" />
          <img alt="#257" src="https://ik.imagekit.io/UltraDAO/wallace/elevation_257.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmV3SFEnf9gxak2giZRnwH4PZS8bKXSKP1hJuSFhSNus6W/?fxhash=opPfEzc1uS5ESKuymCcmfPm1tsgHBhtDRQTWZrQFJ7kXymbdz5E&fxiteration=257&fxminter=tz1bu8SP1NdxoLyHx2BzfCK9eFu1UgAvvPaG" />
-      </div>
-      <div>
-         <h3 class="artist-title">Eric di Giuli</h3>
-         <h4 class="collection-title">Cathedral Study</h4>
-         <div class="gallery-row gallery-double-wide">
-            <img alt="#363" src="https://ik.imagekit.io/UltraDAO/wallace/cathedral_study_363.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000363"  data-iframe-size="fullscreen" />
-            <img alt="#377" src="https://ik.imagekit.io/UltraDAO/wallace/cathedral_study_377.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0x1353fd9d3dc70d1a18149c8fb2adb4fb906de4e8/6000377"  data-iframe-size="fullscreen" />
-         </div>
       </div>
       <h3 class="artist-title">Dario Lanza</h3>
       <h4 class="collection-title">Catharsis</h4>
