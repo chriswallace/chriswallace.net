@@ -749,11 +749,13 @@ permalink: /art/collection/
       <div class="gallery-row sm:flex gap-2 sm:gap-4 mb-12 sm:mb-24">
          <div class="mb-12 sm:mb-0" style="flex: 0.8">
             <h3 class="artist-title">Emily Edelman, Dima Ofman, &amp; Andrew Badr</h3>
-            <img alt="Asemica #632" src="https://ik.imagekit.io/UltraDAO/wallace/asemica_632.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/206000632" />
+            <h4 class="collection-title">Asemica #632</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/asemica_632.png?tr=w-100,q-20,bl-6" data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/206000632" />
          </div>
          <div style="flex: 0.714">
             <h3 class="artist-title">Ferdinand Dervieux</h3>
-            <img alt="Inland Emotions #22" src="https://ik.imagekit.io/UltraDAO/wallace/inland_emotions_22.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmcZjX5D9DmXRhnoqk4wSE8KkBebzx55pZhdMT7TASEctJ/?fxhash=ooSuimey7CLGzhmWbQsgoHr3tbWyw3FqLstRLTYHWy7tNABJrao&fxiteration=22&fxminter=tz1ZRjuE2STA75rzXr78GcXNUZhYubwxaTYd" />
+            <h4 class="collection-title">Inland Emotions #22</h4>
+            <img alt="" src="https://ik.imagekit.io/UltraDAO/wallace/inland_emotions_22.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmcZjX5D9DmXRhnoqk4wSE8KkBebzx55pZhdMT7TASEctJ/?fxhash=ooSuimey7CLGzhmWbQsgoHr3tbWyw3FqLstRLTYHWy7tNABJrao&fxiteration=22&fxminter=tz1ZRjuE2STA75rzXr78GcXNUZhYubwxaTYd" />
          </div>
       </div>
       <h3 class="artist-title">Mark Webster</h3>
