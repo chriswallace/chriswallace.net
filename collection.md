@@ -942,14 +942,6 @@ permalink: /art/collection/
          <img alt="#240" src="https://ik.imagekit.io/UltraDAO/wallace/unbuilt_240.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUehq2wYWhzPdWLxvmLX5aKNrsv1hRxUZcPZcSxZBdLNK/?fxhash=oo4MPFGCfPMFXh3FEdReyuk2kaxDk9hk6yGt5PErjUpyfushbp8&fxiteration=240&fxminter=tz1NAZLRkd9NJVReWmSix8kyopaxw7pjtayM" />
          <img alt="#248" src="https://ik.imagekit.io/UltraDAO/wallace/unbuilt_248.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUehq2wYWhzPdWLxvmLX5aKNrsv1hRxUZcPZcSxZBdLNK/?fxhash=ooTHUJgVNoP96QFB6TuEXiaHn1iL8P3GqsUaCR2SifjFW2xbYtc&fxiteration=248&fxminter=tz1ePy7JPbV7jaw57rKavh3mCdteUazLUEMG" />
       </div>
-      <h3 class="artist-title">idflood</h3>
-      <h4 class="collection-title">Box Packing</h4>
-      <div class="gallery-row gallery-quadruple-wide">
-         <img alt="#146" src="https://ik.imagekit.io/UltraDAO/wallace/box_packing_146.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSVvvcYbRM2Z49ZtDmUDv1pzMqnQwnBHdykw4UrVvCCzr/?fxhash=oniaEcAWsEPVxU4JYcVanbZy8mYGvQXnAcRVwXV4Df7mMMvqjpd&fxiteration=146&fxminter=tz1RwGXWUsq6aPte3UVLFRKzmyNYdmkmCSa8" />
-         <img alt="#345" src="https://ik.imagekit.io/UltraDAO/wallace/box_packing_345.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSVvvcYbRM2Z49ZtDmUDv1pzMqnQwnBHdykw4UrVvCCzr/?fxhash=ooPoTGADXMHRKeFBEGnUvV8yknhSbQAHso1sZTtB3C2VaqrcPWM&fxiteration=345&fxminter=tz1SVSyJQCCDuKppgDsYK2mJ3bN6qkpj98NQ" />
-         <img alt="#407" src="https://ik.imagekit.io/UltraDAO/wallace/box_packing_407.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSVvvcYbRM2Z49ZtDmUDv1pzMqnQwnBHdykw4UrVvCCzr/?fxhash=ookQhHn8whDPppKBUyitFsVfgKEpnQXo75m2Zjzxm2yHsNwuzrF&fxiteration=407&fxminter=tz1QoRvfK6rYFGUsDuU5EQSjPYLDY2n6nYT8" />
-         <img alt="#442" src="https://ik.imagekit.io/UltraDAO/wallace/box_packing_442.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSVvvcYbRM2Z49ZtDmUDv1pzMqnQwnBHdykw4UrVvCCzr/?fxhash=oo4UNPrU3ni7o2fCS2c3FSXGYXQrdeipygXGdJkfDo1MWHMnLr4&fxiteration=442&fxminter=tz1cd8EPfy73UBthRtPUHnveEd9aoUbiQM3S" />
-      </div>
       <h3 class="artist-title">Andreas Rau</h3>
       <h4 class="collection-title">Loom</h4>
       <div class="gallery-row gallery-quadruple-wide-trip-small">
