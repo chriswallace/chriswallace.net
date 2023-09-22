@@ -149,7 +149,7 @@ caption {
 
 .collection-title,
 .artist-title {
-  @apply mt-0 text-base mb-4;
+  @apply mt-0 text-base mb-4 truncate max-w-[100%];
 }
 
 .artist-title {
@@ -157,7 +157,7 @@ caption {
 }
 
 .collection-title {
-  @apply mb-4 font-light text-gray-400;
+  @apply mb-4 mt-12 font-light text-gray-400;
 }
 
 .artist-title + h4 {
@@ -246,48 +246,64 @@ caption {
   @apply min-w-full;
 }
 
-.gallery-single-wide {
-  @apply mx-auto mb-12 sm:mb-24;
+.gallery-row{
+  @apply mb-4 grid gap-2 sm:gap-4;
+}
+
+.gallery-row:last-of-type{
+  @apply mx-auto mb-16 sm:mb-32;
+}
+
+.art-collection > div:last-of-type .gallery-row:last-of-type {
+  @apply mb-8 sm:mb-8;
+}
+
+.gallery-flex{
+  @apply sm:flex gap-2 sm:gap-4;
+}
+
+.gallery-flex div{
+  min-width: 0;
 }
 
 .gallery-single-wide-constrained {
-  @apply mx-auto mb-12 sm:mb-24 sm:max-w-[66%];
+  @apply sm:max-w-[66%];
 }
 
 .gallery-single-wide-portrait {
-  @apply mx-auto sm:max-w-[45%] mb-12 sm:mb-24;
+  @apply mx-auto sm:max-w-[45%];
 }
 
 .gallery-double-wide {
-  @apply grid grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-4 mb-12 sm:mb-24;
+  @apply grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-4;
 }
 
 .gallery-double-wide-single-small {
-  @apply grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 mb-12 sm:mb-24;
+  @apply grid-cols-1 sm:grid-cols-2;
 }
 
 .gallery-triple-wide {
-  @apply grid grid-cols-3 gap-2 sm:gap-4 mb-12 sm:mb-24;
+  @apply grid-cols-3;
 }
 
 .gallery-triple-wide-single-small {
-  @apply grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4 mb-12 sm:mb-24;
+  @apply grid-cols-1 sm:grid-cols-3;
 }
 
 .gallery-triple-wide-double-small {
-  @apply grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 mb-12 sm:mb-24;
+  @apply grid-cols-2 sm:grid-cols-3;
 }
 
 .gallery-quadruple-wide {
-  @apply grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mb-12 sm:mb-24;
+  @apply grid-cols-2 md:grid-cols-4;
 }
 
 .gallery-quadruple-wide-trip-small {
-  @apply grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-4 mb-12 sm:mb-24;
+  @apply grid-cols-3 sm:grid-cols-4;
 }
 
 .gallery-six-wide {
-  @apply grid grid-cols-6 gap-2 sm:gap-4 mb-12 sm:mb-24;
+  @apply grid-cols-6;
 }
 
 .gallery-single-wide img,
@@ -302,10 +318,6 @@ caption {
 
 .gallery-flex {
   @apply flex gap-2 sm:gap-4;
-}
-
-.gallery-flex:last-of-type {
-  @apply mb-12 md:mb-24;
 }
 
 .utility-bar{
@@ -522,7 +534,7 @@ caption {
 }
 
 footer {
-  @apply py-8 pb-16 border-t-2 border-gray-200;
+  @apply py-8 pb-24 border-t-2 border-gray-200;
 }
 
 footer p {
