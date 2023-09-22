@@ -241,25 +241,23 @@ permalink: /art/collection/
       </div>
     </div>
     <div>
-      <div>
-        <h3 class="artist-title">Manolo Gamboa Naon</h3>
-        <h4 class="collection-title">Various Works, 2021</h4>
-        <div class="gallery-row gallery-flex">
-          <div style="flex: 1">
-            <img
-              alt="Tempo de Amor"
-              src="https://ik.imagekit.io/UltraDAO/wallace/tempo_de_amor.jpg?tr=w-100,q-20,bl=6" />
-          </div>
-          <div style="flex: 1">
-            <img
-              alt="en llamas"
-              src="https://ik.imagekit.io/UltraDAO/wallace/en_llamas.jpg?tr=w-100,q-20,bl-6" />
-          </div>
-          <div style="flex: 1">
-            <img
-              alt="eyelid"
-              src="https://ik.imagekit.io/UltraDAO/wallace/eyelid.jpg?tr=w-100,q-20,bl=6" />
-          </div>
+      <h3 class="artist-title">Manolo Gamboa Naon</h3>
+      <h4 class="collection-title">Various Works, 2021</h4>
+      <div class="gallery-row gallery-flex">
+        <div style="flex: 1">
+          <img
+            alt="Tempo de Amor"
+            src="https://ik.imagekit.io/UltraDAO/wallace/tempo_de_amor.jpg?tr=w-100,q-20,bl=6" />
+        </div>
+        <div style="flex: 1">
+          <img
+            alt="en llamas"
+            src="https://ik.imagekit.io/UltraDAO/wallace/en_llamas.jpg?tr=w-100,q-20,bl-6" />
+        </div>
+        <div style="flex: 1">
+          <img
+            alt="eyelid"
+            src="https://ik.imagekit.io/UltraDAO/wallace/eyelid.jpg?tr=w-100,q-20,bl=6" />
         </div>
       </div>
       <div class="gallery-row gallery-flex">
