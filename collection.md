@@ -5,31 +5,24 @@ description: A selection of generative artworks from my family's private collect
 permalink: /art/collection/
 ---
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.min.js"></script>
 <script src="/assets/js/gallery-viewer.js"></script>
 <script src="/assets/js/player.js"></script>
 <article class="lg:max-w-6xl 3xl:max-w-full mx-auto">
   <a class="back-btn fade-in-element" href="/art">Art</a>
   <h1 class="fade-in-element">The Wallace Collection</h1>
   <p class="sub-heading fade-in-element">
-    A selection of generative artworks currently held in my family's private
-    collection on the Tezos and Ethereum blockchains.
+    A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains.
   </p>
   <p class="fade-in-element">
     <strong>Fullscreen browser:</strong>
-    Enter fullscreen viewer by clicking the maximize icon on any image. Browse
-    using &larr; and &rarr; keyboard buttons.
+    Enter fullscreen viewer by clicking the maximize icon on any image. Browse using &larr; and &rarr; keyboard buttons.
   </p>
   <div id="zenMode" class="hidden sm:block">
     <p class="mb-4 fade-in-element">
-      <strong>Zen mode:</strong>
-      Experience the collection alongside a curated selection of songs.
+      <strong>Zen mode:</strong> Experience the collection alongside a curated selection of songs.
     </p>
     <p class="mb-12 fade-in-element">
-      <button id="autoPlayCollection" class="button">
-        <i></i>
-        Enter zen mode
-      </button>
+      <button id="autoPlayCollection" class="button"><i></i> Enter zen mode</button>
     </p>
   </div>
   <hr class="mb-12 md:mb-20 fade-in-element" />
