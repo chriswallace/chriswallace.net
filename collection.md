@@ -611,6 +611,14 @@ permalink: /art/collection/
          <img alt="#243" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_243.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmYKuXYG5tG7sLnpw5mqGsLLYeWyyvEwTP3nTqP4xCMzAA/?fxhash=onsHGPnXVZQCv6fqG9zghvQRnMjeJzBi6dQEM9L66ahHpu1HBNh&fxiteration=243&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
          <img alt="#76" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_76.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmYKuXYG5tG7sLnpw5mqGsLLYeWyyvEwTP3nTqP4xCMzAA/?fxhash=ooAWwe6oKSCYYCZvfrpfKLa7QvP7kDGZm5ZTU8vYK4yGwYRuMEH&fxiteration=76&fxminter=tz1RkdvMZvkQpFvLqK23Q126o8JUKqYtneTV" />
          <img alt="#134" src="https://ik.imagekit.io/UltraDAO/wallace/assembling_machine_134.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmYKuXYG5tG7sLnpw5mqGsLLYeWyyvEwTP3nTqP4xCMzAA/?fxhash=oohnvir5YZNSfoL9dDk7DFv2YqZ5rXUN76H8g1wseBiTtGenynn&fxiteration=134&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU" />
+      <h3 class="artist-title">idflood</h3>
+      <h4 class="collection-title">Box Packing</h4>
+      <div class="gallery-row gallery-quadruple-wide">
+         <img alt="#146" src="https://ik.imagekit.io/UltraDAO/wallace/box_packing_146.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSVvvcYbRM2Z49ZtDmUDv1pzMqnQwnBHdykw4UrVvCCzr/?fxhash=oniaEcAWsEPVxU4JYcVanbZy8mYGvQXnAcRVwXV4Df7mMMvqjpd&fxiteration=146&fxminter=tz1RwGXWUsq6aPte3UVLFRKzmyNYdmkmCSa8" />
+         <img alt="#345" src="https://ik.imagekit.io/UltraDAO/wallace/box_packing_345.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSVvvcYbRM2Z49ZtDmUDv1pzMqnQwnBHdykw4UrVvCCzr/?fxhash=ooPoTGADXMHRKeFBEGnUvV8yknhSbQAHso1sZTtB3C2VaqrcPWM&fxiteration=345&fxminter=tz1SVSyJQCCDuKppgDsYK2mJ3bN6qkpj98NQ" />
+         <img alt="#407" src="https://ik.imagekit.io/UltraDAO/wallace/box_packing_407.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSVvvcYbRM2Z49ZtDmUDv1pzMqnQwnBHdykw4UrVvCCzr/?fxhash=ookQhHn8whDPppKBUyitFsVfgKEpnQXo75m2Zjzxm2yHsNwuzrF&fxiteration=407&fxminter=tz1QoRvfK6rYFGUsDuU5EQSjPYLDY2n6nYT8" />
+         <img alt="#442" src="https://ik.imagekit.io/UltraDAO/wallace/box_packing_442.png?tr=w-100,q-20,bl-6" data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmSVvvcYbRM2Z49ZtDmUDv1pzMqnQwnBHdykw4UrVvCCzr/?fxhash=oo4UNPrU3ni7o2fCS2c3FSXGYXQrdeipygXGdJkfDo1MWHMnLr4&fxiteration=442&fxminter=tz1cd8EPfy73UBthRtPUHnveEd9aoUbiQM3S" />
+      </div>
       </div>-->
       <div>
          <h3 class="artist-title">Yazid</h3>
