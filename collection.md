@@ -226,21 +226,21 @@ permalink: /art/collection/
           </div>
         </div>
       </div>
-      <button id="playButton">
+      <button id="playButton" aria-labelledby="play-label">
         <i></i>
-        <span>Play</span>
+        <span id="play-label">Play</span>
       </button>
-      <button id="pauseButton">
+      <button id="pauseButton" aria-labelledby="pause-label">
         <i></i>
-        <span>Pause</span>
+        <span id="pause-label">Pause</span>
       </button>
-      <button id="prevButton">
+      <button id="prevButton" aria-labelledby="previous-label">
         <i></i>
-        <span>Previous</span>
+        <span id="previous-label">Previous track</span>
       </button>
-      <button id="nextButton">
+      <button id="nextButton" aria-labelledby="next-label">
         <i></i>
-        <span>Next</span>
+        <span id="next-label">Next</span>
       </button>
       <input id="volumeControl" type="range" min="0" max="1" step="0.1" />
     </div>
