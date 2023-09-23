@@ -242,7 +242,7 @@ permalink: /art/collection/
         <i></i>
         <span id="next-label">Next</span>
       </button>
-      <input id="volumeControl" type="range" min="0" max="1" step="0.1" />
+      <input id="volumeControl" type="range" min="0" max="1" step="0.1" aria-label="Volume" />
     </div>
   </div>
   <div class="to-top">
