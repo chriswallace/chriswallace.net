@@ -58,7 +58,7 @@ h1 {
 }
 
 .sub-heading {
-  @apply text-lg sm:text-xl font-light;
+  @apply text-lg sm:text-xl font-light mt-0;
 }
 
 h2 {

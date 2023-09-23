@@ -10,9 +10,9 @@ permalink: /art/collection/
 <article class="lg:max-w-6xl 3xl:max-w-full mx-auto">
   <a class="back-btn fade-in-element" href="/art">Art</a>
   <h1 class="fade-in-element">The Wallace Collection</h1>
-  <p class="sub-heading fade-in-element">
+  <h2 class="sub-heading fade-in-element">
     A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains.
-  </p>
+  </h2>
   <p class="fade-in-element">
     <strong>Fullscreen browser:</strong>
     Enter fullscreen viewer by clicking the maximize icon on any image. Browse using &larr; and &rarr; keyboard buttons.
