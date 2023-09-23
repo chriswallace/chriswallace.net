@@ -67,6 +67,10 @@ function isMobile() {
   };
 
   function setupimages(img, index) {
+    if (img.getAttribute("data-processed") === "true") {
+      return;
+    }
+
     imgObserver.observe(img);  // Start observing this image
 
     img.addEventListener('mouseover', function (event) {
@@ -106,7 +110,8 @@ function isMobile() {
     const maximizeIcon = document.createElement('div');
     maximizeIcon.classList.add('maximize-icon');
 
-    if (isMobile()) {
+    // Check if img alt attribute is not empty before adding caption
+    if (isMobile() && img.alt.trim().length) {
       const caption = document.createElement('caption');
       caption.classList.add('fade-in-element');
       caption.innerHTML = img.alt;
@@ -117,6 +122,8 @@ function isMobile() {
       wrapperDiv.appendChild(maximizeIcon);
       maximizeIcon.addEventListener('click', () => goFullscreen(img, index));
     }
+    
+    img.setAttribute("data-processed", "true");
   }
 
   // Function to automatically rotate to the next artwork

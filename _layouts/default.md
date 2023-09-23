@@ -2,7 +2,7 @@
 <html lang="en">
   {% include head.md %}
   <body>
-    <div class="mx-4 lg:px-0">
+    <div class="mx-1 sm:mx-4 lg:px-0">
       {% include header.md %}
       <div class="container mx-auto">
         {{ content }}

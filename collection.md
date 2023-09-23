@@ -25,11 +25,11 @@ permalink: /art/collection/
       <button id="autoPlayCollection" class="button"><i></i> Enter zen mode</button>
     </p>
   </div>
-  <hr class="mb-12 md:mb-20 fade-in-element" />
+  <hr class="mb-16 md:mb-20 fade-in-element" />
   <div id="art-collection" class="art-collection">
     <div>
       <div class="gallery-row gallery-flex">
-        <div class="mb-12 sm:mb-0" style="flex: 1">
+        <div style="flex: 1">
           <h3 class="artist-title">William Mapan</h3>
           <h4 class="collection-title">Dragons #489</h4>
           <img
@@ -60,7 +60,7 @@ permalink: /art/collection/
       </div>
     </div>
     <div>
-      <div class="gallery-row gallery-triple-wide-single-small">
+      <div class="gallery-row gallery-triple-wide">
         <div>
           <h3 class="artist-title">Jeff Davis</h3>
           <h4 class="collection-title">Bent #175</h4>
@@ -101,7 +101,7 @@ permalink: /art/collection/
     <div>
       <h3 class="artist-title">Iskra Velitchkova</h3>
       <h4 class="collection-title">Escape</h4>
-      <div class="gallery-row gallery-double-wide-single-small">
+      <div class="gallery-row gallery-double-wide">
         <img
           alt="#255"
           src="https://ik.imagekit.io/UltraDAO/wallace/escape_255.png?tr=w-100,q-20,bl-6" />
@@ -112,7 +112,7 @@ permalink: /art/collection/
     </div>
     <div>
       <div class="gallery-row gallery-flex">
-        <div class="mb-12 sm:mb-0" style="flex: 1.5006">
+        <div style="flex: 1.5006">
           <h3 class="artist-title">Kjetil Golid</h3>
           <h4 class="collection-title">Crude Figures</h4>
           <img
@@ -130,7 +130,7 @@ permalink: /art/collection/
     </div>
     <div>
       <div class="gallery-row gallery-flex">
-        <div class="mb-12 sm:mb-0" style="flex: 1.4537">
+        <div style="flex: 1.4537">
           <h3 class="artist-title">Zach Lieberman</h3>
           <h4 class="collection-title">curve lines extended study</h4>
           <img
@@ -159,7 +159,7 @@ permalink: /art/collection/
     </div>
     <div>
       <div class="gallery-row gallery-flex">
-        <div class="mb-12 sm:mb-0" style="flex: 0.7493">
+        <div style="flex: 0.7493">
           <h3 class="artist-title">MJ Lindow</h3>
           <h4 class="collection-title">Impasto #204</h4>
           <img

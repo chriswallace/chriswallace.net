@@ -113,7 +113,7 @@ article ul {
 }
 
 caption {
-  @apply text-xs sm:text-base text-gray-400 mt-2 sm:mt-4 mb-6 block text-center;
+  @apply text-xs sm:text-base text-gray-400 my-2 sm:my-4 block text-center;
 }
 
 .button {
@@ -157,7 +157,7 @@ caption {
 }
 
 .collection-title {
-  @apply mb-4 mt-12 font-light text-gray-400;
+  @apply mb-4 mt-12 font-light text-gray-400 text-xs sm:text-base;
 }
 
 .artist-title + h4 {
@@ -307,13 +307,13 @@ caption {
 }
 
 .gallery-single-wide img,
-.gallery-single-wide-portraitv img,
+.gallery-single-wide-portrait img,
 .gallery-double-wide img,
 .gallery-triple-wide img,
 .gallery-quadruple-wide img,
 .gallery-quadruple-wide-trip-small img,
 .gallery-six-wide img {
-  @apply min-w-full;
+  @apply min-w-full max-w-[50%];
 }
 
 .gallery-flex {
