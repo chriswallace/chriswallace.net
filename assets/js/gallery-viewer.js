@@ -115,7 +115,6 @@ function isMobile() {
 
     if (!isMobile() && webglSupport()) {
       wrapperDiv.appendChild(maximizeIcon);
-      console.log('webglSupport');
       maximizeIcon.addEventListener('click', () => goFullscreen(img, index));
     }
   }
