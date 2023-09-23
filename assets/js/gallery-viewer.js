@@ -386,12 +386,12 @@ function isMobile() {
         const artCollection = document.getElementById('art-collection');
         artCollection.insertAdjacentHTML('beforeend', html);
 
-        const newElements = artCollection.querySelectorAll('.fade-in-element:not(.visible),.art-collection img:not(.loaded),.art-collection h3:not(.visible),.art-collection h4:not(.visible)');
         const images = artCollection.querySelectorAll('img:not(.loaded)');
 
-        observeElements(newElements);
         images.forEach((img, index) => setupimages(img, index));
-        images.forEach((img) => imgObserver.observe(img));  // Start observing this image
+
+        const newElements = artCollection.querySelectorAll('.fade-in-element:not(.visible),.art-collection img:not(.loaded),.art-collection h3:not(.visible),.art-collection h4:not(.visible)');
+        observeElements(newElements);
 
         currentPart++;
         isLoading = false; // Release lock

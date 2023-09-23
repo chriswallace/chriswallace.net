@@ -1,5 +1,7 @@
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', fadeInElements);
+
+function fadeInElements(){
     let observerIndex = 0;
 
     const observeElements = (elementsToObserve) => {
@@ -15,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, false);
     }
 
-    const elements = document.querySelectorAll('.fade-in-element,.art-collection img,.art-collection h3,.art-collection h4');
+    const elements = document.querySelectorAll('.fade-in-element:not(.visible),.art-collection img:not(.visible),.art-collection h3:not(.visible),.art-collection h4:not(.visible)');
 
     scrollStop(function() {
         observerIndex = 0;  // Reset index when scrolling stops
@@ -39,4 +41,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     observeElements(elements);  // Observe initial elements
-});
+}
