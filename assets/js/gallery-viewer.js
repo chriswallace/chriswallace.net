@@ -1,41 +1,10 @@
-let viewer, currentIndex = null;  // Declare it globally
-let autoRotateTimeout = null;
-
-var canvas = document.createElement('canvas');
-
-function webglSupport() {
-  try {
-    return !!(window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
-  } catch (e) {
-    return false;
-  }
-}
-function isMobile() {
-  return /Mobi|Android/i.test(navigator.userAgent);
-}
-
-// Function to set srcset and sizes
-const setSrcSetAndSizes = (img) => {
-  const renderedWidth = img.clientWidth;
-  const base_url = "https://ik.imagekit.io/UltraDAO/wallace/";
-  const img_name = img.src.split('/').pop().split('?')[0];
-
-  const srcsetStr = `${base_url}${img_name}?tr=w-${renderedWidth},q-70 1x,
-                        ${base_url}${img_name}?tr=w-${renderedWidth * 2},q-70 2x,
-                        ${base_url}${img_name}?tr=w-${renderedWidth * 3},q-70 3x`;
-
-  // This should reflect your actual layout rules in your CSS
-  const sizesStr = `(max-width: 400px) ${renderedWidth}px,
-                      (max-width: 800px) ${renderedWidth * 2}px,
-                      (max-width: 1200px) ${renderedWidth * 3}px,
-                      ${renderedWidth * 4}px`;
-
-  img.src = `${base_url}${img_name}?tr=w-${renderedWidth},q-70`;
-  img.srcset = srcsetStr;
-  img.sizes = sizesStr;
-};
-
 document.addEventListener('DOMContentLoaded', () => {
+
+  let currentPart = 1;
+
+  let viewer, currentIndex = null;  // Declare it globally
+  let autoRotateTimeout = null;
+
   // Select all images on the page
   const images = document.querySelectorAll('img');
 
@@ -49,6 +18,107 @@ document.addEventListener('DOMContentLoaded', () => {
   tooltip.style.display = 'none';
   tooltip.style.zIndex = '9999';
   document.body.appendChild(tooltip);
+
+  var canvas = document.createElement('canvas');
+
+  function webglSupport() {
+  try {
+    return !!(window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
+  } catch (e) {
+    return false;
+  }
+}
+
+function isMobile() {
+  return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+  // Initialize IntersectionObserver
+  const imgObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        setSrcSetAndSizes(img); // Call your function to set srcset and sizes
+        observer.unobserve(img); // Stop observing this image
+      }
+    });
+  }, { rootMargin: '0px 0px 200px 0px' });  // Trigger if the image gets within 200px of the viewport
+
+  // Function to set srcset and sizes
+  const setSrcSetAndSizes = (img) => {
+    const renderedWidth = img.clientWidth;
+    const base_url = "https://ik.imagekit.io/UltraDAO/wallace/";
+    const img_name = img.src.split('/').pop().split('?')[0];
+
+    const srcsetStr = `${base_url}${img_name}?tr=w-${renderedWidth},q-70 1x,
+                          ${base_url}${img_name}?tr=w-${renderedWidth * 2},q-70 2x,
+                          ${base_url}${img_name}?tr=w-${renderedWidth * 3},q-70 3x`;
+
+    // This should reflect your actual layout rules in your CSS
+    const sizesStr = `(max-width: 400px) ${renderedWidth}px,
+                        (max-width: 800px) ${renderedWidth * 2}px,
+                        (max-width: 1200px) ${renderedWidth * 3}px,
+                        ${renderedWidth * 4}px`;
+
+    img.src = `${base_url}${img_name}?tr=w-${renderedWidth},q-70`;
+    img.srcset = srcsetStr;
+    img.sizes = sizesStr;
+    img.classList.add('loaded');
+  };
+
+  function setupimages(img, index) {
+    imgObserver.observe(img);  // Start observing this image
+
+    img.addEventListener('mouseover', function (event) {
+      const altText = this.getAttribute('alt');
+      if (altText) {
+        tooltip.textContent = altText;
+        tooltip.style.display = 'block';
+      }
+    });
+
+    img.addEventListener('mousemove', function (event) {
+      const tooltipWidth = tooltip.offsetWidth;
+      const windowWidth = window.innerWidth;
+
+      if (event.pageX + tooltipWidth + 20 > windowWidth) {
+        // Tooltip would go off the right edge of the screen
+        // Show tooltip to the left of the cursor instead
+        tooltip.style.left = (event.pageX - tooltipWidth - 10) + 'px';
+      } else {
+        // Normal behavior
+        tooltip.style.left = event.pageX + 10 + 'px';
+      }
+
+      tooltip.style.top = event.pageY + 10 + 'px';
+    });
+
+    img.addEventListener('mouseout', function () {
+      tooltip.style.display = 'none';
+    });
+
+    // Create a wrapper div around the image
+    const wrapperDiv = document.createElement('div');
+    wrapperDiv.classList.add('image-wrapper');
+    img.parentNode.insertBefore(wrapperDiv, img);
+    wrapperDiv.appendChild(img);
+
+    const maximizeIcon = document.createElement('div');
+    maximizeIcon.classList.add('maximize-icon');
+
+    if (isMobile()) {
+      const caption = document.createElement('caption');
+      caption.classList.add('fade-in-element');
+      caption.innerHTML = img.alt;
+      wrapperDiv.appendChild(caption);
+    }
+
+    if (!isMobile() && webglSupport()) {
+      wrapperDiv.appendChild(maximizeIcon);
+      console.log('webglSupport');
+      maximizeIcon.addEventListener('click', () => goFullscreen(img, index));
+    }
+  }
 
   // Function to automatically rotate to the next artwork
   const autoRotateNextArtwork = () => {
@@ -98,71 +168,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const autoRotateBtn = document.getElementById("autoPlayCollection");
   autoRotateBtn.addEventListener('click', startAutoRotation);
 
-  // Initialize IntersectionObserver
-  const imgObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        setSrcSetAndSizes(img); // Call your function to set srcset and sizes
-        observer.unobserve(img); // Stop observing this image
-      }
-    });
-  }, { rootMargin: '0px 0px 200px 0px' });  // Trigger if the image gets within 200px of the viewport
-
   // Attach event listeners to each image
-  images.forEach((img, index) => {
-    imgObserver.observe(img);  // Start observing this image
-
-    img.addEventListener('mouseover', function (event) {
-      const altText = this.getAttribute('alt');
-      if (altText) {
-        tooltip.textContent = altText;
-        tooltip.style.display = 'block';
-      }
-    });
-
-    img.addEventListener('mousemove', function (event) {
-      const tooltipWidth = tooltip.offsetWidth;
-      const windowWidth = window.innerWidth;
-
-      if (event.pageX + tooltipWidth + 20 > windowWidth) {
-        // Tooltip would go off the right edge of the screen
-        // Show tooltip to the left of the cursor instead
-        tooltip.style.left = (event.pageX - tooltipWidth - 10) + 'px';
-      } else {
-        // Normal behavior
-        tooltip.style.left = event.pageX + 10 + 'px';
-      }
-
-      tooltip.style.top = event.pageY + 10 + 'px';
-    });
-
-    img.addEventListener('mouseout', function () {
-      tooltip.style.display = 'none';
-    });
-
-    // Create a wrapper div around the image
-    const wrapperDiv = document.createElement('div');
-    wrapperDiv.classList.add('image-wrapper');
-    img.parentNode.insertBefore(wrapperDiv, img);
-    wrapperDiv.appendChild(img);
-
-    const maximizeIcon = document.createElement('div');
-    maximizeIcon.classList.add('maximize-icon');
-
-    if (isMobile()) {
-      const caption = document.createElement('caption');
-      caption.classList.add('fade-in-element');
-      caption.innerHTML = img.alt;
-      wrapperDiv.appendChild(caption);
-    }
-
-
-    if (!isMobile() && webglSupport()) {
-      wrapperDiv.appendChild(maximizeIcon);
-      maximizeIcon.addEventListener('click', () => goFullscreen(img, index));
-    }
-  });
+  images.forEach((img, index) => setupimages(img, index));
 
   document.addEventListener('keydown', function (event) {
     if (event.key === 'ArrowLeft') {
@@ -324,5 +331,88 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('webkitfullscreenchange', checkFullscreenStatus);
   document.addEventListener('mozfullscreenchange', checkFullscreenStatus);
   document.addEventListener('MSFullscreenChange', checkFullscreenStatus);
+
+  let observerIndex = 0;
+
+  const observeElements = (elementsToObserve) => {
+    elementsToObserve.forEach(el => observer.observe(el));
+  };
+
+  function scrollStop(callback, refresh = 66) {
+    if (!callback || typeof callback !== 'function') return;
+    let isScrolling;
+    window.addEventListener('scroll', function(event) {
+      window.clearTimeout(isScrolling);
+      isScrolling = setTimeout(callback, refresh);
+    }, false);
+  }
+
+  const elements = document.querySelectorAll('.fade-in-element,.art-collection img,.art-collection h3,.art-collection h4');
+
+  scrollStop(function() {
+    observerIndex = 0;  // Reset index when scrolling stops
+  });
+
+  const fadeIn = (el, delay) => {
+    setTimeout(() => {
+      el.classList.add('visible');
+    }, delay);
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = observerIndex * 50;
+        fadeIn(entry.target, delay);
+        observer.unobserve(entry.target);
+        observerIndex++;
+      }
+    });
+  });
+
+  observeElements(elements);  // Observe initial elements
+
+  let isLoading = false; // Lock to prevent concurrent fetches
+
+  function loadMoreArt() {
+    if (isLoading) return; // Return if already fetching
+    if (currentPart >= 10) return; // No more parts to load
+
+    isLoading = true; // Set lock
+
+    fetch(`/collection/chunk${currentPart}.html`)
+      .then(response => response.text())
+      .then(html => {
+        const artCollection = document.getElementById('art-collection');
+        artCollection.insertAdjacentHTML('beforeend', html);
+
+        const newElements = artCollection.querySelectorAll('.fade-in-element:not(.visible),.art-collection img:not(.loaded),.art-collection h3:not(.visible),.art-collection h4:not(.visible)');
+        const images = artCollection.querySelectorAll('img:not(.loaded)');
+
+        observeElements(newElements);
+        images.forEach((img, index) => setupimages(img, index));
+        images.forEach((img) => imgObserver.observe(img));  // Start observing this image
+
+        currentPart++;
+        isLoading = false; // Release lock
+      })
+      .catch(error => {
+        console.error('Fetch failed:', error);
+        isLoading = false; // Release lock in case of failure
+      });
+  }
+
+  // Throttle the scroll event
+  let lastScrollTime = 0;
+
+  window.addEventListener('scroll', () => {
+    const now = Date.now();
+    if (now - lastScrollTime > 200) { // Throttle time in milliseconds
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
+        loadMoreArt();
+      }
+      lastScrollTime = now;
+    }
+  });
 
 });

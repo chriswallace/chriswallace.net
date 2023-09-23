@@ -1,4 +1,9 @@
 window.addEventListener("DOMContentLoaded", (event) => {
+
+  function isMobile() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+  }
+  
   const playButton = document.getElementById("playButton");
   const pauseButton = document.getElementById("pauseButton");
   const nextButton = document.getElementById("nextButton");
@@ -61,7 +66,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
   trackInfo.className = "stopped";
 
   function loadTrack(index) {
-    console.log(`Loading track at index ${index}: ${tracks[index].src}`);
     audioElement.src = tracks[index].src;
     trackInfo.innerHTML = tracks[index].title + " by " + tracks[index].artist;
   }
@@ -114,4 +118,28 @@ window.addEventListener("DOMContentLoaded", (event) => {
   trackInfo.addEventListener("mouseout", function () {
     this.style.animationPlayState = "running";
   });
+
+  if (!isMobile()) {
+    const backToTopButton = document.getElementById('backToTop');
+    const pageTitle = document.getElementById('pageTitle');
+
+    // Scroll to top when button is clicked
+    backToTopButton.addEventListener('click', function() {
+      window.scroll({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Toggle button's visibility based on scroll position
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 200) { // Show button after 200px of scrolling
+        backToTopButton.style.opacity = 1;
+        pageTitle.style.opacity = 1;
+      } else {
+        backToTopButton.style.opacity = 0;
+        pageTitle.style.opacity = 0;
+      }
+    });
+  }
 });

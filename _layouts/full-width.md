@@ -7,7 +7,6 @@
       <div class="container-lg">
         {{ content }}
       </div>
-      {% include footer.md %}
     </div>
   </body>
 </html>
