@@ -153,7 +153,7 @@ permalink: /art/collection/
           <h4 class="collection-title">RANGES02</h4>
           <img
             alt=""
-            src="https://ik.imagekit.io/UltraDAO/wallace/RANGES02.gif?tr=w-100,q-20,bl-6" />
+            src="https://ik.imagekit.io/UltraDAO/wallace/RANGES02.gif?tr=w-100,q-20,bl-6" data-max-width="512" />
         </div>
       </div>
     </div>

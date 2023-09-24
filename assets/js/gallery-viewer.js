@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  let currentPart = 1;
-
   let viewer, currentIndex = null;  // Declare it globally
   let autoRotateTimeout = null;
 
@@ -50,23 +48,41 @@ function isMobile() {
     const base_url = "https://ik.imagekit.io/UltraDAO/wallace/";
     const img_name = img.src.split('/').pop().split('?')[0];
 
-    const srcsetStr = `${base_url}${img_name}?tr=w-${renderedWidth},q-70 1x,
-                          ${base_url}${img_name}?tr=w-${renderedWidth * 2},q-70 2x,
-                          ${base_url}${img_name}?tr=w-${renderedWidth * 3},q-70 3x`;
+    const max_width = img.getAttribute('data-max-width');
 
-    // This should reflect your actual layout rules in your CSS
-    const sizesStr = `(max-width: 400px) ${renderedWidth}px,
-                        (max-width: 800px) ${renderedWidth * 2}px,
-                        (max-width: 1200px) ${renderedWidth * 3}px,
-                        ${renderedWidth * 4}px`;
+    if(max_width && max_width <= renderedWidth){
+      img.src = `${base_url}${img_name}?tr=q-70`;
+    } else {
+      let size_1x = renderedWidth,
+          size_2x = renderedWidth * 2,
+          size_3x = renderedWidth * 3,
+          size_4x = renderedWidth * 4;
 
-    img.src = `${base_url}${img_name}?tr=w-${renderedWidth},q-70`;
-    img.srcset = srcsetStr;
-    img.sizes = sizesStr;
+      if(max_width){
+        size_1x = Math.min(max_width, size_1x);
+        size_2x = Math.min(max_width, size_2x);
+        size_3x = Math.min(max_width, size_3x);
+        size_4x = Math.min(max_width, size_4x);
+      }
+
+      const srcsetStr = `${base_url}${img_name}?tr=w-${size_1x},q-70 1x,
+                            ${base_url}${img_name}?tr=w-${size_2x},q-70 2x,
+                            ${base_url}${img_name}?tr=w-${size_3x},q-70 3x`;
+
+      // This should reflect your actual layout rules in your CSS
+      const sizesStr = `(max-width: 400px) ${size_1x}px,
+                          (max-width: 800px) ${size_2x}px,
+                          (max-width: 1200px) ${size_3x}px,
+                          ${size_4x}px`;
+
+      img.src = `${base_url}${img_name}?tr=w-${size_1x},q-70`;
+      img.srcset = srcsetStr;
+      img.sizes = sizesStr;
+    }
     img.classList.add('loaded');
   };
 
-  function setupimages(img, index) {
+  function setupImages(img, index) {
     if (img.getAttribute("data-processed") === "true") {
       return;
     }
@@ -175,7 +191,7 @@ function isMobile() {
   autoRotateBtn.addEventListener('click', startAutoRotation);
 
   // Attach event listeners to each image
-  images.forEach((img, index) => setupimages(img, index));
+  images.forEach((img, index) => setupImages(img, index));
 
   document.addEventListener('keydown', function (event) {
     if (event.key === 'ArrowLeft') {
@@ -379,14 +395,31 @@ function isMobile() {
   observeElements(elements);  // Observe initial elements
 
   let isLoading = false; // Lock to prevent concurrent fetches
+  let currentPart = 0; // Initialize to 0 for the sake of completeness, but we'll randomize this
+
+  // Create an array from 0 to 10, representing the 11 parts
+  let remainingParts = Array.from({ length: 10 }, (_, i) => i);
+
+  // Randomly shuffle the remainingParts array
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  shuffle(remainingParts);
 
   function loadMoreArt() {
     if (isLoading) return; // Return if already fetching
-    if (currentPart >= 10) return; // No more parts to load
+    if (remainingParts.length === 0) return; // No more parts to load
+
+    // Pick a random part to load
+    const nextPart = remainingParts.pop();
 
     isLoading = true; // Set lock
 
-    fetch(`/collection/chunk${currentPart}.html`)
+    fetch(`/collection/chunk${nextPart}.html`)
       .then(response => response.text())
       .then(html => {
         const artCollection = document.getElementById('art-collection');
@@ -394,12 +427,11 @@ function isMobile() {
 
         const images = artCollection.querySelectorAll('img:not(.loaded)');
 
-        images.forEach((img, index) => setupimages(img, index));
+        images.forEach((img, index) => setupImages(img, index));
 
         const newElements = artCollection.querySelectorAll('.fade-in-element:not(.visible),.art-collection img:not(.loaded),.art-collection h3:not(.visible),.art-collection h4:not(.visible)');
         observeElements(newElements);
 
-        currentPart++;
         isLoading = false; // Release lock
       })
       .catch(error => {
