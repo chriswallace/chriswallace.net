@@ -271,8 +271,12 @@ caption {
   @apply sm:max-w-[66%];
 }
 
-.gallery-single-wide-portrait {
-  @apply mx-auto sm:max-w-[45%];
+.gallery-single-wide-portrait > div {
+  @apply my-4 sm:my-0 w-full;
+}
+
+.gallery-single-wide-portrait .image-wrapper {
+  @apply mx-auto w-[60%] sm:w-[45%];
 }
 
 .gallery-double-wide {
