@@ -154,11 +154,15 @@ caption {
 }
 
 .artist-title {
-  @apply font-medium;
+  @apply font-medium mt-8;
 }
 
 .collection-title {
   @apply mb-4 mt-12 font-light text-gray-400 text-xs sm:text-base;
+}
+
+.collection-title a{
+  @apply font-light text-gray-500;
 }
 
 .artist-title + h4 {
@@ -327,6 +331,10 @@ caption {
 
 .utility-bar{
   @apply fixed left-0 right-0 bottom-0 sm:grid sm:grid-cols-4 items-center pb-8 sm:pb-0 bg-white z-10;
+}
+
+.utility-bar.hidden{
+  opacity: 0;
 }
 
 .page-title{
@@ -675,6 +683,10 @@ footer p {
 
   .home-title {
     @apply text-white;
+  }
+
+  .collection-title a {
+    @apply text-gray-300;
   }
 
   .button,

@@ -28,22 +28,13 @@ permalink: /art/qql-curation/
   <hr class="mb-16 md:mb-20 fade-in-element" />
   <div id="art-collection" class="art-collection">
     <div>
-      <div class="gallery-row gallery-triple-wide">
+      <div class="gallery-row gallery-triple-wide-double-small">
         <div>
-          <h3 class="artist-title">The Rug</h3>
-          <h4 class="collection-title">Minted as QQL #94</h4>
-          <img
-            alt=""
-            src="https://ik.imagekit.io/UltraDAO/wallace/qql_94.png?tr=w-100,q-20,bl-6"
-            data-iframe-src="" />
-        </div>
-        <div>
-          <h3 class="artist-title">Ascension</h3>
+          <h3 class="artist-title">Coat of Margins</h3>
           <h4 class="collection-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b92746ce7ccd8e7fffff10c14b0b">For sale: Ξ2.0</a></h4>
           <img
             alt=""
-            src="https://ik.imagekit.io/UltraDAO/wallace/qql_c14b0b.png?tr=w-100,q-20,bl-6"
-            data-iframe-src="" />
+            src="https://ik.imagekit.io/UltraDAO/wallace/qql_14b0b.png?tr=w-100,q-20,bl-6" />
         </div>
         <div>
           <h3 class="artist-title">Castles of Math</h3>
@@ -52,39 +43,42 @@ permalink: /art/qql-curation/
             alt=""
             src="https://ik.imagekit.io/UltraDAO/wallace/qql_10d48.png?tr=w-100,q-20,bl-6" />
         </div>
+        <div>
+          <h3 class="artist-title">Interstellar</h3>
+          <h4 class="collection-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b92746ce7ccd8e7fffff10c14b0b">For sale: Ξ2.0</a></h4>
+          <img
+            alt=""
+            src="https://ik.imagekit.io/UltraDAO/wallace/qql_c14b0b.png?tr=w-100,q-20,bl-6" />
+        </div>
       </div>
-    </div>
-    <div>
-      <div class="gallery-row gallery-triple-wide">
+      <div class="gallery-row gallery-triple-wide-double-small">
         <div>
           <h3 class="artist-title">The Wave</h3>
           <h4 class="collection-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927f956b5f54d87ffff15617045">For sale: Ξ1.0</a></h4>
           <img
             alt=""
-            src="https://ik.imagekit.io/UltraDAO/wallace/qql_17045.png?tr=w-100,q-20,bl-6"
-            data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/214000175" />
+            src="https://ik.imagekit.io/UltraDAO/wallace/qql_17045.png?tr=w-100,q-20,bl-6" />
         </div>
         <div>
-          <h3 class="artist-title">Coat of Margins</h3>
-          <h4 class="collection-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b92746ce7ccd8e7fffff10c14b0b">For sale: Ξ2.0</a></h4>
+          <h3 class="artist-title">The Rug</h3>
+          <h4 class="collection-title">Minted as QQL #94</h4>
           <img
             alt=""
-            src="https://ik.imagekit.io/UltraDAO/wallace/qql_14b0b.png?tr=w-100,q-20,bl-6"
-            data-iframe-src="https://gateway.fxhash2.xyz/ipfs/QmUBXzcPTme2wwfjp52Wy6Ty8oS25qguo7DLjfAMW9eRQK/?fxhash=ooQWjKEjqYfYtS5BfRMwu31Zz8ZCHDcptbtaCqvhoq9QCSHZwYW&fxiteration=219&fxminter=tz1PHnydn2z7dtW5AZUmEcGfUyN9vBqR7q4W" />
+            src="https://ik.imagekit.io/UltraDAO/wallace/qql_94.png?tr=w-100,q-20,bl-6" />
         </div>
         <div>
-          <h3 class="artist-title">Castles of Math</h3>
-          <h4 class="collection-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b92746ce7ccd8e7fffff10c14b0b">For sale: Ξ2.0</a></h4>
+          <h3 class="artist-title">Distortion Machine</h3>
+          <h4 class="collection-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b9274b0a0a33ecd2ffff11518a40">For sale: Ξ0.5</a></h4>
           <img
             alt=""
-            src="https://ik.imagekit.io/UltraDAO/wallace/qql_10d48.png?tr=w-100,q-20,bl-6" />
+            src="https://ik.imagekit.io/UltraDAO/wallace/qql_18a40.png?tr=w-100,q-20,bl-6" />
         </div>
       </div>
     </div>
   </div>
 </article>
 <div id="fullscreen-viewer" class="hidden"></div>
-<div class="utility-bar">
+<div id="utility-bar" class="utility-bar hidden">
   <div class="page-title-container">
     <div id="pageTitle" class="page-title">The Wallace Collection</div>
   </div>
@@ -123,3 +117,11 @@ permalink: /art/qql-curation/
     </button>
   </div>
 </div>
+
+<footer class="fade-in-element">
+  <div class="container">
+    <p>
+      Copyright © 2023 Chris Wallace. All rights reserved. Artwork displayed on this website is copyright its respective creator.
+    </p>
+  </div>
+</footer>

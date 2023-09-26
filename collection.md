@@ -5,6 +5,59 @@ description: A selection of generative artworks from my family's private collect
 permalink: /art/collection/
 ---
 
+<script type="text/javascript">
+  window.pageSettings = {
+    musicTracks : [
+    {
+      src: "/assets/audio/Corolina_Combo_Mind_Adventures_instrumental_2_33.mp3",
+      title: "Combo Mind Adventures",
+      artist: "Corolina",
+    },
+    {
+      src: "/assets/audio/Daniele_Musto_Spin_Around_With_You_background_vocals_3_17.mp3",
+      title: "Spin Around With You",
+      artist: "Danielle Musto",
+    },
+    {
+      src: "/assets/audio/Dr_Delight_Neptune_Rising_instrumental_3_38.mp3",
+      title: "Neptune Rising",
+      artist: "Dr. Delight",
+    },
+    {
+      src: "/assets/audio/Falls_Darkly_instrumental_5_01.mp3",
+      title: "Darkly",
+      artist: "Falls",
+    },
+    {
+      src: "/assets/audio/Nu_Alkemi_t_Lost_With_You_lead_vocal_4_20.mp3",
+      title: "Lost With You",
+      artist: "Nu Alkemi$t",
+    },
+    {
+      src: "/assets/audio/PALA_Infinite_Drive_instrumental_3_01.mp3",
+      title: "Infinite Drive",
+      artist: "PALA",
+    },
+    {
+      src: "/assets/audio/Tide_Electric_The_Chapel_Of_Love_instrumental_3_48.mp3",
+      title: "The Chapel Of Love",
+      artist: "Tide Electric",
+    },
+  ],
+    htmlParts : {
+      "part0": "/collection/chunk0.html",
+      "part1": "/collection/chunk1.html",
+      "part2": "/collection/chunk2.html",
+      "part3": "/collection/chunk3.html",
+      "part4": "/collection/chunk4.html",
+      "part5": "/collection/chunk5.html",
+      "part6": "/collection/chunk6.html",
+      "part7": "/collection/chunk7.html",
+      "part8": "/collection/chunk8.html",
+      "part9": "/collection/chunk9.html",
+    }
+  }
+</script>
 <script src="/assets/js/gallery-viewer.js"></script>
 <script src="/assets/js/player.js"></script>
 <article class="lg:max-w-6xl 3xl:max-w-full mx-auto">
@@ -212,7 +265,7 @@ permalink: /art/collection/
   </div>
 </article>
 <div id="fullscreen-viewer" class="hidden"></div>
-<div class="utility-bar">
+<div id="utility-bar" class="utility-bar hidden">
   <div class="page-title-container">
     <div id="pageTitle" class="page-title">The Wallace Collection</div>
   </div>

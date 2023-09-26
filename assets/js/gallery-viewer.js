@@ -394,63 +394,57 @@ function isMobile() {
 
   observeElements(elements);  // Observe initial elements
 
-  let isLoading = false; // Lock to prevent concurrent fetches
-  let currentPart = 0; // Initialize to 0 for the sake of completeness, but we'll randomize this
+  if( window.pageSettings ) {
 
-  // Create an array from 0 to 10, representing the 11 parts
-  let remainingParts = Array.from({ length: 10 }, (_, i) => i);
+    let isLoading = false; // Lock to prevent concurrent fetches
+    let htmlParts = window.pageSettings.htmlParts;
 
-  // Randomly shuffle the remainingParts array
-  function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+    // Function to load more art
+    function loadMoreArt() {
+      if (isLoading) return; // Return if already fetching
+      if (Object.keys(htmlParts).length === 0) return; // No more parts to load
+
+      // Pick a part to load (uses the first key in the object)
+      const nextPartKey = Object.keys(htmlParts)[0];
+      const nextPartUrl = htmlParts[nextPartKey];
+      
+      delete htmlParts[nextPartKey]; // Remove the used part from the htmlParts object
+
+      isLoading = true; // Set lock
+
+      fetch(nextPartUrl)
+        .then(response => response.text())
+        .then(html => {
+          const artCollection = document.getElementById('art-collection');
+          artCollection.insertAdjacentHTML('beforeend', html);
+
+          const images = artCollection.querySelectorAll('img:not(.loaded)');
+          images.forEach((img, index) => setupImages(img, index));
+
+          const newElements = artCollection.querySelectorAll('.fade-in-element:not(.visible),.art-collection img:not(.loaded),.art-collection h3:not(.visible),.art-collection h4:not(.visible)');
+          observeElements(newElements);
+
+          isLoading = false; // Release lock
+        })
+        .catch(error => {
+          console.error('Fetch failed:', error);
+          isLoading = false; // Release lock in case of failure
+        });
     }
-  }
 
-  shuffle(remainingParts);
+    // Throttle the scroll event
+    let lastScrollTime = 0;
 
-  function loadMoreArt() {
-    if (isLoading) return; // Return if already fetching
-    if (remainingParts.length === 0) return; // No more parts to load
-
-    // Pick a random part to load
-    const nextPart = remainingParts.pop();
-
-    isLoading = true; // Set lock
-
-    fetch(`/collection/chunk${nextPart}.html`)
-      .then(response => response.text())
-      .then(html => {
-        const artCollection = document.getElementById('art-collection');
-        artCollection.insertAdjacentHTML('beforeend', html);
-
-        const images = artCollection.querySelectorAll('img:not(.loaded)');
-
-        images.forEach((img, index) => setupImages(img, index));
-
-        const newElements = artCollection.querySelectorAll('.fade-in-element:not(.visible),.art-collection img:not(.loaded),.art-collection h3:not(.visible),.art-collection h4:not(.visible)');
-        observeElements(newElements);
-
-        isLoading = false; // Release lock
-      })
-      .catch(error => {
-        console.error('Fetch failed:', error);
-        isLoading = false; // Release lock in case of failure
-      });
-  }
-
-  // Throttle the scroll event
-  let lastScrollTime = 0;
-
-  window.addEventListener('scroll', () => {
-    const now = Date.now();
-    if (now - lastScrollTime > 200) { // Throttle time in milliseconds
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
-        loadMoreArt();
+    window.addEventListener('scroll', () => {
+      const now = Date.now();
+      if (now - lastScrollTime > 200) { // Throttle time in milliseconds
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
+          loadMoreArt();
+        }
+        lastScrollTime = now;
       }
-      lastScrollTime = now;
-    }
-  });
+    });
+
+  }
 
 });
