@@ -33,6 +33,15 @@ permalink: /art/
     <img class="fade-in-element" src="/assets/images/example-3.jpg" alt="">
 </div>
 
+<h2 class="fade-in-element"><a href="/art/qql-curation">QQL Curation</a></h2>
+<p class="fade-in-element">A selection of my favorite outputs from the QQL algorithm by Tyler Hobbs &amp; Dandelion Wist. Seeds available for purchase on the QQL marketplace.</p>
+
+<div class="gallery">
+    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/qql_14b0b.png?tr=w-700,q-50" alt="">
+    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/qql_c14b0b.png?tr=w-700,q-50" alt="">
+    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/qql_18a40.png?tr=w-700,q-50" alt="">
+</div>
+
 <h2 class="fade-in-element"><a href="https://www.fxhash.xyz/generative/26011" target="_blank">The Geometry of Rain</a></h2>
 <p class="fade-in-element">An experimental generative art project released as a long-form collection on fx{hash}, a platform for blockchain-powered provenance and ownership of generative art. It explores the relationship between geometric shapes and rain, highlighting the intersection of mathematical precision and organic fluidity.</p>
 

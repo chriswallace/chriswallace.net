@@ -30,14 +30,14 @@ permalink: /art/qql-curation/
     <div>
       <div class="gallery-row gallery-triple-wide-double-small">
         <div>
-          <h3 class="artist-title">Coat of Margins</h3>
+          <h3 class="artist-title">Coat of Margin</h3>
           <h4 class="collection-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b92746ce7ccd8e7fffff10c14b0b">For sale: Ξ2.0</a></h4>
           <img
             alt=""
             src="https://ik.imagekit.io/UltraDAO/wallace/qql_14b0b.png?tr=w-100,q-20,bl-6" />
         </div>
         <div>
-          <h3 class="artist-title">Castles of Math</h3>
+          <h3 class="artist-title">Castles in the Sky</h3>
           <h4 class="collection-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927495f18679de7ffff15810d48">For sale: Ξ0.75</a></h4>
           <img
             alt=""
@@ -53,14 +53,14 @@ permalink: /art/qql-curation/
       </div>
       <div class="gallery-row gallery-triple-wide-double-small">
         <div>
-          <h3 class="artist-title">The Wave</h3>
+          <h3 class="artist-title">Perfect Wave</h3>
           <h4 class="collection-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927f956b5f54d87ffff15617045">For sale: Ξ1.0</a></h4>
           <img
             alt=""
             src="https://ik.imagekit.io/UltraDAO/wallace/qql_17045.png?tr=w-100,q-20,bl-6" />
         </div>
         <div>
-          <h3 class="artist-title">The Rug</h3>
+          <h3 class="artist-title">Rugged</h3>
           <h4 class="collection-title">Minted as QQL #94</h4>
           <img
             alt=""
