@@ -1,64 +1,70 @@
-document.addEventListener('DOMContentLoaded', () => {
-
-  let viewer, currentIndex = null;  // Declare it globally
+document.addEventListener("DOMContentLoaded", () => {
+  let viewer,
+    currentIndex = null; // Declare it globally
   let autoRotateTimeout = null;
 
   // Select all images on the page
-  const images = document.querySelectorAll('img');
+  const images = document.querySelectorAll("img");
 
   // Create a tooltip element
-  const tooltip = document.createElement('div');
-  tooltip.style.position = 'absolute';
-  tooltip.style.backgroundColor = 'black';
-  tooltip.style.color = 'white';
-  tooltip.style.padding = '5px 10px';
-  tooltip.style.borderRadius = '5px';
-  tooltip.style.display = 'none';
-  tooltip.style.zIndex = '9999';
+  const tooltip = document.createElement("div");
+  tooltip.style.position = "absolute";
+  tooltip.style.backgroundColor = "black";
+  tooltip.style.color = "white";
+  tooltip.style.padding = "5px 10px";
+  tooltip.style.borderRadius = "5px";
+  tooltip.style.display = "none";
+  tooltip.style.zIndex = "9999";
   document.body.appendChild(tooltip);
 
-  var canvas = document.createElement('canvas');
+  var canvas = document.createElement("canvas");
 
   function webglSupport() {
-  try {
-    return !!(window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
-  } catch (e) {
-    return false;
+    try {
+      return !!(
+        window.WebGLRenderingContext &&
+        (canvas.getContext("webgl") || canvas.getContext("experimental-webgl"))
+      );
+    } catch (e) {
+      return false;
+    }
   }
-}
 
-function isMobile() {
-  return /Mobi|Android/i.test(navigator.userAgent);
-}
+  function isMobile() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+  }
 
   // Initialize IntersectionObserver
-  const imgObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        setSrcSetAndSizes(img); // Call your function to set srcset and sizes
-        observer.unobserve(img); // Stop observing this image
-      }
-    });
-  }, { rootMargin: '0px 0px 200px 0px' });  // Trigger if the image gets within 200px of the viewport
+  const imgObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          setSrcSetAndSizes(img); // Call your function to set srcset and sizes
+          observer.unobserve(img); // Stop observing this image
+        }
+      });
+    },
+    { rootMargin: "0px 0px 200px 0px" }
+  ); // Trigger if the image gets within 200px of the viewport
 
   // Function to set srcset and sizes
   const setSrcSetAndSizes = (img) => {
     const renderedWidth = img.clientWidth;
     const base_url = "https://ik.imagekit.io/UltraDAO/wallace/";
-    const img_name = img.src.split('/').pop().split('?')[0];
+    const img_name = img.src.split("/").pop().split("?")[0];
 
-    const max_width = img.getAttribute('data-max-width');
+    const max_width = img.getAttribute("data-max-width");
 
-    if(max_width && max_width <= renderedWidth){
+    if (max_width && max_width <= renderedWidth) {
       img.src = `${base_url}${img_name}?tr=q-70`;
     } else {
       let size_1x = renderedWidth,
-          size_2x = renderedWidth * 2,
-          size_3x = renderedWidth * 3,
-          size_4x = renderedWidth * 4;
+        size_2x = renderedWidth * 2,
+        size_3x = renderedWidth * 3,
+        size_4x = renderedWidth * 4;
 
-      if(max_width){
+      if (max_width) {
         size_1x = Math.min(max_width, size_1x);
         size_2x = Math.min(max_width, size_2x);
         size_3x = Math.min(max_width, size_3x);
@@ -79,7 +85,7 @@ function isMobile() {
       img.srcset = srcsetStr;
       img.sizes = sizesStr;
     }
-    img.classList.add('loaded');
+    img.classList.add("loaded");
   };
 
   function setupImages(img, index) {
@@ -87,58 +93,58 @@ function isMobile() {
       return;
     }
 
-    imgObserver.observe(img);  // Start observing this image
+    imgObserver.observe(img); // Start observing this image
 
-    img.addEventListener('mouseover', function (event) {
-      const altText = this.getAttribute('alt');
+    img.addEventListener("mouseover", function (event) {
+      const altText = this.getAttribute("alt");
       if (altText) {
         tooltip.textContent = altText;
-        tooltip.style.display = 'block';
+        tooltip.style.display = "block";
       }
     });
 
-    img.addEventListener('mousemove', function (event) {
+    img.addEventListener("mousemove", function (event) {
       const tooltipWidth = tooltip.offsetWidth;
       const windowWidth = window.innerWidth;
 
       if (event.pageX + tooltipWidth + 20 > windowWidth) {
         // Tooltip would go off the right edge of the screen
         // Show tooltip to the left of the cursor instead
-        tooltip.style.left = (event.pageX - tooltipWidth - 10) + 'px';
+        tooltip.style.left = event.pageX - tooltipWidth - 10 + "px";
       } else {
         // Normal behavior
-        tooltip.style.left = event.pageX + 10 + 'px';
+        tooltip.style.left = event.pageX + 10 + "px";
       }
 
-      tooltip.style.top = event.pageY + 10 + 'px';
+      tooltip.style.top = event.pageY + 10 + "px";
     });
 
-    img.addEventListener('mouseout', function () {
-      tooltip.style.display = 'none';
+    img.addEventListener("mouseout", function () {
+      tooltip.style.display = "none";
     });
 
     // Create a wrapper div around the image
-    const wrapperDiv = document.createElement('div');
-    wrapperDiv.classList.add('image-wrapper');
+    const wrapperDiv = document.createElement("div");
+    wrapperDiv.classList.add("image-wrapper");
     img.parentNode.insertBefore(wrapperDiv, img);
     wrapperDiv.appendChild(img);
 
-    const maximizeIcon = document.createElement('div');
-    maximizeIcon.classList.add('maximize-icon');
+    const maximizeIcon = document.createElement("div");
+    maximizeIcon.classList.add("maximize-icon");
 
     // Check if img alt attribute is not empty before adding caption
     if (isMobile() && img.alt.trim().length) {
-      const caption = document.createElement('caption');
-      caption.classList.add('fade-in-element');
+      const caption = document.createElement("caption");
+      caption.classList.add("fade-in-element");
       caption.innerHTML = img.alt;
       wrapperDiv.appendChild(caption);
     }
 
     if (!isMobile() && webglSupport()) {
       wrapperDiv.appendChild(maximizeIcon);
-      maximizeIcon.addEventListener('click', () => goFullscreen(img, index));
+      maximizeIcon.addEventListener("click", () => goFullscreen(img, index));
     }
-    
+
     img.setAttribute("data-processed", "true");
   }
 
@@ -149,54 +155,59 @@ function isMobile() {
       clearTimeout(autoRotateTimeout);
     }
 
-    if (currentIndex === null || currentIndex >= document.querySelectorAll('img').length - 1) return;
+    if (
+      currentIndex === null ||
+      currentIndex >= document.querySelectorAll("img").length - 1
+    )
+      return;
 
-    const currentImg = document.querySelectorAll('img')[currentIndex];
+    const currentImg = document.querySelectorAll("img")[currentIndex];
     const nextIndex = currentIndex + 1;
-    const nextImg = document.querySelectorAll('img')[nextIndex];
+    const nextImg = document.querySelectorAll("img")[nextIndex];
 
     let delay;
 
     // Check whether the current artwork is an iframe-based work or static image
-    if (currentImg.getAttribute('data-iframe-src')) {
+    if (currentImg.getAttribute("data-iframe-src")) {
       delay = 14000; // 25 seconds for iframe-based works
     } else {
       delay = 10000; // 15 seconds for static images
     }
 
     // Preload next image if it's not an iframe-based work
-    if (nextImg && !nextImg.getAttribute('data-iframe-src')) {
+    if (nextImg && !nextImg.getAttribute("data-iframe-src")) {
       const preloaderImg = new Image();
-      const nextSrc = nextImg.getAttribute('src');
+      const nextSrc = nextImg.getAttribute("src");
       preloaderImg.src = nextSrc;
     }
 
     autoRotateTimeout = setTimeout(() => {
-      navigateArtwork(1);  // Move to next artwork
-      autoRotateNextArtwork();  // Continue auto-rotate
+      navigateArtwork(1); // Move to next artwork
+      autoRotateNextArtwork(); // Continue auto-rotate
     }, delay);
   };
 
   // Function to start auto rotation
   const startAutoRotation = () => {
-    goFullscreen(document.querySelectorAll('img')[0], 0, true); 
+    goFullscreen(document.querySelectorAll("img")[0], 0, true);
     autoRotateNextArtwork();
-    
+
     // Add event listeners for buttons
     document.getElementById("playButton").click();
   };
 
   // Attach the startAutoRotation function to your button
   const autoRotateBtn = document.getElementById("autoPlayCollection");
-  autoRotateBtn.addEventListener('click', startAutoRotation);
+
+  if (autoRotateBtn) autoRotateBtn.addEventListener("click", startAutoRotation);
 
   // Attach event listeners to each image
   images.forEach((img, index) => setupImages(img, index));
 
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'ArrowLeft') {
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowLeft") {
       navigateArtwork(-1);
-    } else if (event.key === 'ArrowRight') {
+    } else if (event.key === "ArrowRight") {
       navigateArtwork(1);
     }
   });
@@ -217,88 +228,100 @@ function isMobile() {
 
   const goFullscreen = (img, index, shouldAutoRotate = false) => {
     viewer = document.getElementById("fullscreen-viewer");
-  
+
     if (!viewer) {
       viewer = document.createElement("div");
       viewer.id = "fullscreen-viewer";
       document.body.appendChild(viewer);
     }
-  
-    viewer.classList.add('fade-out');
-  
+
+    viewer.classList.add("fade-out");
+
     setTimeout(() => {
-      const loader = document.createElement('div');
-      loader.className = 'loader';
-  
-      const newImg = document.createElement('img');
-      const currentSrc = img.getAttribute('src');
-      const currentIframeSrc = img.getAttribute('data-iframe-src');
-      const currentIframeSize = img.getAttribute('data-iframe-size');
-  
+      const loader = document.createElement("div");
+      loader.className = "loader";
+
+      const newImg = document.createElement("img");
+      const currentSrc = img.getAttribute("src");
+      const currentIframeSrc = img.getAttribute("data-iframe-src");
+      const currentIframeSize = img.getAttribute("data-iframe-size");
+
       // Reset the data-is-current attribute for all images before setting for the current image
-      document.querySelectorAll("[data-is-current='true']").forEach(el => el.setAttribute("data-is-current", "false"));
+      document
+        .querySelectorAll("[data-is-current='true']")
+        .forEach((el) => el.setAttribute("data-is-current", "false"));
       img.setAttribute("data-is-current", "true");
-  
+
       newImg.onload = () => {
         loader.remove();
         if (currentIframeSrc)
-          newDiv.appendChild(createViewLiveCodeButton(currentIframeSrc, newImg, currentIframeSize));
+          newDiv.appendChild(
+            createViewLiveCodeButton(
+              currentIframeSrc,
+              newImg,
+              currentIframeSize
+            )
+          );
       };
-  
+
       viewer.classList.remove("hidden");
       currentIndex = index;
-  
-      if (currentIframeSize === 'fullscreen' && currentIframeSrc) {
-        const newDiv = document.createElement('div');
-        const iframe = document.createElement('iframe');
-        iframe.setAttribute('src', currentIframeSrc);
-        iframe.setAttribute('style', 'position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100vw; height: 100vh;');
-        viewer.innerHTML = '';
+
+      if (currentIframeSize === "fullscreen" && currentIframeSrc) {
+        const newDiv = document.createElement("div");
+        const iframe = document.createElement("iframe");
+        iframe.setAttribute("src", currentIframeSrc);
+        iframe.setAttribute(
+          "style",
+          "position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100vw; height: 100vh;"
+        );
+        viewer.innerHTML = "";
         viewer.appendChild(newDiv);
         newDiv.appendChild(iframe);
-        viewer.className = '';
+        viewer.className = "";
         if (viewer.requestFullscreen) {
           viewer.requestFullscreen();
         }
         return;
       }
-  
+
       let highResSrc;
-      const isGif = currentSrc.endsWith('.gif') || currentSrc.includes('.gif?');
+      const isGif = currentSrc.endsWith(".gif") || currentSrc.includes(".gif?");
       if (isGif) {
-        highResSrc = currentSrc.replace(/w-\d+,?/, '');
+        highResSrc = currentSrc.replace(/w-\d+,?/, "");
       } else {
-        highResSrc = currentSrc.replace(/w-\d+/, `w-${window.innerWidth * 2}`).replace(/q-\d+/, 'q-90');
+        highResSrc = currentSrc
+          .replace(/w-\d+/, `w-${window.innerWidth * 2}`)
+          .replace(/q-\d+/, "q-90");
       }
-      highResSrc = highResSrc.replace(/,bl-\d+/, '');
-  
+      highResSrc = highResSrc.replace(/,bl-\d+/, "");
+
       newImg.src = highResSrc;
-      newImg.setAttribute('src', highResSrc);
-  
-      const newDiv = document.createElement('div');
-  
-      viewer.innerHTML = '';
+      newImg.setAttribute("src", highResSrc);
+
+      const newDiv = document.createElement("div");
+
+      viewer.innerHTML = "";
       viewer.appendChild(loader);
       viewer.appendChild(newDiv);
       newDiv.appendChild(newImg);
-  
-      viewer.classList.remove('fade-out');
-  
+
+      viewer.classList.remove("fade-out");
+
       if (viewer.requestFullscreen) {
         viewer.requestFullscreen();
       }
-  
+
       if (shouldAutoRotate) {
         autoRotateNextArtwork();
       }
-  
     }, 750);
-  };  
+  };
 
   if (!isMobile() && webglSupport()) {
-    let iframes = document.getElementsByClassName('live-code');
+    let iframes = document.getElementsByClassName("live-code");
     Array.from(iframes).forEach((iframe) => {
-      let dataSrc = iframe.getAttribute('data-src');
+      let dataSrc = iframe.getAttribute("data-src");
       if (dataSrc) {
         iframe.src = dataSrc;
       }
@@ -306,25 +329,25 @@ function isMobile() {
   }
 
   function createViewLiveCodeButton(iframeSrc, img, currentIframeSize) {
-    const viewCodeButton = document.createElement('button');
-    viewCodeButton.textContent = 'View Live';
-    viewCodeButton.className = 'live-code-btn';
-    viewCodeButton.addEventListener('click', () => {
+    const viewCodeButton = document.createElement("button");
+    viewCodeButton.textContent = "View Live";
+    viewCodeButton.className = "live-code-btn";
+    viewCodeButton.addEventListener("click", () => {
       if (iframeSrc) {
         const imgWidth = img.offsetWidth;
         const imgHeight = img.offsetHeight;
-        const newDiv = document.createElement('div');
-        const iframe = document.createElement('iframe');
-        iframe.setAttribute('src', iframeSrc);
-        if (currentIframeSize === 'fullscreen') {
-          iframe.setAttribute('width', window.innerWidth);  // Set the iframe width to match the image
-          iframe.setAttribute('height', window.innerHeight);  // Set the iframe height to match the image
+        const newDiv = document.createElement("div");
+        const iframe = document.createElement("iframe");
+        iframe.setAttribute("src", iframeSrc);
+        if (currentIframeSize === "fullscreen") {
+          iframe.setAttribute("width", window.innerWidth); // Set the iframe width to match the image
+          iframe.setAttribute("height", window.innerHeight); // Set the iframe height to match the image
         } else {
-          iframe.setAttribute('width', imgWidth);  // Set the iframe width to match the image
-          iframe.setAttribute('height', imgHeight);  // Set the iframe height to match the image
+          iframe.setAttribute("width", imgWidth); // Set the iframe width to match the image
+          iframe.setAttribute("height", imgHeight); // Set the iframe height to match the image
         }
-        const viewer = document.getElementById('fullscreen-viewer');
-        viewer.innerHTML = '';
+        const viewer = document.getElementById("fullscreen-viewer");
+        viewer.innerHTML = "";
         viewer.appendChild(newDiv);
         newDiv.appendChild(iframe);
       }
@@ -340,7 +363,7 @@ function isMobile() {
       !document.mozFullScreenElement &&
       !document.msFullscreenElement
     ) {
-      viewer.className = 'hidden';
+      viewer.className = "hidden";
 
       // Stop auto-rotate when exiting fullscreen
       if (autoRotateTimeout) {
@@ -349,40 +372,46 @@ function isMobile() {
     }
   };
 
-  document.addEventListener('fullscreenchange', checkFullscreenStatus);
-  document.addEventListener('webkitfullscreenchange', checkFullscreenStatus);
-  document.addEventListener('mozfullscreenchange', checkFullscreenStatus);
-  document.addEventListener('MSFullscreenChange', checkFullscreenStatus);
+  document.addEventListener("fullscreenchange", checkFullscreenStatus);
+  document.addEventListener("webkitfullscreenchange", checkFullscreenStatus);
+  document.addEventListener("mozfullscreenchange", checkFullscreenStatus);
+  document.addEventListener("MSFullscreenChange", checkFullscreenStatus);
 
   let observerIndex = 0;
 
   const observeElements = (elementsToObserve) => {
-    elementsToObserve.forEach(el => observer.observe(el));
+    elementsToObserve.forEach((el) => observer.observe(el));
   };
 
   function scrollStop(callback, refresh = 66) {
-    if (!callback || typeof callback !== 'function') return;
+    if (!callback || typeof callback !== "function") return;
     let isScrolling;
-    window.addEventListener('scroll', function(event) {
-      window.clearTimeout(isScrolling);
-      isScrolling = setTimeout(callback, refresh);
-    }, false);
+    window.addEventListener(
+      "scroll",
+      function (event) {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(callback, refresh);
+      },
+      false
+    );
   }
 
-  const elements = document.querySelectorAll('.fade-in-element,.art-collection img,.art-collection h3,.art-collection h4');
+  const elements = document.querySelectorAll(
+    ".fade-in-element,.art-collection img,.art-collection h3,.art-collection h4"
+  );
 
-  scrollStop(function() {
-    observerIndex = 0;  // Reset index when scrolling stops
+  scrollStop(function () {
+    observerIndex = 0; // Reset index when scrolling stops
   });
 
   const fadeIn = (el, delay) => {
     setTimeout(() => {
-      el.classList.add('visible');
+      el.classList.add("visible");
     }, delay);
   };
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const delay = observerIndex * 50;
         fadeIn(entry.target, delay);
@@ -392,10 +421,9 @@ function isMobile() {
     });
   });
 
-  observeElements(elements);  // Observe initial elements
+  observeElements(elements); // Observe initial elements
 
-  if( window.pageSettings ) {
-
+  if (window.pageSettings) {
     let isLoading = false; // Lock to prevent concurrent fetches
     let htmlParts = window.pageSettings.htmlParts;
 
@@ -407,27 +435,29 @@ function isMobile() {
       // Pick a part to load (uses the first key in the object)
       const nextPartKey = Object.keys(htmlParts)[0];
       const nextPartUrl = htmlParts[nextPartKey];
-      
+
       delete htmlParts[nextPartKey]; // Remove the used part from the htmlParts object
 
       isLoading = true; // Set lock
 
       fetch(nextPartUrl)
-        .then(response => response.text())
-        .then(html => {
-          const artCollection = document.getElementById('art-collection');
-          artCollection.insertAdjacentHTML('beforeend', html);
+        .then((response) => response.text())
+        .then((html) => {
+          const artCollection = document.getElementById("art-collection");
+          artCollection.insertAdjacentHTML("beforeend", html);
 
-          const images = artCollection.querySelectorAll('img:not(.loaded)');
+          const images = artCollection.querySelectorAll("img:not(.loaded)");
           images.forEach((img, index) => setupImages(img, index));
 
-          const newElements = artCollection.querySelectorAll('.fade-in-element:not(.visible),.art-collection img:not(.loaded),.art-collection h3:not(.visible),.art-collection h4:not(.visible)');
+          const newElements = artCollection.querySelectorAll(
+            ".fade-in-element:not(.visible),.art-collection img:not(.loaded),.art-collection h3:not(.visible),.art-collection h4:not(.visible)"
+          );
           observeElements(newElements);
 
           isLoading = false; // Release lock
         })
-        .catch(error => {
-          console.error('Fetch failed:', error);
+        .catch((error) => {
+          console.error("Fetch failed:", error);
           isLoading = false; // Release lock in case of failure
         });
     }
@@ -435,16 +465,18 @@ function isMobile() {
     // Throttle the scroll event
     let lastScrollTime = 0;
 
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       const now = Date.now();
-      if (now - lastScrollTime > 200) { // Throttle time in milliseconds
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
+      if (now - lastScrollTime > 200) {
+        // Throttle time in milliseconds
+        if (
+          window.innerHeight + window.scrollY >=
+          document.body.offsetHeight - 500
+        ) {
           loadMoreArt();
         }
         lastScrollTime = now;
       }
     });
-
   }
-
 });
