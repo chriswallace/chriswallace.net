@@ -149,7 +149,9 @@ caption {
 }
 
 .collection-title,
-.artist-title {
+.artist-title,
+.artwork-title,
+.artwork-subtitle {
   @apply mt-0 text-base mb-4 truncate max-w-[100%];
 }
 
@@ -157,15 +159,25 @@ caption {
   @apply font-medium mt-8;
 }
 
-.collection-title {
+.artwork-title {
+  @apply mt-4 mb-0;
+}
+
+.collection-title,
+.artwork-subtitle  {
   @apply mb-4 mt-12 font-light text-gray-400 text-xs sm:text-base;
 }
 
-.collection-title a{
-  @apply font-light text-gray-500;
+.artwork-subtitle {
+  @apply mt-0 mb-12 sm:mb-24;
 }
 
-.artist-title + h4 {
+.collection-title a,
+.artwork-subtitle a{
+  @apply font-light text-gray-500 no-underline;
+}
+
+.artist-title+h4 {
   @apply -mt-4;
 }
 
@@ -251,23 +263,23 @@ caption {
   @apply min-w-full;
 }
 
-.gallery-row{
+.gallery-row {
   @apply mb-4 grid gap-2 sm:gap-4;
 }
 
-.gallery-row:last-of-type{
+.gallery-row:last-of-type {
   @apply mx-auto mb-16 sm:mb-32;
 }
 
-.art-collection > div:last-of-type .gallery-row:last-of-type {
+.art-collection>div:last-of-type .gallery-row:last-of-type {
   @apply mb-8 sm:mb-8;
 }
 
-.gallery-flex{
+.gallery-flex {
   @apply sm:flex gap-2 sm:gap-4;
 }
 
-.gallery-flex div{
+.gallery-flex div {
   min-width: 0;
 }
 
@@ -275,7 +287,7 @@ caption {
   @apply sm:max-w-[66%];
 }
 
-.gallery-single-wide-portrait > div {
+.gallery-single-wide-portrait>div {
   @apply my-4 sm:my-0 w-full;
 }
 
@@ -329,15 +341,15 @@ caption {
   @apply flex gap-2 sm:gap-4;
 }
 
-.utility-bar{
+.utility-bar {
   @apply fixed left-0 right-0 bottom-0 sm:grid sm:grid-cols-4 items-center pb-8 sm:pb-0 bg-white z-10;
 }
 
-.utility-bar.hidden{
+.utility-bar.hidden {
   opacity: 0;
 }
 
-.page-title{
+.page-title {
   @apply text-sm font-bold ml-3 uppercase leading-tight float-left opacity-0;
 }
 
@@ -350,24 +362,25 @@ caption {
   flex: 0.5;
   float: right;
   border-radius: 400px;
-  border: 1px solid rgba(0,0,0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.page-title,.to-top{
+.page-title,
+.to-top {
   @apply hidden sm:block;
 }
 
 .page-title,
-.to-top button{
+.to-top button {
   transition: opacity 0.5s ease-in-out;
 }
 
-.to-top button i{
+.to-top button i {
   @apply block w-[20px] h-[20px] bg-center bg-no-repeat bg-contain;
   background-image: url("/assets/images/icons/arrow-up-dark.svg");
 }
 
-.music-player-container{
+.music-player-container {
   @apply col-span-2;
 }
 
@@ -428,11 +441,9 @@ caption {
   left: 1px;
   right: 1px;
   bottom: 18px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.2)
-  );
+  background-image: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.2));
   border-radius: 1px 1px 20% 20%;
   z-index: 12;
 }
@@ -457,7 +468,7 @@ caption {
   flex: 1;
 }
 
-.infoBox > div {
+.infoBox>div {
   overflow: hidden;
   white-space: nowrap;
   width: auto;
@@ -684,7 +695,8 @@ footer p {
     @apply text-white;
   }
 
-  .collection-title a {
+  .collection-title a,
+  .artwork-subtitle a {
     @apply text-gray-300;
   }
 
@@ -730,13 +742,12 @@ footer p {
     @apply text-gray-300;
   }
 
-  .utility-bar{
-    background-image: linear-gradient(
-      to bottom,
-      rgb(55, 55, 55),
-      rgb(44, 44,44)
-    );
+  .utility-bar {
+    background-image: linear-gradient(to bottom,
+        rgb(55, 55, 55),
+        rgb(44, 44, 44));
   }
+
   .trackActivityContainer {
     @apply w-[50%];
     padding: 4px 8px;
@@ -746,7 +757,7 @@ footer p {
     background-image: linear-gradient(to bottom, #632665, rgb(128, 30, 134));
     color: rgb(222, 154, 226);
     text-shadow: 0 0 5px rgb(211, 39, 221);
-    box-shadow: inset 0 0 8px rgba(157,34,163,0.5), inset 0 0 16px rgb(157,34,163);
+    box-shadow: inset 0 0 8px rgba(157, 34, 163, 0.5), inset 0 0 16px rgb(157, 34, 163);
     position: relative;
   }
 
@@ -757,15 +768,15 @@ footer p {
   #playButton i {
     background-image: url("/assets/images/icons/play-light.svg");
   }
-  
+
   #pauseButton i {
     background-image: url("/assets/images/icons/pause-light.svg");
   }
-  
+
   #nextButton i {
     background-image: url("/assets/images/icons/next-light.svg");
   }
-  
+
   #prevButton i {
     background-image: url("/assets/images/icons/previous-light.svg");
   }
@@ -774,7 +785,7 @@ footer p {
     border-color: rgb(135, 135, 135);
   }
 
-  #backToTop i{
+  #backToTop i {
     background-image: url("/assets/images/icons/arrow-up-light.svg");
-  }  
+  }
 }
