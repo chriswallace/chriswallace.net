@@ -353,17 +353,16 @@ caption {
   border: 1px solid rgba(0,0,0, 0.3);
 }
 
-.page-title-container,
-.to-top{
+.page-title,.to-top{
   @apply hidden sm:block;
 }
 
 .page-title,
-#backToTop{
+.to-top button{
   transition: opacity 0.5s ease-in-out;
 }
 
-#backToTop i{
+.to-top button i{
   @apply block w-[20px] h-[20px] bg-center bg-no-repeat bg-contain;
   background-image: url("/assets/images/icons/arrow-up-dark.svg");
 }
