@@ -298,7 +298,7 @@ permalink: /art/collection/
       <input id="volumeControl" type="range" min="0" max="1" step="0.1" aria-label="Volume" />
     </div>
   </div>
-  <div class="to-top">
+  <div class="to-top hidden sm:block">
     <button id="backToTop" title="Go to top">
       <i></i>
     </button>

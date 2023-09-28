@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let autoRotateTimeout = null;
 
   // Select all images on the page
-  const images = document.querySelectorAll("img");
+  const artCollection = document.getElementById("art-collection");
+  let images = artCollection.querySelectorAll("img");
 
   // Create a tooltip element
   const tooltip = document.createElement("div");
@@ -148,33 +149,34 @@ document.addEventListener("DOMContentLoaded", () => {
     img.setAttribute("data-processed", "true");
   }
 
-  // Function to automatically rotate to the next artwork
   const autoRotateNextArtwork = () => {
     // Clear previous timeout if exists
     if (autoRotateTimeout) {
       clearTimeout(autoRotateTimeout);
     }
 
-    if (
-      currentIndex === null ||
-      currentIndex >= document.querySelectorAll("img").length - 1
-    )
+    images = artCollection.querySelectorAll("img"); // Get the current list of images
+
+    if (currentIndex === null)
       return;
 
-    const currentImg = document.querySelectorAll("img")[currentIndex];
+    if (currentIndex >= images.length - 1) {
+      // If you're at the last image, load more art
+      loadMoreArt();
+    }
+
+    const currentImg = images[currentIndex];
     const nextIndex = currentIndex + 1;
-    const nextImg = document.querySelectorAll("img")[nextIndex];
+    const nextImg = images[nextIndex];
 
     let delay;
 
-    // Check whether the current artwork is an iframe-based work or static image
     if (currentImg.getAttribute("data-iframe-src")) {
-      delay = 14000; // 25 seconds for iframe-based works
+      delay = 12000;
     } else {
-      delay = 10000; // 15 seconds for static images
+      delay = 8000;
     }
 
-    // Preload next image if it's not an iframe-based work
     if (nextImg && !nextImg.getAttribute("data-iframe-src")) {
       const preloaderImg = new Image();
       const nextSrc = nextImg.getAttribute("src");
@@ -182,8 +184,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     autoRotateTimeout = setTimeout(() => {
-      navigateArtwork(1); // Move to next artwork
-      autoRotateNextArtwork(); // Continue auto-rotate
+      navigateArtwork(1);
+      autoRotateNextArtwork();
     }, delay);
   };
 
@@ -446,8 +448,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const artCollection = document.getElementById("art-collection");
           artCollection.insertAdjacentHTML("beforeend", html);
 
-          const images = artCollection.querySelectorAll("img:not(.loaded)");
-          images.forEach((img, index) => setupImages(img, index));
+          const unloadedImages = artCollection.querySelectorAll("img:not(.loaded)");
+          unloadedImages.forEach((img, index) => setupImages(img, index));
 
           const newElements = artCollection.querySelectorAll(
             ".fade-in-element:not(.visible),.art-collection img:not(.loaded),.art-collection h3:not(.visible),.art-collection h4:not(.visible)"
