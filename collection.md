@@ -146,8 +146,7 @@ permalink: /art/collection/
           <h4 class="collection-title">Genuary #6 no25</h4>
           <img
             alt=""
-            src="https://ik.imagekit.io/UltraDAO/wallace/genuary_6_no2.png?tr=w-100,q-20,bl-6"
-            data-iframe-src="https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/214000175" />
+            src="https://ik.imagekit.io/UltraDAO/wallace/genuary_6_no2.png?tr=w-100,q-20,bl-6" />
         </div>
       </div>
     </div>
