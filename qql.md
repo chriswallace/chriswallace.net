@@ -153,6 +153,27 @@ permalink: /art/qql-curation/
         <div>
           <img
             alt=""
+            src="https://ik.imagekit.io/UltraDAO/wallace/qql_0c175ffff14928c30.png?tr=w-100,q-20,bl-6" />
+          <h3 class="artwork-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927aa0f13f0c175ffff14928c30">Downtown Lounge</a></h3>
+          <h4 class="artwork-subtitle"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927aa0f13f0c175ffff14928c30">Price: Ξ2.0</a></h4>
+        </div>
+        <div>
+          <img
+            alt=""
+            src="https://ik.imagekit.io/UltraDAO/wallace/qql_f24d7bffff1082ac82.png?tr=w-100,q-20,bl-6" />
+          <h3 class="artwork-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b9277d44e7f24d7bffff1082ac82">Monoliths</a></h3>
+          <h4 class="artwork-subtitle"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b9277d44e7f24d7bffff1082ac82">Price: Ξ1.0</a></h4>
+        </div>
+        <div>
+          <img
+            alt=""
+            src="hhttps://ik.imagekit.io/UltraDAO/wallace/qql_53917bffff11422d50.png?tr=w-100,q-20,bl-6" />
+          <h3 class="artwork-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927570f9853917bffff11422d50">Hills of Grain</a></h3>
+          <h4 class="artwork-subtitle"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927570f9853917bffff11422d50">Price: Ξ0.5</a></h4>
+        </div>
+        <div>
+          <img
+            alt=""
             src="https://ik.imagekit.io/UltraDAO/wallace/qql_ffff14e27257.png?tr=w-100,q-20,bl-6" />
           <h3 class="artwork-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b9278ebc12469edeffff14e27257">Toy Anteater</a></h3>
           <h4 class="artwork-subtitle"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b9278ebc12469edeffff14e27257">Price: Ξ0.75</a></h4>
@@ -170,6 +191,27 @@ permalink: /art/qql-curation/
             src="https://ik.imagekit.io/UltraDAO/wallace/qql_ff1082b02d.png?tr=w-100,q-20,bl-6" />
           <h3 class="artwork-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b9275e383091b162ffff1082b02d">Starsprite</a></h3>
           <h4 class="artwork-subtitle"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b9275e383091b162ffff1082b02d">Price: Ξ1.0</a></h4>
+        </div>
+        <div>
+          <img
+            alt=""
+            src="https://ik.imagekit.io/UltraDAO/wallace/qql_dfcaffff10e2cb23.png?tr=w-100,q-20,bl-6" />
+          <h3 class="artwork-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b92734dd1d3edfcaffff10e2cb23">It was all a Dream</a></h3>
+          <h4 class="artwork-subtitle"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b92734dd1d3edfcaffff10e2cb23">Price: Ξ1.0</a></h4>
+        </div>
+        <div>
+          <img
+            alt=""
+            src="https://ik.imagekit.io/UltraDAO/wallace/qql_f0ce3cffff11660a12.png?tr=w-100,q-20,bl-6" />
+          <h3 class="artwork-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b9274f5dfdf0ce3cffff11660a12">City Lights</a></h3>
+          <h4 class="artwork-subtitle"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b9274f5dfdf0ce3cffff11660a12">Price: Ξ0.5</a></h4>
+        </div>
+        <div>
+          <img
+            alt=""
+            src="https://ik.imagekit.io/UltraDAO/wallace/qql_7c9ed9ffff11660a12.png?tr=w-100,q-20,bl-6" />
+          <h3 class="artwork-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927d9a8657c9ed9ffff11660a12">Repetitive Repetition</a></h3>
+          <h4 class="artwork-subtitle"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927d9a8657c9ed9ffff11660a12">Price: Ξ0.25</a></h4>
         </div>
       </div>
     </div>

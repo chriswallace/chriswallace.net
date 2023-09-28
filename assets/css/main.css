@@ -365,8 +365,7 @@ caption {
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.page-title,
-.to-top {
+.page-title{
   @apply hidden sm:block;
 }
 
