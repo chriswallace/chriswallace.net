@@ -6,6 +6,15 @@ permalink: /art/
 
 <p class="sub-heading fade-in-element">Since 2021, I've minted digital art on the Ethereum and Tezos blockchains. Recently, I've been exploring AI-collaborative art, creating complex algorithms that produce beautiful works. I'm also an avid collector with over 6,000 pieces acquired.</p>
 
+<h2 class="fade-in-element"><a href="/art/qql-studying-the-algorithm">QQL: Studying the Algorithm</a></h2>
+<p class="fade-in-element">A curation of outputs from the QQL algorithm by Tyler Hobbs &amp; Dandelion Wist. It exhibits the complex (and sometimes simple) patterns that produce some of the most compelling forms.</p>
+
+<div class="gallery">
+    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/qql_14b0b.png?tr=w-700,q-50" alt="">
+    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/qql_c14b0b.png?tr=w-700,q-50" alt="">
+    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/qql_18a40.png?tr=w-700,q-50" alt="">
+</div>
+
 <h2 class="fade-in-element"><a href="/art/collection">The Wallace Collection</a></h2>
 <p class="mb-8 fade-in-element">Explore a curated selection of pieces from the Wallace family's digital collection. These pieces were acquired over a period of two and a half years, containing art from some of the leading creative coders in the world, including Tyler Hobbs, IX Shells, Casey Reas, Manolo Gamboa Naon, Iskra Velitchkova, and more.</p>
 
@@ -31,15 +40,6 @@ permalink: /art/
     <img class="fade-in-element" src="/assets/images/example-1.jpg" alt="">
     <img class="fade-in-element" src="/assets/images/example-2.jpg" alt="">
     <img class="fade-in-element" src="/assets/images/example-3.jpg" alt="">
-</div>
-
-<h2 class="fade-in-element"><a href="/art/qql-curation">QQL Curation</a></h2>
-<p class="fade-in-element">A selection of my favorite outputs from the QQL algorithm by Tyler Hobbs &amp; Dandelion Wist. Seeds available for purchase on the QQL marketplace.</p>
-
-<div class="gallery">
-    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/qql_14b0b.png?tr=w-700,q-50" alt="">
-    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/qql_c14b0b.png?tr=w-700,q-50" alt="">
-    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/qql_18a40.png?tr=w-700,q-50" alt="">
 </div>
 
 <h2 class="fade-in-element"><a href="https://www.fxhash.xyz/generative/26011" target="_blank">The Geometry of Rain</a></h2>
