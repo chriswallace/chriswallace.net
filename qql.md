@@ -33,7 +33,7 @@ permalink: /art/qql-curation/
             alt=""
             src="https://ik.imagekit.io/UltraDAO/wallace/qql_efb06ffff10c14b0b.png?tr=w-100,q-20,bl-6" />
           <h3 class="artwork-title"><a href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927c270918efb06ffff10c14b0b">CSS</a></h3>
-          <h4 class="artwork-subtitle"><a href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927c270918efb06ffff10c14b0b">Community QQL</a></h4>
+          <h4 class="artwork-subtitle"><a href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927c270918efb06ffff10c14b0b">QQL #279</a></h4>
         </div>
         <div>
           <img
