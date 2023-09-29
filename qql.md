@@ -3,6 +3,7 @@ layout: full-width
 title: QQL Curation
 description: After poring over thousands of QQL outputs, I've curated a set that I am extremely proud of. Some are for sale while others have already been minted or sold.
 permalink: /art/qql-studying-the-algorithm/
+thumbnail: https://ik.imagekit.io/UltraDAO/wallace/studying_the_algorithm.png?tr=w-1000,q-70
 ---
 
 <script src="/assets/js/gallery-viewer.js"></script>

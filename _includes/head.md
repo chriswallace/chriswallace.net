@@ -9,7 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500&display=swap" rel="stylesheet" async>
   <link rel="stylesheet" href="/assets/main.css?version=1.53" />
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
-  <meta property="og:image" content="/assets/images/chris-wallace.jpg" />
+  <meta property="og:image" content="{{page.thumbnail | default: '/assets/images/chris-wallace.jpg'}}" />
+  <meta property="twitter:image" content="{{page.thumbnail | default: '/assets/images/chris-wallace.jpg'}}">
+
   {% seo title=false %}
   <style>
   .fade-in-element,
