@@ -44,11 +44,3 @@ permalink: /products/
     </div>
   </a>
 </div>
-
-<ul class="text-2xl list-none mt-12 ml-0 pl-0 fade-in-element">
-    <li><a class="font-light fade-in-element" href="/">Home</a></li>
-    <li><a class="font-light fade-in-element" href="/about">About</a></li>
-    <li><a class="font-light fade-in-element" href="/resume">CV / Résumé</a></li>
-    <li class="selected fade-in-element">Products</li>
-    <li><a class="font-light fade-in-element" href="/art">Art</a></li>
-</ul>

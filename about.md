@@ -27,11 +27,3 @@ permalink: /about/
     <li class="fade-in-element"><a href="https://podcasts.proof.xyz/artist-spotlight-woodies-artist-and-collector-chris-wallace/">The Woodies PFP and a Guide to HEN Collecting with Chris Wallace with Kevin Rose</a></li>
     <li class="fade-in-element"><a href="https://www.youtube.com/watch?v=xKiwjL7zzTc">The future of decentralized IP</a></li>
 </ul>
-
-<ul class="text-2xl list-none mt-12 ml-0 pl-0">
-    <li><a class="font-light fade-in-element" href="/">Home</a></li>
-    <li class="selected fade-in-element">About</li>
-    <li><a class="font-light fade-in-element" href="/resume">CV / Résumé</a></li>
-    <li><a class="font-light fade-in-element" href="/products">Products</a></li>
-    <li><a class="font-light fade-in-element" href="/art">Art</a></li>
-</ul>

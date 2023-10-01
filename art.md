@@ -61,11 +61,3 @@ permalink: /art/
     <video class="fade-in-element" src="https://assets.foundation.app/AW/pv/QmaAAX2qQj7KW8bkmhrAYaKut4o96o9CjAvTKQKarKAWpv/nft.mp4" poster="https://assets.foundation.app/AW/pv/QmaAAX2qQj7KW8bkmhrAYaKut4o96o9CjAvTKQKarKAWpv/nft.jpg" loop autoplay playsinline muted></video>
     <video class="fade-in-element" src="https://assets.foundation.app/US/En/QmTCac6iUsjKG93FFyRAW6gMhkQD3gYNgsQJhUrr7sUSEn/nft.mp4" poster="https://assets.foundation.app/US/En/QmTCac6iUsjKG93FFyRAW6gMhkQD3gYNgsQJhUrr7sUSEn/nft.jpg" loop autoplay playsinline muted></video>
 </div>
-
-<ul class="text-2xl list-none mt-12 ml-0 pl-0">
-    <li><a class="font-light fade-in-element" href="/">Home</a></li>
-    <li><a class="font-light fade-in-element" href="/about">About</a></li>
-    <li><a class="font-light fade-in-element" href="/resume">CV / Résumé</a></li>
-    <li><a class="font-light fade-in-element" href="/products">Products</a></li>
-    <li class="selected fade-in-element">Art</li>
-</ul>

@@ -16,11 +16,3 @@ description: I’m a product design executive passionate about using emotional d
     <img class="fade-in-element" src="/assets/images/cw-media-1.jpg" alt="">
     <img class="fade-in-element" src="/assets/images/cw-media-3.jpg" alt="">
 </div>
-
-<ul class="text-2xl list-none mt-12 ml-0 pl-0">
-    <li class="selected fade-in-element">Home</li>
-    <li><a class="font-light fade-in-element" href="/about">About</a></li>
-    <li><a class="font-light fade-in-element" href="/resume">CV / Résumé</a></li>
-    <li><a class="font-light fade-in-element" href="/products">Products</a></li>
-    <li><a class="font-light fade-in-element" href="/art">Art</a></li>
-</ul>

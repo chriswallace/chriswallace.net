@@ -121,27 +121,66 @@ caption {
   @apply cursor-pointer bg-gray-200 rounded-md px-4 py-2 hover:bg-gray-300;
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+.site-title {
+  @apply md:hidden py-4 text-xl font-light inline-block;
+}
+
+#menu-button {
+  @apply py-4 pr-0 float-right;
+}
+
 .navigation {
-  @apply py-4 md:py-6;
+  @apply bg-gray-800 text-white py-4 md:mb-24;
 }
 
-.navigation h1 {
-  @apply m-0;
+.navigation .close-button {
+  @apply absolute top-2 right-0 p-4;
 }
 
-.navigation h1,
-.navigation a {
-  @apply text-lg md:text-xl;
+.navigation-list {
+  @apply left-0 top-0 right-0 bottom-0 flex fixed bg-gray-800 text-white z-10 md:relative;
 }
 
-.navigation h1 a {
-  @apply m-0 tracking-tight font-light;
-  text-decoration: none;
-  text-decoration-thickness: 0;
+.navigation-list ul {
+  @apply list-none m-0 p-0 max-w-7xl mx-auto w-full text-lg md:flex text-center self-center justify-center items-center md:justify-items-stretch;
 }
 
-.navigation ul {
-  @apply flex justify-between items-center gap-4;
+.navigation-list.invis {
+  @apply hidden md:flex;
+}
+
+.navigation-list li {
+  @apply mb-4 md:my-2 mx-auto;
+}
+
+.navigation-list li:first-child {
+  @apply mr-1;
+}
+
+.navigation-list li:last-child {
+  @apply mb-0;
+}
+
+.navigation-list li a {
+  @apply text-3xl md:text-xl font-light md:px-3 md:py-2 no-underline hover:underline hover:decoration-2 text-stone-600 hover:text-black;
+}
+
+.navigation-list li:first-child a {
+  @apply text-black md:-left-3 relative;
+}
+
+.navigation-list .social-buttons {
+  @apply mt-16 md:mt-0 md:ml-8 md:grow md:text-right;
+}
+
+.navigation-list .social-buttons a {
+  @apply p-4 sm:p-3 md:p-2;
+  line-height: 0.5;
 }
 
 .home-title {
@@ -164,7 +203,7 @@ caption {
 }
 
 .collection-title,
-.artwork-subtitle  {
+.artwork-subtitle {
   @apply mb-4 mt-12 font-light text-gray-400 text-xs sm:text-base;
 }
 
@@ -173,11 +212,11 @@ caption {
 }
 
 .collection-title a,
-.artwork-subtitle a{
+.artwork-subtitle a {
   @apply font-light text-gray-500 no-underline;
 }
 
-.artist-title+h4 {
+.artist-title + h4 {
   @apply -mt-4;
 }
 
@@ -271,7 +310,7 @@ caption {
   @apply mx-auto mb-16 sm:mb-32;
 }
 
-.art-collection>div:last-of-type .gallery-row:last-of-type {
+.art-collection > div:last-of-type .gallery-row:last-of-type {
   @apply mb-8 sm:mb-8;
 }
 
@@ -287,7 +326,7 @@ caption {
   @apply sm:max-w-[66%];
 }
 
-.gallery-single-wide-portrait>div {
+.gallery-single-wide-portrait > div {
   @apply my-4 sm:my-0 w-full;
 }
 
@@ -365,7 +404,7 @@ caption {
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.page-title{
+.page-title {
   @apply hidden sm:block;
 }
 
@@ -440,9 +479,11 @@ caption {
   left: 1px;
   right: 1px;
   bottom: 18px;
-  background-image: linear-gradient(to bottom,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.2));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.2)
+  );
   border-radius: 1px 1px 20% 20%;
   z-index: 12;
 }
@@ -467,7 +508,7 @@ caption {
   flex: 1;
 }
 
-.infoBox>div {
+.infoBox > div {
   overflow: hidden;
   white-space: nowrap;
   width: auto;
@@ -676,6 +717,14 @@ footer p {
     @apply border-gray-500;
   }
 
+  .navigation-list li a {
+    @apply text-stone-400 hover:text-white;
+  }
+
+  .navigation-list li:first-child a {
+    @apply text-white;
+  }
+
   li a {
     @apply font-light;
   }
@@ -742,9 +791,11 @@ footer p {
   }
 
   .utility-bar {
-    background-image: linear-gradient(to bottom,
-        rgb(55, 55, 55),
-        rgb(44, 44, 44));
+    background-image: linear-gradient(
+      to bottom,
+      rgb(55, 55, 55),
+      rgb(44, 44, 44)
+    );
   }
 
   .trackActivityContainer {
@@ -756,7 +807,8 @@ footer p {
     background-image: linear-gradient(to bottom, #632665, rgb(128, 30, 134));
     color: rgb(222, 154, 226);
     text-shadow: 0 0 5px rgb(211, 39, 221);
-    box-shadow: inset 0 0 8px rgba(157, 34, 163, 0.5), inset 0 0 16px rgb(157, 34, 163);
+    box-shadow: inset 0 0 8px rgba(157, 34, 163, 0.5),
+      inset 0 0 16px rgb(157, 34, 163);
     position: relative;
   }
 

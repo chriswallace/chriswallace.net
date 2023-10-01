@@ -153,11 +153,3 @@ permalink: /resume/
 <h2 class="fade-in-element">References</h2>
 
 <p class="fade-in-element">Available upon request</p>
-
-<ul class="text-2xl list-none mt-12 ml-0 pl-0">
-    <li class="fade-in-element"><a class="font-light fade-in-element" href="/">Home</a></li>
-    <li class="fade-in-element"><a class="font-light fade-in-element" href="/about">About</a></li>
-    <li class="selected fade-in-element">CV / Résumé</li>
-    <li class="fade-in-element"><a class="font-light fade-in-element" href="/products">Products</a></li>
-    <li class="fade-in-element"><a class="font-light fade-in-element" href="/art">Art</a></li>
-</ul>
