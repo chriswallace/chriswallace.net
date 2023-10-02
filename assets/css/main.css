@@ -53,13 +53,16 @@ li {
   @apply text-stone-700;
 }
 
-h1,
-.home-title {
+h1{
   @apply text-4xl sm:text-6xl md:max-w-3xl font-light mb-10 leading-snug;
 }
 
+.home-title {
+  @apply text-3xl sm:text-4xl md:max-w-3xl font-light mb-6 leading-snug;
+}
+
 .sub-heading {
-  @apply text-lg sm:text-xl font-light mt-0;
+  @apply text-lg sm:text-xl font-light mt-0 mb-6;
 }
 
 h2 {
