@@ -6,9 +6,9 @@ permalink: /about/
 
 <div class="extendo">
 
-    <img src="/assets/images/profile-photo.jpg" alt="Chris Wallace" class="md:float-right md:ml-12 mb-12 rounded-md max-w-[320px] w-full fade-in-element">
+    <img src="/assets/images/profile-photo.jpg" alt="Chris Wallace" class="about-image fade-in-element">
 
-    <p class="sub-heading fade-in-element">Born and raised in St. Louis, MO, I was diagnosed at 19 with testicular cancer. I was forced to drop out of college and endure aggressive chemotherapy, all while expecting my first child with my girlfriend of five years. Faced with these hardships at such a young age, I joined the workforce, not just to survive, but to provide for my growing family.</p>
+    <p class="sub-heading fade-in-element">Born and raised in St. Louis, MO, I was diagnosed at 19 with testicular cancer. Forced to drop out of college, I underwent aggressive chemotherapy, all while expecting my first child with my high school sweetheart (and now wife of nearly 20 years). Faced with these hardships at such a young age, I started my design career to provide for a growing family.</p>
 
     <hr class="fade-in-element mb-4">
 

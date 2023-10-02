@@ -1,8 +1,16 @@
 <header class="navigation" role="banner">
   <a class="site-title" href="/" aria-label="Home">Chris Wallace</a>
-  <button id="menu-button" class="px-5 py-3 md:hidden" aria-label="Open Navigation Menu" aria-expanded="false">menu</button>
+  <button id="menu-button" class="menu-button" aria-label="Open Navigation Menu" aria-expanded="false">
+    <i></i>
+  </button>
   <nav id="navigation-items" class="navigation-list invis md:flex" aria-label="Main Navigation">
-    <button id="close-button" class="close-button md:hidden" aria-label="Close Navigation Menu">close</button>
+    <button id="close-button" class="close-button" aria-label="Close Navigation Menu">
+      <i class="close-button-icon">
+        <svg class="close-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59 7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12 5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+        </svg>
+      </i>
+    </button>
     <ul>
       <li class="fade-in-element hidden md:inline"><a href="/" aria-label="Home">Chris Wallace</a></li>
       <li class="fade-in-element"><a href="/about" aria-label="About">About</a></li>

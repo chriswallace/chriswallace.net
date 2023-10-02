@@ -60,7 +60,7 @@ permalink: /art/collection/
 </script>
 <script src="/assets/js/gallery-viewer.js"></script>
 <script src="/assets/js/player.js"></script>
-<article class="lg:max-w-6xl 3xl:max-w-full mx-auto">
+<article>
   <a class="back-btn fade-in-element" href="/art">Art</a>
   <h1 class="fade-in-element">The Wallace Collection</h1>
   <h2 class="sub-heading fade-in-element">

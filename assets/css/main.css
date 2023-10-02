@@ -50,11 +50,12 @@ p {
 p,
 ul,
 li {
-  @apply text-gray-700;
+  @apply text-stone-700;
 }
 
-h1 {
-  @apply text-3xl sm:text-4xl max-w-3xl;
+h1,
+.home-title {
+  @apply text-4xl sm:text-6xl md:max-w-3xl font-light mb-10 leading-snug;
 }
 
 .sub-heading {
@@ -62,24 +63,23 @@ h1 {
 }
 
 h2 {
-  @apply text-2xl mt-16 sm:mt-24 mb-8;
+  @apply text-2xl mt-16 sm:mt-24 mb-6 font-light;
 }
 
 h3 {
-  @apply text-base mb-2 text-gray-600 font-normal mt-6 sm:mt-12;
+  @apply text-base mb-2 text-stone-600 font-normal mt-6 sm:mt-12 font-light;
 }
 
 h4,
 h5,
 h6 {
-  @apply text-base font-bold pb-2 mt-6 sm:mt-12 mb-2;
+  @apply text-base pb-2 mt-6 sm:mt-12 mb-2 font-light;
 }
 
 a {
-  @apply font-normal;
   text-decoration-line: underline;
   text-decoration-color: rgb(109, 193, 109);
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 3px;
   text-decoration-skip-ink: auto;
 }
 
@@ -88,7 +88,7 @@ a:hover {
 }
 
 hr {
-  @apply w-[40px] border-gray-600 border-t-2 h-2 pb-0;
+  @apply w-[40px] border-stone-600 border-t-2 h-2 pb-0;
 }
 
 .container-lg {
@@ -114,11 +114,11 @@ article ul {
 }
 
 caption {
-  @apply text-xs sm:text-base text-gray-400 my-2 sm:my-4 block text-center;
+  @apply text-xs sm:text-base text-stone-400 my-2 sm:my-4 block text-center;
 }
 
 .button {
-  @apply cursor-pointer bg-gray-200 rounded-md px-4 py-2 hover:bg-gray-300;
+  @apply cursor-pointer bg-stone-200 rounded-md px-4 py-2 hover:bg-stone-300;
 }
 
 .no-scroll {
@@ -127,23 +127,47 @@ caption {
 }
 
 .site-title {
-  @apply md:hidden py-4 text-xl font-light inline-block;
+  @apply float-right md:hidden py-4 text-xl font-light inline-block;
 }
 
-#menu-button {
-  @apply py-4 pr-0 float-right;
+.menu-button {
+  @apply p-5 -left-5 md:hidden relative w-8 h-8 mt-1;
+}
+
+.menu-button i {
+  @apply block w-8 h-2 relative;
+}
+
+.menu-button i:before {
+  @apply border-t-2 border-stone-200 block w-8 overflow-hidden top-0 absolute;
+  height: 0;
+  content: "";
+}
+
+.menu-button i:after {
+  @apply border-t-2 border-stone-200 block w-8 overflow-hidden bottom-0 absolute;
+  height: 0;
+  content: "";
 }
 
 .navigation {
-  @apply bg-gray-800 text-white py-4 md:mb-24;
+  @apply bg-stone-800 text-white py-4 md:mb-24;
 }
 
 .navigation .close-button {
-  @apply absolute top-2 right-0 p-4;
+  @apply absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-transparent p-0 inline-block md:hidden;
+}
+
+.navigation .close-button-icon {
+  @apply inline-block border-2 border-black p-2 rounded-full;
+}
+
+.navigation .close-button-svg {
+  @apply w-8 h-8 block text-black fill-current;
 }
 
 .navigation-list {
-  @apply left-0 top-0 right-0 bottom-0 flex fixed bg-gray-800 text-white z-10 md:relative;
+  @apply left-0 top-0 right-0 bottom-0 flex fixed bg-stone-800 text-white z-10 md:relative;
 }
 
 .navigation-list ul {
@@ -183,8 +207,8 @@ caption {
   line-height: 0.5;
 }
 
-.home-title {
-  @apply text-3xl mb-6;
+.about-image {
+  @apply float-right ml-4 sm:ml-12 mb-4 sm:mb-12 rounded-md max-w-[130px] sm:max-w-[240px] md:max-w-[320px] w-full;
 }
 
 .collection-title,
@@ -204,7 +228,7 @@ caption {
 
 .collection-title,
 .artwork-subtitle {
-  @apply mb-4 mt-12 font-light text-gray-400 text-xs sm:text-base;
+  @apply mb-4 mt-12 font-light text-stone-400 text-xs sm:text-base;
 }
 
 .artwork-subtitle {
@@ -213,7 +237,7 @@ caption {
 
 .collection-title a,
 .artwork-subtitle a {
-  @apply font-light text-gray-500 no-underline;
+  @apply font-light text-stone-500 no-underline;
 }
 
 .artist-title + h4 {
@@ -221,11 +245,11 @@ caption {
 }
 
 .refresh-btn {
-  @apply bg-gray-200 text-black px-4 py-2 rounded-md hover:bg-gray-300;
+  @apply bg-stone-200 text-black px-4 py-2 rounded-md hover:bg-stone-300;
 }
 
 .gallery {
-  @apply grid grid-cols-3 gap-4 mt-10 mb-8;
+  @apply grid grid-cols-3 gap-2 sm:gap-4 mt-10 mb-8;
 }
 
 .social-button {
@@ -295,7 +319,7 @@ caption {
 }
 
 .back-btn {
-  @apply text-gray-500 font-light mb-2 inline-block text-lg;
+  @apply text-stone-500 font-light mb-4 inline-block text-2xl;
 }
 
 .gallery-row img {
@@ -597,11 +621,11 @@ caption {
 }
 
 footer {
-  @apply py-8 pb-24 border-t-2 border-gray-200;
+  @apply py-8 pb-24 border-t-2 border-stone-200;
 }
 
 footer p {
-  @apply leading-snug text-gray-600 text-sm text-center;
+  @apply leading-snug text-stone-600 text-sm text-center;
 }
 
 #fullscreen-viewer {
@@ -687,7 +711,7 @@ footer p {
 
 @media (prefers-color-scheme: dark) {
   body {
-    @apply bg-gray-800 text-white;
+    @apply bg-stone-800 text-white;
   }
 
   h1,
@@ -701,7 +725,7 @@ footer p {
   p,
   ul,
   li {
-    @apply text-gray-400;
+    @apply text-stone-400;
   }
 
   a {
@@ -714,7 +738,23 @@ footer p {
   }
 
   hr {
-    @apply border-gray-500;
+    @apply border-stone-500;
+  }
+
+  .navigation .close-button-icon {
+    @apply border-stone-500;
+  }
+
+  .navigation .close-button:hover .close-button-icon {
+    @apply border-stone-200;
+  }
+
+  .navigation .close-button svg {
+    @apply text-stone-500;
+  }
+
+  .navigation .close-button:hover svg {
+    @apply border-stone-200 text-stone-200;
   }
 
   .navigation-list li a {
@@ -725,12 +765,8 @@ footer p {
     @apply text-white;
   }
 
-  li a {
-    @apply font-light;
-  }
-
   h3 {
-    @apply text-gray-200;
+    @apply text-stone-200;
   }
 
   h4,
@@ -745,12 +781,12 @@ footer p {
 
   .collection-title a,
   .artwork-subtitle a {
-    @apply text-gray-300;
+    @apply text-stone-300;
   }
 
   .button,
   .social-button {
-    @apply bg-gray-700 border-stone-700 hover:bg-gray-500;
+    @apply bg-stone-700 border-stone-700 hover:bg-stone-500;
   }
 
   #autoPlayCollection i {
@@ -763,11 +799,11 @@ footer p {
   }
 
   .refresh-btn {
-    @apply bg-gray-400;
+    @apply bg-stone-400;
   }
 
   .card-zoom-text {
-    @apply text-gray-200;
+    @apply text-stone-200;
   }
 
   .social-button svg {
@@ -775,19 +811,19 @@ footer p {
   }
 
   .sub-heading {
-    @apply text-gray-300;
+    @apply text-stone-300;
   }
 
   .back-btn {
-    @apply text-gray-200;
+    @apply text-stone-200;
   }
 
   footer {
-    @apply border-gray-600;
+    @apply border-stone-600;
   }
 
   footer p {
-    @apply text-gray-300;
+    @apply text-stone-300;
   }
 
   .utility-bar {

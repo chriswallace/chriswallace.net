@@ -4,7 +4,7 @@ layout: default
 
 <article>
 <p class="home-title fade-in-element">
-👋 &nbsp; Hi. I'm Chris.
+👋&nbsp; Hi. I'm Chris.
 </p>
   <h1 class="sub-heading fade-in-element">
     {{ page.description | escape }}
