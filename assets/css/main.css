@@ -53,7 +53,7 @@ li {
   @apply text-stone-700;
 }
 
-h1{
+h1 {
   @apply text-4xl sm:text-6xl md:max-w-3xl font-light mb-10 leading-snug;
 }
 
@@ -142,19 +142,19 @@ caption {
 }
 
 .menu-button i:before {
-  @apply border-t-2 border-stone-200 block w-8 overflow-hidden top-0 absolute;
+  @apply border-t-2 border-stone-500 block w-8 overflow-hidden top-0 absolute;
   height: 0;
   content: "";
 }
 
 .menu-button i:after {
-  @apply border-t-2 border-stone-200 block w-8 overflow-hidden bottom-0 absolute;
+  @apply border-t-2 border-stone-500 block w-8 overflow-hidden bottom-0 absolute;
   height: 0;
   content: "";
 }
 
 .navigation {
-  @apply bg-stone-800 text-white py-4 md:mb-24;
+  @apply py-4 md:mb-24;
 }
 
 .navigation .close-button {
@@ -162,15 +162,23 @@ caption {
 }
 
 .navigation .close-button-icon {
-  @apply inline-block border-2 border-black p-2 rounded-full;
+  @apply inline-block border-2 border-stone-300 p-2 rounded-full;
 }
 
 .navigation .close-button-svg {
-  @apply w-8 h-8 block text-black fill-current;
+  @apply w-8 h-8 block text-stone-300 fill-current;
+}
+
+.navigation .close-button:hover .close-button-icon {
+  @apply border-stone-400;
+}
+
+.navigation .close-button:hover .close-button-svg {
+  @apply text-stone-400;
 }
 
 .navigation-list {
-  @apply left-0 top-0 right-0 bottom-0 flex fixed bg-stone-800 text-white z-10 md:relative;
+  @apply left-0 top-0 right-0 bottom-0 flex fixed bg-white text-white z-10 md:relative;
 }
 
 .navigation-list ul {
@@ -256,7 +264,7 @@ caption {
 }
 
 .social-button {
-  @apply p-1 px-2 ml-2 bg-white inline-block rounded-md border border-stone-200;
+  @apply p-1 px-2 ml-2 bg-stone-100 hover:bg-stone-200 inline-block rounded-md;
   line-height: 1;
 }
 
@@ -264,15 +272,12 @@ caption {
   @apply ml-0;
 }
 
-.social-button:hover {
-  @apply bg-stone-200;
+.social-button svg {
+  @apply inline-block w-[18px] h-[18px] fill-stone-600;
 }
 
-.social-button svg {
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  fill: black;
+.social-button:hover svg {
+  @apply fill-stone-800;
 }
 
 #autoPlayCollection i {
@@ -744,6 +749,14 @@ footer p {
     @apply border-stone-500;
   }
 
+  .menu-button i:before {
+    @apply border-stone-200;
+  }
+
+  .menu-button i:after {
+    @apply border-stone-200;
+  }
+
   .navigation .close-button-icon {
     @apply border-stone-500;
   }
@@ -758,6 +771,10 @@ footer p {
 
   .navigation .close-button:hover svg {
     @apply border-stone-200 text-stone-200;
+  }
+
+  .navigation-list {
+    @apply bg-stone-800;
   }
 
   .navigation-list li a {
@@ -809,8 +826,16 @@ footer p {
     @apply text-stone-200;
   }
 
+  .social-button {
+    @apply bg-stone-700 hover:bg-stone-600;
+  }
+
   .social-button svg {
-    fill: white;
+    @apply fill-stone-200;
+  }
+
+  .social-button:hover svg {
+    @apply fill-stone-200;
   }
 
   .sub-heading {
