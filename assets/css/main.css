@@ -99,7 +99,7 @@ hr {
 }
 
 article {
-  @apply pt-16 pb-16;
+  @apply py-16 md:pt-0;
 }
 
 article p,
@@ -178,7 +178,7 @@ caption {
 }
 
 .navigation-list {
-  @apply left-0 top-0 right-0 bottom-0 flex fixed bg-white text-white z-10 md:relative;
+  @apply left-0 top-0 right-0 bottom-0 flex fixed bg-white text-white z-20 md:relative;
 }
 
 .navigation-list ul {
