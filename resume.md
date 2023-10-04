@@ -1,18 +1,18 @@
 ---
 layout: page
-title: CV / Résumé
+title: Résumé
 permalink: /resume/
 ---
 
-<p class="fade-in-element -top-6 relative">
+<p class="fade-in-element -top-1 mb-12 relative">
 
 <svg class="feather feather-download inline" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
 
-<a class="inline ml-2" href="/assets/downloads/product-design-executive-chris-wallace.pdf" download> Download as PDF</a>
+<a class="inline ml-1" href="/assets/downloads/product-design-executive-chris-wallace.pdf" download> Download as PDF</a>
 
 </p>
 
-<p class="fade-in-element mb-12 text-xl text-white">Emmy-nominated founder and design leader with 16+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, ESPN, The Boston Globe, and AMC Networks. Former agency executive at 10up, Lift UX (acquired).</p>
+<p class="fade-in-element sub-heading">Emmy-nominated founder and design leader with 16+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, ESPN, The Boston Globe, and AMC Networks. Former agency executive at 10up, Lift UX (acquired).</p>
 
 <hr class="mt-4 mb-0 fade-in-element">
 
@@ -42,16 +42,16 @@ permalink: /resume/
 <h4 class="collection-title fade-in-element">St. Louis Christian College // 2005 - 2006 // St. Louis, MO</h4>
 <p class="fade-in-element mb-12">Primary web content owner, designed, developed, and maintained the college's online presence. During my tenure, the college experienced 60% growth, reaching full campus capacity the following year.</p>
 
-<h2 class="fade-in-element">Selected Works</h2>
+<h2 class="fade-in-element mb-12">Selected Works</h2>
 
 <div class="md:flex md:flex-row sm:gap-8">
-    <div class="mb-6 md:mb-0" style="flex:1">
+    <div class="mb-16 md:mb-0" style="flex:1">
         <h3 class="fade-in-element"><a href="https://twelvedays.ultradao.org">Twelve Days of CryptoArt</a></h3>
         <p class="mb-0 fade-in-element">Role: Curation, Branding, Web Design, Full Stack Development</p>
         <p class="fade-in-element">Year: 2023</p>
         <p class="fade-in-element">Designed the website, including multiple iterations as we released new features and media. Contributed HTML/CSS/JavaScript to some sections throughout.</p>
     </div>
-    <div class="mb-6 md:mb-0" style="flex:1">
+    <div class="mb-16 md:mb-0" style="flex:1">
         <h3 class="fade-in-element"><a href="https://ultradao.org">UltraDAO</a></h3>
         <p class="mb-0 fade-in-element">Role: Branding, Web Design, Full Stack Development</p>
         <p class="fade-in-element">Year: 2021-2023</p>

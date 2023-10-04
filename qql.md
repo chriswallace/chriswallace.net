@@ -9,9 +9,9 @@ thumbnail: https://ik.imagekit.io/UltraDAO/wallace/studying_the_algorithm.png?tr
 <script src="/assets/js/gallery-viewer.js"></script>
 <script src="/assets/js/player.js"></script>
 <article>
-  <a class="back-btn fade-in-element" href="/art">Art</a>
-  <h1 class="fade-in-element">QQL: Studying the Algorithm</h1>
-  <h2 class="sub-heading fade-in-element">
+  <a class="back-btn fade-in-element" href="/art">/art</a>
+  <h1 class="fade-in-element mb-2">QQL: Studying the Algorithm</h1>
+  <h2 class="sub-heading fade-in-element mb-8">
     Curated by Chris Wallace
   </h2>
   <p class="fade-in-element">I'm fascinated by the complex patterns and hidden niceties that emerge from the QQL algorithm. I've spent countless hours generating and studying outputs to curate this series, many of which are now available for purchase through the official marketplace.</p>

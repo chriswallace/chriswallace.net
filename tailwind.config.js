@@ -77,7 +77,15 @@ module.exports = {
           "2.2rem",
           {
             lineHeight: "1.2",
-            letterSpacing: "-0.02em",
+            letterSpacing: "-0.04em",
+            fontWeight: "400",
+          },
+        ],
+        "5xl": [
+          "8rem",
+          {
+            lineHeight: "1.2",
+            letterSpacing: "-0.04em",
             fontWeight: "400",
           },
         ],

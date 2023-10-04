@@ -61,11 +61,9 @@ permalink: /art/collection/
 <script src="/assets/js/gallery-viewer.js"></script>
 <script src="/assets/js/player.js"></script>
 <article>
-  <a class="back-btn fade-in-element" href="/art">Art</a>
-  <h1 class="fade-in-element">The Wallace Collection</h1>
-  <h2 class="sub-heading fade-in-element">
-    A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains.
-  </h2>
+  <a class="back-btn fade-in-element" href="/art">/art</a>
+  <h1 class="fade-in-element">Introducing the Wallace Collection&mdash;a selection of generative art currently held in my family's private collection on the blockchain.
+  </h1>
   <div class="collection-notes fade-in-element">
     <p style="flex:1;">
       <strong>Fullscreen controls:</strong>

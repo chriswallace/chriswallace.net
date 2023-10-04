@@ -35,7 +35,7 @@
 }
 
 html {
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.325;
 }
 
@@ -59,15 +59,19 @@ li {
 }
 
 h1 {
-  @apply text-3xl md:text-4xl md:max-w-3xl mb-10;
+  @apply text-3xl md:text-4xl md:max-w-3xl mb-6;
+}
+
+.primary-heading {
+  @apply text-4xl md:text-5xl mb-4 lowercase;
 }
 
 .sub-heading {
-  @apply text-xl sm:text-2xl mt-0 mb-6;
+  @apply text-2xl sm:text-3xl mt-0 mb-6;
 }
 
 h2 {
-  @apply text-xl mt-16 sm:mt-24 mb-6;
+  @apply text-xl sm:text-2xl mt-16 sm:mt-24 mb-6;
 }
 
 h3 {
@@ -100,7 +104,7 @@ hr {
 }
 
 article {
-  @apply py-8;
+  @apply py-16 md:py-4;
 }
 
 article p,
@@ -220,11 +224,15 @@ caption {
 }
 
 .collection-notes {
-  @apply flex max-w-3xl gap-8 border-y border-gray-700 pt-6 mt-6 mb-12;
+  @apply md:flex max-w-3xl sm:gap-8 sm:border-y sm:border-gray-700 pt-6 sm:my-12;
+}
+
+.collection-notes p{
+  @apply text-sm;
 }
 
 .about-image {
-  @apply float-right ml-4 sm:ml-12 mb-4 sm:mb-12 rounded-md max-w-[130px] sm:max-w-[240px] md:max-w-[320px] w-full;
+  @apply sm:float-right sm:ml-4 sm:ml-12 mb-8 sm:mb-12 rounded-md sm:max-w-[240px] md:max-w-[320px] w-full;
 }
 
 .collection-title,
@@ -332,7 +340,7 @@ caption {
 }
 
 .back-btn {
-  @apply text-stone-500 font-light mb-4 inline-block text-2xl;
+  @apply text-stone-500 font-light mb-4 inline-block text-xl;
 }
 
 .gallery-row img {
@@ -801,7 +809,7 @@ footer p {
   }
 
   .home-title {
-    @apply text-white;
+    @apply text-white mb-12;
   }
 
   .collection-title a,
@@ -844,7 +852,7 @@ footer p {
   }
 
   .sub-heading {
-    @apply text-stone-300;
+    @apply text-stone-200;
   }
 
   .back-btn {

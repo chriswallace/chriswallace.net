@@ -6,10 +6,7 @@ permalink: /art/interplay
 
 <article>
 
-<div class="grid md:grid-cols-2 gap-8">
-
-<div>
-<a href="/art" class="back-btn fade-in-element">Art</a>
+<a href="/art" class="back-btn fade-in-element">/art</a>
 <h1 class="fade-in-element">Interplay</h1>
 
 <p class="mb-4 fade-in-element">Explore the Interplay algorithm, a generative Javascript-based algorithm written by myself and GPT-4. This artwork begs the question: does AI-assisted art mean anything? Is it another tool of human expression or merely soulless aesthetically-pleasing eye candy?</p>
