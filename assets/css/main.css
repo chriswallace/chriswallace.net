@@ -34,6 +34,11 @@
   font-style: italic;
 }
 
+html {
+  font-size: 22px;
+  line-height: 1.325;
+}
+
 body {
   @apply font-light;
 }
@@ -54,23 +59,19 @@ li {
 }
 
 h1 {
-  @apply text-4xl sm:text-6xl md:max-w-3xl font-light mb-10 leading-snug;
-}
-
-.home-title {
-  @apply text-3xl sm:text-4xl md:max-w-3xl font-light mb-6 leading-snug;
+  @apply text-3xl md:text-4xl md:max-w-3xl mb-10;
 }
 
 .sub-heading {
-  @apply text-lg sm:text-xl font-light mt-0 mb-6;
+  @apply text-xl sm:text-2xl mt-0 mb-6;
 }
 
 h2 {
-  @apply text-2xl mt-16 sm:mt-24 mb-6 font-light;
+  @apply text-xl mt-16 sm:mt-24 mb-6;
 }
 
 h3 {
-  @apply text-base mb-2 text-stone-600 font-normal mt-6 sm:mt-12 font-light;
+  @apply text-base mb-2 text-stone-600 font-normal mt-6 sm:mt-12;
 }
 
 h4,
@@ -99,7 +100,7 @@ hr {
 }
 
 article {
-  @apply pt-16 pb-16;
+  @apply py-8;
 }
 
 article p,
@@ -202,7 +203,7 @@ caption {
 }
 
 .navigation-list li a {
-  @apply text-3xl md:text-xl font-light md:px-3 md:py-2 no-underline hover:underline hover:decoration-2 text-stone-600 hover:text-black;
+  @apply text-2xl md:text-xs lg:text-sm font-light md:px-3 md:py-2 no-underline hover:underline hover:decoration-2 text-stone-600 hover:text-black;
 }
 
 .navigation-list li:first-child a {
@@ -719,7 +720,7 @@ footer p {
 
 @media (prefers-color-scheme: dark) {
   body {
-    @apply bg-stone-800 text-white;
+    @apply bg-stone-900 text-white;
   }
 
   h1,
@@ -774,7 +775,7 @@ footer p {
   }
 
   .navigation-list {
-    @apply bg-stone-800;
+    @apply bg-stone-900;
   }
 
   .navigation-list li a {

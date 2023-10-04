@@ -14,31 +14,71 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Bricolage Grotesque", "sans-serif"],
+        sans: ["Gabarito", "sans-serif"],
       },
       fontSize: {
-        "2xl": [
-          "1.5rem",
+        xs: [
+          "0.775rem",
           {
-            lineHeight: "1.3",
+            lineHeight: "1.4",
+            letterSpacing: "0",
+            fontWeight: "300",
+          },
+        ],
+        sm: [
+          "0.9rem",
+          {
+            lineHeight: "1.4",
+            letterSpacing: "0",
+            fontWeight: "300",
+          },
+        ],
+        base: [
+          "1rem",
+          {
+            lineHeight: "1.4",
+            letterSpacing: "0",
+            fontWeight: "300",
+          },
+        ],
+        lg: [
+          "1rem",
+          {
+            lineHeight: "1.2",
             letterSpacing: "-0.01em",
-            fontWeight: "500",
+            fontWeight: "400",
+          },
+        ],
+        xl: [
+          "1.2rem",
+          {
+            lineHeight: "1.2",
+            letterSpacing: "-0.01em",
+            fontWeight: "400",
+          },
+        ],
+        "2xl": [
+          "1.4rem",
+          {
+            lineHeight: "1.2",
+            letterSpacing: "-0.01em",
+            fontWeight: "400",
           },
         ],
         "3xl": [
-          "1.875rem",
+          "1.8rem",
           {
-            lineHeight: "1.4",
+            lineHeight: "1.2",
             letterSpacing: "-0.02em",
-            fontWeight: "500",
+            fontWeight: "400",
           },
         ],
         "4xl": [
           "2.2rem",
           {
-            lineHeight: "1.4",
+            lineHeight: "1.2",
             letterSpacing: "-0.02em",
-            fontWeight: "500",
+            fontWeight: "400",
           },
         ],
       },

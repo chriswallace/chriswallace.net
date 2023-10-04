@@ -4,60 +4,43 @@ title: CV / Résumé
 permalink: /resume/
 ---
 
-<p class="fade-in-element">
+<p class="fade-in-element -top-6 relative">
 
 <svg class="feather feather-download inline" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
 
-<a class="inline" href="/assets/downloads/chris-wallace-web3-blockchain-creative-director.pdf" download> Download as PDF</a>
+<a class="inline ml-2" href="/assets/downloads/product-design-executive-chris-wallace.pdf" download> Download as PDF</a>
 
 </p>
 
-<h2 class="fade-in-element">Professional Summary</h2>
+<p class="fade-in-element mb-12 text-xl text-white">Emmy-nominated founder and design leader with 16+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, ESPN, The Boston Globe, and AMC Networks. Former agency executive at 10up, Lift UX (acquired).</p>
 
-<p class="fade-in-element">I am an Emmy-nominated design executive with over 15 years of remote leadership in creative direction and design. Distinguished track record in pioneering innovative web applications, products, and editorial experiences for high-profile tech and media organizations like Google, Microsoft, Facebook, ESPN, the Boston Globe, AMC Networks, among others. Design leadership expertise includes hiring, team building, management, and mentorship, elevating the quality of product organization-wide. Proven proficiency in blockchain and AI design solutions and digital ownership of art and collectibles.</p>
+<hr class="mt-4 mb-0 fade-in-element">
 
-<h2 class="fade-in-element">Work Experience</h2>
+<h2 class="fade-in-element mt-12">Work Experience</h2>
 
-<h3 class="fade-in-element">Executive Director & Design Lead at UltraDAO Studios / <em>2021-Present</em> / <em>Remote</em></h3>
-<p class="fade-in-element">Founded a decentralized web3 creative studio focused on digital art products and collectibles. Managed a team of digital artists, project managers, and developers, leading the creation of Woodies, a series of 10,000 unique digital collectibles and 3D characters.</p>
-<ul>
-  <li class="fade-in-element">Steered the growth of product brands from inception including ULTRAPASS, Woodies, and Twelve Days of CryptoArt</li>
-  <li class="fade-in-element">Generated multimillion-dollar revenue within the first six months</li>
-  <li class="fade-in-element">Oversaw the planting of one million trees in Sub-Saharan Africa via Trees for the Future</li>
-  <li class="fade-in-element">Awarded "Best Environmental Initiative from an NFT project" at NFT NYC 2022</li>
-  <li class="fade-in-element">Creative Director on multiple projects including Woodies Generative Characters, Woodies: Origin (animated short film), Woodies 3D, and more</li>
-</ul>
+<h3 class="artist-title fade-in-element">Chief Experience Officer</h3>
+<h4 class="collection-title fade-in-element">UltraDAO Studios // 2021 - Present // Remote</h4>
+<p class="fade-in-element mb-12">Founded a bootstrapped decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles. Built and managed a team of artists, engineers, and creative production specialists. Achieved multi-million dollar revenue within its first six months. Raised $250,000 for Trees for the Future to plant one million trees in sub-Saharan Africa, won "Best Environmental Initiative" at NFT NYC 2022. Executive Director for Woodies: Origin, official selection of the Aesthetica Short Film Festival 2023.</p>
 
-<h3 class="fade-in-element">VP, Experience Design at 10up / <em>2017-2021</em> / <em>Remote</em></h3>
-<p class="fade-in-element">Directed the design discipline for a global agency of 250+ staff spanning three continents and 16 countries. Orchestrated design vision, emphasizing collaboration and co-design practices.</p>
-<ul>
-  <li class="fade-in-element">Grew the design team from 5 to 20 professionals, stationed across 12 time zones</li>
-  <li class="fade-in-element">Contributed to a near doubling of agency revenue (~95%) within four years</li>
-  <li class="fade-in-element">Successfully diversified team composition through inclusive hiring practices</li>
-  <li class="fade-in-element">Expanded design services to incorporate content design, illustration, and more</li>
-</ul>
+<h3 class="artist-title fade-in-element">Vice President, Experience Design</h3>
+<h4 class="collection-title fade-in-element">10up // 2017 - 2021 // Remote</h4>
+<p class="fade-in-element mb-12">Steered the design discipline at a global agency of 250+ staff spread across three continents and 16 countries. Fostered a culture of collaboration and co-design, which was instrumental in growing the design team from 5 to 20 professionals across 12 time zones. This initiative contributed to nearly doubling the agency's revenue (~95%) within four years. Spearheaded inclusive hiring practices diversifying team composition, and broadened design services to encompass content design, illustration, and more.</p>
 
-<h3 class="fade-in-element">Co-Founder/Principal Creative at Lift UX / <em>2009-2017</em> / <em>Remote</em></h3>
-<p class="fade-in-element">Steered a boutique team of designers and engineers, crafting apps and websites for diverse clients such as AMC Networks, Frito-Lay, and GoDaddy.</p>
-<ul>
-  <li class="fade-in-element">Launched innovative interactive second-screen apps for acclaimed TV series, earning two Emmy nominations</li>
-  <li class="fade-in-element">Hired and managed a small team of full-time and contract designers</li>
-  <li class="fade-in-element">Grew website traffic for the product division to 2 million monthly visitors</li>
-  <li class="fade-in-element">Successfully acquired by 10up in 2017</li>
-</ul>
+<h3 class="artist-title fade-in-element">Principal Creative, Founder</h3>
+<h4 class="collection-title fade-in-element">Lift UX (acquired) // 2009 - 2017 // Remote</h4>
+<p class="fade-in-element mb-12">Led a boutique team of designers and engineers, crafting apps and websites for a varied clientele like AMC Networks, Frito-Lay, and GoDaddy. Launched interactive second-screen apps for acclaimed TV series, earning two Emmy nominations in the process. Managed a compact yet effective team of full-time and contract designers, elevating website traffic for the product division to two million monthly visitors. The successful journey culminated in an acquisition by 10up in 2017.</p>
 
-<h3 class="fade-in-element">Front-End Developer at Enterprise Rent-A-Car / <em>2007-2009</em> / <em>St. Louis, MO</em></h3>
-<p class="fade-in-element">Developed front-end interfaces for B2B applications and B2C websites, liaising with UX designers and back-end Java engineers to execute new applications.</p>
-<ul>
-  <li class="fade-in-element">Managed weekly deployments for enterprise.com and other customer-facing applications</li>
-  <li class="fade-in-element">Provided QA support for monthly release cycles</li>
-</ul>
+<h3 class="artist-title fade-in-element">Front-End Developer</h3>
+<h4 class="collection-title fade-in-element">Enterprise Rent-A-Car // 2007 - 2009 // St. Louis, MO</h4>
+<p class="fade-in-element mb-12">Engaged in developing front-end interfaces for B2B applications and B2C websites, working closely with UX designers and back-end Java engineers to roll out new applications. Handled weekly deployments for enterprise.com and other customer-centric platforms, while providing QA support for monthly release cycles.</p>
 
-<h3 class="fade-in-element">Senior E-Commerce Web Designer at Network Solutions / <em>2006-2007</em> / <em>Belleville, IL</em></h3>
-<p class="fade-in-element">Designed and developed front-end code for e-commerce storefronts for small businesses, maintaining stringent project timelines and adhering to client specifications.</p>
+<h3 class="artist-title fade-in-element">Senior E-Commerce Web Designer</h3>
+<h4 class="collection-title fade-in-element">Network Solutions // 2006 - 2007 // Belleville, IL</h4>
+<p class="fade-in-element mb-12">Designed and developed front-end code for e-commerce storefronts for small businesses, maintaining stringent project timelines and adhering to client specifications.</p>
 
-<h3 class="fade-in-element">Webmaster at St. Louis Christian College / <em>2005-2006</em> / <em>St. Louis, MO</em></h3>
-<p class="fade-in-element">As the primary web content owner, designed, developed, and maintained the college's online presence. During my tenure, the college witnessed a 60% growth rate, reaching full campus capacity the following year.</p>
+<h3 class="artist-title fade-in-element">Webmaster</h3>
+<h4 class="collection-title fade-in-element">St. Louis Christian College // 2005 - 2006 // St. Louis, MO</em></h4>
+<p class="fade-in-element mb-12">Primary web content owner, designed, developed, and maintained the college's online presence. During my tenure, the college experienced 60% growth, reaching full campus capacity the following year.</p>
 
 <h2 class="fade-in-element">Selected Works</h2>
 
@@ -120,29 +103,42 @@ permalink: /resume/
 </div>
 <h2 class="fade-in-element">Skills</h2>
 
-<ul>
-  <li class="fade-in-element">Creative Direction</li>
-  <li class="fade-in-element">Design Systems</li>
-  <li class="fade-in-element">Personnel Management</li>
-  <li class="fade-in-element">WordPress Design & Development</li>
-  <li class="fade-in-element">Resource & Budget Planning</li>
-  <li class="fade-in-element">Design Operations</li>
-  <li class="fade-in-element">Professional Development Planning</li>
-  <li class="fade-in-element">Design Management</li>
-  <li class="fade-in-element">Hiring & Growth</li>
-  <li class="fade-in-element">Visual & Brand Design</li>
+<ul class="fade-in-element">
+  <li>Design Management</li>
+  <li>Strategic Planning</li>
+  <li>Hiring &amp; Personnel Management</li>
+  <li>Creative Direction</li>
+  <li>Design Systems</li>
+  <li>WordPress Design & Development</li>
+  <li>Resource Management</li>
+  <li>Professional Development Planning</li>
+  <li>Design Operations</li>
+  <li>Product Design</li>
+  <li>Visual & Brand Identity</li>
+  <li>Web3 (Blockchain & NFTs)</li>
+  <li>AI + Design Tooling</li>
+  <li>Information Architecture</li>
+  <li>Visual Design & Prototyping</li>
+  <li>Front-End Engineering</li>
+  <li>E-Commerce Design</li>
+  <li>IP Development</li>
 </ul>
 
 <h2 class="fade-in-element">Education</h2>
 
-<h3 class="fade-in-element">Missouri State University / <em>Springfield, MO</em></h3>
-<p class="fade-in-element">Graphic Design, 2004</p>
+<h3 class="fade-in-element">Missouri State University</h3>
+<h4 class="fade-in-element">Graphic Design // 2004 // Springfield, MO</h4>
+<p class="fade-in-element">Attended Missouri State University (formerly Southwest Missouri State) for Graphic Design.</p>
+
+<h3 class="fade-in-element">Saint Louis Christian College</h3>
+<h4 class="fade-in-element">Religious Studies // 2002 - 2004 // Florissant, MO</h4>
+<p class="fade-in-element">Attended Saint Louis Christian College with a focus on Religious Studies.</p>
 
 <h2 class="fade-in-element">Awards & Recognitions</h2>
 
-<ul>
-  <li class="fade-in-element">Best Environmental Initiative from an NFT project at NFT NYC 2022</li>
-  <li class="fade-in-element">Two Emmy Nominations for Second-Screen Apps</li>
+<ul class="fade-in-element">
+  <li>Best Environmental Initiative from an NFT project at NFT NYC 2022</li>
+  <li>Two Emmy Nominations for Second-Screen Apps</li>
 </ul>
 
 <h2 class="fade-in-element">Contact</h2>
