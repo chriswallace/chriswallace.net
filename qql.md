@@ -10,7 +10,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/wallace/studying_the_algorithm.png?tr
 <script src="/assets/js/player.js"></script>
 <article>
   <a class="back-btn fade-in-element" href="/art">/art</a>
-  <h1 class="fade-in-element mb-2">QQL: Studying the Algorithm</h1>
+  <h1 class="fade-in-element mb-2 md:text-4xl">QQL: Studying the Algorithm</h1>
   <h2 class="sub-heading fade-in-element mb-8">
     Curated by Chris Wallace
   </h2>

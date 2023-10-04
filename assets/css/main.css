@@ -63,7 +63,7 @@ h1 {
 }
 
 .primary-heading {
-  @apply text-4xl md:text-5xl mb-4 lowercase;
+  @apply text-4xl md:text-5xl mb-12 lowercase;
 }
 
 .sub-heading {
@@ -132,6 +132,10 @@ caption {
 .no-scroll {
   overflow: hidden;
   height: 100%;
+}
+
+.logo{
+  @apply fill-black w-8 h-8;
 }
 
 .site-title {
@@ -232,7 +236,7 @@ caption {
 }
 
 .about-image {
-  @apply sm:float-right sm:ml-4 sm:ml-12 mb-8 sm:mb-12 rounded-md sm:max-w-[240px] md:max-w-[320px] w-full;
+  @apply sm:float-right sm:ml-4 sm:ml-12 my-8 sm:mb-12 sm:mt-0 rounded-md sm:max-w-[240px] md:max-w-[320px] w-full;
 }
 
 .collection-title,
@@ -760,6 +764,10 @@ footer p {
 
   hr {
     @apply border-stone-500;
+  }
+
+  .logo{
+    @apply fill-white;
   }
 
   .menu-button i:before {

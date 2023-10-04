@@ -74,7 +74,7 @@ module.exports = {
           },
         ],
         "4xl": [
-          "2.2rem",
+          "3rem",
           {
             lineHeight: "1.2",
             letterSpacing: "-0.04em",
