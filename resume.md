@@ -39,7 +39,7 @@ permalink: /resume/
 <p class="fade-in-element mb-12">Designed and developed front-end code for e-commerce storefronts for small businesses, maintaining stringent project timelines and adhering to client specifications.</p>
 
 <h3 class="artist-title fade-in-element">Webmaster</h3>
-<h4 class="collection-title fade-in-element">St. Louis Christian College // 2005 - 2006 // St. Louis, MO</em></h4>
+<h4 class="collection-title fade-in-element">St. Louis Christian College // 2005 - 2006 // St. Louis, MO</h4>
 <p class="fade-in-element mb-12">Primary web content owner, designed, developed, and maintained the college's online presence. During my tenure, the college experienced 60% growth, reaching full campus capacity the following year.</p>
 
 <h2 class="fade-in-element">Selected Works</h2>

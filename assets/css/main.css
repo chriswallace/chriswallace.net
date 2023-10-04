@@ -122,7 +122,7 @@ caption {
 }
 
 .button {
-  @apply cursor-pointer bg-stone-200 rounded-md px-4 py-2 hover:bg-stone-300;
+  @apply cursor-pointer bg-stone-200 rounded-md px-3 py-2 hover:bg-stone-300;
 }
 
 .no-scroll {
@@ -179,7 +179,7 @@ caption {
 }
 
 .navigation-list {
-  @apply left-0 top-0 right-0 bottom-0 flex fixed bg-white text-white z-10 md:relative;
+  @apply left-0 top-0 right-0 bottom-0 flex fixed bg-white text-white z-20 md:relative;
 }
 
 .navigation-list ul {
@@ -217,6 +217,10 @@ caption {
 .navigation-list .social-buttons a {
   @apply p-4 sm:p-3 md:p-2;
   line-height: 0.5;
+}
+
+.collection-notes {
+  @apply flex max-w-3xl gap-8 border-y border-gray-700 pt-6 mt-6 mb-12;
 }
 
 .about-image {
@@ -807,7 +811,7 @@ footer p {
 
   .button,
   .social-button {
-    @apply bg-stone-700 border-stone-700 hover:bg-stone-500;
+    @apply bg-stone-700 border-stone-700 hover:bg-stone-600;
   }
 
   #autoPlayCollection i {
