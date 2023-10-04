@@ -6,7 +6,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700&display=swap" rel="stylesheet">   <link rel="stylesheet" href="/assets/main.css?version=1.58" />
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700&display=swap" rel="stylesheet">   <link rel="stylesheet" href="/assets/main.css?version=1.59" />
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
   <meta property="og:image" content="{{page.thumbnail | default: '/assets/images/chris-wallace.jpg'}}" />
   <meta property="twitter:image" content="{{page.thumbnail | default: '/assets/images/chris-wallace.jpg'}}">

@@ -44,77 +44,78 @@ permalink: /resume/
 
 <h2 class="fade-in-element">Selected Works</h2>
 
-<div class="sm:flex sm:flex-row sm:gap-8">
-    <div style="flex:1">
+<div class="md:flex md:flex-row sm:gap-8">
+    <div class="mb-6 md:mb-0" style="flex:1">
         <h3 class="fade-in-element"><a href="https://twelvedays.ultradao.org">Twelve Days of CryptoArt</a></h3>
         <p class="mb-0 fade-in-element">Role: Curation, Branding, Web Design, Full Stack Development</p>
         <p class="fade-in-element">Year: 2023</p>
         <p class="fade-in-element">Designed the website, including multiple iterations as we released new features and media. Contributed HTML/CSS/JavaScript to some sections throughout.</p>
     </div>
-    <div style="flex:1">
+    <div class="mb-6 md:mb-0" style="flex:1">
         <h3 class="fade-in-element"><a href="https://ultradao.org">UltraDAO</a></h3>
         <p class="mb-0 fade-in-element">Role: Branding, Web Design, Full Stack Development</p>
         <p class="fade-in-element">Year: 2021-2023</p>
         <p class="fade-in-element">Created the branding, design language, and website for UltraDAO, including writing all content. Engineered website using Jekyll, Sass, JavaScript, and Tailwind.</p>
     </div>
 </div>
-<div class="sm:flex sm:flex-row sm:gap-8">
-    <div style="flex:1">
+<div class="md:flex md:flex-row sm:gap-8">
+    <div class="mb-16 md:mb-0" style="flex:1">
         <h3 class="fade-in-element"><a href="https://woodiesofficial.com">Woodies</a></h3>
         <p class="mb-0 fade-in-element">Role: Design, Front-end Engineering</p>
         <p class="fade-in-element">Year: 2021-2023</p>
         <p class="fade-in-element">Hired and directed an international media production company to create a Hollywood-grade animated short film, engrossing fans in the Woodies universe within a span of six months and a budget of approximately $500,000.</p>
     </div>
-    <div style="flex:1">
+    <div class="mb-16 md:mb-0" style="flex:1">
         <h3 class="fade-in-element"><a href="https://www.youtube.com/watch?v=encMCWoBc3o">Woodies: Origin</a></h3>
         <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
         <p class="fade-in-element">Year: 2022</p>
         <p class="fade-in-element">Hired and directed an international media production company to create a Hollywood-grade animated short film, engrossing fans in the Woodies universe within a span of six months and a budget of approximately $500,000.</p>
     </div>
 </div>
-<div class="sm:flex sm:flex-row sm:gap-8">
-    <div style="flex:1">
+<div class="md:flex md:flex-row sm:gap-8">
+    <div class="mb-16 md:mb-0" style="flex:1">
         <h3 class="fade-in-element"><a href="https://dmv.ca.gov">California DMV Website Redesign</a></h3>
         <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
         <p class="fade-in-element">Year: 2020</p>
         <p class="fade-in-element">Led a landmark project for our agency: a comprehensive redesign of the California DMV website. Assembled and guided the design team behind this task. The revamped site was met with resounding approval from both the public and DMV staff.</p>
     </div>
-    <div style="flex:1">
+    <div class="mb-16 md:mb-0" style="flex:1">
         <h3 class="fade-in-element"><a href="https://sitekit.withgoogle.com">Google Site Kit</a></h3>
         <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
         <p class="fade-in-element">Year: 2019</p>
         <p class="fade-in-element">In partnership with Google, launched a WordPress plugin that integrates Google's suite of products in one location. Site Kit quickly gained adoption among website owners, thanks to a design language that strikingly represented both Google's identity and the WordPress admin environment.</p>
     </div>
 </div>
-<div class="sm:flex sm:flex-row sm:gap-8">
-    <div style="flex:1">
+<div class="md:flex md:flex-row sm:gap-8">
+    <div class="mb-16 md:mb-0" style="flex:1">
         <h3 class="fade-in-element">10up Brand & Recruiting Videos</h3>
         <p class="mb-0 fade-in-element">Links: <a href="(https://vimeo.com/284765957">Brand Video</a>, <a href="https://vimeo.com/284768433">Recruiting Video</a></p>
         <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
         <p class="fade-in-element">Year: 2018</p>
         <p class="fade-in-element">Pitched and led the creation of two marketing videos for 10up: one for prospective clients and a second for prospective employees. With our annual company meetup in Jackson Hole, Wyoming as the backdrop, we flew a video crew, key client stakeholders, and team members out to film interviews and B-roll. Functioned both as an Executive Producer and Creative Director for the project.</p>
     </div>
-    <div style="flex:1">
+    <div class="mb-16 md:mb-0" style="flex:1">
         <h3 class="fade-in-element"><a href="https://www.godaddy.com/wordpress-themes">GoDaddy Go Theme</a></h3>
         <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
         <p class="fade-in-element">Year: 2019</p>
         <p class="fade-in-element">Collaborated with two senior designers on a project for returning client, GoDaddy. Developed a computational design system capable of producing an endless variety of themes, resulting in a surge in user signups and WordPress users for GoDaddy. Assisted the client and internal designers with valuable insights, critiqued design progress, and worked closely with the engineering team to ensure optimal implementation of our work.</p>
     </div>
 </div>
+
 <h2 class="fade-in-element">Skills</h2>
 
-<ul class="fade-in-element">
+<ul class="fade-in-element text-sm md:text-base grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-3 list-none ml-0 pl-0">
   <li>Design Management</li>
   <li>Strategic Planning</li>
   <li>Hiring &amp; Personnel Management</li>
+  <li>Team Building</li>
   <li>Creative Direction</li>
   <li>Design Systems</li>
-  <li>WordPress Design & Development</li>
   <li>Resource Management</li>
-  <li>Professional Development Planning</li>
   <li>Design Operations</li>
   <li>Product Design</li>
   <li>Visual & Brand Identity</li>
+  <li>WordPress Design & Development</li>
   <li>Web3 (Blockchain & NFTs)</li>
   <li>AI + Design Tooling</li>
   <li>Information Architecture</li>
@@ -126,12 +127,12 @@ permalink: /resume/
 
 <h2 class="fade-in-element">Education</h2>
 
-<h3 class="fade-in-element">Missouri State University</h3>
-<h4 class="fade-in-element">Graphic Design // 2004 // Springfield, MO</h4>
+<h3 class="artist-title fade-in-element">Missouri State University</h3>
+<h4 class="collection-title fade-in-element">Graphic Design // 2004 // Springfield, MO</h4>
 <p class="fade-in-element">Attended Missouri State University (formerly Southwest Missouri State) for Graphic Design.</p>
 
-<h3 class="fade-in-element">Saint Louis Christian College</h3>
-<h4 class="fade-in-element">Religious Studies // 2002 - 2004 // Florissant, MO</h4>
+<h3 class="artist-title fade-in-element">Saint Louis Christian College</h3>
+<h4 class="collection-title fade-in-element">Religious Studies // 2002 - 2004 // Florissant, MO</h4>
 <p class="fade-in-element">Attended Saint Louis Christian College with a focus on Religious Studies.</p>
 
 <h2 class="fade-in-element">Awards & Recognitions</h2>
