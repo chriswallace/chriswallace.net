@@ -66,19 +66,20 @@ permalink: /art/collection/
   <h2 class="sub-heading fade-in-element">
     A selection of generative artworks currently held in my family's private collection on the Tezos and Ethereum blockchains.
   </h2>
-  <p class="fade-in-element">
-    <strong>Fullscreen browser:</strong>
-    Enter fullscreen viewer by clicking the maximize icon on any image. Browse using &larr; and &rarr; keyboard buttons.
-  </p>
-  <div id="zenMode" class="hidden sm:block">
-    <p class="mb-4 fade-in-element">
-      <strong>Zen mode:</strong> Experience the collection alongside a curated selection of songs.
+  <div class="collection-notes fade-in-element">
+    <p style="flex:1;">
+      <strong>Fullscreen controls:</strong>
+      Click the maximize icon on any image and browse using your keyboard's &larr; and &rarr; buttons.
     </p>
-    <p class="mb-12 fade-in-element">
-      <button id="autoPlayCollection" class="button"><i></i> Enter zen mode</button>
-    </p>
+    <div id="zenMode" class="hidden sm:flex sm:gap-4" style="flex:1.4;">
+      <p class="mb-4" class="flex-1">
+        <strong>Zen mode:</strong> Experience the collection alongside a curated selection of songs.
+      </p>
+      <p>
+        <button id="autoPlayCollection" class="button "><i></i> Enter zen mode</button>
+      </p>
+    </div>
   </div>
-  <hr class="mb-16 md:mb-20 fade-in-element" />
   <div id="art-collection" class="art-collection">
     <div>
       <div class="gallery-row gallery-flex">
