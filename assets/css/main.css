@@ -254,7 +254,7 @@ caption {
 }
 
 .collection-notes {
-  @apply md:flex max-w-3xl sm:gap-8 sm:border-y sm:border-gray-700 pt-6 sm:my-12;
+  @apply md:flex max-w-3xl sm:gap-8 sm:border-y sm:border-gray-300 pt-6 sm:my-12;
 }
 
 .collection-notes p {
@@ -362,11 +362,11 @@ caption {
 }
 
 .card-zoom-text {
-  @apply text-white mb-0 p-3 z-10 w-full relative;
+  @apply mb-0 p-3 z-10 w-full relative;
 }
 
 .card-zoom-text h2 {
-  @apply leading-tight block text-sm sm:text-base m-0 mr-6;
+  @apply text-white leading-tight block text-sm sm:text-base m-0 mr-6;
 }
 
 .back-btn {
@@ -869,8 +869,12 @@ footer p {
     @apply bg-gray-400;
   }
 
-  .card-zoom-text {
+  .card-zoom-text h2 {
     @apply text-gray-200;
+  }
+
+  .collection-notes {
+    @apply sm:border-gray-700;
   }
 
   .social-button {
