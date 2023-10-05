@@ -66,6 +66,15 @@ h1 {
   @apply text-4xl md:text-5xl mb-12 lowercase;
 }
 
+.primary-heading:before {
+  @apply -mr-6;
+  content: "/";
+}
+
+.home-title {
+  @apply text-2xl md:text-3xl;
+}
+
 .sub-heading {
   @apply text-2xl sm:text-3xl mt-0 mb-6;
 }
@@ -134,7 +143,7 @@ caption {
   height: 100%;
 }
 
-.logo{
+.logo {
   @apply fill-black w-8 h-8;
 }
 
@@ -166,6 +175,10 @@ caption {
   @apply py-4 md:mb-24;
 }
 
+.navigation .logo {
+  @apply inline-block mr-2 w-[32px] h-[32px];
+}
+
 .navigation .close-button {
   @apply absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-transparent p-0 inline-block md:hidden;
 }
@@ -191,7 +204,7 @@ caption {
 }
 
 .navigation-list ul {
-  @apply list-none m-0 p-0 max-w-7xl mx-auto w-full text-lg md:flex text-center self-center justify-center items-center md:justify-items-stretch;
+  @apply list-none m-0 p-0 mx-auto w-full text-lg md:flex text-center self-center justify-center items-center md:justify-items-stretch;
 }
 
 .navigation-list.invis {
@@ -223,7 +236,7 @@ caption {
 }
 
 .navigation-list .social-buttons a {
-  @apply p-4 sm:p-3 md:p-2;
+  @apply p-4 sm:p-3 md:p-2 inline-block ml-1;
   line-height: 0.5;
 }
 
@@ -231,7 +244,7 @@ caption {
   @apply md:flex max-w-3xl sm:gap-8 sm:border-y sm:border-gray-700 pt-6 sm:my-12;
 }
 
-.collection-notes p{
+.collection-notes p {
   @apply text-sm;
 }
 
@@ -290,7 +303,7 @@ caption {
 }
 
 .social-button svg {
-  @apply inline-block w-[18px] h-[18px] fill-stone-600;
+  @apply inline-block w-[20px] md:w-[14px] h-[20px] md:h-[14px] fill-stone-600;
 }
 
 .social-button:hover svg {
@@ -766,7 +779,7 @@ footer p {
     @apply border-stone-500;
   }
 
-  .logo{
+  .logo {
     @apply fill-white;
   }
 

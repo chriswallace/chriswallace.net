@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Bio
+permalink: /bio/
 ---
 
 <div class="extendo">
