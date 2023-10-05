@@ -67,8 +67,8 @@ h1 {
 }
 
 .primary-heading:before {
-  @apply -mr-6;
   content: "/";
+  display: inline;
 }
 
 .home-title {
