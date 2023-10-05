@@ -6,7 +6,7 @@ module.exports = {
       center: true, // centers the container by default
       padding: "0", // adds 1rem of padding on each side of the container
       screens: {
-        sm: "840px",
+        sm: "1280px",
         md: "1280px",
         lg: "1280px",
         xl: "1280px",

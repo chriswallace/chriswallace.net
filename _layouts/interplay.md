@@ -359,9 +359,13 @@
 
     //---- /do not edit the following code
     </script>
-  <body class="fade-in">
-    <div class="container max-w-6xl mx-auto lg:px-0">
-      {% include header.md %} {{ content }} {% include footer.md %}
+  <body>
+    <div class="mx-4 lg:px-0">
+      {% include header.md %}
+      <div class="container mx-auto">
+        {{ content }}
+      </div>
+      {% include footer.md %}
     </div>
     <script defer src="/assets/js/bundle.js"></script>
   </body>
