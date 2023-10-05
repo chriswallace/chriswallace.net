@@ -4,7 +4,7 @@
 
 layout: home
 title: Chris Wallace
-description: Hi. I'm Chris, a design leader building teams, processes, and products with emerging technology like artificial intelligence and generative design.
+description: Hi. I'm Chris, a design leader building better teams, processes, and products with emerging technology (like artificial intelligence, blockchain, and AR/VR).
 ---
 
 <p class="fade-in-element">Over the past two years, I've been working with artists, blockchain developers, and creative producers to develop digital assets and collectibles in the web3 space. This brand new, nascent industry has been a sandbox for the future of every design-related field: 3D, the Web, apps, games, and more.</p>

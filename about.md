@@ -10,7 +10,7 @@ permalink: /bio/
 
     <p class="sub-heading fade-in-element">Born and raised in St. Louis, MO, I was diagnosed at 19 with testicular cancer. Forced to drop out of college, I underwent aggressive chemotherapy, all while expecting my first child with my high school sweetheart (and now wife of nearly 20 years). Faced with these hardships at such a young age, I started my design career to provide for a growing family.</p>
 
-    <hr class="fade-in-element mb-12 sm:mb-4">
+    <hr class="fade-in-element mt-0 mb-12">
 
     <p class="fade-in-element">In 2009, I co-founded Lift UX, a design agency that transcended traditional boundaries. We earned multiple Emmy nominations for our innovative apps for TV shows like The Walking Dead, Breaking Bad, and Mad Men. In 2017, the agency was acquired by 10up, a leading WordPress digital agency. There, I led an international team, gaining invaluable experiences while working with companies like Facebook, Google, and Microsoft, as well as with organizations such as The Boston Globe and the California DMV.</p>
 

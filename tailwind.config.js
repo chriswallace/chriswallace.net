@@ -50,14 +50,6 @@ module.exports = {
           },
         ],
         xl: [
-          "1.2rem",
-          {
-            lineHeight: "1.2",
-            letterSpacing: "-0.01em",
-            fontWeight: "400",
-          },
-        ],
-        "2xl": [
           "1.4rem",
           {
             lineHeight: "1.2",
@@ -65,8 +57,16 @@ module.exports = {
             fontWeight: "400",
           },
         ],
-        "3xl": [
+        "2xl": [
           "1.8rem",
+          {
+            lineHeight: "1.2",
+            letterSpacing: "-0.01em",
+            fontWeight: "400",
+          },
+        ],
+        "3xl": [
+          "2.2rem",
           {
             lineHeight: "1.2",
             letterSpacing: "-0.02em",

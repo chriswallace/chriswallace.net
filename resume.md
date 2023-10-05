@@ -4,7 +4,7 @@ title: Résumé
 permalink: /resume/
 ---
 
-<p class="fade-in-element -top-8 mb-12 relative">
+<p class="fade-in-element -top-2 md:-top-3 mb-12 relative">
 
 <svg class="feather feather-download inline" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
 
@@ -14,7 +14,7 @@ permalink: /resume/
 
 <p class="fade-in-element sub-heading">Emmy-nominated founder and design leader with 16+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, ESPN, The Boston Globe, and AMC Networks. Former agency executive at 10up, Lift UX (acquired).</p>
 
-<hr class="mt-4 mb-0 fade-in-element">
+<hr class="fade-in-element mt-0 mb-12">
 
 <h2 class="fade-in-element mt-12">Work Experience</h2>
 

@@ -55,28 +55,36 @@ p {
 p,
 ul,
 li {
-  @apply text-gray-700;
+  @apply text-gray-500;
 }
 
 h1 {
   @apply text-3xl md:text-4xl md:max-w-3xl mb-6;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply font-light text-gray-700;
+}
+
 .primary-heading {
-  @apply text-4xl md:text-5xl mb-12 lowercase;
+  @apply text-4xl md:text-5xl mb-4 lowercase;
 }
 
 .primary-heading:before {
+  @apply inline -mr-2 md:-mr-3;
   content: "/";
-  display: inline;
 }
 
 .home-title {
-  @apply text-2xl md:text-3xl;
+  @apply text-xl md:text-2xl;
 }
 
 .sub-heading {
-  @apply text-2xl sm:text-3xl mt-0 mb-6;
+  @apply text-xl sm:text-2xl mt-0 mb-6;
 }
 
 h2 {
@@ -84,16 +92,17 @@ h2 {
 }
 
 h3 {
-  @apply text-base mb-2 text-gray-600 font-normal mt-6 sm:mt-12;
+  @apply text-base mb-2 font-normal mt-6 sm:mt-12;
 }
 
 h4,
 h5,
 h6 {
-  @apply text-base pb-2 mt-6 sm:mt-12 mb-2 font-light;
+  @apply text-base pb-2 mt-6 sm:mt-12 mb-2;
 }
 
 a {
+  @apply text-gray-700;
   text-decoration-line: underline;
   text-decoration-color: rgb(109, 193, 109);
   text-decoration-thickness: 3px;
@@ -663,11 +672,11 @@ caption {
 }
 
 footer {
-  @apply py-8 pb-24 border-t-2 border-gray-200;
+  @apply py-8;
 }
 
 footer p {
-  @apply leading-snug text-gray-600 text-sm text-center;
+  @apply leading-snug text-gray-600 text-xs max-w-lg;
 }
 
 #fullscreen-viewer {
@@ -885,11 +894,11 @@ footer p {
   }
 
   footer {
-    @apply border-gray-600;
+    @apply border-gray-400;
   }
 
   footer p {
-    @apply text-gray-300;
+    @apply text-gray-400;
   }
 
   .utility-bar {
