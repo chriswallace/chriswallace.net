@@ -62,7 +62,7 @@ permalink: /art/collection/
 <script src="/assets/js/player.js"></script>
 <article>
   <a class="back-btn fade-in-element" href="/art">/art</a>
-  <h1 class="fade-in-element">Introducing the Wallace Collection&mdash;a selection of generative art currently held in my family's private collection secured by the blockchain.
+  <h1 class="fade-in-element">Introducing the Wallace Collection&mdash;a selection of generative art from my family's privately-owned collection, secured by the blockchain.
   </h1>
   <div class="collection-notes fade-in-element">
     <p style="flex:1;">
