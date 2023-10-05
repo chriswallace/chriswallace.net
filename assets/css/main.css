@@ -144,7 +144,11 @@ caption {
 }
 
 .logo {
-  @apply fill-black w-8 h-8;
+  @apply w-8 h-8 text-black;
+}
+
+.logo path {
+  @apply fill-current;
 }
 
 .site-title {
@@ -780,7 +784,7 @@ footer p {
   }
 
   .logo {
-    @apply fill-white;
+    @apply text-white;
   }
 
   .menu-button i:before {
