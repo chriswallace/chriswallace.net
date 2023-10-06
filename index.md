@@ -18,10 +18,10 @@ description: Hi. I'm Chris, a design leader building better teams, processes, an
 <p class="fade-in-element mb-32">My goal is to develop ethical, practical, and time-saving tools to revolutionize design in a post-AI world while maintaining the footprints of humanity in everything we create.</p>
 
 <div class="grid gap-4 grid-cols-1 sm:grid-cols-2">
-  <a class="fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md" style="background-image: url('/assets/images/interplay-card.png');" href="/art/interplay/">
+  <a class="fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md text-white" style="background-image: url('/assets/images/interplay-card.png');" href="/art/interplay/">
     <div class="absolute left-0 top-0 right-0 p-4 p-6 lg:p-8 bottom-[50%]">
       <div>
-        <h3 class="text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2">Interplay</h3>
+        <h3 class="text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2 text-white">Interplay</h3>
         <p class="mb-2 lg:mb-4 text-sm lg:text-base text-[#FAC832]">AI-collaborative artwork</p>
         <div class="caret text-xs lg:text-base caret-yellow">Explore</div>
       </div>
@@ -36,19 +36,19 @@ description: Hi. I'm Chris, a design leader building better teams, processes, an
       </div>
     </div>
   </a>
-  <a class="fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md" style="background-image: url('/assets/images/qql-card.png');" href="/art/collection/">
+  <a class="fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md text-white" style="background-image: url('/assets/images/qql-card.png');" href="/art/collection/">
     <div class="absolute flex flex-col justify-end bottom-0 top-0 right-0 p-4 p-6 lg:p-8 left-[50%] text-right">
       <div>
-        <h3 class="text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2">QQL</h3>
+        <h3 class="text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2 text-white">QQL</h3>
         <p class="mb-2 lg:mb-4 text-sm lg:text-base text-[#E6C06B]">Studying the algorithm</p>
         <div class="caret text-xs lg:text-base caret-gold">Explore</div>
       </div>
     </div>
   </a>
-  <a class="fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md" style="background-image: url('/assets/images/nemesis-card.png');" href="https://woodiesofficial.com" target="blank">
+  <a class="fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md text-white" style="background-image: url('/assets/images/nemesis-card.png');" href="https://woodiesofficial.com" target="blank">
     <div class="absolute flex flex-col justify-end bottom-0 left-0 right-0 p-4 p-6 lg:p-8 top-[50%] text-center">
       <div>
-        <h3 class="text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2">Woodies Nemesis</h3>
+        <h3 class="text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2 text-white">Woodies Nemesis</h3>
         <p class="mb-2 lg:mb-4 text-sm lg:text-base text-[#FAC832]">Coming soon</p>
         <div class="caret text-xs lg:text-base caret-yellow">Visit Woodies</div>
       </div>
