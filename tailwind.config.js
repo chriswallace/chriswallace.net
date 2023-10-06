@@ -13,6 +13,9 @@ module.exports = {
       },
     },
     extend: {
+      scrollSnapType: {
+        x: "x mandatory",
+      },
       fontFamily: {
         sans: ["Gabarito", "sans-serif"],
       },
@@ -190,6 +193,17 @@ module.exports = {
     },
   },
   plugins: [
-    require("@tailwindcss/typography", "@tailwindcss/color", "@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/typography"),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".scroll-snap-x": {
+          scrollSnapType: "x mandatory",
+        },
+        ".scroll-snap-start": {
+          scrollSnapAlign: "start",
+        },
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
   ],
 };

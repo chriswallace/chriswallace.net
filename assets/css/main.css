@@ -113,8 +113,31 @@ a:hover {
   text-decoration-color: black;
 }
 
+.caret {
+  text-decoration: none;
+}
+
+.caret::after {
+  @apply text-sm lg:text-lg;
+  content: "\203A";
+  margin-left: 0.38rem;
+  vertical-align: baseline;
+}
+
+.caret-yellow::after {
+  color: #fac832;
+}
+
+.caret-gold::after {
+  color: #e6c06b;
+}
+
+.caret-rose::after {
+  color: #af6060;
+}
+
 hr {
-  @apply w-[40px] border-gray-600 border-t-2 h-2 pb-0;
+  @apply w-[40px] border-gray-600 border-t-4 h-[0] pb-0;
 }
 
 .container-lg {
@@ -122,7 +145,7 @@ hr {
 }
 
 article {
-  @apply py-16 md:py-4;
+  @apply pt-16 md:pt-4;
 }
 
 article p,
@@ -349,8 +372,19 @@ caption {
   @apply hidden sm:block;
 }
 
+.outer-container {
+  @apply mx-auto my-4;
+}
+
+.card-container {
+  @apply flex md:grid md:grid-cols-4 gap-4 overflow-x-auto md:overflow-visible pb-4;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
 .card-zoom {
-  @apply block items-end no-underline rounded-md relative flex aspect-[3/4] items-end justify-center overflow-hidden shadow-xl rounded-md;
+  @apply block items-end no-underline rounded-md relative aspect-[3/4] justify-center overflow-hidden shadow-xl rounded-md flex-none md:flex-auto min-w-[66vw] md:min-w-[0];
+  scroll-snap-align: start;
 }
 
 .card-zoom:hover .card-zoom-image {
@@ -362,11 +396,11 @@ caption {
 }
 
 .card-zoom-text {
-  @apply mb-0 p-3 z-10 w-full relative;
+  @apply mb-0 pb-0 z-10 absolute bottom-4 left-4 right-4;
 }
 
 .card-zoom-text h2 {
-  @apply text-white leading-tight block text-sm sm:text-base m-0 mr-6;
+  @apply text-white leading-tight block text-sm sm:text-base md:text-lg m-0 mr-6;
 }
 
 .back-btn {
@@ -672,7 +706,7 @@ caption {
 }
 
 footer {
-  @apply py-8;
+  @apply pt-12 pb-4;
 }
 
 footer p {
