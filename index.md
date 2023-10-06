@@ -30,7 +30,7 @@ description: Hi. I'm Chris, a design leader building better teams, processes, an
       </div>
     </div>
   </a>
-  <a class="fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md text-white" style="background-image: url('/assets/images/qql-card.png');" href="/art/collection/">
+  <a class="fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md text-white" style="background-image: url('/assets/images/qql-card.png');" href="/art/qql/">
     <div class="absolute flex flex-col justify-end bottom-0 top-0 right-0 p-4 p-6 lg:p-8 left-[50%] text-right">
       <div>
         <h3 class="text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2 text-white">QQL</h3>
