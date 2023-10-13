@@ -59,7 +59,7 @@ li {
 }
 
 h1 {
-  @apply text-3xl md:text-4xl md:max-w-3xl mb-6;
+  @apply text-2xl md:text-4xl md:max-w-3xl mb-6;
 }
 
 h1,
@@ -163,7 +163,7 @@ article ul {
 }
 
 caption {
-  @apply text-xs sm:text-base text-gray-400 my-2 sm:my-4 block text-center;
+  @apply text-xs sm:text-base text-gray-400 my-2 mx-4 sm:my-4 block text-center;
 }
 
 .button {
@@ -277,7 +277,7 @@ caption {
 }
 
 .collection-notes {
-  @apply md:flex max-w-3xl sm:gap-8 sm:border-y sm:border-gray-300 pt-6 sm:my-12;
+  @apply md:flex max-w-3xl sm:gap-8 sm:border-y sm:border-gray-300 pt-6 sm:my-12 -mt-8 sm:mt-0 mb-24 sm:mb-0;
 }
 
 .collection-notes p {
@@ -292,24 +292,24 @@ caption {
 .artist-title,
 .artwork-title,
 .artwork-subtitle {
-  @apply mt-0 text-base mb-4 truncate max-w-[100%];
+  @apply mt-0 mx-4 mb-4 text-sm sm:text-base truncate max-w-[100%];
 }
 
 .artist-title {
-  @apply font-medium mt-8;
+  @apply font-medium sm:mt-8;
 }
 
 .artwork-title {
-  @apply mt-4 mb-0;
+  @apply mt-4 mb-0 sm:mx-0;
 }
 
 .collection-title,
 .artwork-subtitle {
-  @apply mb-4 mt-12 font-light text-gray-500 text-xs sm:text-base;
+  @apply mb-1 sm:mb-4 mt-12 font-light text-gray-500 text-xs sm:text-base;
 }
 
 .artwork-subtitle {
-  @apply mt-0 mb-12 sm:mb-24;
+  @apply mt-0 mb-6 sm:mb-24;
 }
 
 .collection-title a,
@@ -411,12 +411,20 @@ caption {
   @apply min-w-full;
 }
 
+.gallery-row .image-wrapper {
+  @apply sm:mx-0 mb-12 sm:mb-0;
+}
+
 .gallery-row {
-  @apply mb-4 grid gap-2 sm:gap-4;
+  @apply sm:mx-0 sm:mb-4 grid gap-2 sm:gap-4;
 }
 
 .gallery-row:last-of-type {
-  @apply mx-auto mb-16 sm:mb-32;
+  @apply mx-auto sm:mb-32;
+}
+
+.art-collection {
+  @apply -mx-4 sm:mx-0;
 }
 
 .art-collection > div:last-of-type .gallery-row:last-of-type {
@@ -440,11 +448,11 @@ caption {
 }
 
 .gallery-single-wide-portrait .image-wrapper {
-  @apply mx-auto w-[60%] sm:w-[45%];
+  @apply sm:mx-auto sm:w-[45%];
 }
 
 .gallery-double-wide {
-  @apply grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-4;
+  @apply grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4;
 }
 
 .gallery-double-wide-single-small {
@@ -452,7 +460,7 @@ caption {
 }
 
 .gallery-triple-wide {
-  @apply grid-cols-3;
+  @apply grid-cols-1 sm:grid-cols-3;
 }
 
 .gallery-triple-wide-single-small {
@@ -460,19 +468,19 @@ caption {
 }
 
 .gallery-triple-wide-double-small {
-  @apply grid-cols-2 sm:grid-cols-3;
+  @apply grid-cols-1 sm:grid-cols-3;
 }
 
 .gallery-quadruple-wide {
-  @apply grid-cols-2 md:grid-cols-4;
+  @apply grid-cols-1 md:grid-cols-4;
 }
 
 .gallery-quadruple-wide-trip-small {
-  @apply grid-cols-3 sm:grid-cols-4;
+  @apply grid-cols-1 sm:grid-cols-4;
 }
 
 .gallery-six-wide {
-  @apply grid-cols-6;
+  @apply grid-cols-1 sm:grid-cols-6;
 }
 
 .gallery-single-wide img,
@@ -482,11 +490,7 @@ caption {
 .gallery-quadruple-wide img,
 .gallery-quadruple-wide-trip-small img,
 .gallery-six-wide img {
-  @apply min-w-full max-w-[50%];
-}
-
-.gallery-flex {
-  @apply flex gap-2 sm:gap-4;
+  @apply min-w-full sm:mx-0;
 }
 
 .utility-bar {

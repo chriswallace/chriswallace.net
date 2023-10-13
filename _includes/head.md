@@ -6,7 +6,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700&display=swap" rel="stylesheet">   <link rel="stylesheet" href="/assets/main.css?version=1.72" />
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700&display=swap" rel="stylesheet">   <link rel="stylesheet" href="/assets/main.css?version=1.73" />
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
   <meta property="og:image" content="{{page.thumbnail | default: '/assets/images/chris-wallace.jpg'}}" />
   <meta property="twitter:image" content="{{page.thumbnail | default: '/assets/images/chris-wallace.jpg'}}">
@@ -15,7 +15,7 @@
 
   <style>
   .fade-in-element,
-  .art-collection img,
+  .art-collection .image-wrapper,
   .art-collection h3,
   .art-collection h4 {
       opacity: 0;
@@ -23,7 +23,7 @@
       transition: opacity 0.5s ease, transform 0.5s ease;
   }
   .fade-in-element.visible,
-  .art-collection img.visible,
+  .art-collection .image-wrapper.visible,
   .art-collection h3.visible,
   .art-collection h4.visible {
       opacity: 1;
