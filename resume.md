@@ -18,28 +18,28 @@ permalink: /resume/
 
 <h2 class="fade-in-element mt-12">Work Experience</h2>
 
-<h3 class="artist-title fade-in-element">Chief Experience Officer</h3>
-<h4 class="collection-title fade-in-element">UltraDAO Studios // 2021 - Present // Remote</h4>
+<h3 class="job-title fade-in-element">Chief Experience Officer</h3>
+<h4 class="job-metadata fade-in-element">UltraDAO Studios // 2021 - Present // Remote</h4>
 <p class="fade-in-element mb-12">Founded a bootstrapped decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles. Built and managed a team of artists, engineers, and creative production specialists. Achieved multi-million dollar revenue within its first six months. Raised $250,000 for Trees for the Future to plant one million trees in sub-Saharan Africa, won "Best Environmental Initiative" at NFT NYC 2022. Executive Director for Woodies: Origin, official selection of the Aesthetica Short Film Festival 2023.</p>
 
-<h3 class="artist-title fade-in-element">Vice President, Experience Design</h3>
-<h4 class="collection-title fade-in-element">10up // 2017 - 2021 // Remote</h4>
+<h3 class="job-title fade-in-element">Vice President, Experience Design</h3>
+<h4 class="job-metadata fade-in-element">10up // 2017 - 2021 // Remote</h4>
 <p class="fade-in-element mb-12">Steered the design discipline at a global agency of 250+ staff spread across three continents and 16 countries. Fostered a culture of collaboration and co-design, which was instrumental in growing the design team from 5 to 20 professionals across 12 time zones. This initiative contributed to nearly doubling the agency's revenue (~95%) within four years. Spearheaded inclusive hiring practices diversifying team composition, and broadened design services to encompass content design, illustration, and more.</p>
 
-<h3 class="artist-title fade-in-element">Principal Creative, Founder</h3>
-<h4 class="collection-title fade-in-element">Lift UX (acquired) // 2009 - 2017 // Remote</h4>
+<h3 class="job-title fade-in-element">Principal Creative, Founder</h3>
+<h4 class="job-metadata fade-in-element">Lift UX (acquired) // 2009 - 2017 // Remote</h4>
 <p class="fade-in-element mb-12">Led a boutique team of designers and engineers, crafting apps and websites for a varied clientele like AMC Networks, Frito-Lay, and GoDaddy. Launched interactive second-screen apps for acclaimed TV series, earning two Emmy nominations in the process. Managed a compact yet effective team of full-time and contract designers, elevating website traffic for the product division to two million monthly visitors. The successful journey culminated in an acquisition by 10up in 2017.</p>
 
-<h3 class="artist-title fade-in-element">Front-End Developer</h3>
-<h4 class="collection-title fade-in-element">Enterprise Rent-A-Car // 2007 - 2009 // St. Louis, MO</h4>
+<h3 class="job-title fade-in-element">Front-End Developer</h3>
+<h4 class="job-metadata fade-in-element">Enterprise Rent-A-Car // 2007 - 2009 // St. Louis, MO</h4>
 <p class="fade-in-element mb-12">Engaged in developing front-end interfaces for B2B applications and B2C websites, working closely with UX designers and back-end Java engineers to roll out new applications. Handled weekly deployments for enterprise.com and other customer-centric platforms, while providing QA support for monthly release cycles.</p>
 
-<h3 class="artist-title fade-in-element">Senior E-Commerce Web Designer</h3>
-<h4 class="collection-title fade-in-element">Network Solutions // 2006 - 2007 // Belleville, IL</h4>
+<h3 class="job-title fade-in-element">Senior E-Commerce Web Designer</h3>
+<h4 class="job-metadata fade-in-element">Network Solutions // 2006 - 2007 // Belleville, IL</h4>
 <p class="fade-in-element mb-12">Designed and developed front-end code for e-commerce storefronts for small businesses, maintaining stringent project timelines and adhering to client specifications.</p>
 
-<h3 class="artist-title fade-in-element">Webmaster</h3>
-<h4 class="collection-title fade-in-element">St. Louis Christian College // 2005 - 2006 // St. Louis, MO</h4>
+<h3 class="job-title fade-in-element">Webmaster</h3>
+<h4 class="job-metadata fade-in-element">St. Louis Christian College // 2005 - 2006 // St. Louis, MO</h4>
 <p class="fade-in-element mb-12">Primary web content owner, designed, developed, and maintained the college's online presence. During my tenure, the college experienced 60% growth, reaching full campus capacity the following year.</p>
 
 <h2 class="fade-in-element mb-12">Selected Works</h2>
@@ -127,12 +127,12 @@ permalink: /resume/
 
 <h2 class="fade-in-element">Education</h2>
 
-<h3 class="artist-title fade-in-element">Missouri State University</h3>
-<h4 class="collection-title fade-in-element">Graphic Design // 2004 // Springfield, MO</h4>
+<h3 class="job-title fade-in-element">Missouri State University</h3>
+<h4 class="job-metadata fade-in-element">Graphic Design // 2004 // Springfield, MO</h4>
 <p class="fade-in-element">Attended Missouri State University (formerly Southwest Missouri State) for Graphic Design.</p>
 
-<h3 class="artist-title fade-in-element">Saint Louis Christian College</h3>
-<h4 class="collection-title fade-in-element">Religious Studies // 2002 - 2004 // Florissant, MO</h4>
+<h3 class="job-title fade-in-element">Saint Louis Christian College</h3>
+<h4 class="job-metadata fade-in-element">Religious Studies // 2002 - 2004 // Florissant, MO</h4>
 <p class="fade-in-element">Attended Saint Louis Christian College with a focus on Religious Studies.</p>
 
 <h2 class="fade-in-element">Awards & Recognitions</h2>

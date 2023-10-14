@@ -292,10 +292,18 @@ caption {
 .artist-title,
 .artwork-title,
 .artwork-subtitle {
-  @apply mt-0 mx-4 mb-4 text-sm sm:text-base truncate max-w-[100%];
+  @apply mt-0 mx-4 sm:mx-0 mb-4 text-sm sm:text-base truncate max-w-[100%];
 }
 
-.artist-title {
+.job-title{
+  @apply mb-0;
+}
+
+.job-metadata{
+  @apply mt-0 mb-4 text-gray-500;
+}
+
+.artist-title{
   @apply font-medium sm:mt-8;
 }
 
@@ -908,10 +916,11 @@ emoji-picker{
   }
 
   .collection-title,
-  .artwork-subtitle {
+  .artwork-subtitle,
+  .job-metadata{
     @apply text-gray-400;
   }
-
+  
   .collection-title a,
   .artwork-subtitle a {
     @apply text-gray-300;
