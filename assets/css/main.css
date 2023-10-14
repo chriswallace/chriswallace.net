@@ -769,6 +769,29 @@ footer p {
   display: none;
 }
 
+.emojiCursor{
+  @apply absolute z-50 text-xl;
+}
+
+#emojiPickerButton{
+  @apply text-xl;
+}
+
+#emojiPickerButton,
+.emoji, 
+button.emoji,
+.emojiCursor{
+  font-family: 'Noto Color Emoji', sans-serif !important;
+}
+
+.emojis{
+  @apply sm:relative;
+}
+
+emoji-picker{
+  @apply hidden sm:block sm:absolute sm:right-4 sm:top-4;
+}
+
 .loader {
   border: 8px solid #565656;
   /* Light grey */
