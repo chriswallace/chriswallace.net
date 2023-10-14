@@ -1,44 +1,49 @@
+document.addEventListener("DOMContentLoaded", fadeInElements);
 
-document.addEventListener('DOMContentLoaded', fadeInElements);
+function fadeInElements() {
+  let observerIndex = 0;
 
-function fadeInElements(){
-    let observerIndex = 0;
+  const observeElements = (elementsToObserve) => {
+    elementsToObserve.forEach((el) => observer.observe(el));
+  };
 
-    const observeElements = (elementsToObserve) => {
-        elementsToObserve.forEach(el => observer.observe(el));
-    };
-
-    function scrollStop(callback, refresh = 66) {
-        if (!callback || typeof callback !== 'function') return;
-        let isScrolling;
-        window.addEventListener('scroll', function(event) {
+  function scrollStop(callback, refresh = 66) {
+    if (!callback || typeof callback !== "function") return;
+    let isScrolling;
+    window.addEventListener(
+      "scroll",
+      function (event) {
         window.clearTimeout(isScrolling);
         isScrolling = setTimeout(callback, refresh);
-        }, false);
-    }
+      },
+      false
+    );
+  }
 
-    const elements = document.querySelectorAll('.fade-in-element:not(.visible),.art-collection img:not(.visible),.art-collection h3:not(.visible),.art-collection h4:not(.visible)');
+  const elements = document.querySelectorAll(
+    ".fade-in-element:not(.visible),.art-collection .image-wrapper:not(.visible),.art-collection h3:not(.visible),.art-collection h4:not(.visible)"
+  );
 
-    scrollStop(function() {
-        observerIndex = 0;  // Reset index when scrolling stops
+  scrollStop(function () {
+    observerIndex = 0; // Reset index when scrolling stops
+  });
+
+  const fadeIn = (el, delay) => {
+    setTimeout(() => {
+      el.classList.add("visible");
+    }, delay);
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const delay = observerIndex * 50;
+        fadeIn(entry.target, delay);
+        observer.unobserve(entry.target);
+        observerIndex++;
+      }
     });
+  });
 
-    const fadeIn = (el, delay) => {
-        setTimeout(() => {
-        el.classList.add('visible');
-        }, delay);
-    };
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const delay = observerIndex * 50;
-            fadeIn(entry.target, delay);
-            observer.unobserve(entry.target);
-            observerIndex++;
-        }
-        });
-    });
-
-    observeElements(elements);  // Observe initial elements
+  observeElements(elements); // Observe initial elements
 }

@@ -106,7 +106,7 @@ import 'https://cdn.skypack.dev/emoji-picker-element';
 
   <style>
   .fade-in-element,
-  .art-collection img,
+  .art-collection .image-wrapper,
   .art-collection h3,
   .art-collection h4 {
       opacity: 0;
@@ -114,7 +114,7 @@ import 'https://cdn.skypack.dev/emoji-picker-element';
       transition: opacity 0.5s ease, transform 0.5s ease;
   }
   .fade-in-element.visible,
-  .art-collection img.visible,
+  .art-collection .image-wrapper.visible,
   .art-collection h3.visible,
   .art-collection h4.visible {
       opacity: 1;

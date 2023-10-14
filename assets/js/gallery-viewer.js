@@ -136,7 +136,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Check if img alt attribute is not empty before adding caption
     if (isMobile() && img.alt.trim().length) {
       const caption = document.createElement("caption");
-      caption.classList.add("fade-in-element");
       caption.innerHTML = img.alt;
       wrapperDiv.appendChild(caption);
     }
@@ -157,8 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     images = artCollection.querySelectorAll("img"); // Get the current list of images
 
-    if (currentIndex === null)
-      return;
+    if (currentIndex === null) return;
 
     if (currentIndex >= images.length - 1) {
       // If you're at the last image, load more art
@@ -399,7 +397,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const elements = document.querySelectorAll(
-    ".fade-in-element,.art-collection img,.art-collection h3,.art-collection h4"
+    ".fade-in-element,.art-collection .image-wrapper,.art-collection h3,.art-collection h4"
   );
 
   scrollStop(function () {
@@ -448,11 +446,12 @@ document.addEventListener("DOMContentLoaded", () => {
           const artCollection = document.getElementById("art-collection");
           artCollection.insertAdjacentHTML("beforeend", html);
 
-          const unloadedImages = artCollection.querySelectorAll("img:not(.loaded)");
+          const unloadedImages =
+            artCollection.querySelectorAll("img:not(.loaded)");
           unloadedImages.forEach((img, index) => setupImages(img, index));
 
           const newElements = artCollection.querySelectorAll(
-            ".fade-in-element:not(.visible),.art-collection img:not(.loaded),.art-collection h3:not(.visible),.art-collection h4:not(.visible)"
+            ".fade-in-element:not(.visible),.art-collection .image-wrapper:not(.visible),.art-collection h3:not(.visible),.art-collection h4:not(.visible)"
           );
           observeElements(newElements);
 
