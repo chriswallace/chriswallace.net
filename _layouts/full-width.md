@@ -9,7 +9,6 @@
       </div>
     </div>
   <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
-  <div id="my-cursor">😀</div>
   <script src="/assets/js/emoji-funtime.js"></script>
   </body>
 </html>

@@ -7,11 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Load previously selected emoji from localStorage, or default to 😀
     let currentEmoji = localStorage.getItem('emoji') || "😀";
 
-    document.addEventListener('mousemove', (event) => {
-        myCursor.style.left = event.clientX + 12 + 'px';
-        myCursor.style.top = event.clientY - 6 + window.scrollY + 'px';
-    });
-
 
     // Update the emoji picker with the current emoji
     emojiPicker.emoji = currentEmoji;
