@@ -6,14 +6,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Gabarito:wght@400;700&display=swap" rel="stylesheet">   <link rel="stylesheet" href="/assets/main.css?version=1.75" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Gabarito:wght@400;700&display=swap" rel="stylesheet">   <link rel="stylesheet" href="/assets/main.css?version=1.76" />
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
   <meta property="og:image" content="{{page.thumbnail | default: '/assets/images/chris-wallace.jpg'}}" />
   <meta property="twitter:image" content="{{page.thumbnail | default: '/assets/images/chris-wallace.jpg'}}">
 <script type="module">
 import 'https://cdn.skypack.dev/emoji-picker-element';
 </script>
-<script src="/assets/js/emoji-funtime.js"></script>
+<script src="/assets/js/emoji-funtime.js?v=0.1"></script>
 
 {% seo title=false %}
 

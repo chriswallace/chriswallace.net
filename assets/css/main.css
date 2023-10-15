@@ -34,10 +34,6 @@
   font-style: italic;
 }
 
-emoji-picker {
-  --emoji-font-family: 'Noto Color Emoji';
-}
-
 html {
   font-size: 18px;
   line-height: 1.325;
@@ -45,15 +41,6 @@ html {
 
 body {
   @apply font-light;
-}
-
-#my-cursor {
-  font-family: 'Noto Color Emoji', sans-serif !important;
-  position: absolute;
-  user-select: none;
-  pointer-events: none;
-  font-size: 20px;
-  z-index: 999;
 }
 
 h1,
@@ -796,7 +783,6 @@ footer p {
 
 .emojiCursor{
   @apply absolute z-50 text-xl;
-  user-select: none;
   pointer-events: none;
 }
 
@@ -935,7 +921,7 @@ emoji-picker{
   .job-metadata{
     @apply text-gray-400;
   }
-
+  
   .collection-title a,
   .artwork-subtitle a {
     @apply text-gray-300;
