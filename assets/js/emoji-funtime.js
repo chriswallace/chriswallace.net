@@ -2,11 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const socket = io.connect('https://cursortrack-026f30916f71.herokuapp.com');
     const cursors = {};
     const emojiPicker = document.querySelector('emoji-picker');
-    const myCursor = document.getElementById('my-cursor');
 
     // Load previously selected emoji from localStorage, or default to 😀
     let currentEmoji = localStorage.getItem('emoji') || "😀";
-
 
     // Update the emoji picker with the current emoji
     emojiPicker.emoji = currentEmoji;
@@ -14,10 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Listen for the emoji picker's emoji selection event
     emojiPicker.addEventListener('emoji-click', (event) => {
         currentEmoji = event.detail.unicode;
-        localStorage.setItem('emoji', currentEmoji);
-        socket.emit('emojiUpdate', { emoji: currentEmoji });
+        localStorage.setItem('emoji', currentEmoji);  // Save the selected emoji to localStorage
+        socket.emit('emojiUpdate', { emoji: currentEmoji });  // Send the selected emoji to the server
     });
 
+    // Function to handle emoji selection by user
+    function onEmojiSelected(newEmoji) {
+        currentEmoji = newEmoji;
+        socket.emit('emojiUpdate', { emoji: newEmoji });
+    }
     function updateCursorEmoji(userId, newEmoji) {
         const cursor = cursors[userId];
         if (cursor) {
@@ -80,4 +83,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Call onPageChange on initial load and whenever the user navigates to a new page
     onPageChange();
-}); 
+});
