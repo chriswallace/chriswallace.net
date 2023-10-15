@@ -368,5 +368,7 @@
       {% include footer.md %}
     </div>
     <script defer src="/assets/js/bundle.js"></script>
+    <div id="my-cursor">😀</div>
+    <script src="/assets/js/emoji-funtime.js"></script>
   </body>
 </html>

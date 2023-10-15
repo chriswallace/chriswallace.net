@@ -20,7 +20,7 @@ permalink: /art/
 <h2 class="fade-in-element"><a href="/art/collection">The Wallace Collection</a></h2>
 <p class="mb-8 fade-in-element">Explore a curated selection of pieces from the Wallace family's digital collection. These pieces were acquired over a period of two and a half years, containing art from some of the leading creative coders in the world, including Tyler Hobbs, IX Shells, Casey Reas, Manolo Gamboa Naon, Iskra Velitchkova, and more.</p>
 
-<div class="gallery-flex mb-6 sm:mb-12">
+<div class="flex gap-2 sm:gap-4 mb-6 sm:mb-12">
     <div class="fade-in-element" style="flex: 0.66666667;">
         <a href="/art/collection"><img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-137237-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684247024&amp;w=1024&amp;s=e9b0cdd6a0cc6766485a4aa7ab70f0d6" alt="Acequia #219" class="max-w-full h-auto" loading="lazy"></a>
     </div>

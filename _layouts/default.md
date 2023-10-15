@@ -9,5 +9,7 @@
       </div>
       {% include footer.md %}
     </div>
+  <div id="my-cursor">😀</div>
+  <script src="/assets/js/emoji-funtime.js"></script>
   </body>
 </html>
