@@ -796,6 +796,8 @@ footer p {
 
 .emojiCursor{
   @apply absolute z-50 text-xl;
+  user-select: none;
+  pointer-events: none;
 }
 
 #emojiPickerButton{
