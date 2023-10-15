@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
         myCursor.style.top = event.clientY - 6 + window.scrollY + 'px';
     });
 
-    myCursor.innerText = currentEmoji;
 
     // Update the emoji picker with the current emoji
     emojiPicker.emoji = currentEmoji;
@@ -21,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     emojiPicker.addEventListener('emoji-click', (event) => {
         currentEmoji = event.detail.unicode;
         localStorage.setItem('emoji', currentEmoji);
-        myCursor.innerText = currentEmoji;
         socket.emit('emojiUpdate', { emoji: currentEmoji });
     });
 
