@@ -20,15 +20,17 @@ permalink: /resume/
 
 <h3 class="job-title fade-in-element">Chief Experience Officer</h3>
 <h4 class="job-metadata fade-in-element">UltraDAO Studios // 2021 - Present // Remote</h4>
-<p class="fade-in-element mb-12">Founded a bootstrapped decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles. Built and managed a team of artists, engineers, and creative production specialists. Achieved multi-million dollar revenue within its first six months. Raised $250,000 for Trees for the Future to plant one million trees in sub-Saharan Africa, won "Best Environmental Initiative" at NFT NYC 2022. Executive Director for Woodies: Origin, official selection of the Aesthetica Short Film Festival 2023.</p>
+<p class="fade-in-element mb-12">Founded a bootstrapped decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles. Built and managed a team of artists, engineers, and creative production specialists. Led a range of award-winning creative projects and drove multi-million dollar revenue within the first six months.</p>
 
 <h3 class="job-title fade-in-element">Vice President, Experience Design</h3>
 <h4 class="job-metadata fade-in-element">10up // 2017 - 2021 // Remote</h4>
-<p class="fade-in-element mb-12">Steered the design discipline at a global agency of 250+ staff spread across three continents and 16 countries. Fostered a culture of collaboration and co-design, which was instrumental in growing the design team from 5 to 20 professionals across 12 time zones. This initiative contributed to nearly doubling the agency's revenue (~95%) within four years. Spearheaded inclusive hiring practices diversifying team composition, and broadened design services to encompass content design, illustration, and more.</p>
+<p class="fade-in-element mb-4">Matured the design discipline at an international agency of 200+ across three continents and 16 countries. Managed 20 leaders and ICs across user experience and visual design. Established content design practice and implemented org-wide design strategy.</p>
+<p class="fade-in-element mb-12">Clients: Facebook, Microsoft, Google, The Boston Globe, ESPN, The White House</p>
 
 <h3 class="job-title fade-in-element">Principal Creative, Founder</h3>
 <h4 class="job-metadata fade-in-element">Lift UX (acquired) // 2009 - 2017 // Remote</h4>
-<p class="fade-in-element mb-12">Led a boutique team of designers and engineers, crafting apps and websites for a varied clientele like AMC Networks, Frito-Lay, and GoDaddy. Launched interactive second-screen apps for acclaimed TV series, earning two Emmy nominations in the process. Managed a compact yet effective team of full-time and contract designers, elevating website traffic for the product division to two million monthly visitors. The successful journey culminated in an acquisition by 10up in 2017.</p>
+<p class="fade-in-element mb-4">Founded a UX design studio crafting digital products and WordPress websites for clients.  Launched interactive second-screen apps for acclaimed TV series, earning two Emmy nominations in the process. Managed a compact yet effective team of full-time and contract designers, elevating website traffic for the product division to two million monthly visitors. Acquired by 10up in 2017.</p>
+<p class="fade-in-element mb-12">Clients: The Walking Dead, Mad Men, Breaking Bad, SundanceTV, IFC Films, The Next Web</p>
 
 <h3 class="job-title fade-in-element">Front-End Developer</h3>
 <h4 class="job-metadata fade-in-element">Enterprise Rent-A-Car // 2007 - 2009 // St. Louis, MO</h4>
