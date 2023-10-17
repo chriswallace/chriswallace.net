@@ -368,7 +368,7 @@ caption {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url("/assets/images/icons/play-dark.svg");
+  background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/play-dark.svg");
 }
 
 .image-collage {
@@ -540,7 +540,7 @@ caption {
 
 .to-top button i {
   @apply block w-[20px] h-[20px] bg-center bg-no-repeat bg-contain;
-  background-image: url("/assets/images/icons/arrow-up-dark.svg");
+  background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/arrow-up-dark.svg");
 }
 
 .music-player-container {
@@ -663,19 +663,19 @@ caption {
 }
 
 #playButton i {
-  background-image: url("/assets/images/icons/play-dark.svg");
+  background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/play-dark.svg");
 }
 
 #pauseButton i {
-  background-image: url("/assets/images/icons/pause-dark.svg");
+  background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/pause-dark.svg");
 }
 
 #nextButton i {
-  background-image: url("/assets/images/icons/next-dark.svg");
+  background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/next-dark.svg");
 }
 
 #prevButton i {
-  background-image: url("/assets/images/icons/previous-dark.svg");
+  background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/previous-dark.svg");
 }
 
 #fullScreenDiv {
@@ -937,7 +937,7 @@ emoji-picker{
   }
 
   #autoPlayCollection i {
-    background-image: url("/assets/images/icons/play-light.svg");
+    background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/play-light.svg");
     opacity: 0.4;
   }
 
@@ -1012,19 +1012,19 @@ emoji-picker{
   }
 
   #playButton i {
-    background-image: url("/assets/images/icons/play-light.svg");
+    background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/play-light.svg");
   }
 
   #pauseButton i {
-    background-image: url("/assets/images/icons/pause-light.svg");
+    background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/pause-light.svg");
   }
 
   #nextButton i {
-    background-image: url("/assets/images/icons/next-light.svg");
+    background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/next-light.svg");
   }
 
   #prevButton i {
-    background-image: url("/assets/images/icons/previous-light.svg");
+    background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/previous-light.svg");
   }
 
   #backToTop {
@@ -1032,6 +1032,6 @@ emoji-picker{
   }
 
   #backToTop i {
-    background-image: url("/assets/images/icons/arrow-up-light.svg");
+    background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/arrow-up-light.svg");
   }
 }

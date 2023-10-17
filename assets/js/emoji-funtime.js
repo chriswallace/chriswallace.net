@@ -69,10 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    setInterval(() => {
-        console.log(cursors);
-    }, 3000);
-
     document.addEventListener('mousemove', onCursorPositionChanged);
 
     // Function to notify server of page change

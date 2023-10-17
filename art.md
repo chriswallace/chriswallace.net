@@ -39,18 +39,18 @@ permalink: /art/
 <p class="fade-in-element">Fusing the unpredictability of complex mathematical equations with the intentionality of artistic expression, Interplay challenges the viewer to find order within the apparent disorder. This captivating visual journey aims to evoke a sense of unity between seemingly opposing forces, ultimately inviting the observer to reflect on the delicate equilibrium that governs both art and life itself.</p>
 
 <div class="gallery">
-    <img class="fade-in-element" src="/assets/images/example-1.jpg" alt="">
-    <img class="fade-in-element" src="/assets/images/example-2.jpg" alt="">
-    <img class="fade-in-element" src="/assets/images/example-3.jpg" alt="">
+    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/example-1.jpg" alt="">
+    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/example-2.jpg" alt="">
+    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/example-3.jpg" alt="">
 </div>
 
 <h2 class="fade-in-element"><a href="https://www.fxhash.xyz/generative/26011" target="_blank">The Geometry of Rain</a></h2>
 <p class="fade-in-element">An experimental generative art project released as a long-form collection on fx{hash}, a platform for blockchain-powered provenance and ownership of generative art. It explores the relationship between geometric shapes and rain, highlighting the intersection of mathematical precision and organic fluidity.</p>
 
 <div class="gallery fade-in-element">
-    <img class="fade-in-element" src="/assets/images/geometry-of-rain-1.jpg" alt="">
-    <img class="fade-in-element" src="/assets/images/geometry-of-rain-2.jpg" alt="">
-    <img class="fade-in-element" src="/assets/images/geometry-of-rain-3.jpg" alt="">
+    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/geometry-of-rain-1.jpg" alt="">
+    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/geometry-of-rain-2.jpg" alt="">
+    <img class="fade-in-element" src="https://ik.imagekit.io/UltraDAO/wallace/geometry-of-rain-3.jpg" alt="">
 </div>
 
 <h2 class="fade-in-element">Retro Art</h2>

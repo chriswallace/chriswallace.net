@@ -8,5 +8,6 @@
       <p>Want to get in touch with me? Find me on <a href="https://x.com/chriswallace">Twitter</a>, <a href="https://linkedin.com/in/chriswallace2">LinkedIn</a>, or <a href="mailto:chriswallace7@protonmail.com">email</a>.</p>
     </div>
   </footer>
+<script src="/assets/js/image-lazyloader.js"></script>
 <script src="/assets/js/animations.js"></script>
 <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>

@@ -12,7 +12,7 @@ description: Hi. I'm Chris, a design leader building better teams, processes, an
 <p class="fade-in-element mb-32">My goal is to develop ethical, practical, and time-saving tools to revolutionize design in a post-AI world while maintaining the footprints of humanity in everything we create.</p>
 
 <div class="grid gap-4 grid-cols-1 sm:grid-cols-2">
-  <a class="fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md text-white" style="background-image: url('/assets/images/interplay-card.png');" href="/art/interplay">
+  <a class="bg-image-card fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md text-white" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/interplay-card.png?tr=w-100,q-20,bl-6');" href="/art/interplay">
     <div class="absolute left-0 top-0 right-0 p-4 p-6 lg:p-8 bottom-[50%]">
       <div>
         <h3 class="text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2 text-white">Interplay</h3>
@@ -21,7 +21,7 @@ description: Hi. I'm Chris, a design leader building better teams, processes, an
       </div>
     </div>
   </a>
-  <a class="fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md" style="background-image: url('/assets/images/wallace-collection-card.png');" href="/art/collection">
+  <a class="bg-image-card fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/wallace-collection-card.png?tr=w-100,q-20,bl-6');" href="/art/collection">
     <div class="absolute flex flex-col justify-center left-0 top-0 right-0 p-4 p-6 lg:p-8 bottom-[50%] text-center">
       <div>
         <h3 class="text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2 text-gray-800">Wallace Collection</h3>
@@ -30,7 +30,7 @@ description: Hi. I'm Chris, a design leader building better teams, processes, an
       </div>
     </div>
   </a>
-  <a class="fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md text-white" style="background-image: url('/assets/images/qql-card.png');" href="/art/qql-studying-the-algorithm/">
+  <a class="bg-image-card fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md text-white" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/qql-card.png?tr=w-100,q-20,bl-6');" href="/art/qql-studying-the-algorithm/">
     <div class="absolute flex flex-col justify-end bottom-0 top-0 right-0 p-4 p-6 lg:p-8 left-[50%] text-right">
       <div>
         <h3 class="text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2 text-white">QQL</h3>
@@ -39,7 +39,7 @@ description: Hi. I'm Chris, a design leader building better teams, processes, an
       </div>
     </div>
   </a>
-  <a class="fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md text-white" style="background-image: url('/assets/images/nemesis-card.png');" href="https://woodiesofficial.com" target="blank">
+  <a class="bg-image-card fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md text-white" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/nemesis-card.png?tr=w-100,q-20,bl-6');" href="https://woodiesofficial.com" target="blank">
     <div class="absolute flex flex-col justify-end bottom-0 left-0 right-0 p-4 p-6 lg:p-8 top-[50%] text-center">
       <div>
         <h3 class="text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2 text-white">Woodies Nemesis</h3>
