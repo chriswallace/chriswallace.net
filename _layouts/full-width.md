@@ -8,8 +8,12 @@
         {{ content }}
       </div>
     </div>
-  <script src="/assets/js/image-lazyloader.js"></script>
-  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
-  <script src="/assets/js/emoji-funtime.js"></script>
+    <script type="module">
+    import 'https://cdn.skypack.dev/emoji-picker-element';
+    </script>
+    <script src="/assets/js/emoji-funtime.js?v=0.1"></script>
+    <script src="/assets/js/image-lazyloader.js"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="/assets/js/emoji-funtime.js"></script>
   </body>
 </html>

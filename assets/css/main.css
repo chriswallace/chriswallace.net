@@ -212,7 +212,7 @@ caption {
 }
 
 .navigation {
-  @apply py-4 md:mb-24;
+  @apply py-4 md:mb-12 md:mb-24;
 }
 
 .navigation .logo {
@@ -281,7 +281,7 @@ caption {
 }
 
 .collection-notes {
-  @apply md:flex max-w-3xl sm:gap-8 sm:border-y sm:border-gray-300 pt-6 sm:my-12 -mt-8 sm:mt-0 mb-24 sm:mb-0;
+  @apply md:flex max-w-3xl sm:gap-8 sm:border-y sm:border-gray-300 pt-6 sm:my-12 sm:mt-0 mb-24;
 }
 
 .collection-notes p {
@@ -986,11 +986,7 @@ emoji-picker{
   }
 
   .utility-bar {
-    background-image: linear-gradient(
-      to bottom,
-      rgb(55, 55, 55),
-      rgb(44, 44, 44)
-    );
+    @apply bg-gray-900;
   }
 
   .trackActivityContainer {
