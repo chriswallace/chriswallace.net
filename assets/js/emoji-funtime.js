@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function onCursorPositionChanged(event) {
-        const normalizedX = event.clientX / window.innerWidth + 10;
-        const pageY = event.clientY + window.scrollY - 7;  // Add scrollY to clientY to get pageY
+        const normalizedX = event.clientX / window.innerWidth
+        const pageY = event.clientY + window.scrollY;  // Add scrollY to clientY to get pageY
         // Send normalized X and absolute Y position to the server
         socket.emit('cursorMove', {
             x: normalizedX,
