@@ -24,6 +24,7 @@
             <emoji-picker></emoji-picker>
           </div>
         </div>
+        <dbutton id="chat-icon">💬</button>
       </li>
     </ul>
   </nav>

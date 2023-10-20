@@ -367,7 +367,18 @@
       </div>
       {% include footer.md %}
     </div>
+    <div id="chat-container" class="hidden speech-bubble">
+      <input type="text" id="chat-input" maxlength="30" autocomplete="off" />
+      <div id="hidden-div"></div>
+      <div id="messages"></div>
+    </div>
+    <script type="module">
+    import 'https://cdn.skypack.dev/emoji-picker-element';
+    </script>
     <script defer src="/assets/js/bundle.js"></script>
-    <script src="/assets/js/emoji-funtime.js"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="/assets/js/animations.js"></script>
+    <script src="/assets/js/emoji-funtime.js?v=0.1"></script>
+    <script src="/assets/js/image-lazyloader.js"></script>
   </body>
 </html>

@@ -755,13 +755,6 @@ footer p {
   cursor: pointer;
 }
 
-#fullscreen-viewer.fade-out,
-#fullscreen-viewer img.fade-out,
-#fullscreen-viewer iframe.fade-out {
-  opacity: 0;
-  transition: opacity 0.75s ease-in-out;
-}
-
 #fullscreen-viewer,
 #fullscreen-viewer img,
 #fullscreen-viewer iframe {
@@ -791,18 +784,19 @@ footer p {
 }
 
 #emojiPickerButton{
-  @apply text-xl;
+  @apply text-base inline-block;
 }
 
 #emojiPickerButton,
 .emoji, 
 button.emoji,
-.emojiCursor{
+.emojiCursor,
+#chat-icon{
   font-family: 'Noto Color Emoji', sans-serif !important;
 }
 
 .emojis{
-  @apply sm:relative;
+  @apply sm:relative inline-block;
 }
 
 emoji-picker{
@@ -832,6 +826,51 @@ emoji-picker{
   100% {
     transform: rotate(360deg);
   }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.25s linear;
+}
+
+.hidden {
+    display: none;
+}
+
+#chat-icon {
+  @apply inline-block p-2 text-base cursor-pointer ml-2 rounded-full rounded-md;
+  line-height: 1;
+}
+
+#chat-icon.active,
+.speech-bubble{
+  @apply bg-blue-800;
+}
+
+.speech-bubble {
+    @apply absolute text-white px-5 py-2 text-sm w-auto z-50 whitespace-nowrap;
+    border-radius: 0 40px 40px 40px;
+}
+
+#chat-input {
+    @apply text-sm border-none outline-none bg-transparent text-white;
+}
+
+#chat-input, #hidden-div {
+    white-space: nowrap;
+    visibility: visible;
+    font-weight: normal;
+}
+
+#hidden-div {
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+}
+
+.orange-bg {
+    background-color: orange;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1029,5 +1068,10 @@ emoji-picker{
 
   #backToTop i {
     background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/arrow-up-light.svg");
+  }
+
+  #chat-icon.active,
+  .speech-bubble{
+    background-color: rgb(193, 109, 109);
   }
 }
