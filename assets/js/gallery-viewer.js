@@ -369,17 +369,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observeElements(elements); // Observe initial elements
 
+  // Seedable random number generator
+  function seededRandom(seed) {
+    let x = Math.sin(seed++) * 10000;
+    return x - Math.floor(x);
+  }
+
+  // Shuffle an array with a given seed
+  function shuffleArray(array, seed) {
+    let currentIndex = array.length, randomIndex;
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(seededRandom(seed) * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
+    return array;
+  }
+
   if (window.pageSettings) {
     let isLoading = false; // Lock to prevent concurrent fetches
     let htmlParts = window.pageSettings.htmlParts;
+
+    loadMoreArt();
 
     // Function to load more art
     function loadMoreArt() {
       if (isLoading) return; // Return if already fetching
       if (Object.keys(htmlParts).length === 0) return; // No more parts to load
 
-      // Pick a part to load (uses the first key in the object)
-      const nextPartKey = Object.keys(htmlParts)[0];
+      // Generate a seed based on the current hour
+      const seed = Math.floor(new Date().getTime() / (60 * 60 * 1000));
+
+      // Shuffle the keys based on the seed
+      const keys = Object.keys(htmlParts);
+      shuffleArray(keys, seed);
+
+      // Pick a part to load (uses the first key in the shuffled array)
+      const nextPartKey = keys[0];
       const nextPartUrl = htmlParts[nextPartKey];
 
       delete htmlParts[nextPartKey]; // Remove the used part from the htmlParts object
@@ -392,13 +419,10 @@ document.addEventListener("DOMContentLoaded", () => {
           const artCollection = document.getElementById("art-collection");
           artCollection.insertAdjacentHTML("beforeend", html);
 
-          const unloadedImages =
-            artCollection.querySelectorAll("img:not(.loaded)");
+          const unloadedImages = artCollection.querySelectorAll("img:not(.loaded)");
           unloadedImages.forEach((img, index) => setupImages(img, index));
 
-          const newElements = artCollection.querySelectorAll(
-            ".fade-in-element:not(.visible),.art-collection .image-wrapper:not(.visible),.art-collection h3:not(.visible),.art-collection h4:not(.visible)"
-          );
+          const newElements = artCollection.querySelectorAll(".fade-in-element:not(.visible),.art-collection .image-wrapper:not(.visible),.art-collection h3:not(.visible),.art-collection h4:not(.visible)");
           observeElements(newElements);
 
           isLoading = false; // Release lock
