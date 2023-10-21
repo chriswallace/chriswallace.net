@@ -65,8 +65,8 @@ permalink: /art/collection/
     }
   }
 </script>
-<script src="/assets/js/gallery-viewer.js"></script>
-<script src="/assets/js/player.js"></script>
+<script src="/assets/js/gallery-viewer.js?v=0.1"></script>
+<script src="/assets/js/player.js?v=0.1"></script>
 <article>
   <a class="back-btn fade-in-element" href="/art">/art</a>
   <h1 class="fade-in-element">Introducing the Wallace Collection, a selection of generative art from my family's private collection&mdash;secured by the blockchain.
