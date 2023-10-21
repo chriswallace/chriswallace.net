@@ -19,7 +19,7 @@
     </script>
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <script src="/assets/js/animations.js"></script>
-    <script src="/assets/js/emoji-funtime.js?v=0.1"></script>
+    <script src="/assets/js/emoji-funtime.js?v=0.11"></script>
     <script src="/assets/js/image-lazyloader.js"></script>
   </body>
 </html>

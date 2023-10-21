@@ -186,8 +186,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 chatBubble.classList.add('speech-bubble');
                 cursor.appendChild(chatBubble);
             }
-            chatBubble.innerText = data.chatMessage;  // This line sets the text of the chat bubble for other clients
-            chatBubble.style.display = 'block';
+            if (data.chatMessage && data.chatMessage.trim() !== '') {
+                chatBubble.innerText = data.chatMessage;  // This line sets the text of the chat bubble for other clients
+                chatBubble.style.display = 'block';
+            } else {
+                chatBubble.style.display = 'none';  // Hide the bubble if there is no text
+            }
         } else {
             const chatBubble = cursor.querySelector('.speech-bubble');
             if (chatBubble) {
@@ -195,6 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }
+
 
     function onPageChange() {
         const page = window.location.pathname;

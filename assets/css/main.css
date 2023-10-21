@@ -826,6 +826,10 @@ footer p {
   pointer-events: none;
 }
 
+.emojiCursor .speech-bubble{
+  @apply ml-6;
+}
+
 #emojiPickerButton{
   @apply text-base inline-block;
 }
