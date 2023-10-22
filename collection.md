@@ -81,7 +81,7 @@ permalink: /art/collection/
         <strong>Zen mode:</strong> Experience the collection alongside a curated selection of songs.
       </p>
       <p>
-        <button id="autoPlayCollection" class="button "><i></i> Enter zen mode</button>
+        <button id="autoPlayCollection" class="button"><i>🧘</i> Enter zen mode</button>
       </p>
     </div>
   </div>
@@ -123,7 +123,24 @@ permalink: /art/collection/
   </div>
   <div class="to-top hidden sm:block">
     <button id="backToTop" title="Go to top">
-      <i></i>
+      <i>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11L9 5L15 11" stroke="#ADADAD" stroke-width="2" stroke-linecap="round"/></svg>
+      </i>
     </button>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const artCollection = document.getElementById('art-collection');
+    const triggerPoint = artCollection.offsetTop;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY + 140 >= triggerPoint) {
+            document.body.classList.add('subtle-bg');
+        } else {
+            document.body.classList.remove('subtle-bg');
+        }
+    });
+});
+</script>

@@ -34,6 +34,10 @@
   font-style: italic;
 }
 
+.emoji-font {
+  font-family: "Noto Color Emoji";
+}
+
 emoji-picker {
   --emoji-font-family: 'Noto Color Emoji';
 }
@@ -44,7 +48,8 @@ html {
 }
 
 body {
-  @apply font-light;
+  @apply font-light bg-primary-200;
+  transition: background-color 0.3s ease-in-out;
 }
 
 h1,
@@ -59,7 +64,7 @@ p {
 p,
 ul,
 li {
-  @apply text-gray-500;
+  @apply text-primary-600;
 }
 
 h1 {
@@ -71,7 +76,15 @@ h2,
 h3,
 h4,
 h5 {
-  @apply font-light text-gray-700;
+  @apply font-light text-primary-700;
+}
+
+a{
+  @apply text-primary-700;
+}
+
+a:hover {
+  @apply decoration-gray-900 text-primary-900;
 }
 
 .primary-heading {
@@ -106,15 +119,8 @@ h6 {
 }
 
 a {
-  @apply text-gray-700;
-  text-decoration-line: underline;
-  text-decoration-color: rgb(109, 193, 109);
-  text-decoration-thickness: 3px;
+  @apply underline underline-offset-4 decoration-primary-600 decoration-solid decoration-4;
   text-decoration-skip-ink: auto;
-}
-
-a:hover {
-  text-decoration-color: black;
 }
 
 .caret {
@@ -141,7 +147,7 @@ a:hover {
 }
 
 hr {
-  @apply w-[40px] border-gray-600 border-t-4 h-[0] pb-0;
+  @apply w-[40px] border-primary-600 border-t-4 h-[0] pb-0;
 }
 
 .container-lg {
@@ -166,12 +172,20 @@ article ul {
   @apply mb-12 list-disc ml-4 pl-2;
 }
 
+article li{
+  @apply mb-2;
+}
+
 caption {
-  @apply text-xs sm:text-base text-gray-400 my-2 mx-4 sm:my-4 block text-center;
+  @apply text-xs sm:text-base text-primary-800 my-2 mx-4 sm:my-4 block text-center;
 }
 
 .button {
-  @apply cursor-pointer bg-gray-200 rounded-md px-3 py-2 hover:bg-gray-300;
+  @apply cursor-pointer rounded-md px-3 py-2 bg-primary-600 text-primary-100 hover:bg-white hover:text-primary-300;
+}
+
+.button svg{
+  @apply inline-block mr-1 align-middle w-[18px] h-[18px] top-[-4px] fill-current stroke-current;
 }
 
 .no-scroll {
@@ -180,7 +194,7 @@ caption {
 }
 
 .logo {
-  @apply w-8 h-8 text-black;
+  @apply w-8 h-8 text-primary-600;
 }
 
 .logo path {
@@ -200,13 +214,13 @@ caption {
 }
 
 .menu-button i:before {
-  @apply border-t-2 border-gray-500 block w-8 overflow-hidden top-0 absolute;
+  @apply border-t-2 border-primary-600 block w-8 overflow-hidden top-0 absolute;
   height: 0;
   content: "";
 }
 
 .menu-button i:after {
-  @apply border-t-2 border-gray-500 block w-8 overflow-hidden bottom-0 absolute;
+  @apply border-t-2 border-primary-600 block w-8 overflow-hidden bottom-0 absolute;
   height: 0;
   content: "";
 }
@@ -224,7 +238,7 @@ caption {
 }
 
 .navigation .close-button-icon {
-  @apply inline-block border-2 border-gray-300 p-2 rounded-full;
+  @apply inline-block border-2 border-primary-300 p-2 rounded-full;
 }
 
 .navigation .close-button-svg {
@@ -232,15 +246,15 @@ caption {
 }
 
 .navigation .close-button:hover .close-button-icon {
-  @apply border-gray-400;
+  @apply border-primary-600;
 }
 
 .navigation .close-button:hover .close-button-svg {
-  @apply text-gray-400;
+  @apply text-primary-800;
 }
 
 .navigation-list {
-  @apply left-0 top-0 right-0 bottom-0 flex fixed bg-white text-white z-20 md:relative;
+  @apply left-0 top-0 right-0 bottom-0 flex fixed z-20 md:relative;
 }
 
 .navigation-list ul {
@@ -264,32 +278,56 @@ caption {
 }
 
 .navigation-list li a {
-  @apply text-2xl md:text-xs lg:text-sm font-light md:px-3 md:py-2 no-underline hover:underline hover:decoration-2 text-gray-600 hover:text-black;
+  @apply text-2xl md:text-xs lg:text-sm font-light md:px-3 md:py-2 no-underline hover:underline hover:decoration-2 text-primary-600 hover:text-primary-800;
 }
 
 .navigation-list li:first-child a {
-  @apply text-black md:-left-3 relative;
+  @apply md:-left-3 relative;
 }
 
-.navigation-list .social-buttons {
-  @apply mt-16 md:mt-0 md:ml-8 md:grow md:text-right;
+.social-buttons {
+  @apply mt-16 md:mt-0 md:ml-8 md:grow md:text-right hidden sm:block;
 }
 
-.navigation-list .social-buttons a {
-  @apply p-4 sm:p-3 md:p-2 inline-block ml-1;
-  line-height: 0.5;
+.social-buttons > div{
+  @apply rounded-full mx-0;
+}
+
+.social-buttons button {
+  @apply block bg-white cursor-pointer;
+  padding: 15px 20px;
+  line-height: 18px;
+  font-size: 18px;
+}
+
+.social-buttons button.active{
+  @apply bg-primary-500;
+}
+
+.social-buttons .emojis button{
+  padding-right: 10px;
+  border-radius: 100px 0 0 100px;
+}
+
+.social-buttons .cursor-text button{
+  padding-left: 10px;
+  border-radius: 0 100px 100px 0;
 }
 
 .collection-notes {
-  @apply md:flex max-w-3xl sm:gap-8 sm:border-y sm:border-gray-300 pt-6 sm:mb-24 sm:mt-0 mb-16;
+  @apply md:flex max-w-3xl sm:gap-8 sm:border-y sm:border-primary-500 pt-6 sm:mb-24 sm:mt-0 mb-16;
 }
 
 .collection-notes p {
   @apply text-sm;
 }
 
-.about-image {
-  @apply sm:float-right sm:ml-4 sm:ml-12 my-8 sm:mb-12 sm:mt-0 rounded-md sm:max-w-[240px] md:max-w-[320px] w-full;
+.about-image-container{
+  @apply relative sm:float-right rounded-md sm:max-w-[240px] md:max-w-[320px] w-full sm:ml-4 sm:ml-12 my-8 sm:mb-12 sm:mt-0;
+}
+
+.about-image-container img {
+  @apply w-full h-full object-cover rounded-md;
 }
 
 .collection-title,
@@ -304,7 +342,7 @@ caption {
 }
 
 .job-metadata{
-  @apply mt-0 mb-4 text-gray-500;
+  @apply mt-0 mb-4 text-primary-500;
 }
 
 .artist-title{
@@ -317,7 +355,7 @@ caption {
 
 .collection-title,
 .artwork-subtitle {
-  @apply mb-1 sm:mb-4 mt-12 font-light text-gray-500 text-xs sm:text-base;
+  @apply mb-1 sm:mb-4 mt-12 font-light text-primary-500 text-xs sm:text-base;
 }
 
 .artwork-subtitle {
@@ -326,49 +364,19 @@ caption {
 
 .collection-title a,
 .artwork-subtitle a {
-  @apply font-light text-gray-500 no-underline;
+  @apply font-light text-primary-500 no-underline;
 }
 
 .artist-title + h4 {
   @apply -mt-4;
 }
 
-.refresh-btn {
-  @apply bg-gray-200 text-black px-4 py-2 rounded-md hover:bg-gray-300;
-}
-
 .gallery {
   @apply grid grid-cols-3 gap-2 sm:gap-4 mt-10 mb-8;
 }
 
-.social-button {
-  @apply p-1 px-2 ml-2 bg-gray-100 hover:bg-gray-200 inline-block rounded-md;
-  line-height: 1;
-}
-
-.social-button:first-child {
-  @apply ml-0;
-}
-
-.social-button svg {
-  @apply inline-block w-[20px] md:w-[14px] h-[20px] md:h-[14px] fill-gray-600;
-}
-
-.social-button:hover svg {
-  @apply fill-gray-800;
-}
-
 #autoPlayCollection i {
-  display: inline-block;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
-  top: 1px;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/play-dark.svg");
+  @apply inline-block emoji-font mr-2;
 }
 
 .image-collage {
@@ -382,6 +390,10 @@ caption {
 .image-collage img:nth-child(2),
 .image-collage img:nth-child(3) {
   @apply hidden sm:block;
+}
+
+.tooltip {
+    @apply absolute bottom-0 left-0 bg-black text-white p-2 rounded-none block opacity-0 z-20;
 }
 
 .outer-container {
@@ -416,7 +428,7 @@ caption {
 }
 
 .back-btn {
-  @apply text-gray-500 font-light mb-4 inline-block text-xl;
+  @apply text-primary-800 font-light mb-4 inline-block text-xl;
 }
 
 .gallery-row img {
@@ -425,6 +437,10 @@ caption {
 
 .gallery-row .image-wrapper {
   @apply sm:mx-0 mb-12 sm:mb-0;
+}
+
+.qql-collection .gallery-row .image-wrapper {
+  @apply mb-4;
 }
 
 .gallery-row {
@@ -440,7 +456,7 @@ caption {
 }
 
 .art-collection > div:last-of-type .gallery-row:last-of-type {
-  @apply mb-8 sm:mb-8;
+  @apply mb-8;
 }
 
 .gallery-flex {
@@ -514,20 +530,18 @@ caption {
 }
 
 .page-title {
-  @apply text-sm font-bold ml-3 uppercase leading-tight float-left opacity-0;
+  @apply text-sm text-primary-500 ml-3 uppercase leading-tight float-left opacity-0;
 }
 
 #backToTop {
-  @apply mr-3 p-2 z-10 opacity-0;
-  cursor: pointer;
-  color: #222;
-  border: none;
-  border-radius: 4px;
+  @apply mr-3 p-2 z-10 opacity-0 border border-primary-300 rounded-full cursor-pointer float-right;
   flex: 0.5;
-  float: right;
-  border-radius: 400px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
 }
+
+#backToTop svg path {
+  @apply stroke-current text-primary-300;
+}
+
 
 .page-title {
   @apply hidden sm:block;
@@ -539,8 +553,11 @@ caption {
 }
 
 .to-top button i {
-  @apply block w-[20px] h-[20px] bg-center bg-no-repeat bg-contain;
-  background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/arrow-up-dark.svg");
+  @apply block w-[20px] h-[20px] text-center;
+}
+
+.to-top svg{
+  @apply max-w-[20px] max-h-[20px];
 }
 
 .music-player-container {
@@ -558,12 +575,12 @@ caption {
 }
 
 .music-player input[type="range"] {
-  @apply relative top-[1px] w-[74px] sm:w-[66px] mr-2;
+  @apply relative w-[74px] sm:w-[66px] mr-2;
+  top: 1px;
 }
 
 .music-player button {
   flex: 1;
-  margin-top: 2px;
   padding-left: 7px;
   padding-right: 7px;
 }
@@ -578,66 +595,46 @@ caption {
 }
 
 .music-player i {
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 16px;
-  height: 16px;
-  display: block;
+  @apply bg-no-repeat bg-center w-4 h-4 block;
 }
 
 .trackActivityContainer {
-  @apply w-[50%];
-  padding: 4px 8px;
-  font-weight: bold;
-  margin-right: 5px;
-  border-radius: 3px;
-  background-image: linear-gradient(to bottom, #34603e, rgb(48, 143, 60));
-  color: rgb(52, 212, 31);
-  text-shadow: 0 0 5px rgba(52, 212, 31, 0.3);
-  position: relative;
+  @apply w-[50%] p-2 font-bold mr-1 rounded text-primary-800 relative bg-gradient-to-b from-primary-300 to-primary-400;
 }
 
 .trackActivityContainer:after {
   content: "";
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  right: 1px;
-  bottom: 18px;
+  @apply absolute;
+  left: 2px;
+  top: 2px;
+  right: 2px;
+  height: 50%;
   background-image: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.2)
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.1)
   );
-  border-radius: 1px 1px 20% 20%;
+  border-radius: 2px 2px 20% 20%;
   z-index: 12;
 }
 
 .trackActivity {
-  display: flex;
-  gap: 8px;
+  @apply flex gap-2;
 }
 
 .infoBox {
-  width: 140px;
-  flex: 7;
-  font-size: 18px;
-  height: 30px;
-  line-height: 1.75;
-  overflow: hidden;
+  @apply w-[140px] text-lg h-6 leading-7 overflow-hidden italic;
   font-family: "DS Digital", monospace;
-  font-style: italic;
+  line-height: 1.5;
+  flex: 7;
 }
 
 #musicVisualizer {
-  flex: 1;
+  @apply flex-1;
 }
 
 .infoBox > div {
-  overflow: hidden;
-  white-space: nowrap;
-  width: auto;
-  display: inline-block;
+  @apply overflow-hidden whitespace-nowrap inline-block;
   padding-bottom: 0;
   margin-bottom: 0;
 }
@@ -678,55 +675,59 @@ caption {
   background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/previous-dark.svg");
 }
 
-  /* Reset default styles for the input range */
-  input[type=range] {
-    -webkit-appearance: none; /* Override default appearance */
-    width: 100%; /* Full-width */
-    margin: 10px 0;
-    border: none; /* Remove border */
-    background-color: transparent;
-  }
+/* Reset default styles for the input range */
+input[type=range] {
+  -webkit-appearance: none; /* Override default appearance */
+  width: 100%; /* Full-width */
+  margin: 10px 0;
+  border: none; /* Remove border */
+  background-color: transparent;
+}
 
-  /* Style the track */
-  input[type=range]::-webkit-slider-runnable-track {
-    background: #aaa;
-    border: none;
-    border-radius: 3px;
-    height: 8px;
-  }
+/* Style the track */
+input[type=range]::-webkit-slider-runnable-track {
+  @apply bg-primary-100;
+  border: none;
+  border-radius: 3px;
+  height: 8px;
+}
 
-  input[type=range]::-moz-range-track {
-    background: #aaa;
-    border: none;
-    border-radius: 3px;
-    height: 8px;
-  }
+input[type=range]::-moz-range-track {
+  @apply bg-primary-100;
+  border: none;
+  border-radius: 3px;
+  height: 8px;
+}
 
-  /* Style the thumb */
-  input[type=range]::-webkit-slider-thumb {
-    background-color: rgb(81, 168, 81);
-    -webkit-appearance: none; /* Override default appearance */
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    border: 2px solid white;
-    margin-top: -6px; /* Align thumb with track */
-  }
+/* Style the thumb */
+input[type=range]::-webkit-slider-thumb {
+  @apply bg-primary-500;
+  -webkit-appearance: none; /* Override default appearance */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  margin-top: -6px; /* Align thumb with track */
+}
 
-  input[type=range]::-moz-range-thumb {
-    background-color: rgb(81, 168, 81);
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    border: 2px solid white;
-  }
+input[type=range]::-moz-range-thumb {
+  @apply bg-primary-500;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+}
+
+#interplayArtwork{
+  @apply grid md:grid-cols-2 gap-8;
+}
 
 #fullScreenDiv {
-  position: relative;
+  @apply relative;
 }
 
 .image-wrapper {
-  position: relative;
+  @apply relative block;
 }
 
 .maximize-icon {
@@ -769,7 +770,7 @@ footer {
 }
 
 footer p {
-  @apply leading-snug text-gray-600 text-xs max-w-lg;
+  @apply leading-snug text-primary-800 text-xs max-w-lg;
 }
 
 #fullscreen-viewer {
@@ -831,7 +832,7 @@ footer p {
 }
 
 #emojiPickerButton{
-  @apply text-base inline-block;
+  @apply inline-block;
 }
 
 #emojiPickerButton,
@@ -839,7 +840,7 @@ footer p {
 button.emoji,
 .emojiCursor,
 #chat-icon{
-  font-family: 'Noto Color Emoji', sans-serif !important;
+  @apply emoji-font;
 }
 
 .emojis{
@@ -847,7 +848,7 @@ button.emoji,
 }
 
 emoji-picker{
-  @apply hidden sm:block sm:absolute sm:right-4 sm:top-4;
+  @apply hidden sm:block sm:absolute sm:right-6 sm:top-6;
 }
 
 .loader {
@@ -884,14 +885,9 @@ emoji-picker{
     display: none;
 }
 
-#chat-icon {
-  @apply inline-block p-2 text-base cursor-pointer ml-2 rounded-full rounded-md;
-  line-height: 1;
-}
-
 #chat-icon.active,
 .speech-bubble{
-  @apply bg-blue-800;
+  @apply bg-primary-800;
 }
 
 .speech-bubble {
@@ -917,7 +913,40 @@ emoji-picker{
 }
 
 .orange-bg {
-    background-color: orange;
+    background-color: rgb(179, 53, 53);
+}
+
+@media (prefers-color-scheme: light) {
+  body.subtle-bg {
+    @apply bg-gray-100;
+  }
+
+  .subtle-bg h1,
+  .subtle-bg h2,
+  .subtle-bg h3,
+  .subtle-bg h4,
+  .subtle-bg h5 {
+    @apply text-gray-600;
+  }
+
+  .subtle-bg .collection-title,
+  .subtle-bg caption{
+    @apply text-gray-500;
+  }
+
+  .subtle-bg p,
+  .subtle-bg ul,
+  .subtle-bg li {
+    @apply text-gray-500;
+  }
+
+  .about-image-container{
+    @apply bg-primary-700;
+  }
+
+  .about-image-container img {
+    mix-blend-mode: lighten;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -940,12 +969,11 @@ emoji-picker{
   }
 
   a {
-    @apply text-white;
-    text-decoration-color: rgb(193, 109, 109);
+    @apply text-white decoration-primary-600 decoration-solid	decoration-4;
   }
 
   a:hover {
-    text-decoration-color: white;
+    @apply decoration-white text-white;
   }
 
   hr {
@@ -1006,6 +1034,10 @@ emoji-picker{
     @apply text-white mb-12;
   }
 
+  .page-title{
+    @apply text-gray-400;
+  }
+
   .collection-title,
   .artwork-subtitle,
   .job-metadata{
@@ -1017,18 +1049,8 @@ emoji-picker{
     @apply text-gray-300;
   }
 
-  .button,
-  .social-button {
-    @apply bg-gray-700 border-gray-700 hover:bg-gray-600;
-  }
-
-  #autoPlayCollection i {
-    background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/play-light.svg");
-    opacity: 0.4;
-  }
-
-  .social-button:hover {
-    @apply bg-gray-500;
+  .button {
+    @apply bg-primary-500 border-primary-500 hover:bg-primary-400 hover:text-white;
   }
 
   .refresh-btn {
@@ -1109,35 +1131,39 @@ emoji-picker{
   }
 
   #backToTop {
-    border-color: rgb(135, 135, 135);
+    @apply border-gray-600;
   }
 
-  #backToTop i {
-    background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/arrow-up-light.svg");
+  #backToTop svg path {
+    @apply stroke-current text-gray-400;
+  }
+
+  .social-buttons button {
+    @apply bg-gray-700;
   }
 
   /* Style the track */
   input[type=range]::-webkit-slider-runnable-track {
-    background-color: #fff;
+    @apply bg-gray-700;
   }
 
   input[type=range]::-moz-range-track {
-    background-color: #fff;
+    @apply bg-gray-700;
   }
 
   /* Style the thumb */
   input[type=range]::-webkit-slider-thumb {
-    background-color: rgb(193, 109, 109);
+    @apply bg-primary-500;
     border-color: white;
   }
 
   input[type=range]::-moz-range-thumb {
-    background-color: rgb(193, 109, 109);
+    @apply bg-primary-500;
     border-color: white;
   }
 
   #chat-icon.active,
   .speech-bubble{
-    background-color: rgb(193, 109, 109);
+    @apply bg-primary-500;
   }
 }

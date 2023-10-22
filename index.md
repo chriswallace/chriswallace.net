@@ -21,7 +21,7 @@ description: Hi. I'm Chris, a design leader building better teams, processes, an
       </div>
     </div>
   </a>
-  <a class="bg-image-card fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/wallace-collection-card.png?tr=w-100,q-20,bl-6');" href="/art/collection">
+  <a class="bg-image-card fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/wallace-collection-card-bg.png?tr=w-100,q-20,bl-6');" href="/art/collection">
     <div class="absolute flex flex-col justify-center left-0 top-0 right-0 p-4 p-6 lg:p-8 bottom-[50%] text-center">
       <div>
         <h3 class="text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2 text-gray-800">Wallace Collection</h3>

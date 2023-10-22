@@ -50,22 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    img.addEventListener("mousemove", function (event) {
-      const tooltipWidth = tooltip.offsetWidth;
-      const windowWidth = window.innerWidth;
-
-      if (event.pageX + tooltipWidth + 20 > windowWidth) {
-        // Tooltip would go off the right edge of the screen
-        // Show tooltip to the left of the cursor instead
-        tooltip.style.left = event.pageX - tooltipWidth - 10 + "px";
-      } else {
-        // Normal behavior
-        tooltip.style.left = event.pageX + 10 + "px";
-      }
-
-      tooltip.style.top = event.pageY + 10 + "px";
-    });
-
     img.addEventListener("mouseout", function () {
       tooltip.style.display = "none";
     });
@@ -75,6 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
     wrapperDiv.classList.add("image-wrapper");
     img.parentNode.insertBefore(wrapperDiv, img);
     wrapperDiv.appendChild(img);
+
+    // Move tooltip inside wrapperDiv
+    wrapperDiv.appendChild(tooltip);
 
     const maximizeIcon = document.createElement("div");
     maximizeIcon.classList.add("maximize-icon");

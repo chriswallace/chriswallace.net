@@ -9,7 +9,7 @@
       </div>
     </div>
     <div id="chat-container" class="hidden speech-bubble">
-      <input type="text" id="chat-input" maxlength="30" autocomplete="off" />
+      <input type="text" id="chat-input" maxlength="40" autocomplete="nope" />
       <div id="hidden-div"></div>
       <div id="messages"></div>
     </div>

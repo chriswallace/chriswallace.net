@@ -21,7 +21,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/wallace/studying_the_algorithm.png?tr
     Enter fullscreen viewer by clicking the maximize icon on any image. Browse using &larr; and &rarr; keyboard buttons.
   </p>
   <hr class="mb-16 md:mb-20 fade-in-element" />
-  <div id="art-collection" class="art-collection">
+  <div id="art-collection" class="art-collection qql-collection">
     <div>
       <div class="gallery-row gallery-triple-wide-double-small">
         <div>
@@ -365,11 +365,19 @@ thumbnail: https://ik.imagekit.io/UltraDAO/wallace/studying_the_algorithm.png?tr
     </button>
   </div>
 </div>
+{% include footer.md %}
 
-<footer class="fade-in-element">
-  <div class="container">
-    <p>
-      Copyright © 2023 Chris Wallace. All rights reserved. Artwork displayed on this website is copyright its respective creator.
-    </p>
-  </div>
-</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const artCollection = document.getElementById('art-collection');
+    const triggerPoint = artCollection.offsetTop;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY + 140 >= triggerPoint) {
+            document.body.classList.add('subtle-bg');
+        } else {
+            document.body.classList.remove('subtle-bg');
+        }
+    });
+});
+</script>

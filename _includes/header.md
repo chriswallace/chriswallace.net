@@ -18,13 +18,19 @@
       <li class="fade-in-element"><a href="/portfolio" aria-label="Portfolio">Portfolio</a></li>
       <li class="fade-in-element"><a href="/art" aria-label="Art">Art</a></li>
       <li class="fade-in-element social-buttons">
-        <div class="emojis">
-          <button id="emojiPickerButton">😀</button>
-          <div id="emojiPickerContainer" class="emojiPickerContainer hidden">
-            <emoji-picker></emoji-picker>
+        <div class="inline-block">
+          <div class="flex gap-0">
+            <div class="emojis" style="flex:1;">
+              <button id="emojiPickerButton">😀</button>
+              <div id="emojiPickerContainer" class="emojiPickerContainer hidden">
+                <emoji-picker></emoji-picker>
+              </div>
+            </div>
+            <div class="cursor-text" style="flex:1;">
+              <button id="chat-icon">💬</button>
+            </div>
           </div>
         </div>
-        <button id="chat-icon">💬</button>
       </li>
     </ul>
   </nav>
@@ -47,14 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const emojiPicker = document.querySelector('emoji-picker');
   emojiPickerButton.addEventListener('click', event => {
     emojiPickerContainer.classList.toggle('hidden');
+    emojiPickerButton.classList.toggle('active');
   });
   // Load previously selected emoji from localStorage, or default to 😀
   let currentEmoji = localStorage.getItem('emoji') || "😀";
   
-  // Update the emoji picker with the current emoji
-  document.getElementById('emojiPickerButton').textContent = currentEmoji;
-  
+  emojiPickerButton.textContent = currentEmoji;
+
   emojiPicker.addEventListener('emoji-click', (event) => {
+    emojiPickerButton.classList.remove('active');
     emojiPickerContainer.classList.add('hidden');
     document.getElementById('emojiPickerButton').textContent = event.detail.unicode;
   });
