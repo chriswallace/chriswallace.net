@@ -13,6 +13,9 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        'inset-display': 'inset 0 3px 30px #890808',
+      },
       scrollSnapType: {
         x: "x mandatory",
       },
@@ -98,13 +101,13 @@ module.exports = {
           50: "#FBEAE9",
           100: "#F5CECA",
           200: "#E3B2AE",
-          300: "#CE9894",
+          300: "#CD918C",
           400: "#B57A75",
-          500: "#AA6C67",
-          600: "#925E5A",
-          700: "#83514D",
-          800: "#5E3632",
-          900: "#462B29",
+          500: "#A7564F",
+          600: "#98463F",
+          700: "#79352F",
+          800: "#6A2C27",
+          900: "#57221D",
         },
         gray: {
           50: "#fafafa",

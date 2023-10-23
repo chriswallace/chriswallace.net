@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Portfolio
-permalink: /portfolio/
+title: Products
+permalink: /products/
 ---
 
-<p class="sub-heading fade-in-element">Since 2021, I've been building a portfolio of blockchain-connected products alongside a stellar team of artists, creators, and engineers at <a href="https://ultradao.org">UltraDAO</a>. </p>
+<p class="sub-heading fade-in-element">Since 2021, I've been building blockchain-connected products alongside a stellar team of artists, creators, and engineers at <a href="https://ultradao.org">UltraDAO</a>. </p>
 
 <hr class="fade-in-element mt-0 mb-12">
 

@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   function isMobile() {
     return /Mobi|Android/i.test(navigator.userAgent);
   }
-  
+
   const playButton = document.getElementById("playButton");
   const pauseButton = document.getElementById("pauseButton");
   const nextButton = document.getElementById("nextButton");
@@ -21,15 +21,31 @@ window.addEventListener("DOMContentLoaded", (event) => {
     audioElement.pause();
   });
 
-  if( window.pageSettings ) {
-    
+  if (window.pageSettings) {
+
     const tracks = window.pageSettings.musicTracks;
 
-    if(tracks && tracks.length > 0) {
+    if (tracks && tracks.length > 0) {
 
       document.getElementById("utility-bar").classList.remove("hidden");
 
       let currentTrackIndex = 0;
+
+      function updateMarqueeAnimation() {
+        const trackInfo = document.getElementById('trackInfo');
+        const infoBox = document.querySelector('.infoBox');
+
+        // Ensure the DOM has updated with the new text
+        setTimeout(() => {
+          const textWidth = trackInfo.offsetWidth;
+          const containerWidth = infoBox.offsetWidth;
+
+          const baseSpeed = 50;
+          const duration = ((textWidth + containerWidth) / baseSpeed);
+
+          trackInfo.style.animationDuration = `${duration}s`;
+        }, 0);
+      }
 
       const trackInfo = document.getElementById("trackInfo");
 
@@ -38,6 +54,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       function loadTrack(index) {
         audioElement.src = tracks[index].src;
         trackInfo.innerHTML = tracks[index].title + " by " + tracks[index].artist;
+        updateMarqueeAnimation();
       }
 
       function playTrack() {
@@ -94,7 +111,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         const pageTitle = document.getElementById('pageTitle');
 
         // Scroll to top when button is clicked
-        backToTopButton.addEventListener('click', function() {
+        backToTopButton.addEventListener('click', function () {
           window.scroll({
             top: 0,
             behavior: 'smooth'
@@ -102,7 +119,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         });
 
         // Toggle button's visibility based on scroll position
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
           if (window.scrollY > 200) { // Show button after 200px of scrolling
             backToTopButton.style.opacity = 1;
             pageTitle.style.opacity = 1;

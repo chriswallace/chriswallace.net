@@ -295,7 +295,7 @@ caption {
 
 .social-buttons button {
   @apply block bg-white cursor-pointer;
-  padding: 15px 20px;
+  padding: 15px 18px;
   line-height: 18px;
   font-size: 18px;
 }
@@ -305,12 +305,12 @@ caption {
 }
 
 .social-buttons .emojis button{
-  padding-right: 10px;
+  padding-right: 12px;
   border-radius: 100px 0 0 100px;
 }
 
 .social-buttons .cursor-text button{
-  padding-left: 10px;
+  padding-left: 12px;
   border-radius: 0 100px 100px 0;
 }
 
@@ -375,8 +375,8 @@ caption {
   @apply grid grid-cols-3 gap-2 sm:gap-4 mt-10 mb-8;
 }
 
-#autoPlayCollection i {
-  @apply inline-block emoji-font mr-2;
+#autoPlayCollection span {
+  @apply inline-block emoji-font mr-1 font-normal;
 }
 
 .image-collage {
@@ -452,7 +452,7 @@ caption {
 }
 
 .art-collection {
-  @apply -mx-4 sm:mx-0;
+  @apply -mx-4 sm:mx-0 mb-32;
 }
 
 .art-collection > div:last-of-type .gallery-row:last-of-type {
@@ -598,34 +598,35 @@ caption {
   @apply bg-no-repeat bg-center w-4 h-4 block;
 }
 
+
 .trackActivityContainer {
-  @apply w-[50%] p-2 font-bold mr-1 rounded text-primary-800 relative bg-gradient-to-b from-primary-300 to-primary-400;
+  @apply w-[50%] h-[35px] relative mr-2 rounded font-bold bg-gradient-to-b from-primary-200 to-primary-400 text-primary-100 shadow-inset-display;
 }
 
 .trackActivityContainer:after {
-  content: "";
   @apply absolute;
+  content: "";
   left: 2px;
   top: 2px;
   right: 2px;
   height: 50%;
   background-image: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.6),
-    rgba(255, 255, 255, 0.1)
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.1 )
   );
   border-radius: 2px 2px 20% 20%;
   z-index: 12;
 }
 
 .trackActivity {
-  @apply flex gap-2;
+  @apply flex gap-2 h-full;
 }
 
 .infoBox {
-  @apply w-[140px] text-lg h-6 leading-7 overflow-hidden italic;
+  @apply inline-block text-lg h-6 leading-7 overflow-hidden italic;
   font-family: "DS Digital", monospace;
-  line-height: 1.5;
+  line-height: 35px;
   flex: 7;
 }
 
@@ -634,19 +635,24 @@ caption {
 }
 
 .infoBox > div {
-  @apply overflow-hidden whitespace-nowrap inline-block;
-  padding-bottom: 0;
-  margin-bottom: 0;
+  @apply min-w-full overflow-hidden whitespace-nowrap inline-block pb-0 mb-0;
 }
 
 .playing {
-  animation: marquee 13s linear infinite;
-  transform: translateX(0);
+  animation-name: marquee;
 }
 
 .stopped {
   animation: none;
   transform: translateX(0);
+}
+
+#trackInfo {
+  display: inline-block;
+  white-space: nowrap;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  text-indent: 9px;
 }
 
 @keyframes marquee {
@@ -686,14 +692,14 @@ input[type=range] {
 
 /* Style the track */
 input[type=range]::-webkit-slider-runnable-track {
-  @apply bg-primary-100;
+  @apply bg-primary-200;
   border: none;
   border-radius: 3px;
   height: 8px;
 }
 
 input[type=range]::-moz-range-track {
-  @apply bg-primary-100;
+  @apply bg-primary-200;
   border: none;
   border-radius: 3px;
   height: 8px;
@@ -854,7 +860,7 @@ emoji-picker{
 .loader {
   border: 8px solid #565656;
   /* Light grey */
-  border-top: 8px solid #13d823;
+  border-top: 8px solid #eb7272;
   /* Green */
   border-radius: 50%;
   width: 50px;
@@ -1030,6 +1036,10 @@ emoji-picker{
     @apply border-gray-200;
   }
 
+  caption {
+    @apply text-gray-400;
+  }
+
   .home-title {
     @apply text-white mb-12;
   }
@@ -1097,23 +1107,6 @@ emoji-picker{
     @apply bg-gray-900;
   }
 
-  .trackActivityContainer {
-    @apply w-[50%];
-    padding: 4px 8px;
-    font-weight: bold;
-    margin-right: 5px;
-    border-radius: 3px;
-    background-image: linear-gradient(to bottom, rgb(234, 142, 142), rgb(193, 109, 109));
-    color: rgb(131, 46, 46);
-    box-shadow: inset 0 0 8px rgba(255, 153, 153, 0.5),
-      inset 0 0 16px rgb(168, 94, 94);
-    position: relative;
-  }
-
-  .trackActivityContainer:after {
-    opacity: 0.3;
-  }
-
   #playButton i {
     background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/play-light.svg");
   }
@@ -1144,11 +1137,11 @@ emoji-picker{
 
   /* Style the track */
   input[type=range]::-webkit-slider-runnable-track {
-    @apply bg-gray-700;
+    @apply bg-gray-500;
   }
 
   input[type=range]::-moz-range-track {
-    @apply bg-gray-700;
+    @apply bg-gray-500;
   }
 
   /* Style the thumb */

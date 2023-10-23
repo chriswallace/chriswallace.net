@@ -65,8 +65,8 @@ permalink: /art/collection/
     }
   }
 </script>
-<script src="/assets/js/gallery-viewer.js?v=0.1"></script>
-<script src="/assets/js/player.js?v=0.1"></script>
+<script src="/assets/js/gallery-viewer.js?v=0.11"></script>
+<script src="/assets/js/player.js?v=0.11"></script>
 <article>
   <a class="back-btn fade-in-element" href="/art">/art</a>
   <h1 class="fade-in-element">Introducing the Wallace Collection, a selection of generative art from my family's private collection&mdash;secured by the blockchain.
@@ -81,7 +81,7 @@ permalink: /art/collection/
         <strong>Zen mode:</strong> Experience the collection alongside a curated selection of songs.
       </p>
       <p>
-        <button id="autoPlayCollection" class="button"><i>🧘</i> Enter zen mode</button>
+        <button id="autoPlayCollection" class="button"><span>🧘🏻</span> Enter zen mode</button>
       </p>
     </div>
   </div>
@@ -124,7 +124,7 @@ permalink: /art/collection/
   <div class="to-top hidden sm:block">
     <button id="backToTop" title="Go to top">
       <i>
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11L9 5L15 11" stroke="#ADADAD" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg width="20" height="20" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11L9 5L15 11" stroke="#ADADAD" stroke-width="2" stroke-linecap="round"/></svg>
       </i>
     </button>
   </div>
