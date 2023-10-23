@@ -39,12 +39,12 @@
 }
 
 emoji-picker {
-  --emoji-font-family: 'Noto Color Emoji';
+  --emoji-font-family: "Noto Color Emoji";
 }
 
 html {
   font-size: 18px;
-  line-height: 1.325;
+  line-height: 1.5;
 }
 
 body {
@@ -79,7 +79,7 @@ h5 {
   @apply font-light text-primary-700;
 }
 
-a{
+a {
   @apply text-primary-700;
 }
 
@@ -97,7 +97,7 @@ a:hover {
 }
 
 .home-title {
-  @apply text-xl md:text-2xl;
+  @apply text-2xl md:text-3xl mb-8;
 }
 
 .sub-heading {
@@ -172,7 +172,7 @@ article ul {
   @apply mb-12 list-disc ml-4 pl-2;
 }
 
-article li{
+article li {
   @apply mb-2;
 }
 
@@ -184,7 +184,7 @@ caption {
   @apply cursor-pointer rounded-md px-3 py-2 bg-primary-600 text-primary-100 hover:bg-white hover:text-primary-300;
 }
 
-.button svg{
+.button svg {
   @apply inline-block mr-1 align-middle w-[18px] h-[18px] top-[-4px] fill-current stroke-current;
 }
 
@@ -289,7 +289,7 @@ caption {
   @apply mt-16 md:mt-0 md:ml-8 md:grow md:text-right hidden sm:block;
 }
 
-.social-buttons > div{
+.social-buttons > div {
   @apply rounded-full mx-0;
 }
 
@@ -300,16 +300,16 @@ caption {
   font-size: 18px;
 }
 
-.social-buttons button.active{
+.social-buttons button.active {
   @apply bg-primary-500;
 }
 
-.social-buttons .emojis button{
+.social-buttons .emojis button {
   padding-right: 12px;
   border-radius: 100px 0 0 100px;
 }
 
-.social-buttons .cursor-text button{
+.social-buttons .cursor-text button {
   padding-left: 12px;
   border-radius: 0 100px 100px 0;
 }
@@ -322,7 +322,7 @@ caption {
   @apply text-sm;
 }
 
-.about-image-container{
+.about-image-container {
   @apply relative sm:float-right rounded-md sm:max-w-[240px] md:max-w-[320px] w-full sm:ml-4 sm:ml-12 my-8 sm:mb-12 sm:mt-0;
 }
 
@@ -337,15 +337,15 @@ caption {
   @apply mt-0 mx-4 sm:mx-0 mb-4 text-sm sm:text-base truncate max-w-[100%];
 }
 
-.job-title{
+.job-title {
   @apply mb-0;
 }
 
-.job-metadata{
+.job-metadata {
   @apply mt-0 mb-4 text-primary-500;
 }
 
-.artist-title{
+.artist-title {
   @apply font-medium sm:mt-8;
 }
 
@@ -393,7 +393,7 @@ caption {
 }
 
 .tooltip {
-    @apply absolute bottom-0 left-0 bg-black text-white p-2 rounded-none block opacity-0 z-20;
+  @apply absolute bottom-0 left-0 bg-black text-white p-2 rounded-none block opacity-0 z-20;
 }
 
 .outer-container {
@@ -542,7 +542,6 @@ caption {
   @apply stroke-current text-primary-300;
 }
 
-
 .page-title {
   @apply hidden sm:block;
 }
@@ -556,7 +555,7 @@ caption {
   @apply block w-[20px] h-[20px] text-center;
 }
 
-.to-top svg{
+.to-top svg {
   @apply max-w-[20px] max-h-[20px];
 }
 
@@ -598,7 +597,6 @@ caption {
   @apply bg-no-repeat bg-center w-4 h-4 block;
 }
 
-
 .trackActivityContainer {
   @apply w-[50%] h-[35px] relative mr-2 rounded font-bold bg-gradient-to-b from-primary-200 to-primary-400 text-primary-100 shadow-inset-display;
 }
@@ -613,7 +611,7 @@ caption {
   background-image: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.1 )
+    rgba(255, 255, 255, 0.1)
   );
   border-radius: 2px 2px 20% 20%;
   z-index: 12;
@@ -682,7 +680,7 @@ caption {
 }
 
 /* Reset default styles for the input range */
-input[type=range] {
+input[type="range"] {
   -webkit-appearance: none; /* Override default appearance */
   width: 100%; /* Full-width */
   margin: 10px 0;
@@ -691,14 +689,14 @@ input[type=range] {
 }
 
 /* Style the track */
-input[type=range]::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
   @apply bg-primary-200;
   border: none;
   border-radius: 3px;
   height: 8px;
 }
 
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   @apply bg-primary-200;
   border: none;
   border-radius: 3px;
@@ -706,7 +704,7 @@ input[type=range]::-moz-range-track {
 }
 
 /* Style the thumb */
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   @apply bg-primary-500;
   -webkit-appearance: none; /* Override default appearance */
   border-radius: 50%;
@@ -716,7 +714,7 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -6px; /* Align thumb with track */
 }
 
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   @apply bg-primary-500;
   border-radius: 50%;
   width: 20px;
@@ -724,7 +722,7 @@ input[type=range]::-moz-range-thumb {
   border: 2px solid white;
 }
 
-#interplayArtwork{
+#interplayArtwork {
   @apply grid md:grid-cols-2 gap-8;
 }
 
@@ -828,32 +826,32 @@ footer p {
   display: none;
 }
 
-.emojiCursor{
+.emojiCursor {
   @apply absolute z-50 text-xl;
   pointer-events: none;
 }
 
-.emojiCursor .speech-bubble{
+.emojiCursor .speech-bubble {
   @apply ml-6;
 }
 
-#emojiPickerButton{
+#emojiPickerButton {
   @apply inline-block;
 }
 
 #emojiPickerButton,
-.emoji, 
+.emoji,
 button.emoji,
 .emojiCursor,
-#chat-icon{
+#chat-icon {
   @apply emoji-font;
 }
 
-.emojis{
+.emojis {
   @apply sm:relative inline-block;
 }
 
-emoji-picker{
+emoji-picker {
   @apply hidden sm:block sm:absolute sm:right-6 sm:top-6;
 }
 
@@ -888,38 +886,39 @@ emoji-picker{
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 #chat-icon.active,
-.speech-bubble{
+.speech-bubble {
   @apply bg-primary-800;
 }
 
 .speech-bubble {
-    @apply absolute text-white px-5 py-2 text-sm w-auto z-50 whitespace-nowrap;
-    border-radius: 0 40px 40px 40px;
+  @apply absolute text-white px-5 py-2 text-sm w-auto z-50 whitespace-nowrap;
+  border-radius: 0 40px 40px 40px;
 }
 
 #chat-input {
-    @apply text-sm border-none outline-none bg-transparent text-white;
+  @apply text-sm border-none outline-none bg-transparent text-white;
 }
 
-#chat-input, #hidden-div {
-    white-space: nowrap;
-    visibility: visible;
-    font-weight: normal;
+#chat-input,
+#hidden-div {
+  white-space: nowrap;
+  visibility: visible;
+  font-weight: normal;
 }
 
 #hidden-div {
-    position: absolute;
-    visibility: hidden;
-    top: 0;
-    left: 0;
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
 }
 
 .orange-bg {
-    background-color: rgb(179, 53, 53);
+  background-color: rgb(179, 53, 53);
 }
 
 @media (prefers-color-scheme: light) {
@@ -936,7 +935,7 @@ emoji-picker{
   }
 
   .subtle-bg .collection-title,
-  .subtle-bg caption{
+  .subtle-bg caption {
     @apply text-gray-500;
   }
 
@@ -946,7 +945,7 @@ emoji-picker{
     @apply text-gray-500;
   }
 
-  .about-image-container{
+  .about-image-container {
     @apply bg-primary-700;
   }
 
@@ -1040,20 +1039,16 @@ emoji-picker{
     @apply text-gray-400;
   }
 
-  .home-title {
-    @apply text-white mb-12;
-  }
-
-  .page-title{
+  .page-title {
     @apply text-gray-400;
   }
 
   .collection-title,
   .artwork-subtitle,
-  .job-metadata{
+  .job-metadata {
     @apply text-gray-400;
   }
-  
+
   .collection-title a,
   .artwork-subtitle a {
     @apply text-gray-300;
@@ -1136,27 +1131,27 @@ emoji-picker{
   }
 
   /* Style the track */
-  input[type=range]::-webkit-slider-runnable-track {
+  input[type="range"]::-webkit-slider-runnable-track {
     @apply bg-gray-500;
   }
 
-  input[type=range]::-moz-range-track {
+  input[type="range"]::-moz-range-track {
     @apply bg-gray-500;
   }
 
   /* Style the thumb */
-  input[type=range]::-webkit-slider-thumb {
+  input[type="range"]::-webkit-slider-thumb {
     @apply bg-primary-500;
     border-color: white;
   }
 
-  input[type=range]::-moz-range-thumb {
+  input[type="range"]::-moz-range-thumb {
     @apply bg-primary-500;
     border-color: white;
   }
 
   #chat-icon.active,
-  .speech-bubble{
+  .speech-bubble {
     @apply bg-primary-500;
   }
 }
