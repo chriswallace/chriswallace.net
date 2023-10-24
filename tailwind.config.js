@@ -14,7 +14,7 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        'inset-display': 'inset 0 3px 30px #890808',
+        "inset-display": "inset 0 3px 30px #890808",
       },
       scrollSnapType: {
         x: "x mandatory",
@@ -26,7 +26,7 @@ module.exports = {
         xs: [
           "0.775rem",
           {
-            lineHeight: "1.4",
+            lineHeight: "1.5",
             letterSpacing: "0",
             fontWeight: "300",
           },
@@ -34,7 +34,7 @@ module.exports = {
         sm: [
           "0.9rem",
           {
-            lineHeight: "1.4",
+            lineHeight: "1.5",
             letterSpacing: "0",
             fontWeight: "300",
           },
@@ -42,7 +42,7 @@ module.exports = {
         base: [
           "1rem",
           {
-            lineHeight: "1.4",
+            lineHeight: "1.5",
             letterSpacing: "0",
             fontWeight: "300",
           },

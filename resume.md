@@ -12,7 +12,7 @@ permalink: /resume/
 
 </p>
 
-<p class="fade-in-element sub-heading">Emmy-nominated founder and design leader with 16+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, ESPN, The Boston Globe, and AMC Networks. Former agency executive at 10up, Lift UX (acquired).</p>
+<p class="fade-in-element sub-heading">Emmy-nominated founder and design leader with 16+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, The Nobel Prize, Starbucks, and AMC Networks. Former agency executive at 10up, Lift UX (acquired).</p>
 
 <hr class="fade-in-element mt-0 mb-12">
 
@@ -25,12 +25,12 @@ permalink: /resume/
 <h3 class="job-title fade-in-element">Vice President, Experience Design</h3>
 <h4 class="job-metadata fade-in-element">10up // 2017 - 2021 // Remote</h4>
 <p class="fade-in-element mb-4">Matured the design discipline at an international agency of 200+ across three continents and 16 countries. Managed 20 leaders and ICs across user experience and visual design. Established content design practice and implemented org-wide design strategy.</p>
-<p class="fade-in-element mb-12">Clients: Facebook, Microsoft, Google, The Boston Globe, ESPN, The White House</p>
+<p class="fade-in-element mb-12">Clients: Facebook, Microsoft, Google, The Nobel Prize,, Starbucks, The White House</p>
 
 <h3 class="job-title fade-in-element">Principal Creative, Founder</h3>
 <h4 class="job-metadata fade-in-element">Lift UX (acquired) // 2009 - 2017 // Remote</h4>
 <p class="fade-in-element mb-4">Founded a UX design studio crafting digital products and WordPress websites for clients.  Launched interactive second-screen apps for acclaimed TV series, earning two Emmy nominations in the process. Managed a compact yet effective team of full-time and contract designers, elevating website traffic for the product division to two million monthly visitors. Acquired by 10up in 2017.</p>
-<p class="fade-in-element mb-12">Clients: The Walking Dead, Mad Men, Breaking Bad, SundanceTV, IFC Films, The Next Web</p>
+<p class="fade-in-element mb-12">Clients: The Walking Dead, Mad Men, Breaking Bad, SundanceTV, IFC Films, WEtv</p>
 
 <h3 class="job-title fade-in-element">Front-End Developer</h3>
 <h4 class="job-metadata fade-in-element">Enterprise Rent-A-Car // 2007 - 2009 // St. Louis, MO</h4>
@@ -48,13 +48,13 @@ permalink: /resume/
 
 <div class="md:flex md:flex-row sm:gap-8">
     <div class="mb-16 md:mb-0" style="flex:1">
-        <h3 class="fade-in-element"><a href="https://twelvedays.ultradao.org">Twelve Days of CryptoArt</a></h3>
+        <h3 class="fade-in-element"><a href="https://twelvedays.ultradao.org" target="_blank">Twelve Days of CryptoArt</a></h3>
         <p class="mb-0 fade-in-element">Role: Curation, Branding, Web Design, Full Stack Development</p>
         <p class="fade-in-element">Year: 2023</p>
         <p class="fade-in-element">Designed the website, including multiple iterations as we released new features and media. Contributed HTML/CSS/JavaScript to some sections throughout.</p>
     </div>
     <div class="mb-16 md:mb-0" style="flex:1">
-        <h3 class="fade-in-element"><a href="https://ultradao.org">UltraDAO</a></h3>
+        <h3 class="fade-in-element"><a href="https://ultradao.org" target="_blank">UltraDAO</a></h3>
         <p class="mb-0 fade-in-element">Role: Branding, Web Design, Full Stack Development</p>
         <p class="fade-in-element">Year: 2021-2023</p>
         <p class="fade-in-element">Created the branding, design language, and website for UltraDAO, including writing all content. Engineered website using Jekyll, Sass, JavaScript, and Tailwind.</p>
@@ -62,13 +62,13 @@ permalink: /resume/
 </div>
 <div class="md:flex md:flex-row sm:gap-8">
     <div class="mb-16 md:mb-0" style="flex:1">
-        <h3 class="fade-in-element"><a href="https://woodiesofficial.com">Woodies</a></h3>
+        <h3 class="fade-in-element"><a href="https://woodiesofficial.com" target="_blank">Woodies</a></h3>
         <p class="mb-0 fade-in-element">Role: Design, Front-end Engineering</p>
         <p class="fade-in-element">Year: 2021-2023</p>
         <p class="fade-in-element">Hired and directed an international media production company to create a Hollywood-grade animated short film, engrossing fans in the Woodies universe within a span of six months and a budget of approximately $500,000.</p>
     </div>
     <div class="mb-16 md:mb-0" style="flex:1">
-        <h3 class="fade-in-element"><a href="https://www.youtube.com/watch?v=encMCWoBc3o">Woodies: Origin</a></h3>
+        <h3 class="fade-in-element"><a href="https://www.youtube.com/watch?v=encMCWoBc3o" target="_blank">Woodies: Origin</a></h3>
         <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
         <p class="fade-in-element">Year: 2022</p>
         <p class="fade-in-element">Hired and directed an international media production company to create a Hollywood-grade animated short film, engrossing fans in the Woodies universe within a span of six months and a budget of approximately $500,000.</p>
@@ -76,13 +76,13 @@ permalink: /resume/
 </div>
 <div class="md:flex md:flex-row sm:gap-8">
     <div class="mb-16 md:mb-0" style="flex:1">
-        <h3 class="fade-in-element"><a href="https://dmv.ca.gov">California DMV Website Redesign</a></h3>
+        <h3 class="fade-in-element"><a href="https://dmv.ca.gov" target="_blank">California DMV Website Redesign</a></h3>
         <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
         <p class="fade-in-element">Year: 2020</p>
         <p class="fade-in-element">Led a landmark project for our agency: a comprehensive redesign of the California DMV website. Assembled and guided the design team behind this task. The revamped site was met with resounding approval from both the public and DMV staff.</p>
     </div>
     <div class="mb-16 md:mb-0" style="flex:1">
-        <h3 class="fade-in-element"><a href="https://sitekit.withgoogle.com">Google Site Kit</a></h3>
+        <h3 class="fade-in-element"><a href="https://sitekit.withgoogle.com" target="_blank">Google Site Kit</a></h3>
         <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
         <p class="fade-in-element">Year: 2019</p>
         <p class="fade-in-element">In partnership with Google, launched a WordPress plugin that integrates Google's suite of products in one location. Site Kit quickly gained adoption among website owners, thanks to a design language that strikingly represented both Google's identity and the WordPress admin environment.</p>
@@ -91,16 +91,30 @@ permalink: /resume/
 <div class="md:flex md:flex-row sm:gap-8">
     <div class="mb-16 md:mb-0" style="flex:1">
         <h3 class="fade-in-element">10up Brand & Recruiting Videos</h3>
-        <p class="mb-0 fade-in-element">Links: <a href="(https://vimeo.com/284765957">Brand Video</a>, <a href="https://vimeo.com/284768433">Recruiting Video</a></p>
+        <p class="mb-0 fade-in-element">Links: <a href="(https://vimeo.com/284765957" target="_blank">Brand Video</a>, <a href="https://vimeo.com/284768433" target="_blank">Recruiting Video</a></p>
         <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
         <p class="fade-in-element">Year: 2018</p>
         <p class="fade-in-element">Pitched and led the creation of two marketing videos for 10up: one for prospective clients and a second for prospective employees. With our annual company meetup in Jackson Hole, Wyoming as the backdrop, we flew a video crew, key client stakeholders, and team members out to film interviews and B-roll. Functioned both as an Executive Producer and Creative Director for the project.</p>
     </div>
     <div class="mb-16 md:mb-0" style="flex:1">
-        <h3 class="fade-in-element"><a href="https://www.godaddy.com/wordpress-themes">GoDaddy Go Theme</a></h3>
+        <h3 class="fade-in-element"><a href="https://www.godaddy.com/wordpress-themes" target="_blank">GoDaddy Go Theme</a></h3>
         <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
         <p class="fade-in-element">Year: 2019</p>
         <p class="fade-in-element">Collaborated with two senior designers on a project for returning client, GoDaddy. Developed a computational design system capable of producing an endless variety of themes, resulting in a surge in user signups and WordPress users for GoDaddy. Assisted the client and internal designers with valuable insights, critiqued design progress, and worked closely with the engineering team to ensure optimal implementation of our work.</p>
+    </div>
+</div>
+<div class="md:flex md:flex-row sm:gap-8">
+    <div class="mb-16 md:mb-0" style="flex:1">
+        <h3 class="fade-in-element"><a href="https://aib.si.edu/" target="_blank">The Smithsonian Arts + Industries Building</a></h3>
+        <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
+        <p class="fade-in-element">Year: 2020</p>
+        <p class="fade-in-element">Oversaw the visual design strategy and production of assets for the Smithsonian's Arts + Industries Building website. Working directly with our Senior Visual Designer, I provided creative direction via weekly one-on-one design critique throughout the design process.</p>
+    </div>
+    <div class="mb-16 md:mb-0" style="flex:1">
+        <h3 class="fade-in-element"><a href="https://stories.starbucks.com/stories/" target="_blank">Starbucks Stories &amp; News Redesign</a></h3>
+        <p class="mb-0 fade-in-element">Role: Design + Creative Direction</p>
+        <p class="fade-in-element">Year: 2020</p>
+        <p class="fade-in-element">Collaborating with one of our Lead Designers, I provided creative direction and design production for the new Starbucks Stories &amp; News experience, including visual design, branding, and interaction design. I designed the current Stories logo, the navigation, and media/downloads section of the website.</p>
     </div>
 </div>
 

@@ -4,12 +4,12 @@
 
 layout: home
 title: Chris Wallace
-description: Hi. I'm Chris, a design leader building better teams, processes, and products with emerging technology (like artificial intelligence, blockchain, and AR/VR).
+description: Hi. I'm Chris, a design leader and art lover with 16+ years experience building teams, developing ways of working, and executing award-winning creative work for household brands like Starbucks, Google, and Microsoft.
 ---
 
-<p class="fade-in-element">Over the past two years, I've been working with artists, blockchain developers, and creative producers to develop digital assets and collectibles in the web3 space. This brand new, nascent industry has been a sandbox for the future of every design-related field: 3D, the Web, apps, games, and more.</p>
+<hr class="fade-in-element mb-0">
 
-<p class="fade-in-element mb-32">My goal is to develop ethical, practical, and time-saving tools to revolutionize design in a post-AI world while maintaining the footprints of humanity in everything we create.</p>
+<h2 class="fade-in-element mb-6">Recent art projects</h2>
 
 <div class="grid gap-4 grid-cols-1 sm:grid-cols-2">
   <a class="bg-image-card fade-in-element bg-center bg-cover aspect-[4/3] relative rounded-md text-white" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/interplay-card.png?tr=w-100,q-20,bl-6');" href="/art/interplay">
