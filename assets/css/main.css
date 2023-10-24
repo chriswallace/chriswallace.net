@@ -833,7 +833,6 @@ footer p {
 
 .emojiCursor .speech-bubble {
   @apply ml-6;
-  font-family: Gabarito, sans-serif;
 }
 
 #emojiPickerButton {
@@ -898,6 +897,7 @@ emoji-picker {
 .speech-bubble {
   @apply absolute text-white px-5 py-2 text-sm w-auto z-50 whitespace-nowrap;
   border-radius: 0 40px 40px 40px;
+  font-family: Gabarito, sans-serif;
 }
 
 #chat-input {
