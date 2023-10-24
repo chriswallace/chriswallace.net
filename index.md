@@ -4,10 +4,8 @@
 
 layout: home
 title: Chris Wallace
-description: Hi. I'm Chris, a design leader and art lover with 16+ years experience building teams, developing ways of working, and executing award-winning creative work for household brands like Starbucks, Google, and Microsoft.
+description: Hi. I'm Chris, an award-winning design executive with 16+ years of leadership and innovation for household brands and revered cultural institutions.
 ---
-
-<hr class="fade-in-element mb-0">
 
 <h2 class="fade-in-element mb-6">Recent art projects</h2>
 
