@@ -835,6 +835,7 @@ footer p {
 
 .emojiCursor .speech-bubble{
   @apply ml-6;
+  font-family: Gabarito, sans-serif;
 }
 
 #emojiPickerButton{
