@@ -117,16 +117,14 @@ body{
     @apply text-gray-300;
   }
 
-  .subtle-bg p,
-  .subtle-bg ul,
-  .subtle-bg li {
-    @apply text-gray-300;
-  }
-
   .subtle-bg a,
   .subtle-bg .artwork-subtitle a, 
   .subtle-bg .collection-title a{
-    @apply text-gray-400 hover:text-gray-200 decoration-gray-400 hover:decoration-gray-200;
+    @apply text-white hover:text-gray-200 decoration-white hover:decoration-gray-200;
+  }
+
+  .subtle-bg p{
+    @apply text-gray-200
   }
 }
 

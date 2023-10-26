@@ -8,7 +8,7 @@ permalink: /products/
 
 <hr class="fade-in-element mt-0 mb-12">
 
-<div class="outer-card-container fade-in-element">
+<div id="bgSwitch" class="outer-card-container fade-in-element">
   <div class="card-container">
     <a href="https://woodiesofficial.com" class="card-zoom">
       <div class="card-zoom-image bg-image-card" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/card-woodies.jpg?tr=w-100,q-20,bl-6')"></div>
@@ -36,3 +36,20 @@ permalink: /products/
     </a>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const artCollection = document.getElementById('bgSwitch');
+    const triggerPoint = artCollection.offsetTop;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY === 0) {
+            document.body.classList.remove('subtle-bg');
+        } else if (window.scrollY + 140 >= triggerPoint) {
+            document.body.classList.add('subtle-bg');
+        } else {
+            document.body.classList.remove('subtle-bg');
+        }
+    });
+});
+</script>

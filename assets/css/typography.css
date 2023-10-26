@@ -125,7 +125,7 @@ p + hr{
   }
 
   a {
-    @apply text-white decoration-blue-200 decoration-solid decoration-4;
+    @apply text-white decoration-blue-100 decoration-solid decoration-4;
   }
 
   a:hover {

@@ -31,10 +31,9 @@ emoji-picker {
   @apply hidden sm:block sm:absolute sm:right-6 sm:top-6;
 }
 
-
 #chat-icon.active,
 .speech-bubble {
-  @apply bg-pink-800;
+  @apply bg-blue-800;
 }
 
 .speech-bubble {
@@ -62,5 +61,19 @@ emoji-picker {
 }
 
 .orange-bg {
-  background-color: rgb(179, 53, 53);
+  background-color: rgb(229, 58, 58);
+}
+
+@media (prefers-color-scheme: dark) {
+  #chat-icon.active,
+  .speech-bubble {
+    @apply bg-blue-200;
+  }
+  .speech-bubble,
+  #chat-input {
+    @apply text-blue-800;
+  }
+  .orange-bg {
+    background-color: rgb(241, 140, 184);
+  }
 }

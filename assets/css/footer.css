@@ -28,4 +28,15 @@ footer p {
     @apply text-blue-400;
   }
 
+  .subtle-bg footer{
+    @apply border-gray-400;
+  }
+  
+  .subtle-bg footer .logo{
+    @apply text-gray-500;
+  }
+  
+  .subtle-bg footer p{
+    @apply text-gray-400;
+  }
 }

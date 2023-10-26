@@ -102,7 +102,7 @@
 }
 
 .social-buttons button.active {
-  @apply bg-pink-500;
+  @apply bg-blue-800;
 }
 
 .social-buttons .emojis button {
@@ -141,13 +141,13 @@
   }
 
   .navigation-list {
-    @apply bg-blue-900;
+    @apply bg-blue-900 sm:bg-transparent;
   }
 
   .navigation .logo{
     @apply text-white hover:text-blue-100;
   }
-  
+
   .navigation-list li:not(.home) a {
     @apply text-gray-100 hover:text-white;
   }
@@ -157,19 +157,10 @@
   }
 
   .social-button {
-    @apply bg-gray-700 hover:bg-gray-600;
+    @apply bg-gray-700 hover:bg-blue-200;
   }
 
-  .social-button svg {
-    @apply fill-gray-200;
-  }
-
-  .social-button:hover svg {
-    @apply fill-gray-200;
-  }
-
-  #chat-icon.active,
-  .speech-bubble {
-    @apply bg-pink-500;
+  .social-buttons button.active {
+    @apply bg-blue-200;
   }
 }
