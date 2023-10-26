@@ -2,6 +2,11 @@
   font-family: "Noto Color Emoji";
 }
 
+.wide-font{
+  @apply uppercase;
+  font-family: "condor-wide", sans-serif;
+}
+
 .no-scroll {
   overflow: hidden;
   height: 100%;

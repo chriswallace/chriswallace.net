@@ -10,11 +10,11 @@ description: Hi. I'm Chris, an award-winning design executive with 16+ years of 
 <h2 class="fade-in-element mb-6">Recent art projects</h2>
 
 <div id="bgSwitch" class="card-grid">
-  <a class="bg-image-card fade-in-element" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/interplay-card.png?tr=w-100,q-20,bl-6');" href="/art/interplay">
+  <a class="bg-image-card bottom-right fade-in-element" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/qql-card.png?tr=w-100,q-20,bl-6');" href="/art/qql-studying-the-algorithm/">
     <div class="card-text">
       <div>
-        <h3>Interplay</h3>
-        <p>Collaborating with GPT-4</p>
+        <h3>QQL</h3>
+        <p>Studying the algorithm</p>
         <div class="cta">Explore</div>
       </div>
     </div>
@@ -28,11 +28,11 @@ description: Hi. I'm Chris, an award-winning design executive with 16+ years of 
       </div>
     </div>
   </a>
-  <a class="bg-image-card bottom-right fade-in-element" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/qql-card.png?tr=w-100,q-20,bl-6');" href="/art/qql-studying-the-algorithm/">
+  <a class="bg-image-card fade-in-element" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/interplay-card.png?tr=w-100,q-20,bl-6');" href="/art/interplay">
     <div class="card-text">
       <div>
-        <h3>QQL</h3>
-        <p>Studying the algorithm</p>
+        <h3>Interplay</h3>
+        <p>Collaborating with GPT-4</p>
         <div class="cta">Explore</div>
       </div>
     </div>

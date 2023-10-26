@@ -4,7 +4,7 @@ html {
 }
 
 body{
-  @apply font-light bg-gray-100;
+  @apply font-light bg-blue-50;
 }
 
 h1,
@@ -21,7 +21,7 @@ h2,
 h3,
 h4,
 h5  {
-  @apply text-gray-900;
+  @apply text-gray-950;
 }
 
 p,

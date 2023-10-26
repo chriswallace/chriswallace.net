@@ -23,11 +23,11 @@
 }
 
 .navigation {
-  @apply py-4 md:mb-12 md:mb-24;
+  @apply py-4 md:mb-12 md:mb-24 z-20 relative;
 }
 
 .navigation .logo {
-  @apply inline-block mr-2 w-[48px] h-[48px] m-0 p-0 text-blue-800;
+  @apply inline-block w-[48px] h-[48px] m-0 p-0 text-blue-800;
 }
 
 .navigation .logo path{
@@ -78,8 +78,12 @@
   @apply mb-0;
 }
 
-.navigation-list li:not(.home) a {
-  @apply align-middle text-2xl md:text-xs lg:text-lg font-light md:px-3 md:py-4 no-underline hover:underline hover:decoration-2 text-blue-800 hover:text-blue-500;
+.navigation-list li a {
+  @apply align-middle text-2xl md:text-xs lg:text-lg font-light leading-none md:px-3 md:py-4 no-underline hover:underline hover:decoration-2 text-blue-800 hover:text-blue-500;
+}
+
+.navigation-list li.home a {
+  @apply ml-0 pl-2 pr-6 mt-1 inline-block uppercase wide-font leading-none;
 }
 
 .site-title {

@@ -21,7 +21,7 @@ a {
 
 @media (prefers-color-scheme: dark) {
   a {
-    @apply text-blue-300 decoration-blue-300 hover:decoration-blue-100 hover:text-blue-100;
+    @apply text-blue-100 decoration-blue-100 hover:decoration-white hover:text-white;
     text-decoration-skip-ink: auto;
   }
 
