@@ -1,0 +1,175 @@
+.navigation-list{
+  @apply font-light bg-gray-200 sm:bg-transparent;
+}
+
+.menu-button {
+  @apply p-5 -left-5 md:hidden relative w-8 h-8 mt-1;
+}
+
+.menu-button i {
+  @apply block w-8 h-2 relative;
+}
+
+.menu-button i:before {
+  @apply border-t-2 border-gray-700 block w-8 overflow-hidden top-0 absolute;
+  height: 0;
+  content: "";
+}
+
+.menu-button i:after {
+  @apply border-t-2 border-gray-700 block w-8 overflow-hidden bottom-0 absolute;
+  height: 0;
+  content: "";
+}
+
+.navigation {
+  @apply py-4 md:mb-12 md:mb-24;
+}
+
+.navigation .logo {
+  @apply inline-block mr-2 w-[48px] h-[48px] m-0 p-0 text-blue-800;
+}
+
+.navigation .logo path{
+  @apply fill-current;
+}
+
+.navigation .close-button {
+  @apply absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-transparent p-0 inline-block md:hidden;
+}
+
+.navigation .close-button-icon {
+  @apply inline-block border-2 border-gray-400 p-2 rounded-full;
+}
+
+.navigation .close-button-svg {
+  @apply w-8 h-8 block text-gray-400 fill-current;
+}
+
+.navigation .close-button:hover .close-button-icon {
+  @apply border-blue-600;
+}
+
+.navigation .close-button:hover .close-button-svg {
+  @apply text-blue-800;
+}
+
+.navigation-list {
+  @apply left-0 top-0 right-0 bottom-0 flex fixed z-20 md:relative;
+}
+
+.navigation-list ul {
+  @apply list-none m-0 p-0 mx-auto w-full md:flex text-center self-center justify-center items-center md:justify-items-stretch;
+}
+
+.navigation-list.invis {
+  @apply hidden md:flex;
+}
+
+.navigation-list li {
+  @apply mb-0 mx-auto align-middle;
+}
+
+.navigation-list li:first-child {
+  @apply mr-1;
+}
+
+.navigation-list li:last-child {
+  @apply mb-0;
+}
+
+.navigation-list li:not(.home) a {
+  @apply align-middle text-2xl md:text-xs lg:text-lg font-light md:px-3 md:py-4 no-underline hover:underline hover:decoration-2 text-blue-800 hover:text-blue-500;
+}
+
+.site-title {
+  @apply float-right md:hidden py-4 text-xl font-light inline-block;
+}
+
+.social-buttons {
+  @apply mt-16 md:mt-0 md:ml-8 md:grow md:text-right hidden sm:block;
+}
+
+.social-buttons > div {
+  @apply rounded-full mx-0;
+}
+
+.social-buttons button {
+  @apply block bg-white cursor-pointer;
+  padding: 15px 18px;
+  line-height: 18px;
+  font-size: 18px;
+}
+
+.social-buttons button.active {
+  @apply bg-pink-500;
+}
+
+.social-buttons .emojis button {
+  padding-right: 12px;
+  border-radius: 100px 0 0 100px;
+}
+
+.social-buttons .cursor-text button {
+  padding-left: 12px;
+  border-radius: 0 100px 100px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .menu-button i:before {
+    @apply border-gray-200;
+  }
+
+  .menu-button i:after {
+    @apply border-gray-200;
+  }
+
+  .navigation .close-button-icon {
+    @apply border-gray-500;
+  }
+
+  .navigation .close-button:hover .close-button-icon {
+    @apply border-gray-200;
+  }
+
+  .navigation .close-button svg {
+    @apply text-gray-500;
+  }
+
+  .navigation .close-button:hover svg {
+    @apply border-gray-200 text-gray-200;
+  }
+
+  .navigation-list {
+    @apply bg-blue-900;
+  }
+
+  .navigation .logo{
+    @apply text-white hover:text-blue-100;
+  }
+  
+  .navigation-list li:not(.home) a {
+    @apply text-gray-100 hover:text-white;
+  }
+
+  .navigation-list li:first-child a {
+    @apply text-white;
+  }
+
+  .social-button {
+    @apply bg-gray-700 hover:bg-gray-600;
+  }
+
+  .social-button svg {
+    @apply fill-gray-200;
+  }
+
+  .social-button:hover svg {
+    @apply fill-gray-200;
+  }
+
+  #chat-icon.active,
+  .speech-bubble {
+    @apply bg-pink-500;
+  }
+}

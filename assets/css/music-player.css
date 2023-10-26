@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "DS Digital";
+  src: url("/assets/fonts/ds-digi-webfont.woff2") format("woff2"),
+    url("/assets/fonts/ds-digi-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DS Digital";
+  src: url("/assets/fonts/ds-digib-webfont.woff2") format("woff2"),
+    url("/assets/fonts/ds-digib-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DS Digital";
+  src: url("/assets/fonts/ds-digii-webfont.woff2") format("woff2"),
+    url("/assets/fonts/ds-digii-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DS Digital";
+  src: url("/assets/fonts/ds-digit-webfont.woff2") format("woff2"),
+    url("/assets/fonts/ds-digit-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+.music-player-container {
+  @apply col-span-2;
+}
+
+.music-player {
+  @apply flex gap-0 p-3 text-white mx-auto;
+  flex: 6;
+  max-width: 440px;
+}
+
+.music-player span {
+  @apply hidden;
+}
+
+.music-player input[type="range"] {
+  @apply relative w-[74px] sm:w-[66px] mr-2;
+  top: 1px;
+}
+
+.music-player button {
+  flex: 1;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+#playButton,
+#pauseButton {
+  margin-left: 4px;
+}
+
+#nextButton {
+  margin-right: 8px;
+}
+
+.music-player i {
+  @apply bg-no-repeat bg-center w-4 h-4 block;
+}
+
+.trackActivityContainer {
+  @apply w-[50%] h-[35px] relative mr-2 rounded font-bold bg-gradient-to-b from-blue-200 to-blue-400 text-blue-100 shadow-inset-display;
+}
+
+.trackActivityContainer:after {
+  @apply absolute;
+  content: "";
+  left: 2px;
+  top: 2px;
+  right: 2px;
+  height: 50%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 2px 2px 20% 20%;
+  z-index: 12;
+}
+
+.trackActivity {
+  @apply flex gap-2 h-full;
+}
+
+.infoBox {
+  @apply inline-block text-lg h-6 leading-7 overflow-hidden italic;
+  font-family: "DS Digital", monospace;
+  line-height: 35px;
+  flex: 7;
+}
+
+#musicVisualizer {
+  @apply flex-1;
+}
+
+.infoBox > div {
+  @apply min-w-full overflow-hidden whitespace-nowrap inline-block pb-0 mb-0;
+}
+
+.playing {
+  animation-name: marquee;
+}
+
+.stopped {
+  animation: none;
+  transform: translateX(0);
+}
+
+#trackInfo {
+  display: inline-block;
+  white-space: nowrap;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  text-indent: 9px;
+}
+
+#playButton i {
+  background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/play-dark.svg");
+}
+
+#pauseButton i {
+  background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/pause-dark.svg");
+}
+
+#nextButton i {
+  background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/next-dark.svg");
+}
+
+#prevButton i {
+  background-image: url("https://ik.imagekit.io/UltraDAO/wallace/icons/previous-dark.svg");
+}
+
+/* Reset default styles for the input range */
+input[type="range"] {
+  -webkit-appearance: none; /* Override default appearance */
+  width: 100%; /* Full-width */
+  margin: 10px 0;
+  border: none; /* Remove border */
+  background-color: transparent;
+}
+
+/* Style the track */
+input[type="range"]::-webkit-slider-runnable-track {
+  @apply bg-blue-200;
+  border: none;
+  border-radius: 3px;
+  height: 8px;
+}
+
+input[type="range"]::-moz-range-track {
+  @apply bg-blue-200;
+  border: none;
+  border-radius: 3px;
+  height: 8px;
+}
+
+/* Style the thumb */
+input[type="range"]::-webkit-slider-thumb {
+  @apply bg-blue-500;
+  -webkit-appearance: none; /* Override default appearance */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  margin-top: -6px; /* Align thumb with track */
+}
+
+input[type="range"]::-moz-range-thumb {
+  @apply bg-blue-500;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+}

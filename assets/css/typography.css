@@ -1,0 +1,146 @@
+html {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+body{
+  @apply font-light bg-gray-100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  @apply mb-6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5  {
+  @apply text-gray-900;
+}
+
+p,
+ul,
+li{
+  @apply text-gray-700;
+}
+
+h1 {
+  @apply text-2xl md:text-4xl md:max-w-3xl mb-6;
+}
+
+h2 {
+  @apply text-xl sm:text-2xl mt-16 sm:mt-24 mb-6;
+}
+
+h3 {
+  @apply text-base mb-2 font-normal mt-6 sm:mt-12;
+}
+
+h4,
+h5,
+h6 {
+  @apply text-base pb-2 mt-6 sm:mt-12 mb-2;
+}
+
+.primary-heading {
+  @apply text-4xl md:text-5xl mb-4 lowercase;
+}
+
+.primary-heading:before {
+  @apply inline -mr-2 md:-mr-3;
+  content: "/";
+}
+
+.sub-heading {
+  @apply text-xl sm:text-2xl mt-8 mb-4 md:mb-6;
+}
+
+article {
+  @apply pt-16 md:pt-4;
+}
+
+article p,
+article ul,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  @apply max-w-3xl;
+}
+
+article ul {
+  @apply mb-12 list-disc ml-4 pl-2;
+}
+
+article li {
+  @apply mb-2;
+}
+
+caption {
+  @apply text-xs sm:text-base text-blue-800 my-2 mx-4 sm:my-4 block text-center;
+}
+
+hr {
+  @apply w-[40px] border-gray-300 border-t-4 h-[0] pb-0;
+}
+
+p + hr{
+  @apply mt-0 mb-12;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    @apply bg-blue-900 text-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply text-white;
+  }
+
+  h3 {
+    @apply text-blue-200;
+  }
+
+  h4,
+  h5,
+  h6 {
+    @apply border-blue-200;
+  }
+
+  p,
+  ul,
+  li {
+    @apply text-blue-300;
+  }
+
+  a {
+    @apply text-white decoration-blue-200 decoration-solid decoration-4;
+  }
+
+  a:hover {
+    @apply decoration-white text-white;
+  }
+
+  hr {
+    @apply border-gray-500;
+  }
+
+  caption {
+    @apply text-gray-300;
+  }
+
+  .sub-heading {
+    @apply text-blue-200;
+  }
+}

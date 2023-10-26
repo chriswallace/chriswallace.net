@@ -68,20 +68,20 @@ permalink: /art/collection/
 <script src="/assets/js/gallery-viewer.js?v=0.11"></script>
 <script src="/assets/js/player.js?v=0.11"></script>
 <article>
-  <a class="back-btn fade-in-element" href="/art">/art</a>
+  <a class="back fade-in-element" href="/art">/art</a>
   <h1 class="fade-in-element">Introducing the Wallace Collection, a selection of generative art from my family's private collection&mdash;secured by the blockchain.
   </h1>
   <div class="collection-notes fade-in-element">
-    <p style="flex:1;">
+    <p>
       <strong>Fullscreen controls:</strong>
       Click the maximize icon on any image and browse using your keyboard's &larr; and &rarr; buttons.
     </p>
-    <div id="zenMode" class="hidden sm:flex sm:gap-4" style="flex:1.4;">
-      <p class="mb-4" class="flex-1">
+    <div id="zenMode" class="zen-mode">
+      <p>
         <strong>Zen mode:</strong> Experience the collection alongside a curated selection of songs.
       </p>
       <p>
-        <button id="autoPlayCollection" class="button"><span>🧘🏻</span> Enter zen mode</button>
+        <button id="autoPlayCollection" class="button"><span class="emoji-icon">🧘🏻</span> Enter zen mode</button>
       </p>
     </div>
   </div>
@@ -121,7 +121,7 @@ permalink: /art/collection/
       <input id="volumeControl" type="range" min="0" max="1" step="0.1" aria-label="Volume" />
     </div>
   </div>
-  <div class="to-top hidden sm:block">
+  <div class="to-top hidden">
     <button id="backToTop" title="Go to top">
       <i>
         <svg width="20" height="20" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11L9 5L15 11" stroke="#ADADAD" stroke-width="2" stroke-linecap="round"/></svg>

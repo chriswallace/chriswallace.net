@@ -4,11 +4,11 @@ title: Products
 permalink: /products/
 ---
 
-<p class="sub-heading fade-in-element">Since 2021, I've been building blockchain-connected products alongside a stellar team of artists, creators, and engineers at <a href="https://ultradao.org">UltraDAO</a>. </p>
+<p class="sub-heading fade-in-element">Since 2021, I've been building blockchain-connected products alongside a stellar team of artists, creators, and engineers.</p>
 
 <hr class="fade-in-element mt-0 mb-12">
 
-<div class="outer-container fade-in-element">
+<div class="outer-card-container fade-in-element">
   <div class="card-container">
     <a href="https://woodiesofficial.com" class="card-zoom">
       <div class="card-zoom-image bg-image-card" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/card-woodies.jpg?tr=w-100,q-20,bl-6')"></div>

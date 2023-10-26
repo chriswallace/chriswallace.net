@@ -1,0 +1,48 @@
+#fullscreen-viewer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#fullscreen-viewer div,
+#fullscreen-viewer img,
+#fullscreen-viewer iframe {
+  margin: 0 auto;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+#fullscreen-viewer .close-btn,
+#fullscreen-viewer .live-code-btn {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: black;
+  padding: 10px 15px;
+  display: inline-block;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#fullscreen-viewer,
+#fullscreen-viewer img,
+#fullscreen-viewer iframe {
+  opacity: 1;
+  transition: opacity 0.75s ease-in-out;
+}
+
+#fullscreen-viewer .close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#fullscreen-viewer .live-code-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#fullscreen-viewer.hidden {
+  display: none;
+}

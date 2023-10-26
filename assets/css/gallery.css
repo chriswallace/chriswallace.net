@@ -1,0 +1,120 @@
+.gallery {
+  @apply grid grid-cols-3 gap-2 sm:gap-4 mt-10 mb-8;
+}
+
+.gallery-row img {
+  @apply min-w-full;
+}
+
+.gallery-row .image-wrapper {
+  @apply sm:mx-0 mb-12 sm:mb-0;
+}
+
+.gallery-row {
+  @apply sm:mx-0 sm:mb-4 grid gap-2 sm:gap-4;
+}
+
+.gallery-row:last-of-type {
+  @apply mx-auto sm:mb-32;
+}
+
+.gallery-flex {
+  @apply sm:flex gap-2 sm:gap-4;
+}
+
+.gallery-flex div {
+  min-width: 0;
+}
+
+.gallery-single-wide-constrained {
+  @apply sm:max-w-[66%];
+}
+
+.gallery-single-wide-portrait > div {
+  @apply my-4 sm:my-0 w-full;
+}
+
+.gallery-single-wide-portrait .image-wrapper {
+  @apply sm:mx-auto sm:w-[45%];
+}
+
+.gallery-double-wide {
+  @apply grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4;
+}
+
+.gallery-double-wide-single-small {
+  @apply grid-cols-1 sm:grid-cols-2;
+}
+
+.gallery-triple-wide {
+  @apply grid-cols-1 sm:grid-cols-3;
+}
+
+.gallery-triple-wide-single-small {
+  @apply grid-cols-1 sm:grid-cols-3;
+}
+
+.gallery-triple-wide-double-small {
+  @apply grid-cols-1 sm:grid-cols-3;
+}
+
+.gallery-quadruple-wide {
+  @apply grid-cols-1 md:grid-cols-4;
+}
+
+.gallery-quadruple-wide-trip-small {
+  @apply grid-cols-1 sm:grid-cols-4;
+}
+
+.gallery-six-wide {
+  @apply grid-cols-1 sm:grid-cols-6;
+}
+
+.gallery-single-wide img,
+.gallery-single-wide-portrait img,
+.gallery-double-wide img,
+.gallery-triple-wide img,
+.gallery-quadruple-wide img,
+.gallery-quadruple-wide-trip-small img,
+.gallery-six-wide img {
+  @apply min-w-full sm:mx-0;
+}
+
+.maximize-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 36px;
+  /* Width of square */
+  height: 36px;
+  /* Height of square */
+  background-color: rgba(255, 255, 255, 0.84);
+  border-radius: 3px;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  font-size: 20px;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgY2xhc3M9ImZlYXRoZXIgZmVhdGhlci1tYXhpbWl6ZS0yIiBmaWxsPSJub25lIiBoZWlnaHQ9IjI0IiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwb2x5bGluZSBwb2ludHM9IjE1IDMgMjEgMyAyMSA5Ii8+PHBvbHlsaW5lIHBvaW50cz0iOSAyMSAzIDIxIDMgMTUiLz48bGluZSB4MT0iMjEiIHgyPSIxNCIgeTE9IjMiIHkyPSIxMCIvPjxsaW5lIHgxPSIzIiB4Mj0iMTAiIHkxPSIyMSIgeTI9IjE0Ii8+PC9zdmc+");
+  background-size: 20px 20px;
+  /* Size of the background image */
+  background-repeat: no-repeat;
+  /* No repeat */
+  background-position: center;
+  /* Center the background image */
+}
+
+.maximize-icon:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.image-wrapper {
+  @apply relative block;
+}
+
+.image-wrapper:hover .maximize-icon {
+  display: block;
+  /* Show on hover */
+}

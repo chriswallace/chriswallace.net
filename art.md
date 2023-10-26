@@ -6,7 +6,7 @@ permalink: /art/
 
 <p class="sub-heading fade-in-element">Over the past few years, I've become fascinated by digital and generative art. Recently, my explorations focus primarily on AI-collaborative art, creating complex algorithms that produce beautiful works. I'm also an avid collector with over 6,000 pieces acquired.</p>
 
-<hr class="fade-in-element mt-0 mb-12">
+<hr class="fade-in-element">
 
 <h2 class="fade-in-element"><a href="/art/qql-studying-the-algorithm">QQL: Studying the Algorithm</a></h2>
 <p class="fade-in-element">A curation of outputs from the QQL algorithm by Tyler Hobbs &amp; Dandelion Wist. It exhibits the complex (and sometimes simple) patterns that produce some of the most compelling forms.</p>
