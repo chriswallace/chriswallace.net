@@ -83,7 +83,7 @@
 
 .subtle-bg .bg-image-card:not(.dark) .card-text h3,
 .subtle-bg .bg-image-card:not(.dark) .card-text .cta,
-.subtle-bg .bg-image-card:not(.dark) .card-zoom-text h2 {
+.subtle-bg .card-zoom-text h2 {
   @apply text-white;
 }
 
