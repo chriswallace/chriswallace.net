@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Gabarito:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/eub1ezs.css">
-  <link rel="stylesheet" href="/assets/main.css?version=1.92" />
+  <link rel="stylesheet" href="/assets/main.css?version=1.93" />
   <link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/UltraDAO/wallace/favicon.png" />
   <meta property="og:image" content="{{page.thumbnail | default: 'https://ik.imagekit.io/UltraDAO/wallace/chris-wallace.jpg'}}" />
   <meta property="twitter:image" content="{{page.thumbnail | default: 'https://ik.imagekit.io/UltraDAO/wallace/chris-wallace.jpg'}}">

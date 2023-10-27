@@ -1,10 +1,10 @@
 a {
-  @apply underline underline-offset-4 text-blue-800 decoration-blue-800 hover:decoration-blue-600 hover:text-blue-600 decoration-solid decoration-4;
+  @apply underline underline-offset-4 text-rose-500 decoration-rose-500 hover:decoration-rose-400 hover:text-rose-400 decoration-solid decoration-4;
   text-decoration-skip-ink: auto;
 }
 
 .button {
-  @apply cursor-pointer rounded-lg px-3 py-2 bg-blue-600 text-blue-100 hover:bg-white hover:text-blue-300;
+  @apply cursor-pointer rounded-lg px-3 py-2 bg-rose-700 text-white hover:bg-rose-600;
 }
 
 .button svg {
@@ -12,7 +12,7 @@ a {
 }
 
 .back {
-  @apply text-blue-800 font-light mb-4 inline-block text-xl;
+  @apply text-rose-500 font-light mb-4 inline-block text-xl;
 }
 
 .button .emoji-icon {
@@ -21,16 +21,16 @@ a {
 
 @media (prefers-color-scheme: dark) {
   a {
-    @apply text-blue-100 decoration-blue-100 hover:decoration-white hover:text-white;
+    @apply text-white decoration-orange-700 hover:decoration-orange-300 hover:text-orange-300;
     text-decoration-skip-ink: auto;
   }
 
   .button {
-    @apply bg-blue-500 border-blue-500 hover:bg-blue-400 hover:text-white;
+    @apply bg-white text-primary-600 border-white hover:bg-primary-100;
   }
 
   .back {
-    @apply text-gray-200;
+    @apply text-primary-300;
   }
 
 }

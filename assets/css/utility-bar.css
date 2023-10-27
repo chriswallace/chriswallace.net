@@ -11,7 +11,7 @@
 }
 
 .to-top button {
-  @apply mr-3 p-2 z-10 opacity-0 border border-blue-300 rounded-full cursor-pointer float-right;
+  @apply mr-3 p-2 z-10 opacity-0 border border-primary-500 rounded-full cursor-pointer float-right;
   flex: 0.5;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .to-top button svg path {
-  @apply stroke-current text-blue-300;
+  @apply stroke-current text-primary-500;
 }
 
 .to-top button i {
@@ -28,7 +28,7 @@
 }
 
 .page-title {
-  @apply hidden sm:block text-sm text-blue-500 ml-3 uppercase leading-tight float-left opacity-0;
+  @apply hidden sm:block text-sm text-primary-500 ml-3 uppercase leading-tight float-left opacity-0;
 }
 
 .page-title,

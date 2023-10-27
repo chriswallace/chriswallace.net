@@ -70,7 +70,7 @@
 }
 
 .trackActivityContainer {
-  @apply w-[50%] h-[35px] relative mr-2 rounded font-bold bg-gradient-to-b from-blue-200 to-blue-400 text-blue-100 shadow-inset-display;
+  @apply w-[50%] h-[35px] relative mr-2 rounded font-bold bg-gradient-to-b from-primary-200 to-primary-400 text-primary-100 shadow-inset-display;
 }
 
 .trackActivityContainer:after {
@@ -152,14 +152,14 @@ input[type="range"] {
 
 /* Style the track */
 input[type="range"]::-webkit-slider-runnable-track {
-  @apply bg-blue-200;
+  @apply bg-primary-200;
   border: none;
   border-radius: 3px;
   height: 8px;
 }
 
 input[type="range"]::-moz-range-track {
-  @apply bg-blue-200;
+  @apply bg-primary-200;
   border: none;
   border-radius: 3px;
   height: 8px;
@@ -167,7 +167,7 @@ input[type="range"]::-moz-range-track {
 
 /* Style the thumb */
 input[type="range"]::-webkit-slider-thumb {
-  @apply bg-blue-500;
+  @apply bg-primary-500;
   -webkit-appearance: none; /* Override default appearance */
   border-radius: 50%;
   width: 20px;
@@ -177,7 +177,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]::-moz-range-thumb {
-  @apply bg-blue-500;
+  @apply bg-primary-500;
   border-radius: 50%;
   width: 20px;
   height: 20px;

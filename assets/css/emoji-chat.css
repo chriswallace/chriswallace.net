@@ -33,7 +33,7 @@ emoji-picker {
 
 #chat-icon.active,
 .speech-bubble {
-  @apply bg-blue-800;
+  @apply bg-primary-800;
 }
 
 .speech-bubble {
@@ -67,11 +67,11 @@ emoji-picker {
 @media (prefers-color-scheme: dark) {
   #chat-icon.active,
   .speech-bubble {
-    @apply bg-blue-200;
+    @apply bg-primary-200;
   }
   .speech-bubble,
   #chat-input {
-    @apply text-blue-800;
+    @apply text-primary-800;
   }
   .orange-bg {
     background-color: rgb(241, 140, 184);

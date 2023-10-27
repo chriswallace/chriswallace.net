@@ -4,7 +4,7 @@ html {
 }
 
 body{
-  @apply font-light bg-blue-50;
+  @apply font-light bg-orange-200;
 }
 
 h1,
@@ -21,13 +21,13 @@ h2,
 h3,
 h4,
 h5  {
-  @apply text-gray-950;
+  @apply text-rose-700;
 }
 
 p,
 ul,
 li{
-  @apply text-gray-700;
+  @apply text-rose-700;
 }
 
 h1 {
@@ -84,11 +84,11 @@ article li {
 }
 
 caption {
-  @apply text-xs sm:text-base text-blue-800 my-2 mx-4 sm:my-4 block text-center;
+  @apply text-xs sm:text-base text-gray-900 my-2 mx-4 sm:my-4 block text-center;
 }
 
 hr {
-  @apply w-[40px] border-gray-300 border-t-4 h-[0] pb-0;
+  @apply w-[40px] border-orange-400 border-t-4 h-[0] pb-0;
 }
 
 p + hr{
@@ -97,7 +97,7 @@ p + hr{
 
 @media (prefers-color-scheme: dark) {
   body {
-    @apply bg-blue-900 text-white;
+    @apply bg-primary-900 text-white;
   }
 
   h1,
@@ -109,23 +109,23 @@ p + hr{
   }
 
   h3 {
-    @apply text-blue-200;
+    @apply text-primary-200;
   }
 
   h4,
   h5,
   h6 {
-    @apply border-blue-200;
+    @apply border-primary-200;
   }
 
   p,
   ul,
   li {
-    @apply text-blue-300;
+    @apply text-primary-100;
   }
 
   a {
-    @apply text-white decoration-blue-100 decoration-solid decoration-4;
+    @apply text-white decoration-primary-100 decoration-solid decoration-4;
   }
 
   a:hover {
@@ -133,14 +133,14 @@ p + hr{
   }
 
   hr {
-    @apply border-gray-500;
+    @apply border-primary-400;
   }
 
   caption {
-    @apply text-gray-300;
+    @apply text-primary-300;
   }
 
   .sub-heading {
-    @apply text-blue-200;
+    @apply text-primary-200;
   }
 }

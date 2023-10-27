@@ -3,7 +3,7 @@ footer {
 }
 
 footer .logo{
-  @apply inline-block mr-2 w-[48px] h-[48px] m-0 p-0 text-blue-800;
+  @apply inline-block mr-2 w-[48px] h-[48px] m-0 p-0 text-rose-700;
 }
 
 footer .logo path{
@@ -11,21 +11,21 @@ footer .logo path{
 }
 
 footer p {
-  @apply leading-snug text-gray-800 text-xs max-w-lg;
+  @apply leading-snug text-rose-700 text-xs max-w-lg;
 }
 
 @media (prefers-color-scheme: dark) {
 
   footer {
-    @apply border-blue-400;
+    @apply border-primary-300;
   }
 
   footer .logo{
-    @apply text-blue-400;
+    @apply text-white;
   }
 
   footer p {
-    @apply text-blue-400;
+    @apply text-primary-200;
   }
 
   .subtle-bg footer{

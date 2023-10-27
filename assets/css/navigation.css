@@ -1,5 +1,5 @@
 .navigation-list{
-  @apply font-light bg-gray-200 sm:bg-transparent;
+  @apply font-light bg-orange-200 sm:bg-transparent;
 }
 
 .menu-button {
@@ -27,7 +27,7 @@
 }
 
 .navigation .logo {
-  @apply inline-block w-[48px] h-[48px] m-0 p-0 text-blue-800;
+  @apply inline-block w-[48px] h-[48px] m-0 p-0 text-rose-500;
 }
 
 .navigation .logo path{
@@ -47,11 +47,11 @@
 }
 
 .navigation .close-button:hover .close-button-icon {
-  @apply border-blue-600;
+  @apply border-primary-600;
 }
 
 .navigation .close-button:hover .close-button-svg {
-  @apply text-blue-800;
+  @apply text-primary-800;
 }
 
 .navigation-list {
@@ -79,7 +79,7 @@
 }
 
 .navigation-list li a {
-  @apply align-middle text-2xl md:text-xs lg:text-lg font-light leading-none md:px-3 md:py-4 no-underline hover:underline hover:decoration-2 text-blue-800 hover:text-blue-500;
+  @apply align-middle text-2xl md:text-xs lg:text-lg font-light leading-none md:px-3 md:py-4 no-underline decoration-4 text-rose-500 hover:underline hover:decoration-rose-700 hover:text-rose-700;
 }
 
 .navigation-list li.home a {
@@ -106,7 +106,7 @@
 }
 
 .social-buttons button.active {
-  @apply bg-blue-800;
+  @apply bg-primary-800;
 }
 
 .social-buttons .emojis button {
@@ -145,26 +145,26 @@
   }
 
   .navigation-list {
-    @apply bg-blue-900 sm:bg-transparent;
+    @apply bg-primary-900 sm:bg-transparent;
   }
 
   .navigation .logo{
-    @apply text-white hover:text-blue-100;
+    @apply text-white hover:text-primary-100;
   }
 
   .navigation-list li:not(.home) a {
-    @apply text-gray-100 hover:text-white;
+    @apply text-gray-100 hover:text-white hover:decoration-orange-700;
   }
 
   .navigation-list li:first-child a {
-    @apply text-white;
+    @apply text-white underline decoration-orange-700 hover:decoration-white;
   }
 
   .social-button {
-    @apply bg-gray-700 hover:bg-blue-200;
+    @apply bg-gray-700 hover:bg-primary-200;
   }
 
   .social-buttons button.active {
-    @apply bg-blue-200;
+    @apply bg-primary-200;
   }
 }

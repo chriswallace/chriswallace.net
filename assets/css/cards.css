@@ -37,7 +37,7 @@
 }
 
 .card-text p{
-    @apply mb-2 lg:mb-4 text-sm lg:text-base text-[#FAC832];
+    @apply mb-2 lg:mb-4 text-sm lg:text-base text-rose-200;
 }
 
 .subtle-bg .card-text p{
