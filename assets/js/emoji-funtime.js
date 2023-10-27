@@ -142,6 +142,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 3000);  // 3 seconds before starting the fade-out animation
     }
 
+    const emojiPickerButton = document.getElementById('emojiPickerButton');
+    const emojiPickerContainer = document.getElementById('emojiPickerContainer');
+
+    emojiPickerButton.addEventListener('click', event => {
+        emojiPickerContainer.classList.toggle('hidden');
+        emojiPickerButton.classList.toggle('active');
+    });
+
+    emojiPickerButton.textContent = currentEmoji;
+
+    emojiPicker.addEventListener('emoji-click', (event) => {
+        emojiPickerButton.classList.remove('active');
+        emojiPickerContainer.classList.add('hidden');
+        document.getElementById('emojiPickerButton').textContent = event.detail.unicode;
+    });
+
     socket.on('emojiUpdate', (data) => {
         const { userId, emoji } = data;
         updateCursorEmoji(userId, emoji);

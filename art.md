@@ -66,19 +66,3 @@ permalink: /art/
         <video class="fade-in-element" src="https://assets.foundation.app/US/En/QmTCac6iUsjKG93FFyRAW6gMhkQD3gYNgsQJhUrr7sUSEn/nft.mp4" poster="https://assets.foundation.app/US/En/QmTCac6iUsjKG93FFyRAW6gMhkQD3gYNgsQJhUrr7sUSEn/nft.jpg" loop autoplay playsinline muted></video>
     </div>
 </div>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const artCollection = document.getElementById('bgSwitch');
-    const triggerPoint = artCollection.offsetTop;
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY === 0) {
-            document.body.classList.remove('subtle-bg');
-        } else if (window.scrollY + 140 >= triggerPoint) {
-            document.body.classList.add('subtle-bg');
-        } else {
-            document.body.classList.remove('subtle-bg');
-        }
-    });
-});
-</script>

@@ -36,20 +36,3 @@ permalink: /products/
     </a>
   </div>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const artCollection = document.getElementById('bgSwitch');
-    const triggerPoint = artCollection.offsetTop;
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY === 0) {
-            document.body.classList.remove('subtle-bg');
-        } else if (window.scrollY + 140 >= triggerPoint) {
-            document.body.classList.add('subtle-bg');
-        } else {
-            document.body.classList.remove('subtle-bg');
-        }
-    });
-});
-</script>

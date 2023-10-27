@@ -16,7 +16,7 @@ permalink: /art/interplay
             </defs><path class="cls-1" d="m17,4l3,4h-2c0,4.42-3.58,8-8,8-1.92,0-3.69-.68-4.98-1.88l1.19-1.54c1,.9,2.33,1.42,3.79,1.42,3.31,0,6-2.69,6-6h-2l3-4h0ZM3.12,11.84h0s-.12.16-.12.16L0,8h2C2,3.58,5.58,0,10,0c1.92,0,3.69.68,4.98,1.88l-1.19,1.54c-1-.9-2.33-1.42-3.79-1.42-3.23,0-5.87,2.55-6,6h2l-1.58,2.1h0l-1.31,1.74h0Z"/></svg></i> Refresh
             </button></p>
         </div>
-        <div>
+        <div id="bgSwitch">
             <div class="mb-0 md:mb-12 text-center mx-auto o-hidden relative fade-in-element">
                 <canvas id="artCanvas" width="1240" height="1754" class="w-auto max-w-full mx-auto"></canvas>
                 <div
@@ -43,36 +43,6 @@ permalink: /art/interplay
     </div>
 </article>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const hashContainer = document.getElementById('hash');
-    if( $fx && $fx.hash ){
-        hashContainer.innerHTML = "Hash: " + $fx.hash;
-    }
-
-    const refreshBtn = document.getElementById('refresh-btn');
-
-    refreshBtn.addEventListener("click", function(e){
-        location.reload();
-    });
-
-    let output = '';
-
-    for (let [key, value] of Object.entries($fx._features)) {
-        output += `<strong>${key}:</strong> ${value}<br>`;
-    }
-
-    document.getElementById('metadata').innerHTML = output;
-
-    const artCollection = document.getElementById('interplayArtwork');
-    const triggerPoint = artCollection.offsetTop;
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY + 140 >= triggerPoint) {
-            document.body.classList.add('subtle-bg');
-        } else {
-            document.body.classList.remove('subtle-bg');
-        }
-    });
-});
-</script>
+<script src="/assets/js/fxhash.min.js"></script>
+<script src="/assets/js/interplay-page.min.js?v={{ site.version }}"></script>
+<script defer src="/assets/js/bundle.js?v={{ site.version }}"></script>

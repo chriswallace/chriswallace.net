@@ -1,8 +1,10 @@
 {
   "scripts": {
     "jekyll:serve": "bundle exec jekyll serve --incremental --watch --ssl-key ssl/localhost.key --ssl-cert ssl/localhost.crt",
-    "jekyll:build": "bundle exec jekyll build",
-    "css:build": "npx tailwindcss -i ./assets/css/main.css -o ./assets/main.css --minify",
+    "jekyll:build": "npm run js:minify && bundle exec jekyll build && npm run csso:minify",
+    "css:build": "npx tailwindcss -i ./assets/css/main.css -o ./assets/main.css",
+    "csso:minify": "node build-csso.js",
+    "js:minify": "node build-minify.js",
     "css:watch": "nodemon -e css -x 'npm run css:build'",
     "browser-sync": "browser-sync start --config bs-config.js",
     "start": "npm-run-all -p jekyll:serve css:watch browser-sync"
@@ -11,11 +13,10 @@
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.14",
     "browser-sync": "^2.29.3",
-    "cssnano": "^6.0.1",
+    "csso": "^5.0.5",
     "nodemon": "^3.0.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.24",
-    "postcss-import": "^15.1.0",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.2",
+    "terser": "^5.22.0"
   }
 }

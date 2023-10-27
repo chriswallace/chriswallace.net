@@ -44,35 +44,3 @@
     </ul>
   </nav>
 </header>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const menuButton = document.getElementById('menu-button');
-  const navigationList = document.getElementById('navigation-items');
-  menuButton.addEventListener("click", () => {
-    navigationList.classList.toggle("invis");
-    document.body.classList.toggle("no-scroll");
-  });
-  const closeButton = document.getElementById('close-button');
-  closeButton.addEventListener("click", () => {
-    navigationList.classList.toggle("invis");
-    document.body.classList.toggle("no-scroll");
-  });
-  const emojiPickerButton = document.getElementById('emojiPickerButton');
-  const emojiPickerContainer = document.getElementById('emojiPickerContainer');
-  const emojiPicker = document.querySelector('emoji-picker');
-  emojiPickerButton.addEventListener('click', event => {
-    emojiPickerContainer.classList.toggle('hidden');
-    emojiPickerButton.classList.toggle('active');
-  });
-  // Load previously selected emoji from localStorage, or default to 😀
-  let currentEmoji = localStorage.getItem('emoji') || "😀";
-  
-  emojiPickerButton.textContent = currentEmoji;
-
-  emojiPicker.addEventListener('emoji-click', (event) => {
-    emojiPickerButton.classList.remove('active');
-    emojiPickerContainer.classList.add('hidden');
-    document.getElementById('emojiPickerButton').textContent = event.detail.unicode;
-  });
-});
-</script>
