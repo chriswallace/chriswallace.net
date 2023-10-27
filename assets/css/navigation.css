@@ -1,5 +1,5 @@
 .navigation-list{
-  @apply font-light bg-orange-200 sm:bg-transparent;
+  @apply font-light bg-rose-100 sm:bg-transparent;
 }
 
 .menu-button {
@@ -11,13 +11,13 @@
 }
 
 .menu-button i:before {
-  @apply border-t-2 border-gray-700 block w-8 overflow-hidden top-0 absolute;
+  @apply border-t-2 border-rose-500 block w-8 overflow-hidden top-0 absolute;
   height: 0;
   content: "";
 }
 
 .menu-button i:after {
-  @apply border-t-2 border-gray-700 block w-8 overflow-hidden bottom-0 absolute;
+  @apply border-t-2 border-rose-500 block w-8 overflow-hidden bottom-0 absolute;
   height: 0;
   content: "";
 }
@@ -39,11 +39,11 @@
 }
 
 .navigation .close-button-icon {
-  @apply inline-block border-2 border-gray-400 p-2 rounded-full;
+  @apply inline-block border-2 border-rose-500 p-2 rounded-full;
 }
 
 .navigation .close-button-svg {
-  @apply w-8 h-8 block text-gray-400 fill-current;
+  @apply w-8 h-8 block text-rose-500 fill-current;
 }
 
 .navigation .close-button:hover .close-button-icon {
@@ -79,7 +79,7 @@
 }
 
 .navigation-list li a {
-  @apply align-middle text-2xl md:text-xs lg:text-lg font-light leading-none md:px-3 md:py-4 no-underline decoration-4 text-rose-500 hover:underline hover:decoration-rose-700 hover:text-rose-700;
+  @apply align-middle p-2 block text-2xl md:text-xs lg:text-lg font-light leading-none md:px-3 md:py-4 no-underline decoration-4 text-rose-500 hover:underline hover:decoration-rose-700 hover:text-rose-700;
 }
 
 .navigation-list li.home a {

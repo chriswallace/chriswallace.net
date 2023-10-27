@@ -15,6 +15,10 @@
 @import "fullscreen-viewer.css";
 @import "animations.css";
 
+body{
+  @apply bg-rose-50;
+}
+
 /* Home Page */ 
 
 .home-title {
@@ -26,7 +30,7 @@
 }
 
 .decorative-bg svg{
-  @apply relative w-auto h-full sm:w-full sm:h-auto text-orange-300 right-[-20%] sm:right-0;
+  @apply relative w-auto h-full sm:w-full sm:h-auto text-orange-200 right-[-20%] sm:right-0;
 }
 
 .decorative-bg svg path{
@@ -34,6 +38,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  body{
+    @apply bg-primary-900;
+  }
+  
   .decorative-bg{
     transition: opacity .3s ease-in-out;
   }
@@ -164,8 +172,12 @@ body{
   }
 
   .subtle-bg p{
-    @apply text-gray-200;
+    @apply text-gray-600;
   }
+
+  .subtle-bg .decorative-bg svg{
+    @apply text-gray-200;
+  } 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -204,7 +216,7 @@ body{
 }
 
 .job-metadata {
-  @apply mt-0 mb-4 text-rose-500;
+  @apply mt-0 mb-4 text-gray-500;
 }
 
 /* QQL Page */

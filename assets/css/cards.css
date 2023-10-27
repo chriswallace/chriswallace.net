@@ -40,10 +40,6 @@
     @apply mb-2 lg:mb-4 text-sm lg:text-base text-rose-200;
 }
 
-.subtle-bg .card-text p{
-  @apply text-[#FAC832];
-}
-
 .card-text .cta{
     @apply caret text-xs lg:text-base caret-yellow;
 }
@@ -53,7 +49,7 @@
 }
 
 .dark .card-text p{
-    @apply mb-2 lg:mb-4 text-sm lg:text-base text-gray-400;
+    @apply mb-2 lg:mb-4 text-sm lg:text-base text-gray-600;
 }
 
 .dark .card-text .cta{
@@ -79,4 +75,18 @@
 
 .card-zoom-text h2 {
   @apply text-white leading-tight block text-sm sm:text-base md:text-lg m-0 mr-6;
+}
+
+.subtle-bg .card-text p{
+  @apply text-[#FAC832];
+}
+
+.subtle-bg .bg-image-card:not(.dark) .card-text h3,
+.subtle-bg .bg-image-card:not(.dark) .card-text .cta,
+.subtle-bg .bg-image-card:not(.dark) .card-zoom-text h2 {
+  @apply text-white;
+}
+
+.subtle-bg .dark .card-text p{
+  @apply text-gray-600;
 }

@@ -46,7 +46,7 @@ permalink: /resume/
 <h4 class="job-metadata fade-in-element">St. Louis Christian College // 2005 - 2006 // St. Louis, MO</h4>
 <p class="fade-in-element mb-12">Primary web content owner, designed, developed, and maintained the college's online presence. During my tenure, the college experienced 60% growth, reaching full campus capacity the following year.</p>
 
-<h2 class="fade-in-element mb-12">Selected Works</h2>
+<h2 class="fade-in-element">Selected Works</h2>
 
 <div class="md:flex md:flex-row sm:gap-8">
     <div class="mb-16 md:mb-0" style="flex:1">
@@ -156,8 +156,12 @@ permalink: /resume/
 <h2 class="fade-in-element">Awards & Recognitions</h2>
 
 <ul class="fade-in-element">
-  <li>Best Environmental Initiative from an NFT project at NFT NYC 2022</li>
-  <li>Two Emmy Nominations for Second-Screen Apps</li>
+  <li>Official Selection, Woodies: Origin, <a href="https://www.asff.co.uk/" target="_blank">Aesthetica Short Film Festival</a> (2023)</li>
+  <li>Most Valuable Gallery, Decuration Council II, <a href="https://deca.art/" target="_blank">Deca</a> (2023)</li>
+  <li>Outstanding Curation of a Tezos Collection Award, <a href="https://gallery.so" target="_blank">Gallery Awards</a> (2022)</li>
+  <li>Best Environmental Initiative from an NFT project, <a href="https://nft.nyc/" target="_blank">NFT NYC</a> (2022)</li>
+  <li>Outstanding Creative Achievement in Interactive Media – Social TV Experience (Nominee), Mad Men: The Fan Cut, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2015)</li>
+  <li>Outstanding Interactive Program (Nominee), The Walking Dead Story Sync, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2013)</li>
 </ul>
 
 <h2 class="fade-in-element">Contact</h2>
