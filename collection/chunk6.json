@@ -1,0 +1,1075 @@
+[
+  {
+    "tokenID": "4000016",
+    "name": "Elefante #16",
+    "description": "*Elefante* builds on my previous long-form work and pushes it to incorporate multiple remixed canvases using a single photograph of a giant Yucca (Latin name - Yucca elephantipes) as a starting point.\n\nThe project blends elements of Brutalism, Concrete art, and collage to create abstract displays of coloured forms and photography, some reminiscent of architecture, some paper cut-outs.\n\nI aimed for the pieces to ‘scan’ well from a distance or at smaller sizes, but also to have a more 'material' quality than some of my prior work. I wanted texture without skeuomorphism.",
+    "artist": "Michael Connolly",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/elefante_16.png",
+    "display_uri": "",
+    "website": "https://linktr.ee/_mconnolly_",
+    "tags": "",
+    "attributes": [],
+    "platform": "VerticalCrypto Gen Art",
+    "live_uri": "https://media-proxy.artblocks.io/0x32d4be5ee74376e08038d652d4dc26e62c67f436/4000016.png"
+  },
+  {
+    "tokenID": "4000053",
+    "name": "Elefante #53",
+    "description": "*Elefante* builds on my previous long-form work and pushes it to incorporate multiple remixed canvases using a single photograph of a giant Yucca (Latin name - Yucca elephantipes) as a starting point.\n\nThe project blends elements of Brutalism, Concrete art, and collage to create abstract displays of coloured forms and photography, some reminiscent of architecture, some paper cut-outs.\n\nI aimed for the pieces to ‘scan’ well from a distance or at smaller sizes, but also to have a more 'material' quality than some of my prior work. I wanted texture without skeuomorphism.",
+    "artist": "Michael Connolly",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/elefante_53.png",
+    "display_uri": "",
+    "website": "https://linktr.ee/_mconnolly_",
+    "tags": "",
+    "attributes": [],
+    "platform": "VerticalCrypto Gen Art",
+    "live_uri": "https://media-proxy.artblocks.io/0x32d4be5ee74376e08038d652d4dc26e62c67f436/4000053.png"
+  },
+  {
+    "tokenID": "4000060",
+    "name": "Elefante #60",
+    "description": "*Elefante* builds on my previous long-form work and pushes it to incorporate multiple remixed canvases using a single photograph of a giant Yucca (Latin name - Yucca elephantipes) as a starting point.\n\nThe project blends elements of Brutalism, Concrete art, and collage to create abstract displays of coloured forms and photography, some reminiscent of architecture, some paper cut-outs.\n\nI aimed for the pieces to ‘scan’ well from a distance or at smaller sizes, but also to have a more 'material' quality than some of my prior work. I wanted texture without skeuomorphism.",
+    "artist": "Michael Connolly",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/elefante_60.png",
+    "display_uri": "",
+    "website": "https://linktr.ee/_mconnolly_",
+    "tags": "",
+    "attributes": [],
+    "platform": "VerticalCrypto Gen Art",
+    "live_uri": "https://media-proxy.artblocks.io/0x32d4be5ee74376e08038d652d4dc26e62c67f436/4000060.png"
+  },
+  {
+    "tokenID": "",
+    "name": "Repeater #46",
+    "description": "Cut, copy, paste, repeat.  \n\n@xiiixiii",
+    "artist": "Michael Connolly",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/repeater_46.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [],
+    "attributes": [
+      {
+        "value": "Mint",
+        "trait_type": "Palette"
+      },
+      {
+        "value": "Triangles",
+        "trait_type": "Style"
+      },
+      {
+        "value": "None",
+        "trait_type": "Glitch"
+      },
+      {
+        "value": "Upstairs",
+        "trait_type": "Stairs"
+      },
+      {
+        "value": "Horz",
+        "trait_type": "Slice"
+      },
+      {
+        "value": "S",
+        "trait_type": "ScaleV"
+      },
+      {
+        "value": "L",
+        "trait_type": "ScaleH"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://Qme8D8J2wPz9YGzkxTUt9pEgStJAxdiZjvcbHbybxVjDQD"
+  },
+  {
+    "tokenID": "",
+    "name": "Repeater #139",
+    "description": "Cut, copy, paste, repeat.  \n\n@xiiixiii",
+    "artist": "Michael Connolly",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/repeater_139.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [],
+    "attributes": [
+      {
+        "value": "Y2K",
+        "trait_type": "Palette"
+      },
+      {
+        "value": "Lines",
+        "trait_type": "Style"
+      },
+      {
+        "value": "None",
+        "trait_type": "Glitch"
+      },
+      {
+        "value": "Upstairs",
+        "trait_type": "Stairs"
+      },
+      {
+        "value": "Vert",
+        "trait_type": "Slice"
+      },
+      {
+        "value": "L",
+        "trait_type": "ScaleV"
+      },
+      {
+        "value": "XL",
+        "trait_type": "ScaleH"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmRpRsvHRaJWpcvP43g6HjgeKgB3CZXdQH8LxxNjpdk7Pr"
+  },
+  {
+    "tokenID": "",
+    "name": "Repeater #249",
+    "description": "Cut, copy, paste, repeat.  \n\n@xiiixiii",
+    "artist": "Michael Connolly",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/repeater_249.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [],
+    "attributes": [
+      {
+        "value": "Analog",
+        "trait_type": "Palette"
+      },
+      {
+        "value": "Triangles",
+        "trait_type": "Style"
+      },
+      {
+        "value": "V",
+        "trait_type": "Glitch"
+      },
+      {
+        "value": "Up&Down",
+        "trait_type": "Stairs"
+      },
+      {
+        "value": "Vert",
+        "trait_type": "Slice"
+      },
+      {
+        "value": "XL",
+        "trait_type": "ScaleV"
+      },
+      {
+        "value": "M",
+        "trait_type": "ScaleH"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmZMtBP8PnJoUkwh9XnxYnMuAZoePprF9pHZ5fkD4WanYS"
+  },
+  {
+    "tokenID": "",
+    "name": "Repeater #273",
+    "description": "Cut, copy, paste, repeat.  \n\n@xiiixiii",
+    "artist": "Michael Connolly",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/repeater_273.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [],
+    "attributes": [
+      {
+        "value": "Bug",
+        "trait_type": "Palette"
+      },
+      {
+        "value": "Mixed",
+        "trait_type": "Style"
+      },
+      {
+        "value": "None",
+        "trait_type": "Glitch"
+      },
+      {
+        "value": "Downstairs",
+        "trait_type": "Stairs"
+      },
+      {
+        "value": "Vert",
+        "trait_type": "Slice"
+      },
+      {
+        "value": "XL",
+        "trait_type": "ScaleV"
+      },
+      {
+        "value": "XL",
+        "trait_type": "ScaleH"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmRxkCj83iTeTKmzw919Kp1pPaYirXd8PxbXJKydoC5vCC"
+  },
+  {
+    "tokenID": "",
+    "name": "Repeater #304",
+    "description": "Cut, copy, paste, repeat.  \n\n@xiiixiii",
+    "artist": "Michael Connolly",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/repeater_304.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [],
+    "attributes": [
+      {
+        "value": "Frederick",
+        "trait_type": "Palette"
+      },
+      {
+        "value": "Triangles",
+        "trait_type": "Style"
+      },
+      {
+        "value": "None",
+        "trait_type": "Glitch"
+      },
+      {
+        "value": "None",
+        "trait_type": "Stairs"
+      },
+      {
+        "value": "None",
+        "trait_type": "Slice"
+      },
+      {
+        "value": "M",
+        "trait_type": "ScaleV"
+      },
+      {
+        "value": "S",
+        "trait_type": "ScaleH"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmRtMexrWHncPJuvnkkrDiMXax4ccJvohyFgggSpovgsJ1"
+  },
+  {
+    "tokenID": "",
+    "name": "Repeater #325",
+    "description": "Cut, copy, paste, repeat.  \n\n@xiiixiii",
+    "artist": "Michael Connolly",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/repeater_325.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [],
+    "attributes": [
+      {
+        "value": "Analog",
+        "trait_type": "Palette"
+      },
+      {
+        "value": "Lines",
+        "trait_type": "Style"
+      },
+      {
+        "value": "None",
+        "trait_type": "Glitch"
+      },
+      {
+        "value": "None",
+        "trait_type": "Stairs"
+      },
+      {
+        "value": "None",
+        "trait_type": "Slice"
+      },
+      {
+        "value": "S",
+        "trait_type": "ScaleV"
+      },
+      {
+        "value": "XL",
+        "trait_type": "ScaleH"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmQWp7aiGbXLyBGA7wRYvffUj4vWURB9TdtJjogYjk3jMC"
+  },
+  {
+    "tokenID": "",
+    "name": "Repeater #363",
+    "description": "Cut, copy, paste, repeat.  \n\n@xiiixiii",
+    "artist": "Michael Connolly",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/repeater_363.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [],
+    "attributes": [
+      {
+        "value": "Analog",
+        "trait_type": "Palette"
+      },
+      {
+        "value": "Lines",
+        "trait_type": "Style"
+      },
+      {
+        "value": "None",
+        "trait_type": "Glitch"
+      },
+      {
+        "value": "Downstairs",
+        "trait_type": "Stairs"
+      },
+      {
+        "value": "None",
+        "trait_type": "Slice"
+      },
+      {
+        "value": "S",
+        "trait_type": "ScaleV"
+      },
+      {
+        "value": "M",
+        "trait_type": "ScaleH"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmbWxLWwSDvPPtRfHEguxNfLDqdtXQbRmdXHNojvXnZ9Pk"
+  },
+  {
+    "tokenID": "",
+    "name": "Deconstructions #43",
+    "description": "Deconstructions is a further experiment with blending 3 colors and 3 different textures to create structural/abstract compositions. It's a search for beauty within asymmetrical/unsynchronized forms and disharmonic structures.\n\n\nProbabilities;\n\n- 18 compositions with variations.\n\n- 2 background colors.\n\n- 3 different particle starting placements.\n\n- 21 different base color palettes. (1 monochrome) \n\n- 2 different alpha types; tangential & randomized.\n\n- Different edges.\n\n- Several starting positions and styles (wavy or straight).\n\nAdditional animation features with different shapes, angles, direction and style.\n\n\nIn live mode, press ‘s’ to save as .png (1500x2000 px)\n\nIt can take up to a minute to render or longer in low-performance computers. Enjoy the process!\n\n\nMade with p5.js\n\nIlgın İçözü, May 2022\n@distcollective\n",
+    "artist": "DistCollective",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/deconstructions_43.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "generative",
+      "abstract",
+      "minimal",
+      "animated"
+    ],
+    "attributes": [
+      {
+        "value": "Bright",
+        "trait_type": "BackGround"
+      },
+      {
+        "value": "colorPalette8Bright/M",
+        "trait_type": "ColorPalette"
+      },
+      {
+        "value": "vertical",
+        "trait_type": "ParticleStartingPlacements"
+      },
+      {
+        "value": "composition2",
+        "trait_type": "Composition"
+      },
+      {
+        "value": "wavy",
+        "trait_type": "PlacementStyle"
+      },
+      {
+        "value": "Straight",
+        "trait_type": "Edge"
+      },
+      {
+        "value": "tangential",
+        "trait_type": "AlphaType"
+      },
+      {
+        "value": "tangential alpha",
+        "trait_type": "TextureType"
+      },
+      {
+        "value": "Animated",
+        "trait_type": "MiddleAnimation"
+      },
+      {
+        "value": "rectangle",
+        "trait_type": "AnimationShape"
+      },
+      {
+        "value": "90°",
+        "trait_type": "AnimationStopAngle"
+      },
+      {
+        "value": "normal",
+        "trait_type": "AnimationStyle"
+      },
+      {
+        "value": "counterClockWise",
+        "trait_type": "AnimationDirection"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmT9mnqtMpyEegioKRbaMfmNgqDHS7GixRna6PMCsdQTmC?fxhash=oocmJ2aLFbHP1gzhZQaRy245d9zkTgd9bZypisnxpQBmJCPYR7J"
+  },
+  {
+    "tokenID": "",
+    "name": "Deconstructions #217",
+    "description": "Deconstructions is a further experiment with blending 3 colors and 3 different textures to create structural/abstract compositions. It's a search for beauty within asymmetrical/unsynchronized forms and disharmonic structures.\n\n\nProbabilities;\n\n- 18 compositions with variations.\n\n- 2 background colors.\n\n- 3 different particle starting placements.\n\n- 21 different base color palettes. (1 monochrome) \n\n- 2 different alpha types; tangential & randomized.\n\n- Different edges.\n\n- Several starting positions and styles (wavy or straight).\n\nAdditional animation features with different shapes, angles, direction and style.\n\n\nIn live mode, press ‘s’ to save as .png (1500x2000 px)\n\nIt can take up to a minute to render or longer in low-performance computers. Enjoy the process!\n\n\nMade with p5.js\n\nIlgın İçözü, May 2022\n@distcollective\n",
+    "artist": "DistCollective",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/deconstructions_217.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "generative",
+      "abstract",
+      "minimal",
+      "animated"
+    ],
+    "attributes": [
+      {
+        "value": "Dark",
+        "trait_type": "BackGround"
+      },
+      {
+        "value": "colorPalette2Dark",
+        "trait_type": "ColorPalette"
+      },
+      {
+        "value": "horizontal",
+        "trait_type": "ParticleStartingPlacements"
+      },
+      {
+        "value": "composition17",
+        "trait_type": "Composition"
+      },
+      {
+        "value": "wavy",
+        "trait_type": "PlacementStyle"
+      },
+      {
+        "value": "Straight",
+        "trait_type": "Edge"
+      },
+      {
+        "value": "randomized",
+        "trait_type": "AlphaType"
+      },
+      {
+        "value": "randomized alpha",
+        "trait_type": "TextureType"
+      },
+      {
+        "value": "Animated",
+        "trait_type": "MiddleAnimation"
+      },
+      {
+        "value": "ellipse",
+        "trait_type": "AnimationShape"
+      },
+      {
+        "value": "45°",
+        "trait_type": "AnimationStopAngle"
+      },
+      {
+        "value": "sinusoidal",
+        "trait_type": "AnimationStyle"
+      },
+      {
+        "value": "ClockWise",
+        "trait_type": "AnimationDirection"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmT9mnqtMpyEegioKRbaMfmNgqDHS7GixRna6PMCsdQTmC?fxhash=opa7aptHLCEv5mfqhsx1huB29pzhRsg9fvSdBG9t6FQSARPSTNW"
+  },
+  {
+    "tokenID": "",
+    "name": "Deconstructions #224",
+    "description": "Deconstructions is a further experiment with blending 3 colors and 3 different textures to create structural/abstract compositions. It's a search for beauty within asymmetrical/unsynchronized forms and disharmonic structures.\n\n\nProbabilities;\n\n- 18 compositions with variations.\n\n- 2 background colors.\n\n- 3 different particle starting placements.\n\n- 21 different base color palettes. (1 monochrome) \n\n- 2 different alpha types; tangential & randomized.\n\n- Different edges.\n\n- Several starting positions and styles (wavy or straight).\n\nAdditional animation features with different shapes, angles, direction and style.\n\n\nIn live mode, press ‘s’ to save as .png (1500x2000 px)\n\nIt can take up to a minute to render or longer in low-performance computers. Enjoy the process!\n\n\nMade with p5.js\n\nIlgın İçözü, May 2022\n@distcollective\n",
+    "artist": "DistCollective",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/deconstructions_224.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "generative",
+      "abstract",
+      "minimal",
+      "animated"
+    ],
+    "attributes": [
+      {
+        "value": "Bright",
+        "trait_type": "BackGround"
+      },
+      {
+        "value": "colorPalette2Bright",
+        "trait_type": "ColorPalette"
+      },
+      {
+        "value": "vertical",
+        "trait_type": "ParticleStartingPlacements"
+      },
+      {
+        "value": "composition12",
+        "trait_type": "Composition"
+      },
+      {
+        "value": "wavy",
+        "trait_type": "PlacementStyle"
+      },
+      {
+        "value": "Straight",
+        "trait_type": "Edge"
+      },
+      {
+        "value": "randomized",
+        "trait_type": "AlphaType"
+      },
+      {
+        "value": "randomized alpha",
+        "trait_type": "TextureType"
+      },
+      {
+        "value": "No middle animation",
+        "trait_type": "MiddleAnimation"
+      },
+      {
+        "value": "No middle animation",
+        "trait_type": "AnimationShape"
+      },
+      {
+        "value": "No middle animation",
+        "trait_type": "AnimationStopAngle"
+      },
+      {
+        "value": "No middle animation",
+        "trait_type": "AnimationStyle"
+      },
+      {
+        "value": "No middle animation",
+        "trait_type": "AnimationDirection"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmT9mnqtMpyEegioKRbaMfmNgqDHS7GixRna6PMCsdQTmC?fxhash=op6cKZRihz7BkeyjtqztDNMVvumLveMGDfhW9SA5Dt1eik2DVjf"
+  },
+  {
+    "tokenID": 189,
+    "name": "Mind the Gap #189",
+    "description": "A generative series inspired by childhood memories, play and exploration. The program can use a variety of motions, collision types, colour processes, palettes and scales to create a wide range playful output.",
+    "artist": "Mount Vitruvius",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/mind_the_gap_189.png",
+    "display_uri": "",
+    "website": "",
+    "tags": "",
+    "attributes": [],
+    "platform": "",
+    "live_uri": ""
+  },
+  {
+    "tokenID": 490,
+    "name": "Mind the Gap #490",
+    "description": "A generative series inspired by childhood memories, play and exploration. The program can use a variety of motions, collision types, colour processes, palettes and scales to create a wide range playful output.",
+    "artist": "Mount Vitruvius",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/mind_the_gap_490.png",
+    "display_uri": "",
+    "website": "",
+    "tags": "",
+    "attributes": [],
+    "platform": "",
+    "live_uri": ""
+  },
+  {
+    "tokenID": 114,
+    "name": "Mind the Gap #114",
+    "description": "A generative series inspired by childhood memories, play and exploration. The program can use a variety of motions, collision types, colour processes, palettes and scales to create a wide range playful output.",
+    "artist": "Mount Vitruvius",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/mind_the_gap_114.png",
+    "display_uri": "",
+    "website": "",
+    "tags": "",
+    "attributes": [],
+    "platform": "",
+    "live_uri": ""
+  },
+  {
+    "tokenID": "",
+    "name": "Shapes on a Plane #314",
+    "description": "“Shapes on a Plane” explores imaginary structures and worlds through simple shapes. It’s intended for small-scale print.\n\nAs a kid I was obsessed with Lego, Duplo, wooden building blocks... anything I could make something with.\n\nI’d spend hours building things, imagining new worlds, new machines, new concepts, then i’d take them apart and create a whole new idea to explore.\n\nTo me, this piece to me is a reminder of that time - many days spent exploring ideas with those simple objects - no care for viability, for marketability, for audiences or business. Just pure fun.\n\nWithout this time in my life, I doubt I’d have found my passion for creating in the way I do today.",
+    "artist": "Mount Vitruvius",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/shapes_on_a_plane_314.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [],
+    "attributes": [
+      {
+        "value": "Dark Crystals",
+        "trait_type": "Palette"
+      },
+      {
+        "value": "Continents",
+        "trait_type": "Genome"
+      },
+      {
+        "value": "Far",
+        "trait_type": "Zoom"
+      },
+      {
+        "value": "Basic",
+        "trait_type": "Grid Mutation"
+      },
+      {
+        "value": "No",
+        "trait_type": "Warp Shape Sizes"
+      },
+      {
+        "value": "No",
+        "trait_type": "Wireframe Shapes"
+      },
+      {
+        "value": "Looser",
+        "trait_type": "Colour Density"
+      },
+      {
+        "value": "Normal",
+        "trait_type": "Colour Application"
+      },
+      {
+        "value": "Threshold",
+        "trait_type": "Grid Style"
+      },
+      {
+        "value": "High",
+        "trait_type": "Grid Warp"
+      },
+      {
+        "value": 1,
+        "trait_type": "Grid Warp Dimensions"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmbEUqHpEy1GeFqq8vBmqgX1uh1AMCEitbkgh87tAGhtbs?fxhash=oow3VsVCqCgUDtgYKp9szADLNGNcRvBkFtGoEwcJmTtnrs72ruQ"
+  },
+  {
+    "tokenID": "",
+    "name": "Shapes on a Plane #455",
+    "description": "“Shapes on a Plane” explores imaginary structures and worlds through simple shapes. It’s intended for small-scale print.\n\nAs a kid I was obsessed with Lego, Duplo, wooden building blocks... anything I could make something with.\n\nI’d spend hours building things, imagining new worlds, new machines, new concepts, then i’d take them apart and create a whole new idea to explore.\n\nTo me, this piece to me is a reminder of that time - many days spent exploring ideas with those simple objects - no care for viability, for marketability, for audiences or business. Just pure fun.\n\nWithout this time in my life, I doubt I’d have found my passion for creating in the way I do today.",
+    "artist": "Mount Vitruvius",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/shapes_on_a_plane_455.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [],
+    "attributes": [
+      {
+        "value": "Sea Dark",
+        "trait_type": "Palette"
+      },
+      {
+        "value": "Structure",
+        "trait_type": "Genome"
+      },
+      {
+        "value": "Far",
+        "trait_type": "Zoom"
+      },
+      {
+        "value": "Slices",
+        "trait_type": "Grid Mutation"
+      },
+      {
+        "value": "No",
+        "trait_type": "Warp Shape Sizes"
+      },
+      {
+        "value": "No",
+        "trait_type": "Wireframe Shapes"
+      },
+      {
+        "value": "Looser",
+        "trait_type": "Colour Density"
+      },
+      {
+        "value": "Low-pass",
+        "trait_type": "Colour Application"
+      },
+      {
+        "value": "Threshold",
+        "trait_type": "Grid Style"
+      },
+      {
+        "value": "None",
+        "trait_type": "Grid Warp"
+      },
+      {
+        "value": "None",
+        "trait_type": "Grid Warp Dimensions"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmbEUqHpEy1GeFqq8vBmqgX1uh1AMCEitbkgh87tAGhtbs?fxhash=onkQyr2ewNuU31utcRtUaxXqXwWjphmmizfbxubaW8nkvbGK6wL"
+  },
+  {
+    "tokenID": "",
+    "name": "Shapes on a Plane #466",
+    "description": "“Shapes on a Plane” explores imaginary structures and worlds through simple shapes. It’s intended for small-scale print.\n\nAs a kid I was obsessed with Lego, Duplo, wooden building blocks... anything I could make something with.\n\nI’d spend hours building things, imagining new worlds, new machines, new concepts, then i’d take them apart and create a whole new idea to explore.\n\nTo me, this piece to me is a reminder of that time - many days spent exploring ideas with those simple objects - no care for viability, for marketability, for audiences or business. Just pure fun.\n\nWithout this time in my life, I doubt I’d have found my passion for creating in the way I do today.",
+    "artist": "Mount Vitruvius",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/shapes_on_a_plane_466.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [],
+    "attributes": [
+      {
+        "value": "Palace",
+        "trait_type": "Palette"
+      },
+      {
+        "value": "Hills",
+        "trait_type": "Genome"
+      },
+      {
+        "value": "Far",
+        "trait_type": "Zoom"
+      },
+      {
+        "value": "Basic",
+        "trait_type": "Grid Mutation"
+      },
+      {
+        "value": "No",
+        "trait_type": "Warp Shape Sizes"
+      },
+      {
+        "value": "No",
+        "trait_type": "Wireframe Shapes"
+      },
+      {
+        "value": "Tight",
+        "trait_type": "Colour Density"
+      },
+      {
+        "value": "High-pass",
+        "trait_type": "Colour Application"
+      },
+      {
+        "value": "Boxes",
+        "trait_type": "Grid Style"
+      },
+      {
+        "value": "Swoopy",
+        "trait_type": "Grid Warp"
+      },
+      {
+        "value": 1,
+        "trait_type": "Grid Warp Dimensions"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmbEUqHpEy1GeFqq8vBmqgX1uh1AMCEitbkgh87tAGhtbs?fxhash=ooGhDsQTKdcj7K4RoAE9rNM4CrkXzsGXooTMrckqgzzFRHkFsAA"
+  },
+  {
+    "tokenID": "",
+    "name": "They Took Over the Ocean",
+    "description": "By @Mikkel_Hartmann",
+    "artist": "Mikkel Hartmann",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/they_took_over_the_ocean.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "chaos",
+      "strangeattractors",
+      "generativeart",
+      "creativecoding",
+      "attractor"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmZWc8CEEK12XxRXGKUfzzycfX5SVbJRky5FJUWcgqPEtJ"
+  },
+  {
+    "tokenID": "",
+    "name": "Lepidoptera #60",
+    "description": "I love trying to capture the textures and colors found in nature and reproduce them with code. Lepidoptera is inspired by the species of the same name.\n\nFeatures include: color palette, medium hatching count, large hatching count, noise offset, and noise level.\n\np5.js",
+    "artist": "MJ Lindow",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/lepidoptera_60.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [],
+    "attributes": [
+      {
+        "value": "11",
+        "trait_type": "Palette"
+      },
+      {
+        "value": 7,
+        "trait_type": "Medium Hatching"
+      },
+      {
+        "value": 2,
+        "trait_type": "Large Hatching"
+      },
+      {
+        "value": 2,
+        "trait_type": "Noise Offset"
+      },
+      {
+        "value": "High",
+        "trait_type": "Noise"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmZs7cweJZFyG8D3RMXwk6rjuRjeaMmPMANx1Dwi16dkGP"
+  },
+  {
+    "tokenID": "",
+    "name": "Lepidoptera #65",
+    "description": "I love trying to capture the textures and colors found in nature and reproduce them with code. Lepidoptera is inspired by the species of the same name.\n\nFeatures include: color palette, medium hatching count, large hatching count, noise offset, and noise level.\n\np5.js",
+    "artist": "MJ Lindow",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/lepidoptera_65.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [],
+    "attributes": [
+      {
+        "value": "0",
+        "trait_type": "Palette"
+      },
+      {
+        "value": 2,
+        "trait_type": "Medium Hatching"
+      },
+      {
+        "value": 3,
+        "trait_type": "Large Hatching"
+      },
+      {
+        "value": 1,
+        "trait_type": "Noise Offset"
+      },
+      {
+        "value": "Low",
+        "trait_type": "Noise"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmarcWGmf4ApdDb9bwxiC8wQGECCHjQGgrkLBHX7He1wxH"
+  },
+  {
+    "tokenID": "",
+    "name": "Impressions of Order #79",
+    "description": "‘Impressions of Order’ is a collection of 300 generative compositions. \n\nInspired by 90s ROM cartridges, server farms and future cityscapes this project explores perception and documentation of ‘order’ within complex systems. \n\n--------------------------------------------------------\n\nThis artwork is best enjoyed in high-resolution so that the subtle layering, colour shifts, variation in hard and soft edges, faint impressions of construction, and the various low-probability glitchy events can be fully appreciated. \n\nBy default, the artwork will load in 2K resolution (1400 x 2000 px). It is recommended that you view the work in 4K or 6K to appreciate the finer details. \n\nThe keyboard buttons: “2”, “4”, and “6” can be pressed to change the resolution to 2K, 4K and 6K resolution accordingly. \n\nTo download an image at its current resolution, press the keyboard button “S”.\n\n--------------------------------------------------------\n\nArtwork created with p5.js\n\n@nbswwit\nSept 2022\n",
+    "artist": "nbswwit",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/impressions_of_order_79.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "nbswwit",
+      "impressions",
+      "ROM",
+      "generative",
+      "abstract"
+    ],
+    "attributes": [
+      {
+        "value": "🔴 🟠 / 🔵 / 🟢 🟠",
+        "trait_type": "Palette"
+      },
+      {
+        "value": "Very High",
+        "trait_type": "Complexity"
+      },
+      {
+        "value": 4,
+        "trait_type": "Memory"
+      },
+      {
+        "value": "Ortho",
+        "trait_type": "View"
+      },
+      {
+        "value": false,
+        "trait_type": "Extra Neat"
+      },
+      {
+        "value": "Mix",
+        "trait_type": "Line Direction"
+      },
+      {
+        "value": false,
+        "trait_type": "Glitch 1: Vibration"
+      },
+      {
+        "value": false,
+        "trait_type": "Glitch 2: Oversize"
+      },
+      {
+        "value": false,
+        "trait_type": "Glitch 3: Loose Lines"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmVmLjioMSXFNfJUWzrdMdUdcyGpmxoweNZB9rvYTJcXso?fxhash=ooaNSgSru5iLdxRETpySvmVkm6kqKhMi2eUxbmpbP6bqnHKU93P"
+  },
+  {
+    "tokenID": "",
+    "name": "Impressions of Order #113",
+    "description": "‘Impressions of Order’ is a collection of 300 generative compositions. \n\nInspired by 90s ROM cartridges, server farms and future cityscapes this project explores perception and documentation of ‘order’ within complex systems. \n\n--------------------------------------------------------\n\nThis artwork is best enjoyed in high-resolution so that the subtle layering, colour shifts, variation in hard and soft edges, faint impressions of construction, and the various low-probability glitchy events can be fully appreciated. \n\nBy default, the artwork will load in 2K resolution (1400 x 2000 px). It is recommended that you view the work in 4K or 6K to appreciate the finer details. \n\nThe keyboard buttons: “2”, “4”, and “6” can be pressed to change the resolution to 2K, 4K and 6K resolution accordingly. \n\nTo download an image at its current resolution, press the keyboard button “S”.\n\n--------------------------------------------------------\n\nArtwork created with p5.js\n\n@nbswwit\nSept 2022\n",
+    "artist": "nbswwit",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/impressions_of_order_113.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "nbswwit",
+      "impressions",
+      "ROM",
+      "generative",
+      "abstract"
+    ],
+    "attributes": [
+      {
+        "value": "🔴 🟠 / 🔵 / 🟢",
+        "trait_type": "Palette"
+      },
+      {
+        "value": "High",
+        "trait_type": "Complexity"
+      },
+      {
+        "value": 0,
+        "trait_type": "Memory"
+      },
+      {
+        "value": "Ortho",
+        "trait_type": "View"
+      },
+      {
+        "value": false,
+        "trait_type": "Extra Neat"
+      },
+      {
+        "value": "Mix",
+        "trait_type": "Line Direction"
+      },
+      {
+        "value": false,
+        "trait_type": "Glitch 1: Vibration"
+      },
+      {
+        "value": false,
+        "trait_type": "Glitch 2: Oversize"
+      },
+      {
+        "value": false,
+        "trait_type": "Glitch 3: Loose Lines"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmVmLjioMSXFNfJUWzrdMdUdcyGpmxoweNZB9rvYTJcXso?fxhash=onhW6tSdLVELJ3VAHLeLPC8z38hLZh4E5SXgzcD1zUqWsz2SGFk"
+  },
+  {
+    "tokenID": "",
+    "name": "Impressions of Order #215",
+    "description": "‘Impressions of Order’ is a collection of 300 generative compositions. \n\nInspired by 90s ROM cartridges, server farms and future cityscapes this project explores perception and documentation of ‘order’ within complex systems. \n\n--------------------------------------------------------\n\nThis artwork is best enjoyed in high-resolution so that the subtle layering, colour shifts, variation in hard and soft edges, faint impressions of construction, and the various low-probability glitchy events can be fully appreciated. \n\nBy default, the artwork will load in 2K resolution (1400 x 2000 px). It is recommended that you view the work in 4K or 6K to appreciate the finer details. \n\nThe keyboard buttons: “2”, “4”, and “6” can be pressed to change the resolution to 2K, 4K and 6K resolution accordingly. \n\nTo download an image at its current resolution, press the keyboard button “S”.\n\n--------------------------------------------------------\n\nArtwork created with p5.js\n\n@nbswwit\nSept 2022\n",
+    "artist": "nbswwit",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/impressions_of_order_215.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "nbswwit",
+      "impressions",
+      "ROM",
+      "generative",
+      "abstract"
+    ],
+    "attributes": [
+      {
+        "value": "🔴 🟠 / 🔵 / 🟢 🟠",
+        "trait_type": "Palette"
+      },
+      {
+        "value": "Very High",
+        "trait_type": "Complexity"
+      },
+      {
+        "value": 4,
+        "trait_type": "Memory"
+      },
+      {
+        "value": "Ortho",
+        "trait_type": "View"
+      },
+      {
+        "value": false,
+        "trait_type": "Extra Neat"
+      },
+      {
+        "value": "Mix",
+        "trait_type": "Line Direction"
+      },
+      {
+        "value": false,
+        "trait_type": "Glitch 1: Vibration"
+      },
+      {
+        "value": false,
+        "trait_type": "Glitch 2: Oversize"
+      },
+      {
+        "value": false,
+        "trait_type": "Glitch 3: Loose Lines"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmVmLjioMSXFNfJUWzrdMdUdcyGpmxoweNZB9rvYTJcXso?fxhash=oneGvmLR74A2najLdLav8BGgCqYQRTorqmWrNH8FCGw2fF7Xy7d"
+  },
+  {
+    "tokenID": "",
+    "name": "Circuit_Bending_3.RAD",
+    "description": "Dithering factory receiving a RAD delivery from gate 1.",
+    "artist": "Chepertom",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/circuit_bending_3rad.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "glitchart",
+      "glitch",
+      "newmediaart",
+      "abstractart",
+      "newaesthetic",
+      "newabstraction",
+      "glitchartist",
+      "netart",
+      ""
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmTNqeryXTTkYq3RqK2pb824PiJxrP74LKPtQxdehVe4s8"
+  },
+  {
+    "tokenID": "",
+    "name": "Purple.RAD",
+    "description": "",
+    "artist": "Chepertom",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/purplerad.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "newmediaart",
+      "glitchart",
+      "abstractart",
+      "glitch",
+      "pixelart",
+      "dithering",
+      "newaesthetic",
+      "newabstraction",
+      "glitchartist"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmPjSbox6JzU3Lz78ERBsxhhJEFdq9n9RLc6kpLxVAS5Xp"
+  },
+  {
+    "tokenID": "",
+    "name": "16.RAD",
+    "description": "2/64 of the \"512.RAD\" series.",
+    "artist": "Chepertom",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/16rad.jpg",
+    "display_uri": "",
+    "website": "",
+    "tags": [],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmcKj4tgXGzLSHHywmLDQEVp3MFQmC4JWHJdLB59bWugjr"
+  }
+]

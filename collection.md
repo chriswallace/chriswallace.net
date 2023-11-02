@@ -27,7 +27,7 @@ permalink: /art/collection/
     <div id="art-collection" class="art-collection"></div>
   </div>
 </article>
-<div id="fullscreen-viewer" class="hidden"></div>
+<div id="fullscreen-viewer" class="fullscreen-viewer hidden"></div>
 <div id="utility-bar" class="utility-bar hidden">
   <div class="page-title-container">
     <div id="pageTitle" class="page-title">The Wallace Collection</div>

@@ -76,7 +76,14 @@
 .gallery-triple-wide img,
 .gallery-quadruple-wide img,
 .gallery-quadruple-wide-trip-small img,
-.gallery-six-wide img {
+.gallery-six-wide img,
+.gallery-single-wide video,
+.gallery-single-wide-portrait video,
+.gallery-double-wide video,
+.gallery-triple-wide video,
+.gallery-quadruple-wide video,
+.gallery-quadruple-wide-trip-small video,
+.gallery-six-wide video {
   @apply min-w-full sm:mx-0;
 }
 

@@ -3,6 +3,7 @@ const imgObserver = new IntersectionObserver(
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 const img = entry.target;
+                replaceImageWithVideo(img);  // Call your new function
                 setSrcSetAndSizes(img); // Call your function to set srcset and sizes
                 observer.unobserve(img); // Stop observing this image
             }
@@ -11,10 +12,32 @@ const imgObserver = new IntersectionObserver(
     { rootMargin: "0px 0px 200px 0px" }
 ); // Trigger if the image gets within 200px of the viewport
 
+const replaceImageWithVideo = (img) => {
+    const videoURL = img.getAttribute('data-video');
+    if (videoURL) {
+        const video = document.createElement('video');
+        video.src = videoURL;
+        video.style.objectFit = 'cover'; // maintain the aspect ratio
+        video.setAttribute('playsinline', ''); // ensure the video plays inline
+        video.setAttribute('muted', ''); // ensure the video plays inline
+        video.playbackRate = 1.0; // attempt to ensure 60fps
+        video.addEventListener('ended', () => video.pause()); // pause on the last frame
+        const imageWrapper = img.closest('.image-wrapper');
+        if (imageWrapper) {
+            img.replaceWith(video); // replace the img element with the video element
+
+            // Listen for the end of the transition on the .image-wrapper, then play the video
+            imageWrapper.addEventListener('transitionend', () => {
+                video.play(); // play the video once the transition ends
+            });
+        }
+    }
+};
+
 // Function to set srcset and sizes
 const setSrcSetAndSizes = (img) => {
     const renderedWidth = img.clientWidth;
-    const base_url = "https://ik.imagekit.io/UltraDAO/wallace/";
+    const base_url = "https://ik.imagekit.io/UltraDAO/wallace_collection/";
     const img_name = img.src.split("/").pop().split("?")[0];
 
     const max_width = img.getAttribute("data-max-width");

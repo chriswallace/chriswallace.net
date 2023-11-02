@@ -1,0 +1,809 @@
+[
+  {
+    "tokenID": "",
+    "name": "Tyx` by Rudxane",
+    "description": "Tyx` is an evolution of the original Tych algorithm, generating both a positive and negative side and combining these together through abstract geometric masking. Inspired by x-rays, by breaking the natural flow of the doodles the work tries to emphasise the structural elements of the doodles and scribbles.",
+    "artist": "rudxane",
+    "image": "https://ik.imagekit.io/UltraDAO/b673e4792e9e2958357e15.png",
+    "display_uri": "",
+    "website": "",
+    "tags": "",
+    "attributes": [
+      {
+        "trait_type": "Day",
+        "value": "6"
+      },
+      {
+        "trait_type": "Season",
+        "value": "1"
+      },
+      {
+        "trait_type": "Artist",
+        "value": "Rudxane"
+      }
+    ],
+    "platform": "",
+    "live_uri": ""
+  },
+  {
+    "tokenID": "",
+    "name": "The Past Ahead #226",
+    "description": "Cyanotypes once were the most advanced technology to create images. When I see one today I look at it as a beautiful relic and I can't help but put my present in perspective. In these uncertain times the technologies we use to create are threatened with sudden extinction. But I feel joy in imagining our works joining the strata of history, a fallen species, the breeding ground of creations to come.\n\nControls :\n\n• Press 1, 2, 3, or 4 to make a capture and download a PNG with a resolution of x1, x2, x3 or x4.\n\n———————\n\nThe Past Ahead by Ferdinand Dervieux, 2022\nMade with Unity\nLicense: CC BY-NC-SA 4.0",
+    "artist": "Ferdinand Dervieux",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/the_past_ahead_226.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "generative",
+      "creativecoding",
+      "interactive",
+      "past",
+      "ahead",
+      "architecture",
+      "cyanotype",
+      "unity",
+      "art"
+    ],
+    "attributes": [
+      {
+        "value": "1:1",
+        "trait_type": "Format"
+      },
+      {
+        "value": "Blue",
+        "trait_type": "Color"
+      },
+      {
+        "value": "Disabled",
+        "trait_type": "Negative"
+      },
+      {
+        "value": "Disabled",
+        "trait_type": "Dithering"
+      },
+      {
+        "value": "Disabled",
+        "trait_type": "Outline"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmbkxCeeebYb1XaJ6b95tEpzXLvYXyvCUah4G4ef8uSFiT?fxhash=oonyufzLqBzHK2AgaXpqFuqd1KrCBzCP4LrXvX2agJ1qaB9W9jP"
+  },
+  {
+    "tokenID": "",
+    "name": "The Past Ahead #227",
+    "description": "Cyanotypes once were the most advanced technology to create images. When I see one today I look at it as a beautiful relic and I can't help but put my present in perspective. In these uncertain times the technologies we use to create are threatened with sudden extinction. But I feel joy in imagining our works joining the strata of history, a fallen species, the breeding ground of creations to come.\n\nControls :\n\n• Press 1, 2, 3, or 4 to make a capture and download a PNG with a resolution of x1, x2, x3 or x4.\n\n———————\n\nThe Past Ahead by Ferdinand Dervieux, 2022\nMade with Unity\nLicense: CC BY-NC-SA 4.0",
+    "artist": "Ferdinand Dervieux",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/the_past_ahead_227.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "generative",
+      "creativecoding",
+      "interactive",
+      "past",
+      "ahead",
+      "architecture",
+      "cyanotype",
+      "unity",
+      "art"
+    ],
+    "attributes": [
+      {
+        "value": "5:7",
+        "trait_type": "Format"
+      },
+      {
+        "value": "Blue",
+        "trait_type": "Color"
+      },
+      {
+        "value": "Disabled",
+        "trait_type": "Negative"
+      },
+      {
+        "value": "Disabled",
+        "trait_type": "Dithering"
+      },
+      {
+        "value": "Enabled",
+        "trait_type": "Outline"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmbkxCeeebYb1XaJ6b95tEpzXLvYXyvCUah4G4ef8uSFiT?fxhash=opFbqSUAiLrkyBeecjFP3JUEFTCyBiRcPV29vU8TnRJvsZTpzTY"
+  },
+  {
+    "tokenID": "",
+    "name": "The Past Ahead #36",
+    "description": "Cyanotypes once were the most advanced technology to create images. When I see one today I look at it as a beautiful relic and I can't help but put my present in perspective. In these uncertain times the technologies we use to create are threatened with sudden extinction. But I feel joy in imagining our works joining the strata of history, a fallen species, the breeding ground of creations to come.\n\nControls :\n\n• Press 1, 2, 3, or 4 to make a capture and download a PNG with a resolution of x1, x2, x3 or x4.\n\n———————\n\nThe Past Ahead by Ferdinand Dervieux, 2022\nMade with Unity\nLicense: CC BY-NC-SA 4.0",
+    "artist": "Ferdinand Dervieux",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/the_past_ahead_36.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "generative",
+      "creativecoding",
+      "interactive",
+      "past",
+      "ahead",
+      "architecture",
+      "cyanotype",
+      "unity",
+      "art"
+    ],
+    "attributes": [
+      {
+        "value": "1:2",
+        "trait_type": "Format"
+      },
+      {
+        "value": "Blue",
+        "trait_type": "Color"
+      },
+      {
+        "value": "Disabled",
+        "trait_type": "Negative"
+      },
+      {
+        "value": "Disabled",
+        "trait_type": "Dithering"
+      },
+      {
+        "value": "Disabled",
+        "trait_type": "Outline"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmbkxCeeebYb1XaJ6b95tEpzXLvYXyvCUah4G4ef8uSFiT?fxhash=ooB2MayahHnprdnTW6yACkM7ikcBgumFYFHFfBbJtMTdTg7FmbC"
+  },
+  {
+    "tokenID": "",
+    "name": "Tempo de Amor",
+    "description": ".",
+    "artist": "Manolo Gamboa Naon",
+    "image": "ipfs://QmZG8NmgtNqp2BimBHAx76AxHsR1aMffwjxsy6LTxacumm",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "processing",
+      "generative"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmZG8NmgtNqp2BimBHAx76AxHsR1aMffwjxsy6LTxacumm"
+  },
+  {
+    "tokenID": "",
+    "name": "en llamas",
+    "description": ".",
+    "artist": "Manolo Gamboa Naon",
+    "image": "ipfs://QmVwEjU8YrdbsSBvLJphNRBiFTPQLuzcACVB4RFtW39qUG",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "processing",
+      "generative"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmVwEjU8YrdbsSBvLJphNRBiFTPQLuzcACVB4RFtW39qUG"
+  },
+  {
+    "tokenID": "",
+    "name": "eyelid",
+    "description": "",
+    "artist": "Manolo Gamboa Naon",
+    "image": "ipfs://Qmdq5GG6hbudt8sSQUY4RNT4pw7mB3UV9RevQJRgczjM7M",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "processing",
+      "generative"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://Qmdq5GG6hbudt8sSQUY4RNT4pw7mB3UV9RevQJRgczjM7M"
+  },
+  {
+    "tokenID": "",
+    "name": "ppt02",
+    "description": ". 7.6k",
+    "artist": "Manolo Gamboa Naon",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/ppt02.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "processing",
+      "generative"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmZr8uWzRxpFU5LwceGXyoFW8nb1JJRdWXK4x64n43bAzh"
+  },
+  {
+    "tokenID": "",
+    "name": "furia",
+    "description": ".",
+    "artist": "Manolo Gamboa Naon",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/furia.jpg",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "processing",
+      "generative"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmS78mMxXEpJNM4winCTnetKJEnCcDidYihfwyK5Gn5rAQ"
+  },
+  {
+    "tokenID": "",
+    "name": "mantra",
+    "description": ".",
+    "artist": "Manolo Gamboa Naon",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/mantra.jpg",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "processing",
+      "generative"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmZn4yrD4aNviyX64hF78Lj39VMwoXenPb9e6y6485UPgX"
+  },
+  {
+    "tokenID": "",
+    "name": "Anfractuous #327",
+    "description": "The title is quite literally a visual description of the work, as anfractuous means: characterized by windings and turnings; sinuous; circuitous. With this project I aimed to strike a balance between easily recognizable smooth large scale forms and the small fragmented details that populate these forms.",
+    "artist": "Landlines Art",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/anfractuous_327.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "curve",
+      "interactive",
+      "winding",
+      "recursion",
+      "abstract",
+      "minimalist",
+      "maximalist"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmcBLxXWC8pLDC9L6X2w8wD4aN6jT1GMKopABna8gzd3Xy/?fxhash=ooLu9UbqVVMZHtDi1ooEZSSMDVYj3hAHAWVgutV2M38aJegDhhD&fxiteration=327&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU#0x013fb999999999999a3fb999999999999a3fbd2f1a9fbe76c9000f01014022000000000000400000000000000000000000000000003ff00000000000003fe7ae147ae147ae3fb999999999999a01013fbf3b645a1cac0800cccc99190098d9333300ffbf32730098d9ff7f0098d9999900ffbfb6ad00cccc98d900248923c900da766cdb00662698d900cc4c32b300cc4c65a60066269999006626cc8c00cc4c327300333399590066263333006666ff3f00ff7f6626009999cc4c0032b3333300cccc991900cccc991900aa6a99990054959999005495888800ff7f9999005495999900ffbf999900ffbf888800aaaa8888005555777700ff3f888800ff3f9999005555666600ff3f5555005555555500aa6a555500aaaa555500ffbf555500ff3f666600ff3f777700aaaaaaaa00ff3f777700ff3f777700ff3f777700ff3f777700ff3f777700ff3f777700ff3f777700ff3f777700aaaaaaaa00ff3f7777000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004036000000000000"
+  },
+  {
+    "tokenID": "",
+    "name": "Anfractuous #331",
+    "description": "The title is quite literally a visual description of the work, as anfractuous means: characterized by windings and turnings; sinuous; circuitous. With this project I aimed to strike a balance between easily recognizable smooth large scale forms and the small fragmented details that populate these forms.",
+    "artist": "Landlines Art",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/anfractuous_331.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "curve",
+      "interactive",
+      "winding",
+      "recursion",
+      "abstract",
+      "minimalist",
+      "maximalist"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmcBLxXWC8pLDC9L6X2w8wD4aN6jT1GMKopABna8gzd3Xy/?fxhash=ootdvy7nNJuPB4puPfx628VvhbnWJtGVL2Rn4K2HGHKUmq3nHm9&fxiteration=331&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU#0x003fd00000000000003fa999999999999a3fb999999999999a0212000140220000000000003ff00000000000003fcae147ae147ae13ff00000000000003fdd70a3d70a3d713fe999999999999a00043fc5a1cac083126f003333cccc006666cccc00ff7fffbf0065a6cccc00cccccccc00ffbf32b300cccc999900ffbfff7f00cccc666600ccccff3f0032b3cc4c0065a6662600cc8c333300ff7fcc4c0099593333003333333300cc4c66660033333273003333ff7f00cc4c999900333332b3003333cccc003333cccc00991965a6003333cccc003333cccc003333cccc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004037000000000000"
+  },
+  {
+    "tokenID": "",
+    "name": "Anfractuous #336",
+    "description": "The title is quite literally a visual description of the work, as anfractuous means: characterized by windings and turnings; sinuous; circuitous. With this project I aimed to strike a balance between easily recognizable smooth large scale forms and the small fragmented details that populate these forms.",
+    "artist": "Landlines Art",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/anfractuous_336.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "curve",
+      "interactive",
+      "winding",
+      "recursion",
+      "abstract",
+      "minimalist",
+      "maximalist"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmcBLxXWC8pLDC9L6X2w8wD4aN6jT1GMKopABna8gzd3Xy/?fxhash=oohv8QSSE9aUHN6L745DVAC9XAmcjJjPFXE5rRpUjiv4kp3MCMG&fxiteration=336&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU#0x0200000000000000003fae353f7ced91683fc999999999999a001400013ff000000000000040080000000000003fdccccccccccccd3ff00000000000003ff00000000000003fe000000000000000013fc7ae147ae147ae006d5b48d200248923c90091a448d20048d248d200ffbfb6ad0091646d9b00dab62489004892da760023c9916400dab648520023c9ff3f00dab6b62d00b66d2449006d5bdb3600b62ddb3600b62d244900ff3f916400b62dff7f00b62d91a400b62ddab600b62d48d200244948d2006d5b48d200da76ffbf00da76ffbf00b62ddb3600da76ffbf00da7623c900da7648d200b66d248900ff7fda7600ff7fda76000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004038000000000000"
+  },
+  {
+    "tokenID": "",
+    "name": "Anfractuous #338",
+    "description": "The title is quite literally a visual description of the work, as anfractuous means: characterized by windings and turnings; sinuous; circuitous. With this project I aimed to strike a balance between easily recognizable smooth large scale forms and the small fragmented details that populate these forms.",
+    "artist": "Landlines Art",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/anfractuous_338.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "curve",
+      "interactive",
+      "winding",
+      "recursion",
+      "abstract",
+      "minimalist",
+      "maximalist"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmcBLxXWC8pLDC9L6X2w8wD4aN6jT1GMKopABna8gzd3Xy/?fxhash=op1sy7JZoVm9B4pzWWng2nxij2QDUw9Xvd3camvUsTBFEKraB8D&fxiteration=338&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU#0x0000000000000000003fb8d4fdf3b645a23fc999999999999a00130001402200000000000040080000000000003fb1eb851eb851ec3ff00000000000003fe199999999999a3fb999999999999a01043fd000000000000000ffbfb62d00b6adb62d002489db3600b66d92240024499224009959eb51009224244900b62db66d0066665b8f00ff3fd6a300b62d6cdb006d5bffbf0091646cdb00da766cdb0099998ec200dab66cdb0048d26cdb00cccc8ec200ccccd6a300dab64892006cdbff7f0023c991640065a6285c0048d2b62d00dab6b62d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004039000000000000"
+  },
+  {
+    "tokenID": "",
+    "name": "Anfractuous #342",
+    "description": "The title is quite literally a visual description of the work, as anfractuous means: characterized by windings and turnings; sinuous; circuitous. With this project I aimed to strike a balance between easily recognizable smooth large scale forms and the small fragmented details that populate these forms.",
+    "artist": "Landlines Art",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/anfractuous_342.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "curve",
+      "interactive",
+      "winding",
+      "recursion",
+      "abstract",
+      "minimalist",
+      "maximalist"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmcBLxXWC8pLDC9L6X2w8wD4aN6jT1GMKopABna8gzd3Xy/?fxhash=ooBkaDoUoQ5BJkTdqkFCkAJ82exRhP91fuKNqncpd4vE9zsFAkL&fxiteration=342&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU#0x0100000000000000003fb999999999999a3fc999999999999a02000001402200000000000040080000000000003fe23d70a3d70a3d3ff00000000000003ff00000000000003fe000000000000000043fc374bc6a7ef9db00b66dff3f00da76ff3f00ff7fb62d006d9bb62d00b6adff3f0023c9b62d0048d26d5b006d9b24890048d291a400ffbf48d2006d9b23c900da76dab600b66ddab600b66d48d200485248d2002449ffbf00b62d48d200b62d91a4009164ff7f00db36da7600ff3f916400b62d485200db36b62d004852b62d009164ff3f00b66dff3f002409922400b62db62d00ff3f6d1b006d1b485200ff7fda7600ff7fda7600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000403a000000000000"
+  },
+  {
+    "tokenID": "",
+    "name": "Anfractuous #343",
+    "description": "The title is quite literally a visual description of the work, as anfractuous means: characterized by windings and turnings; sinuous; circuitous. With this project I aimed to strike a balance between easily recognizable smooth large scale forms and the small fragmented details that populate these forms.",
+    "artist": "Landlines Art",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/anfractuous_343.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "curve",
+      "interactive",
+      "winding",
+      "recursion",
+      "abstract",
+      "minimalist",
+      "maximalist"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmcBLxXWC8pLDC9L6X2w8wD4aN6jT1GMKopABna8gzd3Xy/?fxhash=onkLG3T2mjdyEQnpD32wFEzEp5AEjyViPTjshxb78UeVuMZ1cP9&fxiteration=343&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU#0x0000000000000000003f916872b020c49c3fc999999999999a000b0001400000000000000040000000000000003fc70a3d70a3d70a3ff00000000000003ff00000000000003fe000000000000001013fbdf3b645a1cac10023c948d20048d248d20048d2ffbf0023c9b6ad0048d26d9b00b6ad248900ffbfda7600da7691640048d248520048d2b62d00ffbfdb3600b6adb62d006d9bdb3600da76b62d009164ff3f00db36b62d00b62db62d00b62dff3f00ff3f485200db369164002449da7600b62d248900b62d489200db3691a400b62d23c900db3648d200ff7f489200916448d200248948d2004892ffbf006d9bffbf00ffbf48d20023c948d200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004040800000000000"
+  },
+  {
+    "tokenID": "",
+    "name": "Anfractuous #347",
+    "description": "The title is quite literally a visual description of the work, as anfractuous means: characterized by windings and turnings; sinuous; circuitous. With this project I aimed to strike a balance between easily recognizable smooth large scale forms and the small fragmented details that populate these forms.",
+    "artist": "Landlines Art",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/anfractuous_347.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "curve",
+      "interactive",
+      "winding",
+      "recursion",
+      "abstract",
+      "minimalist",
+      "maximalist"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmcBLxXWC8pLDC9L6X2w8wD4aN6jT1GMKopABna8gzd3Xy/?fxhash=ooiUsrh1ewcWSTaDzBEyyRmHFKS3zM3m9PVYFmHf2hZ3uZcBe8n&fxiteration=347&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU#0x023fd00000000000003fa999999999999a3fb999999999999a020b020140140000000000003ff000000000000000000000000000003ff00000000000003ff00000000000003ff000000000000001043fd0000000000000005555aa2a00ff3faa2a00ff3f555500aa2aff7f00ff3faaaa00ff3f54d500ff7f54d500ff7faaaa00ffbfffbf00aaaaaa6a0054d5aa6a00aaaaaa2a00ff7faa2a005555aa2a00ff3faa2a00ff3faa2a00ff3faa2a0054d5ff7f00aa6aff3f00ff7faa2a00ff7f54d500ff3fff3f00ff3fff3f00aa6a555500aa2aaaaa005515aaaa00aa2affbf00aa2a54d500ff3fa9ea00555554d500aa6affbf00aa6aaaaa00ff7faaaa005495ffbf00ff7f54d500aaaa54d500aaaaffbf00aaaaffbf00ffbfffbf0054d554d50054d5aaaa00ffbf549500aaaaaaaa005495ff7f005495aa6a00aaaaaa6a00ffbfaa6a00ffbfff7f00aaaa54950054955495005495555500aaaaff3f00ffbfff3f00ffbf555500ffbfaa2a00aaaaaa2a005495aa2a005495ff3f00ff7f555500ff7fff3f00ff7faa2a005495551500ff7f551500ff7fff3f00aa6aaa6a005555ff7f00aa6a549500aa6a555500ff7fff3f00aaaa555500aaaaff7f005555ff7f005555aa6a005555555500aaaa551500ffbf551500aa6a5515005555551500ff3f551500aa2a551500402e000000000000"
+  },
+  {
+    "tokenID": "",
+    "name": "Anfractuous #361",
+    "description": "The title is quite literally a visual description of the work, as anfractuous means: characterized by windings and turnings; sinuous; circuitous. With this project I aimed to strike a balance between easily recognizable smooth large scale forms and the small fragmented details that populate these forms.",
+    "artist": "Landlines Art",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/anfractuous_361.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "curve",
+      "interactive",
+      "winding",
+      "recursion",
+      "abstract",
+      "minimalist",
+      "maximalist"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmcBLxXWC8pLDC9L6X2w8wD4aN6jT1GMKopABna8gzd3Xy/?fxhash=onxji2q76YyKD32PUPUhUM5rmtDJ4pHoYTdFunbk3BansGwZ834&fxiteration=361&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU#0x0200000000000000003f847ae147ae147b3fc999999999999a00110001402200000000000000000000000000003fa999999999999a3ff00000000000003fe7ae147ae147ae3fb999999999999a01033fd0000000000000002489db3600da76244900ff3fb62d00b62d6d5b002449da7600db366d9b00b62d23c900ff3f48d200916448d200ff7f48d200489223c900b6ad48d200ffbfffbf0023c948d20048d248d20048d2b6ad00ffbf6d9b0048d2ff7f0048d2da7600ffbfda7600248924890048d2db3600dab69224002489b62d002489db360091e4485200da76ffbf00da7623c900da7648d200b66d248900ff7fda7600ff7fda76000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004039000000000000"
+  },
+  {
+    "tokenID": "",
+    "name": "Anfractuous #362",
+    "description": "The title is quite literally a visual description of the work, as anfractuous means: characterized by windings and turnings; sinuous; circuitous. With this project I aimed to strike a balance between easily recognizable smooth large scale forms and the small fragmented details that populate these forms.",
+    "artist": "Landlines Art",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/anfractuous_362.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "curve",
+      "interactive",
+      "winding",
+      "recursion",
+      "abstract",
+      "minimalist",
+      "maximalist"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmcBLxXWC8pLDC9L6X2w8wD4aN6jT1GMKopABna8gzd3Xy/?fxhash=opCarrgc1cpborN7uo72eGBBZthsK52Kcho24YQhtSWunnNHFxA&fxiteration=362&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU#0x023fe4cccccccccccd3fae353f7ced91683fc999999999999a000d0001402200000000000040080000000000003fa999999999999a3ff00000000000003ff00000000000003fb999999999999a01033fc978d4fdf3b64600b62d244900db36db36002449db3600ff7f485200b66db62d002489b62d0091a4244900ffbfb62d0023c924490048d26d5b0023c9da760048d26d9b00489224890023c9ffbf0023c948d2006d9bffbf002489ffbf006d5b23c9006d5bdab600b62d23c900b62db6ad006d5b489200db36ff7f00b62d916400da76da7600b62d244900da76ffbf00da7623c900da7648d200b66d248900ff7fda7600ff7fda7600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000403a000000000000"
+  },
+  {
+    "tokenID": "",
+    "name": "Anfractuous #365",
+    "description": "The title is quite literally a visual description of the work, as anfractuous means: characterized by windings and turnings; sinuous; circuitous. With this project I aimed to strike a balance between easily recognizable smooth large scale forms and the small fragmented details that populate these forms.",
+    "artist": "Landlines Art",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/anfractuous_365.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "curve",
+      "interactive",
+      "winding",
+      "recursion",
+      "abstract",
+      "minimalist",
+      "maximalist"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmcBLxXWC8pLDC9L6X2w8wD4aN6jT1GMKopABna8gzd3Xy/?fxhash=ooGSqWiC89DSLwHT7U9QYtybvq6QiACmnojvxgs4st2rFG7ttKD&fxiteration=365&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU#0x0100000000000000003fa3f7ced916872b3f9fbe76c8b43958020f02014018000000000000400800000000000000000000000000003ff00000000000003fe999999999999a3ff000000000000001003f9a9fbe76c8b43901aa6a555500ff3faa6a00aa6aff7f00ff3fffbf005555ffbf005495aaaa00ffbfffbf00ffbfff7f005495aa6a005495ff3f00aa6a555500ff3fff7f00aa2aaaaa00aa2aaaaa005555ff7f005555ff7f00ff3faa6a00ff3faa6a00ff3f22220000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004026000000000000"
+  },
+  {
+    "tokenID": "",
+    "name": "Anfractuous #367",
+    "description": "The title is quite literally a visual description of the work, as anfractuous means: characterized by windings and turnings; sinuous; circuitous. With this project I aimed to strike a balance between easily recognizable smooth large scale forms and the small fragmented details that populate these forms.",
+    "artist": "Landlines Art",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/anfractuous_367.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "curve",
+      "interactive",
+      "winding",
+      "recursion",
+      "abstract",
+      "minimalist",
+      "maximalist"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmcBLxXWC8pLDC9L6X2w8wD4aN6jT1GMKopABna8gzd3Xy/?fxhash=opQK2ykDH3byDwbKXQV31eaFtatGiMCW1RkVP3YdUyaU2WW3Ayt&fxiteration=367&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU#0x0000000000000000003fa999999999999a3f8a9fbe76c8b439011202014020000000000000400800000000000000000000000000003ff00000000000003fe570a3d70a3d713fd999999999999a01043fd0000000000000005555ff3f00ff3fff7f00ff3fffbf00aa6aaaaa005495ffbf00ffbfffbf00ffbfff7f00ff7faa6a00ffbfff3f005555ff3f00ff3fff7f005495ff3f00ff3f555500aa2aaaaa005555ff7f005555ff7f00ff3faa6a00ff3faa6a00ff3f22220000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004026000000000000"
+  },
+  {
+    "tokenID": "",
+    "name": "Anfractuous #371",
+    "description": "The title is quite literally a visual description of the work, as anfractuous means: characterized by windings and turnings; sinuous; circuitous. With this project I aimed to strike a balance between easily recognizable smooth large scale forms and the small fragmented details that populate these forms.",
+    "artist": "Landlines Art",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/anfractuous_371.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "curve",
+      "interactive",
+      "winding",
+      "recursion",
+      "abstract",
+      "minimalist",
+      "maximalist"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmcBLxXWC8pLDC9L6X2w8wD4aN6jT1GMKopABna8gzd3Xy/?fxhash=op7nX21mTfoRusswrVjz1y393mkF8d97sifzCn62RgfG8i6wLxY&fxiteration=371&fxminter=tz1Ym9Ued9v2N2wwsrtQ52HRGGn7qDmzuUZU#0x0100000000000000003fb999999999999a3fc999999999999a02120001402200000000000040080000000000003fc70a3d70a3d70a3ff00000000000003ff00000000000003fb999999999999a01033fc1a9fbe76c8b4400ff7fb62d00b66d922400b62db62d006d5bff3f00b62d4852002449916400ff7f248900db362489009164dab600db36dab600b62d48d20048d248d200b6addab60048d2b6ad0048d26d9b00ffbf489200ffbfda7600b6ad6d5b0048d248520048d2b62d00b6adb62d00ff7fb62d004912dab600ff7f9224002489244900ff7f9224000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004036000000000000"
+  },
+  {
+    "tokenID": "",
+    "name": "contrapuntos #364",
+    "description": "Musical counterpoint is to me an abstraction of the layered, intertwining rhythms of every activity we carry on in our lives. With a global tempo typically set in days, we fit all sorts of temporal structures where our joys and fears live and play out over the span of our lives. This series is a metaphorical transposition of the musical counterpoint into a visual space, sometimes with repeating patterns, sometimes with broken structures, sometimes isolated notes / hours / souls.\n\nArtwork by Marcelo Soria-Rodríguez, @msoriaro. Made with p5js & glsl.",
+    "artist": "Marcelo Soria-Rodríguez",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/contrapuntos_364.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "geometric",
+      "counterpoint",
+      "iillucid",
+      "glsl",
+      "p5"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmVPEQB8xNmHeoG3J5MTii1pyq2em4RhXnK6u8dYfdEjfn"
+  },
+  {
+    "tokenID": "",
+    "name": "contrapuntos #367",
+    "description": "Musical counterpoint is to me an abstraction of the layered, intertwining rhythms of every activity we carry on in our lives. With a global tempo typically set in days, we fit all sorts of temporal structures where our joys and fears live and play out over the span of our lives. This series is a metaphorical transposition of the musical counterpoint into a visual space, sometimes with repeating patterns, sometimes with broken structures, sometimes isolated notes / hours / souls.\n\nArtwork by Marcelo Soria-Rodríguez, @msoriaro. Made with p5js & glsl.",
+    "artist": "Marcelo Soria-Rodríguez",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/contrapuntos_367.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "geometric",
+      "counterpoint",
+      "iillucid",
+      "glsl",
+      "p5"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmZKcqADwroN9Jw8WnP2cE1ZqERsWso1aWCNz2wbH2ZaSH"
+  },
+  {
+    "tokenID": "",
+    "name": "contrapuntos #500",
+    "description": "Musical counterpoint is to me an abstraction of the layered, intertwining rhythms of every activity we carry on in our lives. With a global tempo typically set in days, we fit all sorts of temporal structures where our joys and fears live and play out over the span of our lives. This series is a metaphorical transposition of the musical counterpoint into a visual space, sometimes with repeating patterns, sometimes with broken structures, sometimes isolated notes / hours / souls.\n\nArtwork by Marcelo Soria-Rodríguez, @msoriaro. Made with p5js & glsl.",
+    "artist": "Marcelo Soria-Rodríguez",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/contrapuntos_500.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "geometric",
+      "counterpoint",
+      "iillucid",
+      "glsl",
+      "p5"
+    ],
+    "attributes": [],
+    "platform": "",
+    "live_uri": "ipfs://QmT9xyRb5fGSjJeRQhNkzJSxzDD2YCvDvfBmCc71ZNkHQX"
+  },
+  {
+    "tokenID": "267000453",
+    "name": "entretiempos #453",
+    "description": "Our lives are scattered across several time scales, and the meaning of every event that takes place depends on the time scale that we choose to define & observe them from. Yet we fail to fully comprehend this in our daily errands. Entretiempos is an artwork that reflects on this, based on an aesthetic that pays a tribute to the works of Sonia Delaunay, František Kupka and other painters from their era, recreated by the usage of intersecting rings that create a varied and rich space.\n\nThe work plays with the time scales by painting dynamically and letting the viewer pause the work, restart, set it to loop indefinitely, painting and vanishing in an endless cycle. And it can be set to be done at varying speeds, to appreciate what happens in between the time scales (\"entre tiempos\", in Spanish).\n\nAlso, there is a broader theme that I find of interest to explore from every work that I engage with. It has to do with the concept of what I call total cognitive space, or the total range of possibilities that can be expressed / achieved with a given scenario and set of conditions. In this case, I was interested in expanding my rendition of the works of Delaunay into a broader space. How does this approach scale with varying parameter ranges? Is the painting still interesting? Can it express something new? Connected to this, I am also interested in thinking about what emotions would mean for an artificial sentient being. We talk about artificial intelligence, but leave aside artificial emotions all too often. While artificial intelligences are indeed interesting, we fail to recognize the paramount importance of emotions in human behaviour. To this end, this work explores also the result of painting with machine-like precision vs. performing the artwork with a range of possible imprecisions. The perfection of the machine vs. the imperfection of the human, does it trigger different emotions in us humans? What will the reaction of a machine be whenever they develop a taste?\n\nThis work exposes features that deal with its time and space scales, background colour, background elements, the palettes used, certain colour accents that may happen (golden accents, b&w tones), the style used to draw the geometric shapes (fill, lines, outline), the degree of paint precision and other features that influence the final result. The user may download a PNG file at any arbitrary resolution at any step of the paint process using the commands provided for that. A brief list of commands is as follows. Please note that you need to click on the artwork first to make sure it will receive the typed commands:\n\np to pause/resume the work\nr followed by y to enter the looping mode\nd followed by +/- or any number from 1 to 9 to increase resolution\ns followed by c to save current image\ns+f to automatically save the final image when the system finishes painting\ns+m to restart and save a sequence of images of the process\nr+0 (zero) to reset all parameters and resolutions and restart\nk at any time to define keyframes, then r+0 to restart the work and it will automatically pause at defined steps, or s+i and the work will restart and automatically save an image at every keyframe defined with k. Reload browser to reset.\n\nThere is an Easter egg hidden in every work.\n\nFor the full project description, inspiration and rationale, as well as the full list of features and controls plus a hint at the Easter Egg, please visit the project homepage at https://www.iillucid.com/entretiempos",
+    "artist": "Marcelo Soria-Rodríguez",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/entretiempos_453.png",
+    "display_uri": "",
+    "website": "https://www.iillucid.com/entretiempos/",
+    "tags": "",
+    "attributes": [],
+    "platform": "Art Blocks Curated",
+    "live_uri": "https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000453"
+  },
+  {
+    "tokenID": "267000654",
+    "name": "entretiempos #654",
+    "description": "Our lives are scattered across several time scales, and the meaning of every event that takes place depends on the time scale that we choose to define & observe them from. Yet we fail to fully comprehend this in our daily errands. Entretiempos is an artwork that reflects on this, based on an aesthetic that pays a tribute to the works of Sonia Delaunay, František Kupka and other painters from their era, recreated by the usage of intersecting rings that create a varied and rich space.\n\nThe work plays with the time scales by painting dynamically and letting the viewer pause the work, restart, set it to loop indefinitely, painting and vanishing in an endless cycle. And it can be set to be done at varying speeds, to appreciate what happens in between the time scales (\"entre tiempos\", in Spanish).\n\nAlso, there is a broader theme that I find of interest to explore from every work that I engage with. It has to do with the concept of what I call total cognitive space, or the total range of possibilities that can be expressed / achieved with a given scenario and set of conditions. In this case, I was interested in expanding my rendition of the works of Delaunay into a broader space. How does this approach scale with varying parameter ranges? Is the painting still interesting? Can it express something new? Connected to this, I am also interested in thinking about what emotions would mean for an artificial sentient being. We talk about artificial intelligence, but leave aside artificial emotions all too often. While artificial intelligences are indeed interesting, we fail to recognize the paramount importance of emotions in human behaviour. To this end, this work explores also the result of painting with machine-like precision vs. performing the artwork with a range of possible imprecisions. The perfection of the machine vs. the imperfection of the human, does it trigger different emotions in us humans? What will the reaction of a machine be whenever they develop a taste?\n\nThis work exposes features that deal with its time and space scales, background colour, background elements, the palettes used, certain colour accents that may happen (golden accents, b&w tones), the style used to draw the geometric shapes (fill, lines, outline), the degree of paint precision and other features that influence the final result. The user may download a PNG file at any arbitrary resolution at any step of the paint process using the commands provided for that. A brief list of commands is as follows. Please note that you need to click on the artwork first to make sure it will receive the typed commands:\n\np to pause/resume the work\nr followed by y to enter the looping mode\nd followed by +/- or any number from 1 to 9 to increase resolution\ns followed by c to save current image\ns+f to automatically save the final image when the system finishes painting\ns+m to restart and save a sequence of images of the process\nr+0 (zero) to reset all parameters and resolutions and restart\nk at any time to define keyframes, then r+0 to restart the work and it will automatically pause at defined steps, or s+i and the work will restart and automatically save an image at every keyframe defined with k. Reload browser to reset.\n\nThere is an Easter egg hidden in every work.\n\nFor the full project description, inspiration and rationale, as well as the full list of features and controls plus a hint at the Easter Egg, please visit the project homepage at https://www.iillucid.com/entretiempos",
+    "artist": "Marcelo Soria-Rodríguez",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/entretiempos_654.png",
+    "display_uri": "",
+    "website": "https://www.iillucid.com/entretiempos/",
+    "tags": "",
+    "attributes": [],
+    "platform": "Art Blocks Curated",
+    "live_uri": "https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000654"
+  },
+  {
+    "tokenID": "267000690",
+    "name": "entretiempos #690",
+    "description": "Our lives are scattered across several time scales, and the meaning of every event that takes place depends on the time scale that we choose to define & observe them from. Yet we fail to fully comprehend this in our daily errands. Entretiempos is an artwork that reflects on this, based on an aesthetic that pays a tribute to the works of Sonia Delaunay, František Kupka and other painters from their era, recreated by the usage of intersecting rings that create a varied and rich space.\n\nThe work plays with the time scales by painting dynamically and letting the viewer pause the work, restart, set it to loop indefinitely, painting and vanishing in an endless cycle. And it can be set to be done at varying speeds, to appreciate what happens in between the time scales (\"entre tiempos\", in Spanish).\n\nAlso, there is a broader theme that I find of interest to explore from every work that I engage with. It has to do with the concept of what I call total cognitive space, or the total range of possibilities that can be expressed / achieved with a given scenario and set of conditions. In this case, I was interested in expanding my rendition of the works of Delaunay into a broader space. How does this approach scale with varying parameter ranges? Is the painting still interesting? Can it express something new? Connected to this, I am also interested in thinking about what emotions would mean for an artificial sentient being. We talk about artificial intelligence, but leave aside artificial emotions all too often. While artificial intelligences are indeed interesting, we fail to recognize the paramount importance of emotions in human behaviour. To this end, this work explores also the result of painting with machine-like precision vs. performing the artwork with a range of possible imprecisions. The perfection of the machine vs. the imperfection of the human, does it trigger different emotions in us humans? What will the reaction of a machine be whenever they develop a taste?\n\nThis work exposes features that deal with its time and space scales, background colour, background elements, the palettes used, certain colour accents that may happen (golden accents, b&w tones), the style used to draw the geometric shapes (fill, lines, outline), the degree of paint precision and other features that influence the final result. The user may download a PNG file at any arbitrary resolution at any step of the paint process using the commands provided for that. A brief list of commands is as follows. Please note that you need to click on the artwork first to make sure it will receive the typed commands:\n\np to pause/resume the work\nr followed by y to enter the looping mode\nd followed by +/- or any number from 1 to 9 to increase resolution\ns followed by c to save current image\ns+f to automatically save the final image when the system finishes painting\ns+m to restart and save a sequence of images of the process\nr+0 (zero) to reset all parameters and resolutions and restart\nk at any time to define keyframes, then r+0 to restart the work and it will automatically pause at defined steps, or s+i and the work will restart and automatically save an image at every keyframe defined with k. Reload browser to reset.\n\nThere is an Easter egg hidden in every work.\n\nFor the full project description, inspiration and rationale, as well as the full list of features and controls plus a hint at the Easter Egg, please visit the project homepage at https://www.iillucid.com/entretiempos",
+    "artist": "Marcelo Soria-Rodríguez",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/entretiempos_690.png",
+    "display_uri": "",
+    "website": "https://www.iillucid.com/entretiempos/",
+    "tags": "",
+    "attributes": [],
+    "platform": "Art Blocks Curated",
+    "live_uri": "https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000690"
+  },
+  {
+    "tokenID": "267000865",
+    "name": "entretiempos #865",
+    "description": "Our lives are scattered across several time scales, and the meaning of every event that takes place depends on the time scale that we choose to define & observe them from. Yet we fail to fully comprehend this in our daily errands. Entretiempos is an artwork that reflects on this, based on an aesthetic that pays a tribute to the works of Sonia Delaunay, František Kupka and other painters from their era, recreated by the usage of intersecting rings that create a varied and rich space.\n\nThe work plays with the time scales by painting dynamically and letting the viewer pause the work, restart, set it to loop indefinitely, painting and vanishing in an endless cycle. And it can be set to be done at varying speeds, to appreciate what happens in between the time scales (\"entre tiempos\", in Spanish).\n\nAlso, there is a broader theme that I find of interest to explore from every work that I engage with. It has to do with the concept of what I call total cognitive space, or the total range of possibilities that can be expressed / achieved with a given scenario and set of conditions. In this case, I was interested in expanding my rendition of the works of Delaunay into a broader space. How does this approach scale with varying parameter ranges? Is the painting still interesting? Can it express something new? Connected to this, I am also interested in thinking about what emotions would mean for an artificial sentient being. We talk about artificial intelligence, but leave aside artificial emotions all too often. While artificial intelligences are indeed interesting, we fail to recognize the paramount importance of emotions in human behaviour. To this end, this work explores also the result of painting with machine-like precision vs. performing the artwork with a range of possible imprecisions. The perfection of the machine vs. the imperfection of the human, does it trigger different emotions in us humans? What will the reaction of a machine be whenever they develop a taste?\n\nThis work exposes features that deal with its time and space scales, background colour, background elements, the palettes used, certain colour accents that may happen (golden accents, b&w tones), the style used to draw the geometric shapes (fill, lines, outline), the degree of paint precision and other features that influence the final result. The user may download a PNG file at any arbitrary resolution at any step of the paint process using the commands provided for that. A brief list of commands is as follows. Please note that you need to click on the artwork first to make sure it will receive the typed commands:\n\np to pause/resume the work\nr followed by y to enter the looping mode\nd followed by +/- or any number from 1 to 9 to increase resolution\ns followed by c to save current image\ns+f to automatically save the final image when the system finishes painting\ns+m to restart and save a sequence of images of the process\nr+0 (zero) to reset all parameters and resolutions and restart\nk at any time to define keyframes, then r+0 to restart the work and it will automatically pause at defined steps, or s+i and the work will restart and automatically save an image at every keyframe defined with k. Reload browser to reset.\n\nThere is an Easter egg hidden in every work.\n\nFor the full project description, inspiration and rationale, as well as the full list of features and controls plus a hint at the Easter Egg, please visit the project homepage at https://www.iillucid.com/entretiempos",
+    "artist": "Marcelo Soria-Rodríguez",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/entretiempos_865.png",
+    "display_uri": "",
+    "website": "https://www.iillucid.com/entretiempos/",
+    "tags": "",
+    "attributes": [],
+    "platform": "Art Blocks Curated",
+    "live_uri": "https://generator.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/267000865"
+  },
+  {
+    "tokenID": "",
+    "name": "el inefable momento #620",
+    "description": "\"el inefable momento del colorido descubrimiento\" (\"the ineffable moment of the colorful discovery\")  is part of the fxhash interactive minting experience at The Ever-Evolving World of Art, Art Basel Hong-Kong, 2022.\n\nIt is a tribute to playful discovery. This work was commissioned for the Art Basel Hong Kong / Tezos / fxhash collaboration, as part of an activity to introduce visitors into generative art. As I was pondering what could I do in the short time available, I saw my youngest daughter drawing: the ineffable moment of colorful discovery. Child play is one of the most discovery-filled activities I can think of. And drawing is that joy that I describe: a blank piece of paper with a crayon is pure possibility. Which is what generative art is. I had wanted for quite some time to create a tribute to those drawings my daughters do, and this has been the perfect occasion to start it: it seemed to me that it fit the occasion perfectly: kids discover through painting, maybe adults can discover generative art using the same visual language.\n\n\"el inefable momento del colorido descubrimiento\" is a work that explores colour and irregular basic shapes, and that leaves the viewer in front of a new space with each execution. Does it trigger any excitement to see those imperfect elements? It is dearest to me to see the hearts and rainbows, as two mainstays of the drawings that I keep in folders and count in the hundreds and thousands. Can an algorithm that reproduces those elements trigger the same warm feelings in the viewer? It does with me.\n\nThe piece lets the viewer explore certain characteristics. The viewer can pause the iterations: each is just an execution of the same drawing, slightly different. When paused, one can look at each line individually and notice how the drawing is constructed. When running, it gives an idea of how the things we know are just versions of the ideal concept they represent. \n\nAlso, one can have an idea of what would have happened if the child had decided to draw more or less elements. The viewer can press “e” to see different variations of the same piece: random elements are selected and displayed. To restore the original work, press “r”. Which one is the “finished” artwork? All of them. What is “the” artwork? \n\nThe work has the following commands:\n\n- Change the work: “e”. To restore: “r”\n- The painting can be paused/unpaused pressing “p”\n- The viewer can save an artwork pressing “s” (it will pause the piece, press \"p\" to unpause)\n- The resolution can be arbitrarily changed pressing “d” followed by a number from 1 to 9. If the image goes dark and nothing paints, press “d 0” (d zero) and try again with a lower number. Resolution can be increased iteratively: press d 2, then d 2, etc. It will always add the amount to the current pixel density, thus increasing resolution.\n- The viewer can see how many decisions are made per iteration. This might be interesting to those who don’t know how generative art works. Each iteration is composed of thousands of decisions that inform colour, positions, shapes, etc. To toggle the decision count view, press “q”\n- It has also colour controls: press z for brightness, x for contrast, g for gamma, b for blur, n for noise followed by + or - to alter their values. You might get some simple variations that you might enjoy. Press a to enable/disable all colour controls (except the noise).\n- There are some pre-recorded colour variations: press “v” followed by 1, 2 or 3. Press “v” followed by 0 (zero) to reset the variations.\n\nIn every process of discovery, one comes to an \"aha\" moment ;) If you find your aha moment, then you can do one more thing: you can play with the size of certain elements pressing “o”. To restore, reload the piece. Once you find your aha moment, you can go back the same way you got there. All the controls work the same when one has reached their aha moment.\n\nI hope you enjoy the piece as much as I have enjoyed drawing it, directly or indirectly, with my daughters. Thanks.\n\nArtwork by Marcelo Soria-Rodríguez, @msoriaro.\nMade with p5js and glsl.",
+    "artist": "Marcelo Soria-Rodríguez",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/el_inefable_momento_620.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "ABHK2022",
+      "Art Basel",
+      "Hong-Kong 2022",
+      "playful",
+      "child",
+      "discovery",
+      "iillucid",
+      "polylines",
+      "colorful"
+    ],
+    "attributes": [
+      {
+        "value": "Pencils and used markers",
+        "trait_type": "Draw mode"
+      },
+      {
+        "value": "Grid",
+        "trait_type": "Placement"
+      },
+      {
+        "value": "Few",
+        "trait_type": "Rainbows"
+      },
+      {
+        "value": "Many",
+        "trait_type": "Wicked colour band"
+      },
+      {
+        "value": "None",
+        "trait_type": "Hearts"
+      },
+      {
+        "value": "False",
+        "trait_type": "B/W"
+      },
+      {
+        "value": "False",
+        "trait_type": "Inverted colours"
+      },
+      {
+        "value": "satin sheen gold",
+        "trait_type": "Background colour"
+      },
+      {
+        "value": "Small",
+        "trait_type": "Elements size"
+      },
+      {
+        "value": "Random",
+        "trait_type": "Colouring"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmcwZdCwXARrhbjTt7CkCNK7yDfD4iZ7UvvYYTHaQF22dr?fxhash=onjoHpv5HPTmc1spTs5ohqqPaYpVKNQnGaCqq5xnQjiuNfYzCUM"
+  },
+  {
+    "tokenID": "",
+    "name": "el inefable momento #797",
+    "description": "\"el inefable momento del colorido descubrimiento\" (\"the ineffable moment of the colorful discovery\")  is part of the fxhash interactive minting experience at The Ever-Evolving World of Art, Art Basel Hong-Kong, 2022.\n\nIt is a tribute to playful discovery. This work was commissioned for the Art Basel Hong Kong / Tezos / fxhash collaboration, as part of an activity to introduce visitors into generative art. As I was pondering what could I do in the short time available, I saw my youngest daughter drawing: the ineffable moment of colorful discovery. Child play is one of the most discovery-filled activities I can think of. And drawing is that joy that I describe: a blank piece of paper with a crayon is pure possibility. Which is what generative art is. I had wanted for quite some time to create a tribute to those drawings my daughters do, and this has been the perfect occasion to start it: it seemed to me that it fit the occasion perfectly: kids discover through painting, maybe adults can discover generative art using the same visual language.\n\n\"el inefable momento del colorido descubrimiento\" is a work that explores colour and irregular basic shapes, and that leaves the viewer in front of a new space with each execution. Does it trigger any excitement to see those imperfect elements? It is dearest to me to see the hearts and rainbows, as two mainstays of the drawings that I keep in folders and count in the hundreds and thousands. Can an algorithm that reproduces those elements trigger the same warm feelings in the viewer? It does with me.\n\nThe piece lets the viewer explore certain characteristics. The viewer can pause the iterations: each is just an execution of the same drawing, slightly different. When paused, one can look at each line individually and notice how the drawing is constructed. When running, it gives an idea of how the things we know are just versions of the ideal concept they represent. \n\nAlso, one can have an idea of what would have happened if the child had decided to draw more or less elements. The viewer can press “e” to see different variations of the same piece: random elements are selected and displayed. To restore the original work, press “r”. Which one is the “finished” artwork? All of them. What is “the” artwork? \n\nThe work has the following commands:\n\n- Change the work: “e”. To restore: “r”\n- The painting can be paused/unpaused pressing “p”\n- The viewer can save an artwork pressing “s” (it will pause the piece, press \"p\" to unpause)\n- The resolution can be arbitrarily changed pressing “d” followed by a number from 1 to 9. If the image goes dark and nothing paints, press “d 0” (d zero) and try again with a lower number. Resolution can be increased iteratively: press d 2, then d 2, etc. It will always add the amount to the current pixel density, thus increasing resolution.\n- The viewer can see how many decisions are made per iteration. This might be interesting to those who don’t know how generative art works. Each iteration is composed of thousands of decisions that inform colour, positions, shapes, etc. To toggle the decision count view, press “q”\n- It has also colour controls: press z for brightness, x for contrast, g for gamma, b for blur, n for noise followed by + or - to alter their values. You might get some simple variations that you might enjoy. Press a to enable/disable all colour controls (except the noise).\n- There are some pre-recorded colour variations: press “v” followed by 1, 2 or 3. Press “v” followed by 0 (zero) to reset the variations.\n\nIn every process of discovery, one comes to an \"aha\" moment ;) If you find your aha moment, then you can do one more thing: you can play with the size of certain elements pressing “o”. To restore, reload the piece. Once you find your aha moment, you can go back the same way you got there. All the controls work the same when one has reached their aha moment.\n\nI hope you enjoy the piece as much as I have enjoyed drawing it, directly or indirectly, with my daughters. Thanks.\n\nArtwork by Marcelo Soria-Rodríguez, @msoriaro.\nMade with p5js and glsl.",
+    "artist": "Marcelo Soria-Rodríguez",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/el_inefable_momento_797.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "ABHK2022",
+      "Art Basel",
+      "Hong-Kong 2022",
+      "playful",
+      "child",
+      "discovery",
+      "iillucid",
+      "polylines",
+      "colorful"
+    ],
+    "attributes": [
+      {
+        "value": "Pencils",
+        "trait_type": "Draw mode"
+      },
+      {
+        "value": "Random",
+        "trait_type": "Placement"
+      },
+      {
+        "value": "Few",
+        "trait_type": "Rainbows"
+      },
+      {
+        "value": "Many",
+        "trait_type": "Wicked colour band"
+      },
+      {
+        "value": "Few",
+        "trait_type": "Hearts"
+      },
+      {
+        "value": "False",
+        "trait_type": "B/W"
+      },
+      {
+        "value": "False",
+        "trait_type": "Inverted colours"
+      },
+      {
+        "value": "international Klein blue",
+        "trait_type": "Background colour"
+      },
+      {
+        "value": "Normal",
+        "trait_type": "Elements size"
+      },
+      {
+        "value": "Random",
+        "trait_type": "Colouring"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmcwZdCwXARrhbjTt7CkCNK7yDfD4iZ7UvvYYTHaQF22dr?fxhash=opVEcbXVDu9T3WmjMYbUQvX2PvWqteekKNYJnQwfqfbYvQTGmNo"
+  },
+  {
+    "tokenID": "",
+    "name": "el inefable momento #1089",
+    "description": "\"el inefable momento del colorido descubrimiento\" (\"the ineffable moment of the colorful discovery\")  is part of the fxhash interactive minting experience at The Ever-Evolving World of Art, Art Basel Hong-Kong, 2022.\n\nIt is a tribute to playful discovery. This work was commissioned for the Art Basel Hong Kong / Tezos / fxhash collaboration, as part of an activity to introduce visitors into generative art. As I was pondering what could I do in the short time available, I saw my youngest daughter drawing: the ineffable moment of colorful discovery. Child play is one of the most discovery-filled activities I can think of. And drawing is that joy that I describe: a blank piece of paper with a crayon is pure possibility. Which is what generative art is. I had wanted for quite some time to create a tribute to those drawings my daughters do, and this has been the perfect occasion to start it: it seemed to me that it fit the occasion perfectly: kids discover through painting, maybe adults can discover generative art using the same visual language.\n\n\"el inefable momento del colorido descubrimiento\" is a work that explores colour and irregular basic shapes, and that leaves the viewer in front of a new space with each execution. Does it trigger any excitement to see those imperfect elements? It is dearest to me to see the hearts and rainbows, as two mainstays of the drawings that I keep in folders and count in the hundreds and thousands. Can an algorithm that reproduces those elements trigger the same warm feelings in the viewer? It does with me.\n\nThe piece lets the viewer explore certain characteristics. The viewer can pause the iterations: each is just an execution of the same drawing, slightly different. When paused, one can look at each line individually and notice how the drawing is constructed. When running, it gives an idea of how the things we know are just versions of the ideal concept they represent. \n\nAlso, one can have an idea of what would have happened if the child had decided to draw more or less elements. The viewer can press “e” to see different variations of the same piece: random elements are selected and displayed. To restore the original work, press “r”. Which one is the “finished” artwork? All of them. What is “the” artwork? \n\nThe work has the following commands:\n\n- Change the work: “e”. To restore: “r”\n- The painting can be paused/unpaused pressing “p”\n- The viewer can save an artwork pressing “s” (it will pause the piece, press \"p\" to unpause)\n- The resolution can be arbitrarily changed pressing “d” followed by a number from 1 to 9. If the image goes dark and nothing paints, press “d 0” (d zero) and try again with a lower number. Resolution can be increased iteratively: press d 2, then d 2, etc. It will always add the amount to the current pixel density, thus increasing resolution.\n- The viewer can see how many decisions are made per iteration. This might be interesting to those who don’t know how generative art works. Each iteration is composed of thousands of decisions that inform colour, positions, shapes, etc. To toggle the decision count view, press “q”\n- It has also colour controls: press z for brightness, x for contrast, g for gamma, b for blur, n for noise followed by + or - to alter their values. You might get some simple variations that you might enjoy. Press a to enable/disable all colour controls (except the noise).\n- There are some pre-recorded colour variations: press “v” followed by 1, 2 or 3. Press “v” followed by 0 (zero) to reset the variations.\n\nIn every process of discovery, one comes to an \"aha\" moment ;) If you find your aha moment, then you can do one more thing: you can play with the size of certain elements pressing “o”. To restore, reload the piece. Once you find your aha moment, you can go back the same way you got there. All the controls work the same when one has reached their aha moment.\n\nI hope you enjoy the piece as much as I have enjoyed drawing it, directly or indirectly, with my daughters. Thanks.\n\nArtwork by Marcelo Soria-Rodríguez, @msoriaro.\nMade with p5js and glsl.",
+    "artist": "Marcelo Soria-Rodríguez",
+    "image": "https://ik.imagekit.io/UltraDAO/wallace_collection/el_inefable_momento_1089.png",
+    "display_uri": "",
+    "website": "",
+    "tags": [
+      "ABHK2022",
+      "Art Basel",
+      "Hong-Kong 2022",
+      "playful",
+      "child",
+      "discovery",
+      "iillucid",
+      "polylines",
+      "colorful"
+    ],
+    "attributes": [
+      {
+        "value": "Pencils",
+        "trait_type": "Draw mode"
+      },
+      {
+        "value": "Grid",
+        "trait_type": "Placement"
+      },
+      {
+        "value": "None",
+        "trait_type": "Rainbows"
+      },
+      {
+        "value": "Many",
+        "trait_type": "Wicked colour band"
+      },
+      {
+        "value": "None",
+        "trait_type": "Hearts"
+      },
+      {
+        "value": "False",
+        "trait_type": "B/W"
+      },
+      {
+        "value": "False",
+        "trait_type": "Inverted colours"
+      },
+      {
+        "value": "flame",
+        "trait_type": "Background colour"
+      },
+      {
+        "value": "Micro",
+        "trait_type": "Elements size"
+      },
+      {
+        "value": "Random",
+        "trait_type": "Colouring"
+      }
+    ],
+    "platform": "",
+    "live_uri": "ipfs://QmcwZdCwXARrhbjTt7CkCNK7yDfD4iZ7UvvYYTHaQF22dr?fxhash=ooKw6R6xNNi7q85jtCKM6nVVe3sDSqrkFKmx7YrGARHATb76vL7"
+  }
+]
