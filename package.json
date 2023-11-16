@@ -2,7 +2,7 @@
   "scripts": {
     "jekyll:serve": "bundle exec jekyll serve --incremental --watch --ssl-key ssl/localhost.key --ssl-cert ssl/localhost.crt",
     "jekyll:build": "npm run js:minify && bundle exec jekyll build && npm run csso:minify",
-    "css:build": "npx tailwindcss -i ./assets/css/main.css -o ./assets/main.css",
+    "css:build": "npx tailwindcss -i ./assets/css/main.css -o ./assets/main.css && npx tailwindcss -i ./assets/css/interactive.css -o ./assets/interactive.css",
     "csso:minify": "node build-csso.js",
     "js:minify": "node build-minify.js",
     "css:watch": "nodemon -e css -x 'npm run css:build'",
@@ -18,6 +18,7 @@
     "csso": "^5.0.5",
     "file-type": "^18.5.0",
     "fluent-ffmpeg": "^2.1.2",
+    "gsap": "^3.12.2",
     "imagekit": "^4.1.3",
     "ipfs": "^0.66.1",
     "ipfs-core": "^0.18.1",
@@ -26,13 +27,11 @@
     "nodemon": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "puppeteer": "^21.4.1",
+    "puppeteer-screen-recorder": "^2.1.2",
     "sharp": "^0.32.6",
     "slugify": "^1.6.6",
     "stream": "^0.0.2",
     "tailwindcss": "^3.3.2",
     "terser": "^5.22.0"
-  },
-  "dependencies": {
-    "puppeteer-screen-recorder": "^2.1.2"
   }
 }
