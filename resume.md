@@ -29,7 +29,7 @@ permalink: /resume/
 <p class="fade-in-element mb-4">Scaled the design team and its capabilities at an international agency of 200+ across three continents and 16 countries. Managed 20 leaders and ICs across user experience and visual design. Established content design practice and implemented org-wide design strategy.</p>
 <p class="fade-in-element mb-12">Clients: Facebook, Microsoft, Google, The Nobel Prize, Starbucks, The White House</p>
 
-<h3 class="job-title fade-in-element">Founder & Vice President of Design, Founder</h3>
+<h3 class="job-title fade-in-element">Vice President of Design, Founder</h3>
 <h4 class="job-metadata fade-in-element">Lift UX (acquired) // 2009 - 2017 // Remote</h4>
 <p class="fade-in-element mb-4">Founded a UX design studio crafting digital products and WordPress websites for medium-to-large clients.  Launched interactive second-screen apps for acclaimed TV series, earning two Emmy nominations in the process. Managed a compact yet effective team of full-time and contract designers, elevating website traffic for the product division to two million monthly visitors. Acquired by 10up in 2017.</p>
 <p class="fade-in-element mb-12">Clients: The Walking Dead, Mad Men, Breaking Bad, SundanceTV, IFC Films, WEtv</p>
