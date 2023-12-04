@@ -1860,7 +1860,7 @@ a:hover:after {
   color: rgb(249 241 165 / var(--tw-text-opacity));
 }
 
-i{
+i {
   font-variation-settings: "slnt" -7, "wdth" 0, "wght" 400;
   font-style: normal;
 }
@@ -1969,7 +1969,7 @@ i{
   }
 }
 
-.factoids{
+.factoids {
   font-variation-settings: "slnt" 0, "wdth" 40, "wght" 300;
   line-height: 1;
 }
@@ -2044,7 +2044,7 @@ i{
   }
 }
 
-#meetChris .curtain-title{
+#meetChris .curtain-title {
   font-family: "transducer-variable", sans-serif;
   font-variation-settings: "slnt" 0, "wdth" 140, "wght" 900;
   font-style: normal;
@@ -2130,12 +2130,12 @@ i{
   }
 }
 
-#meetChris .text-layer{
+#meetChris .text-layer {
   font-variation-settings: "slnt" 0, "wdth" 0, "wght" 560;
   line-height: 0.88;
 }
 
-#meetChris .bright{
+#meetChris .bright {
   font-variation-settings: "slnt" 0, "wdth" 0, "wght" 730;
 }
 
@@ -2194,7 +2194,7 @@ i{
   }
 }
 
-#chrisIntro .text-layer{
+#chrisIntro .text-layer {
   line-height: 0.93;
 }
 
@@ -2213,7 +2213,7 @@ i{
   }
 }
 
-#chrisImage{
+#chrisImage {
   transform: rotate(200deg);
 }
 
@@ -2321,7 +2321,7 @@ i{
   }
 }
 
-#fiveThings .bright{
+#fiveThings .bright {
   font-variation-settings: "slnt" 0, "wdth" 0, "wght" 600;
 }
 
@@ -2394,7 +2394,7 @@ i{
   }
 }
 
-.points .number{
+.points .number {
   font-variation-settings: "slnt" -6, "wdth" 50, "wght" 600;
 }
 
@@ -2437,7 +2437,13 @@ body.meetChris {
   grid-template-columns: repeat(1, minmax(0, 1fr));
   padding-bottom: 3rem;
   padding-top: 6rem;
-  font-size: 4.5rem;
+  font-size: 3rem;
+}
+
+@media (min-width: 640px) {
+  #whyMe {
+    font-size: 4.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2446,7 +2452,7 @@ body.meetChris {
   }
 }
 
-#whyMe{
+#whyMe {
   font-variation-settings: "slnt" 0, "wdth" 22, "wght" 450;
 }
 
