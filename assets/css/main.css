@@ -221,7 +221,7 @@ body{
 
 /* QQL Page */
 
-.qql-collection .gallery-row .image-wrapper {
+.qql-collection .gallery-row .media-wrapper {
   @apply mb-4;
 }
 

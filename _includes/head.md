@@ -17,7 +17,7 @@
 
   <style>
   .fade-in-element,
-  .art-collection .image-wrapper,
+  .art-collection .media-wrapper,
   .art-collection h3,
   .art-collection h4 {
       opacity: 0;
@@ -25,7 +25,7 @@
       transition: opacity 0.5s ease, transform 0.5s ease;
   }
   .fade-in-element.visible,
-  .art-collection .image-wrapper.visible,
+  .art-collection .media-wrapper.visible,
   .art-collection h3.visible,
   .art-collection h4.visible {
       opacity: 1;

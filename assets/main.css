@@ -1233,6 +1233,10 @@ video {
   margin-top: 3rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-auto {
   margin-top: auto;
 }
@@ -3624,12 +3628,12 @@ input[type="range"]::-moz-range-thumb {
   min-width: 100%;
 }
 
-.gallery-row .image-wrapper {
+.gallery-row .media-wrapper {
   margin-bottom: 3rem;
 }
 
 @media (min-width: 640px) {
-  .gallery-row .image-wrapper {
+  .gallery-row .media-wrapper {
     margin-left: 0px;
     margin-right: 0px;
     margin-bottom: 0px;
@@ -3694,7 +3698,7 @@ input[type="range"]::-moz-range-thumb {
     margin-bottom: 0px;
   }
 
-  .gallery-single-wide-portrait .image-wrapper {
+  .gallery-single-wide-portrait .media-wrapper {
     margin-left: auto;
     margin-right: auto;
     width: 45%;
@@ -3850,12 +3854,12 @@ input[type="range"]::-moz-range-thumb {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.image-wrapper {
+.media-wrapper {
   position: relative;
   display: block;
 }
 
-.image-wrapper:hover .maximize-icon {
+.media-wrapper:hover .maximize-icon {
   display: block;
   /* Show on hover */
 }
@@ -3868,12 +3872,39 @@ input[type="range"]::-moz-range-thumb {
   width: 100vw;
 }
 
-.fullscreen-viewer div,
-.fullscreen-viewer img,
-.fullscreen-viewer iframe {
+.fullscreen-viewer .fullscreen-artwork {
+  flex: 3;
   margin: 0 auto;
+  max-width: 66%;
+  width: 100%;
   max-height: 100vh;
-  max-width: 100vw;
+}
+
+.fullscreen-viewer h3{
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+.fullscreen-viewer h4{
+  font-weight: 500;
+}
+
+.fullscreen-viewer p{
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .subtle-bg .fullscreen-viewer p{
+    color: #999;
+  }
+}
+
+.fullscreen-artwork iframe,
+.fullscreen-artwork img{
+  margin: 0 auto;
+  max-height: 90vh;
+  max-width: 100%;
 }
 
 .fullscreen-viewer .close-btn,
@@ -3900,13 +3931,26 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .fullscreen-viewer .live-code-btn {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  background-color: white;
+  color: #181818;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: 300;
 }
 
 .fullscreen-viewer.hidden {
   display: none;
+}
+
+.fullscreen-viewer .fullscreen-content{
+  flex: 1;
+  max-width: 100%;
+  width: 100%;
+  padding: 40px;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 @keyframes spin {
@@ -4351,7 +4395,7 @@ body{
 
 /* QQL Page */
 
-.qql-collection .gallery-row .image-wrapper {
+.qql-collection .gallery-row .media-wrapper {
   margin-bottom: 1rem;
 }
 

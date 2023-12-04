@@ -8,6 +8,9 @@ import { fileTypeFromBuffer } from 'file-type';
 import slugify from 'slugify';
 import sharp from 'sharp';
 import gifResize from '@gumlet/gif-resize';  // Import a library for resizing GIFs
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
 
 const sleep = (milliseconds) => new Promise(resolve => setTimeout(resolve, milliseconds));
 
@@ -27,33 +30,40 @@ async function fetchMedia(uri) {
         let fileName = '';
 
         if (uri.startsWith('ipfs://')) {
-            // Adjust the following line to account for the path as well
             const ipfsUri = `https://ipfs.io/ipfs/${uri.slice(7)}`;
             const response = await axios.get(ipfsUri, { responseType: 'arraybuffer' });
             buffer = Buffer.from(response.data);
 
-            // Determine filetype from buffer
             const fileType = await fileTypeFromBuffer(buffer);
-            const ipfsHash = uri.split('/')[2];  // Extracting the hash part for filename
+            const ipfsHash = uri.split('/')[2];
+
+            // Get image dimensions using sharp
+            const dimensions = await sharp(buffer).metadata();
+            const { width, height } = dimensions;
 
             return {
                 buffer: buffer,
                 extension: fileType.ext,
-                fileName: ipfsHash
+                fileName: ipfsHash,
+                dimensions: { width, height }
             };
 
         } else if (uri.startsWith('https://') || uri.startsWith('http://')) {
             const response = await axios.get(uri, { responseType: 'arraybuffer' });
-            const buffer = Buffer.from(response.data);  // <-- Ensure we have a Buffer here
+            buffer = Buffer.from(response.data);
 
-            // Determine filetype and file name from buffer
             const fileType = await fileTypeFromBuffer(buffer);
-            fileName = path.basename(uri, `.${fileType.ext}`);  // Remove extension from file name
+            fileName = path.basename(uri, `.${fileType.ext}`);
+
+            // Get image dimensions using sharp
+            const dimensions = await sharp(buffer).metadata();
+            const { width, height } = dimensions;
 
             return {
                 buffer: buffer,
                 extension: fileType.ext,
-                fileName: fileName
+                fileName: fileName,
+                dimensions: { width, height }
             };
         } else {
             throw new Error('Unsupported URI scheme');
@@ -70,15 +80,13 @@ async function resizeImage(buffer) {
         const fileType = await fileTypeFromBuffer(buffer);
 
         if (fileType.ext === 'gif') {
-            // Resize GIF while preserving animation
             const resizedGifBuffer = await gifResize({
                 width: 2000,
                 height: 2000,
-                optimizationLevel: 2  // Adjust optimization level as needed
+                optimizationLevel: 2
             })(buffer);
             return resizedGifBuffer;
         } else {
-            // Resize other image types
             const resizedBuffer = await sharp(buffer)
                 .resize({
                     width: 2000,
@@ -96,15 +104,13 @@ async function resizeImage(buffer) {
 }
 
 async function uploadToImageKit(media, fileBasename) {
-
-    // Set the folder and file name
     const folderName = 'wallace_collection';
 
     const requestBody = {
-        file: media,  // This should be a Buffer
+        file: media,
         fileName: fileBasename,
         folder: folderName,
-        useUniqueFileName: false  // Set to false to use the fileName as is
+        useUniqueFileName: false
     };
 
     console.log("Uploading media to ImageKit: ", requestBody.folder + "/" + requestBody.fileName);
@@ -118,7 +124,6 @@ async function uploadToImageKit(media, fileBasename) {
                 throw new Error('Invalid response from ImageKit');
             }
         } catch (error) {
-            //console.error(`Error uploading media to ImageKit (Attempt ${attempt}):`, error.message);
             if (attempt < MAX_RETRIES) {
                 console.log(`Retrying in ${RETRY_DELAY} milliseconds...`);
                 await sleep(RETRY_DELAY);
@@ -135,29 +140,21 @@ async function checkExistsOnImageKit(fileName) {
 
     try {
         const response = await axios.head(imageKitUri);
-        // If the request is successful (status 200), the file exists
         return response.status === 200;
     } catch (error) {
         if (error.response && error.response.status === 404) {
-            // File not found
             return false;
         } else {
-            //console.error('Error checking existence on ImageKit:', error.message);
             return false;
         }
     }
 }
 
 async function processMedia(ipfsUri, fileName) {
-
-    // Fetch media from IPFS
-    const mediaBuffer = await fetchMedia(ipfsUri);
-    if (!mediaBuffer) {
+    const mediaData = await fetchMedia(ipfsUri);
+    if (!mediaData) {
         return null;
     }
-
-
-    //const fileType = await fileTypeFromBuffer(mediaBuffer.buffer);
 
     const fileBasename = slugify(fileName, {
         replacement: '_',
@@ -165,22 +162,21 @@ async function processMedia(ipfsUri, fileName) {
         lower: true,
         strict: true,
         locale: 'en'
-    }) + '.' + mediaBuffer.extension;
+    }) + '.' + mediaData.extension;
 
-    // Check if media already exists on ImageKit
-    // Assume a function checkExistsOnImageKit that returns true if file exists
     const exists = await checkExistsOnImageKit(fileBasename);
     if (exists) {
         console.log(`Media already exists on ImageKit: ${fileBasename}`);
         return null;
     }
 
-    const resizedBuffer = await resizeImage(mediaBuffer.buffer);
+    const resizedBuffer = await resizeImage(mediaData.buffer);
 
-    // Upload media to ImageKit
     const imageKitUri = await uploadToImageKit(resizedBuffer, fileBasename);
-    return imageKitUri;
-
+    return {
+        uri: imageKitUri,
+        dimensions: mediaData.dimensions // Include dimensions
+    };
 }
 
 async function fetchMetadata(url) {
@@ -204,13 +200,12 @@ function normalizeAttributes(attributes) {
 }
 
 async function normalizeMetadata(metadata) {
-    // Define a standard structure for the metadata
     const standardMetadata = {
-        tokenID: '',
         name: '',
         description: '',
         artist: '',
         image: '',
+        video: '',
         display_uri: '',
         website: '',
         tags: [],
@@ -218,7 +213,6 @@ async function normalizeMetadata(metadata) {
     };
 
     // Map the fields from the scraped metadata to the standard structure
-    // This example is based on the first metadata example provided
     standardMetadata.name = metadata.name || '';
     standardMetadata.tokenID = metadata.tokenID || metadata.tokenId || '';
     standardMetadata.description = metadata.description || '';
@@ -238,6 +232,14 @@ async function normalizeMetadata(metadata) {
         ? normalizeAttributes(metadata.features || metadata.attributes || metadata.traits)
         : [];
 
+    if (metadata.image) {
+        const mediaResult = await processMedia(metadata.image, metadata.name);
+        if (mediaResult && mediaResult.uri) {
+            metadata.image = mediaResult.uri;
+            metadata.dimensions = mediaResult.dimensions; // Include dimensions here
+        }
+    }
+
     return standardMetadata;
 }
 
@@ -251,44 +253,46 @@ async function scrapeAndStoreMetadata(filePath) {
     const metadataArray = [];
 
     for (const artistDiv of artistDivs) {
-        // Extract artist name from the HTML
         const artistElement = artistDiv.querySelector('.artist-title');
         const artistName = artistElement ? artistElement.textContent.trim() : '';
-
-        // Find all images with data-metadata attribute within the current artist div
         const images = artistDiv.querySelectorAll('img[data-metadata]');
 
         for (const img of images) {
             const metadataUrl = img.getAttribute('data-metadata');
-            let fetchedMetadata = null;
-
-            fetchedMetadata = await fetchMetadata(metadataUrl);
+            let fetchedMetadata = await fetchMetadata(metadataUrl);
 
             if (fetchedMetadata) {
-                // Normalize the metadata
                 const normalizedMetadata = await normalizeMetadata(fetchedMetadata);
-                normalizedMetadata.artist = artistName;  // Set the artist name
+                normalizedMetadata.artist = artistName;
 
-                if (normalizedMetadata.image) {
-                    const imageKitUri = await processMedia(normalizedMetadata.image, normalizedMetadata.name);
-                    if (imageKitUri) {
-                        normalizedMetadata.image = imageKitUri;
+                // Create or update artist
+                const artist = await prisma.artist.upsert({
+                    where: { name: normalizedMetadata.artist },
+                    update: {},
+                    create: { name: normalizedMetadata.artist }
+                });
+
+                // Create artwork
+                const artwork = await prisma.artwork.create({
+                    data: {
+                        title: normalizedMetadata.name,
+                        description: normalizedMetadata.description,
+                        artistId: artist.id,
+                        // Add other artwork details
                     }
-                }
+                });
 
                 metadataArray.push(normalizedMetadata);
             }
         }
     }
 
-    // Derive JSON file name from HTML file name
     const jsonFileName = path.basename(filePath, '.html') + '.json';
     const jsonFilePath = path.join('collection', jsonFileName);
 
     if (metadataArray.length === 0) {
         console.log(`No metadata found for ${filePath}, skipping file write.`);
     } else {
-        // Store metadata to a JSON file using fs promises API
         await fs.writeFile(jsonFilePath, JSON.stringify(metadataArray, null, 2));
         console.log(`Metadata saved to ${jsonFilePath}`);
     }
@@ -305,6 +309,8 @@ async function processAllFiles() {
             await scrapeAndStoreMetadata(filePath);
         }
     }
+
+    await prisma.$disconnect();
 }
 
 processAllFiles();

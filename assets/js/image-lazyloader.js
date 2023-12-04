@@ -22,11 +22,11 @@ const replaceImageWithVideo = (img) => {
         video.setAttribute('muted', ''); // ensure the video plays inline
         video.playbackRate = 1.0; // attempt to ensure 60fps
         video.addEventListener('ended', () => video.pause()); // pause on the last frame
-        const imageWrapper = img.closest('.image-wrapper');
+        const imageWrapper = img.closest('.media-wrapper');
         if (imageWrapper) {
             img.replaceWith(video); // replace the img element with the video element
 
-            // Listen for the end of the transition on the .image-wrapper, then play the video
+            // Listen for the end of the transition on the .media-wrapper, then play the video
             imageWrapper.addEventListener('transitionend', () => {
                 video.play(); // play the video once the transition ends
             });
