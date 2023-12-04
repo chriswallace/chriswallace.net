@@ -20,7 +20,7 @@ permalink: /art/
     </div>
 
     <h2 class="fade-in-element"><a href="https://wallacemuseum.com">Wallace Museum</a></h2>
-    <p class="mb-8 fade-in-element">Enjoy a new digital art experience celebrating generative art from today's most influential artists who code. Much more to come, so stay tuned!. These pieces were acquired over a period of two and a half years, containing art from some of the leading creative coders in the world, including pioneers in digital art like Tyler Hobbs, IX Shells, Casey Reas, Manolo Gamboa Naon, Iskra Velitchkova, and more.</p>
+    <p class="mb-8 fade-in-element">Enjoy a new digital art experience celebrating generative art from today's most influential artists who code. These pieces were acquired over a period of two and a half years, containing art from some of the leading creative coders in the world, including pioneers in digital art like Tyler Hobbs, IX Shells, Casey Reas, Manolo Gamboa Naon, Iskra Velitchkova, and more.</p>
 
     <div class="flex gap-2 sm:gap-4 mb-6 sm:mb-12">
         <div class="fade-in-element" style="flex: 0.66666667;">
