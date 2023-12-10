@@ -21,7 +21,7 @@ function fadeInElements() {
   }
 
   const elements = document.querySelectorAll(
-    ".fade-in-element:not(.visible),.art-collection .image-wrapper:not(.visible),.art-collection h3:not(.visible),.art-collection h4:not(.visible)"
+    ".fade-in-element:not(.visible),.art-collection .media-wrapper:not(.visible),.art-collection h3:not(.visible),.art-collection h4:not(.visible)"
   );
 
   scrollStop(function () {

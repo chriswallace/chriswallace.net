@@ -19,10 +19,10 @@ description: Hi. I'm Chris, an award-winning design executive with 16+ years of 
       </div>
     </div>
   </a>
-  <a class="bg-image-card top-center dark fade-in-element" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/wallace-collection-card-bg.png?tr=w-100,q-20,bl-6');" href="/art/collection">
+  <a class="bg-image-card top-center dark fade-in-element" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/wallace-collection-card-bg.png?tr=w-100,q-20,bl-6');" href="https://wallacemuseum.com" target="_blank">
     <div class="card-text">
       <div>
-        <h3>Wallace Collection</h3>
+        <h3>Wallace Museum</h3>
         <p>Immerse yourself in art</p>
         <div class="cta">Explore</div>
       </div>
@@ -37,7 +37,7 @@ description: Hi. I'm Chris, an award-winning design executive with 16+ years of 
       </div>
     </div>
   </a>
-  <a class="bg-image-card bottom-center fade-in-element" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/nemesis-card.png?tr=w-100,q-20,bl-6');" href="https://woodiesofficial.com" target="blank">
+  <a class="bg-image-card bottom-center fade-in-element" style="background-image: url('https://ik.imagekit.io/UltraDAO/wallace/nemesis-card.png?tr=w-100,q-20,bl-6');" href="https://woodiesofficial.com" target="_blank">
     <div class="card-text">
       <div>
         <h3>Woodies Nemesis</h3>

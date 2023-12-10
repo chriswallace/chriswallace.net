@@ -70,6 +70,12 @@ permalink: /art/collection/
   </div>
 </div>
 
-<script src="/assets/js/collection-page.min.js?v={{ site.version }}"></script>
-<script src="/assets/js/gallery-viewer.min.js??v={{ site.version }}"></script>
-<script src="/assets/js/player.min.js?v=0.11?v={{ site.version }}"></script>
+{% if jekyll.environment == 'production' %}
+  <script src="/assets/js/collection-page.min.js?v={{ site.version }}"></script>
+  <script src="/assets/js/gallery-viewer.min.js??v={{ site.version }}"></script>
+  <script src="/assets/js/player.min.js?v=0.11?v={{ site.version }}"></script>
+{% else %}
+  <script src="/assets/js/collection-page.js?v={{ site.version }}"></script>
+  <script src="/assets/js/gallery-viewer.js?v={{ site.version }}"></script>
+  <script src="/assets/js/player.js?v=0.11?v={{ site.version }}"></script>
+{% endif %}

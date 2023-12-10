@@ -43,16 +43,16 @@ window.pageSettings = {
         },
     ],
     htmlParts: {
-        "part0": "/collection/chunk0.html",
-        "part1": "/collection/chunk1.html",
-        "part2": "/collection/chunk2.html",
-        "part3": "/collection/chunk3.html",
-        "part4": "/collection/chunk4.html",
-        "part5": "/collection/chunk5.html",
-        "part6": "/collection/chunk6.html",
-        "part7": "/collection/chunk7.html",
-        "part8": "/collection/chunk8.html",
-        "part9": "/collection/chunk9.html",
-        "part10": "/collection/chunk10.html",
+        "0": "/collection/chunk0.html",
+        "1": "/collection/chunk1.html",
+        "2": "/collection/chunk2.html",
+        "3": "/collection/chunk3.html",
+        "4": "/collection/chunk4.html",
+        "5": "/collection/chunk5.html",
+        "6": "/collection/chunk6.html",
+        "7": "/collection/chunk7.html",
+        /* "8": "/collection/chunk8.html",
+           "9": "/collection/chunk9.html",
+           "10": "/collection/chunk10.html",*/
     }
 }

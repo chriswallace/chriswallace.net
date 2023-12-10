@@ -35,50 +35,102 @@ document.addEventListener("DOMContentLoaded", () => {
     return /Mobi|Android/i.test(navigator.userAgent);
   }
 
-  function setupImages(img, index) {
-    if (img.getAttribute("data-processed") === "true") {
+  function setupMedia(mediaElement, index) {
+    if (mediaElement.getAttribute("data-processed") === "true") {
       return;
     }
 
-    imgObserver.observe(img); // Start observing this image
+    imgObserver.observe(mediaElement); // Start observing this element
 
-    img.addEventListener("mouseover", function (event) {
-      const altText = this.getAttribute("alt");
-      if (altText) {
-        tooltip.textContent = altText;
-        tooltip.style.display = "block";
-      }
-    });
+    const isImage = mediaElement.tagName === "IMG";
+    const isVideo = mediaElement.tagName === "VIDEO";
 
-    img.addEventListener("mouseout", function () {
-      tooltip.style.display = "none";
-    });
+    // Event listeners for images
+    if (isImage) {
+      mediaElement.addEventListener("mouseover", function () {
+        const altText = this.getAttribute("alt");
+        if (altText) {
+          tooltip.textContent = altText;
+          tooltip.style.display = "block";
+        }
+      });
 
-    // Create a wrapper div around the image
+      mediaElement.addEventListener("mouseout", function () {
+        tooltip.style.display = "none";
+      });
+    }
+
+    // Create a wrapper div around the media element
     const wrapperDiv = document.createElement("div");
-    wrapperDiv.classList.add("image-wrapper");
-    img.parentNode.insertBefore(wrapperDiv, img);
-    wrapperDiv.appendChild(img);
+    wrapperDiv.classList.add("media-wrapper");
+    mediaElement.parentNode.insertBefore(wrapperDiv, mediaElement);
+    wrapperDiv.appendChild(mediaElement);
 
-    // Move tooltip inside wrapperDiv
-    wrapperDiv.appendChild(tooltip);
+    // Move tooltip inside wrapperDiv for images
+    if (isImage) {
+      wrapperDiv.appendChild(tooltip);
+    }
 
     const maximizeIcon = document.createElement("div");
     maximizeIcon.classList.add("maximize-icon");
 
-    // Check if img alt attribute is not empty before adding caption
-    if (isMobile() && img.alt.trim().length) {
+    // Caption for mobile images
+    if (isMobile() && isImage && mediaElement.alt.trim().length) {
       const caption = document.createElement("caption");
-      caption.innerHTML = img.alt;
+      caption.innerHTML = mediaElement.alt;
       wrapperDiv.appendChild(caption);
     }
 
+    // Add maximize icon and full-screen functionality
     if (!isMobile() && webglSupport()) {
       wrapperDiv.appendChild(maximizeIcon);
-      maximizeIcon.addEventListener("click", () => goFullscreen(img, index));
+      maximizeIcon.addEventListener("click", () => goFullscreen(mediaElement, index));
     }
 
-    img.setAttribute("data-processed", "true");
+    mediaElement.setAttribute("data-processed", "true");
+  }
+
+  // Function to fetch and associate metadata
+  function loadArtworkMetadata(nextPartKey, elementsToUpdate, callback) {
+    const uri = `/collection/chunk${nextPartKey}.json`;
+    fetch(uri)
+      .then(response => response.json())
+      .then(data => {
+        associateMetadata(data, elementsToUpdate);
+        if (callback) {
+          callback();
+        }
+      })
+      .catch(error => console.error('Error loading JSON:', error));
+  }
+
+  function associateMetadata(metadata, elementsToUpdate) {
+    elementsToUpdate.forEach((img, index) => {
+      const data = metadata[index];
+      if (data) {
+        // Create a container for the metadata
+        const metadataDiv = document.createElement('div');
+        metadataDiv.classList.add('artwork-metadata', 'hidden');
+
+        // Add content to the metadata container
+        const name = document.createElement('h3');
+        name.textContent = data.name || 'Artwork';
+        metadataDiv.appendChild(name);
+
+        const artist = document.createElement('p');
+        artist.textContent = `Artist: ${data.artist || 'Unknown'}`;
+        metadataDiv.appendChild(artist);
+
+        const description = document.createElement('p');
+        description.textContent = `Description: ${data.description || 'No description available.'}`;
+        metadataDiv.appendChild(description);
+
+        // Add more elements as needed for other metadata like tags, live_uri, etc.
+
+        // Append the metadata container to the image's parent div
+        img.parentNode.appendChild(metadataDiv);
+      }
+    });
   }
 
   const autoRotateNextArtwork = () => {
@@ -87,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
       clearTimeout(autoRotateTimeout);
     }
 
-    images = artCollection.querySelectorAll("img"); // Get the current list of images
+    images = artCollection.querySelectorAll("img");
 
     if (currentIndex === null) return;
 
@@ -146,9 +198,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const navigateArtwork = (step) => {
-    if (currentIndex === null) return;
-
+    // Re-query the DOM for the current list of images
+    images = artCollection.querySelectorAll("img");
     const totalImages = images.length;
+
+    if (currentIndex === null || totalImages === 0) return;
+
     let newIndex = currentIndex + step;
 
     if (newIndex < 0 || newIndex >= totalImages) {
@@ -168,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.appendChild(viewer);
     }
 
-    viewer.classList.add("fade-out");
+    viewer.classList.add("fullscreen-viewer", "fade-out");
 
     setTimeout(() => {
       const loader = document.createElement("div");
@@ -179,6 +234,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const currentIframeSrc = img.getAttribute("data-iframe-src");
       const currentIframeSize = img.getAttribute("data-iframe-size");
 
+      // Clone the metadata container
+      const metadataContainer = img.parentNode.querySelector('.artwork-metadata');
+      const metadataClone = metadataContainer ? metadataContainer.cloneNode(true) : null;
+      if (metadataClone)
+        metadataClone.classList.remove('hidden');
+
       // Reset the data-is-current attribute for all images before setting for the current image
       document
         .querySelectorAll("[data-is-current='true']")
@@ -187,8 +248,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       newImg.onload = () => {
         loader.remove();
-        if (currentIframeSrc)
-          newDiv.appendChild(
+        if (currentIframeSrc && metadataClone)
+          metadataClone.appendChild(
             createViewLiveCodeButton(
               currentIframeSrc,
               newImg,
@@ -233,11 +294,19 @@ document.addEventListener("DOMContentLoaded", () => {
       newImg.setAttribute("src", highResSrc);
 
       const newDiv = document.createElement("div");
+      newDiv.classList.add('fullscreen-artwork');
 
       viewer.innerHTML = "";
       viewer.appendChild(loader);
       viewer.appendChild(newDiv);
       newDiv.appendChild(newImg);
+
+      // Create a container for the image and metadata
+      const contentDiv = document.createElement("div");
+      contentDiv.className = "fullscreen-content";
+      if (metadataClone) contentDiv.appendChild(metadataClone);
+
+      viewer.appendChild(contentDiv);
 
       viewer.classList.remove("fade-out");
 
@@ -267,9 +336,13 @@ document.addEventListener("DOMContentLoaded", () => {
     viewCodeButton.className = "live-code-btn";
     viewCodeButton.addEventListener("click", () => {
       if (iframeSrc) {
+        if (autoRotateTimeout) {
+          clearTimeout(autoRotateTimeout);
+          autoRotateTimeout = null;
+        }
+
         const imgWidth = img.offsetWidth;
         const imgHeight = img.offsetHeight;
-        const newDiv = document.createElement("div");
         const iframe = document.createElement("iframe");
         iframe.setAttribute("src", iframeSrc);
         if (currentIframeSize === "fullscreen") {
@@ -279,32 +352,32 @@ document.addEventListener("DOMContentLoaded", () => {
           iframe.setAttribute("width", imgWidth); // Set the iframe width to match the image
           iframe.setAttribute("height", imgHeight); // Set the iframe height to match the image
         }
-        const viewer = document.getElementById("fullscreen-viewer");
+        const viewer = document.querySelector(".fullscreen-artwork");
         viewer.innerHTML = "";
-        viewer.appendChild(newDiv);
-        newDiv.appendChild(iframe);
+        viewer.appendChild(iframe);
       }
     });
     return viewCodeButton;
   }
 
-  // Function to check fullscreen status and stop auto-rotate if needed
   const checkFullscreenStatus = () => {
-    if (
-      !document.fullscreenElement &&
+    if (!document.fullscreenElement &&
       !document.webkitFullscreenElement &&
       !document.mozFullScreenElement &&
-      !document.msFullscreenElement
-    ) {
+      !document.msFullscreenElement) {
       viewer.className = "hidden";
 
-      // Stop auto-rotate when exiting fullscreen
+      // Clear auto-rotate timeout
       if (autoRotateTimeout) {
         clearTimeout(autoRotateTimeout);
+        autoRotateTimeout = null;
       }
+
+      // Additional logic for handling exit from fullscreen
     }
   };
 
+  // Listeners for fullscreen change across different browsers
   document.addEventListener("fullscreenchange", checkFullscreenStatus);
   document.addEventListener("webkitfullscreenchange", checkFullscreenStatus);
   document.addEventListener("mozfullscreenchange", checkFullscreenStatus);
@@ -330,7 +403,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const elements = document.querySelectorAll(
-    ".fade-in-element,.art-collection .image-wrapper,.art-collection h3,.art-collection h4"
+    ".fade-in-element,.art-collection .media-wrapper,.art-collection h3,.art-collection h4"
   );
 
   scrollStop(function () {
@@ -406,11 +479,12 @@ document.addEventListener("DOMContentLoaded", () => {
           const artCollection = document.getElementById("art-collection");
           artCollection.insertAdjacentHTML("beforeend", html);
 
-          const unloadedImages = artCollection.querySelectorAll("img:not(.loaded)");
+          const unloadedImages = artCollection.querySelectorAll("img:not(.loaded),video:not(.loaded)");
           unloadedImages.forEach((img, index) => setupImages(img, index));
 
-          const newElements = artCollection.querySelectorAll(".fade-in-element:not(.visible),.art-collection .image-wrapper:not(.visible),.art-collection h3:not(.visible),.art-collection h4:not(.visible)");
+          const newElements = artCollection.querySelectorAll(".fade-in-element:not(.visible),.art-collection .media-wrapper:not(.visible),.art-collection h3:not(.visible),.art-collection h4:not(.visible)");
           observeElements(newElements);
+          loadArtworkMetadata(Number(nextPartKey), unloadedImages);
 
           isLoading = false; // Release lock
         })

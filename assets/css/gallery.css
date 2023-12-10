@@ -6,7 +6,7 @@
   @apply min-w-full;
 }
 
-.gallery-row .image-wrapper {
+.gallery-row .media-wrapper {
   @apply sm:mx-0 mb-12 sm:mb-0;
 }
 
@@ -34,7 +34,7 @@
   @apply my-4 sm:my-0 w-full;
 }
 
-.gallery-single-wide-portrait .image-wrapper {
+.gallery-single-wide-portrait .media-wrapper {
   @apply sm:mx-auto sm:w-[45%];
 }
 
@@ -117,11 +117,11 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
-.image-wrapper {
+.media-wrapper {
   @apply relative block;
 }
 
-.image-wrapper:hover .maximize-icon {
+.media-wrapper:hover .maximize-icon {
   display: block;
   /* Show on hover */
 }
