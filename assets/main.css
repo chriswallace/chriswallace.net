@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e7e1e1;
+  border-color: #d1d1d1;
   /* 2 */
 }
 
@@ -369,7 +369,7 @@ textarea {
 input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
-  color: #bdacad;
+  color: #888888;
   /* 2 */
 }
 
@@ -377,7 +377,7 @@ input::placeholder,
 textarea::placeholder {
   opacity: 1;
   /* 1 */
-  color: #bdacad;
+  color: #888888;
   /* 2 */
 }
 
@@ -1907,14 +1907,14 @@ h3,
 h4,
 h5 {
   --tw-text-opacity: 1;
-  color: rgb(43 36 36 / var(--tw-text-opacity));
+  color: rgb(38 38 38 / var(--tw-text-opacity));
 }
 
 p,
 ul,
 li {
   --tw-text-opacity: 1;
-  color: rgb(116 97 98 / var(--tw-text-opacity));
+  color: rgb(79 79 79 / var(--tw-text-opacity));
 }
 
 h1 {
@@ -2030,7 +2030,7 @@ h6 {
   letter-spacing: -0.01em;
   font-weight: 400;
   --tw-text-opacity: 1;
-  color: rgb(190 68 73 / var(--tw-text-opacity));
+  color: rgb(120 120 120 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -2091,7 +2091,7 @@ caption {
   letter-spacing: 0;
   font-weight: 400;
   --tw-text-opacity: 1;
-  color: rgb(84 72 73 / var(--tw-text-opacity));
+  color: rgb(61 61 61 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -2110,7 +2110,7 @@ hr {
   width: 40px;
   border-top-width: 4px;
   --tw-border-opacity: 1;
-  border-color: rgb(238 179 181 / var(--tw-border-opacity));
+  border-color: rgb(176 176 176 / var(--tw-border-opacity));
   padding-bottom: 0px;
 }
 
@@ -2554,7 +2554,7 @@ a {
   letter-spacing: -0.01em;
   font-weight: 400;
   --tw-text-opacity: 1;
-  color: rgb(98 82 83 / var(--tw-text-opacity));
+  color: rgb(69 69 69 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1024px) {
@@ -2574,7 +2574,7 @@ a {
   letter-spacing: 0;
   font-weight: 400;
   --tw-text-opacity: 1;
-  color: rgb(140 118 119 / var(--tw-text-opacity));
+  color: rgb(93 93 93 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1024px) {
@@ -2589,7 +2589,7 @@ a {
 
 .dark .card-text .cta {
   --tw-text-opacity: 1;
-  color: rgb(98 82 83 / var(--tw-text-opacity));
+  color: rgb(69 69 69 / var(--tw-text-opacity));
 }
 
 .dark .card-text .cta::after {
@@ -2696,7 +2696,7 @@ a {
 
 .subtle-bg .dark .card-text p {
   --tw-text-opacity: 1;
-  color: rgb(140 118 119 / var(--tw-text-opacity));
+  color: rgb(93 93 93 / var(--tw-text-opacity));
 }
 
 .tooltip {
@@ -3048,34 +3048,34 @@ a {
 @media (prefers-color-scheme: dark) {
   .menu-button i:before {
     --tw-border-opacity: 1;
-    border-color: rgb(231 225 225 / var(--tw-border-opacity));
+    border-color: rgb(209 209 209 / var(--tw-border-opacity));
   }
 
   .menu-button i:after {
     --tw-border-opacity: 1;
-    border-color: rgb(231 225 225 / var(--tw-border-opacity));
+    border-color: rgb(209 209 209 / var(--tw-border-opacity));
   }
 
   .navigation .close-button-icon {
     --tw-border-opacity: 1;
-    border-color: rgb(161 140 141 / var(--tw-border-opacity));
+    border-color: rgb(120 120 120 / var(--tw-border-opacity));
   }
 
   .navigation .close-button:hover .close-button-icon {
     --tw-border-opacity: 1;
-    border-color: rgb(231 225 225 / var(--tw-border-opacity));
+    border-color: rgb(209 209 209 / var(--tw-border-opacity));
   }
 
   .navigation .close-button svg {
     --tw-text-opacity: 1;
-    color: rgb(161 140 141 / var(--tw-text-opacity));
+    color: rgb(120 120 120 / var(--tw-text-opacity));
   }
 
   .navigation .close-button:hover svg {
     --tw-border-opacity: 1;
-    border-color: rgb(231 225 225 / var(--tw-border-opacity));
+    border-color: rgb(209 209 209 / var(--tw-border-opacity));
     --tw-text-opacity: 1;
-    color: rgb(231 225 225 / var(--tw-text-opacity));
+    color: rgb(209 209 209 / var(--tw-text-opacity));
   }
 
   .navigation-list {
@@ -3101,7 +3101,7 @@ a {
 
   .navigation-list li:not(.home) a {
     --tw-text-opacity: 1;
-    color: rgb(242 238 238 / var(--tw-text-opacity));
+    color: rgb(231 231 231 / var(--tw-text-opacity));
   }
 
   .navigation-list li:not(.home) a:hover {
@@ -3123,7 +3123,7 @@ a {
 
   .social-button {
     --tw-bg-opacity: 1;
-    background-color: rgb(116 97 98 / var(--tw-bg-opacity));
+    background-color: rgb(79 79 79 / var(--tw-bg-opacity));
   }
 
   .social-button:hover {
@@ -3164,7 +3164,7 @@ footer p {
   font-weight: 400;
   line-height: 1.375;
   --tw-text-opacity: 1;
-  color: rgb(140 118 119 / var(--tw-text-opacity));
+  color: rgb(93 93 93 / var(--tw-text-opacity));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -4343,7 +4343,7 @@ body{
 @media (prefers-color-scheme: light) {
   body.subtle-bg {
     --tw-bg-opacity: 1;
-    background-color: rgb(242 238 238 / var(--tw-bg-opacity));
+    background-color: rgb(231 231 231 / var(--tw-bg-opacity));
   }
 
   .subtle-bg h1,
@@ -4352,13 +4352,13 @@ body{
   .subtle-bg h4,
   .subtle-bg h5 {
     --tw-text-opacity: 1;
-    color: rgb(98 82 83 / var(--tw-text-opacity));
+    color: rgb(69 69 69 / var(--tw-text-opacity));
   }
 
   .subtle-bg .collection-title,
   .subtle-bg caption {
     --tw-text-opacity: 1;
-    color: rgb(140 118 119 / var(--tw-text-opacity));
+    color: rgb(93 93 93 / var(--tw-text-opacity));
   }
 
   .subtle-bg a,
@@ -4379,12 +4379,12 @@ body{
 
   .subtle-bg p {
     --tw-text-opacity: 1;
-    color: rgb(140 118 119 / var(--tw-text-opacity));
+    color: rgb(93 93 93 / var(--tw-text-opacity));
   }
 
   .subtle-bg .decorative-bg svg {
     --tw-text-opacity: 1;
-    color: rgb(231 225 225 / var(--tw-text-opacity));
+    color: rgb(209 209 209 / var(--tw-text-opacity));
   }
 }
 
@@ -4400,13 +4400,13 @@ body{
   .subtle-bg h4,
   .subtle-bg h5 {
     --tw-text-opacity: 1;
-    color: rgb(231 225 225 / var(--tw-text-opacity));
+    color: rgb(209 209 209 / var(--tw-text-opacity));
   }
 
   .subtle-bg .collection-title,
   .subtle-bg caption {
     --tw-text-opacity: 1;
-    color: rgb(214 203 204 / var(--tw-text-opacity));
+    color: rgb(176 176 176 / var(--tw-text-opacity));
   }
 
   .subtle-bg a,
@@ -4418,7 +4418,7 @@ body{
 
   .subtle-bg p {
     --tw-text-opacity: 1;
-    color: rgb(231 225 225 / var(--tw-text-opacity));
+    color: rgb(209 209 209 / var(--tw-text-opacity));
   }
 }
 
@@ -4432,7 +4432,7 @@ body{
   margin-top: 0px;
   margin-bottom: 1rem;
   --tw-text-opacity: 1;
-  color: rgb(161 140 141 / var(--tw-text-opacity));
+  color: rgb(120 120 120 / var(--tw-text-opacity));
 }
 
 /* QQL Page */

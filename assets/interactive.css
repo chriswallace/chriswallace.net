@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e7e1e1;
+  border-color: #d1d1d1;
   /* 2 */
 }
 
@@ -369,7 +369,7 @@ textarea {
 input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
-  color: #bdacad;
+  color: #888888;
   /* 2 */
 }
 
@@ -377,7 +377,7 @@ input::placeholder,
 textarea::placeholder {
   opacity: 1;
   /* 1 */
-  color: #bdacad;
+  color: #888888;
   /* 2 */
 }
 

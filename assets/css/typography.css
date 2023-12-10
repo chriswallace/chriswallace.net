@@ -3,7 +3,7 @@ html {
   line-height: 1.5;
 }
 
-body{
+body {
   @apply font-light;
 }
 
@@ -20,13 +20,13 @@ h1,
 h2,
 h3,
 h4,
-h5  {
+h5 {
   @apply text-gray-950;
 }
 
 p,
 ul,
-li{
+li {
   @apply text-gray-700;
 }
 
@@ -58,7 +58,7 @@ h6 {
 }
 
 .sub-heading {
-  @apply text-xl sm:text-2xl text-rose-600 mt-8 mb-4 md:mb-6;
+  @apply text-xl sm:text-2xl text-gray-500 mt-8 mb-4 md:mb-6;
 }
 
 article {
@@ -88,10 +88,10 @@ caption {
 }
 
 hr {
-  @apply w-[40px] border-rose-300 border-t-4 h-[0] pb-0;
+  @apply w-[40px] border-gray-300 border-t-4 h-[0] pb-0;
 }
 
-p + hr{
+p + hr {
   @apply mt-0 mb-12;
 }
 
