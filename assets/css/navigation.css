@@ -1,4 +1,4 @@
-.navigation-list{
+.navigation-list {
   @apply font-light bg-rose-100 sm:bg-transparent;
 }
 
@@ -30,7 +30,7 @@
   @apply inline-block w-[48px] h-[48px] m-0 p-0 text-rose-500;
 }
 
-.navigation .logo path{
+.navigation .logo path {
   @apply fill-current;
 }
 
@@ -47,11 +47,11 @@
 }
 
 .navigation .close-button:hover .close-button-icon {
-  @apply border-primary-600;
+  @apply border-rose-600;
 }
 
 .navigation .close-button:hover .close-button-svg {
-  @apply text-primary-800;
+  @apply text-rose-800;
 }
 
 .navigation-list {
@@ -79,11 +79,11 @@
 }
 
 .navigation-list li a {
-  @apply align-middle p-2 block text-2xl md:text-xs lg:text-lg font-light leading-none md:px-3 md:py-4 no-underline decoration-4 text-rose-500 hover:underline hover:decoration-rose-700 hover:text-rose-700;
+  @apply align-middle p-2 block text-2xl md:text-xs lg:text-lg font-light leading-none md:px-3 md:py-4 no-underline decoration-4 text-gray-700 hover:underline hover:decoration-rose-700 hover:text-rose-700;
 }
 
 .navigation-list li.home a {
-  @apply ml-0 pl-2 pr-6 mt-1 inline-block uppercase wide-font leading-none;
+  @apply ml-0 pl-2 pr-6 mt-1 inline-block uppercase wide-font leading-none text-rose-500;
 }
 
 .site-title {
@@ -148,7 +148,7 @@
     @apply bg-primary-900 sm:bg-transparent;
   }
 
-  .navigation .logo{
+  .navigation .logo {
     @apply text-white hover:text-primary-100;
   }
 

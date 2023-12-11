@@ -15,57 +15,57 @@
 @import "fullscreen-viewer.css";
 @import "animations.css";
 
-body{
-  @apply bg-rose-50;
+body {
+  @apply bg-gray-100;
 }
 
-/* Home Page */ 
+/* Home Page */
 
 .home-title {
   @apply text-2xl md:text-3xl mb-8;
 }
 
-.decorative-bg{
+.decorative-bg {
   @apply absolute top-0 right-0 w-auto h-full sm:w-full sm:h-auto z-0 bg-cover overflow-hidden;
 }
 
-.decorative-bg svg{
-  @apply relative w-auto h-full sm:w-full sm:h-auto text-orange-200 right-[-20%] sm:right-0;
+.decorative-bg svg {
+  @apply relative w-auto h-full sm:w-full sm:h-auto text-white right-[-20%] sm:right-0;
 }
 
-.decorative-bg svg path{
+.decorative-bg svg path {
   @apply fill-current;
 }
 
 @media (prefers-color-scheme: dark) {
-  body{
+  body {
     @apply bg-primary-900;
   }
-  
-  .decorative-bg{
-    transition: opacity .3s ease-in-out;
+
+  .decorative-bg {
+    transition: opacity 0.3s ease-in-out;
   }
 
-  .decorative-bg svg{
+  .decorative-bg svg {
     @apply text-primary-950;
   }
 
-  .subtle-bg .decorative-bg{
+  .subtle-bg .decorative-bg {
     @apply opacity-0;
   }
 }
 
 /* Resume Page */
 
-.download-resume{
+.download-resume {
   @apply -top-2 md:-top-3 mb-12 relative;
 }
 
-.feather{
+.feather {
   @apply inline text-rose-500;
 }
 
-.feather path{
+.feather path {
   @apply fill-current;
 }
 
@@ -85,7 +85,7 @@ body{
   @apply md:flex max-w-3xl sm:gap-8 sm:border-y sm:border-orange-300 pt-6 sm:mb-24 sm:mt-0 mb-16;
 }
 
-.collection-notes p:first-child{
+.collection-notes p:first-child {
   @apply flex-1;
 }
 
@@ -134,50 +134,17 @@ body{
   @apply mb-8;
 }
 
-.zen-mode{
+.zen-mode {
   @apply hidden sm:flex sm:gap-4;
   flex: 1.4;
 }
 
-.zen-mode p:first-child{
+.zen-mode p:first-child {
   @apply mb-4 flex-1;
 }
 
-body{
+body {
   transition: background-color 0.3s ease-in-out;
-}
-
-@media (prefers-color-scheme: light) {
-  body.subtle-bg{
-    @apply bg-gray-100;
-  }
-
-  .subtle-bg h1,
-  .subtle-bg h2,
-  .subtle-bg h3,
-  .subtle-bg h4,
-  .subtle-bg h5 {
-    @apply text-gray-800;
-  }
-
-  .subtle-bg .collection-title,
-  .subtle-bg caption {
-    @apply text-gray-600;
-  }
-
-  .subtle-bg a,
-  .subtle-bg .artwork-subtitle a, 
-  .subtle-bg .collection-title a{
-    @apply text-rose-500 hover:text-rose-700 decoration-rose-500 hover:decoration-rose-700;
-  }
-
-  .subtle-bg p{
-    @apply text-gray-600;
-  }
-
-  .subtle-bg .decorative-bg svg{
-    @apply text-gray-200;
-  } 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -199,12 +166,12 @@ body{
   }
 
   .subtle-bg a,
-  .subtle-bg .artwork-subtitle a, 
-  .subtle-bg .collection-title a{
+  .subtle-bg .artwork-subtitle a,
+  .subtle-bg .collection-title a {
     @apply text-white;
   }
 
-  .subtle-bg p{
+  .subtle-bg p {
     @apply text-gray-200;
   }
 }
@@ -232,7 +199,6 @@ body{
 }
 
 @media (prefers-color-scheme: dark) {
-
   .collection-title,
   .artwork-subtitle,
   .job-metadata {
@@ -248,7 +214,7 @@ body{
     @apply sm:border-primary-700;
   }
 
-  .feather{
+  .feather {
     @apply inline text-primary-300;
   }
 }
