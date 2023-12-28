@@ -20,7 +20,7 @@ permalink: /resume/
 
 <h2 class="fade-in-element mt-12">Work Experience</h2>
 
-<h3 class="job-title fade-in-element">Vice President of Product Design, Founder</h3>
+<h3 class="job-title fade-in-element">Vice President of Product, Founder</h3>
 <h4 class="job-metadata fade-in-element">UltraDAO Studios // 2021 - Present // Remote</h4>
 <p class="fade-in-element mb-12">Founded a bootstrapped decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles. Built and managed a team of artists, engineers, and creative production specialists. Led a range of award-winning creative projects and drove multi-million dollar revenue within the first six months.</p>
 
