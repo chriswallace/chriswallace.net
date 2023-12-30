@@ -37,7 +37,7 @@ const replaceImageWithVideo = (img) => {
 // Function to set srcset and sizes
 const setSrcSetAndSizes = (img) => {
     const renderedWidth = img.clientWidth;
-    const base_url = "https://ik.imagekit.io/UltraDAO/wallace_collection/";
+    const base_url = "https://ik.imagekit.io/UltraDAO/wallace/";
     const img_name = img.src.split("/").pop().split("?")[0];
 
     const max_width = img.getAttribute("data-max-width");

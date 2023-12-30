@@ -22,36 +22,12 @@ body {
 /* Home Page */
 
 .home-title {
-  @apply text-2xl md:text-3xl mb-8;
-}
-
-.decorative-bg {
-  @apply absolute top-0 right-0 w-auto h-full sm:w-full sm:h-auto z-0 bg-cover overflow-hidden;
-}
-
-.decorative-bg svg {
-  @apply relative w-auto h-full sm:w-full sm:h-auto text-white right-[-20%] sm:right-0;
-}
-
-.decorative-bg svg path {
-  @apply fill-current;
+  @apply text-xl md:text-2xl mb-8;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    @apply bg-primary-900;
-  }
-
-  .decorative-bg {
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .decorative-bg svg {
-    @apply text-primary-950;
-  }
-
-  .subtle-bg .decorative-bg {
-    @apply opacity-0;
+    @apply bg-gray-950;
   }
 }
 
@@ -62,7 +38,7 @@ body {
 }
 
 .feather {
-  @apply inline text-rose-500;
+  @apply inline text-primary-500;
 }
 
 .feather path {
@@ -82,7 +58,7 @@ body {
 /* Wallace Collection page */
 
 .collection-notes {
-  @apply md:flex max-w-3xl sm:gap-8 sm:border-y sm:border-orange-300 pt-6 sm:mb-24 sm:mt-0 mb-16;
+  @apply md:flex max-w-3xl sm:gap-8 sm:border-y sm:border-primary-300 pt-6 sm:mb-24 sm:mt-0 mb-16;
 }
 
 .collection-notes p:first-child {
@@ -110,7 +86,7 @@ body {
 
 .collection-title,
 .artwork-subtitle {
-  @apply mb-1 sm:mb-4 mt-12 font-light text-rose-500 text-xs sm:text-base;
+  @apply mb-1 sm:mb-4 mt-12 font-light text-primary-500 text-xs sm:text-base;
 }
 
 .artwork-subtitle {
@@ -199,10 +175,14 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
+  .job-title{
+    @apply text-white font-bold;
+  }
+
   .collection-title,
   .artwork-subtitle,
   .job-metadata {
-    @apply text-primary-50;
+    @apply text-gray-300;
   }
 
   .collection-title a,

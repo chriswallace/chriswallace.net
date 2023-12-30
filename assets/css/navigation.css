@@ -1,5 +1,5 @@
 .navigation-list {
-  @apply font-light bg-rose-100 sm:bg-transparent;
+  @apply bg-primary-100 sm:bg-transparent;
 }
 
 .menu-button {
@@ -11,23 +11,23 @@
 }
 
 .menu-button i:before {
-  @apply border-t-2 border-rose-500 block w-8 overflow-hidden top-0 absolute;
+  @apply border-t-2 border-primary-500 block w-8 overflow-hidden top-0 absolute;
   height: 0;
   content: "";
 }
 
 .menu-button i:after {
-  @apply border-t-2 border-rose-500 block w-8 overflow-hidden bottom-0 absolute;
+  @apply border-t-2 border-primary-500 block w-8 overflow-hidden bottom-0 absolute;
   height: 0;
   content: "";
 }
 
 .navigation {
-  @apply py-4 md:mb-12 md:mb-24 z-20 relative;
+  @apply py-4 md:mb-12 md:mb-24 z-20 max-w-6xl mx-auto relative;
 }
 
 .navigation .logo {
-  @apply inline-block w-[48px] h-[48px] m-0 p-0 text-rose-500;
+  @apply inline-block w-[48px] h-[48px] m-0 p-0 text-primary-400;
 }
 
 .navigation .logo path {
@@ -39,19 +39,19 @@
 }
 
 .navigation .close-button-icon {
-  @apply inline-block border-2 border-rose-500 p-2 rounded-full;
+  @apply inline-block border-2 border-primary-500 p-2 rounded-full;
 }
 
 .navigation .close-button-svg {
-  @apply w-8 h-8 block text-rose-500 fill-current;
+  @apply w-8 h-8 block text-primary-500 fill-current;
 }
 
 .navigation .close-button:hover .close-button-icon {
-  @apply border-rose-600;
+  @apply border-primary-600;
 }
 
 .navigation .close-button:hover .close-button-svg {
-  @apply text-rose-800;
+  @apply text-primary-800;
 }
 
 .navigation-list {
@@ -59,7 +59,7 @@
 }
 
 .navigation-list ul {
-  @apply list-none m-0 p-0 mx-auto w-full md:flex text-center self-center justify-center items-center md:justify-items-stretch;
+  @apply list-none m-0 p-0 md:flex text-center self-center justify-center items-center justify-items-start;
 }
 
 .navigation-list.invis {
@@ -79,11 +79,11 @@
 }
 
 .navigation-list li a {
-  @apply align-middle p-2 block text-2xl md:text-xs lg:text-lg font-light leading-none md:px-3 md:py-4 no-underline decoration-4 text-gray-700 hover:underline hover:decoration-rose-700 hover:text-rose-700;
+  @apply mt-1 p-2 block uppercase text-base md:text-xs lg:text-sm font-bold leading-none md:px-6 md:py-4 no-underline decoration-4 text-gray-700 hover:underline hover:decoration-primary-700 hover:text-primary-700;
 }
 
 .navigation-list li.home a {
-  @apply ml-0 pl-2 pr-6 mt-1 inline-block uppercase wide-font leading-none text-rose-500;
+  @apply ml-0 pl-2 pr-8 mt-1 inline-block uppercase wide-font leading-none text-primary-500;
 }
 
 .site-title {
@@ -153,11 +153,11 @@
   }
 
   .navigation-list li:not(.home) a {
-    @apply text-gray-100 hover:text-white hover:decoration-orange-700;
+    @apply text-gray-100 hover:text-white hover:decoration-primary-700;
   }
 
   .navigation-list li:first-child a {
-    @apply text-white underline decoration-orange-700 hover:decoration-white;
+    @apply text-white underline decoration-primary-700 hover:decoration-white;
   }
 
   .social-button {

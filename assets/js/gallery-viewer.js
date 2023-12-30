@@ -214,6 +214,65 @@ document.addEventListener("DOMContentLoaded", () => {
     goFullscreen(images[newIndex], newIndex);
   };
 
+  function setupImages(img, index) {
+    if (img.getAttribute("data-processed") === "true") {
+      return;
+    }
+
+    imgObserver.observe(img); // Start observing this image
+
+    img.addEventListener("mouseover", function (event) {
+      const altText = this.getAttribute("alt");
+      if (altText) {
+        tooltip.textContent = altText;
+        tooltip.style.display = "block";
+      }
+    });
+
+    img.addEventListener("mousemove", function (event) {
+      const tooltipWidth = tooltip.offsetWidth;
+      const windowWidth = window.innerWidth;
+
+      if (event.pageX + tooltipWidth + 20 > windowWidth) {
+        // Tooltip would go off the right edge of the screen
+        // Show tooltip to the left of the cursor instead
+        tooltip.style.left = event.pageX - tooltipWidth - 10 + "px";
+      } else {
+        // Normal behavior
+        tooltip.style.left = event.pageX + 10 + "px";
+      }
+
+      tooltip.style.top = event.pageY + 10 + "px";
+    });
+
+    img.addEventListener("mouseout", function () {
+      tooltip.style.display = "none";
+    });
+
+    // Create a wrapper div around the image
+    const wrapperDiv = document.createElement("div");
+    wrapperDiv.classList.add("image-wrapper");
+    img.parentNode.insertBefore(wrapperDiv, img);
+    wrapperDiv.appendChild(img);
+
+    const maximizeIcon = document.createElement("div");
+    maximizeIcon.classList.add("maximize-icon");
+
+    // Check if img alt attribute is not empty before adding caption
+    if (isMobile() && img.alt.trim().length) {
+      const caption = document.createElement("caption");
+      caption.innerHTML = img.alt;
+      wrapperDiv.appendChild(caption);
+    }
+
+    if (!isMobile() && webglSupport()) {
+      wrapperDiv.appendChild(maximizeIcon);
+      maximizeIcon.addEventListener("click", () => goFullscreen(img, index));
+    }
+
+    img.setAttribute("data-processed", "true");
+  }
+
   const goFullscreen = (img, index, shouldAutoRotate = false) => {
     viewer = document.getElementById("fullscreen-viewer");
 

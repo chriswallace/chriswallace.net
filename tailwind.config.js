@@ -20,7 +20,7 @@ module.exports = {
         x: "x mandatory",
       },
       fontFamily: {
-        sans: ["Gabarito", "sans-serif"],
+        sans: ["lingua", "sans-serif"],
       },
       fontSize: {
         xs: [
@@ -50,7 +50,7 @@ module.exports = {
         lg: [
           "1.2rem",
           {
-            lineHeight: "1.2",
+            lineHeight: "1.35",
             letterSpacing: "-0.01em",
             fontWeight: "400",
           },
@@ -58,7 +58,7 @@ module.exports = {
         xl: [
           "1.4rem",
           {
-            lineHeight: "1.2",
+            lineHeight: "1.35",
             letterSpacing: "-0.01em",
             fontWeight: "400",
           },
@@ -66,7 +66,7 @@ module.exports = {
         "2xl": [
           "1.8rem",
           {
-            lineHeight: "1.2",
+            lineHeight: "1.35",
             letterSpacing: "-0.01em",
             fontWeight: "400",
           },
@@ -74,7 +74,7 @@ module.exports = {
         "3xl": [
           "2.2rem",
           {
-            lineHeight: "1.2",
+            lineHeight: "1.35",
             letterSpacing: "-0.02em",
             fontWeight: "600",
           },
@@ -82,7 +82,7 @@ module.exports = {
         "4xl": [
           "3rem",
           {
-            lineHeight: "1.2",
+            lineHeight: "1.35",
             letterSpacing: "-0.04em",
             fontWeight: "600",
           },
@@ -108,39 +108,21 @@ module.exports = {
           700: "#4f4f4f",
           800: "#454545",
           900: "#3d3d3d",
-          950: "#262626",
+          950: "#141414",
         },
         primary: {
-          50: "#f0f1fd",
-          100: "#e4e6fb",
-          200: "#ced0f7",
-          300: "#b1b3f0",
-          400: "#9591e8",
-          500: "#8376de",
-          600: "#6d55ce",
-          700: "#634bb7",
-          800: "#503f94",
-          900: "#443976",
-          950: "#292145",
-        },
-        gallery: {
-          50: "#f8f8f8",
-          100: "#ebebeb",
-          200: "#dcdcdc",
-        },
-        rose: {
-          50: "#fdf5f3",
-          100: "#fbe9e5",
-          200: "#f9d6cf",
-          300: "#f3baae",
-          400: "#ea927f",
-          500: "#db6248",
-          600: "#ca5238",
-          700: "#a9422c",
-          800: "#8c3a28",
-          900: "#753527",
-          950: "#3f1810",
-        },
+          '50': '#f5f4fe',
+          '100': '#efeafd',
+          '200': '#e0d8fc',
+          '300': '#c9b8fa',
+          '400': '#af90f5',
+          '500': '#8750ed',
+          '600': '#8542e5',
+          '700': '#7630d1',
+          '800': '#6328af',
+          '900': '#522290',
+          '950': '#321461',
+        }
       },
       minWidth: {
         1: "0.25rem",
