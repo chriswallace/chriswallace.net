@@ -23,8 +23,8 @@ async function captureAndUpload(url, fileName) {
     });
 
     await page.setViewport({
-        width: dimensions.width,
-        height: dimensions.height,
+        width: 1080,
+        height: 1080,
         deviceScaleFactor: 1,
     });
 
