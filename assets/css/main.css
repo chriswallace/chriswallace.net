@@ -23,6 +23,7 @@ body {
 
 .home-title {
   @apply text-xl md:text-2xl mb-8;
+  font-weight: 300;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,7 +35,7 @@ body {
 /* Resume Page */
 
 .download-resume {
-  @apply -top-2 md:-top-3 mb-12 relative;
+  @apply mb-12 relative;
 }
 
 .feather {
@@ -176,7 +177,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   .job-title{
-    @apply text-white font-bold;
+    @apply text-white font-medium;
   }
 
   .collection-title,

@@ -1,5 +1,5 @@
 a {
-  @apply underline underline-offset-4 text-primary-500 decoration-primary-500 hover:decoration-primary-400 hover:text-primary-400 decoration-solid decoration-4;
+  @apply underline underline-offset-4 text-primary-500 decoration-primary-500 hover:decoration-primary-500 hover:text-primary-800 decoration-solid decoration-4;
   text-decoration-skip-ink: auto;
 }
 

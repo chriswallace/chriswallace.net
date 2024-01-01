@@ -20,7 +20,7 @@ module.exports = {
         x: "x mandatory",
       },
       fontFamily: {
-        sans: ["lingua", "sans-serif"],
+        sans: ["usual", "sans-serif"],
       },
       fontSize: {
         xs: [
@@ -28,7 +28,7 @@ module.exports = {
           {
             lineHeight: "1.5",
             letterSpacing: "0",
-            fontWeight: "400",
+            fontWeight: "300",
           },
         ],
         sm: [
@@ -36,7 +36,7 @@ module.exports = {
           {
             lineHeight: "1.5",
             letterSpacing: "0",
-            fontWeight: "400",
+            fontWeight: "300",
           },
         ],
         base: [
@@ -44,55 +44,55 @@ module.exports = {
           {
             lineHeight: "1.5",
             letterSpacing: "0",
-            fontWeight: "400",
+            fontWeight: "300",
           },
         ],
         lg: [
           "1.2rem",
           {
-            lineHeight: "1.35",
+            lineHeight: "1.355",
             letterSpacing: "-0.01em",
-            fontWeight: "400",
+            fontWeight: "300",
           },
         ],
         xl: [
           "1.4rem",
           {
-            lineHeight: "1.35",
+            lineHeight: "1.5",
             letterSpacing: "-0.01em",
-            fontWeight: "400",
+            fontWeight: "500",
           },
         ],
         "2xl": [
           "1.8rem",
           {
-            lineHeight: "1.35",
+            lineHeight: "1.5",
             letterSpacing: "-0.01em",
-            fontWeight: "400",
+            fontWeight: "500",
           },
         ],
         "3xl": [
           "2.2rem",
           {
-            lineHeight: "1.35",
+            lineHeight: "1.5",
             letterSpacing: "-0.02em",
-            fontWeight: "600",
+            fontWeight: "500",
           },
         ],
         "4xl": [
           "3rem",
           {
-            lineHeight: "1.35",
-            letterSpacing: "-0.04em",
-            fontWeight: "600",
+            lineHeight: "1.5",
+            letterSpacing: "-0.02em",
+            fontWeight: "500",
           },
         ],
         "5xl": [
           "8rem",
           {
-            lineHeight: "1.2",
-            letterSpacing: "-0.04em",
-            fontWeight: "600",
+            lineHeight: "1.35",
+            letterSpacing: "-0.02em",
+            fontWeight: "500",
           },
         ],
       },

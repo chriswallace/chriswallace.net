@@ -44,7 +44,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: lingua, sans-serif;
+  font-family: usual, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -1197,6 +1197,10 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
 .mb-36 {
   margin-bottom: 9rem;
 }
@@ -1243,6 +1247,10 @@ video {
 
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .inline {
@@ -1596,14 +1604,14 @@ video {
 }
 
 .font-sans {
-  font-family: lingua, sans-serif;
+  font-family: usual, sans-serif;
 }
 
 .text-4xl {
   font-size: 3rem;
-  line-height: 1.35;
-  letter-spacing: -0.04em;
-  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-weight: 500;
 }
 
 .text-6xl {
@@ -1615,18 +1623,22 @@ video {
   font-size: 0.9rem;
   line-height: 1.5;
   letter-spacing: 0;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .text-xl {
   font-size: 1.4rem;
-  line-height: 1.35;
+  line-height: 1.5;
   letter-spacing: -0.01em;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .font-extralight {
   font-weight: 200;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .font-thin {
@@ -2488,6 +2500,10 @@ body.meetChris {
     margin-bottom: 5rem;
   }
 
+  .md\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .md\:inline {
     display: inline;
   }
@@ -2510,16 +2526,16 @@ body.meetChris {
 
   .md\:text-4xl {
     font-size: 3rem;
-    line-height: 1.35;
-    letter-spacing: -0.04em;
-    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    font-weight: 500;
   }
 
   .md\:text-base {
     font-size: 1.1rem;
     line-height: 1.5;
     letter-spacing: 0;
-    font-weight: 400;
+    font-weight: 300;
   }
 }
 
