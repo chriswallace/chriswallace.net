@@ -3,7 +3,7 @@ footer {
 }
 
 footer .logo{
-  @apply inline-block mr-2 w-[48px] h-[48px] m-0 p-0 text-primary-400;
+  @apply inline-block mr-2 w-[48px] h-[48px] m-0 p-0 text-primary-500;
 }
 
 footer .logo path{
@@ -21,18 +21,10 @@ footer p {
   }
 
   footer .logo{
-    @apply text-white;
+    @apply text-primary-500;
   }
 
   footer p {
-    @apply text-primary-200;
-  }
-  
-  .subtle-bg footer .logo{
-    @apply text-primary-400;
-  }
-  
-  .subtle-bg footer p{
-    @apply text-white;
+    @apply text-gray-200;
   }
 }

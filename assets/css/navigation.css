@@ -79,7 +79,9 @@
 }
 
 .navigation-list li a {
-  @apply mt-1 p-4 block uppercase text-xl md:text-xs lg:text-sm font-bold leading-none md:px-6 md:py-4 no-underline decoration-4 text-gray-700 hover:underline hover:decoration-primary-700 hover:text-primary-700;
+  @apply mt-1 p-4 block uppercase text-xl md:text-xs leading-none md:px-6 md:py-4 no-underline decoration-2 text-gray-700 hover:underline hover:decoration-primary-700 hover:text-primary-700;
+  letter-spacing: 2px;
+  font-weight: 400;
 }
 
 .navigation-list li.home a {
@@ -149,7 +151,7 @@
   }
 
   .navigation .logo {
-    @apply  text-primary-400 hover:text-primary-100;
+    @apply text-primary-500 hover:text-primary-400;
   }
 
   .navigation-list li:not(.home) a {

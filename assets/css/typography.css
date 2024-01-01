@@ -58,7 +58,8 @@ h6 {
 }
 
 .sub-heading {
-  @apply text-base sm:text-xl text-gray-500 mt-8 mb-4 md:mb-6;
+  @apply text-base sm:text-lg text-gray-500 mt-8 mb-4 md:mb-6;
+  font-weight: 500;
 }
 
 article {

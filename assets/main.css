@@ -1953,10 +1953,10 @@ h6 {
 
 @media (min-width: 640px) {
   .sub-heading {
-    font-size: 1.4rem;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 1.355;
     letter-spacing: -0.01em;
-    font-weight: 500;
+    font-weight: 300;
   }
 }
 
@@ -1964,6 +1964,10 @@ h6 {
   .sub-heading {
     margin-bottom: 1.5rem;
   }
+}
+
+.sub-heading {
+  font-weight: 500;
 }
 
 article {
@@ -2843,13 +2847,13 @@ a {
   padding: 1rem;
   font-size: 1.4rem;
   letter-spacing: -0.01em;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   line-height: 1;
   --tw-text-opacity: 1;
   color: rgb(79 79 79 / var(--tw-text-opacity));
   text-decoration-line: none;
-  text-decoration-thickness: 4px;
+  text-decoration-thickness: 2px;
 }
 
 .navigation-list li a:hover {
@@ -2872,13 +2876,9 @@ a {
   }
 }
 
-@media (min-width: 1024px) {
-  .navigation-list li a {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    letter-spacing: 0;
-    font-weight: 300;
-  }
+.navigation-list li a {
+  letter-spacing: 2px;
+  font-weight: 400;
 }
 
 .navigation-list li.home a {
@@ -3014,12 +3014,12 @@ a {
 
   .navigation .logo {
     --tw-text-opacity: 1;
-    color: rgb(175 144 245 / var(--tw-text-opacity));
+    color: rgb(135 80 237 / var(--tw-text-opacity));
   }
 
   .navigation .logo:hover {
     --tw-text-opacity: 1;
-    color: rgb(239 234 253 / var(--tw-text-opacity));
+    color: rgb(175 144 245 / var(--tw-text-opacity));
   }
 
   .navigation-list li:not(.home) a {
@@ -3073,7 +3073,7 @@ footer .logo {
   width: 48px;
   padding: 0px;
   --tw-text-opacity: 1;
-  color: rgb(175 144 245 / var(--tw-text-opacity));
+  color: rgb(135 80 237 / var(--tw-text-opacity));
 }
 
 footer .logo path {
@@ -3098,22 +3098,12 @@ footer p {
 
   footer .logo {
     --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
+    color: rgb(135 80 237 / var(--tw-text-opacity));
   }
 
   footer p {
     --tw-text-opacity: 1;
-    color: rgb(224 216 252 / var(--tw-text-opacity));
-  }
-
-  .subtle-bg footer .logo {
-    --tw-text-opacity: 1;
-    color: rgb(175 144 245 / var(--tw-text-opacity));
-  }
-
-  .subtle-bg footer p {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
+    color: rgb(209 209 209 / var(--tw-text-opacity));
   }
 }
 
@@ -4345,6 +4335,14 @@ body {
     display: inline;
     --tw-text-opacity: 1;
     color: rgb(201 184 250 / var(--tw-text-opacity));
+  }
+
+  .dark\:block {
+    display: block;
+  }
+
+  .dark\:hidden {
+    display: none;
   }
 }
 

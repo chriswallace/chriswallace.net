@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: 'media', // or 'class'
   mode: "jit",
   content: ["**/*.{html,md}"],
   theme: {
