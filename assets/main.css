@@ -1197,10 +1197,6 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
 .mb-36 {
   margin-bottom: 9rem;
 }
@@ -1608,15 +1604,17 @@ video {
 }
 
 .text-4xl {
-  font-size: 3rem;
+  font-size: 6rem;
   line-height: 1.5;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.06em;
   font-weight: 500;
 }
 
 .text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+  font-size: 5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 500;
 }
 
 .text-sm {
@@ -1627,7 +1625,7 @@ video {
 }
 
 .text-xl {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   letter-spacing: -0.01em;
   font-weight: 500;
@@ -1635,10 +1633,6 @@ video {
 
 .font-extralight {
   font-weight: 200;
-}
-
-.font-semibold {
-  font-weight: 600;
 }
 
 .font-thin {
@@ -1811,7 +1805,19 @@ html {
 }
 
 body {
-  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-weight: 300;
+  }
 }
 
 h1,
@@ -1841,17 +1847,19 @@ li {
 
 h1 {
   margin-bottom: 1.5rem;
-  font-size: 3rem;
+  font-size: 4rem;
   line-height: 1.5;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.06em;
   font-weight: 500;
 }
 
 @media (min-width: 768px) {
   h1 {
     max-width: 48rem;
-    font-size: 3.75rem;
-    line-height: 1;
+    font-size: 6rem;
+    line-height: 1.5;
+    letter-spacing: -0.06em;
+    font-weight: 500;
   }
 }
 
@@ -1859,14 +1867,19 @@ h2 {
   margin-top: 4rem;
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
-  line-height: 1.355;
+  line-height: 1.5;
   letter-spacing: -0.01em;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 @media (min-width: 640px) {
   h2 {
     margin-top: 6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  h2 {
     font-size: 1.4rem;
     line-height: 1.5;
     letter-spacing: -0.01em;
@@ -1877,7 +1890,7 @@ h2 {
 h3 {
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 0;
   font-weight: 300;
@@ -1889,16 +1902,29 @@ h3 {
   }
 }
 
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    font-weight: 500;
+  }
+}
+
+h3 {
+  font-weight: 500;
+}
+
 h4,
 h5,
 h6 {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
-  letter-spacing: 0;
-  font-weight: 300;
+  letter-spacing: -0.01em;
+  font-weight: 500;
 }
 
 @media (min-width: 640px) {
@@ -1911,17 +1937,19 @@ h6 {
 
 .primary-heading {
   margin-bottom: 1rem;
-  font-size: 3rem;
+  font-size: 4rem;
   line-height: 1.5;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.06em;
   font-weight: 500;
   text-transform: lowercase;
 }
 
 @media (min-width: 768px) {
   .primary-heading {
-    font-size: 3.75rem;
-    line-height: 1;
+    font-size: 6rem;
+    line-height: 1.5;
+    letter-spacing: -0.06em;
+    font-weight: 500;
   }
 }
 
@@ -1943,10 +1971,10 @@ h6 {
 .sub-heading {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
-  letter-spacing: 0;
-  font-weight: 300;
+  letter-spacing: -0.01em;
+  font-weight: 500;
   --tw-text-opacity: 1;
   color: rgb(109 109 109 / var(--tw-text-opacity));
 }
@@ -1954,9 +1982,9 @@ h6 {
 @media (min-width: 640px) {
   .sub-heading {
     font-size: 1.2rem;
-    line-height: 1.355;
+    line-height: 1.5;
     letter-spacing: -0.01em;
-    font-weight: 300;
+    font-weight: 500;
   }
 }
 
@@ -2020,7 +2048,7 @@ caption {
   caption {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0;
     font-weight: 300;
@@ -2157,10 +2185,10 @@ p + hr {
 
 @media (min-width: 1024px) {
   .caret::after {
-    font-size: 1.2rem;
-    line-height: 1.355;
+    font-size: 1rem;
+    line-height: 1.5;
     letter-spacing: -0.01em;
-    font-weight: 300;
+    font-weight: 500;
   }
 }
 
@@ -2234,12 +2262,21 @@ a {
 .back {
   margin-bottom: 1rem;
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: 1rem;
   line-height: 1.5;
   letter-spacing: -0.01em;
   font-weight: 300;
   --tw-text-opacity: 1;
   color: rgb(135 80 237 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .back {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    font-weight: 500;
+  }
 }
 
 .button .emoji-icon {
@@ -2389,10 +2426,10 @@ a {
   margin-top: 0px;
   margin-bottom: 0.25rem;
   padding-top: 0px;
-  font-size: 1.2rem;
-  line-height: 1.355;
+  font-size: 1rem;
+  line-height: 1.5;
   letter-spacing: -0.01em;
-  font-weight: 300;
+  font-weight: 500;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -2400,7 +2437,7 @@ a {
 @media (min-width: 1024px) {
   .card-text h3 {
     margin-bottom: 0.5rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     letter-spacing: -0.01em;
     font-weight: 500;
@@ -2420,7 +2457,7 @@ a {
 @media (min-width: 1024px) {
   .card-text p {
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0;
     font-weight: 300;
@@ -2445,10 +2482,10 @@ a {
 
 @media (min-width: 1024px) {
   .card-text .cta::after {
-    font-size: 1.2rem;
-    line-height: 1.355;
+    font-size: 1rem;
+    line-height: 1.5;
     letter-spacing: -0.01em;
-    font-weight: 300;
+    font-weight: 500;
   }
 }
 
@@ -2460,7 +2497,7 @@ a {
 
 @media (min-width: 1024px) {
   .card-text .cta {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0;
     font-weight: 300;
@@ -2471,10 +2508,10 @@ a {
   margin-top: 0px;
   margin-bottom: 0.25rem;
   padding-top: 0px;
-  font-size: 1.2rem;
-  line-height: 1.355;
+  font-size: 1rem;
+  line-height: 1.5;
   letter-spacing: -0.01em;
-  font-weight: 300;
+  font-weight: 500;
   --tw-text-opacity: 1;
   color: rgb(69 69 69 / var(--tw-text-opacity));
 }
@@ -2482,7 +2519,7 @@ a {
 @media (min-width: 1024px) {
   .dark .card-text h3 {
     margin-bottom: 0.5rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     letter-spacing: -0.01em;
     font-weight: 500;
@@ -2502,7 +2539,7 @@ a {
 @media (min-width: 1024px) {
   .dark .card-text p {
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0;
     font-weight: 300;
@@ -2588,7 +2625,7 @@ a {
 
 @media (min-width: 640px) {
   .card-zoom-text h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0;
     font-weight: 300;
@@ -2597,10 +2634,10 @@ a {
 
 @media (min-width: 768px) {
   .card-zoom-text h2 {
-    font-size: 1.2rem;
-    line-height: 1.355;
+    font-size: 1rem;
+    line-height: 1.5;
     letter-spacing: -0.01em;
-    font-weight: 300;
+    font-weight: 500;
   }
 }
 
@@ -2845,9 +2882,9 @@ a {
   margin-top: 0.25rem;
   display: block;
   padding: 1rem;
-  font-size: 1.4rem;
-  letter-spacing: -0.01em;
-  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+  font-weight: 300;
   text-transform: uppercase;
   line-height: 1;
   --tw-text-opacity: 1;
@@ -2878,7 +2915,7 @@ a {
 
 .navigation-list li a {
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .navigation-list li.home a {
@@ -2897,7 +2934,7 @@ a {
 .site-title {
   float: right;
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   letter-spacing: -0.01em;
   font-weight: 300;
@@ -2987,6 +3024,8 @@ a {
   .navigation .close-button:hover .close-button-icon {
     --tw-border-opacity: 1;
     border-color: rgb(255 255 255 / var(--tw-border-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 
   .navigation .close-button svg {
@@ -2996,9 +3035,10 @@ a {
 
   .navigation .close-button:hover svg {
     --tw-border-opacity: 1;
-    border-color: rgb(209 209 209 / var(--tw-border-opacity));
+    border-color: rgb(255 255 255 / var(--tw-border-opacity));
+    fill: #fff;
     --tw-text-opacity: 1;
-    color: rgb(209 209 209 / var(--tw-text-opacity));
+    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 
   .navigation-list {
@@ -3209,7 +3249,7 @@ emoji-picker {
 .emojiCursor {
   position: absolute;
   z-index: 50;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   letter-spacing: -0.01em;
   font-weight: 500;
@@ -3493,10 +3533,10 @@ emoji-picker.fullscreen-viewer {
   display: inline-block;
   height: 1.5rem;
   overflow: hidden;
-  font-size: 1.2rem;
-  line-height: 1.355;
+  font-size: 1rem;
+  line-height: 1.5;
   letter-spacing: -0.01em;
-  font-weight: 300;
+  font-weight: 500;
   font-style: italic;
   line-height: 1.75rem;
   font-family: "DS Digital", monospace;
@@ -3977,7 +4017,7 @@ body {
 
 .home-title {
   margin-bottom: 2rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   letter-spacing: -0.01em;
   font-weight: 500;
@@ -3985,7 +4025,7 @@ body {
 
 @media (min-width: 768px) {
   .home-title {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     line-height: 1.5;
     letter-spacing: -0.01em;
     font-weight: 500;
@@ -4116,7 +4156,7 @@ body {
 .artwork-subtitle {
     margin-left: 0px;
     margin-right: 0px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0;
     font-weight: 300;
@@ -4161,7 +4201,7 @@ body {
   .collection-title,
 .artwork-subtitle {
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0;
     font-weight: 300;
@@ -4406,14 +4446,14 @@ body {
   }
 
   .md\:text-4xl {
-    font-size: 3rem;
+    font-size: 6rem;
     line-height: 1.5;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.06em;
     font-weight: 500;
   }
 
   .md\:text-base {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0;
     font-weight: 300;

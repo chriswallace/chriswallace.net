@@ -41,7 +41,7 @@ module.exports = {
           },
         ],
         base: [
-          "1.1rem",
+          "1rem",
           {
             lineHeight: "1.5",
             letterSpacing: "0",
@@ -49,15 +49,15 @@ module.exports = {
           },
         ],
         lg: [
-          "1.2rem",
+          "1rem",
           {
-            lineHeight: "1.355",
+            lineHeight: "1.5",
             letterSpacing: "-0.01em",
-            fontWeight: "300",
+            fontWeight: "500",
           },
         ],
         xl: [
-          "1.4rem",
+          "1.2rem",
           {
             lineHeight: "1.5",
             letterSpacing: "-0.01em",
@@ -65,7 +65,7 @@ module.exports = {
           },
         ],
         "2xl": [
-          "1.8rem",
+          "1.4rem",
           {
             lineHeight: "1.5",
             letterSpacing: "-0.01em",
@@ -73,25 +73,33 @@ module.exports = {
           },
         ],
         "3xl": [
-          "2.2rem",
+          "4rem",
           {
             lineHeight: "1.5",
-            letterSpacing: "-0.02em",
+            letterSpacing: "-0.06em",
             fontWeight: "500",
           },
         ],
         "4xl": [
-          "3rem",
+          "6rem",
           {
             lineHeight: "1.5",
-            letterSpacing: "-0.02em",
+            letterSpacing: "-0.06em",
             fontWeight: "500",
           },
         ],
         "5xl": [
-          "8rem",
+          "2.4rem",
           {
-            lineHeight: "1.35",
+            lineHeight: "1.1",
+            letterSpacing: "-0.02em",
+            fontWeight: "500",
+          },
+        ],
+        "6xl": [
+          "5rem",
+          {
+            lineHeight: "1.1",
             letterSpacing: "-0.02em",
             fontWeight: "500",
           },

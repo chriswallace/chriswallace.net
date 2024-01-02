@@ -1197,10 +1197,6 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
 .mb-36 {
   margin-bottom: 9rem;
 }
@@ -1608,15 +1604,17 @@ video {
 }
 
 .text-4xl {
-  font-size: 3rem;
+  font-size: 6rem;
   line-height: 1.5;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.06em;
   font-weight: 500;
 }
 
 .text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+  font-size: 5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 500;
 }
 
 .text-sm {
@@ -1627,7 +1625,7 @@ video {
 }
 
 .text-xl {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   letter-spacing: -0.01em;
   font-weight: 500;
@@ -1635,10 +1633,6 @@ video {
 
 .font-extralight {
   font-weight: 200;
-}
-
-.font-semibold {
-  font-weight: 600;
 }
 
 .font-thin {
@@ -2535,14 +2529,14 @@ body.meetChris {
   }
 
   .md\:text-4xl {
-    font-size: 3rem;
+    font-size: 6rem;
     line-height: 1.5;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.06em;
     font-weight: 500;
   }
 
   .md\:text-base {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0;
     font-weight: 300;

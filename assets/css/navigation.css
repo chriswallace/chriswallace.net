@@ -79,9 +79,9 @@
 }
 
 .navigation-list li a {
-  @apply mt-1 p-4 block uppercase text-xl md:text-xs leading-none md:px-6 md:py-4 no-underline decoration-2 text-gray-700 hover:underline hover:decoration-primary-700 hover:text-primary-700;
+  @apply mt-1 p-4 block uppercase text-sm md:text-xs leading-none md:px-6 md:py-4 no-underline decoration-2 text-gray-700 hover:underline hover:decoration-primary-700 hover:text-primary-700;
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .navigation-list li.home a {
@@ -135,7 +135,7 @@
   }
 
   .navigation .close-button:hover .close-button-icon {
-    @apply border-white;
+    @apply border-white text-white;
   }
 
   .navigation .close-button svg {
@@ -143,7 +143,7 @@
   }
 
   .navigation .close-button:hover svg {
-    @apply border-gray-200 text-gray-200;
+    @apply border-white text-white fill-white;
   }
 
   .navigation-list {
