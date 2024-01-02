@@ -1176,6 +1176,11 @@ video {
   margin-right: auto;
 }
 
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -1191,10 +1196,6 @@ video {
 
 .mb-16 {
   margin-bottom: 4rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 
 .mb-36 {
@@ -1243,10 +1244,6 @@ video {
 
 .block {
   display: block;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .inline {
@@ -1603,23 +1600,16 @@ video {
   font-family: usual, sans-serif;
 }
 
-.text-4xl {
-  font-size: 6rem;
-  line-height: 1.5;
-  letter-spacing: -0.06em;
-  font-weight: 500;
-}
-
 .text-6xl {
   font-size: 5rem;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.334;
+  letter-spacing: -0.03em;
   font-weight: 500;
 }
 
 .text-sm {
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -2528,16 +2518,13 @@ body.meetChris {
     flex-direction: row;
   }
 
-  .md\:text-4xl {
-    font-size: 6rem;
-    line-height: 1.5;
-    letter-spacing: -0.06em;
-    font-weight: 500;
+  .md\:text-\[1\.2rem\] {
+    font-size: 1.2rem;
   }
 
   .md\:text-base {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.65;
     letter-spacing: 0;
     font-weight: 300;
   }

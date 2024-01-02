@@ -10,7 +10,6 @@
       <p>
         Copyright © 2023 Chris Wallace. All rights reserved. Artwork displayed on this website is copyright its respective creator.
       </p>
-
-      <p>Want to get in touch with me? Find me on <a href="https://x.com/chriswallace">Twitter</a>, <a href="https://linkedin.com/in/chriswallace2">LinkedIn</a>, or <a href="mailto:chriswallace7@protonmail.com">email</a>.</p>
+      <p>This website was built with <a href="https://jekyllrb.com">Jekyll</a> and <a href="https://pages.github.com">Github Pages</a>.</p>
     </div>
   </footer>

@@ -3,7 +3,6 @@ const terser = require('terser');
 
 const filesToConcatAndMinify = [
     './assets/js/navigation.js',
-    './assets/js/bg-switch.js',
     './assets/js/animations.js',
     './assets/js/image-lazyloader.js',
 ];

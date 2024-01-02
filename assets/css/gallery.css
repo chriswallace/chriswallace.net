@@ -62,29 +62,12 @@
   @apply grid-cols-1 md:grid-cols-4;
 }
 
-.gallery-quadruple-wide-trip-small {
-  @apply grid-cols-1 sm:grid-cols-4;
-}
-
-.gallery-six-wide {
-  @apply grid-cols-1 sm:grid-cols-6;
-}
-
-.gallery-single-wide img,
-.gallery-single-wide-portrait img,
-.gallery-double-wide img,
-.gallery-triple-wide img,
-.gallery-quadruple-wide img,
-.gallery-quadruple-wide-trip-small img,
-.gallery-six-wide img,
-.gallery-single-wide video,
-.gallery-single-wide-portrait video,
-.gallery-double-wide video,
-.gallery-triple-wide video,
-.gallery-quadruple-wide video,
-.gallery-quadruple-wide-trip-small video,
-.gallery-six-wide video {
+.gallery-double-wide img{
   @apply min-w-full sm:mx-0;
+}
+
+.portfolio-image{
+  @apply rounded-md mb-6;
 }
 
 .maximize-icon {

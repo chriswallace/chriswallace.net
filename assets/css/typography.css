@@ -27,7 +27,7 @@ h5 {
 p,
 ul,
 li {
-  @apply text-gray-700;
+  @apply text-gray-500;
 }
 
 h1 {
@@ -60,7 +60,10 @@ h6 {
 
 .sub-heading {
   @apply text-lg sm:text-xl text-gray-500 mt-8 mb-4 md:mb-6;
-  font-weight: 500;
+}
+
+.sub-heading-curated{
+  @apply text-xl md:text-2xl text-gray-500 mt-3 mb-16 relative;
 }
 
 article {

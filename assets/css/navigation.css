@@ -79,8 +79,8 @@
 }
 
 .navigation-list li a {
-  @apply mt-1 p-4 block uppercase text-sm md:text-xs leading-none md:px-6 md:py-4 no-underline decoration-2 text-gray-700 hover:underline hover:decoration-primary-700 hover:text-primary-700;
-  letter-spacing: 2px;
+  @apply mt-1 p-4 block uppercase text-sm md:text-xs leading-none md:px-4 md:py-4 no-underline decoration-2 text-gray-700 hover:underline hover:decoration-primary-700 hover:text-primary-700;
+  letter-spacing: 1px;
   font-weight: 300;
 }
 

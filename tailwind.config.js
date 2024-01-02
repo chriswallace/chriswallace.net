@@ -27,7 +27,7 @@ module.exports = {
         xs: [
           "0.775rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "1.75",
             letterSpacing: "0",
             fontWeight: "300",
           },
@@ -35,7 +35,7 @@ module.exports = {
         sm: [
           "0.9rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "1.75",
             letterSpacing: "0",
             fontWeight: "300",
           },
@@ -43,7 +43,7 @@ module.exports = {
         base: [
           "1rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "1.65",
             letterSpacing: "0",
             fontWeight: "300",
           },
@@ -51,7 +51,7 @@ module.exports = {
         lg: [
           "1rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "1.65",
             letterSpacing: "-0.01em",
             fontWeight: "500",
           },
@@ -73,34 +73,34 @@ module.exports = {
           },
         ],
         "3xl": [
-          "4rem",
+          "2.4rem",
           {
-            lineHeight: "1.5",
-            letterSpacing: "-0.06em",
+            lineHeight: "1.334",
+            letterSpacing: "-0.03em",
             fontWeight: "500",
           },
         ],
         "4xl": [
-          "6rem",
+          "3rem",
           {
-            lineHeight: "1.5",
-            letterSpacing: "-0.06em",
+            lineHeight: "1.334",
+            letterSpacing: "-0.03em",
             fontWeight: "500",
           },
         ],
         "5xl": [
-          "2.4rem",
+          "4rem",
           {
-            lineHeight: "1.1",
-            letterSpacing: "-0.02em",
+            lineHeight: "1.334",
+            letterSpacing: "-0.03em",
             fontWeight: "500",
           },
         ],
         "6xl": [
           "5rem",
           {
-            lineHeight: "1.1",
-            letterSpacing: "-0.02em",
+            lineHeight: "1.334",
+            letterSpacing: "-0.03em",
             fontWeight: "500",
           },
         ],

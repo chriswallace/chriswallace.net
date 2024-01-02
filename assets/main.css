@@ -1176,6 +1176,11 @@ video {
   margin-right: auto;
 }
 
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -1191,10 +1196,6 @@ video {
 
 .mb-16 {
   margin-bottom: 4rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 
 .mb-36 {
@@ -1243,10 +1244,6 @@ video {
 
 .block {
   display: block;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .inline {
@@ -1603,23 +1600,16 @@ video {
   font-family: usual, sans-serif;
 }
 
-.text-4xl {
-  font-size: 6rem;
-  line-height: 1.5;
-  letter-spacing: -0.06em;
-  font-weight: 500;
-}
-
 .text-6xl {
   font-size: 5rem;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.334;
+  letter-spacing: -0.03em;
   font-weight: 500;
 }
 
 .text-sm {
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -1806,7 +1796,7 @@ html {
 
 body {
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
   font-weight: 400;
 }
@@ -1814,7 +1804,7 @@ body {
 @media (min-width: 768px) {
   body {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.65;
     letter-spacing: 0;
     font-weight: 300;
   }
@@ -1842,23 +1832,23 @@ p,
 ul,
 li {
   --tw-text-opacity: 1;
-  color: rgb(79 79 79 / var(--tw-text-opacity));
+  color: rgb(109 109 109 / var(--tw-text-opacity));
 }
 
 h1 {
   margin-bottom: 1.5rem;
-  font-size: 4rem;
-  line-height: 1.5;
-  letter-spacing: -0.06em;
+  font-size: 2.4rem;
+  line-height: 1.334;
+  letter-spacing: -0.03em;
   font-weight: 500;
 }
 
 @media (min-width: 768px) {
   h1 {
     max-width: 48rem;
-    font-size: 6rem;
-    line-height: 1.5;
-    letter-spacing: -0.06em;
+    font-size: 3rem;
+    line-height: 1.334;
+    letter-spacing: -0.03em;
     font-weight: 500;
   }
 }
@@ -1891,7 +1881,7 @@ h3 {
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.65;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -1922,7 +1912,7 @@ h6 {
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.65;
   letter-spacing: -0.01em;
   font-weight: 500;
 }
@@ -1937,18 +1927,18 @@ h6 {
 
 .primary-heading {
   margin-bottom: 1rem;
-  font-size: 4rem;
-  line-height: 1.5;
-  letter-spacing: -0.06em;
+  font-size: 2.4rem;
+  line-height: 1.334;
+  letter-spacing: -0.03em;
   font-weight: 500;
   text-transform: lowercase;
 }
 
 @media (min-width: 768px) {
   .primary-heading {
-    font-size: 6rem;
-    line-height: 1.5;
-    letter-spacing: -0.06em;
+    font-size: 3rem;
+    line-height: 1.334;
+    letter-spacing: -0.03em;
     font-weight: 500;
   }
 }
@@ -1972,7 +1962,7 @@ h6 {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.65;
   letter-spacing: -0.01em;
   font-weight: 500;
   --tw-text-opacity: 1;
@@ -1994,8 +1984,25 @@ h6 {
   }
 }
 
-.sub-heading {
+.sub-heading-curated {
+  position: relative;
+  margin-top: 0.75rem;
+  margin-bottom: 4rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
   font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(109 109 109 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .sub-heading-curated {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    font-weight: 500;
+  }
 }
 
 article {
@@ -2037,7 +2044,7 @@ caption {
   display: block;
   text-align: center;
   font-size: 0.775rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
   --tw-text-opacity: 1;
@@ -2049,7 +2056,7 @@ caption {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.65;
     letter-spacing: 0;
     font-weight: 300;
   }
@@ -2178,7 +2185,7 @@ p + hr {
 .caret::after {
   vertical-align: baseline;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -2186,7 +2193,7 @@ p + hr {
 @media (min-width: 1024px) {
   .caret::after {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.65;
     letter-spacing: -0.01em;
     font-weight: 500;
   }
@@ -2210,10 +2217,11 @@ p + hr {
 }
 
 a {
+  font-weight: 400;
   --tw-text-opacity: 1;
-  color: rgb(135 80 237 / var(--tw-text-opacity));
+  color: rgb(118 48 209 / var(--tw-text-opacity));
   text-decoration-line: underline;
-  text-decoration-color: #8750ed;
+  text-decoration-color: #c9b8fa;
   text-decoration-style: solid;
   text-decoration-thickness: 4px;
   text-underline-offset: 4px;
@@ -2221,8 +2229,8 @@ a {
 
 a:hover {
   --tw-text-opacity: 1;
-  color: rgb(99 40 175 / var(--tw-text-opacity));
-  text-decoration-color: #8750ed;
+  color: rgb(118 48 209 / var(--tw-text-opacity));
+  text-decoration-color: #7630d1;
 }
 
 a {
@@ -2263,7 +2271,7 @@ a {
   margin-bottom: 1rem;
   display: inline-block;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.65;
   letter-spacing: -0.01em;
   font-weight: 300;
   --tw-text-opacity: 1;
@@ -2295,8 +2303,8 @@ a {
 
   a:hover {
     --tw-text-opacity: 1;
-    color: rgb(201 184 250 / var(--tw-text-opacity));
-    text-decoration-color: #c9b8fa;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    text-decoration-color: #fff;
   }
 
   a {
@@ -2427,7 +2435,7 @@ a {
   margin-bottom: 0.25rem;
   padding-top: 0px;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.65;
   letter-spacing: -0.01em;
   font-weight: 500;
   --tw-text-opacity: 1;
@@ -2444,21 +2452,25 @@ a {
   }
 }
 
+.card-text h3{
+  font-weight: 500;
+}
+
 .card-text p {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
   --tw-text-opacity: 1;
-  color: rgb(224 216 252 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1024px) {
   .card-text p {
     margin-bottom: 1rem;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.65;
     letter-spacing: 0;
     font-weight: 300;
   }
@@ -2466,7 +2478,7 @@ a {
 
 .card-text .cta {
   font-size: 0.775rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
   text-decoration: none;
@@ -2475,7 +2487,7 @@ a {
 .card-text .cta::after {
   vertical-align: baseline;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -2483,7 +2495,7 @@ a {
 @media (min-width: 1024px) {
   .card-text .cta::after {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.65;
     letter-spacing: -0.01em;
     font-weight: 500;
   }
@@ -2498,7 +2510,7 @@ a {
 @media (min-width: 1024px) {
   .card-text .cta {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.65;
     letter-spacing: 0;
     font-weight: 300;
   }
@@ -2509,7 +2521,7 @@ a {
   margin-bottom: 0.25rem;
   padding-top: 0px;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.65;
   letter-spacing: -0.01em;
   font-weight: 500;
   --tw-text-opacity: 1;
@@ -2529,7 +2541,7 @@ a {
 .dark .card-text p {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
   --tw-text-opacity: 1;
@@ -2540,7 +2552,7 @@ a {
   .dark .card-text p {
     margin-bottom: 1rem;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.65;
     letter-spacing: 0;
     font-weight: 300;
   }
@@ -2626,7 +2638,7 @@ a {
 @media (min-width: 640px) {
   .card-zoom-text h2 {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.65;
     letter-spacing: 0;
     font-weight: 300;
   }
@@ -2635,25 +2647,25 @@ a {
 @media (min-width: 768px) {
   .card-zoom-text h2 {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.65;
     letter-spacing: -0.01em;
     font-weight: 500;
   }
 }
 
-.subtle-bg .card-text p {
+.card-text p {
   --tw-text-opacity: 1;
   color: rgb(250 200 50 / var(--tw-text-opacity));
 }
 
-.subtle-bg .bg-image-card:not(.dark) .card-text h3,
-.subtle-bg .bg-image-card:not(.dark) .card-text .cta,
-.subtle-bg .card-zoom-text h2 {
+.bg-image-card:not(.dark) .card-text h3,
+.bg-image-card:not(.dark) .card-text .cta,
+.card-zoom-text h2 {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.subtle-bg .dark .card-text p {
+.dark .card-text p {
   --tw-text-opacity: 1;
   color: rgb(93 93 93 / var(--tw-text-opacity));
 }
@@ -2902,19 +2914,19 @@ a {
 
 @media (min-width: 768px) {
   .navigation-list li a {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     font-size: 0.775rem;
-    line-height: 1.5;
+    line-height: 1.75;
     letter-spacing: 0;
     font-weight: 300;
   }
 }
 
 .navigation-list li a {
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-weight: 300;
 }
 
@@ -3319,7 +3331,7 @@ emoji-picker.fullscreen-viewer {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
   --tw-text-opacity: 1;
@@ -3332,7 +3344,7 @@ emoji-picker.fullscreen-viewer {
   border-style: none;
   background-color: transparent;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
   --tw-text-opacity: 1;
@@ -3534,7 +3546,7 @@ emoji-picker.fullscreen-viewer {
   height: 1.5rem;
   overflow: hidden;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.65;
   letter-spacing: -0.01em;
   font-weight: 500;
   font-style: italic;
@@ -3802,61 +3814,20 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
-.gallery-quadruple-wide-trip-small {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-@media (min-width: 640px) {
-  .gallery-quadruple-wide-trip-small {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
-.gallery-six-wide {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-@media (min-width: 640px) {
-  .gallery-six-wide {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-}
-
-.gallery-single-wide img,
-.gallery-single-wide-portrait img,
-.gallery-double-wide img,
-.gallery-triple-wide img,
-.gallery-quadruple-wide img,
-.gallery-quadruple-wide-trip-small img,
-.gallery-six-wide img,
-.gallery-single-wide video,
-.gallery-single-wide-portrait video,
-.gallery-double-wide video,
-.gallery-triple-wide video,
-.gallery-quadruple-wide video,
-.gallery-quadruple-wide-trip-small video,
-.gallery-six-wide video {
+.gallery-double-wide img {
   min-width: 100%;
 }
 
 @media (min-width: 640px) {
-  .gallery-single-wide img,
-.gallery-single-wide-portrait img,
-.gallery-double-wide img,
-.gallery-triple-wide img,
-.gallery-quadruple-wide img,
-.gallery-quadruple-wide-trip-small img,
-.gallery-six-wide img,
-.gallery-single-wide video,
-.gallery-single-wide-portrait video,
-.gallery-double-wide video,
-.gallery-triple-wide video,
-.gallery-quadruple-wide video,
-.gallery-quadruple-wide-trip-small video,
-.gallery-six-wide video {
+  .gallery-double-wide img {
     margin-left: 0px;
     margin-right: 0px;
   }
+}
+
+.portfolio-image {
+  margin-bottom: 1.5rem;
+  border-radius: 0.375rem;
 }
 
 .maximize-icon {
@@ -4126,7 +4097,7 @@ body {
 
 .collection-notes p {
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -4144,7 +4115,7 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -4157,7 +4128,7 @@ body {
     margin-left: 0px;
     margin-right: 0px;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.65;
     letter-spacing: 0;
     font-weight: 300;
   }
@@ -4190,7 +4161,7 @@ body {
   margin-bottom: 0.25rem;
   margin-top: 3rem;
   font-size: 0.775rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
   --tw-text-opacity: 1;
@@ -4202,7 +4173,7 @@ body {
 .artwork-subtitle {
     margin-bottom: 1rem;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.65;
     letter-spacing: 0;
     font-weight: 300;
   }
@@ -4322,7 +4293,7 @@ body {
   margin-top: 0px;
   margin-bottom: 1rem;
   --tw-text-opacity: 1;
-  color: rgb(109 109 109 / var(--tw-text-opacity));
+  color: rgb(118 48 209 / var(--tw-text-opacity));
 }
 
 /* QQL Page */
@@ -4355,7 +4326,7 @@ body {
   .artwork-subtitle,
   .job-metadata {
     --tw-text-opacity: 1;
-    color: rgb(176 176 176 / var(--tw-text-opacity));
+    color: rgb(175 144 245 / var(--tw-text-opacity));
   }
 
   .collection-title a,
@@ -4445,16 +4416,13 @@ body {
     flex-direction: row;
   }
 
-  .md\:text-4xl {
-    font-size: 6rem;
-    line-height: 1.5;
-    letter-spacing: -0.06em;
-    font-weight: 500;
+  .md\:text-\[1\.2rem\] {
+    font-size: 1.2rem;
   }
 
   .md\:text-base {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.65;
     letter-spacing: 0;
     font-weight: 300;
   }

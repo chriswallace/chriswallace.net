@@ -46,77 +46,6 @@ permalink: /resume/
 <h4 class="job-metadata fade-in-element">St. Louis Christian College // 2005 - 2006 // St. Louis, MO</h4>
 <p class="fade-in-element mb-12">Primary web content owner, designed, developed, and maintained the college's online presence. During my tenure, the college experienced 60% growth, reaching full campus capacity the following year.</p>
 
-<h2 class="fade-in-element">Selected Works</h2>
-
-<div class="md:flex md:flex-row sm:gap-8 mb-6">
-    <div class="mb-16 md:mb-6" style="flex:1">
-        <img src="/assets/images/twelve-days-of-cryptoart.png" class="fade-in-element inline-block mb-6 dark:hidden" alt="">
-        <img src="/assets/images/twelve-days-of-cryptoart-dark.png" class="fade-in-element inline-block mb-6 hidden dark:block" alt="">
-        <h3 class="fade-in-element mt-3"><a href="https://twelvedays.ultradao.org" target="_blank">Twelve Days of CryptoArt</a></h3>
-        <p class="mb-0 fade-in-element">Role: Curation, Branding, Web Design, Full Stack Development</p>
-        <p class="fade-in-element">Year: 2023</p>
-        <p class="fade-in-element">Designed the website, including multiple iterations as we released new features and media. Contributed HTML/CSS/JavaScript to some sections throughout.</p>
-    </div>
-    <div class="mb-16 md:mb-6" style="flex:1">
-        <img src="/assets/images/wallace-museum.png" class="fade-in-element inline-block mb-6 dark:hidden" alt="">
-        <img src="/assets/images/wallace-museum-dark.png" class="fade-in-element inline-block mb-6 hidden dark:block" alt="">
-        <h3 class="fade-in-element mt-3"><a href="https://wallacemuseum.com" target="_blank">Wallace Museum</a></h3>
-        <p class="mb-0 fade-in-element">Role: Product Design, Branding, Front-End Engineering, Database Architecture, Sveltekit Implementation</p>
-        <p class="fade-in-element">Year: 2023</p>
-        <p class="fade-in-element">A web-based generative art experience featuring hundreds of works from internationally-renowned artists who code.</p>
-    </div>
-</div>
-<div class="md:flex md:flex-row sm:gap-8 mb-6">
-    <div class="mb-16 md:mb-6" style="flex:1">
-        <img src="/assets/images/woodies-origin.png" class="fade-in-element inline-block mb-6 dark:hidden" alt="">
-        <img src="/assets/images/woodies-origin-dark.png" class="fade-in-element inline-block mb-6 hidden dark:block" alt="">
-        <h3 class="fade-in-element mt-3"><a href="https://www.youtube.com/watch?v=encMCWoBc3o" target="_blank">Woodies: Origin</a></h3>
-        <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
-        <p class="fade-in-element">Year: 2022</p>
-        <p class="fade-in-element">Hired and directed an international media production company to create a Hollywood-grade animated short film, engrossing fans in the Woodies universe within a span of six months and a budget of approximately $500,000.</p>
-    </div>
-    <div class="mb-16 md:mb-6" style="flex:1">
-        <img src="/assets/images/california-dmv.png" class="fade-in-element inline-block mb-6 dark:hidden" alt="">
-        <img src="/assets/images/california-dmv-dark.png" class="fade-in-element inline-block mb-6 hidden dark:block" alt="">
-        <h3 class="fade-in-element mt-3"><a href="https://dmv.ca.gov" target="_blank">California DMV Website Redesign</a></h3>
-        <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
-        <p class="fade-in-element">Year: 2020</p>
-        <p class="fade-in-element">Led a landmark project for our agency: a comprehensive redesign of the California DMV website. Assembled and guided the design team behind this task. The revamped site was met with resounding approval from both the public and DMV staff.</p>
-    </div>
-</div>
-<div class="md:flex md:flex-row sm:gap-8 mb-6">
-    <div class="mb-16 md:mb-6" style="flex:1">
-        <img src="/assets/images/starbucks-stories.png" class="fade-in-element inline-block mb-6 dark:hidden" alt="">
-        <img src="/assets/images/starbucks-stories-dark.png" class="fade-in-element inline-block mb-6 hidden dark:block" alt="">
-        <h3 class="fade-in-element mt-3"><a href="https://stories.starbucks.com/stories/" target="_blank">Starbucks Stories &amp; News Redesign</a></h3>
-        <p class="mb-0 fade-in-element">Role: Design + Creative Direction</p>
-        <p class="fade-in-element">Year: 2020</p>
-        <p class="fade-in-element">Collaborating with one of our Lead Designers, I provided creative direction and design production for the new Starbucks Stories &amp; News experience, including visual design, branding, and interaction design. I designed the current Stories logo, the navigation, and media/downloads section of the website.</p>
-    </div>
-    <div class="mb-16 md:mb-6" style="flex:1">
-        <img src="/assets/images/google-site-kit.png" class="fade-in-element inline-block mb-6 dark:hidden" alt="">
-        <img src="/assets/images/google-site-kit-dark.png" class="fade-in-element inline-block mb-6 hidden dark:block" alt="">
-        <h3 class="fade-in-element mt-3"><a href="https://sitekit.withgoogle.com" target="_blank">Google Site Kit</a></h3>
-        <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
-        <p class="fade-in-element">Year: 2019</p>
-        <p class="fade-in-element">In partnership with Google, launched a WordPress plugin that integrates Google's suite of products in one location. Site Kit quickly gained adoption among website owners, thanks to a design language that strikingly represented both Google's identity and the WordPress admin environment.</p>
-    </div>
-</div>
-<!--<div class="md:flex md:flex-row sm:gap-8 mb-6">
-    <div class="mb-16 md:mb-0" style="flex:1">
-        <h3 class="fade-in-element">10up Brand & Recruiting Videos</h3>
-        <p class="mb-0 fade-in-element">Links: <a href="(https://vimeo.com/284765957" target="_blank">Brand Video</a>, <a href="https://vimeo.com/284768433" target="_blank">Recruiting Video</a></p>
-        <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
-        <p class="fade-in-element">Year: 2018</p>
-        <p class="fade-in-element">Pitched and led the creation of two marketing videos for 10up: one for prospective clients and a second for prospective employees. With our annual company meetup in Jackson Hole, Wyoming as the backdrop, we flew a video crew, key client stakeholders, and team members out to film interviews and B-roll. Functioned both as an Executive Producer and Creative Director for the project.</p>
-    </div>
-    <div class="mb-16 md:mb-0" style="flex:1">
-        <h3 class="fade-in-element"><a href="https://www.godaddy.com/wordpress-themes" target="_blank">GoDaddy Go Theme</a></h3>
-        <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
-        <p class="fade-in-element">Year: 2019</p>
-        <p class="fade-in-element">Collaborated with two senior designers on a project for returning client, GoDaddy. Developed a computational design system capable of producing an endless variety of themes, resulting in a surge in user signups and WordPress users for GoDaddy. Assisted the client and internal designers with valuable insights, critiqued design progress, and worked closely with the engineering team to ensure optimal implementation of our work.</p>
-    </div>
-</div>-->
 <h2 class="fade-in-element">Skills</h2>
 
 <ul class="fade-in-element text-sm md:text-base grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-3 list-none ml-0 pl-0">
@@ -160,14 +89,3 @@ permalink: /resume/
   <li>Outstanding Creative Achievement in Interactive Media – Social TV Experience (Nominee), Mad Men: The Fan Cut, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2015)</li>
   <li>Outstanding Interactive Program (Nominee), The Walking Dead Story Sync, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2013)</li>
 </ul>
-
-<h2 class="fade-in-element">Contact</h2>
-
-<ul class="fade-in-element">
-    <li>Email: <a href="mailto:chriswallace7@protonmail.com">chriswallace7@protonmail.com</a></li>
-    <li>LinkedIn: <a href="https://www.linkedin.com/in/chriswallace2">www.linkedin.com/in/chriswallace2</a></li>
-</ul>
-
-<h2 class="fade-in-element">References</h2>
-
-<p class="fade-in-element">Available upon request</p>

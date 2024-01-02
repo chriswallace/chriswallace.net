@@ -160,7 +160,7 @@ body {
 }
 
 .job-metadata {
-  @apply mt-0 mb-4 text-gray-500;
+  @apply mt-0 mb-4 text-primary-700;
 }
 
 /* QQL Page */
@@ -183,7 +183,7 @@ body {
   .collection-title,
   .artwork-subtitle,
   .job-metadata {
-    @apply text-gray-300;
+    @apply text-primary-400;
   }
 
   .collection-title a,
