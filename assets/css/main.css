@@ -22,7 +22,7 @@ body {
 /* Home Page */
 
 .home-title {
-  @apply text-xl md:text-2xl mb-8;
+  @apply text-2xl md:text-3xl mb-8;
   font-weight: 300;
 }
 

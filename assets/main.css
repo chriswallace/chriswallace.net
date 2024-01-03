@@ -1198,12 +1198,12 @@ video {
   margin-bottom: 4rem;
 }
 
-.mb-36 {
-  margin-bottom: 9rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mb-48 {
+  margin-bottom: 12rem;
 }
 
 .mb-6 {
@@ -3988,7 +3988,7 @@ body {
 
 .home-title {
   margin-bottom: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.5;
   letter-spacing: -0.01em;
   font-weight: 500;
@@ -3996,9 +3996,9 @@ body {
 
 @media (min-width: 768px) {
   .home-title {
-    font-size: 1.4rem;
-    line-height: 1.5;
-    letter-spacing: -0.01em;
+    font-size: 2.4rem;
+    line-height: 1.334;
+    letter-spacing: -0.03em;
     font-weight: 500;
   }
 }
@@ -4414,6 +4414,13 @@ body {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    font-weight: 500;
   }
 
   .md\:text-\[1\.2rem\] {

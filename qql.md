@@ -328,43 +328,4 @@ thumbnail: https://ik.imagekit.io/UltraDAO/wallace/studying_the_algorithm.png?tr
   </div>
 </article>
 <div id="fullscreen-viewer" class="hidden"></div>
-<div id="utility-bar" class="utility-bar hidden">
-  <div class="page-title-container">
-    <div id="pageTitle" class="page-title">The Wallace Collection</div>
-  </div>
-  <div class="music-player-container">
-    <div id="musicPlayer" class="music-player">
-      <audio id="audioElement" src=""></audio>
-      <div class="trackActivityContainer">
-        <div class="trackActivity">
-          <div class="infoBox">
-            <div id="trackInfo" class="marquee"></div>
-          </div>
-        </div>
-      </div>
-      <button id="playButton" aria-labelledby="play-label">
-        <i></i>
-        <span id="play-label">Play</span>
-      </button>
-      <button id="pauseButton" aria-labelledby="pause-label">
-        <i></i>
-        <span id="pause-label">Pause</span>
-      </button>
-      <button id="prevButton" aria-labelledby="previous-label">
-        <i></i>
-        <span id="previous-label">Previous track</span>
-      </button>
-      <button id="nextButton" aria-labelledby="next-label">
-        <i></i>
-        <span id="next-label">Next</span>
-      </button>
-      <input id="volumeControl" type="range" min="0" max="1" step="0.1" aria-label="Volume" />
-    </div>
-  </div>
-  <div class="to-top">
-    <button id="backToTop" title="Go to top">
-      <i></i>
-    </button>
-  </div>
-</div>
 {% include footer.md %}
