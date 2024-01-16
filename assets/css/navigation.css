@@ -23,7 +23,7 @@
 }
 
 .navigation {
-  @apply py-4 md:mb-12 md:mb-24 z-20 max-w-6xl mx-auto relative;
+  @apply py-4 sm:mb-12 md:mb-16 z-20 max-w-6xl mx-auto relative;
 }
 
 .navigation .logo {
@@ -79,9 +79,9 @@
 }
 
 .navigation-list li a {
-  @apply mt-1 p-4 block uppercase text-sm md:text-xs leading-none md:px-4 md:py-4 no-underline decoration-2 text-gray-700 hover:underline hover:decoration-primary-700 hover:text-primary-700;
-  letter-spacing: 1px;
-  font-weight: 300;
+  @apply mt-1 p-4 block uppercase text-sm md:text-xs leading-none md:px-4 md:py-4 no-underline decoration-2 text-gray-600 hover:underline hover:decoration-primary-700 hover:text-primary-700;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 
 .navigation-list li.home a {
@@ -155,7 +155,7 @@
   }
 
   .navigation-list li:not(.home) a {
-    @apply text-gray-100 hover:text-white hover:decoration-primary-700;
+    @apply text-gray-300 hover:text-white hover:decoration-primary-700;
   }
 
   .navigation-list li:first-child a {

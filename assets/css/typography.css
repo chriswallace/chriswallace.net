@@ -50,7 +50,7 @@ h6 {
 }
 
 .primary-heading {
-  @apply text-3xl md:text-4xl mb-4 lowercase;
+  @apply text-4xl md:text-6xl mb-4 lowercase;
 }
 
 .primary-heading:before {
@@ -62,7 +62,7 @@ h6 {
   @apply text-lg sm:text-xl text-gray-500 mt-8 mb-4 md:mb-6;
 }
 
-.sub-heading-curated{
+.sub-heading-curated {
   @apply text-xl md:text-2xl text-gray-500 mt-3 mb-16 relative;
 }
 

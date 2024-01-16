@@ -22,8 +22,13 @@ body {
 /* Home Page */
 
 .home-title {
-  @apply text-2xl md:text-3xl mb-8;
-  font-weight: 300;
+  @apply text-4xl sm:text-7xl md:text-[8rem] mb-8 max-w-full uppercase;
+  line-height: 0.94;
+  font-weight: 900;
+
+  span {
+    @apply block;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -176,7 +181,7 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-  .job-title{
+  .job-title {
     @apply text-white font-medium;
   }
 
