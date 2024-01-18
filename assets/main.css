@@ -1921,11 +1921,10 @@ h6 {
 
 .sub-heading {
   margin-bottom: 1rem;
-  font-size: 1.04rem;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  font-weight: 500;
-  line-height: 1.75rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  letter-spacing: 0;
+  font-weight: 300;
   --tw-text-opacity: 1;
   color: rgb(109 109 109 / var(--tw-text-opacity));
 }
@@ -1933,6 +1932,11 @@ h6 {
 @media (min-width: 768px) {
   .sub-heading {
     margin-bottom: 1.5rem;
+    font-size: 1.04rem;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    font-weight: 500;
+    line-height: 1.75rem;
   }
 }
 
@@ -3154,7 +3158,7 @@ footer p {
       margin-bottom: 0px;
     }
     .title {
-      flex: 0 1 auto;
+      flex: 0 1 100%;
     }
     .title {
       flex-shrink: 1;
@@ -3178,6 +3182,11 @@ footer p {
     @media (min-width: 768px) {
       .title {
         order: 1;
+      }
+    }
+    @media (min-width: 768px) {
+      .title {
+        flex: 0 1 auto;
       }
     }
     .title {
@@ -3234,9 +3243,6 @@ footer p {
         }
       }
     }
-  }
-  .description {
-    grid-column: span 7 / span 7;
   }
   .description {
     margin-bottom: 3rem;

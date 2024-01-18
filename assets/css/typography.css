@@ -59,7 +59,7 @@ h6 {
 }
 
 .sub-heading {
-  @apply text-xl leading-7 text-gray-500 mb-4 md:mb-6;
+  @apply text-base md:text-xl md:leading-7 text-gray-500 mb-4 md:mb-6;
   font-weight: 500;
 }
 
