@@ -2924,23 +2924,6 @@ a {
     --tw-text-opacity: 1;
     color: rgb(175 144 245 / var(--tw-text-opacity));
   }
-
-  .menu {
-    --tw-bg-opacity: 1;
-    background-color: rgb(231 231 231 / var(--tw-bg-opacity));
-    a {
-      --tw-text-opacity: 1;
-      color: rgb(61 61 61 / var(--tw-text-opacity));
-    }
-    a:hover {
-      --tw-bg-opacity: 1;
-      background-color: rgb(133 66 229 / var(--tw-bg-opacity));
-    }
-    a:hover {
-      --tw-text-opacity: 1;
-      color: rgb(255 255 255 / var(--tw-text-opacity));
-    }
-  }
 }
 
 footer {

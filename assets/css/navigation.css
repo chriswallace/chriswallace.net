@@ -103,12 +103,4 @@
   .navigation .logo {
     @apply text-primary-500 hover:text-primary-400;
   }
-
-  .menu {
-    @apply bg-gray-100;
-
-    a {
-      @apply text-gray-900 hover:bg-primary-600 hover:text-white;
-    }
-  }
 }
