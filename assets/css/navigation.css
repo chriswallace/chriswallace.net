@@ -74,7 +74,7 @@
 }
 
 .menu a {
-  @apply p-3 py-4 block font-medium capitalize text-base leading-none no-underline decoration-2 text-primary-800 hover:bg-primary-700 hover:text-white;
+  @apply p-4 py-4 md:py-6 block font-medium capitalize text-base leading-none no-underline decoration-2 text-primary-800 border-b border-primary-300 hover:bg-primary-700 hover:text-white;
 }
 
 .site-title {

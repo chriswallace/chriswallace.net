@@ -2843,7 +2843,10 @@ a {
 
 .menu a {
   display: block;
-  padding: 0.75rem;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(201 184 250 / var(--tw-border-opacity));
+  padding: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 0.9rem;
@@ -2862,6 +2865,13 @@ a {
   background-color: rgb(118 48 209 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .menu a {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
 }
 
 .site-title {
