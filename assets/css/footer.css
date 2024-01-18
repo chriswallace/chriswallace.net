@@ -2,11 +2,11 @@ footer {
   @apply pt-12 pb-4;
 }
 
-footer .logo{
-  @apply inline-block mr-2 w-[48px] h-[48px] m-0 p-0 text-primary-500;
+footer .logo {
+  @apply inline-block md:visible mr-2 w-[48px] h-[48px] m-0 p-0 text-gray-700;
 }
 
-footer .logo path{
+footer .logo path {
   @apply fill-current;
 }
 
@@ -15,13 +15,12 @@ footer p {
 }
 
 @media (prefers-color-scheme: dark) {
-
   footer {
     @apply border-primary-300;
   }
 
-  footer .logo{
-    @apply text-primary-500;
+  footer .logo {
+    @apply text-gray-300;
   }
 
   footer p {
