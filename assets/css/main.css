@@ -53,7 +53,7 @@ body {
   }
 
   .logo {
-    @apply inline-block md:hidden mb-4 text-primary-500 mt-5;
+    @apply inline-block mb-4 text-primary-500 mt-5;
 
     path {
       @apply fill-current;

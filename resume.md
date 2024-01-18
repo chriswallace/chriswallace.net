@@ -28,8 +28,6 @@ permalink: /resume/
       <h3 class="place">UltraDAO Studios</h3>
       <div class="time-period">2021 - present</div>
     </div>
-  </div>
-  <div class="job resume-item">
     <div class="description fade-in-element">
       <p>Founded a bootstrapped decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles. Built and managed a team of artists, engineers, and creative production specialists. Led a range of award-winning creative projects and drove multi-million dollar revenue within the first six months.</p>
     </div>
