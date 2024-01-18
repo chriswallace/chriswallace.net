@@ -103,7 +103,7 @@ p + hr {
 
 @media (prefers-color-scheme: dark) {
   body {
-    @apply text-white;
+    @apply text-white font-medium;
   }
 
   h1,
@@ -127,7 +127,7 @@ p + hr {
   p,
   ul,
   li {
-    @apply text-gray-100;
+    @apply text-gray-300;
   }
 
   a {

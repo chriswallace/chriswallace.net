@@ -12,6 +12,7 @@ permalink: /resume/
 </svg>
 
     <a class="inline ml-1" href="/assets/downloads/product-design-executive-chris-wallace.pdf" download> Download as PDF</a>
+
 </div>
 
 <p class="fade-in-element sub-heading">Emmy-nominated founder and design leader with 16+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, The Nobel Prize, and Starbucks. Former agency executive at 10up, Lift UX (acquired).</p>
@@ -21,22 +22,22 @@ permalink: /resume/
 <h2 class="fade-in-element mt-12">Work Experience</h2>
 
 <div class="jobs">
-  <div class="job">
+  <div class="job resume-item">
     <div class="metadata fade-in-element">
       <h4 class="title">CEO, Founder</h4>
-      <h3 class="company">UltraDAO Studios</h3>
+      <h3 class="place">UltraDAO Studios</h3>
       <div class="time-period">2021 - present</div>
     </div>
   </div>
-  <div class="job">
+  <div class="job resume-item">
     <div class="description fade-in-element">
       <p>Founded a bootstrapped decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles. Built and managed a team of artists, engineers, and creative production specialists. Led a range of award-winning creative projects and drove multi-million dollar revenue within the first six months.</p>
     </div>
   </div>
-  <div class="job">
+  <div class="job resume-item">
     <div class="metadata fade-in-element">
       <h4 class="title">Vice President, Experience Design</h4>
-      <h3 class="company">10up</h3>
+      <h3 class="place">10up</h3>
       <div class="time-period">2017 - 2021</div>
     </div>
     <div class="description fade-in-element">
@@ -44,10 +45,10 @@ permalink: /resume/
       <p>Clients: Facebook, Microsoft, Google, The Nobel Prize, Starbucks, The White House</p>
     </div>
   </div>
-  <div class="job">
+  <div class="job resume-item">
     <div class="metadata fade-in-element">
       <h4 class="title">Principal Creative, Founder</h4>
-      <h3 class="company">Lift UX (acquired)</h3>
+      <h3 class="place">Lift UX (acquired)</h3>
       <div class="time-period">2009 - 2017</div>
     </div>
     <div class="description fade-in-element">
@@ -55,30 +56,30 @@ permalink: /resume/
       <p>Clients: The Walking Dead, Mad Men, Breaking Bad, SundanceTV, IFC Films, WEtv</p>
     </div>
   </div>
-  <div class="job">
+  <div class="job resume-item">
     <div class="metadata fade-in-element">
       <h4 class="title">Front-End Developer</h4>
-      <h3 class="company">Enterprise Rent-A-Car</h3>
+      <h3 class="place">Enterprise Rent-A-Car</h3>
       <div class="time-period">2007 - 2009</div>
     </div>
     <div class="description fade-in-element">
       <p>Developed front-end interfaces for B2B and B2C digital products, working closely with UX designers, project managers, and Java engineers. Also managed weekly deployments for enterprise.com and other customer-centric platforms, while providing QA support for monthly release cycles.</p>
     </div>
   </div>
-  <div class="job">
+  <div class="job resume-item">
     <div class="metadata fade-in-element">
       <h4 class="title">Senior E-Commerce Web Designer</h4>
-      <h3 class="company">Network Solutions</h3>
+      <h3 class="place">Network Solutions</h3>
       <div class="time-period">2006 - 2007</div>
     </div>
     <div class="description fade-in-element">
       <p>Designed and developed front-end code for e-commerce storefronts for small businesses, maintaining stringent project timelines and adhering to client specifications.</p>
     </div>
   </div>
-  <div class="job">
+  <div class="job resume-item">
     <div class="metadata fade-in-element">
       <h4 class="title">Webmaster</h4>
-      <h3 class="company">St. Louis Christian College</h3>
+      <h3 class="place">St. Louis Christian College</h3>
       <div class="time-period">2005 - 2006</div>
     </div>
     <div class="description fade-in-element">
@@ -112,13 +113,29 @@ permalink: /resume/
 
 <h2 class="fade-in-element">Education</h2>
 
-<h3 class="job-title fade-in-element">Missouri State University</h3>
-<h4 class="job-metadata fade-in-element">Graphic Design // 2004 // Springfield, MO</h4>
-<p class="fade-in-element">Attended Missouri State University (formerly Southwest Missouri State) for Graphic Design.</p>
+<div class="schools">
+  <div class="school resume-item">
+    <div class="metadata fade-in-element">
+      <h4 class="title">Graphic Design</h4>
+      <h3 class="place">Missouri State University</h3>
+      <div class="time-period">2004</div>
+    </div>
+    <div class="description fade-in-element">
+      <p>Attended Missouri State University (formerly Southwest Missouri State) for Graphic Design. Withdrew for medical reasons and went directly into the workforce.</p>
+    </div>
+  </div>
 
-<h3 class="job-title fade-in-element">Saint Louis Christian College</h3>
-<h4 class="job-metadata fade-in-element">Religious Studies // 2002 - 2004 // Florissant, MO</h4>
-<p class="fade-in-element">Attended Saint Louis Christian College with a focus on Religious Studies.</p>
+  <div class="school resume-item">
+    <div class="metadata fade-in-element">
+      <h4 class="title">Religious Studies</h4>
+      <h3 class="place">Saint Louis Christian College</h3>
+      <div class="time-period">2002 - 2004</div>
+    </div>
+    <div class="description fade-in-element">
+      <p>Attended Saint Louis Christian College with a focus on Religious Studies. Received the Maynard Literary Scholarship for writing.</p>
+    </div>
+  </div>
+</div>
 
 <h2 class="fade-in-element">Awards & Recognitions</h2>
 

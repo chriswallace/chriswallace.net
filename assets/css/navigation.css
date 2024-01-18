@@ -1,3 +1,6 @@
+.open-menu {
+  @apply overflow-y-hidden;
+}
 
 .menu-button {
   @apply relative w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.75)] md:h-[var(--navbar-width)] mx-auto bg-white md:border-b md:border-b-primary-200 hover:bg-primary-200 md:hover:border-b-primary-200;
@@ -23,7 +26,7 @@
 }
 
 .menu-button:hover i:before,
-.menu-button:hover i:after{
+.menu-button:hover i:after {
   @apply border-primary-800;
 }
 
@@ -39,7 +42,7 @@
   @apply fill-current;
 }
 
-.navigation .navigation-list .logo{
+.navigation .navigation-list .logo {
   @apply w-[56px] md:w-[72px] ml-0 mr-auto;
 }
 
@@ -63,14 +66,18 @@
   @apply text-primary-800;
 }
 
-.branding{
+.branding {
   @apply order-1 md:order-2 w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] shrink md:h-screen md:bg-white relative;
+
+  .open-menu & {
+    @apply cursor-pointer;
+  }
 }
 
 .menu {
   @apply order-2 md:order-1 md:h-screen bg-gray-950 grow;
 
-  & ul{
+  & ul {
     @apply w-[220px];
   }
 }
@@ -82,7 +89,7 @@
 .site-title {
   @apply md:bottom-0 md:left-0 w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.66)] block absolute p-0;
 
-  svg{
+  svg {
     @apply w-[calc(var(--navbar-width)/2*.75)] md:w-[calc(var(--navbar-width)/2)] h-[calc(var(--navbar-width)*.66)] mx-auto;
   }
 }
@@ -90,10 +97,18 @@
 @media (prefers-color-scheme: dark) {
   .menu-button i:before,
   .menu-button i:after {
-    @apply border-primary-400;
+    @apply border-primary-600;
   }
 
   .navigation .logo {
     @apply text-primary-500 hover:text-primary-400;
+  }
+
+  .menu {
+    @apply bg-gray-100;
+
+    a {
+      @apply text-gray-900 hover:bg-primary-600 hover:text-white;
+    }
   }
 }
