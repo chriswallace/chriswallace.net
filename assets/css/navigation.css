@@ -3,7 +3,7 @@
 }
 
 .menu-button {
-  @apply relative w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.75)] md:h-[var(--navbar-width)] mx-auto bg-white md:border-b md:border-b-primary-200 hover:bg-primary-200 md:hover:border-b-primary-200;
+  @apply relative w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.75)] md:h-[var(--navbar-width)] mx-auto bg-white md:border-b md:border-b-primary-200 hover:bg-primary-50 md:hover:border-b-primary-300;
 }
 
 .menu-button i {
@@ -75,15 +75,15 @@
 }
 
 .menu {
-  @apply order-2 md:order-1 md:h-screen bg-gray-950 grow;
+  @apply order-2 md:order-1 md:h-screen bg-gradient-to-r from-primary-100 from-90% to-primary-200 to-100% grow;
 
-  & ul {
+  & ul{
     @apply w-[220px];
   }
 }
 
 .menu a {
-  @apply p-3 py-4 block font-medium capitalize text-base leading-none no-underline decoration-2 text-white hover:bg-primary-700;
+  @apply p-3 py-4 block font-medium capitalize text-base leading-none no-underline decoration-2 text-primary-800 hover:bg-primary-700 hover:text-white;
 }
 
 .site-title {
