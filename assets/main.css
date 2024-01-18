@@ -2799,6 +2799,10 @@ a {
   .open-menu & {
     cursor: pointer;
   }
+  .open-menu & {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
 }
 
 .menu {
@@ -2873,6 +2877,14 @@ a {
 }
 
 .site-title {
+  .open-menu & {
+    bottom: 0.5rem;
+  }
+  @media (min-width: 768px) {
+    .open-menu & {
+      left: 0px;
+    }
+  }
   svg {
     margin-left: auto;
     margin-right: auto;

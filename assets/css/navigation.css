@@ -61,7 +61,7 @@
   @apply order-1 md:order-2 w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] shrink md:h-screen md:bg-white relative;
 
   .open-menu & {
-    @apply cursor-pointer;
+    @apply cursor-pointer bg-white;
   }
 }
 
@@ -80,6 +80,9 @@
 .site-title {
   @apply md:bottom-0 md:left-0 w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.66)] block absolute p-0;
 
+  .open-menu &{
+    @apply bottom-2 md:left-0;
+  }
   svg {
     @apply w-[calc(var(--navbar-width)/2*.75)] md:w-[calc(var(--navbar-width)/2)] h-[calc(var(--navbar-width)*.66)] mx-auto;
   }
