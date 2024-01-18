@@ -364,9 +364,11 @@ layout: compress
     //---- /do not edit the following code
     </script>
   <body>
-    <div class="mx-4 lg:px-0">
-      {% include header.md %}
-      <div class="container mx-auto">
+    <div class="ui-frame">
+      <div class="ui-navbar">
+        {% include header.md %}
+      </div>
+      <div class="ui-content">
         {{ content }}
       </div>
       {% include footer.md %}

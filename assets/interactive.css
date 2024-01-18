@@ -1166,11 +1166,6 @@ video {
   margin-right: -1.5rem;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1179,11 +1174,6 @@ video {
 .my-12 {
   margin-top: 3rem;
   margin-bottom: 3rem;
-}
-
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
 }
 
 .my-auto {
@@ -1195,10 +1185,6 @@ video {
   margin-bottom: 0px;
 }
 
-.mb-1 {
-  margin-bottom: 0.25rem;
-}
-
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -1207,20 +1193,8 @@ video {
   margin-bottom: 4rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
-}
-
-.mb-48 {
-  margin-bottom: 12rem;
 }
 
 .mb-6 {
@@ -1235,44 +1209,20 @@ video {
   margin-bottom: auto;
 }
 
-.ml-0 {
-  margin-left: 0px;
-}
-
 .ml-1 {
   margin-left: 0.25rem;
-}
-
-.mr-1 {
-  margin-right: 0.25rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
 }
 
 .mt-0 {
   margin-top: 0px;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .mt-12 {
   margin-top: 3rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .mt-auto {
@@ -1281,10 +1231,6 @@ video {
 
 .block {
   display: block;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .inline {
@@ -1403,16 +1349,8 @@ video {
   resize: both;
 }
 
-.list-none {
-  list-style-type: none;
-}
-
 .grid-flow-dense {
   grid-auto-flow: dense;
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-nowrap {
@@ -1453,15 +1391,6 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
-}
-
-.gap-x-4 {
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-}
-
-.gap-y-3 {
-  row-gap: 0.75rem;
 }
 
 .space-x-0 > :not([hidden]) ~ :not([hidden]) {
@@ -1613,45 +1542,8 @@ video {
   stroke: none;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.pl-0 {
-  padding-left: 0px;
-}
-
-.pt-3 {
-  padding-top: 0.75rem;
-}
-
 .text-center {
   text-align: center;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .text-start {
@@ -1660,10 +1552,6 @@ video {
 
 .text-end {
   text-align: end;
-}
-
-.align-middle {
-  vertical-align: middle;
 }
 
 .align-sub {
@@ -1679,21 +1567,21 @@ video {
 }
 
 .text-6xl {
-  font-size: 5rem;
+  font-size: 3rem;
   line-height: 1.334;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.0145em;
   font-weight: 500;
 }
 
 .text-sm {
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
 }
 
 .text-xl {
-  font-size: 1.2rem;
+  font-size: 1.04rem;
   line-height: 1.5;
   letter-spacing: -0.01em;
   font-weight: 500;
@@ -1738,10 +1626,6 @@ video {
 
 .overline {
   text-decoration-line: overline;
-}
-
-.no-underline {
-  text-decoration-line: none;
 }
 
 .mix-blend-plus-lighter {
@@ -1869,14 +1753,6 @@ video {
 
 .\[keywords\:node-addon-api\] {
   keywords: node-addon-api;
-}
-
-.\[ruby-dev\:50626\] {
-  ruby-dev: 50626;
-}
-
-.\[ruby-list\:50731\] {
-  ruby-list: 50731;
 }
 
 html,
@@ -2588,10 +2464,6 @@ body.meetChris {
     margin-bottom: 1.5rem;
   }
 
-  .md\:inline {
-    display: inline;
-  }
-
   .md\:flex {
     display: flex;
   }
@@ -2600,16 +2472,12 @@ body.meetChris {
     width: 100%;
   }
 
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .md\:flex-row {
     flex-direction: row;
   }
 
   .md\:text-2xl {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     letter-spacing: -0.01em;
     font-weight: 500;
@@ -2618,21 +2486,9 @@ body.meetChris {
   .md\:text-\[1\.2rem\] {
     font-size: 1.2rem;
   }
-
-  .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.65;
-    letter-spacing: 0;
-    font-weight: 300;
-  }
 }
 
 @media (min-width: 1024px) {
-  .lg\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
   .lg\:hover\:bg-blue-500:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(59 130 246 / var(--tw-bg-opacity));

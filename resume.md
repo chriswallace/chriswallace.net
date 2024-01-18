@@ -20,35 +20,76 @@ permalink: /resume/
 
 <h2 class="fade-in-element mt-12">Work Experience</h2>
 
-<h3 class="job-title fade-in-element">CEO, Founder</h3>
-<h4 class="job-metadata fade-in-element">UltraDAO Studios // 2021 - Present // Remote</h4>
-<p class="fade-in-element mb-12">Founded a bootstrapped decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles. Built and managed a team of artists, engineers, and creative production specialists. Led a range of award-winning creative projects and drove multi-million dollar revenue within the first six months.</p>
-
-<h3 class="job-title fade-in-element">Vice President, Experience Design</h3>
-<h4 class="job-metadata fade-in-element">10up // 2017 - 2021 // Remote</h4>
-<p class="fade-in-element mb-4">Scaled the design team and its capabilities at an international agency of 200+ across three continents and 16 countries. Managed 20 leaders and ICs across user experience and visual design. Established content design practice and implemented org-wide design strategy.</p>
-<p class="fade-in-element mb-12">Clients: Facebook, Microsoft, Google, The Nobel Prize, Starbucks, The White House</p>
-
-<h3 class="job-title fade-in-element">Principal Creative, Founder</h3>
-<h4 class="job-metadata fade-in-element">Lift UX (acquired) // 2009 - 2017 // Remote</h4>
-<p class="fade-in-element mb-4">Founded a UX design studio crafting digital products and WordPress websites for medium-to-large clients.  Launched interactive second-screen apps for acclaimed TV series, earning two Emmy nominations in the process. Managed a compact yet effective team of full-time and contract designers, elevating website traffic for the product division to two million monthly visitors. Acquired by 10up in 2017.</p>
-<p class="fade-in-element mb-12">Clients: The Walking Dead, Mad Men, Breaking Bad, SundanceTV, IFC Films, WEtv</p>
-
-<h3 class="job-title fade-in-element">Front-End Developer</h3>
-<h4 class="job-metadata fade-in-element">Enterprise Rent-A-Car // 2007 - 2009 // St. Louis, MO</h4>
-<p class="fade-in-element mb-12">Developed front-end interfaces for B2B and B2C digital products, working closely with UX designers, project managers, and Java engineers. Also managed weekly deployments for enterprise.com and other customer-centric platforms, while providing QA support for monthly release cycles.</p>
-
-<h3 class="job-title fade-in-element">Senior E-Commerce Web Designer</h3>
-<h4 class="job-metadata fade-in-element">Network Solutions // 2006 - 2007 // Belleville, IL</h4>
-<p class="fade-in-element mb-12">Designed and developed front-end code for e-commerce storefronts for small businesses, maintaining stringent project timelines and adhering to client specifications.</p>
-
-<h3 class="job-title fade-in-element">Webmaster</h3>
-<h4 class="job-metadata fade-in-element">St. Louis Christian College // 2005 - 2006 // St. Louis, MO</h4>
-<p class="fade-in-element mb-12">Primary web content owner, designed, developed, and maintained the college's online presence. During my tenure, the college experienced 60% growth, reaching full campus capacity the following year.</p>
+<div class="jobs">
+  <div class="job">
+    <div class="metadata fade-in-element">
+      <h4 class="title">CEO, Founder</h4>
+      <h3 class="company">UltraDAO Studios</h3>
+      <div class="time-period">2021 - present</div>
+    </div>
+  </div>
+  <div class="job">
+    <div class="description fade-in-element">
+      <p>Founded a bootstrapped decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles. Built and managed a team of artists, engineers, and creative production specialists. Led a range of award-winning creative projects and drove multi-million dollar revenue within the first six months.</p>
+    </div>
+  </div>
+  <div class="job">
+    <div class="metadata fade-in-element">
+      <h4 class="title">Vice President, Experience Design</h4>
+      <h3 class="company">10up</h3>
+      <div class="time-period">2017 - 2021</div>
+    </div>
+    <div class="description fade-in-element">
+      <p>Scaled the design team and its capabilities at an international agency of 200+ across three continents and 16 countries. Managed 20 leaders and ICs across user experience and visual design. Established content design practice and implemented org-wide design strategy.</p>
+      <p>Clients: Facebook, Microsoft, Google, The Nobel Prize, Starbucks, The White House</p>
+    </div>
+  </div>
+  <div class="job">
+    <div class="metadata fade-in-element">
+      <h4 class="title">Principal Creative, Founder</h4>
+      <h3 class="company">Lift UX (acquired)</h3>
+      <div class="time-period">2009 - 2017</div>
+    </div>
+    <div class="description fade-in-element">
+      <p>Founded a UX design studio crafting digital products and WordPress websites for medium-to-large clients.  Launched interactive second-screen apps for acclaimed TV series, earning two Emmy nominations in the process. Managed a compact yet effective team of full-time and contract designers, elevating website traffic for the product division to two million monthly visitors. Acquired by 10up in 2017.</p>
+      <p>Clients: The Walking Dead, Mad Men, Breaking Bad, SundanceTV, IFC Films, WEtv</p>
+    </div>
+  </div>
+  <div class="job">
+    <div class="metadata fade-in-element">
+      <h4 class="title">Front-End Developer</h4>
+      <h3 class="company">Enterprise Rent-A-Car</h3>
+      <div class="time-period">2007 - 2009</div>
+    </div>
+    <div class="description fade-in-element">
+      <p>Developed front-end interfaces for B2B and B2C digital products, working closely with UX designers, project managers, and Java engineers. Also managed weekly deployments for enterprise.com and other customer-centric platforms, while providing QA support for monthly release cycles.</p>
+    </div>
+  </div>
+  <div class="job">
+    <div class="metadata fade-in-element">
+      <h4 class="title">Senior E-Commerce Web Designer</h4>
+      <h3 class="company">Network Solutions</h3>
+      <div class="time-period">2006 - 2007</div>
+    </div>
+    <div class="description fade-in-element">
+      <p>Designed and developed front-end code for e-commerce storefronts for small businesses, maintaining stringent project timelines and adhering to client specifications.</p>
+    </div>
+  </div>
+  <div class="job">
+    <div class="metadata fade-in-element">
+      <h4 class="title">Webmaster</h4>
+      <h3 class="company">St. Louis Christian College</h3>
+      <div class="time-period">2005 - 2006</div>
+    </div>
+    <div class="description fade-in-element">
+      <p>Primary web content owner, designed, developed, and maintained the college's online presence. During my tenure, the college experienced 60% growth, reaching full campus capacity the following year.</p>
+    </div>
+  </div>
+</div>
 
 <h2 class="fade-in-element">Skills</h2>
 
-<ul class="fade-in-element text-sm md:text-base grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-3 list-none ml-0 pl-0">
+<ul class="fade-in-element skills-list">
   <li>Product Design</li>
   <li>Design Management</li>
   <li>Strategic Planning</li>

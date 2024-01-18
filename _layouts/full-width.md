@@ -6,9 +6,11 @@ layout: compress
 <html lang="en">
   {% include head.md %}
   <body>
-    <div class="mx-4 lg:px-0">
-      {% include header.md %}
-      <div class="container">
+    <div class="ui-frame">
+      <div class="ui-navbar">
+        {% include header.md %}
+      </div>
+      <div class="ui-content">
         {{ content }}
       </div>
     </div>

@@ -1,49 +1,58 @@
-.navigation-list {
-  @apply bg-primary-100 sm:bg-transparent;
-}
 
 .menu-button {
-  @apply p-5 -left-5 md:hidden relative w-8 h-8 mt-1;
+  @apply relative w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.75)] md:h-[var(--navbar-width)] mx-auto bg-white md:border-b md:border-b-primary-200 hover:bg-primary-200 md:hover:border-b-primary-200;
 }
 
 .menu-button i {
-  @apply block w-8 h-2 relative;
+  @apply block w-[calc(var(--navbar-width)/2*.75)] md:w-[calc(var(--navbar-width)/2)] h-2 relative mx-auto;
+}
+
+.menu-button i:before,
+.menu-button i:after {
+  @apply border-t-2 border-primary-700 block w-full overflow-hidden absolute;
+  height: 0;
+  content: "";
 }
 
 .menu-button i:before {
-  @apply border-t-2 border-primary-500 block w-8 overflow-hidden top-0 absolute;
-  height: 0;
-  content: "";
+  @apply top-0;
 }
 
 .menu-button i:after {
-  @apply border-t-2 border-primary-500 block w-8 overflow-hidden bottom-0 absolute;
-  height: 0;
-  content: "";
+  @apply bottom-0;
+}
+
+.menu-button:hover i:before,
+.menu-button:hover i:after{
+  @apply border-primary-800;
 }
 
 .navigation {
-  @apply py-4 sm:mb-12 md:mb-16 z-20 max-w-6xl mx-auto relative;
+  @apply flex gap-0 h-screen;
 }
 
 .navigation .logo {
-  @apply inline-block w-[64px] h-[64px] m-0 p-0 text-primary-500 transition-all duration-150 ease-in-out;
+  @apply block w-[42px] h-auto my-0 mx-auto p-0 text-primary-500 transition-all duration-150 ease-in-out;
 }
 
 .navigation .logo path {
   @apply fill-current;
 }
 
+.navigation .navigation-list .logo{
+  @apply w-[56px] md:w-[72px] ml-0 mr-auto;
+}
+
 .navigation .close-button {
-  @apply absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-transparent p-0 inline-block md:hidden;
+  @apply absolute bottom-5 md:bottom-auto left-1/2 md:left-auto md:right-1 md:top-3 transform -translate-x-1/2 bg-transparent p-0 inline-block;
 }
 
 .navigation .close-button-icon {
-  @apply inline-block border-2 border-primary-500 p-2 rounded-full;
+  @apply inline-block border-2 border-primary-500 p-1 rounded-full;
 }
 
 .navigation .close-button-svg {
-  @apply w-8 h-8 block text-primary-500 fill-current;
+  @apply w-6 h-6 block text-primary-500 fill-current;
 }
 
 .navigation .close-button:hover .close-button-icon {
@@ -54,119 +63,37 @@
   @apply text-primary-800;
 }
 
-.navigation-list {
-  @apply left-0 top-0 right-0 bottom-0 flex fixed z-20 md:relative;
+.branding{
+  @apply order-1 md:order-2 w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] shrink md:h-screen md:bg-white relative;
 }
 
-.navigation-list ul {
-  @apply list-none m-0 p-0 w-full md:w-auto md:flex text-center self-center justify-center items-center justify-items-start;
+.menu {
+  @apply order-2 md:order-1 md:h-screen bg-gray-950 grow;
+
+  & ul{
+    @apply w-[220px];
+  }
 }
 
-.navigation-list.invis {
-  @apply hidden md:flex;
-}
-
-.navigation-list li {
-  @apply mb-0 mx-auto align-middle;
-}
-
-.navigation-list li:first-child {
-  @apply mr-1;
-}
-
-.navigation-list li:last-child {
-  @apply mb-0;
-}
-
-.navigation-list li a {
-  @apply mt-1 p-4 block uppercase text-sm md:text-xs leading-none md:px-4 md:py-4 no-underline decoration-2 text-gray-600 hover:underline hover:decoration-primary-700 hover:text-primary-700;
-  letter-spacing: 2px;
-  font-weight: 500;
-}
-
-.navigation-list li.home a {
-  @apply ml-0 pl-2 pr-8 mt-1 inline-block uppercase wide-font leading-none text-primary-500;
+.menu a {
+  @apply p-3 py-4 block font-medium capitalize text-base leading-none no-underline decoration-2 text-white hover:bg-primary-700;
 }
 
 .site-title {
-  @apply float-right md:hidden text-xl font-light inline-block;
-}
+  @apply md:bottom-0 md:left-0 w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.66)] block absolute p-0;
 
-.social-buttons {
-  @apply mt-16 md:mt-0 md:ml-8 md:grow md:text-right hidden sm:block;
-}
-
-.social-buttons > div {
-  @apply rounded-full mx-0;
-}
-
-.social-buttons button {
-  @apply block bg-white cursor-pointer;
-  padding: 15px 18px;
-  line-height: 18px;
-  font-size: 18px;
-}
-
-.social-buttons button.active {
-  @apply bg-primary-800;
-}
-
-.social-buttons .emojis button {
-  padding-right: 12px;
-  border-radius: 100px 0 0 100px;
-}
-
-.social-buttons .cursor-text button {
-  padding-left: 12px;
-  border-radius: 0 100px 100px 0;
+  svg{
+    @apply w-[calc(var(--navbar-width)/2*.75)] md:w-[calc(var(--navbar-width)/2)] h-[calc(var(--navbar-width)*.66)] mx-auto;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-  .menu-button i:before {
-    @apply border-white;
-  }
-
+  .menu-button i:before,
   .menu-button i:after {
-    @apply border-white;
-  }
-
-  .navigation .close-button-icon {
-    @apply border-white;
-  }
-
-  .navigation .close-button:hover .close-button-icon {
-    @apply border-white text-white;
-  }
-
-  .navigation .close-button svg {
-    @apply text-white;
-  }
-
-  .navigation .close-button:hover svg {
-    @apply border-white text-white fill-white;
-  }
-
-  .navigation-list {
-    @apply bg-primary-900 sm:bg-transparent;
+    @apply border-primary-400;
   }
 
   .navigation .logo {
     @apply text-primary-500 hover:text-primary-400;
-  }
-
-  .navigation-list li:not(.home) a {
-    @apply text-gray-300 hover:text-white hover:decoration-primary-700;
-  }
-
-  .navigation-list li:first-child a {
-    @apply text-white underline decoration-primary-700 hover:decoration-white;
-  }
-
-  .social-button {
-    @apply bg-gray-700 hover:bg-primary-200;
-  }
-
-  .social-buttons button.active {
-    @apply bg-primary-200;
   }
 }
