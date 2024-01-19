@@ -15,68 +15,69 @@ permalink: /resume/
 
 </div>
 
-<p class="fade-in-element sub-heading">Emmy-nominated founder and design leader with 16+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, The Nobel Prize, and Starbucks. Former agency executive at 10up, Lift UX (acquired).</p>
+<div itemscope itemtype="http://schema.org/Person">
+<p itemprop="description" class="fade-in-element sub-heading">Emmy-nominated founder and design leader with 16+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, The Nobel Prize, and Starbucks. Former agency executive at 10up, Lift UX (acquired).</p>
 
 <h2 class="fade-in-element mt-12">Work Experience</h2>
 
-<div class="jobs">
-  <div class="job resume-item">
+<div class="jobs" itemscope itemtype="http://schema.org/Organization">
+  <div class="job resume-item" itemprop="employee">
     <div class="metadata fade-in-element">
-      <h4 class="title">CEO, Founder</h4>
-      <h3 class="place">UltraDAO Studios</h3>
-      <div class="time-period">2021 - present</div>
+      <h4 class="title" itemprop="roleName">CEO, Founder</h4>
+      <h3 class="place" itemprop="name">UltraDAO Studios</h3>
+      <div class="time-period" itemprop="worksFor">2021 - present</div>
     </div>
     <div class="description fade-in-element">
       <p>Founded a bootstrapped decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles. Built and managed a team of artists, engineers, and creative production specialists. Led a range of award-winning creative projects and drove multi-million dollar revenue within the first six months.</p>
     </div>
   </div>
-  <div class="job resume-item">
+  <div class="job resume-item" itemprop="employee">
     <div class="metadata fade-in-element">
-      <h4 class="title">Vice President, Experience Design</h4>
-      <h3 class="place">10up</h3>
-      <div class="time-period">2017 - 2021</div>
+      <h4 class="title" itemprop="roleName">Vice President, Experience Design</h4>
+      <h3 class="place" itemprop="name">10up</h3>
+      <div class="time-period" itemprop="worksFor">2017 - 2021</div>
     </div>
     <div class="description fade-in-element">
       <p>Scaled the design team and its capabilities at an international agency of 200+ across three continents and 16 countries. Managed 20 leaders and ICs across user experience and visual design. Established content design practice and implemented org-wide design strategy.</p>
       <p>Clients: Facebook, Microsoft, Google, The Nobel Prize, Starbucks, The White House</p>
     </div>
   </div>
-  <div class="job resume-item">
+  <div class="job resume-item" itemprop="employee">
     <div class="metadata fade-in-element">
-      <h4 class="title">Principal Creative, Founder</h4>
-      <h3 class="place">Lift UX (acquired)</h3>
-      <div class="time-period">2009 - 2017</div>
+      <h4 class="title" itemprop="roleName">Principal Creative, Founder</h4>
+      <h3 class="place" itemprop="name">Lift UX (acquired)</h3>
+      <div class="time-period" itemprop="worksFor">2009 - 2017</div>
     </div>
     <div class="description fade-in-element">
       <p>Founded a UX design studio crafting digital products and WordPress websites for medium-to-large clients.  Launched interactive second-screen apps for acclaimed TV series, earning two Emmy nominations in the process. Managed a compact yet effective team of full-time and contract designers, elevating website traffic for the product division to two million monthly visitors. Acquired by 10up in 2017.</p>
       <p>Clients: The Walking Dead, Mad Men, Breaking Bad, SundanceTV, IFC Films, WEtv</p>
     </div>
   </div>
-  <div class="job resume-item">
+  <div class="job resume-item" itemprop="employee">
     <div class="metadata fade-in-element">
-      <h4 class="title">Front-End Developer</h4>
-      <h3 class="place">Enterprise Rent-A-Car</h3>
-      <div class="time-period">2007 - 2009</div>
+      <h4 class="title" itemprop="roleName">Front-End Developer</h4>
+      <h3 class="place" itemprop="name">Enterprise Rent-A-Car</h3>
+      <div class="time-period" itemprop="worksFor">2007 - 2009</div>
     </div>
     <div class="description fade-in-element">
       <p>Developed front-end interfaces for B2B and B2C digital products, working closely with UX designers, project managers, and Java engineers. Also managed weekly deployments for enterprise.com and other customer-centric platforms, while providing QA support for monthly release cycles.</p>
     </div>
   </div>
-  <div class="job resume-item">
+  <div class="job resume-item" itemprop="employee">
     <div class="metadata fade-in-element">
-      <h4 class="title">Senior E-Commerce Web Designer</h4>
-      <h3 class="place">Network Solutions</h3>
-      <div class="time-period">2006 - 2007</div>
+      <h4 class="title" itemprop="roleName">Senior E-Commerce Web Designer</h4>
+      <h3 class="place" itemprop="name">Network Solutions</h3>
+      <div class="time-period" itemprop="worksFor">2006 - 2007</div>
     </div>
     <div class="description fade-in-element">
       <p>Designed and developed front-end code for e-commerce storefronts for small businesses, maintaining stringent project timelines and adhering to client specifications.</p>
     </div>
   </div>
-  <div class="job resume-item">
+  <div class="job resume-item" itemprop="employee">
     <div class="metadata fade-in-element">
-      <h4 class="title">Webmaster</h4>
-      <h3 class="place">St. Louis Christian College</h3>
-      <div class="time-period">2005 - 2006</div>
+      <h4 class="title" itemprop="roleName">Webmaster</h4>
+      <h3 class="place" itemprop="name">St. Louis Christian College</h3>
+      <div class="time-period" itemprop="worksFor">2005 - 2006</div>
     </div>
     <div class="description fade-in-element">
       <p>Primary web content owner, designed, developed, and maintained the college's online presence. During my tenure, the college experienced 60% growth, reaching full campus capacity the following year.</p>
@@ -86,7 +87,7 @@ permalink: /resume/
 
 <h2 class="fade-in-element">Skills</h2>
 
-<ul class="fade-in-element skills-list">
+<ul class="fade-in-element skills-list" itemprop="knowsAbout">
   <li>Product Design</li>
   <li>Design Management</li>
   <li>Strategic Planning</li>
@@ -109,11 +110,11 @@ permalink: /resume/
 
 <h2 class="fade-in-element">Education</h2>
 
-<div class="schools">
+<div class="schools" itemscope itemtype="http://schema.org/EducationalOrganization">
   <div class="school resume-item">
     <div class="metadata fade-in-element">
-      <h4 class="title">Graphic Design</h4>
-      <h3 class="place">Missouri State University</h3>
+      <h4 class="title" itemprop="alumniOf">Graphic Design</h4>
+      <h3 class="place" itemprop="name">Missouri State University</h3>
       <div class="time-period">2004</div>
     </div>
     <div class="description fade-in-element">
@@ -123,8 +124,8 @@ permalink: /resume/
 
   <div class="school resume-item">
     <div class="metadata fade-in-element">
-      <h4 class="title">Religious Studies</h4>
-      <h3 class="place">Saint Louis Christian College</h3>
+      <h4 class="title" itemprop="alumniOf">Religious Studies</h4>
+      <h3 class="place" itemprop="name">Saint Louis Christian College</h3>
       <div class="time-period">2002 - 2004</div>
     </div>
     <div class="description fade-in-element">
@@ -135,11 +136,11 @@ permalink: /resume/
 
 <h2 class="fade-in-element">Awards & Recognitions</h2>
 
-<ul class="fade-in-element">
-  <li>Official Selection, Woodies: Origin, <a href="https://www.asff.co.uk/" target="_blank">Aesthetica Short Film Festival</a> (2023)</li>
-  <li>Most Valuable Gallery, Decuration Council II, <a href="https://deca.art/" target="_blank">Deca</a> (2023)</li>
-  <li>Outstanding Curation of a Tezos Collection Award, <a href="https://gallery.so" target="_blank">Gallery Awards</a> (2022)</li>
-  <li>Best Environmental Initiative from an NFT project, <a href="https://nft.nyc/" target="_blank">NFT NYC</a> (2022)</li>
-  <li>Outstanding Creative Achievement in Interactive Media – Social TV Experience (Nominee), Mad Men: The Fan Cut, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2015)</li>
-  <li>Outstanding Interactive Program (Nominee), The Walking Dead Story Sync, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2013)</li>
+<ul class="fade-in-element" itemscope itemtype="http://schema.org/ItemList">
+  <li itemprop="itemListElement">Official Selection, Woodies: Origin, <a href="https://www.asff.co.uk/" target="_blank">Aesthetica Short Film Festival</a> (2023)</li>
+  <li itemprop="itemListElement">Most Valuable Gallery, Decuration Council II, <a href="https://deca.art/" target="_blank">Deca</a> (2023)</li>
+  <li itemprop="itemListElement">Outstanding Curation of a Tezos Collection Award, <a href="https://gallery.so" target="_blank">Gallery Awards</a> (2022)</li>
+  <li itemprop="itemListElement">Best Environmental Initiative from an NFT project, <a href="https://nft.nyc/" target="_blank">NFT NYC</a> (2022)</li>
+  <li itemprop="itemListElement">Outstanding Creative Achievement in Interactive Media – Social TV Experience (Nominee), Mad Men: The Fan Cut, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2015)</li>
+  <li itemprop="itemListElement">Outstanding Interactive Program (Nominee), The Walking Dead Story Sync, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2013)</li>
 </ul>
