@@ -17,8 +17,6 @@ permalink: /resume/
 
 <p class="fade-in-element sub-heading">Emmy-nominated founder and design leader with 16+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, The Nobel Prize, and Starbucks. Former agency executive at 10up, Lift UX (acquired).</p>
 
-<hr class="fade-in-element mt-0 mb-12">
-
 <h2 class="fade-in-element mt-12">Work Experience</h2>
 
 <div class="jobs">

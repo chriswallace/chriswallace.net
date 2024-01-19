@@ -1181,12 +1181,12 @@ video {
   margin-bottom: auto;
 }
 
-.mb-0 {
-  margin-bottom: 0px;
+.-mt-4 {
+  margin-top: -1rem;
 }
 
-.mb-12 {
-  margin-bottom: 3rem;
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .mb-16 {
@@ -1211,10 +1211,6 @@ video {
 
 .ml-1 {
   margin-left: 0.25rem;
-}
-
-.mt-0 {
-  margin-top: 0px;
 }
 
 .mt-12 {

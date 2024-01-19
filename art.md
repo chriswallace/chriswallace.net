@@ -6,8 +6,6 @@ permalink: /art/
 
 <p class="sub-heading fade-in-element">Over the past few years, I've become fascinated by digital and generative art. Recently, my explorations focus primarily on AI-collaborative art, creating complex algorithms that produce beautiful works. I'm also an avid collector with over 6,000 pieces acquired.</p>
 
-<hr class="fade-in-element">
-
 <div id="bgSwitch">
 
     <h2 class="fade-in-element"><a href="/art/qql-studying-the-algorithm">QQL: Studying the Algorithm</a></h2>

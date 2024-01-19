@@ -64,12 +64,23 @@ body {
 /* Home Page */
 
 .home-title {
-  @apply text-6xl sm:text-7xl md:text-[6rem] mb-8 max-w-full uppercase;
-  line-height: 0.94;
-  font-weight: 700;
+  @apply text-6xl sm:text-7xl md:text-[5rem] lg:text-[6.4rem] leading-none mb-4 font-light uppercase;
+
+  .ui-content &{
+    max-width: none;
+  }
 
   span {
     @apply block;
+  }
+}
+
+.now-accepting-work{
+  @apply mt-3 mb-6 -top-6 relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs px-5 pt-[9px] pb-[11px] inline-block;
+  box-shadow: inset 0px -6px 0 -3px rgba(50,20,97,0.4);
+
+  strong{
+    @apply font-bold;
   }
 }
 

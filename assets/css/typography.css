@@ -30,6 +30,10 @@ li {
   @apply text-gray-500;
 }
 
+p,ul,ol{
+  @apply mb-12;
+}
+
 h1 {
   @apply text-3xl md:text-4xl md:max-w-3xl mb-6;
 }
@@ -50,16 +54,17 @@ h6 {
 }
 
 .primary-heading {
-  @apply text-3xl md:text-4xl mb-4 lowercase;
+  @apply text-6xl md:text-7xl mt-2 md:mt-0 mb-4 md:mb-12 font-light lowercase;
+  letter-spacing: -0.02em;
 }
 
 .primary-heading:before {
-  @apply inline -mr-1;
+  @apply inline -mr-2 md:-mr-4;
   content: "/";
 }
 
 .sub-heading {
-  @apply text-base md:text-xl md:leading-7 text-gray-500 mb-4 md:mb-6;
+  @apply text-lg md:text-xl md:leading-7 text-gray-500 mb-4 md:mb-16;
   font-weight: 500;
 }
 
@@ -94,7 +99,7 @@ caption {
 }
 
 hr {
-  @apply w-[40px] border-gray-300 border-t-2 h-[0] pb-0;
+  @apply w-[40px] border-primary-400 border-t-4 h-[0] pb-0;
 }
 
 p + hr {
@@ -135,7 +140,7 @@ p + hr {
   }
 
   hr {
-    @apply border-gray-400;
+    @apply border-primary-700;
   }
 
   caption {

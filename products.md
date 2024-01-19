@@ -6,8 +6,6 @@ permalink: /products/
 
 <p class="sub-heading fade-in-element">Since 2021, I've been building blockchain-connected products alongside a stellar team of artists, creators, and engineers.</p>
 
-<hr class="fade-in-element mt-0 mb-12">
-
 <div id="bgSwitch" class="outer-card-container fade-in-element">
   <div class="card-container">
     <a href="https://woodiesofficial.com" class="card-zoom">

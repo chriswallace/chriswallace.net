@@ -12,7 +12,7 @@ permalink: /bio/
 
     <p class="sub-heading fade-in-element">Born and raised in St. Louis, MO, I was diagnosed at 19 with testicular cancer. Forced to drop out of college, I underwent aggressive chemotherapy, all while expecting my first child with my high school sweetheart (and now wife of nearly 20 years). Faced with these hardships at such a young age, I started my design career to provide for a growing family.</p>
 
-    <hr class="fade-in-element">
+    <hr class="fade-in-element -mt-4">
 
     <p class="fade-in-element">In 2009, I co-founded Lift UX, a design agency crafting web and digital experiences for media and publishing clients, earning multiple Emmy nominations for our innovative second-screen apps for TV shows like The Walking Dead, Breaking Bad, and Mad Men. We operated a number of digital design asset and template brands including UpThemes, 365psd, and Designmoo, used by designers worldwide for design inspiration, production, and WordPress publishing.</p>
 
