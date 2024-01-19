@@ -1,5 +1,5 @@
 html {
-  font-size: 18px;
+  font-size: var(--font-size-base);
   line-height: 1.5;
 }
 
@@ -30,12 +30,14 @@ li {
   @apply text-gray-500;
 }
 
-p,ul,ol{
+p,
+ul,
+ol {
   @apply mb-12;
 }
 
 h1 {
-  @apply text-3xl md:text-4xl md:max-w-3xl mb-6;
+  @apply text-xl md:text-4xl md:max-w-3xl mb-6;
 }
 
 h2 {
@@ -43,8 +45,7 @@ h2 {
 }
 
 h3 {
-  @apply text-base md:text-xl mb-2 mt-6 sm:mt-12;
-  font-weight: 500;
+  @apply text-sm md:text-base mb-2 mt-6 sm:mt-12;
 }
 
 h4,
@@ -54,7 +55,7 @@ h6 {
 }
 
 .primary-heading {
-  @apply text-6xl md:text-7xl mt-2 md:mt-0 mb-4 md:mb-12 font-light lowercase;
+  @apply text-6xl md:text-7xl mt-2 md:mt-0 mb-12 md:mb-24 font-light lowercase;
   letter-spacing: -0.02em;
 }
 
@@ -63,9 +64,13 @@ h6 {
   content: "/";
 }
 
+.primary-heading-no-slash {
+  @apply text-6xl md:text-7xl mt-2 md:mt-0 mb-12 md:mb-24 font-light lowercase;
+  letter-spacing: -0.02em;
+}
+
 .sub-heading {
-  @apply text-lg md:text-xl md:leading-7 text-gray-500 mb-4 md:mb-16;
-  font-weight: 500;
+  @apply text-xl md:text-2xl md:leading-7 text-gray-500 mb-12 md:mb-16;
 }
 
 .sub-heading-curated {
@@ -108,7 +113,7 @@ p + hr {
 
 @media (prefers-color-scheme: dark) {
   body {
-    @apply text-white font-medium;
+    @apply text-white;
   }
 
   h1,

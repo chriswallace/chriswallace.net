@@ -106,12 +106,48 @@ body {
 
 /* About page */
 
-.image-right {
-  @apply relative sm:float-right rounded-lg sm:max-w-[240px] md:max-w-[320px] w-full sm:ml-4 sm:ml-12 my-8 sm:mb-12 sm:mt-0;
+.bio-grid {
+  @apply sm:grid sm:grid-cols-3 lg:grid-cols-2 sm:gap-6 lg:gap-24 max-w-7xl;
 }
 
-.image-right img {
-  @apply w-full h-full object-cover rounded-lg;
+.bio-content {
+  @apply sm:col-span-2 lg:col-span-1;
+}
+
+.image-grid {
+  @apply relative sm:mt-0 w-auto aspect-square sm:aspect-[9/22] order-2;
+}
+
+.image-grid img {
+  @apply rounded-md max-h-full;
+}
+
+.image {
+  @apply rounded-md absolute shadow-sm transform;
+}
+
+.image.one {
+  @apply left-0 top-[14%] w-[44%] sm:top-0 md:left-[4%] sm:w-[56%] rotate-[-1.8deg] z-20;
+}
+
+.image.two {
+  @apply left-[33%] top-0 w-[38%] sm:top-[12%] sm:left-[50%] sm:w-[50%] rotate-[1.5deg] z-10;
+}
+
+.image.three {
+  @apply right-0 top-[32%] w-[38%] sm:top-[34%] sm:left-0 sm:right-auto sm:w-[58%] rotate-[3deg] z-30;
+}
+
+.image.four {
+  @apply left-[35%] top-[61%] w-[60%] sm:top-[50%] sm:w-[54%] sm:left-auto sm:right-[5%] rotate-[-1.8deg] z-40;
+}
+
+.image.five {
+  @apply right-[5%] top-[5%] w-[20%] sm:top-[55%] sm:w-[35%] sm:left-[13%] sm:right-auto sm:rotate-[-1.8deg] z-10 md:z-40;
+}
+
+.image.six {
+  @apply left-[6%] top-[56%] w-[30%] sm:top-[65%] sm:w-[28%] sm:left-[44%] rotate-[1.8deg] z-40;
 }
 
 .video-player {

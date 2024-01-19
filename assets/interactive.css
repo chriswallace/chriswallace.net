@@ -542,9 +542,27 @@ video {
   padding-left: 0;
 }
 
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
+  }
+}
+
+@media (min-width: 1640px) {
+  .container {
+    max-width: 1640px;
   }
 }
 
@@ -1648,7 +1666,7 @@ video {
   font-size: 3rem;
   line-height: 1.334;
   letter-spacing: -0.0145em;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .text-sm {
@@ -1660,9 +1678,9 @@ video {
 
 .text-xl {
   font-size: 1.04rem;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  font-weight: 500;
+  line-height: 1.65;
+  letter-spacing: 0;
+  font-weight: 300;
 }
 
 .font-extralight {
@@ -2572,9 +2590,9 @@ body.meetChris {
 
   .md\:text-2xl {
     font-size: 1.2rem;
-    line-height: 1.5;
-    letter-spacing: -0.01em;
-    font-weight: 500;
+    line-height: 1.65;
+    letter-spacing: 0;
+    font-weight: 300;
   }
 
   .md\:text-\[1\.2rem\] {

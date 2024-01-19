@@ -1,5 +1,5 @@
 module.exports = {
-  darkMode: 'media', // or 'class'
+  darkMode: "media", // or 'class'
   mode: "jit",
   content: ["**/*.{html,md}"],
   theme: {
@@ -7,10 +7,10 @@ module.exports = {
       center: true, // centers the container by default
       padding: "0", // adds 1rem of padding on each side of the container
       screens: {
-        sm: "1280px",
-        md: "1280px",
+        sm: "640px",
+        md: "900px",
         lg: "1280px",
-        xl: "1280px",
+        xl: "1640px",
       },
     },
     extend: {
@@ -52,48 +52,48 @@ module.exports = {
           "0.94rem",
           {
             lineHeight: "1.65",
-            letterSpacing: "-0.01em",
-            fontWeight: "500",
+            letterSpacing: "0",
+            fontWeight: "300",
           },
         ],
         xl: [
           "1.04rem",
           {
-            lineHeight: "1.5",
-            letterSpacing: "-0.01em",
-            fontWeight: "500",
+            lineHeight: "1.65",
+            letterSpacing: "0",
+            fontWeight: "300",
           },
         ],
         "2xl": [
           "1.2rem",
           {
-            lineHeight: "1.5",
-            letterSpacing: "-0.01em",
-            fontWeight: "500",
+            lineHeight: "1.65",
+            letterSpacing: "0",
+            fontWeight: "300",
           },
         ],
         "3xl": [
           "1.6rem",
           {
             lineHeight: "1.334",
-            letterSpacing: "-0.01em",
-            fontWeight: "500",
+            letterSpacing: "0",
+            fontWeight: "300",
           },
         ],
         "4xl": [
           "2rem",
           {
             lineHeight: "1.334",
-            letterSpacing: "-0.01em",
-            fontWeight: "500",
+            letterSpacing: "0",
+            fontWeight: "300",
           },
         ],
         "5xl": [
           "2.4rem",
           {
             lineHeight: "1.334",
-            letterSpacing: "-0.0125em",
-            fontWeight: "500",
+            letterSpacing: "0",
+            fontWeight: "300",
           },
         ],
         "6xl": [
@@ -101,7 +101,7 @@ module.exports = {
           {
             lineHeight: "1.334",
             letterSpacing: "-0.0145em",
-            fontWeight: "500",
+            fontWeight: "300",
           },
         ],
       },
@@ -120,18 +120,18 @@ module.exports = {
           950: "#141414",
         },
         primary: {
-          '50': '#f5f4fe',
-          '100': '#efeafd',
-          '200': '#e0d8fc',
-          '300': '#c9b8fa',
-          '400': '#af90f5',
-          '500': '#8750ed',
-          '600': '#8542e5',
-          '700': '#7630d1',
-          '800': '#6328af',
-          '900': '#522290',
-          '950': '#321461',
-        }
+          50: "#f5f4fe",
+          100: "#efeafd",
+          200: "#e0d8fc",
+          300: "#c9b8fa",
+          400: "#af90f5",
+          500: "#8750ed",
+          600: "#8542e5",
+          700: "#7630d1",
+          800: "#6328af",
+          900: "#522290",
+          950: "#321461",
+        },
       },
       minWidth: {
         1: "0.25rem",

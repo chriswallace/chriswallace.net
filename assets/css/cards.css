@@ -8,53 +8,55 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.card-grid{
-    @apply grid gap-4 grid-cols-1 sm:grid-cols-2;
+.card-grid {
+  @apply grid gap-4 grid-cols-1 sm:grid-cols-2;
 }
 
-.bg-image-card{
-    @apply bg-center bg-cover aspect-[4/3] relative rounded-md text-white hover:text-white;
+.bg-image-card {
+  @apply bg-center bg-cover aspect-[4/3] relative rounded-md text-white hover:text-white;
 }
 
-.card-text{
-    @apply absolute left-0 top-0 right-0 p-4 p-6 lg:p-8 bottom-[50%];
+.card-text {
+  @apply absolute left-0 top-0 right-0 p-4 p-6 lg:p-8 bottom-[50%];
 }
 
-.top-center .card-text{
-    @apply flex flex-col justify-center text-center;
+.top-center .card-text {
+  @apply flex flex-col justify-center text-center;
 }
 
-.bottom-right .card-text{
-    @apply bottom-0 top-auto left-[50%] pl-4 pt-0 text-right;
+.bottom-right .card-text {
+  @apply bottom-0 top-auto left-[50%] pl-4 pt-0 text-right;
 }
 
-.bottom-center .card-text{
-    @apply flex flex-col absolute justify-center text-center justify-end bottom-0 left-0 right-0 top-[50%];
+.bottom-center .card-text {
+  @apply flex flex-col absolute justify-center text-center justify-end bottom-0 left-0 right-0 top-[50%];
 }
 
-.card-text h3{
-    @apply text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2 text-white;
-    font-weight: 500;
+.card-text h3 {
+  @apply text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2 text-white;
+  font-weight: 500;
 }
 
-.card-text p{
-    @apply mb-2 lg:mb-4 text-sm lg:text-base text-white;
+.card-text p {
+  @apply mb-2 lg:mb-4 text-sm lg:text-base text-white;
 }
 
-.card-text .cta{
-    @apply caret text-xs lg:text-base caret-yellow;
+.card-text .cta {
+  @apply caret text-xs lg:text-base caret-yellow;
 }
 
-.dark .card-text h3{
-    @apply text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2 text-gray-800;
+.dark .card-text h3 {
+  @apply text-lg lg:text-xl mt-0 pt-0 mb-1 lg:mb-2 text-gray-800;
+  font-weight: 500;
 }
 
-.dark .card-text p{
-    @apply mb-2 lg:mb-4 text-sm lg:text-base text-gray-600;
+.dark .card-text p {
+  @apply mb-2 lg:mb-4 text-sm lg:text-base text-gray-600;
 }
 
-.dark .card-text .cta{
-    @apply text-gray-800 caret-rose;
+.dark .card-text .cta {
+  @apply text-gray-800 caret-rose;
+  font-weight: 500;
 }
 
 .card-zoom {
@@ -78,7 +80,7 @@
   @apply text-white leading-tight block text-sm sm:text-base md:text-lg m-0 mr-6;
 }
 
-.card-text p{
+.card-text p {
   @apply text-[#FAC832];
 }
 
@@ -88,6 +90,6 @@
   @apply text-white;
 }
 
-.dark .card-text p{
+.dark .card-text p {
   @apply text-gray-600;
 }

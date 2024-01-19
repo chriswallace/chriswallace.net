@@ -89,7 +89,7 @@ permalink: /portfolio
         <p class="fade-in-element">Year: 2012</p>
         <p class="fade-in-element">We partnered with AMC Networks to design and develop an award winning second-screen TV companion app. This ground-breaking work was featured by the creator of WordPress, Matt Mullenweg, at WordCamp San Francisco and awarded the prize for Best Second Screen TV App at the 2012 Variety Awards. The following year Story Sync was nominated for the Best iPad or Tablet Social TV Application at the 2013 Social TV Awards. In 2013 The Walking Dead Story Sync was nominated for the Outstanding Interactive Program at the 2013 Emmys.</p>
     </div>
-        <div class="mb-16 md:mb-0" style="flex:1">
+    <div class="mb-16 md:mb-0" style="flex:1">
         <img src="/assets/images/ifc-com.png" class="fade-in-element portfolio-image dark:hidden" alt="">
         <img src="/assets/images/ifc-com-dark.png" class="fade-in-element portfolio-image hidden dark:block" alt="">
         <h3 class="fade-in-element"><a href="">IFC.com</a></h3>
