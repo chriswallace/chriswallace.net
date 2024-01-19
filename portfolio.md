@@ -59,16 +59,6 @@ permalink: /portfolio
     </div>
 </div>
 <div class="md:flex md:flex-row sm:gap-8 mb-6">
-    <div class="md:flex md:flex-row sm:gap-8 mb-6">
-    <div class="mb-16 md:mb-0" style="flex:1">
-        <img src="/assets/images/10up-videos.png" class="fade-in-element portfolio-image dark:hidden" alt="">
-        <img src="/assets/images/10up-videos-dark.png" class="fade-in-element portfolio-image hidden dark:block" alt="">
-        <h3 class="fade-in-element">10up Brand & Recruiting Videos</h3>
-        <p class="mb-0 fade-in-element">Links: <a href="https://vimeo.com/284765957" target="_blank">Brand Video</a>, <a href="https://vimeo.com/284768433" target="_blank">Recruiting Video</a></p>
-        <p class="mb-0 fade-in-element">Role: Executive Creative Direction</p>
-        <p class="fade-in-element">Year: 2018</p>
-        <p class="fade-in-element">I pitched and executive directed the creation of two marketing videos for 10up: one for prospective clients and a second for prospective employees. With our annual company meetup in Jackson Hole, Wyoming as the backdrop, we flew a video crew, key client stakeholders, and team members out to film interviews and B-roll.</p>
-    </div>
     <div class="mb-16 md:mb-0" style="flex:1">
         <img src="/assets/images/godaddy-theme.png" class="fade-in-element portfolio-image dark:hidden" alt="">
         <img src="/assets/images/godaddy-theme-dark.png" class="fade-in-element portfolio-image hidden dark:block" alt="">
@@ -77,5 +67,34 @@ permalink: /portfolio
         <p class="fade-in-element">Year: 2019</p>
         <p class="fade-in-element">I collaborated with two senior designers on a project for returning client, GoDaddy. We developed a computational design system capable of producing an endless variety of themes, resulting in a surge in user signups and WordPress users for GoDaddy. Assisted the client and internal designers with valuable insights, critiqued design progress, and worked closely with the engineering team to ensure optimal implementation of our work.</p>
     </div>
+    <div class="mb-16 md:mb-0" style="flex:1">
+        <img src="/assets/images/mad-men.png" class="fade-in-element portfolio-image dark:hidden" alt="">
+        <img src="/assets/images/mad-men-dark.png" class="fade-in-element portfolio-image hidden dark:block" alt="">
+        <h3 class="fade-in-element"><a href="https://www.youtube.com/watch?v=X9UVZjvmmbw">Mad Men: The Fan Cut</a></h3>
+        <p class="mb-0 fade-in-element">Role: Creative Direction</p>
+        <p class="fade-in-element">Year: 2015</p>
+        <p class="fade-in-element">As the Creative Director, I helped lead the design of the "Mad Men: The Fan Cut" web application celebrating AMC's flagship series. This involved creating a marketing mini-site with a custom video user submission app. We built a WordPress-powered app for fans to claim and recreate short clips from the series, uploaded to YouTube and submitted for editorial review. The app featured a modern design that respected the 1960s and 70s aesthetic of "Mad Men," with elements like parallax scrolling and the iconic logo and silhouette.</p>
+    </div>
 </div>
+<div class="md:flex md:flex-row sm:gap-8 mb-6">
+    <div class="mb-16 md:mb-0" style="flex:1">
+        <div class="video-player fade-in-element">
+            <video id="portfolioVideo" width="100%" controls muted autoplay>
+                <source src="/assets/video/twd-story-sync.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <h3 class="fade-in-element"><a href="https://www.theverge.com/entertainment/2014/2/13/5406498/how-a-second-screen-app-made-the-walking-dead-come-alive" target="_blank">The Walking Dead Story Sync</a></h3>
+        <p class="mb-0 fade-in-element">Role: Creative Direction</p>
+        <p class="fade-in-element">Year: 2012</p>
+        <p class="fade-in-element">We partnered with AMC Networks to design and develop an award winning second-screen TV companion app. This ground-breaking work was featured by the creator of WordPress, Matt Mullenweg, at WordCamp San Francisco and awarded the prize for Best Second Screen TV App at the 2012 Variety Awards. The following year Story Sync was nominated for the Best iPad or Tablet Social TV Application at the 2013 Social TV Awards. In 2013 The Walking Dead Story Sync was nominated for the Outstanding Interactive Program at the 2013 Emmys.</p>
+    </div>
+        <div class="mb-16 md:mb-0" style="flex:1">
+        <img src="/assets/images/ifc-com.png" class="fade-in-element portfolio-image dark:hidden" alt="">
+        <img src="/assets/images/ifc-com-dark.png" class="fade-in-element portfolio-image hidden dark:block" alt="">
+        <h3 class="fade-in-element"><a href="">IFC.com</a></h3>
+        <p class="mb-0 fade-in-element">Role: Visual/Web Design</p>
+        <p class="fade-in-element">Year: 2012</p>
+        <p class="fade-in-element">When IFC needed a responsive redesign and WordPress implementation, we were excited to answer the call by designing a bold new look and fresh user experience. I led the visual design and partnered with our UX lead to craft a mobile-first responsive website with high information and media density. Working under strict requirements for takeover ads and business goals, we navigated complex stakeholders needs to deliver a product everyone was excited about.</p>
+    </div>
 </div>

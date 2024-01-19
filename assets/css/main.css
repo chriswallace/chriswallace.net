@@ -66,7 +66,7 @@ body {
 .home-title {
   @apply text-6xl sm:text-7xl md:text-[5rem] lg:text-[6.4rem] leading-none mb-4 font-light uppercase;
 
-  .ui-content &{
+  .ui-content & {
     max-width: none;
   }
 
@@ -75,11 +75,11 @@ body {
   }
 }
 
-.now-accepting-work{
+.now-accepting-work {
   @apply mt-3 mb-6 -top-6 relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs px-5 pt-[9px] pb-[11px] inline-block;
-  box-shadow: inset 0px -6px 0 -3px rgba(50,20,97,0.4);
+  box-shadow: inset 0px -6px 0 -3px rgba(50, 20, 97, 0.4);
 
-  strong{
+  strong {
     @apply font-bold;
   }
 }
@@ -112,6 +112,32 @@ body {
 
 .image-right img {
   @apply w-full h-full object-cover rounded-lg;
+}
+
+.video-player {
+  @apply aspect-[40/27] flex flex-col items-center justify-center rounded-md overflow-hidden bg-[#C7C7C7];
+}
+
+@media (prefers-color-scheme: dark) {
+  .video-player {
+    @apply bg-[#2F2F2F];
+  }
+}
+
+.video-player video {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Ensures no extra space around the video element */
+  margin: 0 auto; /* Centers the video player */
+}
+
+/* Custom Controls (Optional) */
+/* You can hide the default controls and implement custom controls if needed.
+This gives you more control over the look and feel of the player: */
+
+/* Hide default controls */
+video::-webkit-media-controls {
+  display: none !important;
 }
 
 /* Wallace Collection page */
