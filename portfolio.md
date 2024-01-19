@@ -79,7 +79,7 @@ permalink: /portfolio
 <div class="md:flex md:flex-row sm:gap-8 mb-6">
     <div class="mb-16 md:mb-0" style="flex:1">
         <div class="video-player fade-in-element">
-            <video id="portfolioVideo" width="100%" controls muted autoplay>
+            <video id="portfolioVideo" width="100%" controls muted playsinline autoplay>
                 <source src="/assets/video/twd-story-sync.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
