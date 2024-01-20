@@ -1,13 +1,8 @@
----
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 title: Chris Wallace
-description: Hi. I'm Chris, an award-winning design executive with 16+ years of leadership and innovation for household brands and revered cultural institutions.
----
+description: Hi. I'm Chris, an award-winning, two-time Emmy-nominated designer, creative director, and front-end engineer.
 
-<p class="text-xl md:text-2xl mt-12 mb-6 fade-in-element visible">Some say the mythical unicorn doesn't exist&mdash;I must disagree. I'm Chris Wallace, an award-winning designer, creative director, and front-end engineer with over 15 years pioneering the future of digital experience.</p>
+<p class="text-xl md:text-2xl mt-12 mb-6 fade-in-element visible">Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm Chris Wallace, an award-winning designer, creative director, and front-end engineer with over 15 years pioneering the future of digital experience.</p>
 
 <p class="text-xl md:text-2xl mb-16 fade-in-element visible">
   <a href="/bio">My story →</a>

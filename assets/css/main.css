@@ -82,13 +82,17 @@ body {
     @apply sm:mb-0 px-5 pt-[9px] pb-[11px] inline-block relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs whitespace-nowrap no-underline hover:underline;
     box-shadow: inset 0px -6px 0 -3px rgba(50, 20, 97, 0.4);
 
+    span{
+      @apply hidden sm:inline;
+    }
+
     strong {
       @apply font-bold;
     }
   }
 
   p{
-    @apply m-0 p-0 inline-block grow;
+    @apply m-0 p-0 inline-block grow leading-snug;
   }
 
 }

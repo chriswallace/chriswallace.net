@@ -4351,6 +4351,23 @@ body {
   }
   .badge {
     box-shadow: inset 0px -6px 0 -3px rgba(50, 20, 97, 0.4);
+    span {
+      display: none;
+    }
+    span {
+      display: none;
+    }
+    span.utility-bar {
+      opacity: 0;
+    }
+    span.fullscreen-viewer {
+      display: none;
+    }
+    @media (min-width: 640px) {
+      span {
+        display: inline;
+      }
+    }
     strong {
       font-weight: 700;
     }
@@ -4366,6 +4383,9 @@ body {
   }
   p {
     padding: 0px;
+  }
+  p {
+    line-height: 1.375;
   }
 }
 
