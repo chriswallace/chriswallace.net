@@ -76,10 +76,10 @@ body {
   }
 }
 .open-to-work{
-  @apply -mt-[20px] md:-mt-[40px] bg-gray-400 mb-12 relative rounded-md p-4 flex gap-4 align-middle items-center;
+  @apply -mt-[20px] md:-mt-[40px] bg-white mb-12 relative rounded-md p-4 flex gap-4 align-middle items-center shadow-md;
 
   .badge {
-    @apply sm:mb-0 px-5 pt-[9px] pb-[11px] inline-block relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs whitespace-nowrap;
+    @apply sm:mb-0 px-5 pt-[9px] pb-[11px] inline-block relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs whitespace-nowrap no-underline hover:underline;
     box-shadow: inset 0px -6px 0 -3px rgba(50, 20, 97, 0.4);
 
     strong {
@@ -99,7 +99,7 @@ body {
   }
 
   .open-to-work{
-    @apply bg-[#242424];
+    @apply bg-[#242424] shadow-none;
   }
 }
 
