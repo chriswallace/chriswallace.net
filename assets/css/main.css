@@ -136,7 +136,7 @@ body {
 }
 
 .image {
-  @apply rounded-md absolute shadow-sm transform;
+  @apply rounded-md absolute shadow-lg drop-shadow transform;
 }
 
 .image.one {
