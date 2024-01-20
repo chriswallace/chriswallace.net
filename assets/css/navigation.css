@@ -3,7 +3,12 @@
 }
 
 .menu-button {
-  @apply relative align-top w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.75)] md:h-[var(--navbar-width)] mx-auto bg-white md:border-b md:border-b-primary-200 hover:bg-primary-50 md:hover:border-b-primary-300;
+  @apply relative align-top w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.75)] md:h-[var(--navbar-width)] mx-auto bg-primary-800 md:bg-white md:border-b md:border-b-primary-200 hover:bg-primary-50 md:hover:border-b-primary-300;
+
+  &:focus i:before,
+  &:focus i:after{
+    @apply bg-primary-600;
+  }
 }
 
 .menu-button i {
@@ -12,7 +17,7 @@
 
   &:before,
   &:after {
-    @apply block overflow-hidden bg-primary-600 w-full;
+    @apply block overflow-hidden bg-white md:bg-primary-600 w-full;
     height: 2px;
     position: absolute;
     top: 50%;
@@ -33,11 +38,11 @@
   }
 
   .open-menu &:before {
-    @apply -rotate-45 translate-y-2/4;
+    @apply -rotate-45 translate-y-2/4 bg-primary-600;
   }
 
   .open-menu &:after {
-    @apply rotate-45 translate-y-2/4;
+    @apply rotate-45 translate-y-2/4 bg-primary-600;
   }
 }
 

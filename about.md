@@ -5,7 +5,7 @@ permalink: /bio/
 ---
 
 <div class="bio-grid">
-    <div class="image-grid mb-16 md:mb-0 fade-in-element">
+    <div class="image-grid fade-in-element">
         <img src="https://ik.imagekit.io/UltraDAO/wallace/wifey.jpg?tr=w-700,q=70" alt="me and my wife posing in front of her mom's family heirloom piano" class="image one">
         <img src="https://ik.imagekit.io/UltraDAO/wallace/lincoln.jpg?tr=w-700,q=70" alt="a portrait of me in a suit leaning against my car, a Lincoln MKZ" class="image two">
         <img src="https://ik.imagekit.io/UltraDAO/wallace/maddie.jpg?tr=w-700,q=70" alt="my daughter and I posing for a photo at sunset on Mount Haleakala in Maui, Hawaii" class="image three">

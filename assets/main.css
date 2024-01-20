@@ -2720,7 +2720,7 @@ a {
   height: calc(var(--navbar-width) * .75);
   width: calc(var(--navbar-width) * .75);
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(99 40 175 / var(--tw-bg-opacity));
   vertical-align: top;
 }
 
@@ -2736,11 +2736,21 @@ a {
     border-bottom-width: 1px;
     --tw-border-opacity: 1;
     border-bottom-color: rgb(224 216 252 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
 
   .menu-button:hover {
     --tw-border-opacity: 1;
     border-bottom-color: rgb(201 184 250 / var(--tw-border-opacity));
+  }
+}
+
+.menu-button {
+  &:focus i:before,
+  &:focus i:after {
+    --tw-bg-opacity: 1;
+    background-color: rgb(133 66 229 / var(--tw-bg-opacity));
   }
 }
 
@@ -2767,7 +2777,14 @@ a {
   &:before,
   &:after {
     --tw-bg-opacity: 1;
-    background-color: rgb(133 66 229 / var(--tw-bg-opacity));
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+  @media (min-width: 768px) {
+    &:before,
+  &:after {
+      --tw-bg-opacity: 1;
+      background-color: rgb(133 66 229 / var(--tw-bg-opacity));
+    }
   }
   &:before,
   &:after {
@@ -2797,6 +2814,10 @@ a {
     --tw-rotate: -45deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
+  .open-menu &:before {
+    --tw-bg-opacity: 1;
+    background-color: rgb(133 66 229 / var(--tw-bg-opacity));
+  }
   .open-menu &:after {
     --tw-translate-y: 50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2804,6 +2825,10 @@ a {
   .open-menu &:after {
     --tw-rotate: 45deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+  .open-menu &:after {
+    --tw-bg-opacity: 1;
+    background-color: rgb(133 66 229 / var(--tw-bg-opacity));
   }
 }
 
@@ -4412,14 +4437,23 @@ body {
 .image-grid {
   position: relative;
   order: 2;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   aspect-ratio: 1 / 1;
   width: auto;
 }
 
 @media (min-width: 640px) {
   .image-grid {
-    margin-top: 0px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     aspect-ratio: 9/22;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-grid {
+    margin-bottom: 0px;
   }
 }
 

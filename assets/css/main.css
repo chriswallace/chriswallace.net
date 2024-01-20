@@ -128,7 +128,7 @@ body {
 }
 
 .image-grid {
-  @apply relative sm:mt-0 w-auto aspect-square sm:aspect-[9/22] order-2;
+  @apply relative my-8 sm:my-16 md:mb-0 w-auto aspect-square sm:aspect-[9/22] order-2;
 }
 
 .image-grid img {
