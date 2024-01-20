@@ -37,7 +37,7 @@ ol {
 }
 
 h1 {
-  @apply text-xl md:text-4xl md:max-w-3xl mb-6;
+  @apply text-3xl md:text-4xl md:max-w-3xl mb-6;
 }
 
 h2 {
@@ -45,7 +45,7 @@ h2 {
 }
 
 h3 {
-  @apply text-sm md:text-base mb-2 mt-6 sm:mt-12;
+  @apply text-base md:text-lg mb-2 mt-6 sm:mt-12;
 }
 
 h4,
@@ -55,7 +55,7 @@ h6 {
 }
 
 .primary-heading {
-  @apply text-6xl md:text-7xl mt-2 md:mt-0 mb-12 md:mb-24 font-light lowercase;
+  @apply text-6xl md:text-7xl mt-2 md:mt-0 mb-4 md:mb-8 font-light lowercase;
   letter-spacing: -0.02em;
 }
 

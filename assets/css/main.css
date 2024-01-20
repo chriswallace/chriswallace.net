@@ -64,7 +64,8 @@ body {
 /* Home Page */
 
 .home-title {
-  @apply text-6xl sm:text-7xl md:text-[5rem] lg:text-[6.4rem] leading-none mb-4 font-light uppercase;
+  @apply text-6xl lg:text-[5rem] mb-4 font-light uppercase;
+  line-height: 1.1;
 
   .ui-content & {
     max-width: none;
@@ -74,19 +75,31 @@ body {
     @apply block;
   }
 }
+.open-to-work{
+  @apply -mt-[20px] md:-mt-[40px] bg-gray-400 mb-12 relative rounded-md p-4 flex gap-4 align-middle items-center;
 
-.now-accepting-work {
-  @apply mt-3 mb-6 -top-6 relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs px-5 pt-[9px] pb-[11px] inline-block;
-  box-shadow: inset 0px -6px 0 -3px rgba(50, 20, 97, 0.4);
+  .badge {
+    @apply sm:mb-0 px-5 pt-[9px] pb-[11px] inline-block relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs whitespace-nowrap;
+    box-shadow: inset 0px -6px 0 -3px rgba(50, 20, 97, 0.4);
 
-  strong {
-    @apply font-bold;
+    strong {
+      @apply font-bold;
+    }
   }
+
+  p{
+    @apply m-0 p-0 inline-block grow;
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {
   body {
     @apply bg-gray-950;
+  }
+
+  .open-to-work{
+    @apply bg-[#242424];
   }
 }
 
@@ -232,15 +245,6 @@ video::-webkit-media-controls {
 }
 
 @media (prefers-color-scheme: dark) {
-  .job-title {
-    @apply text-white font-medium;
-  }
-
-  .collection-title,
-  .artwork-subtitle,
-  .job-metadata {
-    @apply text-primary-400;
-  }
 
   .collection-title a,
   .artwork-subtitle a {

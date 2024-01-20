@@ -16,14 +16,14 @@ permalink: /resume/
 </div>
 
 <div itemscope itemtype="http://schema.org/Person">
-<p itemprop="description" class="fade-in-element sub-heading">Emmy-nominated founder and design leader with 16+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, The Nobel Prize, and Starbucks. Former agency executive at 10up, Lift UX (acquired).</p>
+<p itemprop="description" class="fade-in-element sub-heading">Emmy-nominated designer, creative director, and front-end engineer with 15+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, The Nobel Prize, and Starbucks. Former agency executive at 10up, Lift UX (acquired).</p>
 
 <h2 class="fade-in-element mt-12">Work Experience</h2>
 
 <div class="jobs" itemscope itemtype="http://schema.org/Organization">
   <div class="job resume-item" itemprop="employee">
     <div class="metadata fade-in-element">
-      <h4 class="title" itemprop="roleName">CEO, Founder</h4>
+      <h4 class="title" itemprop="roleName">Creative Director, Founder</h4>
       <h3 class="place" itemprop="name">UltraDAO Studios</h3>
       <div class="time-period" itemprop="worksFor">2021 - present</div>
     </div>
@@ -44,7 +44,7 @@ permalink: /resume/
   </div>
   <div class="job resume-item" itemprop="employee">
     <div class="metadata fade-in-element">
-      <h4 class="title" itemprop="roleName">Principal Creative, Founder</h4>
+      <h4 class="title" itemprop="roleName">Creative Director, Founder</h4>
       <h3 class="place" itemprop="name">Lift UX (acquired)</h3>
       <div class="time-period" itemprop="worksFor">2009 - 2017</div>
     </div>
@@ -55,7 +55,7 @@ permalink: /resume/
   </div>
   <div class="job resume-item" itemprop="employee">
     <div class="metadata fade-in-element">
-      <h4 class="title" itemprop="roleName">Front-End Developer</h4>
+      <h4 class="title" itemprop="roleName">Front-End Engineer</h4>
       <h3 class="place" itemprop="name">Enterprise Rent-A-Car</h3>
       <div class="time-period" itemprop="worksFor">2007 - 2009</div>
     </div>
@@ -73,16 +73,6 @@ permalink: /resume/
       <p>Designed and developed front-end code for e-commerce storefronts for small businesses, maintaining stringent project timelines and adhering to client specifications.</p>
     </div>
   </div>
-  <div class="job resume-item" itemprop="employee">
-    <div class="metadata fade-in-element">
-      <h4 class="title" itemprop="roleName">Webmaster</h4>
-      <h3 class="place" itemprop="name">St. Louis Christian College</h3>
-      <div class="time-period" itemprop="worksFor">2005 - 2006</div>
-    </div>
-    <div class="description fade-in-element">
-      <p>Primary web content owner, designed, developed, and maintained the college's online presence. During my tenure, the college experienced 60% growth, reaching full campus capacity the following year.</p>
-    </div>
-  </div>
 </div>
 
 <h2 class="fade-in-element">Skills</h2>
@@ -90,22 +80,16 @@ permalink: /resume/
 <ul class="fade-in-element skills-list" itemprop="knowsAbout">
   <li>Product Design</li>
   <li>Design Management</li>
-  <li>Strategic Planning</li>
-  <li>Hiring & Personnel Management</li>
   <li>Creative Direction</li>
   <li>Design Systems</li>
-  <li>WordPress Design & Development</li>
-  <li>Resource Management</li>
-  <li>Professional Development Planning</li>
-  <li>Design Operations</li>
   <li>Visual Design</li>
   <li>UX Design</li>
   <li>Information Architecture</li>
-  <li>Product Prototyping</li>
+  <li>Javascript/Typescript</li>
   <li>Front-End Engineering</li>
   <li>Web3 (Blockchain & NFTs)</li>
-  <li>Web Application Architecture</li>
-  <li>Blockchain/Smart Contract Integration</li>
+  <li>WordPress Development</li>
+  <li>SvelteKit Development</li>
 </ul>
 
 <h2 class="fade-in-element">Education</h2>
