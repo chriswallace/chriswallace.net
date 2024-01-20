@@ -176,72 +176,8 @@ video::-webkit-media-controls {
   display: none !important;
 }
 
-/* Wallace Collection page */
-
-.collection-notes {
-  @apply md:flex max-w-3xl sm:gap-8 sm:border-y sm:border-primary-300 pt-6 sm:mb-24 sm:mt-0 mb-16;
-}
-
-.collection-notes p:first-child {
-  @apply flex-1;
-}
-
-.collection-notes p {
-  @apply text-sm;
-}
-
-.collection-title,
-.artist-title,
-.artwork-title,
-.artwork-subtitle {
-  @apply mt-0 mx-4 sm:mx-0 mb-4 text-sm sm:text-base truncate max-w-[100%];
-}
-
-.artist-title {
-  @apply font-medium sm:mt-8;
-}
-
-.artwork-title {
-  @apply mt-4 mb-0 sm:mx-0;
-}
-
-.collection-title,
-.artwork-subtitle {
-  @apply mb-1 sm:mb-4 mt-12 font-light text-primary-500 text-xs sm:text-base;
-}
-
-.artwork-subtitle {
-  @apply mt-0 mb-6 sm:mb-24;
-}
-
-.collection-title a,
-.artwork-subtitle a {
-  @apply font-light no-underline;
-}
-
-.artist-title + h4 {
-  @apply -mt-4;
-}
-
-.art-collection {
-  @apply -mx-4 sm:mx-0 mb-32;
-}
-
-.art-collection > div:last-of-type .gallery-row:last-of-type {
-  @apply mb-8;
-}
-
-.zen-mode {
-  @apply hidden sm:flex sm:gap-4;
-  flex: 1.4;
-}
-
-.zen-mode p:first-child {
-  @apply mb-4 flex-1;
-}
-
-body {
-  transition: background-color 0.3s ease-in-out;
+.portfolio-list {
+  @apply max-w-7xl 2xl:max-w-[70%];
 }
 
 @media (prefers-color-scheme: dark) {
