@@ -23,7 +23,7 @@ permalink: /resume/
 <div class="jobs" itemscope itemtype="http://schema.org/Organization">
   <div class="job resume-item" itemprop="employee">
     <div class="metadata fade-in-element">
-      <h4 class="title" itemprop="roleName">Creative Director, Founder</h4>
+      <h4 class="title" itemprop="roleName">Design Director, Founder</h4>
       <h3 class="place" itemprop="name">UltraDAO Studios</h3>
       <div class="time-period" itemprop="worksFor">2021 - present</div>
     </div>
@@ -44,7 +44,7 @@ permalink: /resume/
   </div>
   <div class="job resume-item" itemprop="employee">
     <div class="metadata fade-in-element">
-      <h4 class="title" itemprop="roleName">Creative Director, Founder</h4>
+      <h4 class="title" itemprop="roleName">Design Director, Founder</h4>
       <h3 class="place" itemprop="name">Lift UX (acquired)</h3>
       <div class="time-period" itemprop="worksFor">2009 - 2017</div>
     </div>
