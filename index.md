@@ -1,6 +1,8 @@
+---
 layout: home
 title: Chris Wallace
 description: Hi. I'm Chris, an award-winning, two-time Emmy-nominated designer, creative director, and front-end engineer.
+---
 
 <p class="text-xl md:text-2xl mt-12 mb-6 fade-in-element visible">Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm Chris Wallace, an award-winning designer, creative director, and front-end engineer with over 15 years pioneering the future of digital experience.</p>
 
