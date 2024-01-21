@@ -2594,10 +2594,6 @@ body.meetChris {
     letter-spacing: 0;
     font-weight: 300;
   }
-
-  .md\:text-\[1\.2rem\] {
-    font-size: 1.2rem;
-  }
 }
 
 @media (min-width: 1024px) {
