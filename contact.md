@@ -6,7 +6,7 @@ permalink: /contact
 
 <p class="fade-in-element mt-12 sub-heading">I'm available for contract and full-time opportunities with forward-thinking companies looking to level up their design capabilities. The best way to get a hold of me is via email: <a href="mailto:chriswallace7@proton.me">chriswallace7@proton.me</a>.</p>
 
-<h2>Reasons to email me</h2>
+<h2 class="fade-in-element">Reasons to email me</h2>
 
 <div class="contact-grid fade-in-element">
     <div class="item">
@@ -47,6 +47,6 @@ permalink: /contact
     </div>
 </div>
 
-<h2>Social media</h2>
+<h2 class="fade-in-element">Social media</h2>
 
 <p class="fade-in-element">I may be slower to respond to DMs but you can follow and message me on <a href="https://twitter.com/chriswallace">X</a>, <a href="https://linkedin.com/in/chriswallace2">LinkedIn</a>, or <a href="https://instagram.com/chriswallace7">Instagram</a>.</p>
