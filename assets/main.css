@@ -4418,7 +4418,7 @@ body {
   }
   .item {
     --tw-border-opacity: 1;
-    border-color: rgb(69 69 69 / var(--tw-border-opacity));
+    border-color: rgb(176 176 176 / var(--tw-border-opacity));
   }
   .item {
     padding-left: 1.5rem;
@@ -4491,7 +4491,7 @@ body {
       }
       &:after {
         --tw-text-opacity: 1;
-        color: rgb(0 0 0 / var(--tw-text-opacity));
+        color: rgb(255 255 255 / var(--tw-text-opacity));
       }
       &.yes:after {
         --tw-bg-opacity: 1;
@@ -4576,6 +4576,20 @@ body {
     --tw-shadow: 0 0 #0000;
     --tw-shadow-colored: 0 0 #0000;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .contact-grid .item p {
+    --tw-text-opacity: 1;
+    color: rgb(93 93 93 / var(--tw-text-opacity));
+  }
+
+  .contact-grid .item {
+    --tw-border-opacity: 1;
+    border-color: rgb(69 69 69 / var(--tw-border-opacity));
+    .icon:after {
+      --tw-text-opacity: 1;
+      color: rgb(0 0 0 / var(--tw-text-opacity));
+    }
   }
 }
 
