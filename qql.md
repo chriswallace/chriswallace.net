@@ -10,16 +10,12 @@ thumbnail: https://ik.imagekit.io/UltraDAO/wallace/studying_the_algorithm.png?tr
 <script src="/assets/js/player.js"></script>
 <article>
   <a class="back fade-in-element" href="/art">/art</a>
-  <h1 class="fade-in-element max-w-full">QQL: Studying the Algorithm</h1>
+  <h1 class="fade-in-element">QQL: Studying the Algorithm</h1>
   <h2 class="sub-heading-curated fade-in-element">
     Curated by Chris Wallace
   </h2>
   <p class="fade-in-element">I'm fascinated by the complex patterns and hidden niceties that emerge from the QQL algorithm. I've spent countless hours generating and studying outputs to curate this series, many of which are now available for purchase through the official marketplace.</p>
   <p class="fade-in-element">Curator notes: This gallery is best experienced on a large 4k display with HDR enabled. Each row (except the first) was curated as a triptych, grouped with intention for various reasons. Sometimes they are grouped because of similar patterning and others based on color or saturation.</p>
-  <p class="fade-in-element">
-    <strong>Fullscreen browser:</strong>
-    Enter fullscreen viewer by clicking the maximize icon on any image. Browse using &larr; and &rarr; keyboard buttons.
-  </p>
   <hr class="mb-16 md:mb-20 fade-in-element" />
   <div id="bgSwitch">
     <div id="art-collection" class="art-collection qql-collection">

@@ -24,6 +24,18 @@ h5 {
   @apply text-gray-950;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  @apply max-w-3xl;
+}
+
 p,
 ul,
 li {
@@ -37,15 +49,15 @@ ol {
 }
 
 h1 {
-  @apply text-3xl md:text-4xl md:max-w-3xl mb-6;
+  @apply text-3xl md:text-4xl 2xl:text-7xl md:max-w-3xl mb-6;
 }
 
 h2 {
-  @apply text-xl md:text-2xl mt-16 sm:mt-24 mb-6;
+  @apply text-xl md:text-2xl 2xl:text-4xl mt-16 sm:mt-24 mb-6;
 }
 
 h3 {
-  @apply text-base md:text-lg mb-2 mt-6 sm:mt-12;
+  @apply text-base md:text-lg 2xl:text-xl mb-2 mt-6 sm:mt-12;
 }
 
 h4,
@@ -55,12 +67,12 @@ h6 {
 }
 
 .primary-heading {
-  @apply text-6xl md:text-7xl mt-2 md:mt-0 mb-4 md:mb-8 font-light lowercase;
+  @apply text-6xl lg:text-7xl mt-2 md:mt-0 mb-4 md:mb-12 font-light lowercase;
   letter-spacing: -0.02em;
 }
 
 .primary-heading:before {
-  @apply inline -mr-2 md:-mr-4;
+  @apply inline -mr-2;
   content: "/";
 }
 
@@ -74,21 +86,11 @@ h6 {
 }
 
 .sub-heading-curated {
-  @apply text-xl md:text-2xl text-gray-500 mt-3 mb-16 relative;
+  @apply text-xl md:text-2xl text-gray-500 -mt-1 mb-12 relative;
 }
 
 article {
   @apply pt-16 md:pt-4;
-}
-
-article p,
-article ul,
-article h2,
-article h3,
-article h4,
-article h5,
-article h6 {
-  @apply max-w-3xl;
 }
 
 article ul {
@@ -152,7 +154,8 @@ p + hr {
     @apply text-gray-300;
   }
 
-  .sub-heading {
-    @apply text-gray-200;
+  .sub-heading,
+  .sub-heading-curated {
+    @apply text-gray-300;
   }
 }

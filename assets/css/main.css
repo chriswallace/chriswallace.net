@@ -21,6 +21,10 @@ body {
   @apply bg-gray-100;
 }
 
+article {
+  @apply max-w-[1600px];
+}
+
 .ui-navbar {
   @apply w-[calc(220px+var(--navbar-width)*.75)] md:w-[calc(220px+var(--navbar-width))] fixed left-auto md:left-0 right-0 md:right-auto top-0 md:h-full md:bg-white z-40 overflow-x-hidden transform translate-x-[220px] md:-translate-x-[220px] transition-transform duration-200 ease-in-out;
 
@@ -38,18 +42,6 @@ body {
   }
   .open-menu &:after {
     @apply opacity-70 z-10;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  ul,
-  ol {
-    @apply max-w-2xl;
   }
 
   .logo {
@@ -75,14 +67,14 @@ body {
     @apply block;
   }
 }
-.open-to-work{
+.open-to-work {
   @apply -mt-[20px] md:-mt-[40px] bg-white mb-12 relative rounded-md p-4 flex gap-4 align-middle items-center shadow-md;
 
   .badge {
     @apply sm:mb-0 px-5 pt-[9px] pb-[11px] inline-block relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs whitespace-nowrap no-underline hover:underline;
     box-shadow: inset 0px -6px 0 -3px rgba(50, 20, 97, 0.4);
 
-    span{
+    span {
       @apply hidden sm:inline;
     }
 
@@ -91,10 +83,9 @@ body {
     }
   }
 
-  p{
+  p {
     @apply m-0 p-0 inline-block grow leading-snug;
   }
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -102,7 +93,7 @@ body {
     @apply bg-gray-950;
   }
 
-  .open-to-work{
+  .open-to-work {
     @apply bg-[#242424] shadow-none;
   }
 }
@@ -124,7 +115,7 @@ body {
 /* About page */
 
 .bio-grid {
-  @apply sm:grid sm:grid-cols-3 lg:grid-cols-2 sm:gap-6 lg:gap-24 max-w-7xl;
+  @apply sm:grid sm:grid-cols-3 lg:grid-cols-2 sm:gap-6 lg:gap-24;
 }
 
 .bio-content {
@@ -193,10 +184,6 @@ video::-webkit-media-controls {
   display: none !important;
 }
 
-.portfolio-list {
-  @apply max-w-7xl 2xl:max-w-[70%];
-}
-
 @media (prefers-color-scheme: dark) {
   body.subtle-bg {
     @apply bg-[#121212];
@@ -249,7 +236,6 @@ video::-webkit-media-controls {
 }
 
 @media (prefers-color-scheme: dark) {
-
   .collection-title a,
   .artwork-subtitle a {
     @apply text-primary-200;

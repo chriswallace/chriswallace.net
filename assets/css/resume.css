@@ -1,16 +1,9 @@
-.resume-item,
-.skills-list,
-.description{
-    @apply max-w-2xl;
-}
-
 .resume-item {
-  @apply my-4;
+  @apply my-4 max-w-3xl;
 
   .metadata {
     @apply border-b border-gray-300 flex content-end gap-1 md:gap-2 mb-4 py-2 items-end;
     flex-wrap: wrap;
-
 
     > * {
       @apply m-0 text-left text-sm md:text-base text-gray-500 font-normal;
@@ -27,7 +20,7 @@
 
     .time-period {
       @apply text-right pr-0 justify-self-end order-2 md:order-3 whitespace-nowrap flex-none md:flex-1;
-      
+
       &:before {
         @apply inline-block mr-1 md:mr-2 content-["•"] md:content-none;
       }
@@ -39,8 +32,8 @@
   }
 }
 
-.ui-content .skills-list {
-  @apply grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-3 list-none ml-0 pl-0;
+.skills-list {
+  @apply grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-3 list-none ml-0 pl-0 max-w-4xl;
 }
 
 @media (prefers-color-scheme: dark) {

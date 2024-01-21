@@ -2,8 +2,9 @@
   @apply grid grid-cols-3 gap-2 sm:gap-4 mt-10 mb-8;
 }
 
+.gallery img,
 .gallery-row img {
-  @apply min-w-full;
+  @apply w-full;
 }
 
 .gallery-row .media-wrapper {
@@ -12,6 +13,24 @@
 
 .gallery-row {
   @apply sm:mx-0 sm:mb-4 grid gap-2 sm:gap-4;
+}
+
+.gallery-row h3 {
+  @apply mt-3 mb-0;
+}
+
+.gallery-row .artwork-subtitle {
+  @apply mb-12 mt-0;
+
+  a {
+    @apply text-gray-600 text-sm lg:text-base font-light no-underline;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .gallery-row .artwork-subtitle a {
+    @apply text-gray-300;
+  }
 }
 
 .gallery-row:last-of-type {
@@ -62,11 +81,11 @@
   @apply grid-cols-1 md:grid-cols-4;
 }
 
-.gallery-double-wide img{
+.gallery-double-wide img {
   @apply min-w-full sm:mx-0;
 }
 
-.portfolio-image{
+.portfolio-image {
   @apply rounded-md mb-6;
 }
 
