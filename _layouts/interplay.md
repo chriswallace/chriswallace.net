@@ -370,8 +370,8 @@ layout: compress
       </div>
       <div class="ui-content">
         {{ content }}
+        {% include footer.md %}
       </div>
-      {% include footer.md %}
     </div>
     {% include scripts.md %}
   </body>
