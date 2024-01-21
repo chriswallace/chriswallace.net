@@ -25,8 +25,12 @@ permalink: /portfolio
     </div>
     <div class="md:flex md:flex-row sm:gap-8 mb-6">
         <div class="mb-16 md:mb-6 fade-in-element" style="flex:1">
-            <img src="/assets/images/woodies-origin.png" class="portfolio-image dark:hidden" alt="">
-            <img src="/assets/images/woodies-origin-dark.png" class="portfolio-image hidden dark:block" alt="">
+            <div class="video-player">
+                <video id="portfolioVideo" width="100%" controls muted playsinline autoplay>
+                    <source src="/assets/video/woodies-origin.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
             <h3 class="mt-3"><a href="https://www.youtube.com/watch?v=encMCWoBc3o" target="_blank">Woodies: Origin</a></h3>
             <p class="mb-0">Role: Executive Creative Direction</p>
             <p>Year: 2022</p>

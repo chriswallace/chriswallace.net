@@ -75,7 +75,7 @@ module.exports = {
         "3xl": [
           "1.6rem",
           {
-            lineHeight: "1.334",
+            lineHeight: "1.5",
             letterSpacing: "0",
             fontWeight: "300",
           },
@@ -83,7 +83,7 @@ module.exports = {
         "4xl": [
           "2rem",
           {
-            lineHeight: "1.334",
+            lineHeight: "1.4",
             letterSpacing: "0",
             fontWeight: "300",
           },
@@ -91,7 +91,7 @@ module.exports = {
         "5xl": [
           "2.4rem",
           {
-            lineHeight: "1.334",
+            lineHeight: "1.4",
             letterSpacing: "0",
             fontWeight: "300",
           },
@@ -99,7 +99,15 @@ module.exports = {
         "6xl": [
           "3rem",
           {
-            lineHeight: "1.334",
+            lineHeight: "1.4",
+            letterSpacing: "-0.0145em",
+            fontWeight: "300",
+          },
+        ],
+        "7xl": [
+          "4rem",
+          {
+            lineHeight: "1.4",
             letterSpacing: "-0.0145em",
             fontWeight: "300",
           },

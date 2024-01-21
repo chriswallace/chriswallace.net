@@ -1194,6 +1194,11 @@ video {
   margin-bottom: 3rem;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -1207,8 +1212,20 @@ video {
   margin-bottom: 0px;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .mb-4 {
@@ -1231,12 +1248,36 @@ video {
   margin-left: 0.25rem;
 }
 
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .mt-auto {
@@ -1245,6 +1286,10 @@ video {
 
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .inline {
@@ -1556,8 +1601,41 @@ video {
   stroke: none;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .text-start {
@@ -1566,6 +1644,10 @@ video {
 
 .text-end {
   text-align: end;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .align-sub {
@@ -1582,7 +1664,7 @@ video {
 
 .text-6xl {
   font-size: 3rem;
-  line-height: 1.334;
+  line-height: 1.4;
   letter-spacing: -0.0145em;
   font-weight: 300;
 }
@@ -1640,6 +1722,10 @@ video {
 
 .overline {
   text-decoration-line: overline;
+}
+
+.no-underline {
+  text-decoration-line: none;
 }
 
 .mix-blend-plus-lighter {
@@ -1769,6 +1855,14 @@ video {
   keywords: node-addon-api;
 }
 
+.\[ruby-dev\:50626\] {
+  ruby-dev: 50626;
+}
+
+.\[ruby-list\:50731\] {
+  ruby-list: 50731;
+}
+
 :root {
   --font-size-base: 14px;
   --navbar-width: 80px;
@@ -1847,7 +1941,7 @@ ol {
 h1 {
   margin-bottom: 1.5rem;
   font-size: 1.6rem;
-  line-height: 1.334;
+  line-height: 1.5;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -1856,7 +1950,7 @@ h1 {
   h1 {
     max-width: 48rem;
     font-size: 2rem;
-    line-height: 1.334;
+    line-height: 1.4;
     letter-spacing: 0;
     font-weight: 300;
   }
@@ -1864,8 +1958,10 @@ h1 {
 
 @media (min-width: 1536px) {
   h1 {
-    font-size: 4.5rem;
-    line-height: 1;
+    font-size: 4rem;
+    line-height: 1.4;
+    letter-spacing: -0.0145em;
+    font-weight: 300;
   }
 }
 
@@ -1896,7 +1992,7 @@ h2 {
 @media (min-width: 1536px) {
   h2 {
     font-size: 2rem;
-    line-height: 1.334;
+    line-height: 1.4;
     letter-spacing: 0;
     font-weight: 300;
   }
@@ -1959,7 +2055,7 @@ h6 {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   font-size: 3rem;
-  line-height: 1.334;
+  line-height: 1.4;
   letter-spacing: -0.0145em;
   font-weight: 300;
   text-transform: lowercase;
@@ -1974,8 +2070,10 @@ h6 {
 
 @media (min-width: 1024px) {
   .primary-heading {
-    font-size: 4.5rem;
-    line-height: 1;
+    font-size: 4rem;
+    line-height: 1.4;
+    letter-spacing: -0.0145em;
+    font-weight: 300;
   }
 }
 
@@ -1993,7 +2091,7 @@ h6 {
   margin-top: 0.5rem;
   margin-bottom: 3rem;
   font-size: 3rem;
-  line-height: 1.334;
+  line-height: 1.4;
   letter-spacing: -0.0145em;
   font-weight: 300;
   text-transform: lowercase;
@@ -2003,8 +2101,10 @@ h6 {
   .primary-heading-no-slash {
     margin-top: 0px;
     margin-bottom: 6rem;
-    font-size: 4.5rem;
-    line-height: 1;
+    font-size: 4rem;
+    line-height: 1.4;
+    letter-spacing: -0.0145em;
+    font-weight: 300;
   }
 }
 
@@ -2496,7 +2596,7 @@ a {
 @media (min-width: 1536px) {
   .card-text h3 {
     font-size: 1.6rem;
-    line-height: 1.334;
+    line-height: 1.5;
     letter-spacing: 0;
     font-weight: 300;
   }
@@ -4298,7 +4398,7 @@ article {
 .home-title {
   margin-bottom: 1rem;
   font-size: 3rem;
-  line-height: 1.334;
+  line-height: 1.4;
   letter-spacing: -0.0145em;
   font-weight: 300;
   text-transform: uppercase;
