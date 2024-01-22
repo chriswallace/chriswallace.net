@@ -2,6 +2,7 @@
 layout: page
 title: Art
 permalink: /art/
+description: Over the past few years, I've become fascinated by digital and generative art. Recently, my explorations focus primarily on AI-collaborative art, creating complex algorithms that produce beautiful works. I'm also an avid collector with over 6,000 pieces acquired.
 ---
 
 <p class="sub-heading fade-in-element">Over the past few years, I've become fascinated by digital and generative art. Recently, my explorations focus primarily on AI-collaborative art, creating complex algorithms that produce beautiful works. I'm also an avid collector with over 6,000 pieces acquired.</p>

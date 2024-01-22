@@ -2,6 +2,8 @@
 layout: page
 title: Bio
 permalink: /bio/
+description: Born and raised in St. Louis, MO, I was diagnosed at 19 with testicular cancer. Forced to drop out of college, I underwent aggressive chemotherapy, all while expecting my first child with my high school sweetheart (and now wife of nearly 20 years). Faced with these hardships at such a young age, I started my design career to provide for a growing family.
+thumbnail: /assets/images/thumbs/bio.png
 ---
 
 <div class="bio-grid">

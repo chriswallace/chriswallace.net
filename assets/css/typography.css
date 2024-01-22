@@ -49,21 +49,24 @@ ol {
 }
 
 h1 {
-  @apply text-3xl md:text-4xl 2xl:text-7xl md:max-w-3xl mb-6;
+  @apply text-5xl lg:text-7xl 2xl:text-[6rem] md:max-w-3xl 2xl:max-w-7xl mb-6;
 }
 
 h2 {
   @apply text-xl md:text-2xl 2xl:text-4xl mt-16 sm:mt-24 mb-6;
+  font-weight: 500;
 }
 
 h3 {
   @apply text-base md:text-lg 2xl:text-xl mb-2 mt-6 sm:mt-12;
+  font-weight: 500;
 }
 
 h4,
 h5,
 h6 {
   @apply text-lg pb-2 mt-6 sm:mt-12 mb-2;
+  font-weight: 500;
 }
 
 .primary-heading {
@@ -90,7 +93,7 @@ h6 {
 }
 
 article {
-  @apply pt-16 md:pt-4;
+  @apply pt-16 md:pt-0;
 }
 
 article ul {

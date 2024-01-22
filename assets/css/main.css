@@ -45,7 +45,7 @@ article {
   }
 
   .logo {
-    @apply inline-block mb-4 text-primary-500 mt-5;
+    @apply inline-block text-primary-700 mt-[2rem];
 
     path {
       @apply fill-current;
@@ -56,17 +56,14 @@ article {
 /* Home Page */
 
 .home-title {
-  @apply text-6xl lg:text-[5rem] mb-4 font-light uppercase;
+  @apply text-6xl lg:text-[4.8rem] mt-4 mb-0 uppercase;
   line-height: 1.1;
-
-  .ui-content & {
-    max-width: none;
-  }
 
   span {
     @apply block;
   }
 }
+
 .open-to-work {
   @apply -mt-[20px] md:-mt-[40px] bg-white mb-12 relative rounded-md p-4 flex gap-4 align-middle items-center shadow-md;
 
@@ -284,6 +281,29 @@ video::-webkit-media-controls {
 
   .subtle-bg p {
     @apply text-gray-200;
+  }
+}
+
+/* Portfolio Page */
+
+.portfolio-list{
+  @apply grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 mb-12;
+
+  h3{
+    @apply mt-3;
+  }
+
+  .portfolio-image,
+  .video-player{
+    @apply mb-6;
+  }
+
+  p{
+    @apply mb-0;
+  }
+
+  p:last-of-type{
+    @apply my-6;
   }
 }
 

@@ -2,6 +2,8 @@
 layout: page
 title: Résumé
 permalink: /resume/
+description: Emmy-nominated designer, creative director, and front-end engineer with 15+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, The Nobel Prize, and Starbucks. Former agency executive at 10up, Lift UX (acquired).
+thumbnail: /assets/images/thumbs/resume.png
 ---
 
 <div class="fade-in-element download-resume">
@@ -118,7 +120,7 @@ permalink: /resume/
   </div>
 </div>
 
-<h2 class="fade-in-element">Awards & Recognitions</h2>
+<h2 class="fade-in-element">Awards & Recognition</h2>
 
 <ul class="fade-in-element" itemscope itemtype="http://schema.org/ItemList">
   <li itemprop="itemListElement">Official Selection, Woodies: Origin, <a href="https://www.asff.co.uk/" target="_blank">Aesthetica Short Film Festival</a> (2023)</li>

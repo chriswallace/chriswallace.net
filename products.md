@@ -2,6 +2,7 @@
 layout: page
 title: Products
 permalink: /products/
+description: Since 2021, I've been building blockchain-connected products alongside a stellar team of artists, creators, and engineers.
 ---
 
 <p class="sub-heading fade-in-element">Since 2021, I've been building blockchain-connected products alongside a stellar team of artists, creators, and engineers.</p>

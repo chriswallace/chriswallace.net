@@ -28,7 +28,11 @@
   }
 
   .description {
-    @apply text-gray-600 mb-12;
+    @apply text-gray-600 max-w-xl mb-12;
+
+    p{
+      @apply mb-4;
+    }
   }
 }
 

@@ -1189,16 +1189,6 @@ video {
   margin-right: auto;
 }
 
-.my-12 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -1212,20 +1202,8 @@ video {
   margin-bottom: 0px;
 }
 
-.mb-1 {
-  margin-bottom: 0.25rem;
-}
-
 .mb-16 {
   margin-bottom: 4rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
 }
 
 .mb-4 {
@@ -1248,36 +1226,8 @@ video {
   margin-left: 0.25rem;
 }
 
-.mr-1 {
-  margin-right: 0.25rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
-.mt-0 {
-  margin-top: 0px;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .mt-12 {
   margin-top: 3rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .mt-auto {
@@ -1286,10 +1236,6 @@ video {
 
 .block {
   display: block;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .inline {
@@ -1601,41 +1547,8 @@ video {
   stroke: none;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.pt-3 {
-  padding-top: 0.75rem;
-}
-
 .text-center {
   text-align: center;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .text-start {
@@ -1644,10 +1557,6 @@ video {
 
 .text-end {
   text-align: end;
-}
-
-.align-middle {
-  vertical-align: middle;
 }
 
 .align-sub {
@@ -1722,10 +1631,6 @@ video {
 
 .overline {
   text-decoration-line: overline;
-}
-
-.no-underline {
-  text-decoration-line: none;
 }
 
 .mix-blend-plus-lighter {
@@ -1855,14 +1760,6 @@ video {
   keywords: node-addon-api;
 }
 
-.\[ruby-dev\:50626\] {
-  ruby-dev: 50626;
-}
-
-.\[ruby-list\:50731\] {
-  ruby-list: 50731;
-}
-
 :root {
   --font-size-base: 14px;
   --navbar-width: 80px;
@@ -1940,8 +1837,8 @@ ol {
 
 h1 {
   margin-bottom: 1.5rem;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  font-size: 2.4rem;
+  line-height: 1.4;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -1949,19 +1846,22 @@ h1 {
 @media (min-width: 768px) {
   h1 {
     max-width: 48rem;
-    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4rem;
     line-height: 1.4;
-    letter-spacing: 0;
+    letter-spacing: -0.0145em;
     font-weight: 300;
   }
 }
 
 @media (min-width: 1536px) {
   h1 {
-    font-size: 4rem;
-    line-height: 1.4;
-    letter-spacing: -0.0145em;
-    font-weight: 300;
+    max-width: 80rem;
+    font-size: 6rem;
   }
 }
 
@@ -1998,6 +1898,10 @@ h2 {
   }
 }
 
+h2 {
+  font-weight: 500;
+}
+
 h3 {
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
@@ -2031,6 +1935,10 @@ h3 {
   }
 }
 
+h3 {
+  font-weight: 500;
+}
+
 h4,
 h5,
 h6 {
@@ -2049,6 +1957,12 @@ h5,
 h6 {
     margin-top: 3rem;
   }
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 500;
 }
 
 .primary-heading {
@@ -2160,7 +2074,7 @@ article {
 
 @media (min-width: 768px) {
   article {
-    padding-top: 1rem;
+    padding-top: 0px;
   }
 }
 
@@ -2951,6 +2865,7 @@ a {
 }
 
 .navigation {
+  margin-bottom: 1.5rem;
   display: flex;
   height: 100vh;
   gap: 0px;
@@ -3459,8 +3374,16 @@ footer p {
     margin-bottom: 3rem;
   }
   .description {
+    max-width: 36rem;
+  }
+  .description {
     --tw-text-opacity: 1;
     color: rgb(93 93 93 / var(--tw-text-opacity));
+  }
+  .description {
+    p {
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -4374,17 +4297,14 @@ article {
     opacity: 0.7;
   }
   .logo {
-    margin-bottom: 1rem;
-  }
-  .logo {
-    margin-top: 1.25rem;
+    margin-top: 2rem;
   }
   .logo {
     display: inline-block;
   }
   .logo {
     --tw-text-opacity: 1;
-    color: rgb(135 80 237 / var(--tw-text-opacity));
+    color: rgb(118 48 209 / var(--tw-text-opacity));
   }
   .logo {
     path {
@@ -4396,7 +4316,8 @@ article {
 /* Home Page */
 
 .home-title {
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0px;
   font-size: 3rem;
   line-height: 1.4;
   letter-spacing: -0.0145em;
@@ -4406,15 +4327,12 @@ article {
 
 @media (min-width: 1024px) {
   .home-title {
-    font-size: 5rem;
+    font-size: 4.8rem;
   }
 }
 
 .home-title {
   line-height: 1.1;
-  .ui-content & {
-    max-width: none;
-  }
   span {
     display: block;
   }
@@ -5016,6 +4934,44 @@ video::-webkit-media-controls {
   }
 }
 
+/* Portfolio Page */
+
+.portfolio-list {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .portfolio-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1536px) {
+  .portfolio-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.portfolio-list{
+  h3 {
+    margin-top: 0.75rem;
+  }
+  .portfolio-image,
+  .video-player {
+    margin-bottom: 1.5rem;
+  }
+  p {
+    margin-bottom: 0px;
+  }
+  p:last-of-type {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
 /* Resume Page */
 
 .job-title {
@@ -5093,17 +5049,9 @@ video::-webkit-media-controls {
   .sm\:gap-4 {
     gap: 1rem;
   }
-
-  .sm\:gap-8 {
-    gap: 2rem;
-  }
 }
 
 @media (min-width: 768px) {
-  .md\:mb-0 {
-    margin-bottom: 0px;
-  }
-
   .md\:mb-12 {
     margin-bottom: 3rem;
   }
@@ -5112,24 +5060,12 @@ video::-webkit-media-controls {
     margin-bottom: 5rem;
   }
 
-  .md\:mb-6 {
-    margin-bottom: 1.5rem;
-  }
-
-  .md\:flex {
-    display: flex;
-  }
-
   .md\:hidden {
     display: none;
   }
 
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:flex-row {
-    flex-direction: row;
   }
 
   .md\:text-2xl {

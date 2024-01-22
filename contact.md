@@ -2,6 +2,7 @@
 layout: page
 title: Contact
 permalink: /contact
+description: I'm available for contract and full-time opportunities with forward-thinking companies looking to level up their design capabilities.
 ---
 
 <p class="fade-in-element mt-12 sub-heading">I'm available for contract and full-time opportunities with forward-thinking companies looking to level up their design capabilities. The best way to get a hold of me is via email: <a href="mailto:chriswallace7@proton.me">chriswallace7@proton.me</a>.</p>

@@ -2,6 +2,7 @@
 layout: interplay
 title: Interplay
 permalink: /art/interplay
+description: Explore the Interplay algorithm, a generative Javascript-based algorithm written by myself and GPT-4.
 ---
 
 <article>

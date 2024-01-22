@@ -1,7 +1,7 @@
 ---
 layout: full-width
 title: QQL Curation
-description: After poring over thousands of QQL outputs, I've curated a set that I am extremely proud of. Some are for sale while others have already been minted or sold.
+description: I'm fascinated by the complex patterns and hidden niceties that emerge from the QQL algorithm. I've spent countless hours generating and studying outputs to curate this series, many of which are now available for purchase through the official marketplace.
 permalink: /art/qql-studying-the-algorithm/
 thumbnail: https://ik.imagekit.io/UltraDAO/wallace/studying_the_algorithm.png?tr=w-1000,q-70
 ---
