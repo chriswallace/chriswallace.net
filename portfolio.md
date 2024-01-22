@@ -44,12 +44,27 @@ thumbnail: /assets/images/thumbs/portfolio.png
         <p>Woodies: Origin is a unique short film telling the story of magical tree creatures who have awakened in the forest after an evil logger shows up with his machines. I hired and directed an international media production company to create this Hollywood-grade animated short film, engrossing fans in the Woodies universe within a span of six months.</p>
     </div>
     <div class="item fade-in-element">
+        <img src="/assets/images/legends-of-wondermist.png" class="portfolio-image" alt="">
+        <h3><a href="https://opensea.io/collection/legends-of-wondermist" target="_blank">Legends of Wondermist</a></h3>
+        <p>Role: Graphic Design, Logo Design, Website Design, Strategy</p>
+        <p>Year: 2022</p>
+        <p>Legends of Wondermist is a set of digital collectible cards with four different levels of rarity: common, uncommon, rare, and legendary. I worked with a small team of artists and developers to produce artwork, design cards for each rarity, and craft a mint experience that is both fun and visually exciting. I designed the logo, website, and card templates myself. Artists for the series include Mike Shinoda (of Linkin Park), DesLucrece, Victoria Lopez, Waxbones, Luna Leonis, and Amrit Pal Singh.</p>
+    </div>
+    <div class="item fade-in-element">
         <img src="/assets/images/woodies-website.png" class="portfolio-image dark:hidden" alt="">
         <img src="/assets/images/woodies-website-dark.png" class="portfolio-image hidden dark:block" alt="">
-        <h3><a href="https://woodiesofficial.com" target="_blank">Woodies Website</a></h3>
+        <h3><a href="https://ultradao.org" target="_blank">Woodies Website</a></h3>
         <p>Role: Design, Front-End Development</p>
         <p>Year: 2021</p>
         <p>Released to support the launch of the Woodies initial digital collectible PFP project, I designed most of the website and developed some unique features myself in Javascript/SvelteKit. The website includes a collection browser with a preview/download functionality for each Woodies 3D model.</p>
+    </div>
+    <div class="item fade-in-element">
+        <img src="/assets/images/ultradao-website.png" class="portfolio-image dark:hidden" alt="">
+        <img src="/assets/images/ultradao-website-dark.png" class="portfolio-image hidden dark:block" alt="">
+        <h3><a href="https://woodiesofficial.com" target="_blank">UltraDAO Website</a></h3>
+        <p>Role: Branding, Design, Front-End Development, Curation</p>
+        <p>Year: 2021</p>
+        <p>UltraDAO is a studio for digital art and collectibles started in 2021 as a decentralized, autonomous organization. The website offers memberships for creators and collectors and hosts a variety of digital art projects. I designed the brand identity, website, and acted as curator for the UltraDAO Curated collections.</p>
     </div>
     <div class="item fade-in-element">
         <img src="/assets/images/california-dmv.png" class="portfolio-image dark:hidden" alt="">
