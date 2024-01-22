@@ -4962,6 +4962,9 @@ video::-webkit-media-controls {
 }
 
 .portfolio-list{
+  .item {
+    margin-bottom: 1.5rem;
+  }
   h3 {
     margin-top: 0.75rem;
   }

@@ -289,6 +289,10 @@ video::-webkit-media-controls {
 .portfolio-list{
   @apply grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 mb-12;
 
+  .item{
+    @apply mb-6;
+  }
+
   h3{
     @apply mt-3;
   }
