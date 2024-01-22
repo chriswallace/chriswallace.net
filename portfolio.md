@@ -8,6 +8,14 @@ thumbnail: /assets/images/thumbs/portfolio.png
 
 <div class="portfolio-list">
     <div class="item fade-in-element">
+        <img src="/assets/images/compendium.png" class="portfolio-image dark:hidden" alt="">
+        <img src="/assets/images/compendium-dark.png" class="portfolio-image hidden dark:block" alt="">
+        <h3><a href="https://cpdm.app" target="_blank">Compendium</a></h3>
+        <p>Role: Branding, Web Design, Product Design, Full Stack Development, Typescript/Javascript, SvelteKit, Solidity</p>
+        <p>Year: 2024</p>
+        <p>Compendium is a work-in-progress digital art gallery solution offering unique standalone web apps for displaying digital and generative art. I am developing the product itself as well as designing the brand, website, and digital app front-end and back-end admin area.</p>
+    </div>
+    <div class="item fade-in-element">
         <img src="/assets/images/twelve-days-of-cryptoart.png" class="portfolio-image dark:hidden" alt="">
         <img src="/assets/images/twelve-days-of-cryptoart-dark.png" class="portfolio-image hidden dark:block" alt="">
         <h3><a href="https://twelvedays.ultradao.org" target="_blank">Twelve Days of CryptoArt</a></h3>
@@ -34,6 +42,14 @@ thumbnail: /assets/images/thumbs/portfolio.png
         <p>Role: Executive Creative Direction</p>
         <p>Year: 2022</p>
         <p>Woodies: Origin is a unique short film telling the story of magical tree creatures who have awakened in the forest after an evil logger shows up with his machines. I hired and directed an international media production company to create this Hollywood-grade animated short film, engrossing fans in the Woodies universe within a span of six months.</p>
+    </div>
+    <div class="item fade-in-element">
+        <img src="/assets/images/woodies-website.png" class="portfolio-image dark:hidden" alt="">
+        <img src="/assets/images/woodies-website-dark.png" class="portfolio-image hidden dark:block" alt="">
+        <h3><a href="https://woodiesofficial.com" target="_blank">Woodies Website</a></h3>
+        <p>Role: Design, Front-End Development</p>
+        <p>Year: 2021</p>
+        <p>Released to support the launch of the Woodies initial digital collectible PFP project, I designed most of the website and developed some unique features myself in Javascript/SvelteKit. The website includes a collection browser with a preview/download functionality for each Woodies 3D model.</p>
     </div>
     <div class="item fade-in-element">
         <img src="/assets/images/california-dmv.png" class="portfolio-image dark:hidden" alt="">
