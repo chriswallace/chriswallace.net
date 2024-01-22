@@ -47,7 +47,7 @@
 }
 
 .navigation {
-  @apply flex gap-0 h-screen mb-6;
+  @apply flex gap-0 h-screen mb-6 md:mb-0;
 }
 
 .navigation .logo {
