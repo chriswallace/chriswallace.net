@@ -16,18 +16,12 @@
 {% seo title=false %}
 
   <style>
-  .fade-in-element,
-  .art-collection .media-wrapper,
-  .art-collection h3,
-  .art-collection h4 {
+  .fade-in-element {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.5s ease, transform 0.5s ease;
   }
-  .fade-in-element.visible,
-  .art-collection .media-wrapper.visible,
-  .art-collection h3.visible,
-  .art-collection h4.visible {
+  .fade-in-element.visible{
       opacity: 1;
       transform: translateY(0);
   }
