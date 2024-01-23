@@ -44,7 +44,7 @@ thumbnail: /assets/images/thumbs/portfolio.png
         <p>Woodies: Origin is a unique short film telling the story of magical tree creatures who have awakened in the forest after an evil logger shows up with his machines. I hired and directed an international media production company to create this Hollywood-grade animated short film, engrossing fans in the Woodies universe within a span of six months.</p>
     </div>
     <div class="item fade-in-element">
-        <img src="/assets/images/legends-of-wondermist.png" class="portfolio-image" alt="">
+        <img src="/assets/images/legends-of-wondermist-2.png" class="portfolio-image" alt="">
         <h3><a href="https://opensea.io/collection/legends-of-wondermist" target="_blank">Legends of Wondermist</a></h3>
         <p>Role: Graphic Design, Logo Design, Website Design, Strategy</p>
         <p>Year: 2022</p>
