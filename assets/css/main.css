@@ -287,7 +287,7 @@ video::-webkit-media-controls {
 /* Portfolio Page */
 
 .portfolio-list{
-  @apply grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 mb-12;
+  @apply grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 my-12;
 
   .item{
     @apply mb-6;

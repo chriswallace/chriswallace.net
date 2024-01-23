@@ -4943,6 +4943,7 @@ video::-webkit-media-controls {
 /* Portfolio Page */
 
 .portfolio-list {
+  margin-top: 3rem;
   margin-bottom: 3rem;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
