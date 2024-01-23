@@ -53,7 +53,7 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <img src="/assets/images/woodies-website.png" class="portfolio-image dark:hidden" alt="">
         <img src="/assets/images/woodies-website-dark.png" class="portfolio-image hidden dark:block" alt="">
-        <h3><a href="https:/woodiesofficial.com" target="_blank">Woodies Website</a></h3>
+        <h3><a href="https://woodiesofficial.com" target="_blank">Woodies Website</a></h3>
         <p>Role: Design, Front-End Development</p>
         <p>Year: 2021</p>
         <p>Released to support the launch of the Woodies initial digital collectible PFP project, I designed most of the website and developed some unique features myself in Javascript/SvelteKit. The website includes a collection browser with a preview/download functionality for each Woodies 3D model.</p>
@@ -61,7 +61,7 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <img src="/assets/images/ultradao-website.png" class="portfolio-image dark:hidden" alt="">
         <img src="/assets/images/ultradao-website-dark.png" class="portfolio-image hidden dark:block" alt="">
-        <h3><a href="https:/ultradao.org" target="_blank">UltraDAO Website</a></h3>
+        <h3><a href="https://ultradao.org" target="_blank">UltraDAO Website</a></h3>
         <p>Role: Branding, Design, Front-End Development, Curation</p>
         <p>Year: 2021</p>
         <p>UltraDAO is a studio for digital art and collectibles started in 2021 as a decentralized, autonomous organization. The website offers memberships for creators and collectors and hosts a variety of digital art projects. I designed the brand identity, website, and acted as curator for the UltraDAO Curated collections.</p>
