@@ -16,8 +16,8 @@ thumbnail: /assets/images/thumbs/portfolio.png
         <p>Compendium is a work-in-progress digital art gallery solution offering unique standalone web apps for displaying digital and generative art. I am developing the product itself as well as designing the brand, website, and digital app front-end and back-end admin area.</p>
     </div>
     <div class="item fade-in-element">
-        <img src="/assets/images/twelve-days-of-cryptoart.png" class="portfolio-image dark:hidden" alt="">
-        <img src="/assets/images/twelve-days-of-cryptoart-dark.png" class="portfolio-image hidden dark:block" alt="">
+        <img src="/assets/images/twelve-days.png" class="portfolio-image dark:hidden" alt="">
+        <img src="/assets/images/twelve-days-dark.png" class="portfolio-image hidden dark:block" alt="">
         <h3><a href="https://twelvedays.ultradao.org" target="_blank">Twelve Days of CryptoArt</a></h3>
         <p>Role: Curation, Branding, Web Design, Full Stack Development, Typescript/Javascript, SvelteKit, Solidity</p>
         <p>Year: 2023</p>
