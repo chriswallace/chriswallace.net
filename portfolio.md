@@ -14,7 +14,7 @@ thumbnail: /assets/images/thumbs/portfolio.png
                 Your browser does not support HTML5 video.
             </video>
         </div>
-        <h3><a href="https://www.figma.com/proto/Ef4V9oBQibbfKvqDCmjCfn/pendulum-wallet?page-id=0%3A1&type=design&node-id=1-2&viewport=265%2C605%2C0.11&t=iqJaP7tzaqV31XnT-9&scaling=scale-down&starting-point-node-id=1%3A2&show-proto-sidebar=1" target="_blank">Pendulum Crypto Wallaet (iOS App)</a></h3>
+        <h3><a href="https://www.figma.com/proto/Ef4V9oBQibbfKvqDCmjCfn/pendulum-wallet?page-id=0%3A1&type=design&node-id=1-2&viewport=265%2C605%2C0.11&t=iqJaP7tzaqV31XnT-9&scaling=scale-down&starting-point-node-id=1%3A2&show-proto-sidebar=1" target="_blank">Pendulum Crypto Wallet (iOS App)</a></h3>
         <p>Role: Branding, Product Design, Figma Prototyping</p>
         <p>Year: 2024</p>
         <p>Pendulum is a conceptual prototype for a crypto wallet with social and digital collectible features. I designed this app to envision a wallet app that I would find useful amidst an ecosystem that currently de-emphasizes digital collectibles and clear information design.</p>
