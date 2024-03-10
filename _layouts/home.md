@@ -4,7 +4,7 @@ layout: default
 
 <article>
   <div class="open-to-work fade-in-element">
-    <a class="badge" href="/contact"><span>Now booking</span> <strong><abbr title="February">Feb.</abbr> 2024</strong></a>
+    <a class="badge" href="/contact"><span>Now booking</span> <strong><abbr title="February">June</abbr> 2024</strong></a>
     <p>Available for full-time roles or short-term contracts.</p>
   </div>
   <h1 class="home-title fade-in-element">
