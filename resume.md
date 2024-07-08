@@ -2,7 +2,7 @@
 layout: page
 title: Résumé
 permalink: /resume/
-description: Emmy-nominated designer, creative director, and front-end engineer with 15+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, The Nobel Prize, and Starbucks. Former agency executive at 10up, Lift UX (acquired).
+description: Two-time Emmy-nominated product design leader with 18+ years across IC, management and and executive-level roles. I create impactful digital experiences for the likes of Google, Microsoft, Facebook, and Starbucks. Currently leading product design at Candy Digital.
 thumbnail: /assets/images/thumbs/resume.png
 ---
 
@@ -18,16 +18,26 @@ thumbnail: /assets/images/thumbs/resume.png
 </div>
 
 <div itemscope itemtype="http://schema.org/Person">
-<p itemprop="description" class="fade-in-element sub-heading">Emmy-nominated designer, creative director, and front-end engineer with 15+ years of leadership in product and web design. Established record of pioneering innovative digital experiences for high-profile tech and media organizations including Google, Microsoft, Facebook, The Nobel Prize, and Starbucks. Former agency executive at 10up, Lift UX (acquired).</p>
+<p itemprop="description" class="fade-in-element sub-heading">Two-time Emmy-nominated product design leader with 18+ years across IC, management and and executive-level roles. I create impactful digital experiences for the likes of Google, Microsoft, Facebook, and Starbucks. Currently leading product design at Candy Digital.</p>
 
 <h2 class="fade-in-element mt-12">Work Experience</h2>
 
 <div class="jobs" itemscope itemtype="http://schema.org/Organization">
   <div class="job resume-item" itemprop="employee">
     <div class="metadata fade-in-element">
+      <h4 class="title" itemprop="roleName">Senior Product Designer</h4>
+      <h3 class="place" itemprop="name">Candy Digital</h3>
+      <div class="time-period" itemprop="worksFor">Mar 2024 - present</div>
+    </div>
+    <div class="description fade-in-element">
+      <p>Leading product design across Candy's web application/marketplace. My role encompasses product strategy, user experience, UI design, and front-end engineering. I collaborate directly with creative, product management, and engineering teams to drive new features and products for partners like MLB and DC Comics.</p>
+    </div>
+  </div>
+  <div class="job resume-item" itemprop="employee">
+    <div class="metadata fade-in-element">
       <h4 class="title" itemprop="roleName">Design Director, Founder</h4>
       <h3 class="place" itemprop="name">UltraDAO Studios</h3>
-      <div class="time-period" itemprop="worksFor">2021 - present</div>
+      <div class="time-period" itemprop="worksFor">Apr 2021 - Mar 2024</div>
     </div>
     <div class="description fade-in-element">
       <p>Founded a bootstrapped decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles. Built and managed a team of artists, engineers, and creative production specialists. Led a range of award-winning creative projects and drove multi-million dollar revenue within the first six months.</p>
@@ -37,7 +47,7 @@ thumbnail: /assets/images/thumbs/resume.png
     <div class="metadata fade-in-element">
       <h4 class="title" itemprop="roleName">Vice President, Experience Design</h4>
       <h3 class="place" itemprop="name">10up</h3>
-      <div class="time-period" itemprop="worksFor">2017 - 2021</div>
+      <div class="time-period" itemprop="worksFor">Aug 2017 - Sep 2021</div>
     </div>
     <div class="description fade-in-element">
       <p>Scaled the design team and its capabilities at an international agency of 200+ across three continents and 16 countries. Managed 20 leaders and ICs across user experience and visual design. Established content design practice and implemented org-wide design strategy.</p>
@@ -48,7 +58,7 @@ thumbnail: /assets/images/thumbs/resume.png
     <div class="metadata fade-in-element">
       <h4 class="title" itemprop="roleName">Design Director, Founder</h4>
       <h3 class="place" itemprop="name">Lift UX (acquired)</h3>
-      <div class="time-period" itemprop="worksFor">2009 - 2017</div>
+      <div class="time-period" itemprop="worksFor">Dec 2009 - Aug 2017</div>
     </div>
     <div class="description fade-in-element">
       <p>Founded a UX design studio crafting digital products and WordPress websites for medium-to-large clients.  Launched interactive second-screen apps for acclaimed TV series, earning two Emmy nominations in the process. Managed a compact yet effective team of full-time and contract designers, elevating website traffic for the product division to two million monthly visitors. Acquired by 10up in 2017.</p>
@@ -59,7 +69,7 @@ thumbnail: /assets/images/thumbs/resume.png
     <div class="metadata fade-in-element">
       <h4 class="title" itemprop="roleName">Front-End Engineer</h4>
       <h3 class="place" itemprop="name">Enterprise Rent-A-Car</h3>
-      <div class="time-period" itemprop="worksFor">2007 - 2009</div>
+      <div class="time-period" itemprop="worksFor">Aug 2007 - Dec 2009</div>
     </div>
     <div class="description fade-in-element">
       <p>Developed front-end interfaces for B2B and B2C digital products, working closely with UX designers, project managers, and Java engineers. Also managed weekly deployments for enterprise.com and other customer-centric platforms, while providing QA support for monthly release cycles.</p>
@@ -69,7 +79,7 @@ thumbnail: /assets/images/thumbs/resume.png
     <div class="metadata fade-in-element">
       <h4 class="title" itemprop="roleName">Senior E-Commerce Web Designer</h4>
       <h3 class="place" itemprop="name">Network Solutions</h3>
-      <div class="time-period" itemprop="worksFor">2006 - 2007</div>
+      <div class="time-period" itemprop="worksFor">May 2006 - Aug 2007</div>
     </div>
     <div class="description fade-in-element">
       <p>Designed and developed front-end code for e-commerce storefronts for small businesses, maintaining stringent project timelines and adhering to client specifications.</p>

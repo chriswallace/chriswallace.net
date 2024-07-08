@@ -4,7 +4,7 @@ title: Chris Wallace - Designer, Creative Director, and Front-End Engineer
 description: Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm Chris Wallace, an award-winning designer, creative director, and front-end engineer with over 15 years pioneering the future of digital experience.
 ---
 
-<p class="text-xl md:text-2xl mt-12 mb-6 fade-in-element visible">Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm Chris Wallace, an award-winning designer, creative director, and front-end engineer with over 15 years pioneering the future of digital experience.</p>
+<p class="text-xl md:text-2xl mt-12 mb-6 fade-in-element visible">Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm Chris Wallace, an award-winning designer, creative director, and front-end engineer with over 18 years pioneering the future of digital experience.</p>
 
 <p class="text-xl md:text-2xl mb-16 fade-in-element visible">
   <a href="/bio">My story →</a>
