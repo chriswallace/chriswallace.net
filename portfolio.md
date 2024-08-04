@@ -8,6 +8,14 @@ thumbnail: /assets/images/thumbs/portfolio.png
 
 <div class="portfolio-list">
     <div class="item fade-in-element">
+        <img src="/assets/images/candy-digital-light.png" class="portfolio-image dark:hidden" alt="">
+        <img src="/assets/images/candy-digital-dark.png" class="portfolio-image hidden dark:block" alt="">
+        <h3>Candy Digital (Available on Request)</h3>
+        <p>Role: Product Design</p>
+        <p>Year: 2024</p>
+        <p>A collection of projects from March-Present 2024. Please <a href="mailto:chriswallace7@proton.me">email me</a> to request a private link to view this collection of recent work.</p>
+    </div>
+    <div class="item fade-in-element">
         <div class="video-player">
             <video id="portfolioVideo" width="100%" controls muted playsinline autoplay loop>
                 <source src="/assets/video/pendulum-app.mp4" type="video/mp4">
@@ -44,18 +52,6 @@ thumbnail: /assets/images/thumbs/portfolio.png
         <p>Wallace Museum is a new online art gallery dedicated to showcasing generative art in a new and unique format. Most galleries employ a simply grid-based layout while Wallace Museum feels more like a virtual museum with paintings spread across a wall. I created the branding, designed the app, coded the experience, and curated the works. I also wrote an imported to collect works held in Ethereum and Tezos wallets.</p>
     </div>
     <div class="item fade-in-element">
-        <div class="video-player">
-            <video id="portfolioVideo" width="100%" controls muted playsinline autoplay>
-                <source src="/assets/video/woodies-origin.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
-        </div>
-        <h3><a href="https://www.youtube.com/watch?v=encMCWoBc3o" target="_blank">Woodies: Origin</a></h3>
-        <p>Role: Executive Creative Direction</p>
-        <p>Year: 2022</p>
-        <p>Woodies: Origin is a unique short film telling the story of magical tree creatures who have awakened in the forest after an evil logger shows up with his machines. I hired and directed an international media production company to create this Hollywood-grade animated short film, engrossing fans in the Woodies universe within a span of six months.</p>
-    </div>
-    <div class="item fade-in-element">
         <img src="/assets/images/legends-of-wondermist-2.png" class="portfolio-image" alt="">
         <h3><a href="https://opensea.io/collection/legends-of-wondermist" target="_blank">Legends of Wondermist</a></h3>
         <p>Role: Graphic Design, Logo Design, Website Design, Strategy</p>
@@ -69,14 +65,6 @@ thumbnail: /assets/images/thumbs/portfolio.png
         <p>Role: Design, Front-End Development</p>
         <p>Year: 2021</p>
         <p>Released to support the launch of the Woodies initial digital collectible PFP project, I designed most of the website and developed some unique features myself in Javascript/SvelteKit. The website includes a collection browser with a preview/download functionality for each Woodies 3D model.</p>
-    </div>
-    <div class="item fade-in-element">
-        <img src="/assets/images/ultradao-website.png" class="portfolio-image dark:hidden" alt="">
-        <img src="/assets/images/ultradao-website-dark.png" class="portfolio-image hidden dark:block" alt="">
-        <h3><a href="https://ultradao.org" target="_blank">UltraDAO Website</a></h3>
-        <p>Role: Branding, Design, Front-End Development, Curation</p>
-        <p>Year: 2021</p>
-        <p>UltraDAO is a studio for digital art and collectibles started in 2021 as a decentralized, autonomous organization. The website offers memberships for creators and collectors and hosts a variety of digital art projects. I designed the brand identity, website, and acted as curator for the UltraDAO Curated collections.</p>
     </div>
     <div class="item fade-in-element">
         <img src="/assets/images/california-dmv.png" class="portfolio-image dark:hidden" alt="">
