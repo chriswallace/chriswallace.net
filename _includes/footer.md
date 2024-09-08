@@ -8,7 +8,7 @@
         </a>
       </div>
       <p>
-        Copyright &copy; 2023 Chris Wallace. All rights reserved. Artwork displayed on this website is copyright its respective creator.
+        Copyright &copy; 2023-2024 Chris Wallace. All rights reserved. Artwork displayed on this website is copyright its respective creator.
       </p>
       <p>This website was built with <a href="https://jekyllrb.com">Jekyll</a> and <a href="https://pages.github.com">Github Pages</a>.</p>
     </div>
