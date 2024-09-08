@@ -16,6 +16,14 @@ thumbnail: /assets/images/thumbs/portfolio.png
         <p>A collection of projects from March-Present 2024. Please <a href="mailto:chriswallace7@proton.me">email me</a> to request a private link to view this collection of recent work.</p>
     </div>
     <div class="item fade-in-element">
+        <img src="/assets/images/dc3-reader-light.png" class="portfolio-image dark:hidden" alt="">
+        <img src="/assets/images/dc3-reader-dark.png" class="portfolio-image hidden dark:block" alt="">
+        <h3><a href="https://comic.candy.io/1">DC3 Interactive Comic Book Reader</a></h3>
+        <p>Role: Product Design & Engineering</p>
+        <p>Year: 2024</p>
+        <p>I created an interactive comic book reader application for Candy's DC3 digital comic collection. Unique features include x-ray scanning of alternate page contents, an animated panel reader mode, and pop-up video style factoids throughout.</p>
+    </div>
+    <div class="item fade-in-element">
         <div class="video-player">
             <video id="portfolioVideo" width="100%" controls muted playsinline autoplay loop>
                 <source src="/assets/video/pendulum-app.mp4" type="video/mp4">
@@ -117,13 +125,5 @@ thumbnail: /assets/images/thumbs/portfolio.png
         <p>Role: Creative Direction</p>
         <p>Year: 2012</p>
         <p>We partnered with AMC Networks to design and develop an award winning second-screen TV companion app. This ground-breaking work was featured by the creator of WordPress, Matt Mullenweg, at WordCamp San Francisco and awarded the prize for Best Second Screen TV App at the 2012 Variety Awards. The following year Story Sync was nominated for the Best iPad or Tablet Social TV Application at the 2013 Social TV Awards. In 2013 The Walking Dead Story Sync was nominated for the Outstanding Interactive Program at the 2013 Emmys.</p>
-    </div>
-    <div class="item fade-in-element">
-        <img src="/assets/images/ifc-com.png" class="portfolio-image dark:hidden" alt="">
-        <img src="/assets/images/ifc-com-dark.png" class="portfolio-image hidden dark:block" alt="">
-        <h3><a href="">IFC.com</a></h3>
-        <p>Role: Visual/Web Design</p>
-        <p>Year: 2012</p>
-        <p>When IFC needed a responsive redesign and WordPress implementation, we were excited to answer the call by designing a bold new look and fresh user experience. I led the visual design and partnered with our UX lead to craft a mobile-first responsive website with high information and media density. Working under strict requirements for takeover ads and business goals, we navigated complex stakeholders needs to deliver a product everyone was excited about.</p>
     </div>
 </div>
