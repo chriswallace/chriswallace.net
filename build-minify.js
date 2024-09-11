@@ -5,6 +5,7 @@ const filesToConcatAndMinify = [
     './assets/js/navigation.js',
     './assets/js/animations.js',
     './assets/js/image-lazyloader.js',
+    './assets/js/zoomable.js',
 ];
 
 const individualFilesToMinify = [
