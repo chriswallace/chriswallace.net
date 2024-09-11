@@ -31,6 +31,11 @@ function fadeInElements() {
   const fadeIn = (el, delay) => {
     setTimeout(() => {
       el.classList.add("visible");
+
+      // Remove the fade-in-element class after animation is done
+      el.addEventListener("transitionend", () => {
+        el.classList.remove("fade-in-element");
+      });
     }, delay);
   };
 

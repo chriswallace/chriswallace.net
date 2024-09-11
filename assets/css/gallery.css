@@ -86,7 +86,7 @@
 }
 
 .portfolio-image {
-  @apply rounded-md mb-6;
+  @apply rounded-md;
 }
 
 .maximize-icon {
