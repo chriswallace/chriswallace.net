@@ -10,8 +10,8 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <div class="zoom-container">
             <div class="zoomable">
-                <img src="/assets/images/candy-digital-light.png" class="portfolio-image dark:hidden" alt="">
-                <img src="/assets/images/candy-digital-dark.png" class="portfolio-image hidden dark:block" alt="">
+                <img src="/assets/images/candy-digital-light.png" class="portfolio-image dark:hidden" alt="" loading="lazy">
+                <img src="/assets/images/candy-digital-dark.png" class="portfolio-image hidden dark:block" alt="" loading="lazy">
             </div>
         </div>
         <h3>Candy Digital (Available on Request)</h3>
@@ -22,8 +22,34 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <div class="zoom-container">
             <div class="zoomable">
-                <img src="/assets/images/dc3-reader-light.png" class="portfolio-image dark:hidden" alt="">
-                <img src="/assets/images/dc3-reader-dark.png" class="portfolio-image hidden dark:block" alt="">
+                <div class="image-gallery dark:hidden">
+                    <img src="/assets/images/candy-home-light.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/candy-drops-light.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/candy-pdp-light.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/candy-pdp-2-light.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/candy-drop-light.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/candy-drop-2-light.png" class="portfolio-image" alt="" loading="lazy">
+                </div>
+               <div class="image-gallery hidden dark:block">
+                    <img src="/assets/images/candy-home-dark.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/candy-drops-dark.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/candy-pdp-dark.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/candy-pdp-2-dark.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/candy-drop-dark.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/candy-drop-2-dark.png" class="portfolio-image" alt="" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <h3>Candy Marketplace Redesign</h3>
+        <p>Role: Product Design</p>
+        <p>Year: 2024</p>
+        <p>I designed a series of new features across the marketplace including platform education, drops, cards, and checkout. A heavy area of focus was showcasing Candy's innovative products to the user in a clear and compelling manner.</p>
+    </div>
+    <div class="item fade-in-element">
+        <div class="zoom-container">
+            <div class="zoomable">
+                <img src="/assets/images/dc3-reader-light.png" class="portfolio-image dark:hidden" alt="" loading="lazy">
+                <img src="/assets/images/dc3-reader-dark.png" class="portfolio-image hidden dark:block" alt="" loading="lazy">
             </div>
         </div>
         <h3><a href="https://comic.candy.io/1">DC3 Interactive Comic Book Reader</a></h3>
@@ -35,7 +61,7 @@ thumbnail: /assets/images/thumbs/portfolio.png
         <div class="zoom-container">
             <div class="zoomable">
                 <div class="video-player">
-                    <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop>
+                    <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy">
                         <source src="/assets/video/withdrawal-deposit.mp4" type="video/mp4">
                         Your browser does not support HTML5 video.
                     </video>
@@ -51,7 +77,7 @@ thumbnail: /assets/images/thumbs/portfolio.png
         <div class="zoom-container">
             <div class="zoomable">
                 <div class="video-player">
-                    <video id="portfolioVideo" width="100%" controls muted playsinline autoplay loop>
+                    <video id="portfolioVideo" width="100%" controls muted playsinline autoplay loop loading="lazy">
                         <source src="/assets/video/pendulum-app.mp4" type="video/mp4">
                         Your browser does not support HTML5 video.
                     </video>
@@ -66,8 +92,8 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <div class="zoom-container">
             <div class="zoomable">
-                <img src="/assets/images/compendium.png" class="portfolio-image dark:hidden" alt="">
-                <img src="/assets/images/compendium-dark.png" class="portfolio-image hidden dark:block" alt="">
+                <img src="/assets/images/compendium.png" class="portfolio-image dark:hidden" alt="" loading="lazy">
+                <img src="/assets/images/compendium-dark.png" class="portfolio-image hidden dark:block" alt="" loading="lazy">
             </div>
         </div>
         <h3><a href="https://cpdm.app" target="_blank">Compendium</a></h3>
@@ -78,8 +104,8 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <div class="zoom-container">
             <div class="zoomable">
-                <img src="/assets/images/twelve-days.png" class="portfolio-image dark:hidden" alt="">
-                <img src="/assets/images/twelve-days-dark.png" class="portfolio-image hidden dark:block" alt="">
+                <img src="/assets/images/twelve-days.png" class="portfolio-image dark:hidden" alt="" loading="lazy">
+                <img src="/assets/images/twelve-days-dark.png" class="portfolio-image hidden dark:block" alt="" loading="lazy">
             </div>
         </div>
         <h3><a href="https://twelvedays.ultradao.org" target="_blank">Twelve Days of CryptoArt</a></h3>
@@ -90,8 +116,8 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <div class="zoom-container">
             <div class="zoomable">
-                <img src="/assets/images/wallace-museum.png" class="portfolio-image dark:hidden" alt="">
-                <img src="/assets/images/wallace-museum-dark.png" class="portfolio-image hidden dark:block" alt="">
+                <img src="/assets/images/wallace-museum.png" class="portfolio-image dark:hidden" alt="" loading="lazy">
+                <img src="/assets/images/wallace-museum-dark.png" class="portfolio-image hidden dark:block" alt="" loading="lazy">
             </div>
         </div>
         <h3><a href="https://wallacemuseum.com" target="_blank">Wallace Museum</a></h3>
@@ -102,7 +128,7 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <div class="zoom-container">
             <div class="zoomable">
-                <img src="/assets/images/legends-of-wondermist-2.png" class="portfolio-image" alt="">
+                <img src="/assets/images/legends-of-wondermist-2.png" class="portfolio-image" alt="" loading="lazy">
             </div>
         </div>
         <h3><a href="https://opensea.io/collection/legends-of-wondermist" target="_blank">Legends of Wondermist</a></h3>
@@ -113,8 +139,8 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <div class="zoom-container">
             <div class="zoomable">
-                <img src="/assets/images/woodies-website.png" class="portfolio-image dark:hidden" alt="">
-                <img src="/assets/images/woodies-website-dark.png" class="portfolio-image hidden dark:block" alt="">
+                <img src="/assets/images/woodies-website.png" class="portfolio-image dark:hidden" alt="" loading="lazy">
+                <img src="/assets/images/woodies-website-dark.png" class="portfolio-image hidden dark:block" alt="" loading="lazy">
             </div>
         </div>
         <h3><a href="https://woodiesofficial.com" target="_blank">Woodies Website</a></h3>
@@ -125,8 +151,8 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <div class="zoom-container">
             <div class="zoomable">
-                <img src="/assets/images/california-dmv.png" class="portfolio-image dark:hidden" alt="">
-                <img src="/assets/images/california-dmv-dark.png" class="portfolio-image hidden dark:block" alt="">
+                <img src="/assets/images/california-dmv.png" class="portfolio-image dark:hidden" alt="" loading="lazy">
+                <img src="/assets/images/california-dmv-dark.png" class="portfolio-image hidden dark:block" alt="" loading="lazy">
             </div>
         </div>
         <h3><a href="https://dmv.ca.gov" target="_blank">California DMV Digital Transformation</a></h3>
@@ -137,8 +163,8 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <div class="zoom-container">
             <div class="zoomable">
-                <img src="/assets/images/starbucks-stories.png" class="portfolio-image dark:hidden" alt="">
-                <img src="/assets/images/starbucks-stories-dark.png" class="portfolio-image hidden dark:block" alt="">
+                <img src="/assets/images/starbucks-stories.png" class="portfolio-image dark:hidden" alt="" loading="lazy">
+                <img src="/assets/images/starbucks-stories-dark.png" class="portfolio-image hidden dark:block" alt="" loading="lazy">
             </div>
         </div>
         <h3><a href="https://stories.starbucks.com/stories/" target="_blank">Starbucks Stories &amp; News Redesign</a></h3>
@@ -149,8 +175,8 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <div class="zoom-container">
             <div class="zoomable">
-                <img src="/assets/images/google-site-kit.png" class="portfolio-image dark:hidden" alt="">
-                <img src="/assets/images/google-site-kit-dark.png" class="portfolio-image hidden dark:block" alt="">
+                <img src="/assets/images/google-site-kit.png" class="portfolio-image dark:hidden" alt="" loading="lazy">
+                <img src="/assets/images/google-site-kit-dark.png" class="portfolio-image hidden dark:block" alt="" loading="lazy">
             </div>
         </div>
         <h3><a href="https://sitekit.withgoogle.com" target="_blank">Google Site Kit</a></h3>
@@ -161,8 +187,8 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <div class="zoom-container">
             <div class="zoomable">
-                <img src="/assets/images/godaddy-theme.png" class="portfolio-image dark:hidden" alt="">
-                <img src="/assets/images/godaddy-theme-dark.png" class="portfolio-image hidden dark:block" alt="">
+                <img src="/assets/images/godaddy-theme.png" class="portfolio-image dark:hidden" alt="" loading="lazy">
+                <img src="/assets/images/godaddy-theme-dark.png" class="portfolio-image hidden dark:block" alt="" loading="lazy">
             </div>
         </div>
         <h3><a href="https://www.godaddy.com/wordpress-themes" target="_blank">GoDaddy Go Theme</a></h3>
@@ -173,8 +199,8 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <div class="zoom-container">
             <div class="zoomable">
-                <img src="/assets/images/mad-men.png" class="portfolio-image dark:hidden" alt="">
-                <img src="/assets/images/mad-men-dark.png" class="portfolio-image hidden dark:block" alt="">
+                <img src="/assets/images/mad-men.png" class="portfolio-image dark:hidden" alt="" loading="lazy">
+                <img src="/assets/images/mad-men-dark.png" class="portfolio-image hidden dark:block" alt="" loading="lazy">
             </div>
         </div>
         <h3><a href="https://www.youtube.com/watch?v=X9UVZjvmmbw">Mad Men: The Fan Cut</a></h3>
@@ -186,7 +212,7 @@ thumbnail: /assets/images/thumbs/portfolio.png
         <div class="zoom-container">
             <div class="zoomable">
                 <div class="video-player">
-                <video id="portfolioVideo" width="100%" controls muted playsinline autoplay>
+                <video id="portfolioVideo" width="100%" controls muted playsinline autoplay loading="lazy">
                     <source src="/assets/video/twd-story-sync.mp4" type="video/mp4">
                     Your browser does not support HTML5 video.
                 </video>

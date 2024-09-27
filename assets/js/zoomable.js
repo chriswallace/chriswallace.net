@@ -139,4 +139,26 @@ document.addEventListener('DOMContentLoaded', function () {
             overlay.classList.remove('active');
         });
     }
+
+    const galleries = document.querySelectorAll('.image-gallery');
+    galleries.forEach((gallery) => {
+        const images = gallery.querySelectorAll('img');
+        let currentIndex = 0;
+        let intervalId = null;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function rotateImages() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        intervalId = setInterval(rotateImages, 2000);
+
+        showImage(currentIndex);
+    });
 });
