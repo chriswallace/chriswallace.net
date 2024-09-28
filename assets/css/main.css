@@ -230,12 +230,12 @@ article {
 }
 
 .video-player {
-  @apply aspect-[40/27] flex flex-col items-center justify-center rounded-md overflow-hidden bg-[#C7C7C7];
+  @apply aspect-[40/27] flex flex-col items-center justify-center rounded-md overflow-hidden bg-white;
 }
 
 @media (prefers-color-scheme: dark) {
   .video-player {
-    @apply bg-[#2F2F2F];
+    @apply bg-black;
   }
 }
 

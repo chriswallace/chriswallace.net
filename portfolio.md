@@ -10,18 +10,6 @@ thumbnail: /assets/images/thumbs/portfolio.png
     <div class="item fade-in-element">
         <div class="zoom-container">
             <div class="zoomable">
-                <img src="/assets/images/candy-digital-light.png" class="portfolio-image dark:hidden" alt="" loading="lazy">
-                <img src="/assets/images/candy-digital-dark.png" class="portfolio-image hidden dark:block" alt="" loading="lazy">
-            </div>
-        </div>
-        <h3>Candy Digital (Available on Request)</h3>
-        <p>Role: Product Design</p>
-        <p>Year: 2024</p>
-        <p>A collection of projects from March-Present 2024. Please <a href="mailto:chriswallace7@proton.me">email me</a> to request a private link to view this collection of recent work.</p>
-    </div>
-    <div class="item fade-in-element">
-        <div class="zoom-container">
-            <div class="zoomable">
                 <div class="image-gallery dark:hidden">
                     <img src="/assets/images/candy-home-light.png" class="portfolio-image" alt="" loading="lazy">
                     <img src="/assets/images/candy-drops-light.png" class="portfolio-image" alt="" loading="lazy">
@@ -43,7 +31,7 @@ thumbnail: /assets/images/thumbs/portfolio.png
         <h3>Candy Marketplace Redesign</h3>
         <p>Role: Product Design</p>
         <p>Year: 2024</p>
-        <p>I designed a series of new features across the marketplace including platform education, drops, cards, and checkout. A heavy area of focus was showcasing Candy's innovative products to the user in a clear and compelling manner.</p>
+        <p>I designed new marketplace features such as platform education, drops, cards, and checkout, focusing on clearly showcasing Candy's innovative products.</p>
     </div>
     <div class="item fade-in-element">
         <div class="zoom-container">
@@ -56,6 +44,25 @@ thumbnail: /assets/images/thumbs/portfolio.png
         <p>Role: Product Design & Engineering</p>
         <p>Year: 2024</p>
         <p>I created an interactive comic book reader application for Candy's DC3 digital comic collection. Unique features include x-ray scanning of alternate page contents, an animated panel reader mode, and pop-up video style factoids throughout.</p>
+    </div>
+    <div class="item fade-in-element">
+        <div class="zoom-container">
+            <div class="zoomable">
+               <div class="image-gallery hidden dark:block">
+                    <img src="/assets/images/candy-portfolio-1.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/candy-portfolio-2.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/candy-portfolio-3.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/overdrive-1.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/overdrive-2.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/overdrive-3.png" class="portfolio-image" alt="" loading="lazy">
+                    <img src="/assets/images/overdrive-4.png" class="portfolio-image" alt="" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <h3>Candy Digital (Available on Request)</h3>
+        <p>Role: Product Design</p>
+        <p>Year: 2024</p>
+        <p>A collection of projects from March-Present 2024. Please <a href="mailto:chriswallace7@proton.me">email me</a> to request a private link to view this collection of recent work.</p>
     </div>
     <div class="item fade-in-element">
         <div class="zoom-container">
