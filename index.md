@@ -4,14 +4,18 @@ title: Chris Wallace - Designer, Creative Director, and Front-End Engineer
 description: Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm Chris Wallace, an award-winning designer, creative director, and front-end engineer with over 15 years pioneering the future of digital experience.
 ---
 
-<div class="open-to-work fade-in-element">
+<div id="visualization-canvas" class="z-1 absolute top-0 right-0 w-[50%] md:w-[50%] h-[67%] sm:h-[75%] md:h-[58%] lg:h-[80%]" role="presentation" aria-hidden="true"></div>
+
+<div class="open-to-work fade-in-element z-2">
   <a class="badge" href="/contact"><span>Now booking</span> <strong>October 2024</strong></a>
   <p>Available for full-time roles or short-term contracts.</p>
 </div>
 
-<h1 class="home-title">
-  <span class="fade-in-element">Product+</span> <span class="fade-in-element">design+</span> <span class="fade-in-element">engineering</span>
-</h1>
+<div>
+  <h1 class="home-title">
+    <span class="fade-in-element">Product+</span> <span class="fade-in-element">design+</span> <span class="fade-in-element">engineering</span>
+  </h1>
+</div>
 
 <p class="text-xl md:text-2xl mt-12 mb-6 fade-in-element">Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm Chris Wallace, a two-time Emmy-nominated product design leader working with Major League Baseball, DC Comics, Starbucks, Google, Facebook, and more.</p>
 
