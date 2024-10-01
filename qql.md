@@ -1,14 +1,12 @@
 ---
-layout: full-width
+layout: default
 title: QQL Curation
 description: I'm fascinated by the complex patterns and hidden niceties that emerge from the QQL algorithm. I've spent countless hours generating and studying outputs to curate this series, many of which are now available for purchase through the official marketplace.
 permalink: /art/qql-studying-the-algorithm/
 thumbnail: https://ik.imagekit.io/UltraDAO/wallace/studying_the_algorithm.png?tr=w-1000,q-70
 ---
 
-<script src="/assets/js/gallery-viewer.js"></script>
-<script src="/assets/js/player.js"></script>
-<article>
+<div class="content-container">
   <a class="back fade-in-element" href="/art">/art</a>
   <h1 class="fade-in-element">QQL: Studying the Algorithm</h1>
   <h2 class="sub-heading-curated fade-in-element">
@@ -211,7 +209,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/wallace/studying_the_algorithm.png?tr
               alt=""
               src="https://ik.imagekit.io/UltraDAO/wallace/qql_bca504d68b8affff11660a12.png?tr=w-100,q-20,bl-6" />
             <h3 class="artwork-title"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927bca504d68b8affff11660a12">Rings of Light</a></h3>
-            <h4 class="artwork-subtitle"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927d9a8657c9ed9ffff11660a12">Unlisted</a></h4>
+            <h4 class="artwork-subtitle"><a target="_blank" href="https://qql.art/token/0x8367a713bc14212ab1bb8c55a778e43e50b8b927bca504d68b8affff11660a12">Unlisted</a></h4>
           </div>
           <div>
             <img
@@ -322,6 +320,9 @@ thumbnail: https://ik.imagekit.io/UltraDAO/wallace/studying_the_algorithm.png?tr
       </div>
     </div>
   </div>
-</article>
+</div>
 <div id="fullscreen-viewer" class="hidden"></div>
 {% include footer.md %}
+
+<script src="/assets/js/gallery-viewer.js"></script>
+<script src="/assets/js/player.js"></script>

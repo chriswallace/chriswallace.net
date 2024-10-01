@@ -1,4 +1,4 @@
-  <footer class="fade-in-element">
+  <footer class="content-container fade-in-element">
     <div class="container">
       <div class="brand">
         <a href="/" aria-label="Home">

@@ -5,9 +5,15 @@
 .menu-button {
   @apply relative align-top w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.75)] md:h-[var(--navbar-width)] mx-auto bg-primary-800 md:bg-white md:border-b md:border-b-primary-200 hover:bg-primary-50 md:hover:border-b-primary-300;
 
-  &:focus i:before,
-  &:focus i:after{
-    @apply bg-primary-600;
+  .open-menu & {
+    @apply bg-white;
+  }
+
+  &:hover i {
+    &:before,
+    &:after {
+      @apply bg-primary-600;
+    }
   }
 }
 
@@ -79,13 +85,13 @@
 }
 
 .menu a {
-  @apply p-4 py-4 md:py-6 block font-medium capitalize text-base leading-none no-underline decoration-2 text-primary-800 border-b border-primary-300 hover:bg-primary-700 hover:text-white;
+  @apply p-4 py-6 md:py-6 block text-lg font-normal capitalize leading-none no-underline decoration-2 text-primary-800 border-b border-primary-300 hover:bg-primary-700 hover:text-white;
 }
 
 .site-title {
   @apply md:bottom-0 md:left-0 w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.66)] block absolute p-0;
 
-  .open-menu &{
+  .open-menu & {
     @apply bottom-2 md:bottom-0 md:left-0;
   }
   svg {

@@ -5,7 +5,7 @@ permalink: /art/interplay
 description: Explore the Interplay algorithm, a generative Javascript-based algorithm written by myself and GPT-4.
 ---
 
-<article>
+<div class="content-container">
     <div id="interplayArtwork" class="interplay-grid">
         <div>
             <a href="/art" class="back fade-in-element">/art</a>
@@ -42,7 +42,7 @@ description: Explore the Interplay algorithm, a generative Javascript-based algo
             </div>
         </div>
     </div>
-</article>
+</div>
 
 <script src="/assets/js/fxhash.min.js"></script>
 <script src="/assets/js/interplay-page.min.js?v={{ site.version }}"></script>
