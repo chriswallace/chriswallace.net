@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     circle.setAttribute('cx', 0);
     circle.setAttribute('cy', 0);
     circle.setAttribute('r', '60');
-    circle.setAttribute('fill', 'rgb(218,77,79)'); // Purple
+    circle.setAttribute('fill', 'rgb(214,65,105)'); // Purple
     circle.setAttribute('filter', 'url(#dropShadow)');
     svg.appendChild(circle);
     shapes.push(circle);
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     square.setAttribute('height', '120');
     square.setAttribute('rx', '5'); // Rounded corners
     square.setAttribute('ry', '5'); // Rounded corners
-    square.setAttribute('fill', 'rgb(118,67,211)'); // Blue
+    square.setAttribute('fill', 'rgb(56,163,208)'); // Blue
     square.setAttribute('filter', 'url(#dropShadow)');
     svg.appendChild(square);
     shapes.push(square);
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const x3 = sideLength / 2;
     const y3 = (2 / 3) * height - 20; // Shifted up
     triangle.setAttribute('points', `${x1},${y1} ${x2},${y2} ${x3},${y3}`);
-    triangle.setAttribute('fill', 'rgb(85,78,210)'); // Another color
+    triangle.setAttribute('fill', 'rgb(125,53,202)'); // Another color
     triangle.setAttribute('rx', '3'); // Rounded corners
     triangle.setAttribute('ry', '3'); // Rounded corners
     triangle.setAttribute('filter', 'url(#dropShadow)');
