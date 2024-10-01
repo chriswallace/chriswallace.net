@@ -1826,7 +1826,7 @@ body {
 }
 
 body {
-  font-variation-settings: "wght" 130, "wdth" 160;
+  font-variation-settings: "wght" 250, "wdth" 160;
 }
 
 h1,
@@ -1857,7 +1857,7 @@ h6,
 p,
 ul,
 ol {
-  max-width: 48rem;
+  max-width: 42rem;
 }
 
 p,

@@ -5,7 +5,7 @@ html {
 
 body {
   @apply font-normal text-sm md:text-base;
-  font-variation-settings: "wght" 130, "wdth" 160;
+  font-variation-settings: "wght" 250, "wdth" 160;
 }
 
 h1,
@@ -35,7 +35,7 @@ h6,
 p,
 ul,
 ol {
-  @apply max-w-3xl;
+  @apply max-w-2xl;
 }
 
 p,
