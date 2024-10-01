@@ -6,7 +6,6 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Gabarito:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/eub1ezs.css">
   <link rel="stylesheet" href="/assets/main.css?v={{ site.version }}">
   <link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/UltraDAO/wallace/favicon.png">

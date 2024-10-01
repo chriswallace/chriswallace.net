@@ -75,31 +75,36 @@ article {
 
 .home-title {
   @apply text-6xl lg:text-[4.8rem] mt-4 mb-0 uppercase;
-  line-height: 1.1;
 
   span {
     @apply block;
   }
 }
 
+@media (max-width: 640px) {
+  .home-title {
+    @apply text-7xl;
+    font-variation-settings: "wght" 400, "wdth" 115;
+  }
+}
+
 .open-to-work {
-  @apply -mt-[20px] md:-mt-[40px] bg-white mb-12 relative rounded-md p-4 flex gap-4 align-middle items-center shadow-md;
+  @apply -mt-[20px] md:-mt-[40px] bg-white mb-12 relative rounded-md p-4 flex gap-4 justify-between items-center shadow-md;
 
   .badge {
-    @apply sm:mb-0 px-5 pt-[9px] pb-[11px] inline-block relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs whitespace-nowrap no-underline hover:underline;
+    @apply uppercase sm:mb-0 px-5 pt-[9px] pb-[11px] inline-block relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs whitespace-nowrap no-underline hover:underline;
     box-shadow: inset 0px -6px 0 -3px rgba(50, 20, 97, 0.4);
-
-    span {
-      @apply hidden sm:inline;
-    }
-
-    strong {
-      @apply font-bold;
-    }
+    font-variation-settings: "wght" 500, "wdth" 200;
   }
 
   p {
-    @apply m-0 p-0 inline-block grow leading-snug;
+    @apply m-0 p-0 sm:pl-3 inline-block grow leading-snug;
+    font-variation-settings: "wght" 200, "wdth" 200;
+
+    strong {
+      @apply text-white mr-4;
+      font-variation-settings: "wght" 400, "wdth" 200;
+    }
   }
 }
 

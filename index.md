@@ -5,8 +5,8 @@ description: Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm C
 ---
 
 <div class="open-to-work content-container fade-in-element z-50 relative">
-  <a class="badge" href="/contact"><span>Now booking</span> <strong>October 2024</strong></a>
-  <p>Available for full-time roles or short-term contracts.</p>
+  <p><strong>October 2024</strong> Available for full-time roles or short-term contracts.</p>
+  <a class="badge" href="/contact">Hire Me</a>
 </div>
 
 <div class="!mx-0 overflow-hidden">

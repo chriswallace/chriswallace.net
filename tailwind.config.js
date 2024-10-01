@@ -21,7 +21,7 @@ module.exports = {
         x: "x mandatory",
       },
       fontFamily: {
-        sans: ["usual", "sans-serif"],
+        sans: ["sztos-variable", "sans-serif"],
       },
       fontSize: {
         xs: [
@@ -59,7 +59,7 @@ module.exports = {
         xl: [
           "1.04rem",
           {
-            lineHeight: "1.65",
+            lineHeight: "1.5",
             letterSpacing: "0",
             fontWeight: "300",
           },
@@ -67,7 +67,7 @@ module.exports = {
         "2xl": [
           "1.2rem",
           {
-            lineHeight: "1.65",
+            lineHeight: "1.4",
             letterSpacing: "0",
             fontWeight: "300",
           },
@@ -75,7 +75,7 @@ module.exports = {
         "3xl": [
           "1.6rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "1.2",
             letterSpacing: "0",
             fontWeight: "300",
           },
@@ -83,7 +83,7 @@ module.exports = {
         "4xl": [
           "2rem",
           {
-            lineHeight: "1.4",
+            lineHeight: "1.1",
             letterSpacing: "0",
             fontWeight: "300",
           },
@@ -91,7 +91,7 @@ module.exports = {
         "5xl": [
           "2.4rem",
           {
-            lineHeight: "1.4",
+            lineHeight: "1.1",
             letterSpacing: "0",
             fontWeight: "300",
           },
@@ -99,7 +99,7 @@ module.exports = {
         "6xl": [
           "3rem",
           {
-            lineHeight: "1.4",
+            lineHeight: "1",
             letterSpacing: "-0.0145em",
             fontWeight: "300",
           },
@@ -107,7 +107,7 @@ module.exports = {
         "7xl": [
           "4rem",
           {
-            lineHeight: "1.4",
+            lineHeight: "0.96",
             letterSpacing: "-0.0145em",
             fontWeight: "300",
           },

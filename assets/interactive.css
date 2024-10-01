@@ -44,7 +44,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: usual, sans-serif;
+  font-family: sztos-variable, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -1601,12 +1601,12 @@ video {
 }
 
 .font-sans {
-  font-family: usual, sans-serif;
+  font-family: sztos-variable, sans-serif;
 }
 
 .text-6xl {
   font-size: 3rem;
-  line-height: 1.4;
+  line-height: 1;
   letter-spacing: -0.0145em;
   font-weight: 300;
 }
@@ -1620,7 +1620,7 @@ video {
 
 .text-xl {
   font-size: 1.04rem;
-  line-height: 1.65;
+  line-height: 1.5;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -2512,7 +2512,7 @@ body.meetChris {
 
   .md\:text-2xl {
     font-size: 1.2rem;
-    line-height: 1.65;
+    line-height: 1.4;
     letter-spacing: 0;
     font-weight: 300;
   }
