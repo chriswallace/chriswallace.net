@@ -1387,6 +1387,14 @@ video {
   resize: both;
 }
 
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
 .grid-flow-dense {
   grid-auto-flow: dense;
 }
@@ -2490,8 +2498,8 @@ body.meetChris {
     right: -20px;
   }
 
-  .md\:top-\[-136px\] {
-    top: -136px;
+  .md\:top-\[-146px\] {
+    top: -146px;
   }
 
   .md\:mb-12 {
@@ -2519,8 +2527,12 @@ body.meetChris {
 }
 
 @media (min-width: 1024px) {
-  .lg\:right-\[30px\] {
-    right: 30px;
+  .lg\:right-\[10px\] {
+    right: 10px;
+  }
+
+  .lg\:top-\[-120px\] {
+    top: -120px;
   }
 
   .lg\:w-\[480px\] {
@@ -2534,7 +2546,11 @@ body.meetChris {
 }
 
 @media (min-width: 1280px) {
-  .xl\:w-\[600px\] {
-    width: 600px;
+  .xl\:top-\[-210px\] {
+    top: -210px;
+  }
+
+  .xl\:w-\[680px\] {
+    width: 680px;
   }
 }
