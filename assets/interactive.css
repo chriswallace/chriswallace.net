@@ -1611,15 +1611,8 @@ video {
   font-weight: 300;
 }
 
-.text-lg {
-  font-size: 0.94rem;
-  line-height: 1.65;
-  letter-spacing: 0;
-  font-weight: 300;
-}
-
 .text-sm {
-  font-size: 0.84rem;
+  font-size: 0.92rem;
   line-height: 1.75;
   letter-spacing: 0;
   font-weight: 300;
@@ -2508,13 +2501,6 @@ body.meetChris {
 
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:text-xl {
-    font-size: 1.04rem;
-    line-height: 1.5;
-    letter-spacing: 0;
-    font-weight: 300;
   }
 }
 

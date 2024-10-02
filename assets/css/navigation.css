@@ -85,8 +85,8 @@
 }
 
 .menu a {
-  @apply p-4 py-6 md:py-6 block text-lg font-normal capitalize leading-none no-underline decoration-2 text-primary-800 border-b border-primary-300 hover:bg-primary-700 hover:text-white;
-  font-variation-settings: "wght" 300, "wdth" 160;
+  @apply p-4 py-6 md:py-6 block font-normal capitalize leading-none no-underline decoration-2 text-primary-800 border-b border-primary-300 hover:bg-primary-700 hover:text-white;
+  font-variation-settings: "wght" 350, "wdth" 200;
 }
 
 .site-title {

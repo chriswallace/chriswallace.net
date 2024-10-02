@@ -84,15 +84,15 @@ article {
 @media (max-width: 640px) {
   .home-title {
     @apply text-7xl;
-    font-variation-settings: "wght" 400, "wdth" 115;
+    font-variation-settings: "wght" 500, "wdth" 140;
   }
 }
 
 .open-to-work {
-  @apply bg-white mb-12 relative rounded-md p-4 flex gap-4 justify-between items-center shadow-md;
+  @apply text-sm bg-white mb-12 relative rounded-full p-2 pl-6 md:pl-3 flex gap-4 justify-between items-center shadow-md;
 
   .badge {
-    @apply uppercase sm:mb-0 px-5 pt-[9px] pb-[11px] inline-block relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs whitespace-nowrap no-underline hover:underline;
+    @apply uppercase sm:mb-0 px-8 py-3 inline-block relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs whitespace-nowrap no-underline hover:underline;
     box-shadow: inset 0px -6px 0 -3px rgba(50, 20, 97, 0.4);
     font-variation-settings: "wght" 500, "wdth" 200;
   }
@@ -102,7 +102,7 @@ article {
     font-variation-settings: "wght" 200, "wdth" 200;
 
     strong {
-      @apply text-black mr-4;
+      @apply text-black mr-2 md:mr-4;
       font-variation-settings: "wght" 400, "wdth" 200;
     }
   }

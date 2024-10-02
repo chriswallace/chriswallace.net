@@ -23,11 +23,8 @@ description: Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm C
         <span class="fade-in-element">Engineering</span>
       </h1>
     </div>
-
-    <p class="text-lg md:text-xl mt-12 mb-4 fade-in-element">Hello! I'm Chris Wallace, a two-time Emmy-nominated product design leader with over 20 years of experience, crafting innovative experiences for giants like MLB, DC Comics, The Walking Dead, Mad Men, Facebook, and Google.</p>
-
-    <p class="text-lg md:text-xl mb-4 fade-in-element">
+    <p class="mt-12 mb-4 fade-in-element">Hello! I'm Chris Wallace, a two-time Emmy-nominated product design leader with over 20 years of experience, crafting innovative experiences for giants like MLB, DC Comics, The Walking Dead, Mad Men, Facebook, and Google.</p>
+    <p class="mb-4 fade-in-element">
       Not sure where to dive in? Check out my <a href="/bio">bio</a> or my <a href="/portfolio">design portfolio</a>.
     </p>
-
   </div>

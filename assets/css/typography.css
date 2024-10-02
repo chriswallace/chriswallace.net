@@ -5,7 +5,7 @@ html {
 
 body {
   @apply font-normal text-sm md:text-base;
-  font-variation-settings: "wght" 300, "wdth" 160;
+  font-variation-settings: "wght" 240, "wdth" 170;
 }
 
 h1,
@@ -51,7 +51,7 @@ ol {
 }
 
 h1 {
-  @apply text-5xl lg:text-7xl 2xl:text-[6rem] md:max-w-3xl 2xl:max-w-7xl mb-6;
+  @apply text-5xl lg:text-6xl 2xl:text-7xl md:max-w-3xl 2xl:max-w-7xl mb-6;
 }
 
 h2 {
@@ -60,7 +60,7 @@ h2 {
 }
 
 h3 {
-  @apply text-lg md:text-xl 2xl:text-2xl mb-2 mt-6 sm:mt-12;
+  @apply text-base xl:text-lg mb-2 mt-6 sm:mt-12;
   font-weight: 500;
 }
 
@@ -72,12 +72,13 @@ h6 {
 }
 
 .primary-heading {
-  @apply text-4xl lg:text-7xl mt-6 md:mt-8 mb-4 lowercase;
-  font-variation-settings: "wght" 500, "wdth" 200;
+  @apply text-7xl mt-6 md:mt-8 mb-8 lowercase;
+  font-variation-settings: "wght" 800, "wdth" 200;
 }
 
 .primary-heading:before {
   @apply inline -mr-2;
+  font-variation-settings: "wght" 600, "wdth" 200;
   content: "/";
 }
 
@@ -86,11 +87,11 @@ h6 {
 }
 
 .sub-heading {
-  @apply text-xl md:text-2xl md:leading-7 text-gray-500 mb-12 md:mb-16;
+  @apply text-lg md:leading-7 text-gray-500 mb-12 md:mb-16;
 }
 
 .sub-heading-curated {
-  @apply text-xl md:text-2xl text-gray-500 -mt-1 mb-12 relative;
+  @apply text-lg md:text-xl text-gray-500 -mt-1 mb-12 relative;
 }
 
 article {
