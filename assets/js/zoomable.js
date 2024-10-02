@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (!isFullscreen) {
                 if (!overlay) createOverlay();
-                overlay.classList.add('active');
+                document.body.classList.add('zoom-active');
                 zoomIn(zoomable);
                 disableScroll();
 
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     zoomable.play();
                 }
             } else {
-                overlay.classList.remove('active');
+                document.body.classList.remove('zoom-active');
                 zoomOut(zoomable);
 
                 // Handle video mute
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 item.classList.remove('zoom-fullscreen');
                 zoomOut(item);
             });
-            overlay.classList.remove('active');
+            document.body.classList.remove('active');
         });
     }
 

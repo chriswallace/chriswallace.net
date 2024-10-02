@@ -37,6 +37,10 @@ article {
 .ui-content {
   @apply pt-4 md:pt-[32px] z-0 relative;
 
+  .zoom-active & {
+    @apply static;
+  }
+
   .content-container {
     @apply mx-[24px] md:ml-[140px] md:mx-[60px] md:ml-[calc(60px+var(--navbar-width))];
   }
@@ -253,7 +257,7 @@ article {
 }
 
 .video-player {
-  @apply aspect-[40/27] flex flex-col items-center justify-center rounded-md overflow-hidden bg-black;
+  @apply aspect-[40/27] flex flex-col items-center justify-center rounded-md overflow-hidden bg-white;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -403,7 +407,7 @@ video::-webkit-media-controls {
   pointer-events: none;
 }
 
-.page-overlay.active {
+.zoom-active .page-overlay {
   display: block;
   pointer-events: auto;
 }
