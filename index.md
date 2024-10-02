@@ -20,23 +20,11 @@ description: Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm C
       </h1>
     </div>
 
-    <p class="text-xl md:text-2xl mt-12 mb-6 fade-in-element">Some say the mythical unicorn doesn't exist&mdash;I prefer to think of myself as one. I'm Chris Wallace, a two-time Emmy-nominated product design leader working with Major League Baseball, DC Comics, Starbucks, Google, Facebook, and more.</p>
+    <p class="mt-12 mb-4 fade-in-element">Some say the unicorn designer no longer exists&mdash;yet here you are, stumbling upon my magical corner of the internet. I'm Chris Wallace, a two-time Emmy-nominated product design leader who's worked with Major League Baseball, DC Comics, Starbucks, Google, Facebook, and more.</p>
 
-    <p class="text-xl md:text-2xl mb-6 fade-in-element">
-      Wondering where to start? Check out my <a href="/bio">bio</a> or <a href="/portfolio">design portfolio</a>.
+    <p class="mb-4 fade-in-element">
+      Not sure where to dive in? Check out my <a href="/bio">bio</a> or my <a href="/portfolio">design portfolio</a>.
     </p>
-
-    <p class="text-xl md:text-2xl mb-6 fade-in-element">
-      Want the cliffnotes on working with me? Here's what to expect:
-    </p>
-
-    <ul class="text-xl md:text-2xl mb-6 list-disc list-inside fade-in-element">
-      <li>Design that leans <em>into</em> coded prototypes and shipping.</li>
-      <li>Experience across the full stack (business, strategy, design, engineering).</li>
-      <li>Passion for mentorship and collaboration.</li>
-      <li>Obsessive attention to detail when it matters.</li>
-      <li>A friendly face always willing to help.</li>
-    </ul>
 
   </div>
 </div>
