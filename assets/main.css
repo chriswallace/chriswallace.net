@@ -1993,8 +1993,8 @@ h6 {
 .primary-heading {
   margin-top: 1.5rem;
   margin-bottom: 2rem;
-  font-size: 4rem;
-  line-height: 0.96;
+  font-size: 3rem;
+  line-height: 1;
   letter-spacing: -0.0145em;
   font-weight: 300;
   text-transform: lowercase;
@@ -2003,6 +2003,10 @@ h6 {
 @media (min-width: 768px) {
   .primary-heading {
     margin-top: 2rem;
+    font-size: 4rem;
+    line-height: 0.96;
+    letter-spacing: -0.0145em;
+    font-weight: 300;
   }
 }
 
