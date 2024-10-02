@@ -5,7 +5,7 @@ html {
 
 body {
   @apply font-normal text-sm md:text-base;
-  font-variation-settings: "wght" 250, "wdth" 160;
+  font-variation-settings: "wght" 300, "wdth" 160;
 }
 
 h1,
@@ -60,7 +60,7 @@ h2 {
 }
 
 h3 {
-  @apply text-base md:text-lg 2xl:text-xl mb-2 mt-6 sm:mt-12;
+  @apply text-lg md:text-xl 2xl:text-2xl mb-2 mt-6 sm:mt-12;
   font-weight: 500;
 }
 
@@ -72,7 +72,8 @@ h6 {
 }
 
 .primary-heading {
-  @apply text-6xl lg:text-7xl mt-2 md:mt-0 mb-4 md:mb-12 font-light lowercase;
+  @apply text-4xl lg:text-7xl mt-6 md:mt-8 mb-4 lowercase;
+  font-variation-settings: "wght" 500, "wdth" 200;
 }
 
 .primary-heading:before {
@@ -82,7 +83,6 @@ h6 {
 
 .primary-heading-no-slash {
   @apply text-6xl md:text-7xl mt-2 md:mt-0 mb-12 md:mb-24 font-light lowercase;
-  letter-spacing: -0.02em;
 }
 
 .sub-heading {

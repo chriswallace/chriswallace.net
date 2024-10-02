@@ -6,7 +6,7 @@ description: I'm available for contract and full-time opportunities with forward
 ---
 
 <div class="content-container">
-    <p class="fade-in-element mt-12 sub-heading">I'm available for contract and full-time opportunities with forward-thinking companies looking to level up their design capabilities. The best way to get a hold of me is via email: <a href="mailto:chriswallace7@proton.me">chriswallace7@proton.me</a>.</p>
+    <p class="fade-in-element sub-heading">I'm available for contract and full-time opportunities with forward-thinking companies looking to level up their design capabilities. The best way to get a hold of me is via email: <a href="mailto:chriswallace7@proton.me">chriswallace7@proton.me</a>.</p>
 
     <h2 class="fade-in-element">Reasons to email me</h2>
 

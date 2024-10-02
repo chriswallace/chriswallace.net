@@ -14,31 +14,56 @@ document.addEventListener('DOMContentLoaded', () => {
     const defs = document.createElementNS(svgNS, 'defs');
     svg.appendChild(defs);
 
-    // Define a more dramatic drop shadow filter with alpha transparency
-    const filter = document.createElementNS(svgNS, 'filter');
-    filter.setAttribute('id', 'dropShadow');
-    const feGaussianBlur = document.createElementNS(svgNS, 'feGaussianBlur');
-    feGaussianBlur.setAttribute('in', 'SourceAlpha');
-    feGaussianBlur.setAttribute('stdDeviation', '5'); // Increased blur
-    filter.appendChild(feGaussianBlur);
-    const feOffset = document.createElementNS(svgNS, 'feOffset');
-    feOffset.setAttribute('dx', '5'); // Increased offset
-    feOffset.setAttribute('dy', '10'); // Increased offset
-    filter.appendChild(feOffset);
-    const feComponentTransfer = document.createElementNS(svgNS, 'feComponentTransfer');
-    const feFuncA = document.createElementNS(svgNS, 'feFuncA');
-    feFuncA.setAttribute('type', 'linear');
-    feFuncA.setAttribute('slope', '0.2'); // Adjust alpha transparency
-    feComponentTransfer.appendChild(feFuncA);
-    filter.appendChild(feComponentTransfer);
-    const feMerge = document.createElementNS(svgNS, 'feMerge');
-    const feMergeNode1 = document.createElementNS(svgNS, 'feMergeNode');
-    filter.appendChild(feMerge);
-    feMerge.appendChild(feMergeNode1);
-    const feMergeNode2 = document.createElementNS(svgNS, 'feMergeNode');
-    feMergeNode2.setAttribute('in', 'SourceGraphic');
-    feMerge.appendChild(feMergeNode2);
-    defs.appendChild(filter);
+    // Define drop shadow filters for light and dark themes
+    const lightFilter = document.createElementNS(svgNS, 'filter');
+    lightFilter.setAttribute('id', 'dropShadowLight');
+    const feGaussianBlurLight = document.createElementNS(svgNS, 'feGaussianBlur');
+    feGaussianBlurLight.setAttribute('in', 'SourceAlpha');
+    feGaussianBlurLight.setAttribute('stdDeviation', '2'); // Less blur for light theme
+    lightFilter.appendChild(feGaussianBlurLight);
+    const feOffsetLight = document.createElementNS(svgNS, 'feOffset');
+    feOffsetLight.setAttribute('dx', '2'); // Less offset for light theme
+    feOffsetLight.setAttribute('dy', '4'); // Less offset for light theme
+    lightFilter.appendChild(feOffsetLight);
+    const feComponentTransferLight = document.createElementNS(svgNS, 'feComponentTransfer');
+    const feFuncALight = document.createElementNS(svgNS, 'feFuncA');
+    feFuncALight.setAttribute('type', 'linear');
+    feFuncALight.setAttribute('slope', '0.1'); // Less alpha transparency for light theme
+    feComponentTransferLight.appendChild(feFuncALight);
+    lightFilter.appendChild(feComponentTransferLight);
+    const feMergeLight = document.createElementNS(svgNS, 'feMerge');
+    const feMergeNode1Light = document.createElementNS(svgNS, 'feMergeNode');
+    lightFilter.appendChild(feMergeLight);
+    feMergeLight.appendChild(feMergeNode1Light);
+    const feMergeNode2Light = document.createElementNS(svgNS, 'feMergeNode');
+    feMergeNode2Light.setAttribute('in', 'SourceGraphic');
+    feMergeLight.appendChild(feMergeNode2Light);
+    defs.appendChild(lightFilter);
+
+    const darkFilter = document.createElementNS(svgNS, 'filter');
+    darkFilter.setAttribute('id', 'dropShadowDark');
+    const feGaussianBlurDark = document.createElementNS(svgNS, 'feGaussianBlur');
+    feGaussianBlurDark.setAttribute('in', 'SourceAlpha');
+    feGaussianBlurDark.setAttribute('stdDeviation', '5'); // More blur for dark theme
+    darkFilter.appendChild(feGaussianBlurDark);
+    const feOffsetDark = document.createElementNS(svgNS, 'feOffset');
+    feOffsetDark.setAttribute('dx', '5'); // More offset for dark theme
+    feOffsetDark.setAttribute('dy', '10'); // More offset for dark theme
+    darkFilter.appendChild(feOffsetDark);
+    const feComponentTransferDark = document.createElementNS(svgNS, 'feComponentTransfer');
+    const feFuncADark = document.createElementNS(svgNS, 'feFuncA');
+    feFuncADark.setAttribute('type', 'linear');
+    feFuncADark.setAttribute('slope', '0.2'); // More alpha transparency for dark theme
+    feComponentTransferDark.appendChild(feFuncADark);
+    darkFilter.appendChild(feComponentTransferDark);
+    const feMergeDark = document.createElementNS(svgNS, 'feMerge');
+    const feMergeNode1Dark = document.createElementNS(svgNS, 'feMergeNode');
+    darkFilter.appendChild(feMergeDark);
+    feMergeDark.appendChild(feMergeNode1Dark);
+    const feMergeNode2Dark = document.createElementNS(svgNS, 'feMergeNode');
+    feMergeNode2Dark.setAttribute('in', 'SourceGraphic');
+    feMergeDark.appendChild(feMergeNode2Dark);
+    defs.appendChild(darkFilter);
 
     shapes = [];
 
@@ -48,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     circle.setAttribute('cy', 0);
     circle.setAttribute('r', '60');
     circle.setAttribute('fill', 'rgb(214,65,105)'); // Purple
-    circle.setAttribute('filter', 'url(#dropShadow)');
+    circle.setAttribute('filter', 'url(#dropShadowLight)'); // Default to light theme
     svg.appendChild(circle);
     shapes.push(circle);
 
@@ -61,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     square.setAttribute('rx', '5'); // Rounded corners
     square.setAttribute('ry', '5'); // Rounded corners
     square.setAttribute('fill', 'rgb(56,163,208)'); // Blue
-    square.setAttribute('filter', 'url(#dropShadow)');
+    square.setAttribute('filter', 'url(#dropShadowLight)'); // Default to light theme
     svg.appendChild(square);
     shapes.push(square);
 
@@ -79,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     triangle.setAttribute('fill', 'rgb(125,53,202)'); // Another color
     triangle.setAttribute('rx', '3'); // Rounded corners
     triangle.setAttribute('ry', '3'); // Rounded corners
-    triangle.setAttribute('filter', 'url(#dropShadow)');
+    triangle.setAttribute('filter', 'url(#dropShadowLight)'); // Default to light theme
     svg.appendChild(triangle);
     shapes.push(triangle);
   }
@@ -99,9 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Create an array of shapes with their z-index
     const shapesWithZIndex = shapes.map((shape, index) => {
-      const angle = progress * speed + (index * 2 * Math.PI) / shapes.length;
+      const angle = progress * speed - (index * 2 * Math.PI) / shapes.length; // Reversed spin direction
       const x = centerX + radius * Math.cos(angle);
-      const y = centerY + radius * Math.sin(angle) * 0.5; // Add vertical oscillation
+      const y = centerY + radius * Math.sin(angle) * 0.7; // Increased vertical oscillation
       const z = depth * Math.sin(angle);
 
       // Perspective projection
@@ -137,6 +162,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   createVisualization();
   requestAnimationFrame(animate);
+
+  // Change filter based on theme
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function updateFilter() {
+    const filterId = prefersDarkScheme.matches ? 'dropShadowDark' : 'dropShadowLight';
+    shapes.forEach(shape => {
+      shape.setAttribute('filter', `url(#${filterId})`);
+    });
+  }
+
+  prefersDarkScheme.addEventListener('change', updateFilter);
+  updateFilter();
 
   window.addEventListener('resize', resetVisualization);
 });

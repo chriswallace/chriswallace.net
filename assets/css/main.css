@@ -35,7 +35,7 @@ article {
 }
 
 .ui-content {
-  @apply pt-4 md:pt-[80px] z-0;
+  @apply pt-4 md:pt-[32px] z-0 relative;
 
   .content-container {
     @apply mx-[24px] md:ml-[140px] md:mx-[60px] md:ml-[calc(60px+var(--navbar-width))];
@@ -62,10 +62,6 @@ article {
     }
   }
 
-  footer {
-    @apply mx-[24px] md:mx-[60px];
-  }
-
   .logo {
     @apply text-primary-700;
   }
@@ -89,7 +85,7 @@ article {
 }
 
 .open-to-work {
-  @apply -mt-[20px] md:-mt-[40px] bg-white mb-12 relative rounded-md p-4 flex gap-4 justify-between items-center shadow-md;
+  @apply bg-white mb-12 relative rounded-md p-4 flex gap-4 justify-between items-center shadow-md;
 
   .badge {
     @apply uppercase sm:mb-0 px-5 pt-[9px] pb-[11px] inline-block relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs whitespace-nowrap no-underline hover:underline;
@@ -102,7 +98,7 @@ article {
     font-variation-settings: "wght" 200, "wdth" 200;
 
     strong {
-      @apply text-white mr-4;
+      @apply text-black mr-4;
       font-variation-settings: "wght" 400, "wdth" 200;
     }
   }
@@ -177,6 +173,10 @@ article {
 
   .open-to-work {
     @apply bg-[#242424] shadow-none;
+
+    p strong {
+      @apply text-white;
+    }
   }
 
   .contact-grid .item p {
@@ -253,7 +253,7 @@ article {
 }
 
 .video-player {
-  @apply aspect-[40/27] flex flex-col items-center justify-center rounded-md overflow-hidden bg-white;
+  @apply aspect-[40/27] flex flex-col items-center justify-center rounded-md overflow-hidden bg-black;
 }
 
 @media (prefers-color-scheme: dark) {

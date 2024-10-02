@@ -1,5 +1,5 @@
 footer {
-  @apply pt-12 pb-4 ml-0 mr-auto max-w-2xl;
+  @apply pb-4 ml-0 mr-auto mt-16 pt-12 border-t-2 border-gray-200;
 }
 
 footer .logo {
@@ -16,7 +16,7 @@ footer p {
 
 @media (prefers-color-scheme: dark) {
   footer {
-    @apply border-primary-300;
+    @apply border-gray-800;
   }
 
   footer .logo {
@@ -24,6 +24,6 @@ footer p {
   }
 
   footer p {
-    @apply text-gray-200;
+    @apply text-gray-400;
   }
 }
