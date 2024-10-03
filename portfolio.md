@@ -3,25 +3,16 @@ layout: page
 title: Portfolio
 permalink: /portfolio
 description: I've been designing and building websites and apps for 20 years. Here are some of the most notable projects I've contributed to.
-thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/thumbs/portfolio.png?tr=w-800,f-auto
+thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
 ---
 
 <div class="content-container">
     <div class="portfolio-list">
         <div class="item fade-in-element">
-            <div class="zoom-container">
-                <div class="zoomable">
-                    <div class="image-gallery">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-dark.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drops-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drops-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drops-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drops-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drops-dark.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-pdp-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-pdp-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-pdp-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-pdp-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-pdp-dark.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-pdp-2-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-pdp-2-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-pdp-2-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-pdp-2-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-pdp-2-dark.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drop-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drop-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drop-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drop-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drop-dark.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drop-2-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drop-2-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drop-2-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drop-2-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-drop-2-dark.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                    </div>
-                </div>
-            </div>
-            <h3>Candy Marketplace Redesign</h3>
+            <a class="mb-2 inline-block" href="/portfolio/candy-marketplace/">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
+            </a>
+            <h3><a href="/portfolio/candy-marketplace/">Candy Marketplace Redesign</a></h3>
             <p>Role: Product Design</p>
             <p>Year: 2024</p>
             <p>I designed new marketplace features such as platform education, drops, cards, and checkout, focusing on clearly showcasing Candy's innovative products.</p>

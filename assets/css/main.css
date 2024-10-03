@@ -35,14 +35,18 @@ article {
 }
 
 .ui-content {
-  @apply pt-4 md:pt-[32px] z-0 relative;
+  @apply pt-4 md:pt-[28px] z-0 relative;
 
   .zoom-active & {
     @apply static;
   }
 
   .content-container {
-    @apply mx-[24px] md:ml-[140px] md:mx-[60px] md:ml-[calc(60px+var(--navbar-width))];
+    @apply mx-[16px] md:mx-[60px] md:ml-[calc(60px+var(--navbar-width))];
+  }
+
+  .content-container-wo {
+    @apply md:ml-[var(--navbar-width)];
   }
 
   .open-menu &:after {
@@ -105,6 +109,44 @@ article {
       @apply text-black mr-2 md:mr-4;
       font-variation-settings: "wght" 400, "wdth" 200;
     }
+  }
+
+  @media screen and (max-width: 640px) {
+    p {
+      font-variation-settings: "wght" 300, "wdth" 140;
+
+      strong {
+        font-variation-settings: "wght" 500, "wdth" 140;
+      }
+    }
+  }
+}
+
+.project-list {
+  @apply text-xs sm:text-sm text-gray-400;
+
+  dt,
+  dd,
+  div {
+    @apply inline-block;
+  }
+
+  dt {
+    @apply mr-2;
+  }
+
+  dd {
+    @apply text-gray-800;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    dd {
+      @apply text-gray-100;
+    }
+  }
+
+  div {
+    @apply mr-6;
   }
 }
 
@@ -314,7 +356,7 @@ video::-webkit-media-controls {
 /* Portfolio Page */
 
 .portfolio-list {
-  @apply grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 my-12;
+  @apply grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 mb-12;
 
   .item {
     @apply mb-6;

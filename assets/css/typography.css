@@ -23,7 +23,7 @@ h3,
 h4,
 h5 {
   @apply text-gray-950;
-  font-variation-settings: "wght" 500, "wdth" 180;
+  font-variation-settings: "wght" 360, "wdth" 180;
 }
 
 h1,
@@ -72,13 +72,12 @@ h6 {
 }
 
 .primary-heading {
-  @apply text-6xl md:text-7xl mt-6 md:mt-8 mb-8 lowercase;
-  font-variation-settings: "wght" 800, "wdth" 200;
+  @apply text-6xl md:text-4xl mt-0 mb-12 mr-0 lowercase;
+  font-variation-settings: "wght" 300, "wdth" 200;
 }
 
 .primary-heading:before {
-  @apply inline -mr-2;
-  font-variation-settings: "wght" 600, "wdth" 200;
+  @apply inline;
   content: "/";
 }
 
