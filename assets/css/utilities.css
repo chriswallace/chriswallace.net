@@ -41,7 +41,7 @@
 }
 
 .caret::after {
-  @apply text-sm lg:text-lg align-baseline;
+  @apply text-inherit align-baseline;
   content: "\203A";
   margin-left: 0.38rem;
 }

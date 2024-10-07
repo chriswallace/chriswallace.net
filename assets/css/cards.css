@@ -9,40 +9,50 @@
 }
 
 .card-grid {
-  @apply grid gap-4 grid-cols-1 sm:grid-cols-2;
+  @apply grid gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4;
 }
 
 .bg-image-card {
-  @apply bg-center bg-cover aspect-[4/3] relative rounded-md text-white hover:text-white;
+  @apply bg-center bg-cover aspect-[4/3] relative rounded-md text-white hover:text-white no-underline;
 }
 
 .card-text {
-  @apply absolute left-0 top-0 right-0 p-4 p-6 lg:p-8 bottom-[50%];
+  @apply flex flex-col p-4 p-6 lg:p-8 xl:p-4 truncate h-full;
 }
 
 .top-center .card-text {
-  @apply flex flex-col justify-center text-center;
+  @apply justify-start items-center text-center;
 }
 
 .bottom-right .card-text {
-  @apply bottom-0 top-auto left-[50%] pl-4 pt-0 text-right;
+  @apply justify-end items-end text-left;
 }
 
 .bottom-center .card-text {
-  @apply flex flex-col absolute justify-center text-center justify-end top-auto left-0 right-0 bottom-0;
+  @apply justify-end items-center text-center;
+}
+
+.center-left .card-text {
+  @apply justify-center items-start text-left;
+}
+
+.center-right .card-text {
+  @apply justify-center items-end text-right;
 }
 
 .card-text h3 {
-  @apply text-lg lg:text-xl 2xl:text-3xl mt-0 pt-0 mb-1 lg:mb-2 text-white max-w-none;
-  font-weight: 500;
+  @apply text-base lg:text-xl xl:text-[13px] mt-0 pt-0 mb-0 text-white max-w-none;
+  font-variation-settings: 'wght' 450, 'wdth' 170;
 }
 
 .card-text p {
-  @apply mb-2 lg:mb-4 text-sm lg:text-base 2xl:text-2xl text-white max-w-none;
+  @apply mb-2 text-sm xl:text-[11px] text-white max-w-none;
+  font-variation-settings: 'wght' 300, 'wdth' 150;
 }
 
 .card-text .cta {
-  @apply caret text-xs lg:text-base 2xl:text-2xl caret-yellow;
+  @apply caret text-xs lg:text-base xl:text-[11px] caret-yellow;
+  font-variation-settings: 'wght' 350, 'wdth' 170;
 }
 
 .dark .card-text h3 {

@@ -16,7 +16,7 @@ footer p {
 
 @media (prefers-color-scheme: dark) {
   footer {
-    @apply border-gray-800;
+    @apply border-gray-900;
   }
 
   footer .logo {

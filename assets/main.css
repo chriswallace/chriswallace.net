@@ -1214,6 +1214,11 @@ video {
   margin-right: auto;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -1225,6 +1230,10 @@ video {
 
 .mb-0 {
   margin-bottom: 0px;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
 .mb-10 {
@@ -1267,12 +1276,36 @@ video {
   margin-left: 0.25rem;
 }
 
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .mt-auto {
@@ -1353,6 +1386,10 @@ video {
 
 .max-w-2xl {
   max-width: 42rem;
+}
+
+.max-w-\[1600px\] {
+  max-width: 1600px;
 }
 
 .max-w-\[80vw\] {
@@ -1632,6 +1669,31 @@ video {
   stroke: none;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -1640,8 +1702,16 @@ video {
   padding-left: 16px;
 }
 
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .text-start {
@@ -1650,6 +1720,10 @@ video {
 
 .text-end {
   text-align: end;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .align-sub {
@@ -1717,6 +1791,10 @@ video {
 
 .overline {
   text-decoration-line: overline;
+}
+
+.no-underline {
+  text-decoration-line: none;
 }
 
 .mix-blend-plus-lighter {
@@ -1844,6 +1922,14 @@ video {
 
 .\[keywords\:node-addon-api\] {
   keywords: node-addon-api;
+}
+
+.\[ruby-dev\:50626\] {
+  ruby-dev: 50626;
+}
+
+.\[ruby-list\:50731\] {
+  ruby-list: 50731;
 }
 
 :root {
@@ -2308,22 +2394,7 @@ p + hr {
 
 .caret::after {
   vertical-align: baseline;
-  font-size: 0.92rem;
-  line-height: 1.75;
-  letter-spacing: 0;
-  font-weight: 300;
-}
-
-@media (min-width: 1024px) {
-  .caret::after {
-    font-size: 1.2rem;
-    line-height: 1.65;
-    letter-spacing: 0;
-    font-weight: 300;
-  }
-}
-
-.caret::after {
+  color: inherit;
   content: "\203A";
   margin-left: 0.38rem;
 }
@@ -2495,6 +2566,12 @@ a {
   }
 }
 
+@media (min-width: 1280px) {
+  .card-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 .bg-image-card {
   position: relative;
   aspect-ratio: 4/3;
@@ -2503,6 +2580,7 @@ a {
   background-position: center;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  text-decoration-line: none;
 }
 
 .bg-image-card:hover {
@@ -2511,11 +2589,12 @@ a {
 }
 
 .card-text {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 50%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   padding: 1.5rem;
 }
 
@@ -2525,41 +2604,48 @@ a {
   }
 }
 
+@media (min-width: 1280px) {
+  .card-text {
+    padding: 1rem;
+  }
+}
+
 .top-center .card-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
   text-align: center;
 }
 
 .bottom-right .card-text {
-  bottom: 0px;
-  top: auto;
-  left: 50%;
-  padding-left: 1rem;
-  padding-top: 0px;
-  text-align: right;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: left;
 }
 
 .bottom-center .card-text {
-  position: absolute;
-  top: auto;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: flex-end;
-  justify-content: center;
   text-align: center;
+}
+
+.center-left .card-text {
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
+.center-right .card-text {
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
 }
 
 .card-text h3 {
   margin-top: 0px;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0px;
   max-width: none;
   padding-top: 0px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.65;
   letter-spacing: 0;
   font-weight: 300;
@@ -2569,7 +2655,6 @@ a {
 
 @media (min-width: 1024px) {
   .card-text h3 {
-    margin-bottom: 0.5rem;
     font-size: 1.3rem;
     line-height: 1.5;
     letter-spacing: 0;
@@ -2577,17 +2662,14 @@ a {
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1280px) {
   .card-text h3 {
-    font-size: 1.6rem;
-    line-height: 1.2;
-    letter-spacing: 0;
-    font-weight: 300;
+    font-size: 13px;
   }
 }
 
 .card-text h3 {
-  font-weight: 500;
+  font-variation-settings: 'wght' 450, 'wdth' 170;
 }
 
 .card-text p {
@@ -2601,23 +2683,14 @@ a {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .card-text p {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    line-height: 1.65;
-    letter-spacing: 0;
-    font-weight: 300;
+    font-size: 11px;
   }
 }
 
-@media (min-width: 1536px) {
-  .card-text p {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    letter-spacing: 0;
-    font-weight: 300;
-  }
+.card-text p {
+  font-variation-settings: 'wght' 300, 'wdth' 150;
 }
 
 .card-text .cta {
@@ -2630,22 +2703,7 @@ a {
 
 .card-text .cta::after {
   vertical-align: baseline;
-  font-size: 0.92rem;
-  line-height: 1.75;
-  letter-spacing: 0;
-  font-weight: 300;
-}
-
-@media (min-width: 1024px) {
-  .card-text .cta::after {
-    font-size: 1.2rem;
-    line-height: 1.65;
-    letter-spacing: 0;
-    font-weight: 300;
-  }
-}
-
-.card-text .cta::after {
+  color: inherit;
   content: "\203A";
   margin-left: 0.38rem;
   color: #fac832;
@@ -2660,13 +2718,14 @@ a {
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1280px) {
   .card-text .cta {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    letter-spacing: 0;
-    font-weight: 300;
+    font-size: 11px;
   }
+}
+
+.card-text .cta {
+  font-variation-settings: 'wght' 350, 'wdth' 170;
 }
 
 .dark .card-text h3 {
@@ -3177,7 +3236,7 @@ footer p {
 @media (prefers-color-scheme: dark) {
   footer {
     --tw-border-opacity: 1;
-    border-color: rgb(69 69 69 / var(--tw-border-opacity));
+    border-color: rgb(61 61 61 / var(--tw-border-opacity));
   }
 
   footer .logo {
