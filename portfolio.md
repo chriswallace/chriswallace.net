@@ -142,6 +142,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 </div>
             </div>
             <h3><a href="https://dmv.ca.gov" target="_blank">California DMV Digital Transformation</a></h3>
+            <p>Agency: <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a></p>
             <p>Role: Executive Creative Direction</p>
             <p>Year: 2020</p>
             <p>As the design executive over the 10up Experience Design team, I helped direct a landmark design project for our agency: a comprehensive rethinking of the California DMV website and application suite. I collaborated with other executives to assemble and direct this large design team, working towards key milestones. One in every ten drivers in the U. S. is licensed through the California DMV.</p>
@@ -156,6 +157,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 </div>
             </div>
             <h3><a href="https://stories.starbucks.com/stories/" target="_blank">Starbucks Stories &amp; News Redesign</a></h3>
+            <p>Agency: <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a></p>
             <p>Role: Branding, Design, Creative Direction</p>
             <p>Year: 2020</p>
             <p>Starbucks Stories &amp; News is the online newsroom for Starbucks Corporate. I collaborated with one of our Lead Designers to deliver key creative direction and design production for the new Starbucks Stories &amp; News experience, including visual design, branding, and interaction design. I personally designed the current Stories & News logo, the navigation, and media/downloads section of the website.</p>
@@ -167,6 +169,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 </div>
             </div>
             <h3><a href="https://sitekit.withgoogle.com" target="_blank">Google Site Kit</a></h3>
+            <p>Agency: <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a></p>
             <p>Role: Executive Creative Direction</p>
             <p>Year: 2019</p>
             <p>In partnership with Google, we launched a WordPress plugin that integrates Google's suite of products in one location. Site Kit quickly gained adoption among website owners, thanks to a design language that strikingly represented both Google's identity and the WordPress admin environment. I worked with a Lead Designer in a Creative Director role to deliver product design that perfectly integrated the design language of Google into the WordPress dashboard.</p>
@@ -179,6 +182,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 </div>
             </div>
             <h3><a href="https://www.godaddy.com/wordpress-themes" target="_blank">GoDaddy Go Theme</a></h3>
+            <p>Agency: <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a></p>
             <p>Role: Executive Creative Direction</p>
             <p>Year: 2019</p>
             <p>I collaborated with two senior designers on a project for returning client, GoDaddy. We developed a computational design system capable of producing an endless variety of themes, resulting in a surge in user signups and WordPress users for GoDaddy. Assisted the client and internal designers with valuable insights, critiqued design progress, and worked closely with the engineering team to ensure optimal implementation of our work.</p>
@@ -190,7 +194,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                     <img src="/assets/images/mad-men-dark.png" srcset="/assets/images/mad-men-dark.png 400w, /assets/images/mad-men-dark.png 800w, /assets/images/mad-men-dark.png 1200w, /assets/images/mad-men-dark.png 1600w, /assets/images/mad-men-dark.png 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-image hidden dark:block" alt="" loading="lazy">
                 </div>
             </div>
-            <h3><a href="https://www.youtube.com/watch?v=X9UVZjvmmbw">Mad Men: The Fan Cut</a></h3>
+            <h3><a href="https://www.youtube.com/watch?v=X9UVZjvmmbw" target="_blank">Mad Men: The Fan Cut</a></h3>
+            <p>Agency: Lift UX (acquired by <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a>)</p>
             <p>Role: Creative Direction</p>
             <p>Year: 2015</p>
             <p>As the Creative Director, I helped lead the design of the "Mad Men: The Fan Cut" web application celebrating AMC's flagship series. This involved creating a marketing mini-site with a custom video user submission app. We built a WordPress-powered app for fans to claim and recreate short clips from the series, uploaded to YouTube and submitted for editorial review. The app featured a modern design that respected the 1960s and 70s aesthetic of "Mad Men," with elements like parallax scrolling and the iconic logo and silhouette.</p>
@@ -205,7 +210,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                     </video>
                 </div>
             </div>
-            <h3><a href="https://www.theverge.com/entertainment/2014/2/13/5406498/how-a-second-screen-app-made-the-walking-dead-come-alive" target="_blank">The Walking Dead Story Sync</a></h3>
+            <h3><a href="https://www.theverge.com/entertainment/2014/2/13/5406498/how-a-second-screen-app-made-the-walking-dead-come-alive" target="_blank" rel="noreferrer">The Walking Dead Story Sync</a></h3>
+            <p>Agency: Lift UX (acquired by <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a>)</p>
             <p>Role: Creative Direction</p>
             <p>Year: 2012</p>
             <p>We partnered with AMC Networks to design and develop an award winning second-screen TV companion app. This ground-breaking work was featured by the creator of WordPress, Matt Mullenweg, at WordCamp San Francisco and awarded the prize for Best Second Screen TV App at the 2012 Variety Awards. The following year Story Sync was nominated for the Best iPad or Tablet Social TV Application at the 2013 Social TV Awards. In 2013 The Walking Dead Story Sync was nominated for the Outstanding Interactive Program at the 2013 Emmys.</p>

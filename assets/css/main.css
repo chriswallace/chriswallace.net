@@ -299,13 +299,7 @@ article {
 }
 
 .video-player {
-  @apply aspect-[40/27] flex flex-col items-center justify-center rounded-md overflow-hidden bg-white;
-}
-
-@media (prefers-color-scheme: dark) {
-  .video-player {
-    @apply bg-black;
-  }
+  @apply aspect-[40/27] flex flex-col items-center justify-center sm:rounded-md overflow-hidden bg-black;
 }
 
 .video-player video {

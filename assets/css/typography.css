@@ -51,7 +51,7 @@ ol {
 }
 
 h1 {
-  @apply text-5xl lg:text-6xl 2xl:text-7xl md:max-w-3xl 2xl:max-w-7xl mb-6;
+  @apply text-3xl lg:text-4xl 2xl:text-6xl md:max-w-3xl 2xl:max-w-7xl mb-6;
 }
 
 h2 {
