@@ -57,10 +57,10 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                     </div>
                 </div>
             </div>
-            <h3><a href="https://www.figma.com/proto/YvPPezKD0KUWhSSFDcvmYs/Product-Design-2024?page-id=6068%3A14308&node-id=6068-14309&node-type=canvas&viewport=1744%2C-3321%2C0.3&t=Tz6WaFq8oAHZ5t3p-1&scaling=contain&content-scaling=fixed&starting-point-node-id=6068%3A14309" target="_blank">Digital Collectible Deposit/Withdrawal</a></h3>
+            <h3><a href="/portfolio/candy-digital-collectible-deposit-withdrawal/">Digital Collectible Deposit/Withdrawal</a></h3>
             <p>Role: UX, Product Design, Figma Prototyping</p>
             <p>Year: 2024</p>
-            <p>One of the key features users request most frequently on Candy.com is the ability to withdraw their NFT-powered digital collectibles to a private, self-custodied wallet. I created a multi-select UX pattern to select assets, added an example of one of the many wallet connection flows, and implemented some progress indicators to show when a deposit has processed successfully.</p>
+            <p>Product feature design for web3 withdrawal and deposit of digital collectibles.</p>
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">
