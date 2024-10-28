@@ -12,7 +12,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <a class="mb-2 inline-block" href="/portfolio/candy-marketplace/">
                 <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
             </a>
-            <h3><a href="/portfolio/candy-marketplace/">Candy Marketplace Redesign</a></h3>
+            <h3><a href="/portfolio/candy-marketplace/">Candy.io Product Experience</a></h3>
             <p>Role: Product Design</p>
             <p>Year: 2024</p>
             <p>I designed new marketplace features such as platform education, drops, cards, and checkout, focusing on clearly showcasing Candy's innovative products.</p>
@@ -27,24 +27,6 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <p>Role: Product Design & Engineering</p>
             <p>Year: 2024</p>
             <p>I created an interactive comic book reader application for Candy's DC3 digital comic collection. Unique features include x-ray scanning of alternate page contents, an animated panel reader mode, and pop-up video style factoids throughout.</p>
-        </div>
-        <div class="item fade-in-element">
-            <div class="zoom-container">
-                <div class="zoomable">
-                    <div class="image-gallery">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-1.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-2.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-2.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-2.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-2.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-2.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-3.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-3.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-3.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-3.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-3.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-1.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-2.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-2.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-2.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-2.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-2.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-3.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-3.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-3.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-3.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-3.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                    </div>
-                </div>
-            </div>
-            <h3>Candy Digital (Available on Request)</h3>
-            <p>Role: Product Design</p>
-            <p>Year: 2024</p>
-            <p>A collection of projects from March-Present 2024. Please <a href="mailto:chriswallace7@proton.me">email me</a> to request a private link to view this collection of recent work.</p>
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">
@@ -81,29 +63,6 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
         <div class="item fade-in-element">
             <div class="zoom-container">
                 <div class="zoomable">
-                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-image dark:hidden" alt="" loading="lazy">
-                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-dark.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-dark.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-image hidden dark:block" alt="" loading="lazy">
-                </div>
-            </div>
-            <h3><a href="https://cpdm.app" target="_blank">Compendium</a></h3>
-            <p>Role: Branding, Web Design, Product Design, Full Stack Development, Typescript/Javascript, SvelteKit, Solidity</p>
-            <p>Year: 2024</p>
-            <p>Compendium is a work-in-progress digital art gallery solution offering unique standalone web apps for displaying digital and generative art. I am developing the product itself as well as designing the brand, website, and digital app front-end and back-end admin area.</p>
-        </div>
-        <div class="item fade-in-element">
-            <div class="zoom-container">
-                <div class="zoomable">
-                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-dark.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-dark.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-image" alt="" loading="lazy">
-                </div>
-            </div>
-            <h3><a href="https://twelvedays.ultradao.org" target="_blank">Twelve Days of CryptoArt</a></h3>
-            <p>Role: Curation, Branding, Web Design, Full Stack Development, Typescript/Javascript, SvelteKit, Solidity</p>
-            <p>Year: 2023</p>
-            <p>Twelve Days of CryptoArt is an art-centric online event for digital art collectors. I am the lead curator and responsible for everything from branding to curation and even designing the app and writing the app in SvelteKit and the Solidity smart contract.</p>
-        </div>
-        <div class="item fade-in-element">
-            <div class="zoom-container">
-                <div class="zoomable">
                     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/wallace-museum-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/wallace-museum-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/wallace-museum-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/wallace-museum-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/wallace-museum-dark.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/wallace-museum-dark.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-image" alt="" loading="lazy">
                 </div>
             </div>
@@ -122,17 +81,6 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <p>Role: Graphic Design, Logo Design, Website Design, Strategy</p>
             <p>Year: 2022</p>
             <p>Legends of Wondermist is a set of digital collectible cards with four different levels of rarity: common, uncommon, rare, and legendary. I worked with a small team of artists and developers to produce artwork, design cards for each rarity, and craft a mint experience that is both fun and visually exciting. I designed the logo, website, and card templates myself. Artists for the series include Mike Shinoda (of Linkin Park), DesLucrece, Victoria Lopez, Waxbones, Luna Leonis, and Amrit Pal Singh.</p>
-        </div>
-        <div class="item fade-in-element">
-            <div class="zoom-container">
-                <div class="zoomable">
-                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-website-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-website-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-website-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-website-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-website-dark.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-website-dark.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-image" alt="" loading="lazy">
-                </div>
-            </div>
-            <h3><a href="https://woodiesofficial.com" target="_blank">Woodies Website</a></h3>
-            <p>Role: Design, Front-End Development</p>
-            <p>Year: 2021</p>
-            <p>Released to support the launch of the Woodies initial digital collectible PFP project, I designed most of the website and developed some unique features myself in Javascript/SvelteKit. The website includes a collection browser with a preview/download functionality for each Woodies 3D model.</p>
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">
