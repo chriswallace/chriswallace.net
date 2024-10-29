@@ -28,7 +28,7 @@ thumbnail: /assets/images/thumbs/resume.png
       <div class="metadata fade-in-element">
         <h4 class="title" itemprop="roleName">Senior Product Designer</h4>
         <h3 class="place" itemprop="name">Candy Digital</h3>
-        <div class="time-period" itemprop="worksFor">Mar 2024 - present</div>
+        <div class="time-period" itemprop="worksFor">Mar 2024 - October 2024</div>
       </div>
       <div class="description fade-in-element">
         <p>Leading product design across Candy's web application/marketplace. My role encompasses product strategy, user experience, UI design, and front-end engineering. I collaborate directly with creative, product management, and engineering teams to drive new features and products for partners like MLB and DC Comics.</p>
