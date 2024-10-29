@@ -8,18 +8,16 @@ thumbnail: /assets/images/thumbs/resume.png
 
 <div class="content-container">
   <div class="fade-in-element download-resume">
-      <svg class="feather" width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.999919 8.33337C1.36811 8.33337 1.66659 8.63185 1.66659 9.00004V11.6667C1.66659 11.8435 1.73682 12.0131 1.86185 12.1381C1.98687 12.2631 2.15644 12.3334 2.33325 12.3334H11.6666C11.8434 12.3334 12.013 12.2631 12.138 12.1381C12.263 12.0131 12.3333 11.8435 12.3333 11.6667V9.00004C12.3333 8.63185 12.6317 8.33337 12.9999 8.33337C13.3681 8.33337 13.6666 8.63185 13.6666 9.00004V11.6667C13.6666 12.1971 13.4559 12.7058 13.0808 13.0809C12.7057 13.456 12.197 13.6667 11.6666 13.6667H2.33325C1.80282 13.6667 1.29411 13.456 0.919038 13.0809C0.543966 12.7058 0.333252 12.1971 0.333252 11.6667V9.00004C0.333252 8.63185 0.631729 8.33337 0.999919 8.33337Z" fill="black"/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.19526 5.19526C3.45561 4.93491 3.87772 4.93491 4.13807 5.19526L7 8.05719L9.86193 5.19526C10.1223 4.93491 10.5444 4.93491 10.8047 5.19526C11.0651 5.45561 11.0651 5.87772 10.8047 6.13807L7.4714 9.47141C7.21106 9.73175 6.78895 9.73175 6.5286 9.47141L3.19526 6.13807C2.93491 5.87772 2.93491 5.45561 3.19526 5.19526Z" fill="black"/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99992 0.333374C7.36811 0.333374 7.66659 0.631851 7.66659 1.00004V9.00004C7.66659 9.36823 7.36811 9.66671 6.99992 9.66671C6.63173 9.66671 6.33325 9.36823 6.33325 9.00004V1.00004C6.33325 0.631851 6.63173 0.333374 6.99992 0.333374Z" fill="black"/>
-  </svg>
-
-      <a class="inline ml-1" href="/assets/downloads/product-design-executive-chris-wallace.pdf" download> Download as PDF</a>
-
+    <svg class="feather" width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.999919 8.33337C1.36811 8.33337 1.66659 8.63185 1.66659 9.00004V11.6667C1.66659 11.8435 1.73682 12.0131 1.86185 12.1381C1.98687 12.2631 2.15644 12.3334 2.33325 12.3334H11.6666C11.8434 12.3334 12.013 12.2631 12.138 12.1381C12.263 12.0131 12.3333 11.8435 12.3333 11.6667V9.00004C12.3333 8.63185 12.6317 8.33337 12.9999 8.33337C13.3681 8.33337 13.6666 8.63185 13.6666 9.00004V11.6667C13.6666 12.1971 13.4559 12.7058 13.0808 13.0809C12.7057 13.456 12.197 13.6667 11.6666 13.6667H2.33325C1.80282 13.6667 1.29411 13.456 0.919038 13.0809C0.543966 12.7058 0.333252 12.1971 0.333252 11.6667V9.00004C0.333252 8.63185 0.631729 8.33337 0.999919 8.33337Z" fill="black"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.19526 5.19526C3.45561 4.93491 3.87772 4.93491 4.13807 5.19526L7 8.05719L9.86193 5.19526C10.1223 4.93491 10.5444 4.93491 10.8047 5.19526C11.0651 5.45561 11.0651 5.87772 10.8047 6.13807L7.4714 9.47141C7.21106 9.73175 6.78895 9.73175 6.5286 9.47141L3.19526 6.13807C2.93491 5.87772 2.93491 5.45561 3.19526 5.19526Z" fill="black"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99992 0.333374C7.36811 0.333374 7.66659 0.631851 7.66659 1.00004V9.00004C7.66659 9.36823 7.36811 9.66671 6.99992 9.66671C6.63173 9.66671 6.33325 9.36823 6.33325 9.00004V1.00004C6.33325 0.631851 6.63173 0.333374 6.99992 0.333374Z" fill="black"/>
+    </svg>
+    <a class="inline ml-1" href="/assets/downloads/product-design-executive-chris-wallace.pdf" download> Download as PDF</a>
   </div>
 
   <div itemscope itemtype="http://schema.org/Person">
-  <p itemprop="description" class="fade-in-element sub-heading">Two-time Emmy-nominated product design leader with 18+ years across IC, management and and executive-level roles. I create impactful digital experiences for the likes of Google, Microsoft, Facebook, and Starbucks. Currently leading product design at Candy Digital.</p>
+  <p itemprop="description" class="fade-in-element sub-heading">Two-time Emmy-nominated product design leader with 20 years of design experience with 11+ years managing designers/design directors. Deep experience in UX/UI design, design prototyping (both in Figma and code), design systems, cross-functional collaboration and communicating with executive-level stakeholders.</p>
 
   <h2 class="fade-in-element mt-12">Work Experience</h2>
 
@@ -93,16 +91,25 @@ thumbnail: /assets/images/thumbs/resume.png
   <ul class="fade-in-element skills-list" itemprop="knowsAbout">
     <li>Product Design</li>
     <li>Design Management</li>
+    <li>Brand Identity</li>
     <li>Creative Direction</li>
     <li>Design Systems</li>
+    <li>Component Libraries</li>
+    <li>Adobe Creative Suite</li>
+    <li>Figma</li>
     <li>Visual Design</li>
     <li>UX Design</li>
     <li>Information Architecture</li>
-    <li>Javascript/Typescript</li>
+    <li>User Journey Mapping</li>
+    <li>Wireframes</li>
+    <li>User Research</li>
     <li>Front-End Engineering</li>
-    <li>Web3 (Blockchain & NFTs)</li>
-    <li>WordPress Development</li>
-    <li>SvelteKit Development</li>
+    <li>Javascript/Typescript</li>
+    <li>Storybook</li>
+    <li>Web3</li>
+    <li>SvelteKit</li>
+    <li>iOS/Android</li>
+    <li>Accessibility</li>
   </ul>
 
   <h2 class="fade-in-element">Education</h2>
