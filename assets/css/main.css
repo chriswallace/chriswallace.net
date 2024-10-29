@@ -357,7 +357,7 @@ video::-webkit-media-controls {
   }
 
   h3 {
-    @apply mt-3;
+    @apply my-3;
   }
 
   p {
@@ -365,7 +365,7 @@ video::-webkit-media-controls {
   }
 
   p:last-of-type {
-    @apply my-6;
+    @apply mt-3;
   }
 }
 
