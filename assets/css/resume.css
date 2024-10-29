@@ -14,7 +14,7 @@
     }
 
     .title {
-      @apply pl-0 pb-0 mb-0 shrink text-gray-700 order-3 md:order-1 text-lg flex-[0_1_100%] md:flex-initial;
+      @apply pl-0 pb-0 mb-0 shrink text-gray-700 order-3 md:order-1 text-base flex-[0_1_100%] md:flex-initial;
       font-weight: 500;
     }
 
@@ -30,7 +30,7 @@
   .description {
     @apply text-gray-600 max-w-xl mb-12;
 
-    p{
+    p {
       @apply mb-4;
     }
   }

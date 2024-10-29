@@ -9,6 +9,24 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
 <div class="content-container">
     <div class="portfolio-list">
         <div class="item fade-in-element">
+            <a class="mb-2 inline-block" href="/portfolio/candy-digital-physical-digital-feature/">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
+            </a>
+            <h3><a href="/portfolio/candy-digital-physical-digital-feature/">Candy Digital Physical-Digital Feature</a></h3>
+            <p>Role: UX, Product Design, Figma Prototyping</p>
+            <p>Year: 2024</p>
+            <p>Allows for the sale and marketplace activity of paired Physical+Digital collectibles on Candy.io.</p>
+        </div>
+        <div class="item fade-in-element">
+            <a class="mb-2 inline-block" href="/portfolio/redacted-mlb-game/">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
+            </a>
+            <h3><a href="/portfolio/redacted-mlb-game/">[Redacted] MLB Game</a></h3>
+            <p>Role: UX, Product Design, Figma Prototyping</p>
+            <p>Year: 2024</p>
+            <p>A series of mockups for a mobile game concept using digital collectibles as game pieces.</p>
+        </div>
+        <div class="item fade-in-element">
             <a class="mb-2 inline-block" href="/portfolio/candy-marketplace/">
                 <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
             </a>
@@ -19,9 +37,9 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">
-                <div class="zoomable">
+                <a href="/portfolio/dc3-interactive-reader/">
                     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                </div>
+                </a>
             </div>
             <h3><a href="https://comic.candy.io/1">DC3 Interactive Comic Book Reader</a></h3>
             <p>Role: Product Design & Engineering</p>
@@ -30,31 +48,13 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">
-                <div class="zoomable">
-                    <div class="image-gallery">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-1.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-2.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-2.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-2.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-2.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-2.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-3.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-3.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-3.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-3.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-portfolio-3.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-1.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-2.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-2.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-2.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-2.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-2.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-3.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-3.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-3.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-3.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-3.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
-                    </div>
-                </div>
-            </div>
-            <h3>Candy Digital (Available on Request)</h3>
-            <p>Role: Product Design</p>
-            <p>Year: 2024</p>
-            <p>A collection of projects from March-Present 2024. Please <a href="mailto:chriswallace7@proton.me">email me</a> to request a private link to view this collection of recent work.</p>
-        </div>
-        <div class="item fade-in-element">
-            <div class="zoom-container">
-                <div class="zoomable">
-                    <div class="video-player">
+                <div class="video-player">
+                    <a href="/portfolio/candy-digital-collectible-deposit-withdrawal/">
                         <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy">
                             <source src="/assets/video/withdrawal-deposit.mp4" type="video/mp4">
                             Your browser does not support HTML5 video.
                         </video>
-                    </div>
+                    </a>
                 </div>
             </div>
             <h3><a href="/portfolio/candy-digital-collectible-deposit-withdrawal/">Digital Collectible Deposit/Withdrawal</a></h3>
