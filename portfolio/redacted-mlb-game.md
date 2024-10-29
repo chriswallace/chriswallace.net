@@ -34,19 +34,14 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
 <div class="content-container fade-in-element">
   <p>I created a prototype for a conceptual MLB mobile game in order to establish a design style guide for a native iOS and Android app. These screens, alongside a detailed style guide, were provided as a resource to third-party developers working within the Candy ecosystem.</p>
 
-  <div class="flex gap-4 items-start max-w-2xl">
-    <div class="flex-grow m-0 p-0">
-      <p class="m-0">Click the video to watch the prototype in action. This work is redacted due to its unreleased content. Updates will be made as more information is available publicly.</p>
-    </div>
-    <div class="w-[200px] h-[150px] flex-none m-0 p-0">
-      <div class="zoomable">
-          <div class="video-player">
-              <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy">
-                  <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/mlb-game-video.mp4?updatedAt=1730174641397" type="video/mp4">
-                  Your browser does not support HTML5 video.
-              </video>
-          </div>
+  <p>This work is redacted due to its unreleased content. Updates will be made as more information is available publicly.</p>
+
+  <div class="zoomable max-w-2xl">
+      <div class="video-player">
+          <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy">
+              <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/mlb-game-video.mp4?updatedAt=1730174641397" type="video/mp4">
+              Your browser does not support HTML5 video.
+          </video>
       </div>
-    </div>
   </div>
 </div>
