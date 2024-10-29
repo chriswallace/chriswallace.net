@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  @apply font-normal text-sm md:text-base;
+  @apply font-normal text-base;
   font-variation-settings: "wght" 240, "wdth" 170;
 }
 

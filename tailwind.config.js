@@ -41,7 +41,7 @@ module.exports = {
           },
         ],
         base: [
-          "1rem",
+          "1.1rem",
           {
             lineHeight: "1.65",
             letterSpacing: "0",
@@ -57,7 +57,7 @@ module.exports = {
           },
         ],
         xl: [
-          "1.3rem",
+          "1.35rem",
           {
             lineHeight: "1.5",
             letterSpacing: "0",

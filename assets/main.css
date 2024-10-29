@@ -1910,22 +1910,10 @@ html {
 }
 
 body {
-  font-size: 0.92rem;
-  line-height: 1.75;
+  font-size: 1.1rem;
+  line-height: 1.65;
   letter-spacing: 0;
   font-weight: 400;
-}
-
-@media (min-width: 768px) {
-  body {
-    font-size: 1rem;
-    line-height: 1.65;
-    letter-spacing: 0;
-    font-weight: 300;
-  }
-}
-
-body {
   font-variation-settings: "wght" 240, "wdth" 170;
 }
 
@@ -2009,7 +1997,7 @@ h1 {
 h2 {
   margin-top: 4rem;
   margin-bottom: 1.5rem;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   line-height: 1.5;
   letter-spacing: 0;
   font-weight: 300;
@@ -2046,7 +2034,7 @@ h2 {
 h3 {
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.65;
   letter-spacing: 0;
   font-weight: 300;
@@ -2178,7 +2166,7 @@ h6 {
 
 @media (min-width: 768px) {
   .sub-heading-curated {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     line-height: 1.5;
     letter-spacing: 0;
     font-weight: 300;
@@ -2225,7 +2213,7 @@ caption {
   caption {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.65;
     letter-spacing: 0;
     font-weight: 300;
@@ -2426,7 +2414,7 @@ a {
 .back {
   margin-bottom: 1rem;
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.65;
   letter-spacing: 0;
   font-weight: 300;
@@ -2606,7 +2594,7 @@ a {
   margin-bottom: 0px;
   max-width: none;
   padding-top: 0px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.65;
   letter-spacing: 0;
   font-weight: 300;
@@ -2616,7 +2604,7 @@ a {
 
 @media (min-width: 1024px) {
   .card-text h3 {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     line-height: 1.5;
     letter-spacing: 0;
     font-weight: 300;
@@ -2672,7 +2660,7 @@ a {
 
 @media (min-width: 1024px) {
   .card-text .cta {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.65;
     letter-spacing: 0;
     font-weight: 300;
@@ -2783,7 +2771,7 @@ a {
 
 @media (min-width: 640px) {
   .card-zoom-text h2 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.65;
     letter-spacing: 0;
     font-weight: 300;
@@ -3364,7 +3352,7 @@ footer p {
     }
     @media (min-width: 768px) {
       > * {
-        font-size: 1rem;
+        font-size: 1.1rem;
         line-height: 1.65;
         letter-spacing: 0;
         font-weight: 300;
@@ -3403,7 +3391,7 @@ footer p {
       padding-bottom: 0px;
     }
     .title {
-      font-size: 1rem;
+      font-size: 1.1rem;
       line-height: 1.65;
       letter-spacing: 0;
       font-weight: 300;
@@ -3538,7 +3526,7 @@ emoji-picker {
 .emojiCursor {
   position: absolute;
   z-index: 50;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   line-height: 1.5;
   letter-spacing: 0;
   font-weight: 300;
@@ -4005,7 +3993,7 @@ input[type="range"]::-moz-range-thumb {
   }
   @media (min-width: 1024px) {
     a {
-      font-size: 1rem;
+      font-size: 1.1rem;
       line-height: 1.65;
       letter-spacing: 0;
       font-weight: 300;
