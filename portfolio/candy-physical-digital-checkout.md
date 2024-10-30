@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Candy Digital Physical-Digital Feature
+title: Candy.io Physical-Digital Checkout
 description: I designed an updated checkout flow for products that offer a paired digital and physical product as part of the sale.
 permalink: /portfolio/candy-physical-digital-feature/
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png

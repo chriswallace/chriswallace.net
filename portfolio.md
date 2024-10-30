@@ -7,13 +7,54 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
 ---
 
 <div class="content-container">
+    <div class="relative w-full h-screen bg-black bg-opacity-50">
+        <video id="backgroundVideo" class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop>
+            <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/portfolio-video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
+            /portfolio
+        </div>
+        <button id="playButton" class="absolute bottom-10 right-10 bg-white bg-opacity-50 px-4 py-2 rounded-full text-black font-bold">
+            Play
+        </button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const playButton = document.getElementById('playButton');
+            const backgroundVideo = document.getElementById('backgroundVideo');
+            const videoContainer = document.createElement('div');
+            videoContainer.className = 'fixed top-0 left-0 w-full h-screen bg-black bg-opacity-50 z-50';
+            const videoElement = document.createElement('video');
+            videoElement.setAttribute('controls', '');
+            videoElement.setAttribute('autoplay', '');
+            videoElement.setAttribute('loop', '');
+            videoElement.setAttribute('muted', '');
+            videoElement.setAttribute('playsinline', '');
+            videoElement.src = 'https://ik.imagekit.io/UltraDAO/chriswallace.net/portfolio-video.mp4';
+            videoElement.setAttribute('type', 'video/mp4');
+            videoContainer.appendChild(videoElement);
+            document.body.appendChild(videoContainer);
+
+            playButton.addEventListener('click', function() {
+                videoContainer.style.display = 'block';
+            });
+
+            document.addEventListener('click', function(e) {
+                if (e.target !== videoContainer && e.target !== videoElement && e.target !== playButton) {
+                    videoContainer.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
     <div class="portfolio-list">
         <div class="item fade-in-element">
             <a class="mb-2 inline-block" href="/portfolio/candy-physical-digital-feature/">
                 <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
             </a>
-            <h3><a href="/portfolio/candy-physical-digital-feature/">Candy Digital Physical-Digital Feature</a></h3>
-            <p>Adding Physical+Digital collectible drops to Candy.io.</p>
+            <h3><a href="/portfolio/candy-physical-digital-feature/">Candy.io Physical-Digital Checkout</a></h3>
+            <p>Designing a new feature for Candy's existing checkout process.</p>
         </div>
         <div class="item fade-in-element">
             <a class="mb-2 inline-block" href="/portfolio/redacted-mlb-game/">
@@ -187,4 +228,5 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <p>We partnered with AMC Networks to design and develop an award winning second-screen TV companion app. This ground-breaking work was featured by the creator of WordPress, Matt Mullenweg, at WordCamp San Francisco and awarded the prize for Best Second Screen TV App at the 2012 Variety Awards. The following year Story Sync was nominated for the Best iPad or Tablet Social TV Application at the 2013 Social TV Awards. In 2013 The Walking Dead Story Sync was nominated for the Outstanding Interactive Program at the 2013 Emmys.</p>
         </div>
     </div>
+
 </div>
