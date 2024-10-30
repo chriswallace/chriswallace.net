@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     svg.setAttribute('height', '100%');
     svg.setAttribute('viewBox', '0 0 800 800');
     container = document.getElementById('visualization-canvas');
+    if (!container) return; // Exit if the container element is not found
     svg.setAttribute('height', container.clientHeight);
     container.appendChild(svg);
 

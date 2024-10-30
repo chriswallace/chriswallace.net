@@ -32,9 +32,9 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-banner.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-banner.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-banner.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-banner.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-banner.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-banner.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element mb-12" alt="" loading="lazy">
 </div>
 <div class="content-container fade-in-element">
-  <p>I created a prototype for a conceptual MLB mobile game in order to establish a design style guide for a native iOS and Android app. These screens, alongside a detailed style guide, were provided as a resource to third-party developers working within the Candy ecosystem.</p>
+  <p class="fade-in-element">I created a prototype for a conceptual MLB mobile game in order to establish a design style guide for a native iOS and Android app. These screens, alongside a detailed style guide, were provided as a resource to third-party developers working within the Candy ecosystem.</p>
 
-  <p>This work is redacted due to its unreleased content. Updates will be made as more information is available publicly.</p>
+  <p class="fade-in-element">This work is redacted due to its unreleased content. Updates will be made as more information is available publicly.</p>
 
   <div class="zoomable max-w-2xl">
       <div class="video-player">

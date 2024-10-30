@@ -30,7 +30,7 @@ description: Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm C
   </div>
 </div>
 <div class="content-container">
-  <div class="portfolio-list">
+  <div class="portfolio-list max-w-7xl">
     <div class="item fade-in-element">
         <a class="mb-2 inline-block" href="/portfolio/candy-physical-digital-feature/">
             <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">

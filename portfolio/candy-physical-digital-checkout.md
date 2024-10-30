@@ -33,13 +33,13 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
 </div>
 
 <div class="content-container fade-in-element">
-  <h3>The need</h3>
+  <h3 class="fade-in-element">The need</h3>
 
-  <p>Add a new type of product to Candy's marketplace that introduces paired physical-digital products with future plans to allow sales of those collectibles with or without the physical collectible.</p>
+  <p class="fade-in-element">Add a new type of product to Candy's marketplace that introduces paired physical-digital products with future plans to allow sales of those collectibles with or without the physical collectible.</p>
 
-  <h3>The issues</h3>
+  <h3 class="fade-in-element">The issues</h3>
 
-  <ul class="list-disc pl-4">
+  <ul class="fade-in-element list-disc pl-4">
     <li>No shipping address in the current checkout process (it was all digital delivery)</li>
     <li>How will users know a product includes a paired physical collectible?</li>
     <li>Future state: How will buyers on secondary markets identify collectibles where the physical was claimed by a previous owner?</li>

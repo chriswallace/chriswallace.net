@@ -12,7 +12,8 @@ const filesToConcatAndMinify = [
 const individualFilesToMinify = [
     './assets/js/fxhash.js',
     './assets/js/gallery-viewer.js',
-    './assets/js/interplay-page.js'
+    './assets/js/interplay-page.js',
+    './assets/js/portfolioVideo.js'
 ];
 
 // Function to minify a single file

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: portfolio
 title: Portfolio
 permalink: /portfolio
 description: I've been designing and building websites and apps for 20 years. Here are some of the most notable projects I've contributed to.
@@ -7,7 +7,13 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
 ---
 
 <div class="content-container">
-    <div class="portfolio-list">
+    <div class="fade-in-element text-center flex flex-col justify-center items-center p-12 rounded-md">
+        <blockquote class="max-w-3xl mx-auto">
+            <p class="text-center text-2xl font-semibold mb-0 max-w-none mb-2">"I <em>love</em> working with Chris. He has the rare mix of design instincts and technical ability that <span class="underline">makes him incredibly effective</span>."</p>
+            <p class="text-center text-sm max-w-none">— Mike Chabot, Director of Engineering @ Candy Digital</p>
+        </blockquote>
+    </div>
+    <div class="portfolio-list max-w-7xl">
         <div class="item fade-in-element">
             <a class="mb-2 inline-block" href="/portfolio/candy-physical-digital-feature/">
                 <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
@@ -28,6 +34,12 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             </a>
             <h3><a href="/portfolio/candy-marketplace-redesign/">Candy Marketplace Redesign</a></h3>
             <p>A gradual, deliberate shift in design language and product features.</p>
+        </div>
+        <div class="fade-in-element min-h-[300px] bg-gray-200 dark:bg-[#202020] text-center flex flex-col justify-center items-center p-12 rounded-md">
+            <blockquote class="max-w-[24rem] mx-auto">
+                <p class="text-xl font-bold mb-0 dark:text-white">"Chris is <em>by far</em> the best designer <span class="underline underline-gray-400 mb-2">I've ever worked with</span>."</p>
+                <p class="text-xs">&mdash; Yaro Plashenko, Head of Product, Ecosystem & Product Partnerships @ Immutable</p>
+            </blockquote>
         </div>
         <div class="item fade-in-element">
             <a class="mb-2 inline-block" href="/portfolio/candy-league/">
@@ -53,16 +65,9 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <p>Releasing a new challenge product to Candy's MLB collectible holders.</p>
         </div>
         <div class="item fade-in-element">
-            <div class="zoom-container">
-                <div class="zoomable">
-                    <div class="video-player">
-                        <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy">
-                            <source src="/assets/video/withdrawal-deposit.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                </div>
-            </div>
+            <a class="mb-2 inline-block" href="/portfolio/candy-digital-collectible-deposit-withdrawal/">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
+            </a>
             <h3><a href="/portfolio/candy-digital-collectible-deposit-withdrawal/">Digital Collectible Deposit/Withdrawal</a></h3>
             <p>Web3 withdrawal and deposit of digital collectibles between Candy and self-custody wallets.</p>
         </div>
@@ -80,7 +85,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <h3><a href="https://www.figma.com/proto/Ef4V9oBQibbfKvqDCmjCfn/pendulum-wallet?page-id=0%3A1&type=design&node-id=1-2&viewport=265%2C605%2C0.11&t=iqJaP7tzaqV31XnT-9&scaling=scale-down&starting-point-node-id=1%3A2&show-proto-sidebar=1" target="_blank">Pendulum Crypto Wallet (iOS App)</a></h3>
             <p>Role: Branding, Product Design, Figma Prototyping</p>
             <p>Year: 2024</p>
-            <p>Pendulum is a conceptual prototype for a crypto wallet with social and digital collectible features. I designed this app to envision a wallet app that I would find useful amidst an ecosystem that currently de-emphasizes digital collectibles and clear information design.</p>
+            <p>Pendulum is a conceptual crypto wallet prototype integrating social and digital collectible features, aiming to address the current ecosystem's shortcomings in these areas.</p>
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">
@@ -91,7 +96,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <h3><a href="https://wallacemuseum.com" target="_blank">Wallace Museum</a></h3>
             <p>Role: Product Design, Branding, Database Architecture, Typescript/Javascript, SvelteKit</p>
             <p>Year: 2023</p>
-            <p>Wallace Museum is a new online art gallery dedicated to showcasing generative art in a new and unique format. Most galleries employ a simply grid-based layout while Wallace Museum feels more like a virtual museum with paintings spread across a wall. I created the branding, designed the app, coded the experience, and curated the works. I also wrote an imported to collect works held in Ethereum and Tezos wallets.</p>
+            <p>Wallace Museum showcases generative art in a unique virtual format, featuring a wall-like layout. I led branding, app design, and coding, including a feature to collect works from Ethereum and Tezos wallets.</p>
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">
@@ -102,7 +107,13 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <h3><a href="https://opensea.io/collection/legends-of-wondermist" target="_blank">Legends of Wondermist</a></h3>
             <p>Role: Graphic Design, Logo Design, Website Design, Strategy</p>
             <p>Year: 2022</p>
-            <p>Legends of Wondermist is a set of digital collectible cards with four different levels of rarity: common, uncommon, rare, and legendary. I worked with a small team of artists and developers to produce artwork, design cards for each rarity, and craft a mint experience that is both fun and visually exciting. I designed the logo, website, and card templates myself. Artists for the series include Mike Shinoda (of Linkin Park), DesLucrece, Victoria Lopez, Waxbones, Luna Leonis, and Amrit Pal Singh.</p>
+            <p>This project involved designing a set of collectible cards with varying rarity levels, collaborating with artists to create engaging artwork and a minting experience that captivates users.</p>
+        </div>
+        <div class="fade-in-element min-h-[300px] bg-gray-200 dark:bg-[#202020] text-center flex flex-col justify-center items-center p-12 rounded-md">
+            <blockquote class="max-w-[24rem] mx-auto">
+                <p class="text-xl font-bold mb-0 dark:text-white">"If your goal is to work with someone who inspires, motivates and brings it day in and day out then look no further! His expertise <span class="underline underline-gray-400 mb-2">made me a stronger designer</span>."</p>
+                <p class="text-xs">&mdash; Aaron Frebowitz, Design Director @ Candy Digital</p>
+            </blockquote>
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">
@@ -111,11 +122,11 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-image hidden dark:block" alt="" loading="lazy">
                 </div>
             </div>
-            <h3><a href="https://dmv.ca.gov" target="_blank">California DMV Digital Transformation</a></h3>
+            <h3><a href="https://10up.com/our-work/california-dmv-website-redesign/" target="_blank">California DMV Digital Transformation</a></h3>
             <p>Agency: <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a></p>
             <p>Role: Executive Creative Direction</p>
             <p>Year: 2020</p>
-            <p>As the design executive over the 10up Experience Design team, I helped direct a landmark design project for our agency: a comprehensive rethinking of the California DMV website and application suite. I collaborated with other executives to assemble and direct this large design team, working towards key milestones. One in every ten drivers in the U. S. is licensed through the California DMV.</p>
+            <p>Directed a comprehensive redesign of the California DMV's website and application suite, enhancing user experience for millions of drivers across the U.S.</p>
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">
@@ -130,7 +141,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <p>Agency: <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a></p>
             <p>Role: Branding, Design, Creative Direction</p>
             <p>Year: 2020</p>
-            <p>Starbucks Stories &amp; News is the online newsroom for Starbucks Corporate. I collaborated with one of our Lead Designers to deliver key creative direction and design production for the new Starbucks Stories &amp; News experience, including visual design, branding, and interaction design. I personally designed the current Stories & News logo, the navigation, and media/downloads section of the website.</p>
+            <p>Revamped the online newsroom for Starbucks, focusing on visual design and branding to enhance storytelling and user engagement.</p>
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">
@@ -142,7 +153,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <p>Agency: <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a></p>
             <p>Role: Executive Creative Direction</p>
             <p>Year: 2019</p>
-            <p>In partnership with Google, we launched a WordPress plugin that integrates Google's suite of products in one location. Site Kit quickly gained adoption among website owners, thanks to a design language that strikingly represented both Google's identity and the WordPress admin environment. I worked with a Lead Designer in a Creative Director role to deliver product design that perfectly integrated the design language of Google into the WordPress dashboard.</p>
+            <p>Launched a WordPress plugin integrating Google's products, achieving rapid adoption through a design that harmonized with both Google and WordPress aesthetics.</p>
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">
@@ -155,7 +166,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <p>Agency: <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a></p>
             <p>Role: Executive Creative Direction</p>
             <p>Year: 2019</p>
-            <p>I collaborated with two senior designers on a project for returning client, GoDaddy. We developed a computational design system capable of producing an endless variety of themes, resulting in a surge in user signups and WordPress users for GoDaddy. Assisted the client and internal designers with valuable insights, critiqued design progress, and worked closely with the engineering team to ensure optimal implementation of our work.</p>
+            <p>Developed a computational design system for GoDaddy, resulting in a diverse range of themes that significantly increased user signups.</p>
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">
@@ -168,7 +179,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <p>Agency: Lift UX (acquired by <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a>)</p>
             <p>Role: Creative Direction</p>
             <p>Year: 2015</p>
-            <p>As the Creative Director, I helped lead the design of the "Mad Men: The Fan Cut" web application celebrating AMC's flagship series. This involved creating a marketing mini-site with a custom video user submission app. We built a WordPress-powered app for fans to claim and recreate short clips from the series, uploaded to YouTube and submitted for editorial review. The app featured a modern design that respected the 1960s and 70s aesthetic of "Mad Men," with elements like parallax scrolling and the iconic logo and silhouette.</p>
+            <p>Led the design of a web application for AMC's "Mad Men," creating a platform for fans to submit and share video clips, blending modern design with retro aesthetics.</p>
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">
@@ -184,7 +195,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <p>Agency: Lift UX (acquired by <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a>)</p>
             <p>Role: Creative Direction</p>
             <p>Year: 2012</p>
-            <p>We partnered with AMC Networks to design and develop an award winning second-screen TV companion app. This ground-breaking work was featured by the creator of WordPress, Matt Mullenweg, at WordCamp San Francisco and awarded the prize for Best Second Screen TV App at the 2012 Variety Awards. The following year Story Sync was nominated for the Best iPad or Tablet Social TV Application at the 2013 Social TV Awards. In 2013 The Walking Dead Story Sync was nominated for the Outstanding Interactive Program at the 2013 Emmys.</p>
+            <p>Designed an award-winning second-screen app for AMC, enhancing viewer engagement during episodes and recognized at multiple industry awards.</p>
         </div>
     </div>
 

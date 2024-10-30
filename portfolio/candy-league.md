@@ -33,8 +33,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
 </div>
 
 <div class="content-container">
-  <p>Candy League is a series of collecting challenges for MLB collectors on Candy.io that take place over the course of each MLB baseball season. Collectors can join challenges, collect items, and complete sets to advance on the season leaderboard. At various points, top Candy Leaguers will be eligible for early drop access, discounts, exclusive chasers, and end of season rewards for being at or near the top of the Leaderboard.</p>
-  <p>I was asked to create a landing page that communicates and explains rewards to potential participants. I created a new logo, designed the landing page around a baseball theme, and coordinated with product management to create content for the page.</p>
+  <p class="fade-in-element">Candy League is a series of collecting challenges for MLB collectors on Candy.io that take place over the course of each MLB baseball season. Collectors can join challenges, collect items, and complete sets to advance on the season leaderboard. At various points, top Candy Leaguers will be eligible for early drop access, discounts, exclusive chasers, and end of season rewards for being at or near the top of the Leaderboard.</p>
+  <p class="fade-in-element">I was asked to create a landing page that communicates and explains rewards to potential participants. I created a new logo, designed the landing page around a baseball theme, and coordinated with product management to create content for the page.</p>
 </div>
 
 <div class="content-container-wo">

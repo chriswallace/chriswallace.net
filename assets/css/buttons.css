@@ -11,6 +11,10 @@ a {
   @apply inline-block mr-1 align-middle w-[18px] h-[18px] top-[-4px] fill-current stroke-current;
 }
 
+.button-dark {
+  @apply button bg-black text-white;
+}
+
 .back {
   @apply text-primary-500 font-light mb-4 inline-block text-base md:text-lg;
 }
