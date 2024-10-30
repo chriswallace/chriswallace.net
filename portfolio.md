@@ -7,47 +7,6 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
 ---
 
 <div class="content-container">
-    <div class="relative w-full h-screen bg-black bg-opacity-50">
-        <video id="backgroundVideo" class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop>
-            <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/portfolio-video.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-            /portfolio
-        </div>
-        <button id="playButton" class="absolute bottom-10 right-10 bg-white bg-opacity-50 px-4 py-2 rounded-full text-black font-bold">
-            Play
-        </button>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const playButton = document.getElementById('playButton');
-            const backgroundVideo = document.getElementById('backgroundVideo');
-            const videoContainer = document.createElement('div');
-            videoContainer.className = 'fixed top-0 left-0 w-full h-screen bg-black bg-opacity-50 z-50';
-            const videoElement = document.createElement('video');
-            videoElement.setAttribute('controls', '');
-            videoElement.setAttribute('autoplay', '');
-            videoElement.setAttribute('loop', '');
-            videoElement.setAttribute('muted', '');
-            videoElement.setAttribute('playsinline', '');
-            videoElement.src = 'https://ik.imagekit.io/UltraDAO/chriswallace.net/portfolio-video.mp4';
-            videoElement.setAttribute('type', 'video/mp4');
-            videoContainer.appendChild(videoElement);
-            document.body.appendChild(videoContainer);
-
-            playButton.addEventListener('click', function() {
-                videoContainer.style.display = 'block';
-            });
-
-            document.addEventListener('click', function(e) {
-                if (e.target !== videoContainer && e.target !== videoElement && e.target !== playButton) {
-                    videoContainer.style.display = 'none';
-                }
-            });
-        });
-    </script>
-
     <div class="portfolio-list">
         <div class="item fade-in-element">
             <a class="mb-2 inline-block" href="/portfolio/candy-physical-digital-feature/">

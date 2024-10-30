@@ -47,18 +47,18 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
 </div>
 
 <div class="content-container-wo bg-[#444444] text-center">
-  <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy" class="max-h-full max-w-3xl mx-auto">
+  <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy" class="fade-in-element max-h-full max-w-3xl mx-auto">
       <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.mov/ik-video.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
   </video>
 </div>
 
 <div class="content-container">
-  <h3>The solution(s)</h3>
+  <h3 class="fade-in-element">The solution(s)</h3>
 
-  <p>To address these concerns, I first designed two icons representing a Physical-Digital product type. The first was an icon where the physical edition is still claimable by a future owner of the digital edition. The second was an icon where that physical has already been claimed. These icons were added as badges to our Drop pages. I also proposed adding text to the product imagery to identify a product with digital/physical available and one with just the digital. Because it's a new type of product, I wanted to ensure users fully understood what they are purchasing. And to further drive the point home, I added a banner to the Edition Details pages that explicitly tells you when the edition's physical collectible has been claimed.</p>
+  <p class="fade-in-element">To address these concerns, I first designed two icons representing a Physical-Digital product type. The first was an icon where the physical edition is still claimable by a future owner of the digital edition. The second was an icon where that physical has already been claimed. These icons were added as badges to our Drop pages. I also proposed adding text to the product imagery to identify a product with digital/physical available and one with just the digital. Because it's a new type of product, I wanted to ensure users fully understood what they are purchasing. And to further drive the point home, I added a banner to the Edition Details pages that explicitly tells you when the edition's physical collectible has been claimed.</p>
   
-  <p>I then wireframed multiple checkout flows that allowed users to purchase the product from a primary sale, claim the physical version of the product later, and finally a unified flow where users would claim the physical at checkout, as this would be our first iteration to avoid over-engineering solutions during our beta testing. I collaborated with product management to design and adjust these flows and ensure they encapsulated both technical and partnership requirements.</p>
+  <p class="fade-in-element">I then wireframed multiple checkout flows that allowed users to purchase the product from a primary sale, claim the physical version of the product later, and finally a unified flow where users would claim the physical at checkout, as this would be our first iteration to avoid over-engineering solutions during our beta testing. I collaborated with product management to design and adjust these flows and ensure they encapsulated both technical and partnership requirements.</p>
 
-  <p>From there, I finalized the prototype, shared it with the engineering team and handed it off to our front-end engineer to begin implementing the changes.</p>
+  <p class="fade-in-element">From there, I finalized the prototype, shared it with the engineering team and handed it off to our front-end engineer to begin implementing the changes.</p>
 </div>
