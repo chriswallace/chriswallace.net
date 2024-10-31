@@ -72,20 +72,11 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <p>Web3 withdrawal and deposit of digital collectibles between Candy and self-custody wallets.</p>
         </div>
         <div class="item fade-in-element">
-            <div class="zoom-container">
-                <div class="zoomable">
-                    <div class="video-player">
-                        <video id="portfolioVideo" width="100%" controls muted playsinline autoplay loop loading="lazy">
-                            <source src="/assets/video/pendulum-app.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                </div>
-            </div>
-            <h3><a href="https://www.figma.com/proto/Ef4V9oBQibbfKvqDCmjCfn/pendulum-wallet?page-id=0%3A1&type=design&node-id=1-2&viewport=265%2C605%2C0.11&t=iqJaP7tzaqV31XnT-9&scaling=scale-down&starting-point-node-id=1%3A2&show-proto-sidebar=1" target="_blank">Pendulum Crypto Wallet (iOS App)</a></h3>
-            <p>Role: Branding, Product Design, Figma Prototyping</p>
-            <p>Year: 2024</p>
-            <p>Pendulum is a conceptual crypto wallet prototype integrating social and digital collectible features, aiming to address the current ecosystem's shortcomings in these areas.</p>
+            <a class="mb-2 inline-block" href="/portfolio/pendulum-crypto-wallet/">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-image" alt="" loading="lazy">
+            </a>
+            <h3><a href="/portfolio/pendulum-crypto-wallet/" target="_blank">Pendulum Crypto Wallet (iOS App)</a></h3>
+            <p>Pendulum is a crypto wallet concept with social and digital collectible features.</p>
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">
