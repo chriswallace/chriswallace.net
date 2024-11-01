@@ -39,12 +39,10 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
 
   <p class="fade-in-element">And finally, I created a series of prototypes in Figma to demonstrate how each of these features might work. These prototypes help me identify issues within flows and the various interfaces as I start to understand how users might receive each of these features.</p>
 
-  <div class="zoomable max-w-2xl">
-    <div class="video-player">
-      <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy" class="fade-in-element rounded-sm">
-          <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-app.mp4" type="video/mp4">
-          Your browser does not support HTML5 video.
-      </video>
-    </div>
+  <div class="max-w-4xl">
+    <video id="portfolioVideo" data-type="video" width="100%" loading="lazy" class="fade-in-element rounded-sm" poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/demo-workflows.mov/ik-video.mp4/ik-thumbnail.jpg?updatedAt=1730426417205" controls autoplay playsinline loop muted>
+        <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/demo-workflows.mov/ik-video.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
   </div>
 </div>
