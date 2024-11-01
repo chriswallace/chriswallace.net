@@ -566,6 +566,24 @@ video {
   }
 }
 
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .container {
+    max-width: 2560px;
+  }
+}
+
+@media (min-width: 2940px) {
+  .container {
+    max-width: 2940px;
+  }
+}
+
 .prose {
   color: var(--tw-prose-body);
   max-width: 65ch;
@@ -1367,12 +1385,12 @@ video {
   display: none;
 }
 
-.aspect-square {
-  aspect-ratio: 1 / 1;
+.aspect-\[9\/12\] {
+  aspect-ratio: 9/12;
 }
 
-.h-\[75vh\] {
-  height: 75vh;
+.aspect-square {
+  aspect-ratio: 1 / 1;
 }
 
 .h-auto {
@@ -1571,6 +1589,12 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(0px * var(--tw-space-x-reverse));
   margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -1777,6 +1801,10 @@ video {
 
 .pl-4 {
   padding-left: 1rem;
+}
+
+.pl-5 {
+  padding-left: 1.25rem;
 }
 
 .pt-\[4px\] {
@@ -2716,6 +2744,10 @@ body.meetChris {
     margin-bottom: 3rem;
   }
 
+  .sm\:aspect-\[16\/9\] {
+    aspect-ratio: 16/9;
+  }
+
   .sm\:w-\[300px\] {
     width: 300px;
   }
@@ -2808,5 +2840,11 @@ body.meetChris {
 
   .xl\:w-\[680px\] {
     width: 680px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:aspect-\[21\/9\] {
+    aspect-ratio: 21/9;
   }
 }

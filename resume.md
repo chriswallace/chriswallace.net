@@ -2,7 +2,7 @@
 layout: page
 title: Résumé
 permalink: /resume/
-description: Two-time Emmy-nominated product design leader with 18+ years across IC, management and and executive-level roles. I create impactful digital experiences for the likes of Google, Microsoft, Facebook, and Starbucks. Currently leading product design at Candy Digital.
+description: Two-time Emmy-nominated design leader with 20 years of experience with 11+ years managing designers/design directors. Deep experience in UX/UI design, design prototyping (both in Figma and code), design systems, cross-functional collaboration and communicating with executive-level stakeholders.
 thumbnail: /assets/images/thumbs/resume.png
 ---
 
@@ -17,7 +17,7 @@ thumbnail: /assets/images/thumbs/resume.png
   </div>
 
   <div itemscope itemtype="http://schema.org/Person">
-  <p itemprop="description" class="fade-in-element sub-heading">Two-time Emmy-nominated product design leader with 20 years of design experience with 11+ years managing designers/design directors. Deep experience in UX/UI design, design prototyping (both in Figma and code), design systems, cross-functional collaboration and communicating with executive-level stakeholders.</p>
+  <p itemprop="description" class="fade-in-element sub-heading">Two-time Emmy-nominated design leader with 20 years of experience with 11+ years managing designers/design directors. Deep experience in UX/UI design, design prototyping (both in Figma and code), design systems, cross-functional collaboration and communicating with executive-level stakeholders.</p>
 
   <h2 class="fade-in-element mt-12">Work Experience</h2>
 
@@ -29,7 +29,13 @@ thumbnail: /assets/images/thumbs/resume.png
         <div class="time-period" itemprop="worksFor">Mar 2024 - Oct 2024</div>
       </div>
       <div class="description fade-in-element">
-        <p>Leading product design across Candy's web application/marketplace. My role encompasses product strategy, user experience, UI design, and front-end engineering. I collaborate directly with creative, product management, and engineering teams to drive new features and products for partners like MLB and DC Comics.</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Released and maintained a design system to improve efficiency in design and React/Next.js</li>
+          <li>Designed and tested new features for digital collectible withdrawal and physical+digital purchases</li>
+          <li>Led an overhaul of the Candy website and marketplace experience to better educate users and improve the overall user experience</li>
+          <li>Partnered with stakeholders to align technical goals with product vision, driving user-centered design and measurable outcomes</li>
+          <li>Created product prototypes in SvelteKit including an interactive comic book reader</li>
+        </ul>
       </div>
     </div>
     <div class="job resume-item" itemprop="employee">
@@ -39,7 +45,11 @@ thumbnail: /assets/images/thumbs/resume.png
         <div class="time-period" itemprop="worksFor">Apr 2021 - Mar 2024</div>
       </div>
       <div class="description fade-in-element">
-        <p>Founded a bootstrapped decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles. Built and managed a team of artists, engineers, and creative production specialists. Led a range of award-winning creative projects and drove multi-million dollar revenue within the first six months.</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Founded a decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles</li>
+          <li>Built and managed a team of artists, engineers, and production specialists</li>
+          <li>Drove multi-million dollar revenue within the first six months</li>
+        </ul>
       </div>
     </div>
     <div class="job resume-item" itemprop="employee">
@@ -49,8 +59,11 @@ thumbnail: /assets/images/thumbs/resume.png
         <div class="time-period" itemprop="worksFor">Aug 2017 - Sep 2021</div>
       </div>
       <div class="description fade-in-element">
-        <p>Scaled the design team and its capabilities at an international agency of 200+ across three continents and 16 countries. Managed 20 leaders and ICs across user experience and visual design. Established content design practice and implemented org-wide design strategy.</p>
-        <p>Clients: Facebook, Microsoft, Google, The Nobel Prize, Starbucks, The White House</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Scaled design team from 5 to 20 across three continents and 16 countries</li>
+          <li>Led a design organization with 20 directors and UX, visual, and content designers</li>
+          <li>Personally oversaw large digital transformation projects for the California DMV, Starbucks, Microsoft</li>
+        </ul>
       </div>
     </div>
     <div class="job resume-item" itemprop="employee">
@@ -60,8 +73,11 @@ thumbnail: /assets/images/thumbs/resume.png
         <div class="time-period" itemprop="worksFor">Dec 2009 - Aug 2017</div>
       </div>
       <div class="description fade-in-element">
-        <p>Founded a UX design studio crafting digital products and WordPress websites for medium-to-large clients.  Launched interactive second-screen apps for acclaimed TV series, earning two Emmy nominations in the process. Managed a compact yet effective team of full-time and contract designers, elevating website traffic for the product division to two million monthly visitors. Acquired by 10up in 2017.</p>
-        <p>Clients: The Walking Dead, Mad Men, Breaking Bad, SundanceTV, IFC Films, WEtv</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Led the design and UX for a range of digital publishing clients like The Next Web, AMC Networks</li>
+          <li>Received two Emmy Award nominations for second screen apps: The Walking Dead, Breaking Bad, Mad Men</li>
+          <li>Successfully acquired by 10up in 2017</li>
+        </ul>
       </div>
     </div>
     <div class="job resume-item" itemprop="employee">
@@ -71,7 +87,11 @@ thumbnail: /assets/images/thumbs/resume.png
         <div class="time-period" itemprop="worksFor">Aug 2007 - Dec 2009</div>
       </div>
       <div class="description fade-in-element">
-        <p>Developed front-end interfaces for B2B and B2C digital products, working closely with UX designers, project managers, and Java engineers. Also managed weekly deployments for enterprise.com and other customer-centric platforms, while providing QA support for monthly release cycles.</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Developed front-end interfaces for B2B and B2C digital products</li>
+          <li>Worked cross-functionally to provide design integration planning</li>
+          <li>Managed weekly deployments and visual QA for enterprise.com and other products</li>
+        </ul>
       </div>
     </div>
     <div class="job resume-item" itemprop="employee">
@@ -81,36 +101,29 @@ thumbnail: /assets/images/thumbs/resume.png
         <div class="time-period" itemprop="worksFor">May 2006 - Aug 2007</div>
       </div>
       <div class="description fade-in-element">
-        <p>Designed and developed front-end code for e-commerce storefronts for small businesses, maintaining stringent project timelines and adhering to client specifications.</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Designed and developed e-commerce shops for small businesses, focusing on user-friendly interfaces</li>
+          <li>Collaborated with clients daily to plan and design store templates, ensuring brand consistency</li>
+          <li>Worked closely with brand designers to implement new identities throughout client shops, enhancing brand recognition</li>
+        </ul>
       </div>
     </div>
   </div>
 
   <h2 class="fade-in-element">Skills</h2>
 
-  <ul class="fade-in-element skills-list" itemprop="knowsAbout">
-    <li>Product Design</li>
-    <li>Design Management</li>
-    <li>Brand Identity</li>
-    <li>Creative Direction</li>
-    <li>Design Systems</li>
-    <li>Component Libraries</li>
-    <li>Adobe Creative Suite</li>
-    <li>Figma</li>
-    <li>Visual Design</li>
-    <li>UX Design</li>
-    <li>Information Architecture</li>
-    <li>User Journey Mapping</li>
-    <li>Wireframes</li>
-    <li>User Research</li>
-    <li>Front-End Engineering</li>
-    <li>Javascript/Typescript</li>
-    <li>Storybook</li>
-    <li>Web3</li>
-    <li>SvelteKit</li>
-    <li>iOS/Android</li>
-    <li>Accessibility</li>
-  </ul>
+  <dl class="fade-in-element skills-list" itemprop="knowsAbout">
+    <dt>Design Systems</dt>
+    <dd>Storybook, Figma, component libraries, native apps</dd>
+    <dt>Languages</dt>
+    <dd>JavaScript, TypeScript, HTML5, CSS3, SCSS</dd>
+    <dt>Libraries/Frameworks</dt>
+    <dd>Svelte, SvelteKit, React, Next.js</dd>
+    <dt>Performance Tools</dt>
+    <dd>Vercel, ImageKit, Lighthouse</dd>
+    <dt>Additional</dt>
+    <dd>Web3, blockchain development, responsive design, accessibility best practices</dd>
+  </dl>
 
   <h2 class="fade-in-element">Education</h2>
 
@@ -141,10 +154,7 @@ thumbnail: /assets/images/thumbs/resume.png
 
   <h2 class="fade-in-element">Awards & Recognition</h2>
 
-  <ul class="fade-in-element" itemscope itemtype="http://schema.org/ItemList">
-    <li itemprop="itemListElement">Official Selection, Woodies: Origin, <a href="https://www.asff.co.uk/" target="_blank">Aesthetica Short Film Festival</a> (2023)</li>
-    <li itemprop="itemListElement">Most Valuable Gallery, Decuration Council II, <a href="https://deca.art/" target="_blank">Deca</a> (2023)</li>
-    <li itemprop="itemListElement">Outstanding Curation of a Tezos Collection Award, <a href="https://gallery.so" target="_blank">Gallery Awards</a> (2022)</li>
+  <ul itemscope itemtype="http://schema.org/ItemList" class="list-disc pl-5 space-y-2 fade-in-element">
     <li itemprop="itemListElement">Best Environmental Initiative from an NFT project, <a href="https://nft.nyc/" target="_blank">NFT NYC</a> (2022)</li>
     <li itemprop="itemListElement">Outstanding Creative Achievement in Interactive Media – Social TV Experience (Nominee), Mad Men: The Fan Cut, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2015)</li>
     <li itemprop="itemListElement">Outstanding Interactive Program (Nominee), The Walking Dead Story Sync, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2013)</li>
