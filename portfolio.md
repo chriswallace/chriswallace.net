@@ -8,8 +8,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
 
 <div class="content-container">
     <div class="fade-in-element text-center flex flex-col justify-center items-center p-12 rounded-md">
-        <blockquote class="max-w-3xl mx-auto">
-            <p class="text-center text-2xl font-semibold mb-0 max-w-none mb-2">"I <em>love</em> working with Chris. He has the rare mix of design instincts and technical ability that <span class="underline">makes him incredibly effective</span>."</p>
+        <blockquote class="max-w-4xl mx-auto">
+            <p class="text-center text-2xl md:text-3xl font-semibold mb-0 max-w-none mb-2">"I <em class="dark:text-white">love</em> working with Chris. He has the rare mix of design instincts and technical ability that <span class="underline dark:text-white">makes him incredibly effective</span>."</p>
             <p class="text-center text-sm max-w-none">— Mike Chabot, Director of Engineering @ Candy Digital</p>
         </blockquote>
     </div>
@@ -36,8 +36,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <p>A gradual, deliberate shift in design language and product features.</p>
         </div>
         <div class="fade-in-element min-h-[300px] bg-gray-200 dark:bg-[#202020] text-center flex flex-col justify-center items-center p-12 rounded-md">
-            <blockquote class="max-w-[24rem] mx-auto">
-                <p class="text-xl font-bold mb-0 dark:text-white">"Chris is <em>by far</em> the best designer <span class="underline underline-gray-400 mb-2">I've ever worked with</span>."</p>
+            <blockquote class="max-w-[30rem] mx-auto">
+                <p class="text-xl font-bold mb-0">"Chris is <em class="dark:text-white">by far</em> the best designer <span class="underline underline-gray-400 mb-2 dark:text-white">I've ever worked with</span>."</p>
                 <p class="text-xs">&mdash; Yaro Plashenko, Head of Product, Ecosystem & Product Partnerships @ Immutable</p>
             </blockquote>
         </div>
@@ -101,8 +101,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <p>This project involved designing a set of collectible cards with varying rarity levels, collaborating with artists to create engaging artwork and a minting experience that captivates users.</p>
         </div>
         <div class="fade-in-element min-h-[300px] bg-gray-200 dark:bg-[#202020] text-center flex flex-col justify-center items-center p-12 rounded-md">
-            <blockquote class="max-w-[24rem] mx-auto">
-                <p class="text-xl font-bold mb-0 dark:text-white">"If your goal is to work with someone who inspires, motivates and brings it day in and day out then look no further! His expertise <span class="underline underline-gray-400 mb-2">made me a stronger designer</span>."</p>
+            <blockquote class="max-w-[30rem] mx-auto">
+                <p class="text-xl font-bold mb-0">"If your goal is to work with someone who inspires, motivates and brings it day in and day out then look no further! His expertise <span class="underline underline-gray-400 mb-2 dark:text-white">made me a stronger designer</span>."</p>
                 <p class="text-xs">&mdash; Aaron Frebowitz, Design Director @ Candy Digital</p>
             </blockquote>
         </div>

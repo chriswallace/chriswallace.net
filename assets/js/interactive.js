@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                     factoidTl.to(factoid, { autoAlpha: 1 }) // Fade in the factoid
                         .fromTo(extendo,
-                            { fontVariationSettings: `"slnt" 0, "wdth" 2, "wght" 400` },
+                            { fontVariationSettings: `"slnt" 0, "wdth" 2, "wght" 140` },
                             { fontVariationSettings: `"slnt" -10, "wdth" 8, "wght" 600`, color: 'white', ease: 'power1.inOut' },
                             ">"); // Start the extendo animation after the factoid fades in
 

@@ -44,7 +44,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: sztos-variable, sans-serif;
+  font-family: cofo-sans-mono-variable, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -1185,10 +1185,6 @@ video {
   right: 2rem;
 }
 
-.right-\[-30px\] {
-  right: -30px;
-}
-
 .top-0 {
   top: 0px;
 }
@@ -1197,16 +1193,12 @@ video {
   top: 2rem;
 }
 
-.top-\[-88px\] {
-  top: -88px;
+.top-\[-24px\] {
+  top: -24px;
 }
 
 .-z-10 {
   z-index: -10;
-}
-
-.z-0 {
-  z-index: 0;
 }
 
 .z-10 {
@@ -1219,10 +1211,6 @@ video {
 
 .z-30 {
   z-index: 30;
-}
-
-.z-50 {
-  z-index: 50;
 }
 
 .order-first {
@@ -1266,6 +1254,11 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .my-auto {
@@ -1389,10 +1382,6 @@ video {
   aspect-ratio: 9/12;
 }
 
-.aspect-square {
-  aspect-ratio: 1 / 1;
-}
-
 .h-auto {
   height: auto;
 }
@@ -1411,10 +1400,6 @@ video {
 
 .min-h-\[300px\] {
   min-height: 300px;
-}
-
-.w-\[260px\] {
-  width: 260px;
 }
 
 .w-\[320px\] {
@@ -1449,8 +1434,8 @@ video {
   max-width: 1600px;
 }
 
-.max-w-\[24rem\] {
-  max-width: 24rem;
+.max-w-\[30rem\] {
+  max-width: 30rem;
 }
 
 .max-w-full {
@@ -1463,6 +1448,10 @@ video {
 
 .max-w-prose {
   max-width: 65ch;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .shrink {
@@ -1583,6 +1572,10 @@ video {
 
 .gap-3 {
   gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-6 {
@@ -1836,42 +1829,34 @@ video {
 }
 
 .font-sans {
-  font-family: sztos-variable, sans-serif;
+  font-family: cofo-sans-mono-variable, sans-serif;
 }
 
 .text-2xl {
-  font-size: 1.5rem;
-  line-height: 1.4;
+  font-size: 1.2rem;
+  line-height: 1.5;
   letter-spacing: 0;
-  font-weight: 300;
 }
 
 .text-6xl {
-  font-size: 3rem;
+  font-size: 3.75rem;
   line-height: 1;
-  letter-spacing: -0.0145em;
-  font-weight: 300;
 }
 
 .text-sm {
-  font-size: 0.92rem;
-  line-height: 1.75;
-  letter-spacing: 0;
-  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .text-xl {
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   letter-spacing: 0;
-  font-weight: 300;
 }
 
 .text-xs {
-  font-size: 0.85rem;
-  line-height: 1.75;
-  letter-spacing: 0;
-  font-weight: 300;
+  font-size: 0.83rem;
+  line-height: 1.5;
 }
 
 .font-bold {
@@ -2086,7 +2071,7 @@ body {
 
 body {
   font-family: "transducer-variable", sans-serif;
-  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 400;
+  font-variation-settings: "wght" 140;
   font-style: normal;
   line-height: 1;
   letter-spacing: -2px;
@@ -2115,7 +2100,7 @@ a:hover:after {
 }
 
 i {
-  font-variation-settings: "slnt" -7, "wdth" 0, "wght" 400;
+  font-variation-settings: "wght" 140;
   font-style: normal;
 }
 
@@ -2224,7 +2209,7 @@ i {
 }
 
 .factoids {
-  font-variation-settings: "slnt" 0, "wdth" 40, "wght" 300;
+  font-variation-settings: "wght" 300;
   line-height: 1;
 }
 
@@ -2258,7 +2243,7 @@ i {
   margin-bottom: 1rem;
   max-width: 12em;
   opacity: 0;
-  font-variation-settings: "slnt" 0, "wdth" 2, "wght" 400;
+  font-variation-settings: "wght" 140;
 }
 
 #meetChris {
@@ -2299,8 +2284,7 @@ i {
 }
 
 #meetChris .curtain-title {
-  font-family: "transducer-variable", sans-serif;
-  font-variation-settings: "slnt" 0, "wdth" 140, "wght" 900;
+  font-variation-settings: "wght" 140;
   font-style: normal;
 }
 
@@ -2339,7 +2323,7 @@ i {
 #meetChris .intro-to-chris,
 #meetChris .text-layer {
   z-index: 20;
-  font-variation-settings: "slnt" 0, "wdth" 25, "wght" 400;
+  font-variation-settings: "wght" 140;
 }
 
 #meetChris .intro-to-chris {
@@ -2385,12 +2369,12 @@ i {
 }
 
 #meetChris .text-layer {
-  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 560;
+  font-variation-settings: "wght" 560;
   line-height: 0.88;
 }
 
 #meetChris .bright {
-  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 730;
+  font-variation-settings: "wght" 140;
 }
 
 #fiveThings {
@@ -2576,7 +2560,7 @@ i {
 }
 
 #fiveThings .bright {
-  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 600;
+  font-variation-settings: "wght" 600;
 }
 
 .points {
@@ -2649,7 +2633,7 @@ i {
 }
 
 .points .number {
-  font-variation-settings: "slnt" -6, "wdth" 50, "wght" 600;
+  font-variation-settings: "wght" 600;
 }
 
 @media (min-width: 768px) {
@@ -2707,7 +2691,7 @@ body.meetChris {
 }
 
 #whyMe {
-  font-variation-settings: "slnt" 0, "wdth" 22, "wght" 450;
+  font-variation-settings: "wght" 140;
 }
 
 #whyMe div {
@@ -2727,6 +2711,16 @@ body.meetChris {
   .dark\:bg-\[\#202020\] {
     --tw-bg-opacity: 1;
     background-color: rgb(32 32 32 / var(--tw-bg-opacity));
+  }
+
+  .dark\:text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgb(109 109 109 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-primary-400 {
+    --tw-text-opacity: 1;
+    color: rgb(175 144 245 / var(--tw-text-opacity));
   }
 
   .dark\:text-white {
@@ -2752,24 +2746,12 @@ body.meetChris {
     aspect-ratio: 16/9;
   }
 
-  .sm\:w-\[300px\] {
-    width: 300px;
-  }
-
   .sm\:gap-4 {
     gap: 1rem;
   }
 }
 
 @media (min-width: 768px) {
-  .md\:right-\[-20px\] {
-    right: -20px;
-  }
-
-  .md\:top-\[-160px\] {
-    top: -160px;
-  }
-
   .md\:top-auto {
     top: auto;
   }
@@ -2778,12 +2760,12 @@ body.meetChris {
     margin-bottom: 3rem;
   }
 
-  .md\:mb-20 {
-    margin-bottom: 5rem;
+  .md\:mb-16 {
+    margin-bottom: 4rem;
   }
 
-  .md\:w-\[420px\] {
-    width: 420px;
+  .md\:mb-20 {
+    margin-bottom: 5rem;
   }
 
   .md\:w-full {
@@ -2810,40 +2792,17 @@ body.meetChris {
     padding-top: 0px;
   }
 
-  .md\:text-4xl {
-    font-size: 2rem;
-    line-height: 1.1;
+  .md\:text-3xl {
+    font-size: 1.35rem;
+    line-height: 1.5;
     letter-spacing: 0;
-    font-weight: 300;
   }
 }
 
 @media (min-width: 1024px) {
-  .lg\:right-\[10px\] {
-    right: 10px;
-  }
-
-  .lg\:top-\[-140px\] {
-    top: -140px;
-  }
-
-  .lg\:w-\[480px\] {
-    width: 480px;
-  }
-
   .lg\:hover\:bg-blue-500:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:top-\[-240px\] {
-    top: -240px;
-  }
-
-  .xl\:w-\[680px\] {
-    width: 680px;
   }
 }
 

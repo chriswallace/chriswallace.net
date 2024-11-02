@@ -1,29 +1,15 @@
 footer {
-  @apply pb-4 ml-0 mr-auto mt-16 pt-12 border-t-2 border-gray-200;
-}
+  @apply pb-4 ml-0 mr-auto mt-40;
 
-footer .logo {
-  @apply inline-block mr-2 w-[48px] h-[48px] m-0 p-0 text-gray-700;
-}
+  .logo {
+    @apply inline-block mr-2 w-[48px] h-[48px] m-0 p-0;
 
-footer .logo path {
-  @apply fill-current;
-}
+    path {
+      @apply fill-gray-500 dark:fill-gray-300;
+    }
 
-footer p {
-  @apply leading-normal text-gray-600 text-sm max-w-lg;
-}
-
-@media (prefers-color-scheme: dark) {
-  footer {
-    @apply border-gray-900;
-  }
-
-  footer .logo {
-    @apply text-gray-300;
-  }
-
-  footer p {
-    @apply text-gray-400;
+    p {
+      @apply leading-normal text-gray-600 text-xs max-w-lg dark:text-gray-400;
+    }
   }
 }

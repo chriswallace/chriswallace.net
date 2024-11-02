@@ -1,11 +1,10 @@
 html {
   font-size: var(--font-size-base);
-  line-height: 1.5;
 }
 
 body {
-  @apply font-normal text-base;
-  font-variation-settings: "wght" 240, "wdth" 170;
+  @apply font-normal text-base md:text-lg;
+  font-variation-settings: "wght" 140;
 }
 
 h1,
@@ -23,7 +22,7 @@ h3,
 h4,
 h5 {
   @apply text-gray-950;
-  font-variation-settings: "wght" 360, "wdth" 180;
+  font-variation-settings: "wght" 140;
 }
 
 h1,
@@ -35,7 +34,7 @@ h6,
 p,
 ul,
 ol {
-  @apply max-w-2xl;
+  @apply max-w-prose;
 }
 
 p,
@@ -51,17 +50,17 @@ ol {
 }
 
 h1 {
-  @apply text-3xl lg:text-4xl 2xl:text-6xl md:max-w-3xl 2xl:max-w-7xl mb-6;
+  @apply text-3xl 2xl:text-5xl md:max-w-3xl 2xl:max-w-7xl mb-6;
 }
 
 h2 {
-  @apply text-xl md:text-2xl 2xl:text-4xl mt-16 sm:mt-24 mb-6;
-  font-weight: 500;
+  @apply text-xl 2xl:text-3xl mt-16 sm:mt-24 mb-6;
+  font-variation-settings: "wght" 140;
 }
 
 h3 {
-  @apply text-base xl:text-lg mb-2 mt-6 sm:mt-12;
-  font-weight: 500;
+  @apply text-base 2xl:text-2xl mb-2 mt-6 sm:mt-12;
+  font-variation-settings: "wght" 240;
 }
 
 h4,
@@ -72,12 +71,12 @@ h6 {
 }
 
 .primary-heading {
-  @apply text-6xl md:text-4xl mt-12 mb-6 mr-0 lowercase;
-  font-variation-settings: "wght" 300, "wdth" 200;
+  @apply text-5xl mt-12 mb-12 -ml-3 mr-0 lowercase;
+  font-variation-settings: "wght" 140;
 }
 
 .primary-heading:before {
-  @apply inline;
+  @apply inline-block mr-[-0.5em];
   content: "/";
 }
 
@@ -86,7 +85,7 @@ h6 {
 }
 
 .sub-heading {
-  @apply text-lg md:leading-7 text-gray-500 mb-12 md:mb-16;
+  @apply text-2xl text-gray-500 mb-12 md:mb-16 max-w-3xl;
 }
 
 .sub-heading-curated {

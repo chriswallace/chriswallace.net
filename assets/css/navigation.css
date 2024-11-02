@@ -3,31 +3,27 @@
 }
 
 .menu-button {
-  @apply relative align-top w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.75)] md:h-[var(--navbar-width)] mx-auto bg-primary-800 md:bg-white md:border-b md:border-b-primary-200 hover:bg-primary-50 md:hover:border-b-primary-300;
+  @apply relative align-top w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.75)] md:h-[var(--navbar-width)] mx-auto bg-gray-200 dark:bg-gray-950 hover:md:bg-primary-600;
 
   .open-menu & {
-    @apply bg-white;
+    @apply bg-transparent;
   }
 
   &:hover i {
     &:before,
     &:after {
-      @apply bg-primary-600;
+      @apply bg-gray-900 dark:bg-white;
     }
   }
 }
 
 .menu-button i {
-  @apply block relative mx-auto h-4 w-[55%];
+  @apply block relative mx-auto h-2 w-[35%];
   transition: transform 100ms ease-in-out;
 
   &:before,
   &:after {
-    @apply block overflow-hidden bg-white md:bg-primary-600 w-full;
-    height: 2px;
-    position: absolute;
-    top: 50%;
-    content: "";
+    @apply block overflow-hidden bg-gray-600 md:bg-primary-600 dark:md:bg-white w-full h-[2px] absolute top-[50%] content-[""];
     transition: transform 100ms ease-in-out, backgroundColor 100ms ease-in-out;
   }
 
@@ -44,11 +40,11 @@
   }
 
   .open-menu &:before {
-    @apply -rotate-45 translate-y-2/4 bg-primary-600;
+    @apply -rotate-45 translate-y-2/4 bg-gray-400 dark:bg-white;
   }
 
   .open-menu &:after {
-    @apply rotate-45 translate-y-2/4 bg-primary-600;
+    @apply rotate-45 translate-y-2/4 bg-gray-400 dark:bg-white;
   }
 }
 
@@ -57,7 +53,7 @@
 }
 
 .navigation .logo {
-  @apply block w-[42px] h-auto my-0 mx-auto p-0 text-primary-500 transition-all duration-150 ease-in-out;
+  @apply block w-[42px] h-auto my-0 mx-auto p-0 text-primary-500 dark:text-primary-500 dark:hover:text-primary-400 transition-all duration-150 ease-in-out;
 }
 
 .navigation .logo path {
@@ -69,15 +65,15 @@
 }
 
 .branding {
-  @apply order-1 md:order-2 w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] shrink md:h-screen md:bg-white relative;
+  @apply order-1 md:order-2 w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] shrink md:h-screen relative;
 
   .open-menu & {
-    @apply cursor-pointer bg-white;
+    @apply cursor-pointer bg-gray-200 dark:bg-gray-950 border-r md:border-l border-gray-300 dark:border-gray-900;
   }
 }
 
 .menu {
-  @apply order-2 md:order-1 md:h-screen bg-gradient-to-r from-primary-200 from-0% to-primary-100 to-10% md:bg-gradient-to-r md:from-primary-100 md:from-90% md:to-primary-200 md:to-100% grow;
+  @apply order-2 md:order-1 md:h-screen grow bg-gray-200 dark:bg-gray-950;
 
   & ul {
     @apply w-[220px];
@@ -85,8 +81,8 @@
 }
 
 .menu a {
-  @apply p-4 py-6 md:py-6 block font-normal capitalize leading-none no-underline decoration-2 text-primary-800 border-b border-primary-300 hover:bg-primary-700 hover:text-white;
-  font-variation-settings: "wght" 320, "wdth" 170;
+  @apply p-4 py-6 md:py-6 block font-normal capitalize leading-none no-underline decoration-2 text-primary-800 dark:text-white border-b border-gray-300 dark:border-gray-900  dark:bg-gray-950 hover:bg-gray-100 dark:hover:bg-primary-600;
+  font-variation-settings: "wght" 140;
 }
 
 .site-title {
@@ -95,13 +91,8 @@
   .open-menu & {
     @apply bottom-2 md:bottom-0 md:left-0;
   }
+
   svg {
     @apply w-[calc(var(--navbar-width)/2*.75)] md:w-[calc(var(--navbar-width)/2)] h-[calc(var(--navbar-width)*.66)] mx-auto;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .navigation .logo {
-    @apply text-primary-500 hover:text-primary-400;
   }
 }

@@ -1,12 +1,4 @@
 :root {
-  --font-size-base: 14px;
+  --font-size-base: 16px;
   --navbar-width: 80px;
-
-  @media screen and (min-width: 1024px) {
-    --font-size-base: 16px;
-  }
-
-    @media screen and (min-width: 1200px) {
-    --font-size-base: 18px;
-  }
 }

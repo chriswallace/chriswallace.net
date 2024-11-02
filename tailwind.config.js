@@ -24,97 +24,70 @@ module.exports = {
         x: "x mandatory",
       },
       fontFamily: {
-        sans: ["sztos-variable", "sans-serif"],
+        sans: ["cofo-sans-mono-variable", "sans-serif"],
       },
       fontSize: {
         xs: [
-          "0.85rem",
+          "0.83rem",
           {
-            lineHeight: "1.75",
-            letterSpacing: "0",
-            fontWeight: "300",
+            lineHeight: "1.5",
           },
         ],
         sm: [
-          "0.92rem",
+          "0.9rem",
           {
-            lineHeight: "1.75",
-            letterSpacing: "0",
-            fontWeight: "300",
+            lineHeight: "1.5",
           },
         ],
         base: [
-          "1.1rem",
+          "1rem",
           {
-            lineHeight: "1.65",
+            lineHeight: "1.5",
             letterSpacing: "0",
-            fontWeight: "300",
           },
         ],
         lg: [
-          "1.2rem",
+          "1.04rem",
           {
-            lineHeight: "1.65",
+            lineHeight: "1.5",
             letterSpacing: "0",
-            fontWeight: "300",
           },
         ],
         xl: [
+          "1.1rem",
+          {
+            lineHeight: "1.5",
+            letterSpacing: "0",
+          },
+        ],
+        "2xl": [
+          "1.2rem",
+          {
+            lineHeight: "1.5",
+            letterSpacing: "0",
+          },
+        ],
+        "3xl": [
           "1.35rem",
           {
             lineHeight: "1.5",
             letterSpacing: "0",
-            fontWeight: "300",
-          },
-        ],
-        "2xl": [
-          "1.5rem",
-          {
-            lineHeight: "1.4",
-            letterSpacing: "0",
-            fontWeight: "300",
-          },
-        ],
-        "3xl": [
-          "1.6rem",
-          {
-            lineHeight: "1.2",
-            letterSpacing: "0",
-            fontWeight: "300",
           },
         ],
         "4xl": [
-          "2rem",
+          "1.5rem",
           {
-            lineHeight: "1.1",
+            lineHeight: "1.5",
             letterSpacing: "0",
-            fontWeight: "300",
           },
         ],
         "5xl": [
           "2.4rem",
           {
-            lineHeight: "1.1",
+            lineHeight: "1.5",
             letterSpacing: "0",
-            fontWeight: "300",
           },
-        ],
-        "6xl": [
-          "3rem",
-          {
-            lineHeight: "1",
-            letterSpacing: "-0.0145em",
-            fontWeight: "300",
-          },
-        ],
-        "7xl": [
-          "4rem",
-          {
-            lineHeight: "0.96",
-            letterSpacing: "-0.0145em",
-            fontWeight: "300",
-          },
-        ],
+        ]
       },
       colors: {
         gray: {

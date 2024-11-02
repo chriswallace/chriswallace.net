@@ -26,7 +26,7 @@ article {
 }
 
 .ui-navbar {
-  @apply w-[calc(220px+var(--navbar-width)*.75)] md:w-[calc(220px+var(--navbar-width))] fixed left-auto md:left-0 right-0 md:right-auto top-0 md:h-full md:bg-white z-40 overflow-x-hidden transform translate-x-[220px] md:-translate-x-[220px] transition-transform duration-200 ease-in-out;
+  @apply w-[calc(220px+var(--navbar-width)*.75)] md:w-[calc(220px+var(--navbar-width))] fixed left-auto md:left-0 right-0 md:right-auto top-0 md:h-full md:bg-gray-200 dark:md:bg-gray-950 z-40 overflow-x-hidden transform translate-x-[220px] md:-translate-x-[220px] transition-transform duration-200 ease-in-out;
 
   .open-menu & {
     @apply translate-x-0;
@@ -42,7 +42,7 @@ article {
   }
 
   .content-container {
-    @apply mx-[16px] md:mx-[60px] md:ml-[calc(60px+var(--navbar-width))];
+    @apply mx-[16px] md:mx-[32px] md:ml-[calc(32px+var(--navbar-width))];
   }
 
   .content-container-wo {
@@ -59,7 +59,7 @@ article {
   }
 
   .site-logo {
-    @apply ml-[24px] md:ml-[60px] h-[52px] block md:hidden text-primary-700 my-[2rem];
+    @apply ml-[24px] md:ml-[60px] h-[52px] block md:hidden text-primary-700 my-[.45rem];
 
     svg {
       @apply block;
@@ -78,18 +78,7 @@ article {
 /* Home Page */
 
 .home-title {
-  @apply text-6xl lg:text-[4.8rem] mt-4 mb-0 uppercase;
-
-  span {
-    @apply block;
-  }
-}
-
-@media (max-width: 640px) {
-  .home-title {
-    @apply text-7xl;
-    font-variation-settings: "wght" 500, "wdth" 140;
-  }
+  @apply text-4xl md:text-5xl mb-0 uppercase;
 }
 
 .open-to-work {
@@ -98,25 +87,25 @@ article {
   .badge {
     @apply uppercase sm:mb-0 px-8 py-3 inline-block relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs whitespace-nowrap no-underline hover:underline;
     box-shadow: inset 0px -6px 0 -3px rgba(50, 20, 97, 0.4);
-    font-variation-settings: "wght" 500, "wdth" 200;
+    font-variation-settings: "wght" 140;
   }
 
   p {
     @apply m-0 p-0 sm:pl-3 inline-block grow leading-snug;
-    font-variation-settings: "wght" 200, "wdth" 200;
+    font-variation-settings: "wght" 140;
 
     strong {
       @apply text-black mr-2 md:mr-4;
-      font-variation-settings: "wght" 400, "wdth" 200;
+      font-variation-settings: "wght" 140;
     }
   }
 
   @media screen and (max-width: 640px) {
     p {
-      font-variation-settings: "wght" 300, "wdth" 140;
+      font-variation-settings: "wght" 300;
 
       strong {
-        font-variation-settings: "wght" 500, "wdth" 140;
+        font-variation-settings: "wght" 140;
       }
     }
   }
@@ -238,10 +227,14 @@ article {
   }
 }
 
+.typewriter {
+  @apply block sm:inline min-h-[2em];
+}
+
 /* Resume Page */
 
 .download-resume {
-  @apply mb-12 relative;
+  @apply mb-6 relative;
 }
 
 .feather {
