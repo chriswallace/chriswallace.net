@@ -2794,8 +2794,8 @@ body.meetChris {
     margin-bottom: 5rem;
   }
 
-  .md\:mb-8 {
-    margin-bottom: 2rem;
+  .md\:mb-4 {
+    margin-bottom: 1rem;
   }
 
   .md\:inline {
@@ -2837,7 +2837,7 @@ body.meetChris {
   }
 
   .md\:text-4xl {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     line-height: 2.25rem;
     letter-spacing: 0;
   }

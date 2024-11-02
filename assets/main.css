@@ -2214,7 +2214,7 @@ h1 {
 @media (min-width: 1536px) {
   h1 {
     max-width: 80rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 3rem;
     letter-spacing: 0;
   }
@@ -2333,7 +2333,7 @@ h6 {
   margin-bottom: 3rem;
   margin-left: -0.75rem;
   margin-right: 0px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 3rem;
   letter-spacing: 0;
   text-transform: lowercase;
@@ -4736,8 +4736,8 @@ article {
 .home-title {
   margin-bottom: 3rem;
   min-height: 4em;
-  max-width: 80rem;
-  font-size: 2rem;
+  max-width: 64rem;
+  font-size: 1.5rem;
   line-height: 3rem;
   letter-spacing: 0;
 }
@@ -4750,7 +4750,7 @@ article {
 
 @media (min-width: 768px) {
   .home-title {
-    font-size: 4.5rem;
+    font-size: 3.75rem;
     line-height: 1;
   }
 }
@@ -5638,8 +5638,8 @@ video::-webkit-media-controls {
     margin-bottom: 5rem;
   }
 
-  .md\:mb-8 {
-    margin-bottom: 2rem;
+  .md\:mb-4 {
+    margin-bottom: 1rem;
   }
 
   .md\:inline {
@@ -5681,7 +5681,7 @@ video::-webkit-media-controls {
   }
 
   .md\:text-4xl {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     line-height: 2.25rem;
     letter-spacing: 0;
   }

@@ -15,7 +15,7 @@ description: Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm C
     <span class="dark:text-gray-500">]</span>
   </div>
   
-  <div class="text-xl md:text-4xl dark:text-gray-300 mb-3 md:mb-8 fade-in-element"><span class="inline-block animate-[wave_5s_ease-in-out_infinite]">👋</span> Hello! I'm Chris Wallace.</div>
+  <div class="text-xl md:text-4xl dark:text-gray-300 mb-3 md:mb-4 fade-in-element"><span class="inline-block animate-[wave_5s_ease-in-out_infinite]">👋</span> Hello! I'm Chris Wallace.</div>
   <h1 class="home-title fade-in-element">
     <span class="typewriter uppercase" id="typewriter">I'm a designer who codes and builds startups.</span>
   </h1>

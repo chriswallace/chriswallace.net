@@ -74,14 +74,14 @@ module.exports = {
           },
         ],
         "4xl": [
-          "1.5rem",
+          "1.35rem",
           {
             lineHeight: "2.25rem",
             letterSpacing: "0",
           },
         ],
         "5xl": [
-          "2rem",
+          "1.5rem",
           {
             lineHeight: "3rem",
             letterSpacing: "0",
