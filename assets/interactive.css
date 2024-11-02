@@ -2722,24 +2722,9 @@ body.meetChris {
     background-color: rgb(32 32 32 / var(--tw-bg-opacity));
   }
 
-  .dark\:text-gray-300 {
+  .dark\:text-primary-500 {
     --tw-text-opacity: 1;
-    color: rgb(176 176 176 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-gray-400 {
-    --tw-text-opacity: 1;
-    color: rgb(145 145 145 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-gray-500 {
-    --tw-text-opacity: 1;
-    color: rgb(109 109 109 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-primary-400 {
-    --tw-text-opacity: 1;
-    color: rgb(175 144 245 / var(--tw-text-opacity));
+    color: rgb(244 92 22 / var(--tw-text-opacity));
   }
 
   .dark\:text-white {
@@ -2793,14 +2778,6 @@ body.meetChris {
 
   .md\:mb-20 {
     margin-bottom: 5rem;
-  }
-
-  .md\:mb-4 {
-    margin-bottom: 1rem;
-  }
-
-  .md\:inline {
-    display: inline;
   }
 
   .md\:w-full {

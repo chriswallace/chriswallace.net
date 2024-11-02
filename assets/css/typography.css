@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  @apply font-normal text-base md:text-lg dark:text-white;
+  @apply font-normal text-base md:text-lg text-gray-500 dark:text-gray-300;
   font-variation-settings: "wght" 140;
 }
 
@@ -65,7 +65,9 @@ h6 {
 }
 
 a {
-  @apply dark:text-white dark:decoration-primary-200 dark:decoration-solid dark:decoration-4 dark:hover:decoration-white dark:hover:text-white;
+  @apply dark:text-gray-200 dark:decoration-primary-500 dark:decoration-solid dark:hover:decoration-white dark:hover:text-white underline underline-offset-4 decoration-solid decoration-2 decoration-primary-300 hover:decoration-primary-700;
+  text-decoration-skip-ink: auto;
+  font-variation-settings: "wght" 480;
 }
 
 .primary-heading {
@@ -83,11 +85,12 @@ a {
 }
 
 .sub-heading {
-  @apply text-xl md:text-2xl text-gray-500 mb-12 md:mb-16 max-w-3xl dark:text-gray-100;
+  @apply text-xl md:text-3xl mb-12 md:mb-16 max-w-3xl;
+  line-height: 1.32;
 }
 
 .sub-heading-curated {
-  @apply text-lg md:text-xl text-gray-500 -mt-1 mb-12 relative dark:text-gray-300;
+  @apply text-xl md:text-3xl -mt-1 mb-12 relative;
 }
 
 article {
@@ -107,7 +110,7 @@ caption {
 }
 
 hr {
-  @apply w-[40px] border-primary-400 border-t-4 h-[0] pb-0 dark:border-primary-700;
+  @apply w-[40px] border-primary-500 border-t-4 h-[0] pb-0;
 }
 
 p + hr {

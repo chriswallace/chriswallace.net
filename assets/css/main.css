@@ -78,7 +78,7 @@ article {
 /* Home Page */
 
 .home-title {
-  @apply text-5xl md:text-6xl mb-12 min-h-[4em] sm:min-h-[3em] max-w-5xl;
+  @apply text-6xl md:text-7xl mb-12 min-h-[6em] sm:min-h-[3em];
   line-height: 1.2;
 }
 
