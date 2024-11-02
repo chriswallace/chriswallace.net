@@ -59,10 +59,10 @@ article {
   }
 
   .site-logo {
-    @apply ml-[24px] md:ml-[60px] h-[52px] block md:hidden text-primary-700 my-[.45rem];
+    @apply ml-[16px] md:ml-[60px] mb-8 relative top-[-3px] block md:hidden text-primary-600 my-[.45rem];
 
     svg {
-      @apply block;
+      @apply block max-w-[42px];
     }
 
     path {
@@ -71,7 +71,7 @@ article {
   }
 
   .logo {
-    @apply text-primary-700;
+    @apply text-primary-600;
   }
 }
 

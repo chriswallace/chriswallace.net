@@ -4691,21 +4691,27 @@ article {
     opacity: 0.7;
   }
   .site-logo {
+    position: relative;
+  }
+  .site-logo {
+    top: -3px;
+  }
+  .site-logo {
     margin-top: .45rem;
     margin-bottom: .45rem;
   }
   .site-logo {
-    margin-left: 24px;
+    margin-left: 16px;
+  }
+  .site-logo {
+    margin-bottom: 2rem;
   }
   .site-logo {
     display: block;
   }
   .site-logo {
-    height: 52px;
-  }
-  .site-logo {
     --tw-text-opacity: 1;
-    color: rgb(118 48 209 / var(--tw-text-opacity));
+    color: rgb(133 66 229 / var(--tw-text-opacity));
   }
   @media (min-width: 768px) {
     .site-logo {
@@ -4721,13 +4727,16 @@ article {
     svg {
       display: block;
     }
+    svg {
+      max-width: 42px;
+    }
     path {
       fill: currentColor;
     }
   }
   .logo {
     --tw-text-opacity: 1;
-    color: rgb(118 48 209 / var(--tw-text-opacity));
+    color: rgb(133 66 229 / var(--tw-text-opacity));
   }
 }
 
