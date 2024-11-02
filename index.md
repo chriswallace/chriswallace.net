@@ -5,7 +5,7 @@ description: Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm C
 ---
 
 <div class="content-container">
-  <div class="fade-in-element mb-16 flex gap-4 max-w-7xl text-center md:text-left">
+  <div class="fade-in-element mb-16 flex gap-4 max-w-7xl text-center md:text-left text-xs">
     <span class="dark:text-gray-500">[</span> 
     <span class="grow sm:flex sm:justify-between gap-4">
       <strong class="dark:text-primary-400 whitespace-nowrap">NOV<span class="hidden md:inline"> 20</span>24</strong> 
