@@ -30,61 +30,61 @@ module.exports = {
         xs: [
           "0.83rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "2",
           },
         ],
         sm: [
           "0.9rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "2",
           },
         ],
         base: [
           "1rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "2",
             letterSpacing: "0",
           },
         ],
         lg: [
           "1.04rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "1.75",
             letterSpacing: "0",
           },
         ],
         xl: [
           "1.1rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "1.75",
             letterSpacing: "0",
           },
         ],
         "2xl": [
           "1.2rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "1.75",
             letterSpacing: "0",
           },
         ],
         "3xl": [
           "1.35rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "1.32",
             letterSpacing: "0",
           },
         ],
         "4xl": [
           "1.5rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "1.25",
             letterSpacing: "0",
           },
         ],
         "5xl": [
           "2.4rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "1.25",
             letterSpacing: "0",
           },
         ]

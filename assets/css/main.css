@@ -78,7 +78,7 @@ article {
 /* Home Page */
 
 .home-title {
-  @apply text-4xl md:text-5xl mb-0 uppercase;
+  @apply text-5xl md:text-7xl mb-12 min-h-[4em] sm:min-h-[3em] max-w-7xl;
 }
 
 .open-to-work {
@@ -225,10 +225,6 @@ article {
       @apply text-black;
     }
   }
-}
-
-.typewriter {
-  @apply block sm:inline min-h-[2em];
 }
 
 /* Resume Page */

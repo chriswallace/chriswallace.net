@@ -1,19 +1,42 @@
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+@layer utilities {
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
-  100% {
-    transform: rotate(360deg);
-  }
-}
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
 
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
+    100% {
+      transform: translateX(-100%);
+    }
   }
 
-  100% {
-    transform: translateX(-100%);
+  @keyframes wave {
+    40% {
+      transform: rotate(0deg);
+    }
+    44% {
+      transform: rotate(-20deg);
+    }
+    48% {
+      transform: rotate(10deg);
+    }
+    52% {
+      transform: rotate(-10deg);
+    }
+    56% {
+      transform: rotate(5deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
   }
 }

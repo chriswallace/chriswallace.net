@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  @apply font-normal text-base md:text-lg;
+  @apply font-normal text-base md:text-lg dark:text-white;
   font-variation-settings: "wght" 140;
 }
 
@@ -21,7 +21,7 @@ h2,
 h3,
 h4,
 h5 {
-  @apply text-gray-950;
+  @apply text-gray-950 dark:text-white;
   font-variation-settings: "wght" 140;
 }
 
@@ -46,7 +46,7 @@ li {
 p,
 ul,
 ol {
-  @apply mb-12;
+  @apply mb-12 dark:text-gray-300;
 }
 
 h1 {
@@ -59,15 +59,19 @@ h2 {
 }
 
 h3 {
-  @apply text-base 2xl:text-2xl mb-2 mt-6 sm:mt-12;
+  @apply text-base 2xl:text-2xl mb-2 mt-6 sm:mt-12 dark:text-gray-200;
   font-variation-settings: "wght" 240;
 }
 
 h4,
 h5,
 h6 {
-  @apply text-lg pb-2 mt-6 sm:mt-12 mb-2;
+  @apply text-lg pb-2 mt-6 sm:mt-12 mb-2 dark:border-gray-200;
   font-weight: 500;
+}
+
+a {
+  @apply dark:text-white dark:decoration-primary-200 dark:decoration-solid dark:decoration-4 dark:hover:decoration-white dark:hover:text-white;
 }
 
 .primary-heading {
@@ -85,11 +89,11 @@ h6 {
 }
 
 .sub-heading {
-  @apply text-2xl text-gray-500 mb-12 md:mb-16 max-w-3xl;
+  @apply text-2xl text-gray-500 mb-12 md:mb-16 max-w-3xl dark:text-gray-300;
 }
 
 .sub-heading-curated {
-  @apply text-lg md:text-xl text-gray-500 -mt-1 mb-12 relative;
+  @apply text-lg md:text-xl text-gray-500 -mt-1 mb-12 relative dark:text-gray-300;
 }
 
 article {
@@ -105,60 +109,13 @@ article li {
 }
 
 caption {
-  @apply text-xs sm:text-base text-gray-900 my-2 mx-4 sm:my-4 block text-center;
+  @apply text-xs sm:text-base text-gray-900 my-2 mx-4 sm:my-4 block text-center dark:text-gray-300;
 }
 
 hr {
-  @apply w-[40px] border-primary-400 border-t-4 h-[0] pb-0;
+  @apply w-[40px] border-primary-400 border-t-4 h-[0] pb-0 dark:border-primary-700;
 }
 
 p + hr {
   @apply mt-0 mb-12;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    @apply text-white;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    @apply text-white;
-  }
-
-  h3 {
-    @apply text-gray-200;
-  }
-
-  h4,
-  h5,
-  h6 {
-    @apply border-gray-200;
-  }
-
-  p,
-  ul,
-  li {
-    @apply text-gray-300;
-  }
-
-  a {
-    @apply text-white decoration-primary-200 decoration-solid decoration-4 hover:decoration-white hover:text-white;
-  }
-
-  hr {
-    @apply border-primary-700;
-  }
-
-  caption {
-    @apply text-gray-300;
-  }
-
-  .sub-heading,
-  .sub-heading-curated {
-    @apply text-gray-300;
-  }
 }

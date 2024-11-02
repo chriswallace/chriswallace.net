@@ -4,31 +4,24 @@ title: Chris Wallace - Designer, Creative Director, and Front-End Engineer
 description: Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm Chris Wallace, an award-winning designer, creative director, and front-end engineer with over 15 years pioneering the future of digital experience.
 ---
 
-<div class="!mx-0 overflow-hidden max-w-[1600px] mb-6">
-
-  <div class="fade-in-element content-container mb-8 md:mb-16 flex gap-4 max-w-7xl">
-    <div class="dark:text-gray-500">[</div> 
-    <div class="grow flex justify-between gap-4">
-      <strong class="dark:text-primary-400 whitespace-nowrap">NOV 2024</strong> 
-      <span class="grow flex-1">Available for full-time roles or short-term contracts.</span>
-      <a class="whitespace-nowrap" href="/contact">Hire Me</a>
-    </div> 
-    <div class="dark:text-gray-500">]</div>
-  </div>
-
-  <div class="z-10 relative content-container">
-    <div>
-      <h1 class="home-title fade-in-element">
-        <span class="typewriter" id="typewriter">Senior Design Director</span> 
-      </h1>
-    </div>
-    <p class="my-4 fade-in-element max-w-3xl">Hello! I'm Chris Wallace, a two-time Emmy-nominated product design leader with over 20 years of experience, crafting innovative experiences for giants like MLB, DC Comics, The Walking Dead, Mad Men, Facebook, and Google.</p>
-    <p class="mb-8 fade-in-element max-w-3xl">
-      Not sure where to dive in? Check out my <a href="/bio">bio</a> or <a href="/portfolio">design portfolio</a>.
-    </p>
-  </div>
-</div>
 <div class="content-container">
+  <div class="fade-in-element mb-16 flex gap-4 max-w-7xl">
+    <span class="dark:text-gray-500">[</span> 
+    <span class="grow sm:flex sm:justify-between gap-4">
+      <strong class="dark:text-primary-400 whitespace-nowrap">NOV<span class="hidden md:inline"> 20</span>24</strong> 
+      <span class="grow dark:text-gray-400 sm:flex-1">Available for full-time roles or short-term contracts.</span>
+      <a class="whitespace-nowrap" href="/contact">Hire Me</a>
+    </span> 
+    <span class="dark:text-gray-500">]</span>
+  </div>
+  
+  <div class="text-xl md:text-4xl dark:text-gray-300 mb-6 md:mb-8 fade-in-element"><span class="inline-block animate-[wave_5_s_ease-in-out_infinite]">👋</span> Hello! I'm Chris Wallace.</div>
+  <h1 class="home-title fade-in-element">
+    <span class="typewriter uppercase" id="typewriter">I'm a designer who codes and builds startups.</span>
+  </h1>
+  
+  <p class="fade-in-element mt-12">Check out some of my <a href="/portfolio">latest work</a> from Candy Digital <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline text-gray-500 dark:text-white top-[-2px] relative"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
+
   <div class="portfolio-list max-w-7xl">
     <div class="item fade-in-element">
         <a class="mb-2 inline-block" href="/portfolio/candy-physical-digital-feature/">

@@ -1,63 +1,131 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     const titles = [
-      "designer who codes",
-      "2x emmy award nominated creative director",
-      "mediocre at overwatch",
-      "i did kick cancer's ass though",
-      "I'm a 20-year tech veteran",
-      "your favorite designer's favorite designer",
-      "dad to a texas a&m sophomore",
-      "prefer to work for money, plz gib me",
-      "yes, i launched an nft project",
-      "no, i'm not a millionaire",
-      "love working with startups",
-      "i'm a recovering agency exec",
-      "probably should get my first colonoscopy soon"
+      "Your favorite designer's favorite designer",
+      "2x Emmy Award-nominated Design Director",
+      "Probably too old for TikTok but too young for Facebook",
+      "Proud owner of a computer that once had a turbo button",
+      "The designer who peaked during web 2.0",
+      "Skeuomorphism will always be cool",
+      "Some say unicorns don't exist, but here we are",
+      "Veteran of the great browser wars of '98",
+      "That guy who launched an NFT project",
+      "Still waiting for those NFT millions to roll in",
+      "Proudly mediocre at Overwatch",
+      "Cancer survivor since age 20",
+      "Definitely not still using jQuery (maybe)",
+      "Old enough to remember table-based layouts",
+      "Twenty years deep in the tech industry",
+      "Back when Bootstrap was considered revolutionary",
+      "Proud parent of a Texas A&M sophomore",
+      "Professional purveyor of dad jokes",
+      "Will design for actual money, not exposure",
+      "Survived the dark days of IE6 support",
+      "Startup design specialist extraordinaire",
+      "Flash websites were pretty cool, actually",
+      "Reformed agency executive at your service",
+      "Probably due for that first colonoscopy soon"
     ];
 
     let currentTitleIndex = 0;
-    let scrambleSpeed = 45; // milliseconds
+    let scrambleSpeed = 50; // milliseconds
     let pauseDuration = 5000; // pause for 5 seconds before scrambling
     let isScrambling = false;
-    let charIndex = 0;
-    let scrambleTimeout = null; // Added to store the timeout ID
+    let unscrambledIndices = new Set();
+    let scrambleTimeout = null;
+    let isPaused = false;
 
     const typewriterElement = document.getElementById('typewriter');
-    const cursorElement = document.createElement('span');
-    cursorElement.className = 'cursor';
+
+    function createSpans(text) {
+      return text.split('').map((char, i) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.dataset.index = i;
+        span.dataset.char = char;
+        return span;
+      });
+    }
 
     function scrambleText() {
-      clearTimeout(scrambleTimeout); // Clear the previous timeout to prevent acceleration
+      if (isPaused) return;
+      
+      clearTimeout(scrambleTimeout);
+      
       if (!isScrambling) {
         isScrambling = true;
-        charIndex = 0;
-        scrambleTimeout = setTimeout(scrambleText, pauseDuration); // pause before starting scramble
+        unscrambledIndices.clear();
+        const spans = createSpans(titles[currentTitleIndex]);
+        typewriterElement.innerHTML = '';
+        spans.forEach(span => typewriterElement.appendChild(span));
+        scrambleTimeout = setTimeout(scrambleText, pauseDuration);
       } else {
-        let scrambledText = '';
-        for (let i = 0; i < titles[currentTitleIndex].length; i++) {
-          if (i < charIndex) {
-            scrambledText += titles[currentTitleIndex][i];
-          } else {
-            scrambledText += String.fromCharCode(Math.floor(Math.random() * (122 - 97 + 1)) + 97); // Random lowercase letter
+        const spans = Array.from(typewriterElement.children);
+        const remainingIndices = spans
+          .map((_, i) => i)
+          .filter(i => !unscrambledIndices.has(i));
+
+        if (remainingIndices.length > 0) {
+          // Randomly select 1-3 indices to unscramble
+          const numToUnscramble = Math.min(
+            Math.ceil(Math.random() * 3),
+            remainingIndices.length
+          );
+          
+          for (let i = 0; i < numToUnscramble; i++) {
+            const randomIndex = Math.floor(Math.random() * remainingIndices.length);
+            const indexToUnscramble = remainingIndices[randomIndex];
+            remainingIndices.splice(randomIndex, 1);
+            unscrambledIndices.add(indexToUnscramble);
           }
-        }
-        typewriterElement.textContent = scrambledText;
-        charIndex++;
-        if (charIndex > titles[currentTitleIndex].length) {
-          isScrambling = false;
-          currentTitleIndex = (currentTitleIndex + 1) % titles.length;
-          charIndex = 0; // Reset charIndex for the next title
-          if (currentTitleIndex === 0) { // Check if we've reached the end of the titles array
-            currentTitleIndex = 0; // Reset to the first title to start again
+
+          spans.forEach((span, i) => {
+            if (unscrambledIndices.has(i)) {
+              span.textContent = span.dataset.char;
+            } else if (span.dataset.char === ' ') {
+              span.textContent = ' ';
+            } else {
+              span.textContent = String.fromCharCode(
+                Math.floor(Math.random() * 26) + 97
+              );
+            }
+          });
+
+          if (unscrambledIndices.size === spans.length) {
+            isScrambling = false;
+            currentTitleIndex = (currentTitleIndex + 1) % titles.length;
+            scrambleTimeout = setTimeout(scrambleText, pauseDuration); // Add this line to restart the cycle
           }
         }
       }
 
-      if (isScrambling) {
+      if (isScrambling && !isPaused) {
         scrambleTimeout = setTimeout(scrambleText, scrambleSpeed);
       }
     }
+
+    // Create intersection observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          isPaused = false;
+          if (!scrambleTimeout) {
+            scrambleText();
+          }
+        } else {
+          isPaused = true;
+          if (scrambleTimeout) {
+            clearTimeout(scrambleTimeout);
+            scrambleTimeout = null;
+          }
+        }
+      });
+    }, {
+      threshold: 0.5 // Trigger when 50% of element is visible
+    });
+
+    // Start observing the typewriter element
+    observer.observe(typewriterElement);
   
     scrambleText();
 });
