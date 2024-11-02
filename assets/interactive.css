@@ -1456,8 +1456,8 @@ video {
   transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.animate-\[wave_5_s_ease-in-out_infinite\] {
-  animation: wave 5 s ease-in-out infinite;
+.animate-\[wave_5s_ease-in-out_infinite\] {
+  animation: wave 5s ease-in-out infinite;
 }
 
 .cursor-help {
@@ -1582,6 +1582,12 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -1829,8 +1835,8 @@ video {
 }
 
 .text-2xl {
-  font-size: 1.2rem;
-  line-height: 1.75;
+  font-size: 1.175rem;
+  line-height: 2rem;
   letter-spacing: 0;
 }
 
@@ -1841,18 +1847,18 @@ video {
 
 .text-sm {
   font-size: 0.9rem;
-  line-height: 2;
+  line-height: 1.5rem;
 }
 
 .text-xl {
   font-size: 1.1rem;
-  line-height: 1.75;
+  line-height: 1.5rem;
   letter-spacing: 0;
 }
 
 .text-xs {
-  font-size: 0.83rem;
-  line-height: 2;
+  font-size: 0.84rem;
+  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -2072,7 +2078,7 @@ body {
 
 body {
   font-family: "transducer-variable", sans-serif;
-  font-variation-settings: "wght" 140;
+  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 400;
   font-style: normal;
   line-height: 1;
   letter-spacing: -2px;
@@ -2101,7 +2107,7 @@ a:hover:after {
 }
 
 i {
-  font-variation-settings: "wght" 140;
+  font-variation-settings: "slnt" -7, "wdth" 0, "wght" 400;
   font-style: normal;
 }
 
@@ -2210,7 +2216,7 @@ i {
 }
 
 .factoids {
-  font-variation-settings: "wght" 300;
+  font-variation-settings: "slnt" 0, "wdth" 40, "wght" 300;
   line-height: 1;
 }
 
@@ -2244,7 +2250,7 @@ i {
   margin-bottom: 1rem;
   max-width: 12em;
   opacity: 0;
-  font-variation-settings: "wght" 140;
+  font-variation-settings: "slnt" 0, "wdth" 2, "wght" 400;
 }
 
 #meetChris {
@@ -2285,7 +2291,8 @@ i {
 }
 
 #meetChris .curtain-title {
-  font-variation-settings: "wght" 140;
+  font-family: "transducer-variable", sans-serif;
+  font-variation-settings: "slnt" 0, "wdth" 140, "wght" 900;
   font-style: normal;
 }
 
@@ -2324,7 +2331,7 @@ i {
 #meetChris .intro-to-chris,
 #meetChris .text-layer {
   z-index: 20;
-  font-variation-settings: "wght" 140;
+  font-variation-settings: "slnt" 0, "wdth" 25, "wght" 400;
 }
 
 #meetChris .intro-to-chris {
@@ -2370,12 +2377,12 @@ i {
 }
 
 #meetChris .text-layer {
-  font-variation-settings: "wght" 560;
+  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 560;
   line-height: 0.88;
 }
 
 #meetChris .bright {
-  font-variation-settings: "wght" 140;
+  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 730;
 }
 
 #fiveThings {
@@ -2561,7 +2568,7 @@ i {
 }
 
 #fiveThings .bright {
-  font-variation-settings: "wght" 600;
+  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 600;
 }
 
 .points {
@@ -2634,7 +2641,7 @@ i {
 }
 
 .points .number {
-  font-variation-settings: "wght" 600;
+  font-variation-settings: "slnt" -6, "wdth" 50, "wght" 600;
 }
 
 @media (min-width: 768px) {
@@ -2692,7 +2699,7 @@ body.meetChris {
 }
 
 #whyMe {
-  font-variation-settings: "wght" 140;
+  font-variation-settings: "slnt" 0, "wdth" 22, "wght" 450;
 }
 
 #whyMe div {
@@ -2819,15 +2826,19 @@ body.meetChris {
     padding-top: 0px;
   }
 
+  .md\:text-left {
+    text-align: left;
+  }
+
   .md\:text-3xl {
-    font-size: 1.35rem;
-    line-height: 1.32;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
     letter-spacing: 0;
   }
 
   .md\:text-4xl {
     font-size: 1.5rem;
-    line-height: 1.25;
+    line-height: 2.25rem;
     letter-spacing: 0;
   }
 }

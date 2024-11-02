@@ -28,63 +28,62 @@ module.exports = {
       },
       fontSize: {
         xs: [
-          "0.83rem",
+          "0.84rem",
           {
-            lineHeight: "2",
+            lineHeight: "1.5rem",
           },
         ],
         sm: [
           "0.9rem",
           {
-            lineHeight: "2",
+            lineHeight: "1.5rem",
           },
         ],
         base: [
           "1rem",
           {
-            lineHeight: "2",
+            lineHeight: "1.5rem",
             letterSpacing: "0",
           },
         ],
         lg: [
           "1.04rem",
           {
-            lineHeight: "1.75",
-            letterSpacing: "0",
+            lineHeight: "1.5rem",
           },
         ],
         xl: [
           "1.1rem",
           {
-            lineHeight: "1.75",
+            lineHeight: "1.5rem",
             letterSpacing: "0",
           },
         ],
         "2xl": [
-          "1.2rem",
+          "1.175rem",
           {
-            lineHeight: "1.75",
+            lineHeight: "2rem",
             letterSpacing: "0",
           },
         ],
         "3xl": [
-          "1.35rem",
+          "1.25rem",
           {
-            lineHeight: "1.32",
+            lineHeight: "2.25rem",
             letterSpacing: "0",
           },
         ],
         "4xl": [
           "1.5rem",
           {
-            lineHeight: "1.25",
+            lineHeight: "2.25rem",
             letterSpacing: "0",
           },
         ],
         "5xl": [
-          "2.4rem",
+          "2rem",
           {
-            lineHeight: "1.25",
+            lineHeight: "3rem",
             letterSpacing: "0",
           },
         ]

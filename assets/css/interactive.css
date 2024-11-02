@@ -15,7 +15,7 @@ body.no-scroll {
 body {
   @apply m-0 h-auto text-[0.78em] md:text-[1em] text-[#ECD6CD] bg-[#FF4B4B] antialiased;
   font-family: "transducer-variable", sans-serif;
-  font-variation-settings: "wght" 140;
+  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 400;
   font-style: normal;
   line-height: 1;
   letter-spacing: -2px;
@@ -42,7 +42,7 @@ a:hover:after {
 }
 
 i {
-  font-variation-settings: "wght" 140;
+  font-variation-settings: "slnt" -7, "wdth" 0, "wght" 400;
   font-style: normal;
 }
 
@@ -79,7 +79,7 @@ i {
 
 .factoids {
   @apply text-[3.4rem] md:text-[4.2rem] bg-[#2c1669] text-[#e7d3ee] items-start lg:px-8 lg:py-16 gap-4 lg:gap-8 grid-cols-1;
-  font-variation-settings: "wght" 300;
+  font-variation-settings: "slnt" 0, "wdth" 40, "wght" 300;
   line-height: 1;
 }
 
@@ -94,7 +94,7 @@ i {
 .fifth,
 .sixth {
   @apply opacity-0 mb-4 max-w-[12em];
-  font-variation-settings: "wght" 140;
+  font-variation-settings: "slnt" 0, "wdth" 2, "wght" 400;
 }
 
 #meetChris {
@@ -103,7 +103,8 @@ i {
 
 #meetChris .curtain-title {
   @apply uppercase text-[1.8rem] lg:text-[2rem] h-0 overflow-y-hidden justify-self-stretch mt-1 md:mt-1;
-  font-variation-settings: "wght" 140;
+  font-family: "transducer-variable", sans-serif;
+  font-variation-settings: "slnt" 0, "wdth" 140, "wght" 900;
   font-style: normal;
 }
 
@@ -122,7 +123,7 @@ i {
 #meetChris .intro-to-chris,
 #meetChris .text-layer {
   @apply z-20;
-  font-variation-settings: "wght" 140;
+  font-variation-settings: "slnt" 0, "wdth" 25, "wght" 400;
 }
 
 #meetChris .intro-to-chris {
@@ -131,12 +132,12 @@ i {
 
 #meetChris .text-layer {
   @apply uppercase col-span-1 md:col-span-2 order-3 md:order-2 justify-self-start opacity-0 mb-4 md:mb-0 text-[4.5rem] md:text-[6rem] lg:text-[7rem] max-w-[9em] lg:max-w-[7em];
-  font-variation-settings: "wght" 560;
+  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 560;
   line-height: 0.88;
 }
 
 #meetChris .bright {
-  font-variation-settings: "wght" 140;
+  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 730;
 }
 
 #fiveThings {
@@ -222,7 +223,7 @@ i {
 }
 
 #fiveThings .bright {
-  font-variation-settings: "wght" 600;
+  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 600;
 }
 
 .points {
@@ -255,7 +256,7 @@ i {
 
 .points .number {
   @apply w-[148px] lg:w-auto text-center text-[10rem] top-[18px] relative opacity-0;
-  font-variation-settings: "wght" 600;
+  font-variation-settings: "slnt" -6, "wdth" 50, "wght" 600;
 }
 
 .points .text-layer {
@@ -276,7 +277,7 @@ body.meetChris {
 
 #whyMe {
   @apply text-[3rem] sm:text-[4.5rem] md:text-[6.2rem] grid-cols-1 py-12 pt-[6rem];
-  font-variation-settings: "wght" 140;
+  font-variation-settings: "slnt" 0, "wdth" 22, "wght" 450;
 }
 
 #whyMe div {

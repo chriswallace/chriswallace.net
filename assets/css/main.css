@@ -79,6 +79,7 @@ article {
 
 .home-title {
   @apply text-5xl md:text-7xl mb-12 min-h-[4em] sm:min-h-[3em] max-w-7xl;
+  line-height: 1.2;
 }
 
 .open-to-work {

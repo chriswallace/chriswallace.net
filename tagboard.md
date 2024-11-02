@@ -131,4 +131,3 @@ permalink: /tagboard
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.10.4/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
 <script type="text/js" type="module" src="/assets/js/interactive.js">
-    

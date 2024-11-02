@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
       "Proud owner of a computer that once had a turbo button",
       "The designer who peaked during web 2.0",
       "Skeuomorphism will always be cool",
-      "Some say unicorns don't exist, but here we are",
+      "Some say unicorns don't exist but I am one",
       "Veteran of the great browser wars of '98",
       "That guy who launched an NFT project",
       "Still waiting for those NFT millions to roll in",
