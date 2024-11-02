@@ -1841,8 +1841,9 @@ video {
 }
 
 .text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0;
 }
 
 .text-sm {
@@ -2832,13 +2833,13 @@ body.meetChris {
 
   .md\:text-3xl {
     font-size: 1.25rem;
-    line-height: 2.25rem;
+    line-height: 2rem;
     letter-spacing: 0;
   }
 
   .md\:text-4xl {
     font-size: 1.35rem;
-    line-height: 2.25rem;
+    line-height: 2rem;
     letter-spacing: 0;
   }
 }

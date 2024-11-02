@@ -10,7 +10,7 @@ description: Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm C
     <span class="grow sm:flex sm:justify-between gap-4">
       <strong class="dark:text-primary-400 whitespace-nowrap">NOV<span class="hidden md:inline"> 20</span>24</strong> 
       <span class="grow dark:text-gray-400 sm:flex-1">Available for full-time roles or short-term contracts.</span>
-      <a class="whitespace-nowrap" href="/contact">Hire Me</a>
+      <a class="whitespace-nowrap" href="/contact">Hire Me &rarr;</a>
     </span> 
     <span class="dark:text-gray-500">]</span>
   </div>

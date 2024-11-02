@@ -1841,8 +1841,9 @@ video {
 }
 
 .text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0;
 }
 
 .text-sm {
@@ -2178,15 +2179,10 @@ ol {
 
 p,
 ul,
-li {
-  --tw-text-opacity: 1;
-  color: rgb(109 109 109 / var(--tw-text-opacity));
-}
-
-p,
-ul,
 ol {
   margin-bottom: 3rem;
+  --tw-text-opacity: 1;
+  color: rgb(109 109 109 / var(--tw-text-opacity));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2200,23 +2196,23 @@ ol {
 
 h1 {
   margin-bottom: 1.5rem;
-  font-size: 1.25rem;
-  line-height: 2.25rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
   letter-spacing: 0;
 }
 
 @media (min-width: 768px) {
   h1 {
     max-width: 48rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    letter-spacing: 0;
   }
 }
 
 @media (min-width: 1536px) {
   h1 {
     max-width: 80rem;
-    font-size: 1.5rem;
-    line-height: 3rem;
-    letter-spacing: 0;
   }
 }
 
@@ -2237,7 +2233,7 @@ h2 {
 @media (min-width: 1536px) {
   h2 {
     font-size: 1.25rem;
-    line-height: 2.25rem;
+    line-height: 2rem;
     letter-spacing: 0;
   }
 }
@@ -2334,9 +2330,20 @@ h6 {
   margin-left: -0.75rem;
   margin-right: 0px;
   font-size: 1.5rem;
-  line-height: 3rem;
+  line-height: 2rem;
   letter-spacing: 0;
   text-transform: lowercase;
+}
+
+@media (min-width: 768px) {
+  .primary-heading {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    letter-spacing: 0;
+  }
+}
+
+.primary-heading {
   font-variation-settings: "wght" 140;
 }
 
@@ -2349,8 +2356,9 @@ h6 {
 .primary-heading-no-slash {
   margin-top: 0.5rem;
   margin-bottom: 3rem;
-  font-size: 3.75rem;
-  line-height: 1;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: 0;
   font-weight: 300;
   text-transform: lowercase;
 }
@@ -2359,8 +2367,9 @@ h6 {
   .primary-heading-no-slash {
     margin-top: 0px;
     margin-bottom: 6rem;
-    font-size: 4.5rem;
-    line-height: 1;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    letter-spacing: 0;
   }
 }
 
@@ -3245,7 +3254,7 @@ a {
 @media (prefers-color-scheme: dark) {
   .navigation .logo {
     --tw-text-opacity: 1;
-    color: rgb(135 80 237 / var(--tw-text-opacity));
+    color: rgb(133 66 229 / var(--tw-text-opacity));
   }
 
   .navigation .logo:hover {
@@ -3471,7 +3480,7 @@ footer {
     }
     @media (prefers-color-scheme: dark) {
       path {
-        fill: #b0b0b0;
+        fill: #8542e5;
       }
     }
     p {
@@ -3491,7 +3500,7 @@ footer {
     @media (prefers-color-scheme: dark) {
       p {
         --tw-text-opacity: 1;
-        color: rgb(145 145 145 / var(--tw-text-opacity));
+        color: rgb(109 109 109 / var(--tw-text-opacity));
       }
     }
   }
@@ -4747,7 +4756,7 @@ article {
   min-height: 4em;
   max-width: 64rem;
   font-size: 1.5rem;
-  line-height: 3rem;
+  line-height: 2rem;
   letter-spacing: 0;
 }
 
@@ -4759,8 +4768,9 @@ article {
 
 @media (min-width: 768px) {
   .home-title {
-    font-size: 3.75rem;
-    line-height: 1;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: 0;
   }
 }
 
@@ -5685,13 +5695,13 @@ video::-webkit-media-controls {
 
   .md\:text-3xl {
     font-size: 1.25rem;
-    line-height: 2.25rem;
+    line-height: 2rem;
     letter-spacing: 0;
   }
 
   .md\:text-4xl {
     font-size: 1.35rem;
-    line-height: 2.25rem;
+    line-height: 2rem;
     letter-spacing: 0;
   }
 }

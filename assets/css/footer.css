@@ -5,11 +5,11 @@ footer {
     @apply inline-block mr-2 w-[48px] h-[48px] m-0 p-0;
 
     path {
-      @apply fill-gray-500 dark:fill-gray-300;
+      @apply fill-gray-500 dark:fill-primary-600;
     }
 
     p {
-      @apply leading-normal text-gray-600 text-xs max-w-lg dark:text-gray-400;
+      @apply leading-normal text-gray-600 text-xs max-w-lg dark:text-gray-500;
     }
   }
 }
