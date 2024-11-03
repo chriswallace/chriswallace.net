@@ -88,14 +88,14 @@ module.exports = {
           },
         ],
         "6xl": [
-          "1.6rem",
+          "1.75rem",
           {
             lineHeight: "1.2",
             letterSpacing: "0",
           },
         ],
         "7xl": [
-          "2.4rem",
+          "2rem",
           {
             lineHeight: "1.2",
             letterSpacing: "0",

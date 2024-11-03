@@ -24,16 +24,16 @@ description: Over the past few years, I've become fascinated by digital and gene
 
     <div class="flex gap-2 sm:gap-4 mb-6 sm:mb-12">
         <div class="fade-in-element" style="flex: 0.66666667;">
-            <a href="/art/collection"><img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-137237-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684247024&amp;w=1024&amp;s=e9b0cdd6a0cc6766485a4aa7ab70f0d6" alt="Acequia #219" loading="lazy"></a>
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-137237-KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684247024&amp;w=1024&amp;s=e9b0cdd6a0cc6766485a4aa7ab70f0d6" alt="Acequia #219" loading="lazy">
         </div>
         <div class="fade-in-element" style="flex: 0.8;">
-            <a href="/art/collection"><img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-c4751f8-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115265&amp;w=1024&amp;s=0d8594ae0f78cc91b58d3a82d8db9c9b" alt="Asemica #632" loading="lazy"></a>
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-c4751f8-0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685115265&amp;w=1024&amp;s=0d8594ae0f78cc91b58d3a82d8db9c9b" alt="Asemica #632" loading="lazy">
         </div>
         <div class="fade-in-element" style="flex: 0.5;">
-            <a href="/art/collection"><img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-1f161ff8-0xc3ce0b793d15a4777f96afb4c03744c9a25583d0-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116187&amp;w=1024&amp;s=13bd6fb0e8a2e040dbe0d07eac2f3742" class="max-w-full h-auto" alt="wwz uu15M7kj722Ho #51" loading="lazy"></a>
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Fprod-token-content%2F0-1f161ff8-0xc3ce0b793d15a4777f96afb4c03744c9a25583d0-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1685116187&amp;w=1024&amp;s=13bd6fb0e8a2e040dbe0d07eac2f3742" class="max-w-full h-auto" alt="wwz uu15M7kj722Ho #51" loading="lazy">
         </div>
         <div class="fade-in-element" style="flex: 1;">
-            <a href="/art/collection"><img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-23ac1-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684211701&amp;w=1024&amp;s=255f0e7795081acb279d8a672d97cb14" alt="Garden, Monoliths #125" loading="lazy"></a>
+            <img src="https://assets.gallery.so/https%3A%2F%2Fstorage.googleapis.com%2Ftoken-media%2F4-23ac1-KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-image?auto=format%2Ccompress&amp;fit=max&amp;glryts=1684211701&amp;w=1024&amp;s=255f0e7795081acb279d8a672d97cb14" alt="Garden, Monoliths #125" loading="lazy">
         </div>
     </div>
 

@@ -81,7 +81,7 @@ a {
 }
 
 .primary-heading-no-slash {
-  @apply text-5xl md:text-7xl mt-2 md:mt-0 mb-12 md:mb-24 font-light lowercase;
+  @apply text-7xl mt-2 md:mt-0 mb-12 font-light lowercase;
 }
 
 .sub-heading {
