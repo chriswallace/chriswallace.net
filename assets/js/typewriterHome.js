@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const titles = [
       "Your favorite designer's favorite designer.",
-      "2x Emmy Award-nominated Design Director.",
+      "2x Emmy Award-nominated Design Director.", 
       "Probably too old for TikTok but too young for Facebook.",
       "Proud owner of a computer that once had a turbo button.",
       "The designer who peaked during web 2.0.",
@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let unscrambledIndices = new Set();
     let scrambleTimeout = null;
     let isPaused = false;
+    let isCompleting = false;
 
     const typewriterElement = document.getElementById('typewriter');
 
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function scrambleText() {
-      if (isPaused) return;
+      if (isPaused && !isCompleting) return;
       
       clearTimeout(scrambleTimeout);
       
@@ -93,13 +94,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
           if (unscrambledIndices.size === spans.length) {
             isScrambling = false;
+            isCompleting = false;
             currentTitleIndex = (currentTitleIndex + 1) % titles.length;
-            scrambleTimeout = setTimeout(scrambleText, pauseDuration); // Add this line to restart the cycle
+            scrambleTimeout = setTimeout(scrambleText, pauseDuration);
           }
         }
       }
 
-      if (isScrambling && !isPaused) {
+      if (isScrambling && (!isPaused || isCompleting)) {
         scrambleTimeout = setTimeout(scrambleText, scrambleSpeed);
       }
     }
@@ -110,13 +112,17 @@ document.addEventListener('DOMContentLoaded', function() {
         if (entry.isIntersecting) {
           isPaused = false;
           if (!scrambleTimeout) {
-            scrambleTimeout = setTimeout(scrambleText, pauseDuration); // Add this line to restart the cycle
+            scrambleTimeout = setTimeout(scrambleText, pauseDuration);
           }
         } else {
-          isPaused = true;
-          if (scrambleTimeout) {
-            clearTimeout(scrambleTimeout);
-            scrambleTimeout = null;
+          if (isScrambling) {
+            isCompleting = true;
+          } else {
+            isPaused = true;
+            if (scrambleTimeout) {
+              clearTimeout(scrambleTimeout);
+              scrambleTimeout = null;
+            }
           }
         }
       });
