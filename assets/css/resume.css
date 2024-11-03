@@ -37,7 +37,11 @@
 }
 
 .skills-list {
-  @apply grid grid-cols-[2fr_3fr] sm:grid-cols-[auto_1fr] gap-y-6 gap-x-12 max-w-3xl;
+  @apply grid grid-cols-[40%_auto] sm:grid-cols-[auto_1fr] gap-y-6 gap-x-12 max-w-3xl;
+
+  dt {
+    @apply break-words;
+  }
 
   dd {
     @apply text-gray-700;

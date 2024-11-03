@@ -1,30 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     const titles = [
-      "Your favorite designer's favorite designer.",
+      "I'm your favorite designer's favorite designer.",
       "2x Emmy Award-nominated Design Director.", 
-      "Probably too old for TikTok but too young for Facebook.",
-      "Proud owner of a computer that once had a turbo button.",
-      "The designer who peaked during web 2.0.",
+      "Too old for Snapchat but too young for Facebook.",
+      "Proudly owned a computer with a turbo button.",
       "Skeuomorphism will always be extremely cool.",
       "Some say unicorns don't exist yet here I am.",
       "Veteran of the great browser wars of '98.",
       "That guy who launched an NFT project.",
       "Still waiting for those NFT millions to roll in.",
-      "Proudly mediocre at Overwatch.",
+      "Incredibly mediocre at Overwatch.",
       "Cancer survivor since the age of 20.",
       "Definitely not still using jQuery (maybe).",
       "Old enough to remember table-based layouts.",
       "Twenty years deep in the tech industry.",
-      "Back when Bootstrap was considered revolutionary.",
+      "I remember when Bootstrap was a \"game-changer\".",
       "Proud parent of a Texas A&M sophomore.",
       "Professional purveyor of dad jokes.",
       "Will design for actual money, not exposure.",
       "Survived the dark days of IE6 support.",
       "Startup design specialist extraordinaire.",
       "Flash websites were pretty cool, actually.",
-      "Reformed agency executive at your service.",
-      "Probably due for that first colonoscopy soon."
+      "Reformed agency executive to Fortune 500 companies."
     ];
 
     let currentTitleIndex = 0;

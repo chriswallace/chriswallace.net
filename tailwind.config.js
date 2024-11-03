@@ -30,74 +30,74 @@ module.exports = {
         xs: [
           "0.84rem",
           {
-            lineHeight: "1.5rem",
+            lineHeight: "1.75",
           },
         ],
         sm: [
           "0.9rem",
           {
-            lineHeight: "1.5rem",
+            lineHeight: "1.75",
           },
         ],
         base: [
-          "1rem",
+          "0.95rem",
           {
-            lineHeight: "1.5rem",
+            lineHeight: "1.5",
             letterSpacing: "0",
           },
         ],
         lg: [
-          "1.04rem",
+          "1rem",
           {
-            lineHeight: "1.5rem",
+            lineHeight: "1.5",
           },
         ],
         xl: [
           "1.1rem",
           {
-            lineHeight: "1.5rem",
+            lineHeight: "1.5",
             letterSpacing: "0",
           },
         ],
         "2xl": [
-          "1.175rem",
+          "1.2rem",
           {
-            lineHeight: "2rem",
+            lineHeight: "1.4",
             letterSpacing: "0",
           },
         ],
         "3xl": [
-          "1.25rem",
+          "1.3rem",
           {
-            lineHeight: "2rem",
+            lineHeight: "1.2",
             letterSpacing: "0",
           },
         ],
         "4xl": [
-          "1.35rem",
+          "1.4rem",
           {
-            lineHeight: "2rem",
+            lineHeight: "1.2",
             letterSpacing: "0",
           },
         ],
         "5xl": [
           "1.5rem",
           {
-            lineHeight: "2rem",
+            lineHeight: "1.2",
             letterSpacing: "0",
           },
         ],
         "6xl": [
-          "2rem",
+          "1.6rem",
           {
-            lineHeight: "2.5rem",
+            lineHeight: "1.2",
             letterSpacing: "0",
           },
         ],
         "7xl": [
-          "3rem",
+          "2.4rem",
           {
-            lineHeight: "3.5rem",
+            lineHeight: "1.2",
             letterSpacing: "0",
           },
         ]
@@ -137,16 +137,6 @@ module.exports = {
         4: "1rem",
         5: "1.25rem",
         6: "1.5rem",
-      },
-      borderRadius: {
-        none: "0",
-        sm: "0.125rem",
-        DEFAULT: "0.25rem",
-        DEFAULT: "4px",
-        md: "0.375rem",
-        lg: "30px",
-        full: "9999px",
-        large: "12px",
       },
       typography: {
         DEFAULT: {

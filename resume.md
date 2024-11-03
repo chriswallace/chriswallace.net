@@ -117,7 +117,7 @@ thumbnail: /assets/images/thumbs/resume.png
     <dd>Storybook, Figma, component libraries, native apps</dd>
     <dt>Languages</dt>
     <dd>JavaScript, TypeScript, HTML5, CSS3, SCSS</dd>
-    <dt>Libraries/Frameworks</dt>
+    <dt>Libraries &amp; Frameworks</dt>
     <dd>Svelte, SvelteKit, React, Next.js</dd>
     <dt>Performance Tools</dt>
     <dd>Vercel, ImageKit, Lighthouse</dd>

@@ -5,20 +5,13 @@
 @import "typography.css";
 @import "utilities.css";
 @import "buttons.css";
-@import "cards.css";
-@import "tooltips.css";
 @import "navigation.css";
 @import "footer.css";
-@import "utility-bar.css";
 @import "resume.css";
-@import "emoji-chat.css";
-@import "music-player.css";
-@import "gallery.css";
-@import "fullscreen-viewer.css";
 @import "animations.css";
 
 body {
-  @apply bg-gray-100;
+  @apply bg-gray-100 dark:bg-gray-950;
 }
 
 article {
@@ -59,7 +52,7 @@ article {
   }
 
   .site-logo {
-    @apply ml-[16px] md:ml-[60px] mb-8 relative top-[-3px] block md:hidden text-primary-600 my-[.45rem];
+    @apply ml-[16px] md:ml-[60px] mb-8 relative top-[-3px] block md:hidden text-primary-600 dark:text-primary-600 my-[.45rem];
 
     svg {
       @apply block max-w-[42px];
@@ -71,15 +64,14 @@ article {
   }
 
   .logo {
-    @apply text-primary-600;
+    @apply text-primary-600 dark:text-primary-600;
   }
 }
 
 /* Home Page */
 
 .home-title {
-  @apply text-6xl md:text-7xl mb-12 min-h-[6em] sm:min-h-[3em];
-  line-height: 1.2;
+  @apply text-5xl md:text-7xl uppercase mb-12 min-h-[3em] sm:min-h-[3em] max-w-4xl;
 }
 
 .open-to-work {
@@ -126,13 +118,7 @@ article {
   }
 
   dd {
-    @apply text-gray-800;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    dd {
-      @apply text-gray-100;
-    }
+    @apply text-gray-800 dark:text-gray-100;
   }
 
   div {
@@ -177,7 +163,7 @@ article {
     }
 
     p {
-      @apply text-gray-500;
+      @apply text-gray-500 dark:text-gray-600;
     }
   }
 
@@ -199,32 +185,6 @@ article {
 
   .item:nth-last-child(3) {
     @apply md:border-b-0;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    @apply bg-gray-950;
-  }
-
-  .open-to-work {
-    @apply bg-[#242424] shadow-none;
-
-    p strong {
-      @apply text-white;
-    }
-  }
-
-  .contact-grid .item p {
-    @apply text-gray-600;
-  }
-
-  .contact-grid .item {
-    @apply border-gray-800;
-
-    .icon:after {
-      @apply text-black;
-    }
   }
 }
 
@@ -308,55 +268,34 @@ video::-webkit-media-controls {
   display: none !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  body.subtle-bg {
-    @apply bg-[#121212];
-  }
-
-  .subtle-bg h1,
-  .subtle-bg h2,
-  .subtle-bg h3,
-  .subtle-bg h4,
-  .subtle-bg h5 {
-    @apply text-gray-200;
-  }
-
-  .subtle-bg .collection-title,
-  .subtle-bg caption {
-    @apply text-gray-300;
-  }
-
-  .subtle-bg a,
-  .subtle-bg .artwork-subtitle a,
-  .subtle-bg .collection-title a {
-    @apply text-white;
-  }
-
-  .subtle-bg p {
-    @apply text-gray-200;
-  }
-}
-
 /* Portfolio Page */
 
 .portfolio-list {
   @apply grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 mb-12;
+}
 
-  .item {
-    @apply mb-6;
-  }
+.portfolio-list__item {
+  @apply mb-6;
+}
 
-  h3 {
-    @apply my-3;
-  }
+.portfolio-list__link {
+  @apply mb-2 inline-block;
+}
 
-  p {
-    @apply mb-0;
-  }
+.portfolio-list__image {
+  @apply rounded-2xl;
+}
 
-  p:last-of-type {
-    @apply mt-3;
-  }
+.portfolio-list__title {
+  @apply my-3;
+}
+
+.portfolio-list__description {
+  @apply mb-0;
+}
+
+.portfolio-list__description:last-of-type {
+  @apply mt-3;
 }
 
 /* Resume Page */
@@ -379,21 +318,6 @@ video::-webkit-media-controls {
 
 .interplay-grid {
   @apply grid md:grid-cols-2 gap-8;
-}
-
-@media (prefers-color-scheme: dark) {
-  .collection-title a,
-  .artwork-subtitle a {
-    @apply text-primary-200;
-  }
-
-  .collection-notes {
-    @apply sm:border-primary-700;
-  }
-
-  .feather {
-    @apply inline text-primary-300;
-  }
 }
 
 .zoom-container {
@@ -443,4 +367,104 @@ video::-webkit-media-controls {
 .zoomable img {
   width: auto;
   height: auto;
+}
+
+.announcement {
+  @apply mb-16 flex gap-4 max-w-7xl text-center md:text-left text-xs;
+}
+
+.announcement__content {
+  @apply grow sm:flex sm:justify-between gap-4;
+}
+
+.announcement__date {
+  @apply dark:text-primary-500 whitespace-nowrap;
+}
+
+.announcement__text {
+  @apply grow sm:flex-1;
+}
+
+.announcement__link {
+  @apply whitespace-nowrap;
+}
+
+.greeting {
+  @apply mb-4;
+}
+
+.greeting__wave {
+  @apply inline-block animate-[wave_5s_ease-in-out_infinite];
+}
+
+.portfolio-intro {
+  @apply mt-12;
+}
+
+.portfolio-intro__icon {
+  @apply inline text-gray-500 dark:text-white top-[-2px] relative;
+}
+
+.testimonial {
+  @apply text-center flex flex-col justify-center items-center py-12 px-8 sm:px-12 rounded-md;
+}
+
+.testimonial__quote {
+  @apply max-w-4xl mx-auto;
+}
+
+.testimonial__text {
+  @apply text-center text-xl md:text-2xl mb-0 mb-2;
+}
+
+.testimonial__author {
+  @apply text-center text-sm;
+}
+
+.testimonial__emphasis {
+  @apply dark:text-white;
+}
+
+.testimonial__highlight {
+  @apply underline underline-offset-4 decoration-solid decoration-primary-500 dark:text-white;
+}
+
+.portfolio__video-container {
+  @apply relative w-full aspect-[9/12] sm:aspect-[16/9] 2xl:aspect-[21/9] bg-black bg-opacity-50 mb-8;
+}
+
+.portfolio__video-overlay {
+  @apply absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-20;
+}
+
+.portfolio__video {
+  @apply absolute top-0 left-0 w-full h-full object-cover z-10;
+}
+
+.portfolio__controls {
+  @apply absolute top-8 md:top-auto bottom-8 left-8 right-8 z-30 flex flex-col md:flex-row gap-6 md:gap-4 justify-between items-start md:items-end;
+}
+
+.portfolio__play-button {
+  @apply text-white text-sm break-keep flex gap-3 justify-center items-center;
+}
+
+.portfolio__title {
+  @apply mb-0 text-white text-xl;
+}
+
+.gallery-row {
+  @apply grid grid-cols-3 md:grid-cols-3 gap-2;
+
+  .image-wrapper {
+    @apply flex justify-center;
+  }
+
+  img {
+    @apply mb-4 w-full;
+  }
+
+  h3 {
+    @apply mt-0 mb-12;
+  }
 }

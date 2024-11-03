@@ -2,7 +2,7 @@
   font-family: "Noto Color Emoji";
 }
 
-.wide-font{
+.wide-font {
   @apply uppercase;
   font-family: "condor-wide", sans-serif;
 }
@@ -34,26 +34,4 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.caret {
-  text-decoration: none;
-}
-
-.caret::after {
-  @apply text-inherit align-baseline;
-  content: "\203A";
-  margin-left: 0.38rem;
-}
-
-.caret-yellow::after {
-  color: #fac832;
-}
-
-.caret-gold::after {
-  color: #e6c06b;
-}
-
-.caret-rose::after {
-  color: #af6060;
 }

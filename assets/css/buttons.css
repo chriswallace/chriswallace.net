@@ -13,7 +13,3 @@
 .back {
   @apply text-primary-500 font-light mb-4 inline-block text-base md:text-lg;
 }
-
-.button .emoji-icon {
-  @apply inline-block emoji-font mr-1 font-normal;
-}
