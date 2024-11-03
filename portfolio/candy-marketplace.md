@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Candy Marketplace Redesign
-description: I designed new marketplace features such as platform education, drops, cards, and checkout, focusing on clearly showcasing Candy's innovative products.
+description: A redesign-over-time with features like platform education, dynamic product drops, collectible cards, and a seamless checkout process, enhancing user engagement and showcasing Candy Digital's unique offerings.
 permalink: /portfolio/candy-marketplace-redesign/
-thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
+thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png
 ---
 
 <div class="content-container mt-2">

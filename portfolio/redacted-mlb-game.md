@@ -3,7 +3,7 @@ layout: default
 title: Redacted MLB Game
 description: A series of mockups for a mobile game concept using digital collectibles as game pieces.
 permalink: /portfolio/redacted-mlb-game/
-thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
+thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png
 ---
 
 <div class="content-container mt-2">

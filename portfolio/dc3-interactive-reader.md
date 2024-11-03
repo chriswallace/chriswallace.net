@@ -1,9 +1,9 @@
 ---
 layout: default
 title: DC3 Interactive Reader
-description: I designed and developed a custom digital comic book reading Progressive Web App for DC Comics and Candy Digital.
+description: A custom digital comic book reading Progressive Web App for DC Comics and Candy Digital.
 permalink: /portfolio/dc3-interactive-reader/
-thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
+thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png
 ---
 
 <div class="content-container mt-2">

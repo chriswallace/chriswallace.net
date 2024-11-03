@@ -3,7 +3,7 @@ layout: default
 title: Candy League
 description: A refreshed look and landing page for Candy League, a series of challenges for Candy's MLB collectors.
 permalink: /portfolio/candy-league/
-thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
+thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png
 ---
 
 <div class="content-container mt-2">

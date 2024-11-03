@@ -3,7 +3,7 @@
 }
 
 .menu-button {
-  @apply relative align-top w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.75)] md:h-[var(--navbar-width)] mx-auto bg-gray-200 dark:bg-gray-950 hover:md:bg-primary-600;
+  @apply relative align-top w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.75)] md:h-[var(--navbar-width)] mx-auto bg-gray-100 dark:bg-gray-950 hover:md:bg-primary-600;
 
   .open-menu & {
     @apply bg-transparent;
@@ -68,12 +68,12 @@
   @apply order-1 md:order-2 w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] shrink md:h-screen relative;
 
   .open-menu & {
-    @apply cursor-pointer bg-gray-200 dark:bg-gray-950 border-r md:border-l border-gray-300 dark:border-gray-900;
+    @apply cursor-pointer bg-gray-100 dark:bg-gray-950 border-r md:border-l border-gray-300 dark:border-gray-900;
   }
 }
 
 .menu {
-  @apply order-2 md:order-1 md:h-screen grow bg-gray-200 dark:bg-gray-950;
+  @apply order-2 md:order-1 md:h-screen grow bg-gray-100 dark:bg-gray-950;
 
   & ul {
     @apply w-[220px];
@@ -81,7 +81,7 @@
 }
 
 .menu a {
-  @apply p-4 py-6 md:py-6 block font-normal capitalize leading-none no-underline decoration-2 text-primary-800 dark:text-white border-b border-gray-300 dark:border-gray-900  dark:bg-gray-950 hover:bg-gray-100 dark:hover:bg-primary-600;
+  @apply p-4 py-6 md:py-6 block font-normal capitalize leading-none no-underline decoration-2 text-primary-600 dark:text-white border-b border-gray-300 dark:border-gray-900  dark:bg-gray-950 hover:bg-gray-100 dark:hover:bg-primary-600;
   font-variation-settings: "wght" 140;
 }
 

@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Candy Digital Collectible Deposit/Withdrawal
-description: I designed a new bulk-select feature and a workflow for moving digital collectibles between self-custodied and institutional-custodied wallets.
+description: A new bulk-select feature and a workflow for moving digital collectibles between self-custodied and institutional-custodied wallets.
 permalink: /portfolio/candy-digital-collectible-deposit-withdrawal/
-thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
+thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png
 ---
 
 <div class="content-container mt-2">

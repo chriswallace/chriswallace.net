@@ -1,9 +1,9 @@
 ---
 layout: default
 title: CandyVision
-description: Designing a brand, landing page, and customized game in a few weeks.
+description: Designing a brand, landing page, and customized game under a rapid timeline (weeks).
 permalink: /portfolio/candyvision/
-thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
+thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png
 ---
 
 <div class="content-container mt-2">

@@ -7,9 +7,9 @@ footer {
     path {
       @apply fill-gray-500 dark:fill-primary-600;
     }
+  }
 
-    p {
-      @apply leading-normal text-gray-600 text-xs max-w-lg dark:text-gray-500;
-    }
+  p {
+    @apply leading-normal text-xs max-w-lg;
   }
 }

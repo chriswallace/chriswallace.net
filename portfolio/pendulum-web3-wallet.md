@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Pendulum Crypto Wallet
-description: I designed an iOS cryptocurrency wallet with digital collectibles and easy token swapping.
+description: An iOS cryptocurrency wallet with digital collectibles and easy token swapping.
 permalink: /portfolio/pendulum-crypto-wallet/
-thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
+thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png
 ---
 
 <div class="content-container mt-2">

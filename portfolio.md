@@ -7,9 +7,9 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
 ---
 
 <div class="content-container">
-    <div class="fade-in-element text-center flex flex-col justify-center items-center py-12 px-6 rounded-md">
+    <div class="fade-in-element text-center flex flex-col justify-center items-center py-12 px-8 sm:px-12 rounded-md">
         <blockquote class="max-w-4xl mx-auto">
-            <p class="text-center text-2xl md:text-3xl font-semibold mb-0 max-w-none mb-2">"I <em class="dark:text-white">love</em> working with Chris. He has the rare mix of design instincts and technical ability that <span class="underline dark:text-white">makes him incredibly effective</span>."</p>
+            <p class="text-center text-xl md:text-2xl mb-0 max-w-none mb-2">"I <em class="dark:text-white">love</em> working with Chris. He has the rare mix of design instincts and technical ability that <span class="underline underline-offset-4 decoration-solid decoration-primary-500 dark:text-white">makes him incredibly effective</span>."</p>
             <p class="text-center text-sm max-w-none">— Mike Chabot, Director of Engineering @ Candy Digital</p>
         </blockquote>
     </div>
@@ -35,9 +35,9 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <h3><a href="/portfolio/candy-marketplace-redesign/">Candy Marketplace Redesign</a></h3>
             <p>A gradual, deliberate shift in design language and product features.</p>
         </div>
-        <div class="fade-in-element min-h-[300px] bg-gray-200 dark:bg-[#202020] text-center flex flex-col justify-center items-center py-12 px-6 rounded-md">
+        <div class="fade-in-element min-h-[300px] bg-gray-200 dark:bg-[#202020] text-center flex flex-col justify-center items-center py-12 px-12 rounded-md">
             <blockquote class="max-w-[30rem] mx-auto">
-                <p class="text-xl font-bold mb-0">"Chris is <em class="dark:text-white">by far</em> the best designer <span class="underline underline-gray-400 mb-2 dark:text-white">I've ever worked with</span>."</p>
+                <p class="text-xl mb-0">"Chris is <em class="dark:text-white">by far</em> the best designer <span class="underline underline-offset-4 decoration-solid decoration-primary-500 dark:text-white">I've ever worked with</span>."</p>
                 <p class="text-xs">&mdash; Yaro Plashenko, Head of Product, Ecosystem & Product Partnerships @ Immutable</p>
             </blockquote>
         </div>
@@ -89,20 +89,9 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <p>Year: 2023</p>
             <p>Wallace Museum showcases generative art in a unique virtual format, featuring a wall-like layout. I led branding, app design, and coding, including a feature to collect works from Ethereum and Tezos wallets.</p>
         </div>
-        <div class="item fade-in-element">
-            <div class="zoom-container">
-                <div class="zoomable">
-                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/legends-of-wondermist-2.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/legends-of-wondermist-2.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/legends-of-wondermist-2.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/legends-of-wondermist-2.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/legends-of-wondermist-2.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/legends-of-wondermist-2.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-image" alt="" loading="lazy">
-                </div>
-            </div>
-            <h3><a href="https://opensea.io/collection/legends-of-wondermist" target="_blank">Legends of Wondermist</a></h3>
-            <p>Role: Graphic Design, Logo Design, Website Design, Strategy</p>
-            <p>Year: 2022</p>
-            <p>This project involved designing a set of collectible cards with varying rarity levels, collaborating with artists to create engaging artwork and a minting experience that captivates users.</p>
-        </div>
-        <div class="fade-in-element min-h-[300px] bg-gray-200 dark:bg-[#202020] text-center flex flex-col justify-center items-center py-12 px-6 rounded-md">
+        <div class="fade-in-element min-h-[300px] bg-gray-200 dark:bg-[#202020] text-center flex flex-col justify-center items-center py-12 px-12 rounded-md">
             <blockquote class="max-w-[30rem] mx-auto">
-                <p class="text-xl font-bold mb-0">"If your goal is to work with someone who inspires, motivates and brings it day in and day out then look no further! His expertise <span class="underline underline-gray-400 mb-2 dark:text-white">made me a stronger designer</span>."</p>
+                <p class="text-xl mb-0">"If your goal is to work with someone who inspires, motivates and brings it day in and day out then look no further! His expertise <span class="underline underline-offset-4 decoration-solid decoration-primary-500 dark:text-white">made me a stronger designer</span>."</p>
                 <p class="text-xs">&mdash; Aaron Frebowitz, Design Director @ Candy Digital</p>
             </blockquote>
         </div>
@@ -145,19 +134,6 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <p>Role: Executive Creative Direction</p>
             <p>Year: 2019</p>
             <p>Launched a WordPress plugin integrating Google's products, achieving rapid adoption through a design that harmonized with both Google and WordPress aesthetics.</p>
-        </div>
-        <div class="item fade-in-element">
-            <div class="zoom-container">
-                <div class="zoomable">
-                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/godaddy-theme.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/godaddy-theme.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/godaddy-theme.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/godaddy-theme.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/godaddy-theme.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/godaddy-theme.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-image dark:hidden" alt="" loading="lazy">
-                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/godaddy-theme-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/godaddy-theme-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/godaddy-theme-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/godaddy-theme-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/godaddy-theme-dark.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/godaddy-theme-dark.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-image hidden dark:block" alt="" loading="lazy">
-                </div>
-            </div>
-            <h3><a href="https://www.godaddy.com/wordpress-themes" target="_blank">GoDaddy Go Theme</a></h3>
-            <p>Agency: <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a></p>
-            <p>Role: Executive Creative Direction</p>
-            <p>Year: 2019</p>
-            <p>Developed a computational design system for GoDaddy, resulting in a diverse range of themes that significantly increased user signups.</p>
         </div>
         <div class="item fade-in-element">
             <div class="zoom-container">

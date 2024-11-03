@@ -1,26 +1,26 @@
 ---
 layout: home
 title: Chris Wallace - Designer, Creative Director, and Front-End Engineer
-description: Some say the mythical unicorn doesn't exist&mdash;I disagree. I'm Chris Wallace, an award-winning designer, creative director, and front-end engineer with over 15 years pioneering the future of digital experience.
+description: Product design leader with over 20 years experience in e-commerce, digital publishing, interactive media, and web3. Currently searching for my next long-term role.
 ---
 
 <div class="content-container">
   <div class="fade-in-element mb-16 flex gap-4 max-w-7xl text-center md:text-left text-xs">
     <span>[</span> 
     <span class="grow sm:flex sm:justify-between gap-4">
-      <strong class="dark:text-primary-500 whitespace-nowrap">NOV 24</strong> 
+      <strong class="dark:text-primary-500 whitespace-nowrap">NOV 2024</strong> 
       <span class="grow sm:flex-1">Available for full-time roles or short-term contracts.</span>
-      <a class="whitespace-nowrap" href="/contact">Hire Me &rarr;</a>
+      <a class="whitespace-nowrap" href="/contact">Talk to Me &rarr;</a>
     </span> 
     <span>]</span>
   </div>
   
-  <div class="text-xl md:text-4xl mb-4 fade-in-element"><span class="inline-block animate-[wave_5s_ease-in-out_infinite]">👋</span> Howdy! I'm Chris Wallace.</div>
+  <div class="mb-4 fade-in-element"><span class="inline-block animate-[wave_5s_ease-in-out_infinite]">👋</span> Howdy! I'm Chris Wallace.</div>
   <h1 class="home-title uppercase fade-in-element max-w-4xl">
     <span class="typewriter" id="typewriter">I'm a designer who codes and builds startups.</span>
   </h1>
   
-  <p class="fade-in-element mt-12">Check out some of my <a href="/portfolio">latest work</a> from Candy Digital <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline text-gray-500 dark:text-white top-[-2px] relative"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
+  <p class="fade-in-element mt-12">Check out some of my <a href="/portfolio">latest work</a> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline text-gray-500 dark:text-white top-[-2px] relative"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
 
   <div class="portfolio-list max-w-7xl">
     <div class="item fade-in-element">

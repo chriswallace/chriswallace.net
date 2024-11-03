@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (entry.isIntersecting) {
           isPaused = false;
           if (!scrambleTimeout) {
-            scrambleText();
+            scrambleTimeout = setTimeout(scrambleText, pauseDuration); // Add this line to restart the cycle
           }
         } else {
           isPaused = true;
@@ -126,6 +126,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Start observing the typewriter element
     observer.observe(typewriterElement);
-  
-    scrambleText();
+
 });
