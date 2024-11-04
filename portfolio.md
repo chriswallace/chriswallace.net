@@ -85,9 +85,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 </div>
             </div>
             <h3 class="portfolio-list__title"><a href="https://wallacemuseum.com" target="_blank">Wallace Museum</a></h3>
-            <p class="portfolio-list__description">Role: Product Design, Branding, Database Architecture, Typescript/Javascript, SvelteKit</p>
-            <p class="portfolio-list__description">Year: 2023</p>
-            <p class="portfolio-list__description">Wallace Museum showcases generative art in a unique virtual format, featuring a wall-like layout. I led branding, app design, and coding, including a feature to collect works from Ethereum and Tezos wallets.</p>
+            <p class="portfolio-list__description">Virtual generative art museum with Ethereum and Tezos wallet integration.</p>
         </div>
         <div class="testimonial testimonial--fade-in min-h-[300px] bg-gray-200 dark:bg-[#202020] text-center flex flex-col justify-center items-center py-12 px-12 rounded-md">
             <blockquote class="testimonial__quote">
@@ -103,9 +101,6 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 </div>
             </div>
             <h3 class="portfolio-list__title"><a href="https://10up.com/our-work/california-dmv-website-redesign/" target="_blank">California DMV Digital Transformation</a></h3>
-            <p class="portfolio-list__description">Agency: <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a></p>
-            <p class="portfolio-list__description">Role: Executive Creative Direction</p>
-            <p class="portfolio-list__description">Year: 2020</p>
             <p class="portfolio-list__description">Directed a comprehensive redesign of the California DMV's website and application suite, enhancing user experience for millions of drivers across the U.S.</p>
         </div>
         <div class="portfolio-list__item fade-in-element">
@@ -118,9 +113,6 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 </div>
             </div>
             <h3 class="portfolio-list__title"><a href="https://stories.starbucks.com/stories/" target="_blank">Starbucks Stories &amp; News Redesign</a></h3>
-            <p class="portfolio-list__description">Agency: <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a></p>
-            <p class="portfolio-list__description">Role: Branding, Design, Creative Direction</p>
-            <p class="portfolio-list__description">Year: 2020</p>
             <p class="portfolio-list__description">Revamped the online newsroom for Starbucks, focusing on visual design and branding to enhance storytelling and user engagement.</p>
         </div>
         <div class="portfolio-list__item fade-in-element">
@@ -130,10 +122,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 </div>
             </div>
             <h3 class="portfolio-list__title"><a href="https://sitekit.withgoogle.com" target="_blank">Google Site Kit</a></h3>
-            <p class="portfolio-list__description">Agency: <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a></p>
-            <p class="portfolio-list__description">Role: Executive Creative Direction</p>
-            <p class="portfolio-list__description">Year: 2019</p>
-            <p class="portfolio-list__description">Launched a WordPress plugin integrating Google's products, achieving rapid adoption through a design that harmonized with both Google and WordPress aesthetics.</p>
+            <p class="portfolio-list__description">Oversaw the design of Google's official WordPress plugin.</p>
         </div>
         <div class="portfolio-list__item fade-in-element">
             <div class="zoom-container">
@@ -143,9 +132,6 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 </div>
             </div>
             <h3 class="portfolio-list__title"><a href="https://www.youtube.com/watch?v=X9UVZjvmmbw" target="_blank">Mad Men: The Fan Cut</a></h3>
-            <p class="portfolio-list__description">Agency: Lift UX (acquired by <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a>)</p>
-            <p class="portfolio-list__description">Role: Creative Direction</p>
-            <p class="portfolio-list__description">Year: 2015</p>
             <p class="portfolio-list__description">Led the design of a web application for AMC's "Mad Men," creating a platform for fans to submit and share video clips, blending modern design with retro aesthetics.</p>
         </div>
         <div class="portfolio-list__item fade-in-element">
@@ -160,10 +146,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 </div>
             </div>
             <h3 class="portfolio-list__title"><a href="https://www.theverge.com/entertainment/2014/2/13/5406498/how-a-second-screen-app-made-the-walking-dead-come-alive" target="_blank" rel="noreferrer">The Walking Dead Story Sync</a></h3>
-            <p class="portfolio-list__description">Agency: Lift UX (acquired by <a href="https://10up.com" rel="noreferrer" target="_blank">10up</a>)</p>
-            <p class="portfolio-list__description">Role: Creative Direction</p>
-            <p class="portfolio-list__description">Year: 2012</p>
             <p class="portfolio-list__description">Designed an award-winning second-screen app for AMC, enhancing viewer engagement during episodes and recognized at multiple industry awards.</p>
         </div>
     </div>
+
 </div>

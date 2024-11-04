@@ -1451,6 +1451,14 @@ video {
   top: -1.5rem;
 }
 
+.left-4 {
+  left: 1rem;
+}
+
+.top-5 {
+  top: 1.25rem;
+}
+
 .top-\[-24px\] {
   top: -24px;
 }
@@ -1638,6 +1646,10 @@ video {
   height: auto;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .max-h-\[500px\] {
   max-height: 500px;
 }
@@ -1700,6 +1712,10 @@ video {
 
 .max-w-prose {
   max-width: 65ch;
+}
+
+.max-w-xl {
+  max-width: 36rem;
 }
 
 .shrink {
@@ -2061,6 +2077,11 @@ video {
   padding-right: 3rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -2117,13 +2138,13 @@ video {
 
 .text-6xl {
   font-size: 1.75rem;
-  line-height: 1.2;
+  line-height: 1.75;
   letter-spacing: 0;
 }
 
 .text-base {
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.75;
   letter-spacing: 0;
 }
 
@@ -3092,7 +3113,7 @@ body.meetChris {
 
   .md\:text-base {
     font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.75;
     letter-spacing: 0;
   }
 }

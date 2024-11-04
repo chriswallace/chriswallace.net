@@ -86,7 +86,6 @@ a {
 
 .sub-heading {
   @apply text-xl md:text-3xl mb-12 md:mb-16 max-w-3xl;
-  line-height: 1.32;
 }
 
 .sub-heading-curated {

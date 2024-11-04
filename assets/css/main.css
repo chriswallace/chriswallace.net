@@ -71,7 +71,8 @@ article {
 /* Home Page */
 
 .home-title {
-  @apply text-5xl md:text-7xl uppercase mb-12 min-h-[3em] sm:min-h-[3em] max-w-2xl;
+  @apply text-5xl md:text-7xl uppercase mb-12 min-h-[3em] sm:min-h-[6em] max-w-3xl;
+  line-height: 1.3;
 }
 
 .open-to-work {
@@ -151,11 +152,7 @@ article {
     }
 
     svg {
-      @apply max-w-[48px] max-h-[48px] text-primary-600 mx-auto;
-
-      path {
-        @apply fill-current;
-      }
+      @apply max-w-[48px] max-h-[48px] stroke-primary-600 dark:stroke-primary-500 mx-auto;
     }
 
     h3 {
@@ -406,19 +403,19 @@ video::-webkit-media-controls {
 }
 
 .testimonial {
-  @apply text-center flex flex-col justify-center items-center py-12 px-8 sm:px-12 rounded-md;
+  @apply text-center flex flex-col justify-center items-center p-8 lg:p-16 rounded-2xl;
 }
 
 .testimonial__quote {
-  @apply max-w-4xl mx-auto;
+  @apply max-w-xl mx-auto;
 }
 
 .testimonial__text {
-  @apply text-center text-xl md:text-2xl mb-0 mb-2;
+  @apply text-center text-xl md:text-2xl mb-0 mb-6 md:mb-8;
 }
 
 .testimonial__author {
-  @apply text-center text-sm;
+  @apply text-center text-xs sm:text-sm mb-0;
 }
 
 .testimonial__emphasis {
@@ -430,7 +427,7 @@ video::-webkit-media-controls {
 }
 
 .portfolio__video-container {
-  @apply relative w-full aspect-[9/12] sm:aspect-[16/9] 2xl:aspect-[21/9] bg-black bg-opacity-50 mb-8;
+  @apply relative w-full aspect-[9/12] sm:aspect-[16/9] 2xl:aspect-[21/9] bg-black bg-opacity-50;
 }
 
 .portfolio__video-overlay {
