@@ -20,10 +20,10 @@
 
     .time-period {
       @apply text-right pr-0 justify-self-end order-2 md:order-3 whitespace-nowrap flex-none md:flex-1;
+    }
 
-      &:before {
-        @apply inline-block mr-1 md:mr-2 content-["•"] md:content-none;
-      }
+    .time-period:before {
+      @apply inline-block mr-1 md:mr-2 content-["•"] md:content-none;
     }
   }
 

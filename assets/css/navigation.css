@@ -4,48 +4,46 @@
 
 .menu-button {
   @apply relative align-top w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.75)] md:h-[var(--navbar-width)] mx-auto bg-gray-100 dark:bg-gray-950 hover:md:bg-primary-600;
+}
 
-  .open-menu & {
-    @apply bg-transparent;
-  }
+.open-menu .menu-button {
+  @apply bg-transparent;
+}
 
-  &:hover i {
-    &:before,
-    &:after {
-      @apply bg-gray-900 dark:bg-white;
-    }
-  }
+.menu-button:hover i:before,
+.menu-button:hover i:after {
+  @apply bg-gray-900 dark:bg-white;
 }
 
 .menu-button i {
   @apply block relative mx-auto h-2 w-[35%];
   transition: transform 100ms ease-in-out;
+}
 
-  &:before,
-  &:after {
-    @apply block overflow-hidden bg-gray-600 md:bg-primary-600 dark:md:bg-white w-full h-[2px] absolute top-[50%] content-[""];
-    transition: transform 100ms ease-in-out, backgroundColor 100ms ease-in-out;
-  }
+.menu-button i:before,
+.menu-button i:after {
+  @apply block overflow-hidden bg-gray-600 md:bg-primary-600 dark:md:bg-white w-full h-[2px] absolute top-[50%] content-[""];
+  transition: transform 100ms ease-in-out, backgroundColor 100ms ease-in-out;
+}
 
-  &:before {
-    @apply -translate-y-[6px];
-  }
+.menu-button i:before {
+  @apply -translate-y-[6px];
+}
 
-  &:after {
-    @apply translate-y-[2px];
-  }
+.menu-button i:after {
+  @apply translate-y-[2px];
+}
 
-  .open-menu & {
-    @apply -translate-y-[2px];
-  }
+.open-menu .menu-button i {
+  @apply -translate-y-[2px];
+}
 
-  .open-menu &:before {
-    @apply -rotate-45 translate-y-2/4 bg-gray-400 dark:bg-white;
-  }
+.open-menu .menu-button i:before {
+  @apply -rotate-45 translate-y-2/4 bg-gray-400 dark:bg-white;
+}
 
-  .open-menu &:after {
-    @apply rotate-45 translate-y-2/4 bg-gray-400 dark:bg-white;
-  }
+.open-menu .menu-button i:after {
+  @apply rotate-45 translate-y-2/4 bg-gray-400 dark:bg-white;
 }
 
 .navigation {
@@ -66,18 +64,18 @@
 
 .branding {
   @apply order-1 md:order-2 w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] shrink md:h-screen relative;
+}
 
-  .open-menu & {
-    @apply cursor-pointer bg-gray-100 dark:bg-gray-950 border-r md:border-l border-gray-300 dark:border-gray-900;
-  }
+.open-menu .branding {
+  @apply cursor-pointer bg-gray-100 dark:bg-gray-950 border-r md:border-l border-gray-300 dark:border-gray-900;
 }
 
 .menu {
   @apply order-2 md:order-1 md:h-screen grow bg-gray-100 dark:bg-gray-950;
+}
 
-  & ul {
-    @apply w-[220px];
-  }
+.menu ul {
+  @apply w-[220px];
 }
 
 .menu a {
@@ -87,12 +85,12 @@
 
 .site-title {
   @apply md:bottom-0 md:left-0 w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.66)] block absolute p-0;
+}
 
-  .open-menu & {
-    @apply bottom-2 md:bottom-0 md:left-0;
-  }
+.site-title svg {
+  @apply w-[calc(var(--navbar-width)/2*.75)] md:w-[calc(var(--navbar-width)/2)] h-[calc(var(--navbar-width)*.66)] mx-auto;
+}
 
-  svg {
-    @apply w-[calc(var(--navbar-width)/2*.75)] md:w-[calc(var(--navbar-width)/2)] h-[calc(var(--navbar-width)*.66)] mx-auto;
-  }
+.open-menu .site-title {
+  @apply bottom-2 md:bottom-0 md:left-0;
 }
