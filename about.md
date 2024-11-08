@@ -17,11 +17,19 @@ thumbnail: /assets/images/thumbs/bio.png
             <img src="https://ik.imagekit.io/UltraDAO/wallace/guitar.jpg?tr=w-700,q=70" alt="Me hugging my new Gibson guitar, a gift received for my birthday" class="image six">
         </div>
         <div class="bio-content">
-            <p class="sub-heading fade-in-element">Hey! I'm a design leader with a passion for code who loves creating digital products that make people smile. When I'm not geeking out over pixels and prototypes, I'm dreaming up ways to use tech to bring people together and make the world a bit more awesome.</p>
+            <p class="sub-heading fade-in-element">Hey there! I'm a design leader with a passion for code who loves creating digital products that make people smile. When I'm not geeking out over pixels and prototypes, I'm dreaming up ways to use tech to bring people together and make the world a bit more awesome.</p>
             <hr class="fade-in-element -mt-4">
-            <p class="fade-in-element">I thrive on building things from scratch, especially startups. My approach is simple: put people first, work together, and move fast while staying flexible. This mindset has helped me guide several companies to successful exits and major milestones in recent years.</p>
-            <p class="fade-in-element">One of my proudest achievements was leading an agency team that earned Emmy nominations for our work on AMC shows like Breaking Bad and The Walking Dead. When <a href="https://10up.com">10up</a> acquired us, I built and led a design team of 20 talented folks, partnering with amazing clients like Google, Facebook, Microsoft, and The White House.</p>
-            <p class="fade-in-element">Looking for someone who can help your team tackle big challenges and grow? Let's chat! Just <a href="mailto:chriswallace7@pm.me?subject=Design%20Inquiry&body=Let&rsquo;s%20work%20together!">drop me an email</a> and we can explore working together.</p>
+            <p class="fade-in-element">I thrive on building things from scratch, especially startups. My approach is simple: put people first, work together, and move fast while staying flexible. This mindset has helped me guide several companies to successful exits and major milestones over the years.</p>
+            <p class="fade-in-element">One of my proudest achievements was leading an agency team that earned Emmy nominations for our work on AMC shows like Breaking Bad and The Walking Dead. When <a href="https://10up.com">10up</a> acquired us, I built and led a design team of 20 talented folks, partnering with amazing clients like Google, Facebook, Microsoft, and even The Nobel Prize.</p>
+            <p class="fade-in-element">So the question now is, what am I looking for? I’m seeking a role at a company with a clear and important mission, a team that understands the value a great design leader brings, working on a product that is poised to change the game—with just a teeeeny bit of help from me.</p>
+
+            <p class="fade-in-element"><a href="mailto:chriswallace7@pm.me?subject=Design%20Inquiry&body=Let&rsquo;s%20work%20together!">Let's get to work</a>,</p>
+
+            <div class="fade-in-element">
+                <img class="inline-block mb-2" src="/assets/images/chriswallace-signature.svg" alt="signature of Chris Wallace">
+                <div>Chris Wallace</div>
+            </div>
+
             <h2 class="fade-in-element">Buzzwords</h2>
             <p class="fade-in-element">These may or may not mean anything to you but I have to include them to win over our new AI overlords: Product Design, UX/UI, User Research, Content Design, Design Systems, Figma, Web3, Blockchain, React, Next.js, SvelteKit, HTML, CSS, JavaScript, Typescript, Prototyping, Midjourney, Chat-GPT, Claude, Runway, Canva.</p>
             <h2 class="fade-in-element">Media and Interviews</h2>
@@ -38,4 +46,5 @@ thumbnail: /assets/images/thumbs/bio.png
             </div>
         </div>
     </div>
+
 </div>

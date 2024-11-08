@@ -82,8 +82,8 @@ a {
 }
 
 .sub-heading {
-  @apply text-base md:text-xl mb-12 md:mb-16 max-w-3xl;
-  line-height: 1.55;
+  @apply text-xl mb-12 md:mb-16 max-w-3xl;
+  font-variation-settings: "wght" 450;
 }
 
 .sub-heading-curated {

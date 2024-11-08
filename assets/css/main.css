@@ -201,7 +201,7 @@ article {
 /* About page */
 
 .bio-grid {
-  @apply sm:grid sm:grid-cols-3 lg:grid-cols-2 sm:gap-6 lg:gap-24;
+  @apply sm:grid sm:grid-cols-3 lg:grid-cols-2 max-w-7xl sm:gap-6 lg:gap-24;
 }
 
 .bio-content {
@@ -209,7 +209,7 @@ article {
 }
 
 .image-grid {
-  @apply relative my-8 sm:my-16 md:mb-0 w-auto aspect-square sm:aspect-[9/22] order-2;
+  @apply relative my-8 sm:mb-16 sm:mt-0 md:mb-0 w-auto aspect-square sm:aspect-[9/22] order-2;
 }
 
 .image-grid img {
@@ -402,11 +402,12 @@ video::-webkit-media-controls {
 }
 
 .testimonial {
-  @apply text-center flex flex-col justify-center items-center p-8 lg:p-16 rounded-2xl;
+  @apply text-center flex flex-col justify-center items-center px-8 py-16 lg:p-16 rounded-2xl;
 }
 
 .testimonial__quote {
   @apply max-w-xl mx-auto;
+  font-variation-settings: "wght" 430;
 }
 
 .testimonial__text {
@@ -423,6 +424,7 @@ video::-webkit-media-controls {
 
 .testimonial__highlight {
   @apply underline underline-offset-4 decoration-solid decoration-primary-500 dark:text-white;
+  font-variation-settings: "wght" 600;
 }
 
 .portfolio__video-container {
@@ -438,7 +440,7 @@ video::-webkit-media-controls {
 }
 
 .portfolio__controls {
-  @apply absolute top-8 md:top-auto bottom-8 left-8 right-8 z-30 flex flex-col md:flex-row gap-6 md:gap-4 justify-between items-start md:items-end;
+  @apply absolute top-8 md:top-auto bottom-8 left-8 right-8 z-30 flex flex-col md:flex-row gap-6 md:gap-4 justify-between items-start md:items-center;
 }
 
 .portfolio__play-button {
@@ -446,7 +448,7 @@ video::-webkit-media-controls {
 }
 
 .portfolio__title {
-  @apply mb-0 text-white text-xl;
+  @apply mb-0 text-white text-6xl;
 }
 
 .gallery-row {
