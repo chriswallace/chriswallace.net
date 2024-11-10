@@ -10,6 +10,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="public, max-age=86400">
+  <meta http-equiv="Expires" content="86400">
   {% seo title=true %}
 
   <link rel="stylesheet" href="https://use.typekit.net/eub1ezs.css">
