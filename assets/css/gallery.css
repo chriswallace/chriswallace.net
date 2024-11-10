@@ -1,0 +1,44 @@
+.gallery-row {
+  @apply grid grid-cols-3 gap-2;
+
+  .image-wrapper {
+    @apply flex justify-center;
+  }
+
+  img {
+    @apply w-full mb-4;
+  }
+
+  h3 {
+    @apply mt-0 mb-12;
+  }
+}
+
+.zoom-container {
+  @apply mb-6 aspect-[40/27];
+}
+
+.zoomable {
+  @apply cursor-pointer flex flex-col justify-center z-[1];
+  transition: transform 0.3s ease, top 0.3s ease, left 0.3s ease,
+    width 0.3s ease, height 0.3s ease;
+
+  &[data-type="video"],
+  img {
+    @apply w-auto h-auto;
+  }
+}
+
+.zoom-fullscreen {
+  @apply z-[9999] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  transition: all 0.3s ease;
+}
+
+.page-overlay {
+  @apply fixed inset-0 w-screen h-screen bg-black/75 z-[9998] hidden 
+         pointer-events-none;
+
+  .zoom-active & {
+    @apply block pointer-events-auto;
+  }
+}

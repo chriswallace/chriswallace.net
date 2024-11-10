@@ -1,3 +1,69 @@
+@layer utilities {
+  /* Base Typography */
+  .base-text {
+    @apply text-base md:text-lg text-gray-500 dark:text-gray-400;
+    font-variation-settings: "wght" 140;
+  }
+
+  .heading-base {
+    @apply text-gray-950 dark:text-white mb-6;
+    font-variation-settings: "wght" 140;
+  }
+
+  .content-width {
+    @apply max-w-3xl;
+  }
+
+  .wide-content {
+    @apply max-w-[1600px];
+  }
+
+  /* Layout */
+  .content-spacing {
+    @apply mx-[16px] md:mx-[32px] md:ml-[112px];
+  }
+
+  .hr-separator {
+    @apply mt-12 mb-8 sm:mt-16 sm:mb-12 w-[48px] bg-primary-500 border-none h-0.5 overflow-hidden;
+  }
+
+  /* Interactive Elements */
+  .interactive-hover {
+    @apply transition-colors duration-150 ease-in-out;
+  }
+
+  /* Custom Animations */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes wave {
+    40% {
+      transform: rotate(0deg);
+    }
+    44% {
+      transform: rotate(-20deg);
+    }
+    48% {
+      transform: rotate(10deg);
+    }
+    52% {
+      transform: rotate(-10deg);
+    }
+    56% {
+      transform: rotate(5deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+  }
+}
+
 .emoji-font {
   font-family: "Noto Color Emoji";
 }

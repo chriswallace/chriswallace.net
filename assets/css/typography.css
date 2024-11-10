@@ -1,116 +1,66 @@
-html {
-  font-size: var(--font-size-base);
-}
+@layer base {
+  html {
+    font-size: var(--font-size-base);
+  }
 
-body {
-  @apply font-normal text-base md:text-lg text-gray-500 dark:text-gray-400;
-  font-variation-settings: "wght" 140;
-}
+  body {
+    @apply base-text;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  @apply mb-6;
-}
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply heading-base content-width;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  @apply text-gray-950 dark:text-white;
-  font-variation-settings: "wght" 140;
-}
+  h1 {
+    @apply text-6xl lg:text-7xl 2xl:max-w-7xl;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol {
-  @apply max-w-3xl;
-}
+  h2 {
+    @apply text-xl lg:text-4xl mt-16 sm:mt-24;
+    font-variation-settings: "wght" 480;
+  }
 
-p,
-ul,
-ol {
-  @apply mb-12 text-gray-500 dark:text-gray-400;
-}
+  h3 {
+    @apply text-base lg:text-3xl mb-2 mt-6 sm:mt-12 dark:text-gray-200;
+  }
 
-h1 {
-  @apply text-6xl lg:text-7xl md:max-w-3xl 2xl:max-w-7xl mb-6;
-}
+  h4,
+  h5,
+  h6 {
+    @apply text-lg lg:text-2xl pb-2 mt-6 sm:mt-12 mb-2 dark:border-gray-200;
+  }
 
-h2 {
-  @apply text-xl lg:text-4xl mt-16 sm:mt-24 mb-6;
-  font-variation-settings: "wght" 480;
-}
+  /* Links */
+  a {
+    @apply dark:text-gray-200 underline underline-offset-4 decoration-2 
+           decoration-primary-300 hover:decoration-primary-700
+           dark:decoration-primary-500 dark:hover:decoration-white dark:hover:text-white;
+    text-decoration-skip-ink: auto;
+    font-variation-settings: "wght" 480;
+  }
 
-h3 {
-  @apply text-base lg:text-3xl mb-2 mt-6 sm:mt-12 dark:text-gray-200;
-}
+  /* Content */
+  p,
+  ul,
+  ol {
+    @apply content-width mb-12 text-gray-500 dark:text-gray-400;
+  }
 
-h4,
-h5,
-h6 {
-  @apply text-lg lg:text-2xl pb-2 mt-6 sm:mt-12 mb-2 dark:border-gray-200;
-}
+  article {
+    @apply pt-16 md:pt-0;
 
-a {
-  @apply dark:text-gray-200 dark:decoration-primary-500 dark:decoration-solid dark:hover:decoration-white dark:hover:text-white underline underline-offset-4 decoration-solid decoration-2 decoration-primary-300 hover:decoration-primary-700;
-  text-decoration-skip-ink: auto;
-  font-variation-settings: "wght" 480;
-}
+    ul {
+      @apply mb-12 list-disc ml-4 pl-2;
+    }
 
-.primary-heading {
-  @apply text-6xl mt-12 mb-8 -ml-3 mr-0 lowercase;
-}
-
-.primary-heading:before {
-  @apply inline-block mr-[-0.5em];
-  content: "/";
-}
-
-.primary-heading-no-slash {
-  @apply text-6xl mt-2 md:mt-0 mb-12 font-light lowercase;
-}
-
-.sub-heading {
-  @apply text-xl mb-12 md:mb-16 max-w-3xl;
-  font-variation-settings: "wght" 450;
-}
-
-.sub-heading-curated {
-  @apply text-base md:text-xl -mt-1 mb-12 relative;
-  line-height: 1.55;
-}
-
-article {
-  @apply pt-16 md:pt-0;
-}
-
-article ul {
-  @apply mb-12 list-disc ml-4 pl-2;
-}
-
-article li {
-  @apply mb-2;
-}
-
-caption {
-  @apply text-xs sm:text-base text-gray-900 my-2 mx-4 sm:my-4 block text-center dark:text-gray-300;
-}
-
-hr {
-  @apply w-[40px] border-primary-500 border-t-4 h-[0] pb-0;
-}
-
-p + hr {
-  @apply mt-0 mb-12;
+    li {
+      @apply mb-2;
+    }
+  }
 }

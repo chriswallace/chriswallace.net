@@ -72,15 +72,14 @@
 
 .menu {
   @apply order-2 md:order-1 md:h-screen grow bg-gray-100 dark:bg-gray-950;
-}
 
-.menu ul {
-  @apply w-[220px];
-}
-
-.menu a {
-  @apply p-4 py-6 md:py-6 block font-normal capitalize leading-none no-underline decoration-2 text-primary-600 dark:text-white border-b border-gray-300 dark:border-gray-900  dark:bg-gray-950 hover:bg-gray-100 dark:hover:bg-primary-600;
-  font-variation-settings: "wght" 140;
+  a {
+    @apply p-4 py-6 block capitalize leading-none no-underline decoration-2 
+           text-primary-600 dark:text-white border-b border-gray-300 
+           dark:border-gray-900 dark:bg-gray-950 hover:bg-gray-100 
+           dark:hover:bg-primary-600;
+    font-variation-settings: "wght" 140;
+  }
 }
 
 .site-title {
@@ -93,4 +92,12 @@
 
 .open-menu .site-title {
   @apply bottom-2 md:bottom-0 md:left-0;
+}
+
+.ui-navbar {
+  @apply w-[calc(220px+var(--navbar-width)*.75)] md:w-[calc(220px+var(--navbar-width))] 
+         fixed left-auto md:left-0 right-0 md:right-auto top-0 md:h-full 
+         md:bg-gray-100 dark:md:bg-gray-950 z-40 overflow-x-hidden 
+         transform translate-x-[220px] md:-translate-x-[220px] 
+         transition-transform duration-200 ease-in-out;
 }

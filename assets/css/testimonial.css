@@ -1,0 +1,27 @@
+.testimonial {
+  @apply flex flex-col items-center justify-center rounded-2xl px-8 py-16 
+         text-center lg:p-16;
+
+  &__quote {
+    @apply mx-auto max-w-[36rem];
+    font-variation-settings: "wght" 430;
+  }
+
+  &__text {
+    @apply mb-6 md:mb-8 text-center text-[1.1rem] md:text-[1.2rem] 
+           leading-[1.75] tracking-0;
+  }
+
+  &__author {
+    @apply mb-0 text-center text-[0.84rem] sm:text-[0.9rem] leading-[1.75];
+  }
+
+  &__emphasis {
+    @apply dark:text-white;
+  }
+
+  &__highlight {
+    @apply underline decoration-primary-500 underline-offset-4 dark:text-white;
+    font-variation-settings: "wght" 600;
+  }
+}

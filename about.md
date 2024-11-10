@@ -8,17 +8,17 @@ thumbnail: /assets/images/thumbs/bio.png
 
 <div class="content-container">
     <div class="bio-grid">
-        <div class="image-grid fade-in-element">
-            <img src="https://ik.imagekit.io/UltraDAO/wallace/wifey.jpg?tr=w-700,q=70" alt="me and my wife posing in front of her mom's family heirloom piano" class="image one">
-            <img src="https://ik.imagekit.io/UltraDAO/wallace/lincoln.jpg?tr=w-700,q=70" alt="a portrait of me in a suit leaning against my car, a Lincoln MKZ" class="image two">
-            <img src="https://ik.imagekit.io/UltraDAO/wallace/maddie.jpg?tr=w-700,q=70" alt="my daughter and I posing for a photo at sunset on Mount Haleakala in Maui, Hawaii" class="image three">
-            <img src="https://ik.imagekit.io/UltraDAO/wallace/work.jpg?tr=w-700,q=70" alt="Me talking to Jason Cohen, founder of WP Engine, at a WordPress industry event" class="image four">
-            <img src="https://ik.imagekit.io/UltraDAO/wallace/dare.jpg?tr=w-700,q=70" alt="Me wearing a fanny pack from the D.A.R.E. program, smiling" class="image five">
-            <img src="https://ik.imagekit.io/UltraDAO/wallace/guitar.jpg?tr=w-700,q=70" alt="Me hugging my new Gibson guitar, a gift received for my birthday" class="image six">
+        <div class="bio-grid__image-container fade-in-element">
+            <img src="https://ik.imagekit.io/UltraDAO/wallace/wifey.jpg?tr=w-700,q=70" alt="me and my wife posing in front of her mom's family heirloom piano" class="bio-grid__image bio-grid__image--one">
+            <img src="https://ik.imagekit.io/UltraDAO/wallace/lincoln.jpg?tr=w-700,q=70" alt="a portrait of me in a suit leaning against my car, a Lincoln MKZ" class="bio-grid__image bio-grid__image--two">
+            <img src="https://ik.imagekit.io/UltraDAO/wallace/maddie.jpg?tr=w-700,q=70" alt="my daughter and I posing for a photo at sunset on Mount Haleakala in Maui, Hawaii" class="bio-grid__image bio-grid__image--three">
+            <img src="https://ik.imagekit.io/UltraDAO/wallace/work.jpg?tr=w-700,q=70" alt="Me talking to Jason Cohen, founder of WP Engine, at a WordPress industry event" class="bio-grid__image bio-grid__image--four">
+            <img src="https://ik.imagekit.io/UltraDAO/wallace/dare.jpg?tr=w-700,q=70" alt="Me wearing a fanny pack from the D.A.R.E. program, smiling" class="bio-grid__image bio-grid__image--five">
+            <img src="https://ik.imagekit.io/UltraDAO/wallace/guitar.jpg?tr=w-700,q=70" alt="Me hugging my new Gibson guitar, a gift received for my birthday" class="bio-grid__image bio-grid__image--six">
         </div>
-        <div class="bio-content">
-            <p class="sub-heading fade-in-element">Hey there! I'm a design leader with a passion for code who loves creating digital products that make people smile. When I'm not geeking out over pixels and prototypes, I'm dreaming up ways to use tech to bring people together and make the world a bit more awesome.</p>
-            <hr class="fade-in-element -mt-4">
+        <div class="bio-grid__content">
+            <p class="bio-grid__sub-heading fade-in-element">Hey there! I'm a design leader with a passion for code who loves creating digital products that make people smile. When I'm not geeking out over pixels and prototypes, I'm dreaming up ways to use tech to bring people together and make the world a bit more awesome.</p>
+            <hr class="fade-in-element hr-separator">
             <p class="fade-in-element">I thrive on building things from scratch, especially startups. My approach is simple: put people first, work together, and move fast while staying flexible. This mindset has helped me guide several companies to successful exits and major milestones over the years.</p>
             <p class="fade-in-element">One of my proudest achievements was leading an agency team that earned Emmy nominations for our work on AMC shows like Breaking Bad and The Walking Dead. When <a href="https://10up.com">10up</a> acquired us, I built and led a design team of 20 talented folks, partnering with amazing clients like Google, Facebook, Microsoft, and even The Nobel Prize.</p>
             <p class="fade-in-element">So the question now is, what am I looking for? I’m seeking a role at a company with a clear and important mission, a team that understands the value a great design leader brings, working on a product that is poised to change the game—with just a teeeeny bit of help from me.</p>
@@ -32,20 +32,20 @@ thumbnail: /assets/images/thumbs/bio.png
                     <path d="M75.452 42.1086C75.105 41.2987 74.1226 41.0131 73.3049 41.0867C72.5991 41.1515 71.8226 41.605 72.2755 42.3943C72.4402 42.6829 72.5873 43.0097 72.8049 43.263C73.0432 43.5398 73.2844 43.8196 73.5226 44.0964C73.902 44.5382 74.4844 44.7208 75.0579 44.6677C75.4991 44.6265 76.0256 44.4086 75.9403 43.8785C75.8932 43.584 75.8609 43.2836 75.7991 42.9921C75.7344 42.6858 75.5785 42.3972 75.455 42.1086H75.452Z" fill="currentColor" />
                 </svg>
 
-                <p class="mt-4">Chris Wallace</p>
+                <p class="bio-grid__author mt-4">Chris Wallace</p>
             </div>
 
-            <h2 class="fade-in-element">Buzzwords</h2>
-            <p class="fade-in-element">These may or may not mean anything to you but I have to include them to win over our new AI overlords: Product Design, UX/UI, User Research, Content Design, Design Systems, Figma, Web3, Blockchain, React, Next.js, SvelteKit, HTML, CSS, JavaScript, Typescript, Prototyping, Midjourney, Chat-GPT, Claude, Runway, Canva.</p>
-            <h2 class="fade-in-element">Media and Interviews</h2>
-            <ul class="space-y-4">
-                <li class="fade-in-element"><a href="https://www.culture3.xyz/posts/chris-wallace-and-his-plan-to-bring-hollywood-production-quality-into-web3">Chris Wallace's plan to bring Hollywood production quality to web3</a></li>
-                <li class="fade-in-element"><a href="https://podcasts.proof.xyz/artist-spotlight-woodies-artist-and-collector-chris-wallace/">The Woodies PFP and a Guide to HEN Collecting with Chris Wallace with Kevin Rose</a></li>
-                <li class="fade-in-element"><a href="https://www.youtube.com/watch?v=xKiwjL7zzTc">The future of decentralized IP</a></li>
+            <h2 class="bio-grid__heading fade-in-element">Buzzwords</h2>
+            <p class="bio-grid__text fade-in-element">These may or may not mean anything to you but I have to include them to win over our new AI overlords: Product Design, UX/UI, User Research, Content Design, Design Systems, Figma, Web3, Blockchain, React, Next.js, SvelteKit, HTML, CSS, JavaScript, Typescript, Prototyping, Midjourney, Chat-GPT, Claude, Runway, Canva.</p>
+            <h2 class="bio-grid__heading fade-in-element">Media and Interviews</h2>
+            <ul class="bio-grid__list space-y-4">
+                <li class="bio-grid__list-item fade-in-element"><a href="https://www.culture3.xyz/posts/chris-wallace-and-his-plan-to-bring-hollywood-production-quality-into-web3">Chris Wallace's plan to bring Hollywood production quality to web3</a></li>
+                <li class="bio-grid__list-item fade-in-element"><a href="https://podcasts.proof.xyz/artist-spotlight-woodies-artist-and-collector-chris-wallace/">The Woodies PFP and a Guide to HEN Collecting with Chris Wallace with Kevin Rose</a></li>
+                <li class="bio-grid__list-item fade-in-element"><a href="https://www.youtube.com/watch?v=xKiwjL7zzTc">The future of decentralized IP</a></li>
             </ul>
-            <h2>Music I'm digging</h2>
-            <div class="music-list">
-                <div class="music-item">
+            <h2 class="bio-grid__heading">Music I'm digging</h2>
+            <div class="bio-grid__music-list">
+                <div class="bio-grid__music-item">
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/63TSwNxnZA6QJXuTCELlBW?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
             </div>

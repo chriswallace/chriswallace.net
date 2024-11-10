@@ -1,0 +1,57 @@
+.contact-grid {
+  @apply grid grid-cols-2 md:grid-cols-3 max-w-6xl gap-0 mb-12 justify-center items-stretch text-center;
+}
+
+.contact-grid__item {
+  @apply border-b border-gray-300 dark:border-gray-700 border-r px-6 pt-16 pb-12 md:pt-16 relative;
+}
+
+.contact-grid__icon {
+  @apply max-w-[48px] max-h-[48px] mx-auto p-0 relative;
+}
+
+.contact-grid__icon:after {
+  @apply absolute top-[-16px] right-[-16px] w-[16px] h-[16px] text-[12px] text-black rounded-full overflow-hidden p-0 leading-[1.5] text-center align-middle;
+}
+
+.contact-grid__icon--yes:after {
+  @apply bg-green-500;
+  content: "\2713";
+}
+
+.contact-grid__icon--no:after {
+  @apply bg-primary-500;
+  content: "\2715";
+}
+
+.contact-grid__svg {
+  @apply max-w-[48px] max-h-[48px] stroke-primary-600 dark:stroke-primary-500 mx-auto;
+}
+
+.contact-grid__title {
+  @apply mt-6 mb-0;
+}
+
+.contact-grid__text {
+  @apply text-gray-500 dark:text-gray-600;
+}
+
+.contact-grid__item:nth-child(even) {
+  @apply border-r-0 md:border-r;
+}
+
+.contact-grid__item:nth-child(3n) {
+  @apply md:border-r-0;
+}
+
+.contact-grid__item:last-child {
+  @apply border-b-0;
+}
+
+.contact-grid__item:nth-last-child(2) {
+  @apply border-b-0;
+}
+
+.contact-grid__item:nth-last-child(3) {
+  @apply md:border-b-0;
+}

@@ -1,9 +1,11 @@
 .button {
-  @apply cursor-pointer rounded-lg px-3 py-2 bg-primary-700 text-white hover:bg-primary-600;
-}
+  @apply cursor-pointer rounded-lg px-3 py-2 bg-primary-700 text-white 
+         hover:bg-primary-600 interactive-hover;
 
-.button svg {
-  @apply inline-block mr-1 align-middle w-[18px] h-[18px] top-[-4px] fill-current stroke-current;
+  svg {
+    @apply inline-block mr-1 align-middle w-[18px] h-[18px] top-[-4px] 
+           fill-current stroke-current;
+  }
 }
 
 .button-dark {

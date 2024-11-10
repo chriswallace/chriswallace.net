@@ -2,12 +2,14 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "tokens.css";
-@import "typography.css";
 @import "utilities.css";
+@import "typography.css";
 @import "buttons.css";
 @import "navigation.css";
+@import "contact-grid.css";
 @import "footer.css";
 @import "resume.css";
+@import "about.css";
 @import "animations.css";
 
 body {
@@ -23,8 +25,7 @@ article {
 }
 
 .open-menu .ui-navbar {
-  @apply translate-x-0;
-  z-index: 999;
+  @apply translate-x-0 z-[999];
 }
 
 .ui-content {
@@ -126,64 +127,6 @@ article {
   @apply mr-6;
 }
 
-.contact-grid {
-  @apply grid grid-cols-2 md:grid-cols-3 max-w-6xl gap-0 mb-12 justify-center items-stretch text-center;
-}
-
-.contact-grid .item {
-  @apply border-b border-gray-300 dark:border-gray-700 border-r px-6 pt-16 pb-12 md:pt-16 relative;
-}
-
-.contact-grid .item .icon {
-  @apply max-w-[48px] max-h-[48px] mx-auto p-0 relative;
-}
-
-.contact-grid .item .icon:after {
-  @apply absolute top-[-16px] right-[-16px] w-[16px] h-[16px] text-[12px] text-black rounded-full overflow-hidden p-0 leading-[1.5] text-center align-middle;
-}
-
-.contact-grid .item .icon.yes:after {
-  @apply bg-green-500;
-  content: "\2713";
-}
-
-.contact-grid .item .icon.no:after {
-  @apply bg-primary-500;
-  content: "\2715";
-}
-
-.contact-grid .item svg {
-  @apply max-w-[48px] max-h-[48px] stroke-primary-600 dark:stroke-primary-500 mx-auto;
-}
-
-.contact-grid .item h3 {
-  @apply mt-6 mb-0;
-}
-
-.contact-grid .item p {
-  @apply text-gray-500 dark:text-gray-600;
-}
-
-.contact-grid .item:nth-child(even) {
-  @apply border-r-0 md:border-r;
-}
-
-.contact-grid .item:nth-child(3n) {
-  @apply md:border-r-0;
-}
-
-.contact-grid .item:last-child {
-  @apply border-b-0;
-}
-
-.contact-grid .item:nth-last-child(2) {
-  @apply border-b-0;
-}
-
-.contact-grid .item:nth-last-child(3) {
-  @apply md:border-b-0;
-}
-
 /* Resume Page */
 
 .download-resume {
@@ -198,61 +141,12 @@ article {
   @apply fill-current;
 }
 
-/* About page */
-
-.bio-grid {
-  @apply sm:grid sm:grid-cols-3 lg:grid-cols-2 max-w-7xl sm:gap-6 lg:gap-24;
-}
-
-.bio-content {
-  @apply sm:col-span-2 lg:col-span-1;
-}
-
-.image-grid {
-  @apply relative my-8 sm:mb-16 sm:mt-0 md:mb-0 w-auto aspect-square sm:aspect-[9/22] order-2;
-}
-
-.image-grid img {
-  @apply rounded-md max-h-full;
-}
-
-.image {
-  @apply rounded-md absolute shadow-lg drop-shadow transform;
-}
-
-.image.one {
-  @apply left-0 top-[14%] w-[44%] sm:top-0 md:left-[4%] sm:w-[56%] rotate-[-1.8deg] z-20;
-}
-
-.image.two {
-  @apply left-[33%] top-0 w-[38%] sm:top-[12%] sm:left-[50%] sm:w-[50%] rotate-[1.5deg] z-10;
-}
-
-.image.three {
-  @apply right-0 top-[32%] w-[38%] sm:top-[34%] sm:left-0 sm:right-auto sm:w-[58%] rotate-[3deg] z-30;
-}
-
-.image.four {
-  @apply left-[35%] top-[61%] w-[60%] sm:top-[50%] sm:w-[54%] sm:left-auto sm:right-[5%] rotate-[-1.8deg] z-40;
-}
-
-.image.five {
-  @apply right-[5%] top-[5%] w-[20%] sm:top-[55%] sm:w-[35%] sm:left-[13%] sm:right-auto sm:rotate-[-1.8deg] z-10 md:z-40;
-}
-
-.image.six {
-  @apply left-[6%] top-[56%] w-[30%] sm:top-[65%] sm:w-[28%] sm:left-[44%] rotate-[1.8deg] z-40;
-}
-
 .video-player {
   @apply aspect-[40/27] flex flex-col items-center justify-center sm:rounded-md overflow-hidden bg-black;
 }
 
 .video-player video {
-  max-width: 100%;
-  height: auto;
-  display: block; /* Ensures no extra space around the video element */
-  margin: 0 auto; /* Centers the video player */
+  @apply max-w-full h-auto block mx-auto;
 }
 
 /* Custom Controls (Optional) */
@@ -261,7 +155,7 @@ This gives you more control over the look and feel of the player: */
 
 /* Hide default controls */
 video::-webkit-media-controls {
-  display: none !important;
+  @apply hidden !important;
 }
 
 /* Portfolio Page */
@@ -322,47 +216,26 @@ video::-webkit-media-controls {
 
 /* Zoomable styles */
 .zoomable {
-  cursor: pointer;
-  transition: transform 0.3s ease, top 0.3s ease, left 0.3s ease,
-    width 0.3s ease, height 0.3s ease;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @apply cursor-pointer transition-transform duration-300 ease-in-out z-10 flex flex-col justify-center;
 }
 
 .zoom-fullscreen {
-  z-index: 9999;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease;
+  @apply z-[999] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-in-out;
 }
 
 /* Overlay */
 .page-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.75);
-  z-index: 9998;
-  pointer-events: none;
+  @apply hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 z-[999] pointer-events-none;
 }
 
 .zoom-active .page-overlay {
-  display: block;
-  pointer-events: auto;
+  @apply block pointer-events-auto;
 }
 
 /* Ensure media maintains a 4:3 aspect ratio */
 .zoomable[data-type="video"],
 .zoomable img {
-  width: auto;
-  height: auto;
+  @apply w-auto h-auto;
 }
 
 .announcement {

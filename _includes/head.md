@@ -12,8 +12,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo title=true %}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://use.typekit.net/eub1ezs.css">
   <link rel="stylesheet" href="/assets/main.css?v={{ site.version }}">
   <link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/UltraDAO/wallace/favicon.png">
