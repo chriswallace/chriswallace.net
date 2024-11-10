@@ -18,7 +18,7 @@
   }
 
   h1 {
-    @apply text-6xl lg:text-7xl 2xl:max-w-7xl;
+    @apply text-5xl lg:text-7xl 2xl:max-w-7xl;
   }
 
   h2 {

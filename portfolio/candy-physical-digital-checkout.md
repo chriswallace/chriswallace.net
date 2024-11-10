@@ -32,7 +32,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-physical-digital-banner.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-physical-digital-banner.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-physical-digital-banner.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-physical-digital-banner.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-physical-digital-banner.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-physical-digital-banner.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element mb-1.5" alt="" loading="lazy">
 </div>
 
-<div class="content-container-wo bg-[#444444] text-center">
+<div class="content-container-wo bg-[#444444] text-center mb-12">
   <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy" class="fade-in-element max-h-full max-w-3xl mx-auto">
       <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.mov/ik-video.mp4" type="video/mp4">
       Your browser does not support HTML5 video.

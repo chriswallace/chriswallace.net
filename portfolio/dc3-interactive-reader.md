@@ -29,9 +29,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png
 </div>
 
 <div class="content-container-wo flex flex-col mb-12">
-  <div class="mx-auto flex flex-col">
-    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element" alt="" loading="lazy">
-  </div>
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element mb-1.5" alt="" loading="lazy">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block" alt="" loading="lazy">
 </div>
 
 <div class="content-container fade-in-element">
@@ -48,8 +47,4 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png
       Visit DC3 Interactive Reader &rarr;
     </a>
   </p>
-</div>
-
-<div class="content-container-wo">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
 </div>

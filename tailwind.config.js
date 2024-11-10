@@ -90,7 +90,7 @@ module.exports = {
         "6xl": [
           "1.75rem",
           {
-            lineHeight: "1.75",
+            lineHeight: "1.5",
             letterSpacing: "0",
           },
         ],

@@ -47,5 +47,5 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail
   <p class="fade-in-element">I was asked to conceptualize what a token airdrop farming experience might look like for an L2 blockchain on the Ethereum network. The result was a concept called "Palm Quest" which housed a series of blockchain-based activities that allowed users to both earn points (named "fronds") and learn about the blockchain network itself.</p>
   <p class="fade-in-element">This project included collaborating with a team across multiple disciplines. Not only did I design the brand identity and application, I also designed a series of game ideas, quests, and created the prototype web application in SvelteKit.</p>
   <p class="fade-in-element">I also dove into custom cursor design and web components, creating a set of UI dialogs that can be dragged around the screen and minimized into a small toolbar. I also connected the app to the blockchain to enable wallet connection and also added a fun "frond party" animation when the user first enters the experience.</p>
-  <p class="fade-in-element"><a href="https://palm-quest.vercel.app/">Visit Palm Quest &rarr;</a></p>
+  <p class="fade-in-element"><a href="https://palm-quest.vercel.app/" target="_blank">Visit Palm Quest &rarr;</a></p>
 </div>

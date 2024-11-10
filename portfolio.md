@@ -61,7 +61,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
                 </a>
             </div>
-            <h3 class="portfolio-list__title"><a href="https://comic.candy.io/1">DC3 Interactive Comic Book Reader</a></h3>
+            <h3 class="portfolio-list__title"><a href="/portfolio/dc3-interactive-reader/">DC3 Interactive Comic Book Reader</a></h3>
             <p class="portfolio-list__description">An interactive comic book reader application for Candy's DC3 digital comic collection.</p>
         </div>
         <div class="portfolio-list__item fade-in-element">

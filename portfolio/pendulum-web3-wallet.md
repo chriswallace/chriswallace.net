@@ -28,8 +28,11 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.p
   </dl>
 </div>
 
-<div class="content-container-wo">
-    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element mb-12" alt="" loading="lazy">
+<div class="content-container-wo bg-[#E4B043] text-center mb-12">
+  <video id="portfolioVideo" data-type="video" width="100%" controlslist="nodownload nofullscreen noremoteplayback" disablePictureInPicture muted playsinline autoplay loop loading="lazy" class="fade-in-element max-w-4xl mx-auto" poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/demo-workflows.mov/ik-video.mp4/ik-thumbnail.jpg?updatedAt=1730426417205">
+      <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/demo-workflows.mov/ik-video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+  </video>
 </div>
 
 <div class="content-container fade-in-element">
@@ -39,10 +42,6 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.p
 
   <p class="fade-in-element">And finally, I created a series of prototypes in Figma to demonstrate how each of these features might work. These prototypes help me identify issues within flows and the various interfaces as I start to understand how users might receive each of these features.</p>
 
-  <div class="max-w-4xl">
-    <video id="portfolioVideo" data-type="video" width="100%" loading="lazy" class="fade-in-element rounded-sm" poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/demo-workflows.mov/ik-video.mp4/ik-thumbnail.jpg?updatedAt=1730426417205" controls autoplay playsinline loop muted>
-        <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/demo-workflows.mov/ik-video.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
-  </div>
+  <p class="fade-in-element"><a href="https://www.figma.com/proto/Ef4V9oBQibbfKvqDCmjCfn/pendulum-wallet?page-id=0%3A1&node-id=1-2&starting-point-node-id=1%3A2&show-proto-sidebar=1&t=PvNDxZeXvNuTqqZW-1" target="_blank">Check out the Figma Prototype &rarr;</a></p>
+
 </div>
