@@ -2,7 +2,7 @@
 layout: page
 title: Bio
 permalink: /bio/
-description: A visionary, grounded in resilience and innovation, with 20 years of experience crafting experiences for global brands.
+description: A seasoned Chief Design Officer with 20+ years of experience leading design teams and crafting digital products that drive business growth.
 thumbnail: /assets/images/thumbs/bio.png
 ---
 
@@ -17,11 +17,11 @@ thumbnail: /assets/images/thumbs/bio.png
             <img src="https://ik.imagekit.io/UltraDAO/wallace/guitar.jpg?tr=w-700,q=70" alt="Me hugging my new Gibson guitar, a gift received for my birthday" class="bio-grid__image bio-grid__image--six">
         </div>
         <div class="bio-grid__content">
-            <p class="bio-grid__sub-heading fade-in-element">Hey there! I'm a design leader with a passion for code who loves creating digital products that make people smile. When I'm not geeking out over pixels and prototypes, I'm dreaming up ways to use tech to bring people together and make the world a bit more awesome.</p>
+            <p class="sub-heading fade-in-element">I'm a design leader who bridges the gap between high-level strategy and hands-on execution. With over two decades of experience building and leading design teams, I help companies transform their digital products through human-centered design while driving measurable business results.</p>
             <hr class="fade-in-element hr-separator">
-            <p class="fade-in-element">I thrive on building things from scratch, especially startups. My approach is simple: put people first, work together, and move fast while staying flexible. This mindset has helped me guide several companies to successful exits and major milestones over the years.</p>
-            <p class="fade-in-element">One of my proudest achievements was leading an agency team that earned Emmy nominations for our work on AMC shows like Breaking Bad and The Walking Dead. When <a href="https://10up.com">10up</a> acquired us, I built and led a design team of 20 talented folks, partnering with amazing clients like Google, Facebook, Microsoft, and even The Nobel Prize.</p>
-            <p class="fade-in-element">So the question now is, what am I looking for? I’m seeking a role at a company with a clear and important mission, a team that understands the value a great design leader brings, working on a product that is poised to change the game—with just a teeeeny bit of help from me.</p>
+            <p class="fade-in-element">As a fractional Chief Design Officer, I bring a unique blend of strategic leadership and technical expertise. I've built and scaled design organizations, established design systems that accelerate development, and collaborated closely with C-suite executives to align design initiatives with business objectives. My approach combines deep product thinking with the ability to roll up my sleeves and contribute directly to production work when needed.</p>
+            <p class="fade-in-element">At <a href="https://10up.com">10up</a>, I built and led a team of 20 designers, working with global brands like Google, Facebook, Microsoft, and The Nobel Prize. Prior to that, I led an Emmy-nominated agency team creating digital experiences for AMC's Breaking Bad and The Walking Dead. Most recently at Candy Digital, I led product design across multiple lines of business and collaborated cross-functionally to redesign Candy's official collectibles marketplace.</p>
+            <p class="fade-in-element">I'm currently seeking opportunities to partner with forward-thinking companies as a fractional Chief Design Officer. If you're looking to elevate your product design, establish effective design processes, or build high-performing teams, let's connect.</p>
 
             <p class="fade-in-element"><a href="mailto:chriswallace7@pm.me?subject=Design%20Inquiry&body=Let&rsquo;s%20work%20together!">Let's get to work</a>,</p>
 

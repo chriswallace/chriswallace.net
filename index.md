@@ -21,55 +21,94 @@ description: Product design leader with over 20 years experience in e-commerce, 
   </h1>
   
   <p class="portfolio-intro fade-in-element">Check out some of my <a href="/portfolio" class="portfolio-intro__link">latest work</a> <svg class="portfolio-intro__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
+</div>
 
-  <div class="portfolio-list">
-    <div class="portfolio-list__item fade-in-element">
-        <a class="portfolio-list__link" href="/portfolio/palm-quest/">
-            <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
-        </a>
-        <h3 class="portfolio-list__title"><a href="/portfolio/palm-quest/">Palm Quest App Prototype</a></h3>
-        <p class="portfolio-list__description">Creating a gamified airdrop farming experience with SvelteKit.</p>
-    </div>
-    <div class="portfolio-list__item fade-in-element">
-        <a class="portfolio-list__link" href="/portfolio/candy-physical-digital-feature/">
-            <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
-        </a>
-        <h3 class="portfolio-list__title"><a href="/portfolio/candy-physical-digital-feature/">Candy.io Physical-Digital Checkout</a></h3>
-        <p class="portfolio-list__description">Designing a new feature for Candy's existing checkout process.</p>
-    </div>
-    <div class="portfolio-list__item fade-in-element">
-        <a class="portfolio-list__link" href="/portfolio/redacted-mlb-game/">
-            <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
-        </a>
-        <h3 class="portfolio-list__title"><a href="/portfolio/redacted-mlb-game/">[Redacted] MLB Game</a></h3>
-        <p class="portfolio-list__description">A series of mockups for a mobile game concept using digital collectibles as game pieces.</p>
-    </div>
-    <div class="portfolio-list__item fade-in-element">
-        <a class="portfolio-list__link" href="/portfolio/candy-marketplace-redesign/">
-            <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
-        </a>
-        <h3 class="portfolio-list__title"><a href="/portfolio/candy-marketplace-redesign/">Candy Marketplace Redesign</a></h3>
-        <p class="portfolio-list__description">A gradual, deliberate shift in design language and product features.</p>
-    </div>
-    <div class="portfolio-list__item fade-in-element">
-        <a class="portfolio-list__link" href="/portfolio/candy-league/">
-            <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
-        </a>
-        <h3 class="portfolio-list__title"><a href="/portfolio/candy-league/">Candy League</a></h3>
-        <p class="portfolio-list__description">Adding clarity and identity to one of Candy's most popular challenge products.</p>
-    </div>
-    <div class="portfolio-list__item fade-in-element">
-        <div class="zoom-container">
-            <a href="/portfolio/dc3-interactive-reader/">
-                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
-            </a>
-        </div>
-        <h3 class="portfolio-list__title"><a href="https://comic.candy.io/1">DC3 Interactive Comic Book Reader</a></h3>
-        <p class="portfolio-list__description">An interactive comic book reader application for Candy's DC3 digital comic collection.</p>
+<div class="content-container-xo">
+  <div class="infinite-scroll-container fade-in-element my-8 relative overflow-hidden group">
+    <div class="scroller flex animate-scroll group-hover:pause-animation">
+      <!-- First set -->
+      <a href="/portfolio/palm-quest/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-600,f-auto" alt="Palm Quest App Prototype" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/candy-physical-digital-feature/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-600,f-auto" alt="Candy.io Physical-Digital Checkout" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/redacted-mlb-game/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-600,f-auto" alt="[Redacted] MLB Game" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/candy-marketplace-redesign/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-600,f-auto" alt="Candy Marketplace Redesign" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/candy-league/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-600,f-auto" alt="Candy League" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/dc3-interactive-reader/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-600,f-auto" alt="DC3 Interactive Comic Book Reader" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/candyvision/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-600,f-auto" alt="CandyVision" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/candy-digital-collectible-deposit-withdrawal/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-600,f-auto" alt="Digital Collectible Deposit/Withdrawal" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/pendulum-crypto-wallet/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-600,f-auto" alt="Pendulum Crypto Wallet (iOS App)" class="hover:opacity-75 transition-opacity">
+      </a>
+      <!-- Duplicate set for seamless scrolling -->
+      <a href="/portfolio/palm-quest/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-600,f-auto" alt="Palm Quest App Prototype" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/candy-physical-digital-feature/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-600,f-auto" alt="Candy.io Physical-Digital Checkout" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/redacted-mlb-game/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-600,f-auto" alt="[Redacted] MLB Game" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/candy-marketplace-redesign/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-600,f-auto" alt="Candy Marketplace Redesign" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/candy-league/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-600,f-auto" alt="Candy League" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/dc3-interactive-reader/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-600,f-auto" alt="DC3 Interactive Comic Book Reader" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/candyvision/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-600,f-auto" alt="CandyVision" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/candy-digital-collectible-deposit-withdrawal/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-600,f-auto" alt="Digital Collectible Deposit/Withdrawal" class="hover:opacity-75 transition-opacity">
+      </a>
+      <a href="/portfolio/pendulum-crypto-wallet/" class="min-w-[340px]">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-600,f-auto" alt="Pendulum Crypto Wallet (iOS App)" class="hover:opacity-75 transition-opacity">
+      </a>
     </div>
   </div>
 </div>
-
+<div class="content-container">
+    <div class="mb-16 max-w-4xl">
+        <div class="space-y-12 fade-in-element">
+            <h2 class="uppercase fade-in-element">A Fractional Chief Design Officer</h2>
+            <div class="md:grid md:grid-cols-2 gap-8 lg:gap-12 mb-8 lg:mb-12 space-y-12 md:space-y-0">
+                <p class="text-lg fade-in-element mb-0"><strong class="dark:text-white">Design your design org</strong> Get customized guidance on team structure, hiring plans, and job descriptions.</p>
+                <p class="text-lg fade-in-element mb-0"><strong class="dark:text-white">Establish or scale design systems</strong> I craft customized, connected design systems your engineers can rely on.</p>
+                <p class="text-lg fade-in-element mb-0"><strong class="dark:text-white">Strategic product visioning</strong> Craft compelling product roadmaps that inspire teams and shape the future.</p>
+                <p class="text-lg fade-in-element mb-0"><strong class="dark:text-white">Rock-solid prototyping</strong> Bring your vision to life with high-fidelity prototypes that look & feel real (because they are!).</p>
+                <p class="text-lg fade-in-element mb-0"><strong class="dark:text-white">Access lead-level design production</strong> Channel my 20 years of design experience into gorgeous, functional interfaces.</p>
+                <p class="text-lg fade-in-element mb-0"><strong class="dark:text-white">Brand amplification</strong> Transform your design language into a revenue-driving force across all touchpoints.</p>
+            </div>
+            <p class="fade-in-element">
+                <a href="/bio" class="mr-3 inline-block">
+                    Get to know me
+                </a>
+                or
+                <a href="/bio" class="ml-3 inline-block">
+                    Email me &rarr;
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
 {% if jekyll.environment == 'production' %}
 
 <script src="/assets/js/typewriterHome.min.js?v={{ site.version }}"></script>
