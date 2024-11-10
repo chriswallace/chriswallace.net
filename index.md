@@ -24,6 +24,13 @@ description: Product design leader with over 20 years experience in e-commerce, 
 
   <div class="portfolio-list">
     <div class="portfolio-list__item fade-in-element">
+        <a class="portfolio-list__link" href="/portfolio/palm-quest/">
+            <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
+        </a>
+        <h3 class="portfolio-list__title"><a href="/portfolio/palm-quest/">Palm Quest App Prototype</a></h3>
+        <p class="portfolio-list__description">Creating a gamified airdrop farming experience with SvelteKit.</p>
+    </div>
+    <div class="portfolio-list__item fade-in-element">
         <a class="portfolio-list__link" href="/portfolio/candy-physical-digital-feature/">
             <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
         </a>
@@ -59,13 +66,6 @@ description: Product design leader with over 20 years experience in e-commerce, 
         </div>
         <h3 class="portfolio-list__title"><a href="https://comic.candy.io/1">DC3 Interactive Comic Book Reader</a></h3>
         <p class="portfolio-list__description">An interactive comic book reader application for Candy's DC3 digital comic collection.</p>
-    </div>
-    <div class="portfolio-list__item fade-in-element">
-        <a class="portfolio-list__link" href="/portfolio/candy-digital-collectible-deposit-withdrawal/">
-            <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
-        </a>
-        <h3 class="portfolio-list__title"><a href="/portfolio/candy-digital-collectible-deposit-withdrawal/">Digital Collectible Deposit/Withdrawal</a></h3>
-        <p class="portfolio-list__description">Web3 withdrawal and deposit of digital collectibles between Candy and self-custody wallets.</p>
     </div>
   </div>
 </div>
