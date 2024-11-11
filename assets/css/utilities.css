@@ -33,7 +33,8 @@
   }
 
   .animate-scroll {
-    animation: scroll 30s linear infinite;
+    animation: scroll 45s linear infinite;
+    will-change: transform;
   }
 
   .pause-animation {
@@ -42,11 +43,11 @@
 
   /* Custom Animations */
   @keyframes scroll {
-    0% {
+    from {
       transform: translateX(0);
     }
-    100% {
-      transform: translateX(-50%);
+    to {
+      transform: translateX(calc(-50% - 0.5px)); /* Prevent subpixel rendering issues */
     }
   }
   @keyframes spin {

@@ -25,7 +25,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
 
 <div class="content-container-xo">
   <div class="infinite-scroll-container fade-in-element my-8 relative overflow-hidden group">
-    <div class="scroller flex animate-scroll group-hover:pause-animation">
+    <div class="scroller flex animate-scroll group-hover:pause-animation w-[5440px]">
       <!-- First set -->
       <a href="/portfolio/palm-quest/" class="min-w-[340px]">
         <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-600,f-auto" alt="Palm Quest App Prototype" class="hover:opacity-75 transition-opacity">
@@ -47,9 +47,6 @@ description: Product design leader with over 20 years experience in e-commerce, 
       </a>
       <a href="/portfolio/candyvision/" class="min-w-[340px]">
         <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-600,f-auto" alt="CandyVision" class="hover:opacity-75 transition-opacity">
-      </a>
-      <a href="/portfolio/candy-digital-collectible-deposit-withdrawal/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-600,f-auto" alt="Digital Collectible Deposit/Withdrawal" class="hover:opacity-75 transition-opacity">
       </a>
       <a href="/portfolio/pendulum-crypto-wallet/" class="min-w-[340px]">
         <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-600,f-auto" alt="Pendulum Crypto Wallet (iOS App)" class="hover:opacity-75 transition-opacity">
@@ -76,9 +73,6 @@ description: Product design leader with over 20 years experience in e-commerce, 
       <a href="/portfolio/candyvision/" class="min-w-[340px]">
         <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-600,f-auto" alt="CandyVision" class="hover:opacity-75 transition-opacity">
       </a>
-      <a href="/portfolio/candy-digital-collectible-deposit-withdrawal/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-600,f-auto" alt="Digital Collectible Deposit/Withdrawal" class="hover:opacity-75 transition-opacity">
-      </a>
       <a href="/portfolio/pendulum-crypto-wallet/" class="min-w-[340px]">
         <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-600,f-auto" alt="Pendulum Crypto Wallet (iOS App)" class="hover:opacity-75 transition-opacity">
       </a>
@@ -86,26 +80,27 @@ description: Product design leader with over 20 years experience in e-commerce, 
   </div>
 </div>
 <div class="content-container">
-    <div class="mb-16 max-w-4xl">
+    <div class="mb-16 max-w-3xl">
         <div class="space-y-12 fade-in-element">
-            <h2 class="uppercase fade-in-element">A Fractional Chief Design Officer</h2>
-            <div class="md:grid md:grid-cols-2 gap-8 lg:gap-12 mb-8 lg:mb-12 space-y-12 md:space-y-0">
-                <p class="text-lg fade-in-element mb-0"><strong class="dark:text-white">Design your design org</strong> Get customized guidance on team structure, hiring plans, and job descriptions.</p>
-                <p class="text-lg fade-in-element mb-0"><strong class="dark:text-white">Establish or scale design systems</strong> I craft customized, connected design systems your engineers can rely on.</p>
-                <p class="text-lg fade-in-element mb-0"><strong class="dark:text-white">Strategic product visioning</strong> Craft compelling product roadmaps that inspire teams and shape the future.</p>
-                <p class="text-lg fade-in-element mb-0"><strong class="dark:text-white">Rock-solid prototyping</strong> Bring your vision to life with high-fidelity prototypes that look & feel real (because they are!).</p>
-                <p class="text-lg fade-in-element mb-0"><strong class="dark:text-white">Access lead-level design production</strong> Channel my 20 years of design experience into gorgeous, functional interfaces.</p>
-                <p class="text-lg fade-in-element mb-0"><strong class="dark:text-white">Brand amplification</strong> Transform your design language into a revenue-driving force across all touchpoints.</p>
-            </div>
-            <p class="fade-in-element">
-                <a href="/bio" class="mr-3 inline-block">
-                    Get to know me
-                </a>
-                or
-                <a href="/bio" class="ml-3 inline-block">
-                    Email me &rarr;
-                </a>
-            </p>
+          <div>
+            <h2 class="uppercase text-2xl md:text-5xl leading-[1.4] md:leading-[1.4] fade-in-element mb-2">Fractional Design Leadership at Your Fingertips</h2>
+            <p class="fade-in-element">Looking for a part-time Head of Design or CDO? Here's how I can help:</p>
+          </div>
+          <hr class="fade-in-element">
+          <div class="md:grid md:grid-cols-2 gap-8 lg:gap-12 mb-8 lg:mb-12 space-y-12 md:space-y-0">
+              <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Design your design org.</span> Get customized guidance on team structure, hiring plans, and job descriptions.</p>
+              <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Establish or scale design systems.</span> I craft customized, connected design systems your engineers can rely on.</p>
+              <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Define product vision.</span> Craft compelling product roadmaps that inspire teams and shape the future.</p>
+              <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Prototype apps or user flows.</span> Bring your vision to life with high-fidelity prototypes that look & feel real (because they are!).</p>
+              <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Deliver lead-level design production.</span> Channel my 20 years of design experience into gorgeous, functional interfaces.</p>
+              <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Amplify your brand language.</span> Transform your app or website's design language into a revenue-driving force across all touchpoints.</p>
+          </div>
+          <p class="fade-in-element">
+              Ready to get a quote? 
+              <a href="/contact" class="ml-1.5 inline-block">
+                  Email me &rarr;
+              </a>
+          </p>
         </div>
     </div>
 </div>
