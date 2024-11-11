@@ -25,7 +25,7 @@ thumbnail: /assets/images/thumbs/resume.png
   <div class="jobs" itemscope itemtype="http://schema.org/Organization">
     <div class="job resume-item" itemprop="employee">
       <div class="metadata fade-in-element">
-        <h4 class="title" itemprop="roleName">Senior Product Designer</h4>
+        <h4 class="title" itemprop="roleName">Lead Product Designer</h4>
         <h3 class="place" itemprop="name">Candy Digital</h3>
         <div class="time-period" itemprop="worksFor">Mar 2024 - Oct 2024</div>
       </div>
@@ -41,7 +41,7 @@ thumbnail: /assets/images/thumbs/resume.png
     </div>
     <div class="job resume-item" itemprop="employee">
       <div class="metadata fade-in-element">
-        <h4 class="title" itemprop="roleName">Design Director, Founder</h4>
+        <h4 class="title" itemprop="roleName">Chief Design Officer</h4>
         <h3 class="place" itemprop="name">UltraDAO Studios</h3>
         <div class="time-period" itemprop="worksFor">Apr 2021 - Mar 2024</div>
       </div>
@@ -69,7 +69,7 @@ thumbnail: /assets/images/thumbs/resume.png
     </div>
     <div class="job resume-item" itemprop="employee">
       <div class="metadata fade-in-element">
-        <h4 class="title" itemprop="roleName">Design Director, Founder</h4>
+        <h4 class="title" itemprop="roleName">Principal Creative Director</h4>
         <h3 class="place" itemprop="name">Lift UX (acquired)</h3>
         <div class="time-period" itemprop="worksFor">Dec 2009 - Aug 2017</div>
       </div>
