@@ -9,7 +9,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
     <span class="announcement__bracket">[</span> 
     <span class="announcement__content">
       <strong class="announcement__date">NOV 2024</strong> 
-      <span class="announcement__text">Currently accepting new fractional CDO clients.</span>
+      <span class="announcement__text">Accepting new work.</span>
       <a class="announcement__link" href="/contact">Talk to Me &rarr;</a>
     </span> 
     <span class="announcement__bracket">]</span>
