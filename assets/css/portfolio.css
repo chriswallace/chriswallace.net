@@ -1,54 +1,55 @@
+.portfolio-container {
+  @apply mx-[16px] xl:mx-[32px];
+}
+
 .portfolio-list {
   @apply mb-12 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8;
+}
 
-  &__item {
-    @apply mb-6;
-  }
+.portfolio-list__item {
+  @apply mb-6;
+}
 
-  &__link {
-    @apply mb-2 inline-block;
-  }
+.portfolio-list__link {
+  @apply mb-2 inline-block;
+}
 
-  &__image {
-    @apply rounded-2xl;
-  }
+.portfolio-list__image {
+  @apply rounded-2xl;
+}
 
-  &__title {
-    @apply my-3;
-  }
+.portfolio-list__title {
+  @apply my-3;
+}
 
-  &__description {
-    @apply mb-0;
+.portfolio-list__description {
+  @apply mb-0 text-sm;
+}
 
-    &:last-of-type {
-      @apply mt-3;
-    }
-  }
+.portfolio-list__description:last-of-type {
+  @apply mt-3;
 }
 
 .portfolio__video-container {
-  @apply relative aspect-[9/12] sm:aspect-[16/9] 2xl:aspect-[21/9] w-full 
-         bg-black/50;
+  @apply relative aspect-[9/12] sm:aspect-[16/9] mx-auto 3xl:rounded-b-2xl bg-black/50;
 }
 
 .portfolio__video-overlay {
-  @apply absolute inset-0 z-20 bg-gradient-to-b from-transparent to-black/60;
+  @apply absolute inset-0 z-20 bg-gradient-to-b from-transparent to-black/60 3xl:rounded-b-2xl;
 }
 
 .portfolio__video {
-  @apply absolute top-0 left-0 z-10 h-full w-full object-cover;
+  @apply absolute top-0 left-0 z-10 h-full w-full object-cover 3xl:rounded-b-2xl;
 }
 
 .portfolio__controls {
-  @apply absolute top-8 bottom-8 left-8 right-8 z-30 flex flex-col md:flex-row 
-         items-start md:items-center justify-between gap-6 md:gap-4 md:top-auto;
+  @apply absolute left-8 right-8 bottom-4 z-30 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-4 md:top-auto;
 }
 
 .portfolio__play-button {
-  @apply flex items-center justify-center gap-3 whitespace-nowrap 
-         text-[0.9rem] leading-[1.75] text-white;
+  @apply flex items-center justify-center gap-3 whitespace-nowrap text-[0.9rem] leading-[1.75] text-white;
 }
 
 .portfolio__title {
-  @apply mb-0 text-[1.75rem] leading-[1.75] tracking-[0] text-white;
+  @apply mb-0 text-[1.3rem] leading-[1.75] tracking-[0] text-white;
 }

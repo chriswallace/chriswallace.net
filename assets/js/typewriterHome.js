@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     const titles = [
-      "I'm your favorite designer's favorite designer.",
-      "2x Emmy Award-nominated Design Director.", 
+      "Your favorite designer's favorite designer.",
+      "A 2x Emmy Award-nominated Design Director.", 
       "Too old for Snapchat but too young for Facebook.",
       "Proudly owned a computer with a turbo button.",
       "Skeuomorphism will always be extremely cool.",

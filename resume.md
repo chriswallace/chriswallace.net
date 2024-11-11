@@ -30,7 +30,7 @@ thumbnail: /assets/images/thumbs/resume.png
         <div class="time-period" itemprop="worksFor">Mar 2024 - Oct 2024</div>
       </div>
       <div class="description fade-in-element">
-        <ul class="list-disc pl-5 space-y-2">
+        <ul>
           <li>Released and maintained a design system to improve efficiency in design and React/Next.js</li>
           <li>Designed and tested new features for digital collectible withdrawal and physical+digital purchases</li>
           <li>Led an overhaul of the Candy website and marketplace experience to better educate users and improve the overall user experience</li>
@@ -46,7 +46,7 @@ thumbnail: /assets/images/thumbs/resume.png
         <div class="time-period" itemprop="worksFor">Apr 2021 - Mar 2024</div>
       </div>
       <div class="description fade-in-element">
-        <ul class="list-disc pl-5 space-y-2">
+        <ul>
           <li>Founded a decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles</li>
           <li>Built and managed a team of artists, engineers, and production specialists</li>
           <li>Drove multi-million dollar revenue within the first six months</li>
@@ -60,7 +60,7 @@ thumbnail: /assets/images/thumbs/resume.png
         <div class="time-period" itemprop="worksFor">Aug 2017 - Sep 2021</div>
       </div>
       <div class="description fade-in-element">
-        <ul class="list-disc pl-5 space-y-2">
+        <ul>
           <li>Scaled design team from 5 to 20 across three continents and 16 countries</li>
           <li>Led a design organization with 20 directors and UX, visual, and content designers</li>
           <li>Personally oversaw large digital transformation projects for the California DMV, Starbucks, Microsoft</li>
@@ -74,7 +74,7 @@ thumbnail: /assets/images/thumbs/resume.png
         <div class="time-period" itemprop="worksFor">Dec 2009 - Aug 2017</div>
       </div>
       <div class="description fade-in-element">
-        <ul class="list-disc pl-5 space-y-2">
+        <ul>
           <li>Led the design and UX for a range of digital publishing clients like The Next Web, AMC Networks</li>
           <li>Received two Emmy Award nominations for second screen apps: The Walking Dead, Breaking Bad, Mad Men</li>
           <li>Successfully acquired by 10up in 2017</li>
@@ -88,7 +88,7 @@ thumbnail: /assets/images/thumbs/resume.png
         <div class="time-period" itemprop="worksFor">Aug 2007 - Dec 2009</div>
       </div>
       <div class="description fade-in-element">
-        <ul class="list-disc pl-5 space-y-2">
+        <ul>
           <li>Developed front-end interfaces for B2B and B2C digital products</li>
           <li>Worked cross-functionally to provide design integration planning</li>
           <li>Managed weekly deployments and visual QA for enterprise.com and other products</li>
@@ -102,7 +102,7 @@ thumbnail: /assets/images/thumbs/resume.png
         <div class="time-period" itemprop="worksFor">May 2006 - Aug 2007</div>
       </div>
       <div class="description fade-in-element">
-        <ul class="list-disc pl-5 space-y-2">
+        <ul>
           <li>Designed and developed e-commerce shops for small businesses, focusing on user-friendly interfaces</li>
           <li>Collaborated with clients daily to plan and design store templates, ensuring brand consistency</li>
           <li>Worked closely with brand designers to implement new identities throughout client shops, enhancing brand recognition</li>
@@ -155,9 +155,13 @@ thumbnail: /assets/images/thumbs/resume.png
 
   <h2 class="fade-in-element">Awards & Recognition</h2>
 
-  <ul itemscope itemtype="http://schema.org/ItemList" class="list-disc pl-5 space-y-2 fade-in-element">
-    <li itemprop="itemListElement">Best Environmental Initiative from an NFT project, <a href="https://nft.nyc/" target="_blank">NFT NYC</a> (2022)</li>
-    <li itemprop="itemListElement">Outstanding Creative Achievement in Interactive Media – Social TV Experience (Nominee), Mad Men: The Fan Cut, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2015)</li>
-    <li itemprop="itemListElement">Outstanding Interactive Program (Nominee), The Walking Dead Story Sync, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2013)</li>
-  </ul>
+  <div class="resume-item">
+    <div class="description fade-in-element">
+      <ul itemscope itemtype="http://schema.org/ItemList">
+        <li itemprop="itemListElement">Best Environmental Initiative from an NFT project, <a href="https://nft.nyc/" target="_blank">NFT NYC</a> (2022)</li>
+        <li itemprop="itemListElement">Outstanding Creative Achievement in Interactive Media – Social TV Experience (Nominee), Mad Men: The Fan Cut, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2015)</li>
+        <li itemprop="itemListElement">Outstanding Interactive Program (Nominee), The Walking Dead Story Sync, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2013)</li>
+      </ul>
+    </div>
+  </div>
 </div>

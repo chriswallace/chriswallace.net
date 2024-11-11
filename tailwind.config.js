@@ -11,16 +11,18 @@ module.exports = {
         'md': "900px", 
         'lg': "1280px",
         'xl': "1640px",
-        '2xl': "1920px",
-        '3xl': {
-          'min': '2560px'
-        },
-        '4xl': {
-          'min': '2940px'
-        }
+        '2xl': "1920px"
       },
     },
     extend: {
+      screens: {
+        '3xl': '2560px',
+        '4xl': '2940px',
+      },
+      spacing: {
+        '8xl': '96rem',
+        '9xl': '128rem',
+      },
       boxShadow: {
         "inset-display": "inset 0 3px 30px #0055aa",
       },

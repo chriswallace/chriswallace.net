@@ -5,6 +5,14 @@
     font-variation-settings: "wght" 140;
   }
 
+  .max-w-8xl {
+    @apply max-w-[2180px];
+  }
+
+  .max-w-9xl {
+    @apply max-w-[2460px];
+  }
+
   .heading-base {
     @apply text-gray-950 dark:text-white mb-6;
     font-variation-settings: "wght" 140;
@@ -47,7 +55,9 @@
       transform: translateX(0);
     }
     to {
-      transform: translateX(calc(-50% - 0.5px)); /* Prevent subpixel rendering issues */
+      transform: translateX(
+        calc(-50% - 0.5px)
+      ); /* Prevent subpixel rendering issues */
     }
   }
   @keyframes spin {

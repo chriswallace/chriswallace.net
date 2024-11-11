@@ -1,5 +1,5 @@
 .announcement {
-  @apply mb-16 flex max-w-[80rem] gap-4 text-center md:text-left text-[0.84rem] leading-[1.75];
+  @apply mb-16 flex gap-4 text-center md:text-left text-[0.84rem] leading-[1.75];
 
   &__content {
     @apply flex-grow gap-4 sm:flex sm:justify-between;
