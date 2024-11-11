@@ -9,7 +9,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
     <span class="announcement__bracket">[</span> 
     <span class="announcement__content">
       <strong class="announcement__date">NOV 2024</strong> 
-      <span class="announcement__text">Now accepting new clients.</span>
+      <span class="announcement__text">Currently accepting new fractional CDO clients.</span>
       <a class="announcement__link" href="/contact">Talk to Me &rarr;</a>
     </span> 
     <span class="announcement__bracket">]</span>
@@ -17,7 +17,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
   
   <div class="greeting fade-in-element"><span class="greeting__wave">👋</span> Howdy! I'm Chris Wallace.</div>
   <h1 class="home-title fade-in-element">
-    <span class="typewriter" id="typewriter">Part-time Chief Design Officer.<br> Full-time impact.</span>
+    <span class="typewriter" id="typewriter">A Fractional Chief Design Officer ready to take on your biggest challenges.</span>
   </h1>
   
   <p class="portfolio-intro fade-in-element">Check out some of my <a href="/portfolio" class="portfolio-intro__link">latest work</a> <svg class="portfolio-intro__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
@@ -87,8 +87,8 @@ description: Product design leader with over 20 years experience in e-commerce, 
     <div class="mb-16">
         <div class="space-y-12 fade-in-element">
           <div class="max-w-3xl">
-            <h2 class="home-title-secondary fade-in-element">Fractional Design Leadership That Drives Real Results</h2>
-            <p class="fade-in-element text-lg mb-2">I provide design services that match your company's needs—whether you're a startup or enterprise; delivering <em>measurable impact</em>.</p>
+            <h2 class="home-title-secondary fade-in-element">Top-tier design leadership. Scaled to fit.</h2>
+            <p class="fade-in-element text-lg mb-2">Wwhether you're a startup or enterprise, my focus is on delivering <em>measurable impact</em> in the capacity you're ready for today. I will:</p>
           </div>
           <hr class="fade-in-element">
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-12 sm:gap-16 lg:gap-20 max-w-7xl mb-8 lg:mb-12">

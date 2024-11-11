@@ -32,7 +32,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-th
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-banner.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-banner.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-banner.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-banner.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-banner.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-banner.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element mb-1.5" alt="" loading="lazy">
 </div>
 <div class="content-container-wo bg-[#190658] text-center mb-12">
-  <video id="portfolioVideo" data-type="video" controls muted playsinline autoplay loop loading="lazy" class="fade-in-element max-h-full max-w-xl mx-auto">
+  <video id="portfolioVideo" data-type="video" controls muted playsinline autoplay loop loading="lazy" class="fade-in-element max-h-full mx-auto">
       <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/mlb-game-video.mp4/ik-video.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
   </video>
