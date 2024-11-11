@@ -29,7 +29,7 @@
 }
 
 .contact-grid__title {
-  @apply mt-6 mb-0;
+  @apply mt-6 mb-0 text-base;
 }
 
 .contact-grid__text {

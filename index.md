@@ -24,7 +24,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
 </div>
 
 <div class="content-container-xo">
-  <div class="infinite-scroll">
+  <div class="infinite-scroll fade-in-element">
     <div class="infinite-scroll__scroller">
       <!-- First set -->
       <a href="/portfolio/palm-quest/" class="infinite-scroll__item">

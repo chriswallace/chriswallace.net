@@ -26,8 +26,8 @@ layout: compress
               <h1 class="portfolio__title">/portfolio</h1>
             </div>
           </div>
+          {{ content }}
         </div>
-        {{ content }}
         {% include footer.md %}
       </div>
     </div>

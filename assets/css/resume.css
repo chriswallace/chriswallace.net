@@ -1,48 +1,52 @@
 .resume-item {
-  @apply my-4 max-w-3xl;
+  @apply my-4;
+}
 
-  .metadata {
-    @apply border-b border-gray-300 dark:border-gray-700 flex content-end gap-1 md:gap-2 mb-4 py-2 items-end flex-wrap;
+.resume-item .metadata {
+  @apply border-b border-gray-300 dark:border-gray-700 flex content-end gap-1 md:gap-2 mb-4 py-2 items-end flex-wrap;
+}
 
-    > * {
-      @apply m-0 text-left text-sm md:text-base text-gray-500 dark:text-gray-300 font-normal;
-    }
+.resume-item .metadata > * {
+  @apply m-0 text-left text-sm md:text-base text-gray-500 dark:text-gray-300 font-normal;
+}
 
-    .place {
-      @apply flex-none order-1 md:order-2 whitespace-nowrap;
-    }
+.resume-item .metadata .place {
+  @apply flex-none order-1 md:order-2 whitespace-nowrap;
+}
 
-    .title {
-      @apply pl-0 pb-0 mb-0 shrink text-gray-700 dark:text-gray-100 order-3 md:order-1 text-base flex-[0_1_100%] md:flex-initial;
-      font-weight: 500;
-    }
+.resume-item .metadata .title {
+  @apply pl-0 pb-0 mb-0 shrink text-gray-700 dark:text-gray-100 order-3 md:order-1 flex-[0_1_100%] md:flex-initial;
+  font-weight: 500;
+}
 
-    .time-period {
-      @apply text-right pr-0 justify-self-end order-2 md:order-3 whitespace-nowrap flex-none md:flex-1;
+.resume-item .metadata .time-period {
+  @apply text-right pr-0 justify-self-end order-2 md:order-3 whitespace-nowrap flex-none md:flex-1;
+}
 
-      &:before {
-        @apply inline-block mr-1 md:mr-2 content-["•"] md:content-none;
-      }
-    }
-  }
+.resume-item .metadata .time-period:before {
+  @apply inline-block mr-1 md:mr-2 content-["•"] md:content-none;
+}
 
-  .description {
-    @apply text-gray-600 mb-12;
+.resume-item .description {
+  @apply text-gray-600 mb-12 text-sm max-w-3xl pl-8;
+}
 
-    p {
-      @apply mb-4;
-    }
-  }
+.resume-item .description ul {
+  @apply max-w-none list-none space-y-6 mt-6 mb-16;
+}
+
+.resume-item .description p {
+  @apply mb-4;
 }
 
 .skills-list {
-  @apply grid grid-cols-[40%_auto] sm:grid-cols-[auto_1fr] gap-y-6 gap-x-12 max-w-3xl;
+  @apply text-sm grid grid-cols-[40%_auto] sm:grid-cols-[auto_1fr] gap-y-6 gap-x-12 max-w-3xl;
+}
 
-  dt {
-    @apply break-words;
-  }
+.skills-list dt {
+  @apply break-words;
+}
 
-  dd {
-    @apply text-gray-700 dark:text-gray-300;
-  }
+.skills-list dd {
+  @apply text-gray-700 dark:text-gray-300;
 }

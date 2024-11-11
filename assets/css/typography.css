@@ -1,6 +1,10 @@
 @layer base {
   html {
     font-size: var(--font-size-base);
+
+    @screen 2xl {
+      font-size: calc(var(--font-size-base) * 1.2);
+    }
   }
 
   body {
@@ -18,22 +22,22 @@
   }
 
   h1 {
-    @apply text-5xl lg:text-7xl 2xl:max-w-7xl;
+    @apply text-5xl lg:text-7xl;
   }
 
   h2 {
-    @apply text-xl lg:text-4xl mt-16 sm:mt-24;
+    @apply text-2xl mt-16 sm:mt-24;
     font-variation-settings: "wght" 480;
   }
 
   h3 {
-    @apply text-base lg:text-3xl mb-2 mt-6 sm:mt-12 dark:text-gray-200;
+    @apply text-xl mb-2 mt-6 sm:mt-12 dark:text-gray-200;
   }
 
   h4,
   h5,
   h6 {
-    @apply text-lg lg:text-2xl pb-2 mt-6 sm:mt-12 mb-2 dark:border-gray-200;
+    @apply text-lg pb-2 mt-6 sm:mt-12 mb-2 dark:border-gray-200;
   }
 
   /* Links */
