@@ -24,70 +24,74 @@ description: Product design leader with over 20 years experience in e-commerce, 
 </div>
 
 <div class="content-container-xo">
-  <div class="infinite-scroll-container fade-in-element my-8 relative overflow-hidden group">
-    <div class="scroller flex animate-scroll group-hover:pause-animation w-[5440px]">
+  <div class="infinite-scroll">
+    <div class="infinite-scroll__scroller">
       <!-- First set -->
-      <a href="/portfolio/palm-quest/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-600,f-auto" alt="Palm Quest App Prototype" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/palm-quest/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-600,f-auto" 
+             alt="Palm Quest App Prototype" 
+             class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/candy-physical-digital-feature/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-600,f-auto" alt="Candy.io Physical-Digital Checkout" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/candy-physical-digital-feature/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-600,f-auto" alt="Candy.io Physical-Digital Checkout" class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/redacted-mlb-game/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-600,f-auto" alt="[Redacted] MLB Game" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/redacted-mlb-game/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-600,f-auto" alt="[Redacted] MLB Game" class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/candy-marketplace-redesign/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-600,f-auto" alt="Candy Marketplace Redesign" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/candy-marketplace-redesign/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-600,f-auto" alt="Candy Marketplace Redesign" class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/candy-league/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-600,f-auto" alt="Candy League" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/candy-league/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-600,f-auto" alt="Candy League" class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/dc3-interactive-reader/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-600,f-auto" alt="DC3 Interactive Comic Book Reader" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/dc3-interactive-reader/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-600,f-auto" alt="DC3 Interactive Comic Book Reader" class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/candyvision/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-600,f-auto" alt="CandyVision" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/candyvision/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-600,f-auto" alt="CandyVision" class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/pendulum-crypto-wallet/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-600,f-auto" alt="Pendulum Crypto Wallet (iOS App)" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/pendulum-crypto-wallet/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-600,f-auto" alt="Pendulum Crypto Wallet (iOS App)" class="infinite-scroll__image">
       </a>
-      <!-- Duplicate set for seamless scrolling -->
-      <a href="/portfolio/palm-quest/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-600,f-auto" alt="Palm Quest App Prototype" class="hover:opacity-75 transition-opacity">
+      <!-- second set -->
+      <a href="/portfolio/palm-quest/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-600,f-auto" 
+             alt="Palm Quest App Prototype" 
+             class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/candy-physical-digital-feature/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-600,f-auto" alt="Candy.io Physical-Digital Checkout" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/candy-physical-digital-feature/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-600,f-auto" alt="Candy.io Physical-Digital Checkout" class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/redacted-mlb-game/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-600,f-auto" alt="[Redacted] MLB Game" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/redacted-mlb-game/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-600,f-auto" alt="[Redacted] MLB Game" class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/candy-marketplace-redesign/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-600,f-auto" alt="Candy Marketplace Redesign" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/candy-marketplace-redesign/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-600,f-auto" alt="Candy Marketplace Redesign" class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/candy-league/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-600,f-auto" alt="Candy League" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/candy-league/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-600,f-auto" alt="Candy League" class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/dc3-interactive-reader/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-600,f-auto" alt="DC3 Interactive Comic Book Reader" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/dc3-interactive-reader/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-600,f-auto" alt="DC3 Interactive Comic Book Reader" class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/candyvision/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-600,f-auto" alt="CandyVision" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/candyvision/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-600,f-auto" alt="CandyVision" class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/pendulum-crypto-wallet/" class="min-w-[340px]">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-600,f-auto" alt="Pendulum Crypto Wallet (iOS App)" class="hover:opacity-75 transition-opacity">
+      <a href="/portfolio/pendulum-crypto-wallet/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-600,f-auto" alt="Pendulum Crypto Wallet (iOS App)" class="infinite-scroll__image">
       </a>
     </div>
   </div>
 </div>
 <div class="content-container">
-    <div class="mb-16 max-w-3xl">
+    <div class="mb-16">
         <div class="space-y-12 fade-in-element">
-          <div>
+          <div class="max-w-3xl">
             <h2 class="home-title-secondary fade-in-element">Fractional Design Leadership at Your Fingertips</h2>
             <p class="fade-in-element text-lg mb-2">Want to hire a design leader but not sure it's a full-time role? Work with me and you'll get everything you see here and more.</p>
           </div>
           <hr class="fade-in-element">
-          <div class="md:grid md:grid-cols-2 gap-8 lg:gap-12 mb-8 lg:mb-12 space-y-12 md:space-y-0">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-12 sm:gap-16 lg:gap-28 max-w-7xl mb-8 lg:mb-12">
               <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Design your design org.</span> Get customized guidance on team structure, hiring plans, and job descriptions.</p>
               <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Establish or scale design systems.</span> I craft customized, connected design systems your engineers can rely on.</p>
               <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Define product vision.</span> Craft compelling product roadmaps that inspire teams and shape the future.</p>
