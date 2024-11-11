@@ -5037,8 +5037,8 @@ video::-webkit-media-controls {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .lg\:gap-28 {
-    gap: 7rem;
+  .lg\:gap-20 {
+    gap: 5rem;
   }
 
   .lg\:hover\:bg-blue-500:hover {
