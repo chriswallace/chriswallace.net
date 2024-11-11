@@ -83,8 +83,8 @@ description: Product design leader with over 20 years experience in e-commerce, 
     <div class="mb-16 max-w-3xl">
         <div class="space-y-12 fade-in-element">
           <div>
-            <h2 class="uppercase text-2xl md:text-5xl leading-[1.4] md:leading-[1.4] fade-in-element mb-2">Fractional Design Leadership at Your Fingertips</h2>
-            <p class="fade-in-element">Looking for a part-time Head of Design or CDO? Here's how I can help:</p>
+            <h2 class="home-title-secondary fade-in-element">Fractional Design Leadership at Your Fingertips</h2>
+            <p class="fade-in-element text-lg mb-2">Want to hire a design leader but not sure it's a full-time role? Work with me and you'll get everything you see here and more.</p>
           </div>
           <hr class="fade-in-element">
           <div class="md:grid md:grid-cols-2 gap-8 lg:gap-12 mb-8 lg:mb-12 space-y-12 md:space-y-0">

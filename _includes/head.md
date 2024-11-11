@@ -1,5 +1,5 @@
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EK0EHWB8D"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EK0EHWB8D" expires="31536000"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -14,9 +14,9 @@
   <meta http-equiv="Expires" content="86400">
   {% seo title=true %}
 
-  <link rel="stylesheet" href="https://use.typekit.net/eub1ezs.css">
-  <link rel="stylesheet" href="/assets/main.css?v={{ site.version }}">
-  <link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/UltraDAO/wallace/favicon.png">
+  <link rel="stylesheet" href="https://use.typekit.net/eub1ezs.css" expires="31536000">
+  <link rel="stylesheet" href="/assets/main.css?v={{ site.version }}" expires="31536000">
+  <link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/UltraDAO/wallace/favicon.png" expires="31536000">
   <meta property="og:image" content="{{page.thumbnail | default: 'https://ik.imagekit.io/UltraDAO/wallace/chris-wallace.jpg'}}">
   <meta property="twitter:image" content="{{page.thumbnail | default: 'https://ik.imagekit.io/UltraDAO/wallace/chris-wallace.jpg'}}">
 

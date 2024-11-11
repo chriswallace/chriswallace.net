@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: about
 title: Bio
 permalink: /bio/
 description: A seasoned Chief Design Officer with 20+ years of experience leading design teams and crafting digital products that drive business growth.
@@ -17,6 +17,9 @@ thumbnail: /assets/images/thumbs/bio.png
             <img src="https://ik.imagekit.io/UltraDAO/wallace/guitar.jpg?tr=w-700,q=70" alt="Me hugging my new Gibson guitar, a gift received for my birthday" class="bio-grid__image bio-grid__image--six">
         </div>
         <div class="bio-grid__content">
+            <h1 class="fade-in-element primary-heading !mt-0">
+                {{ page.title | escape }}
+            </h1>
             <p class="sub-heading fade-in-element">I'm a design leader who bridges the gap between high-level strategy and hands-on execution. With over two decades of experience building and leading design teams, I help companies transform their digital products through human-centered design while driving measurable business results.</p>
             <hr class="fade-in-element hr-separator">
             <p class="fade-in-element">As a fractional Chief Design Officer, I bring a unique blend of strategic leadership and technical expertise. I've built and scaled design organizations, established design systems that accelerate development, and collaborated closely with C-suite executives to align design initiatives with business objectives. My approach combines deep product thinking with the ability to roll up my sleeves and contribute directly to production work when needed.</p>
