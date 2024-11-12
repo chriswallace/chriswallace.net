@@ -13,8 +13,9 @@
     <ul>
       <li class="fade-in-element"><a href="/" aria-label="Home">home</a></li>
       <li class="fade-in-element"><a href="/bio" aria-label="About">bio</a></li>
-      <li class="fade-in-element"><a href="/resume" aria-label="Résumé">résumé</a></li>
       <li class="fade-in-element"><a href="/portfolio" aria-label="Portfolio">portfolio</a></li>
+      <li class="fade-in-element"><a href="/services" aria-label="Services">services</a></li>
+      <li class="fade-in-element"><a href="/resume" aria-label="Résumé">résumé</a></li>
       <li class="fade-in-element"><a href="/art" aria-label="Art">art</a></li>
       <li class="fade-in-element"><a href="/contact" aria-label="Contact">contact</a></li>
     </ul>

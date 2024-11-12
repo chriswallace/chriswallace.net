@@ -1,7 +1,15 @@
 module.exports = {
   darkMode: "media", // or 'class'
   mode: "jit",
-  content: ["**/*.{html,md}"],
+  content: [
+    "./assets/**/*.{js,jsx,ts,tsx}",
+    "./_site/**/*.html",
+    "./_layouts/**/*.html",
+    "./_includes/**/*.html",
+    "./*.html",
+    "./*.md",
+    "./[!node_modules]**/*.md"
+  ],
   theme: {
     container: {
       center: true, // centers the container by default

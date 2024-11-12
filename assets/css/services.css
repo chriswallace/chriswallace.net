@@ -1,0 +1,35 @@
+.services {
+  --spacing: 3rem;
+}
+
+.services__container {
+  @apply max-w-xl 2xl:max-w-5xl grid grid-cols-1 gap-4 2xl:grid-cols-2 2xl:gap-x-24 2xl:gap-y-12;
+}
+
+.services__package {
+  @apply rounded-md items-start;
+}
+
+.services__title {
+  @apply mt-0 mb-0 text-xl;
+}
+
+.services__description {
+  @apply text-sm lg:text-lg mb-8 text-primary-600 dark:text-primary-500;
+}
+
+.services__package svg {
+  @apply text-green-500;
+}
+
+.services__service-title {
+  @apply flex gap-[12px] items-start text-gray-800 dark:text-gray-100 mb-0.5;
+}
+
+.services__service-description {
+  @apply text-xs ml-[36px] mb-8;
+}
+
+.services__ideal {
+  @apply mt-8 text-xs italic text-gray-800 dark:text-gray-400;
+}

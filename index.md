@@ -99,12 +99,9 @@ description: Product design leader with over 20 years experience in e-commerce, 
               <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Provide expert-level design execution.</span> Leverage my 20 years of design expertise to create stunning, practical interfaces.</p>
               <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Elevate your brand identity.</span> Turn your app or website's design language into a powerful, revenue-generating asset across all platforms.</p>
           </div>
-          <p class="fade-in-element">
-              Ready to get a quote? 
-              <a href="/contact" class="ml-1.5 inline-block">
-                  Email me &rarr;
-              </a>
-          </p>
+          <a href="/services" class="ml-1.5 inline-block text-2xl fade-in-element">
+              Learn more &rarr;
+          </a>
         </div>
     </div>
 </div>
