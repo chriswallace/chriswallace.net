@@ -54,9 +54,9 @@ description: Get the strategic oversight, vision, and expertise of an experience
       <p class="services__ideal">Ideal for: Organizations looking to invest in their design teams' growth and development.</p>
     </div>
 </div>
-
-<div class="mt-16 cta-box fade-in-element border-gray-200 dark:border-gray-800 border-2 p-12 md:p-24 rounded-2xl">
-  <h2 class="text-2xl font-bold mt-0 mb-4">Ready to get started? So am I.</h2>
-  <p class="dark:text-gray-300 text-lg mb-6">Reach out for a quote that fits your needs and budget.</p>
-  <a href="/contact" class="inline-block text-xl">Get in Touch &rarr;</a>
+<div>
+  <a href="/contact" class="mt-4 block sm:flex text-sm md:text-lg rounded-2xl fade-in-element text-gray-700 dark:text-gray-100 bg-white/50 dark:bg-transparent dark:border dark:border-gray-900 p-6 md:px-10 sm:justify-between sm:items-center no-underline transform transition-all md:hover:px-8 md:hover:bg-white dark:md:hover:bg-primary-500 md:hover:shadow-md">
+    <span>Ready to get started?</span>
+    <span class="underline underline-offset-4 decoration-primary-500">Contact me for a quote &rarr;</span>
+  </a>
 </div>

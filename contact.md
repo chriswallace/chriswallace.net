@@ -6,9 +6,7 @@ description: I'm available for contract and full-time opportunities with forward
 ---
 
 <div class="content-container">
-   <p class="fade-in-element sub-heading">Ready to get to work? Email me directly to talk projects and new opportunities: <a href="mailto:chriswallace7@pm.me?subject=Design%20Inquiry">chriswallace7@pm.me</a>.</p>
-
-    <h2 class="fade-in-element">Reasons to email me</h2>
+   <p class="fade-in-element sub-heading">Ready to take your company's design capabilities to the next level? Reach out at <a href="mailto:chriswallace7@pm.me?subject=Design%20Inquiry&body=Let's%20work%20together!">chriswallace7@pm.me</a> to get started.</p>
 
     <div class="contact-grid fade-in-element">
         <div class="contact-grid__item">

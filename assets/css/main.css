@@ -79,7 +79,7 @@ body {
 }
 
 .primary-heading {
-  @apply text-6xl mt-12 mb-8 lowercase;
+  @apply text-6xl mt-12 mb-2 md:mb-6 lowercase;
 }
 
 .primary-heading:before {
@@ -92,7 +92,7 @@ body {
 }
 
 .sub-heading {
-  @apply text-xl mb-12 md:mb-16 max-w-3xl;
+  @apply text-base sm:text-lg mb-12 md:mb-16 max-w-2xl;
   font-variation-settings: "wght" 450;
 }
 
