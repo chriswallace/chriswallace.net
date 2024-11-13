@@ -32,8 +32,8 @@ description: Get the strategic oversight, vision, and expertise of an experience
       <p class="services__ideal">Ideal for: Companies experiencing rapid growth and needing to scale their design operations efficiently.</p>
     </div>
     <div class="services__package fade-in-element">
-      <h2 class="services__title">Design the Future</h2>
-      <p class="services__description">focus: set the vision</p>
+      <h2 class="services__title">Deep Dive</h2>
+      <p class="services__description">focus: instant design impact</p>
       <div class="services__service-title"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg> Creative Direction</div>
       <div class="services__service-description">Overseeing the production of design by a team or individual designer.</div>
       <div class="services__service-title"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg> Design Execution</div>
