@@ -50,8 +50,12 @@
   @apply flex gap-0 h-screen mb-6 md:mb-0;
 }
 
+.open-menu .navigation {
+  @apply bg-gray-200 dark:bg-gray-950;
+}
+
 .navigation .logo {
-  @apply block w-[42px] h-auto my-0 mx-auto p-0 text-primary-500 dark:text-primary-600 dark:hover:text-primary-400 transition-all duration-150 ease-in-out;
+  @apply block w-[42px] h-auto my-0 mx-auto p-0 text-primary-500 dark:text-white dark:hover:text-gray-900 transition-all duration-150 ease-in-out;
 }
 
 .navigation .logo path {
@@ -71,13 +75,10 @@
 }
 
 .menu {
-  @apply order-2 md:order-1 md:h-screen grow bg-gray-100 dark:bg-gray-950;
+  @apply order-2 md:order-1 md:h-screen grow;
 
   a {
-    @apply p-4 py-6 block capitalize leading-none no-underline decoration-2 
-           text-primary-600 dark:text-white border-b border-gray-300 
-           dark:border-gray-900 dark:bg-gray-950 hover:bg-gray-100 
-           dark:hover:bg-primary-600;
+    @apply p-4 py-6 block capitalize leading-none no-underline decoration-2 text-primary-600 dark:text-white border-b border-gray-300 dark:border-gray-900 dark:bg-gray-950 hover:bg-gray-100 dark:hover:bg-primary-600;
     font-variation-settings: "wght" 140;
   }
 }
@@ -95,9 +96,5 @@
 }
 
 .ui-navbar {
-  @apply w-[calc(220px+var(--navbar-width)*.75)] md:w-[calc(220px+var(--navbar-width))] 
-         fixed left-auto md:left-0 right-0 md:right-auto top-0 md:h-full 
-         md:bg-gray-100 dark:md:bg-gray-950 z-40 overflow-x-hidden 
-         transform translate-x-[220px] md:-translate-x-[220px] 
-         transition-transform duration-200 ease-in-out;
+  @apply w-[calc(220px+var(--navbar-width)*.75)] md:w-[calc(220px+var(--navbar-width))] fixed left-auto md:left-0 right-0 md:right-auto top-0 md:h-full z-40 overflow-x-hidden transform translate-x-[220px] md:-translate-x-[220px] transition-transform duration-200 ease-in-out;
 }

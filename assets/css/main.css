@@ -20,7 +20,7 @@ body {
 }
 
 .ui-navbar {
-  @apply w-[calc(220px+var(--navbar-width)*.75)] md:w-[calc(220px+var(--navbar-width))] fixed left-auto md:left-0 right-0 md:right-auto top-0 md:h-full md:bg-gray-100 dark:md:bg-gray-950 z-40 overflow-x-hidden transform translate-x-[220px] md:-translate-x-[220px] transition-transform duration-200 ease-in-out;
+  @apply w-[calc(220px+var(--navbar-width)*.75)] md:w-[calc(220px+var(--navbar-width))] fixed left-auto md:left-0 right-0 md:right-auto top-0 md:h-full  z-40 overflow-x-hidden transform translate-x-[220px] md:-translate-x-[220px] transition-transform duration-200 ease-in-out;
 }
 
 .open-menu .ui-navbar {
@@ -92,7 +92,7 @@ body {
 }
 
 .sub-heading {
-  @apply text-base sm:text-lg mb-12 md:mb-16 max-w-2xl;
+  @apply text-base sm:text-lg mb-12 md:mb-16 max-w-prose;
   font-variation-settings: "wght" 450;
 }
 

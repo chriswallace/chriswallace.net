@@ -633,6 +633,11 @@ video {
   margin-right: auto;
 }
 
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .\!mb-4 {
   margin-bottom: 1rem !important;
 }
@@ -655,10 +660,6 @@ video {
 
 .mb-16 {
   margin-bottom: 4rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 
 .mb-3 {
@@ -757,16 +758,16 @@ video {
   width: 100%;
 }
 
+.max-w-2xl {
+  max-width: 42rem;
+}
+
 .max-w-3xl {
   max-width: 48rem;
 }
 
 .max-w-4xl {
   max-width: 56rem;
-}
-
-.max-w-7xl {
-  max-width: 80rem;
 }
 
 .max-w-full {
@@ -819,16 +820,6 @@ video {
 
 .gap-6 {
   gap: 1.5rem;
-}
-
-.gap-y-12 {
-  row-gap: 3rem;
-}
-
-.space-y-12 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -948,17 +939,6 @@ video {
   text-align: center;
 }
 
-.text-2xl {
-  font-size: 1.2rem;
-  line-height: 1.75;
-  letter-spacing: 0;
-}
-
-.text-lg {
-  font-size: 1rem;
-  line-height: 1.75;
-}
-
 .text-sm {
   font-size: 0.9rem;
   line-height: 1.75;
@@ -977,6 +957,11 @@ video {
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(61 61 61 / var(--tw-text-opacity));
+}
+
+.text-primary-600 {
+  --tw-text-opacity: 1;
+  color: rgb(229 69 17 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1694,20 +1679,12 @@ body.meetChris {
     display: flex;
   }
 
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .sm\:items-center {
     align-items: center;
   }
 
   .sm\:justify-between {
     justify-content: space-between;
-  }
-
-  .sm\:gap-16 {
-    gap: 4rem;
   }
 
   .sm\:gap-4 {
@@ -1767,20 +1744,6 @@ body.meetChris {
   }
 }
 
-@media (min-width: 1024px) {
-  .lg\:mb-12 {
-    margin-bottom: 3rem;
-  }
-
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .lg\:gap-20 {
-    gap: 5rem;
-  }
-}
-
 @media (prefers-color-scheme: dark) {
   .dark\:block {
     display: block;
@@ -1815,6 +1778,11 @@ body.meetChris {
   .dark\:text-gray-100 {
     --tw-text-opacity: 1;
     color: rgb(231 231 231 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-primary-500 {
+    --tw-text-opacity: 1;
+    color: rgb(244 92 22 / var(--tw-text-opacity));
   }
 
   .dark\:text-white {

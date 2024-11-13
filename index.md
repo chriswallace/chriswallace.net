@@ -17,7 +17,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
   
   <div class="greeting fade-in-element"><span class="greeting__wave">👋</span> Howdy! I'm Chris Wallace.</div>
   <h1 class="home-title fade-in-element">
-    <span class="typewriter" id="typewriter">A Fractional Chief Design Officer ready to take on your biggest challenges.</span>
+    <span class="typewriter" id="typewriter">A Hands-on Design Executive working with MLB, DC Comics, Microsoft, and Starbucks.</span>
   </h1>
   
   <p class="portfolio-intro fade-in-element">Check out some of my <a href="/portfolio" class="portfolio-intro__link">latest work</a> <svg class="portfolio-intro__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
@@ -84,23 +84,14 @@ description: Product design leader with over 20 years experience in e-commerce, 
   </div>
 </div>
 <div class="content-container">
-    <div class="mb-16">
-        <div class="space-y-12 fade-in-element">
-          <div class="max-w-3xl">
-            <h2 class="home-title-secondary fade-in-element">Top-tier design leadership. Scaled to fit.</h2>
-            <p class="fade-in-element text-lg mb-2">Wwhether you're a startup or enterprise, my focus is on delivering <em>measurable impact</em> in the capacity you're ready for today. I will:</p>
+    <div class="my-16">
+        <div class="space-y-4 fade-in-element">
+          <div class="max-w-2xl">
+            <span class="text-primary-600 dark:text-primary-500">New!</span>
+            <h2 class="home-title-secondary mt-2">Design Leadership on a Budget: Fractional Chief Design Officer</h2>
           </div>
-          <hr class="fade-in-element">
-          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-12 sm:gap-16 lg:gap-20 max-w-7xl mb-8 lg:mb-12">
-              <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Optimize your design team.</span> Receive tailored advice on team dynamics, recruitment strategies, and role definitions.</p>
-              <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Build or enhance design systems.</span> I develop bespoke, integrated design systems that your engineering team can trust.</p>
-              <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Shape product vision.</span> Develop inspiring product roadmaps that motivate teams and drive future innovation.</p>
-              <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Create app prototypes or user flows.</span> Realize your ideas with high-fidelity prototypes that are as real as the final product.</p>
-              <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Provide expert-level design execution.</span> Leverage my 20 years of design expertise to create stunning, practical interfaces.</p>
-              <p class="text-lg fade-in-element mb-0"><span class="dark:text-white">Elevate your brand identity.</span> Turn your app or website's design language into a powerful, revenue-generating asset across all platforms.</p>
-          </div>
-          <a href="/services" class="inline-block text-2xl fade-in-element">
-              Learn more &rarr;
+          <a href="/services" class="inline-block">
+              My services &rarr;
           </a>
         </div>
     </div>

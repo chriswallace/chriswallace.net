@@ -1,5 +1,5 @@
 .bio-grid {
-  @apply sm:grid sm:grid-cols-3 lg:grid-cols-2 sm:gap-6 lg:gap-24 md:pt-6;
+  @apply sm:grid sm:grid-cols-3 sm:gap-6 lg:gap-24 md:pt-6;
 
   p:first-of-type {
     @apply mb-0 text-lg sm:text-xl;
@@ -7,7 +7,7 @@
 }
 
 .bio-grid__content {
-  @apply sm:col-span-2 lg:col-span-1;
+  @apply sm:col-span-2;
 }
 
 .bio-grid__image-container {

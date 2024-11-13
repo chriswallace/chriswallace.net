@@ -53,7 +53,7 @@
   p,
   ul,
   ol {
-    @apply content-width mb-12 text-gray-500 dark:text-gray-400;
+    @apply max-w-prose mb-12 text-gray-500 dark:text-gray-400;
   }
 
   article {
