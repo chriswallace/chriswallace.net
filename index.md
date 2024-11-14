@@ -84,17 +84,28 @@ description: Product design leader with over 20 years experience in e-commerce, 
   </div>
 </div>
 <div class="content-container">
-    <div class="my-16">
-        <div class="space-y-4 fade-in-element">
-          <div class="max-w-2xl">
-            <span class="text-primary-600 dark:text-primary-500">New!</span>
-            <h2 class="home-title-secondary mt-2">Design Leadership on a Budget: Fractional Chief Design Officer</h2>
-          </div>
-          <a href="/services" class="inline-block">
-              My services &rarr;
+  <div class="my-16 space-y-16">
+    <div class="space-y-4 fade-in-element">
+      <div class="max-w-2xl">
+        <span class="text-primary-600 dark:text-primary-500">New Service</span>
+        <h2 class="home-title-secondary mt-2">
+          <a href="/services" class="inline-block no-underline hover:underline hover:decoration-primary-500">
+            Design Leadership on a Budget: Fractional Chief Design Officer
           </a>
-        </div>
+        </h2>
+      </div>
     </div>
+    <div class="space-y-4 fade-in-element">
+      <div class="max-w-2xl">
+        <span class="text-primary-600 dark:text-primary-500">Design Systems</span>
+        <h2 class="home-title-secondary mt-2">
+          <a href="/articles/establishing-design-systems-in-the-enterprise" class="inline-block no-underline hover:underline hover:decoration-primary-500">
+            Establishing Design Systems in the Enterprise
+          </a>
+        </h2>
+      </div>
+    </div>
+  </div>
 </div>
 {% if jekyll.environment == 'production' %}
 

@@ -31,10 +31,15 @@
   }
 
   h3 {
-    @apply text-xl mb-2 mt-6 sm:mt-12 dark:text-gray-200;
+    @apply text-xl mb-6 mt-6 sm:mt-12 dark:text-gray-200;
+    font-variation-settings: "wght" 480;
   }
 
-  h4,
+  h4{
+    @apply text-lg pb-2 mt-6 sm:mt-12 mb-6 dark:border-gray-200;
+    font-variation-settings: "wght" 480;
+  }
+
   h5,
   h6 {
     @apply text-lg pb-2 mt-6 sm:mt-12 mb-2 dark:border-gray-200;
@@ -52,8 +57,17 @@
   /* Content */
   p,
   ul,
-  ol {
+  ol,
+  dl {
     @apply max-w-prose mb-12 text-gray-500 dark:text-gray-400;
+  }
+
+  dt{
+    @apply text-gray-600 dark:text-gray-200;
+  }
+
+  dd {
+    @apply mb-8 ml-12;
   }
 
   article {
