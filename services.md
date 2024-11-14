@@ -56,7 +56,7 @@ description: Get the strategic oversight, vision, and expertise of an experience
 </div>
 <div>
   <a href="/contact" class="mt-4 block sm:flex text-sm md:text-lg rounded-2xl fade-in-element text-gray-700 dark:text-gray-100 bg-white/50 dark:bg-transparent dark:border dark:border-gray-900 p-6 md:px-10 sm:justify-between sm:items-center no-underline transform transition-all md:hover:px-8 md:hover:bg-white dark:md:hover:bg-primary-500 md:hover:shadow-md">
-    <span>Ready to get started?</span>
+    <span>Want to work together?</span>
     <span class="underline underline-offset-4 decoration-primary-500">Contact me for a quote &rarr;</span>
   </a>
 </div>
