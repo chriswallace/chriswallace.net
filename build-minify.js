@@ -13,7 +13,8 @@ const individualFilesToMinify = [
     './assets/js/gallery-viewer.js',
     './assets/js/interplay-page.js',
     './assets/js/typewriterHome.js',
-    './assets/js/portfolioVideo.js'
+    './assets/js/portfolioVideo.js',
+    './assets/js/toc-toggle.js'
 ];
 
 // Function to minify a single file

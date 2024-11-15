@@ -10,48 +10,100 @@ featured_image: /assets/images/interplay-card.png
 <div class="sm:grid sm:grid-cols-1 lg:grid-cols-[1fr,300px] gap-8">
   <div class="lg:order-2 fade-in-element lg:sticky lg:top-0 lg:self-start fade-in-element">
     <h2 class="mt-0 pt-4">Table of Contents</h2>
-    <ol class="list-decimal list-outside ml-6 text-sm">
-      <li><a href="#overview">Overview & Benefits</a></li>
-      <li><a href="#team-charter">Create a Team Charter</a></li>
-      <li><a href="#build-the-team">Building Your Team</a>
-        <ul class="list-disc ml-4 mt-1 mb-1">
-          <li><a href="#team-composition">Team Composition</a></li>
-          <li><a href="#time-allocation">Time Allocation</a></li>
-          <li><a href="#external-partners">External Partners</a></li>
-        </ul>
-      </li>
-      <li><a href="#component-audit">Component Audit</a>
-        <ul class="list-disc ml-4 mt-1 mb-1">
-          <li><a href="#audit-workshops">Audit Workshops</a></li>
-          <li><a href="#analysis">Analysis & Selection</a></li>
-          <li><a href="#documentation">Documentation</a></li>
-        </ul>
-      </li>
-      <li><a href="#planning-execution">Planning & Execution</a>
-        <ul class="list-disc ml-4 mt-1 mb-1">
-          <li><a href="#initial-planning">P1: Initial Planning</a></li>
-          <li><a href="#development-strategy">P2: Development Strategy</a></li>
-          <li><a href="#implementation">P3: Implementation</a></li>
-          <li><a href="#rollout">P4: Rollout</a></li>
-        </ul>
-      </li>
-      <li><a href="#tools-infrastructure">Tools & Infrastructure</a>
-        <ul class="list-disc ml-4 mt-1 mb-1">
-          <li><a href="#design-tools">Design Tools</a></li>
-          <li><a href="#development-tools">Development Tools</a></li>
-          <li><a href="#ci-cd">CI/CD & Version Control</a></li>
-        </ul>
-      </li>
-      <li><a href="#advanced-features">Advanced Features</a>
-        <ul class="list-disc ml-4 mt-1 mb-1">
-          <li><a href="#ai-integration">AI Integration</a></li>
-          <li><a href="#technical-workflows">Technical Workflows</a></li>
-          <li><a href="#testing-qa">Testing & QA</a></li>
-        </ul>
-      </li>
-      <li><a href="#measuring-success">Measuring Success</a></li>
-      <li><a href="#conclusion">Conclusion</a></li>
-    </ol>
+    <div class="toc-container">
+      <ol class="list-decimal list-outside ml-6 text-xs space-y-2">
+        <li><a href="#overview" class="py-1 block">Overview & Benefits</a></li>
+        <li><a href="#team-charter" class="py-1 block">Create a Team Charter</a></li>
+        <li>
+          <div class="toc-section">
+            <div class="flex items-center justify-between">
+              <a href="#build-the-team" class="py-1 block">Building Your Team</a>
+              <button class="toc-toggle p-1.5 border border-gray-300 dark:border-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-800" aria-expanded="false">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 20 20">
+                  <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" fill="currentColor"/>
+                </svg>
+              </button>
+            </div>
+            <ul class="toc-content list-disc ml-4 mt-2 mb-1 space-y-2 hidden">
+              <li><a href="#team-composition" class="py-1 block">Team Composition</a></li>
+              <li><a href="#time-allocation" class="py-1 block">Time Allocation</a></li>
+              <li><a href="#external-partners" class="py-1 block">External Partners</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="toc-section">
+            <div class="flex items-center justify-between">
+              <a href="#component-audit" class="py-1 block">Component Audit</a>
+              <button class="toc-toggle p-1.5 border border-gray-300 dark:border-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-800" aria-expanded="false">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 20 20">
+                  <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" fill="currentColor"/>
+                </svg>
+              </button>
+            </div>
+            <ul class="toc-content list-disc ml-4 mt-2 mb-1 space-y-2 hidden">
+              <li><a href="#audit-workshops" class="py-1 block">Audit Workshops</a></li>
+              <li><a href="#analysis" class="py-1 block">Analysis & Selection</a></li>
+              <li><a href="#documentation" class="py-1 block">Documentation</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="toc-section">
+            <div class="flex items-center justify-between">
+              <a href="#planning-execution" class="py-1 block">Planning & Execution</a>
+              <button class="toc-toggle p-1.5 border border-gray-300 dark:border-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-800" aria-expanded="false">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 20 20">
+                  <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" fill="currentColor"/>
+                </svg>
+              </button>
+            </div>
+            <ul class="toc-content list-disc ml-4 mt-2 mb-1 space-y-2 hidden">
+              <li><a href="#initial-planning" class="py-1 block">P1: Initial Planning</a></li>
+              <li><a href="#development-strategy" class="py-1 block">P2: Development Strategy</a></li>
+              <li><a href="#implementation" class="py-1 block">P3: Implementation</a></li>
+              <li><a href="#rollout" class="py-1 block">P4: Rollout</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="toc-section">
+            <div class="flex items-center justify-between">
+              <a href="#tools-infrastructure" class="py-1 block">Tools & Infrastructure</a>
+              <button class="toc-toggle p-1.5 border border-gray-300 dark:border-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-800" aria-expanded="false">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 20 20">
+                  <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" fill="currentColor"/>
+                </svg>
+              </button>
+            </div>
+            <ul class="toc-content list-disc ml-4 mt-2 mb-1 space-y-2 hidden">
+              <li><a href="#design-tools" class="py-1 block">Design Tools</a></li>
+              <li><a href="#development-tools" class="py-1 block">Development Tools</a></li>
+              <li><a href="#ci-cd" class="py-1 block">CI/CD & Version Control</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="toc-section">
+            <div class="flex items-center justify-between">
+              <a href="#advanced-features" class="py-1 block">Advanced Features</a>
+              <button class="toc-toggle p-1.5 border border-gray-300 dark:border-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-800" aria-expanded="false">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 20 20">
+                  <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" fill="currentColor"/>
+                </svg>
+              </button>
+            </div>
+            <ul class="toc-content list-disc ml-4 mt-2 mb-1 space-y-2 hidden">
+              <li><a href="#ai-integration" class="py-1 block">AI Integration</a></li>
+              <li><a href="#technical-workflows" class="py-1 block">Technical Workflows</a></li>
+              <li><a href="#testing-qa" class="py-1 block">Testing & QA</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#measuring-success" class="py-1 block">Measuring Success</a></li>
+        <li><a href="#conclusion" class="py-1 block">Conclusion</a></li>
+      </ol>
+    </div>
   </div>
   <div class="fade-in-element">
 
@@ -242,7 +294,7 @@ featured_image: /assets/images/interplay-card.png
       <dl class="space-y-4">
         <dt>System Architecture</dt>
         <dd>
-          <ul class="list-disc list-outside ml-5 space-y-2">
+          <ul class="list-disc list-outside ml-0 space-y-2">
             <li>Choose your tech stack (e.g., React, Vue, Web Components)</li>
             <li>Define folder structure and component organization</li>
             <li>Establish naming conventions and coding standards</li>
@@ -252,7 +304,7 @@ featured_image: /assets/images/interplay-card.png
 
         <dt>Component Hierarchy</dt>
         <dd>
-          <ul class="list-disc list-outside ml-5 space-y-2">
+          <ul class="list-disc list-outside space-y-2">
             <li>Map out component dependencies and relationships</li>
             <li>Define primitive components (atoms) first</li>
             <li>Plan compound components (molecules)</li>
@@ -262,7 +314,7 @@ featured_image: /assets/images/interplay-card.png
 
         <dt>Resource Allocation</dt>
         <dd>
-          <ul class="list-disc list-outside ml-5 space-y-2">
+          <ul class="list-disc list-outside space-y-2">
             <li>Assign team roles and responsibilities</li>
             <li>Create sprint planning templates</li>
             <li>Set up communication channels</li>
@@ -277,7 +329,7 @@ featured_image: /assets/images/interplay-card.png
       <dl class="space-y-4">
         <dt>Component Development Process</dt>
         <dd>
-          <ol class="list-decimal list-outside ml-5 space-y-2">
+          <ol class="list-decimal list-outside space-y-2">
             <li>Design review and specification</li>
             <li>Component development in isolation</li>
             <li>Documentation writing</li>
@@ -289,7 +341,7 @@ featured_image: /assets/images/interplay-card.png
 
         <dt>Quality Standards</dt>
         <dd>
-          <ul class="list-disc list-outside ml-5 space-y-2">
+          <ul class="list-disc list-outside space-y-2">
             <li>Define code quality metrics</li>
             <li>Establish testing requirements</li>
             <li>Set accessibility standards (WCAG compliance)</li>
@@ -304,7 +356,7 @@ featured_image: /assets/images/interplay-card.png
       <dl class="space-y-4">
         <dt>Month 1-2: Foundation</dt>
         <dd>
-          <ul class="list-disc list-outside ml-5 space-y-2">
+          <ul class="list-disc list-outside space-y-2">
             <li>Set up development environment</li>
             <li>Implement design tokens</li>
             <li>Create core primitive components</li>
@@ -314,7 +366,7 @@ featured_image: /assets/images/interplay-card.png
 
         <dt>Month 3-4: Core Components</dt>
         <dd>
-          <ul class="list-disc list-outside ml-5 space-y-2">
+          <ul class="list-disc list-outside space-y-2">
             <li>Develop frequently used components</li>
             <li>Create initial documentation</li>
             <li>Set up component testing</li>
@@ -324,7 +376,7 @@ featured_image: /assets/images/interplay-card.png
 
         <dt>Month 5-6: Advanced Features</dt>
         <dd>
-          <ul class="list-disc list-outside ml-5 space-y-2">
+          <ul class="list-disc list-outside space-y-2">
             <li>Build complex compound components</li>
             <li>Implement theming system</li>
             <li>Create advanced documentation</li>
@@ -339,7 +391,7 @@ featured_image: /assets/images/interplay-card.png
       <dl class="space-y-4">
         <dt>Internal Release</dt>
         <dd>
-          <ul class="list-disc list-outside ml-5 space-y-2">
+          <ul class="list-disc list-outside space-y-2">
             <li>Beta testing with pilot teams</li>
             <li>Collect and incorporate feedback</li>
             <li>Refine documentation</li>
@@ -349,7 +401,7 @@ featured_image: /assets/images/interplay-card.png
 
         <dt>Full Release</dt>
         <dd>
-          <ul class="list-disc list-outside ml-5 space-y-2">
+          <ul class="list-disc list-outside space-y-2">
             <li>Organization-wide announcement</li>
             <li>Training workshops and resources</li>
             <li>Support system establishment</li>
@@ -455,3 +507,13 @@ featured_image: /assets/images/interplay-card.png
 
   </div>
 </div>
+
+{% if jekyll.environment == 'production' %}
+
+<script src="/assets/js/toc-toggle.min.js?v={{ site.version }}"></script>
+
+{% else %}
+
+<script src="/assets/js/toc-toggle.js?v={{ site.version }}"></script>
+
+{% endif %}

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-  <h1 class="fade-in-element primary-heading-no-slash !mt-12 capitalize content-container">
+  <h1 class="fade-in-element primary-heading-no-slash capitalize content-container">
     {{ page.title | escape }}
   </h1>
   <div class="{{ page.markdown }} max-w-none content-container">
