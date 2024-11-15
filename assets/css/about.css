@@ -7,7 +7,7 @@
 }
 
 .bio-grid__content {
-  @apply sm:col-span-2;
+  @apply sm:col-span-2 mt-8 md:mt-16;
 }
 
 .bio-grid__image-container {

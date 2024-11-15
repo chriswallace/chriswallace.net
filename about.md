@@ -1,6 +1,6 @@
 ---
 layout: about
-title: Bio
+title: Hi, I'm Chris Wallace
 permalink: /bio/
 description: A seasoned Chief Design Officer with 20+ years of experience leading design teams and crafting digital products that drive business growth.
 thumbnail: /assets/images/thumbs/bio.png
@@ -17,9 +17,9 @@ thumbnail: /assets/images/thumbs/bio.png
             <img src="https://ik.imagekit.io/UltraDAO/wallace/guitar.jpg?tr=w-700,q=70" alt="Me hugging my new Gibson guitar, a gift received for my birthday" class="bio-grid__image bio-grid__image--six">
         </div>
         <div class="bio-grid__content">
-            <h1 class="fade-in-element primary-heading !mt-0">
-                {{ page.title | escape }}
-            </h1>
+            <div class="fade-in-element primary-heading !mt-0">
+                <h1>{{ page.title | escape }}</h1>
+            </div>
             <p class="sub-heading fade-in-element">With two decades of experience in product strategy, creative direction, and user experience, I have had the privilege of working with renowned brands such as MLB, DC Comics, Facebook, Microsoft, Starbucks, and The Nobel Prize.</p>
             <hr class="fade-in-element hr-separator">
             <p class="fade-in-element">In my role as an agency executive, I led a team of over 20 designers and directors, collaborating with global clients to create award-winning apps and websites. This journey included designing Emmy Award-nominated second screen apps for iconic series like The Walking Dead, Mad Men, and Breaking Bad.</p>

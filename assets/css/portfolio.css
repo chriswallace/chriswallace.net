@@ -43,7 +43,7 @@
 }
 
 .portfolio__controls {
-  @apply absolute left-8 right-8 bottom-4 z-30 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-4 md:top-auto;
+  @apply absolute left-8 right-8 bottom-4 top-4 md:top-auto z-30 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-4;
 }
 
 .portfolio__play-button {
@@ -51,5 +51,5 @@
 }
 
 .portfolio__title {
-  @apply mb-0 text-[1.3rem] leading-[1.75] tracking-[0] text-white;
+  @apply mb-0 lowercase text-[1.3rem] leading-[1.75] tracking-[0] text-white;
 }
