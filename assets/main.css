@@ -2901,7 +2901,6 @@ footer {
 
 .services__container {
   display: grid;
-  max-width: 64rem;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
 }
@@ -2912,6 +2911,12 @@ footer {
     -moz-column-gap: 6rem;
          column-gap: 6rem;
     row-gap: 3rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .services__container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 

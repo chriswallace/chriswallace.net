@@ -3,7 +3,7 @@
 }
 
 .services__container {
-  @apply max-w-5xl grid grid-cols-1 gap-4 xl:grid-cols-2 xl:gap-x-24 xl:gap-y-12;
+  @apply grid grid-cols-1 gap-4 xl:grid-cols-2 3xl:grid-cols-4 xl:gap-x-24 xl:gap-y-12;
 }
 
 .services__package {
