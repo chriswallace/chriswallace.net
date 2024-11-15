@@ -23,6 +23,30 @@ url: "https://chriswallace.net" # the base hostname & protocol for your site, e.
 twitter_username: chriswallace
 github_username: chriswallace
 
+# Social Media and SEO settings
+title: Chris Wallace
+description: Product design leader with over 20 years experience in e-commerce, digital publishing, interactive media, and web3. Agency veteran working with MLB, DC Comics, Google, Facebook, Microsoft, AMC Networks, and many more.
+twitter:
+  username: chriswallace
+  card: summary_large_image
+logo: /assets/images/logo.png  # Path to your site's logo
+social:
+  name: Chris Wallace
+  links:
+    - https://twitter.com/chriswallace
+    - https://github.com/chriswallace
+
+# Default front matter settings
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      image: /assets/images/default-image.jpg  # Default social sharing image
+      author: Chris Wallace
+
 # Build settings
 markdown: kramdown
 plugins:
