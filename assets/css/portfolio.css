@@ -31,15 +31,15 @@
 }
 
 .portfolio__video-container {
-  @apply relative aspect-[9/12] sm:aspect-[16/9] mx-auto 3xl:rounded-b-2xl bg-black/50;
+  @apply relative aspect-[9/12] sm:aspect-[16/9] mx-auto xl:rounded-b-2xl bg-black/50;
 }
 
 .portfolio__video-overlay {
-  @apply absolute inset-0 z-20 bg-gradient-to-b from-transparent to-black/60 3xl:rounded-b-2xl;
+  @apply absolute inset-0 z-20 bg-gradient-to-b from-transparent to-black/60 xl:rounded-b-2xl;
 }
 
 .portfolio__video {
-  @apply absolute top-0 left-0 z-10 h-full w-full object-cover 3xl:rounded-b-2xl;
+  @apply absolute top-0 left-0 z-10 h-full w-full object-cover xl:rounded-b-2xl;
 }
 
 .portfolio__controls {

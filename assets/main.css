@@ -2807,7 +2807,7 @@ footer {
   }
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 1280px) {
   .portfolio__video-container {
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
@@ -2825,7 +2825,7 @@ footer {
   --tw-gradient-to: rgb(0 0 0 / 0.6) var(--tw-gradient-to-position);
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 1280px) {
   .portfolio__video-overlay {
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
@@ -2843,7 +2843,7 @@ footer {
      object-fit: cover;
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 1280px) {
   .portfolio__video {
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
