@@ -99,8 +99,8 @@ description: Product design leader with over 20 years experience in e-commerce, 
       <div class="max-w-2xl">
         <span class="text-primary-600 dark:text-primary-500">Design Systems</span>
         <h2 class="home-title-secondary mt-2">
-          <a href="/articles/establishing-design-systems-in-the-enterprise" class="inline-block no-underline hover:underline hover:decoration-primary-500">
-            Establishing Design Systems in the Enterprise
+          <a href="/articles/the-design-systems-guide-for-big-companies" class="inline-block no-underline hover:underline hover:decoration-primary-500">
+            The Design Systems Guide for Big Companies
           </a>
         </h2>
       </div>
