@@ -6,7 +6,7 @@ permalink: /portfolio/dc3-interactive-reader/
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png
 ---
 
-<div class="content-container mt-2">
+<div class="content-container">
   <a class="back fade-in-element" href="/portfolio">/portfolio</a>
   <h1 class="fade-in-element mb-3">DC3 Interactive Reader</h1>
 </div>

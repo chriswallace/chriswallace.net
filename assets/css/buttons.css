@@ -11,5 +11,5 @@
 }
 
 .back {
-  @apply text-primary-500 font-light mb-4 inline-block text-base md:text-lg;
+  @apply text-primary-500 font-light mb-8 lg:mb-12 inline-block text-xs sm:text-base;
 }

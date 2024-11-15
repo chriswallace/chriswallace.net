@@ -596,6 +596,10 @@ video {
   visibility: visible;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .collapse {
   visibility: collapse;
 }
@@ -956,9 +960,9 @@ video {
   border-color: rgb(176 176 176 / var(--tw-border-opacity));
 }
 
-.border-gray-400 {
+.border-primary-800 {
   --tw-border-opacity: 1;
-  border-color: rgb(145 145 145 / var(--tw-border-opacity));
+  border-color: rgb(151 41 21 / var(--tw-border-opacity));
 }
 
 .bg-\[\#0B1012\] {
@@ -1070,10 +1074,6 @@ video {
 .text-xs {
   font-size: 0.84rem;
   line-height: 1.75;
-}
-
-.capitalize {
-  text-transform: capitalize;
 }
 
 .text-gray-700 {

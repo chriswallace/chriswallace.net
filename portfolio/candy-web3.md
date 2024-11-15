@@ -6,7 +6,7 @@ permalink: /portfolio/candy-digital-collectible-deposit-withdrawal/
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png
 ---
 
-<div class="content-container mt-2">
+<div class="content-container">
   <a class="back fade-in-element" href="/portfolio">/portfolio</a>
   <h1 class="fade-in-element mb-3">Candy Digital Collectible Deposit/Withdrawal</h1>
 </div>

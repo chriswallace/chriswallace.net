@@ -6,7 +6,7 @@ permalink: /portfolio/candy-league/
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png
 ---
 
-<div class="content-container mt-2">
+<div class="content-container">
   <a class="back fade-in-element" href="/portfolio">/portfolio</a>
   <h1 class="fade-in-element mb-3">Candy League</h1>
 </div>

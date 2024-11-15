@@ -6,7 +6,7 @@ permalink: /portfolio/redacted-mlb-game/
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png
 ---
 
-<div class="content-container mt-2">
+<div class="content-container">
   <a class="back fade-in-element" href="/portfolio">/portfolio</a>
   <h1 class="fade-in-element mb-3">[redacted] MLB Game</h1>
 </div>

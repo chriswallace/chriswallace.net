@@ -132,7 +132,7 @@ image: /assets/images/design-systems-guide.png
       <p>The foundation of any successful design system is a well-defined charter. This document should clearly articulate the purpose and objectives of the design system, answering key questions about problems to solve and expected benefits.</p>
     </div>
 
-    <div class="fade-in-element border-2 border-gray-400 dark:border-gray-700 rounded-lg p-8 mb-12 max-w-prose">
+    <div class="fade-in-element border-2 border-primary-800 rounded-lg p-8 mb-12 max-w-prose">
       <h3 class="mt-0 text-2xl">Example Design Systems Team Charter</h3>
       <h4>Purpose</h4>
       <p class="mb-6">To create a cohesive and scalable design system that enhances the user experience and streamlines the design and development process across all products, including our flagship app, "StreamlinePro," and the upcoming "QuickShop" platform.</p>
