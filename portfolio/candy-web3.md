@@ -28,7 +28,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
   </dl>
 </div>
 
-<div class="content-container-wo flex flex-col py-3 bg-black mb-12">
+<div class="content-container-wo mb-12">
+  <div class="flex flex-col py-3 bg-black">
     <div class="zoomable max-h-[500px] mx-auto">
         <div class="video-player">
             <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy"  class="fade-in-element max-h-full max-w-full">
@@ -37,6 +38,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
             </video>
         </div>
     </div>
+  </div>
 </div>
 
 <div class="content-container">

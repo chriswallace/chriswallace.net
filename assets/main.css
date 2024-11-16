@@ -1069,6 +1069,10 @@ article {
   width: 100%;
 }
 
+.\!max-w-none {
+  max-width: none !important;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -1262,6 +1266,11 @@ article {
 .bg-\[\#444444\] {
   --tw-bg-opacity: 1;
   background-color: rgb(68 68 68 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#CC9644\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 150 68 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#E4B043\] {
@@ -3009,6 +3018,10 @@ body {
     --tw-bg-opacity: 1;
     background-color: rgb(20 20 20 / var(--tw-bg-opacity));
   }
+}
+
+picture img {
+  width: 100%;
 }
 
 .ui-content {

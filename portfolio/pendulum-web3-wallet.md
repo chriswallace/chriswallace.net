@@ -28,6 +28,22 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.p
   </dl>
 </div>
 
+<div class="content-container-wo mb-12">
+  <picture>
+    <source media="(max-width: 480px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-400,f-auto">
+    <source media="(min-width: 481px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=w-1200,f-auto 1200w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=w-1600,f-auto 1600w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=w-2500,f-auto 2500w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=w-2500,f-auto"
+         class="fade-in-element w-full block mb-1.5" 
+         alt="" 
+         loading="lazy">
+  </picture>
+</div>
+
 <div class="content-container-wo bg-[#E4B043] text-center mb-12">
   <video id="portfolioVideo" data-type="video" width="100%" controlslist="nodownload nofullscreen noremoteplayback" disablePictureInPicture muted playsinline autoplay loop loading="lazy" class="fade-in-element max-w-4xl mx-auto" poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/demo-workflows.mov/ik-video.mp4/ik-thumbnail.jpg?updatedAt=1730426417205">
       <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/demo-workflows.mov/ik-video.mp4" type="video/mp4">

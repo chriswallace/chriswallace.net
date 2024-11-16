@@ -794,6 +794,10 @@ video {
   width: 100%;
 }
 
+.\!max-w-none {
+  max-width: none !important;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -987,6 +991,11 @@ video {
 .bg-\[\#444444\] {
   --tw-bg-opacity: 1;
   background-color: rgb(68 68 68 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#CC9644\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 150 68 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#E4B043\] {
