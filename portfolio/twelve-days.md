@@ -3,7 +3,7 @@ layout: default
 title: Twelve Days of CryptoArt
 description: A curated art experience where collectors mint one of twelve mystery artworks daily, culminating in an artist reveal on UltraDAO.
 permalink: /portfolio/twelve-days-cryptoart/
-thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.jpg
+thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png
 ---
 
 <div class="content-container">
@@ -31,7 +31,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnai
 <div class="fade-in-element content-container-wo w-full !max-w-none flex flex-col bg-[#CC9644] mb-1.5">
   <picture>
     <source media="(max-width: 480px)" 
-            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.jpg?tr=w-400,f-auto">
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-400,f-auto">
     <source media="(min-width: 481px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-800,f-auto 800w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-1200,f-auto 1200w,
