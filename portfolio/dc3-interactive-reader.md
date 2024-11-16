@@ -31,7 +31,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png
 <div class="content-container-wo flex flex-col mb-12">
   <picture>
     <source media="(max-width: 480px)" 
-            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-400,f-auto">
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-800,f-auto">
     <source media="(min-width: 481px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-800,f-auto 800w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-1200,f-auto 1200w,

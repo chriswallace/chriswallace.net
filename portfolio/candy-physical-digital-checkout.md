@@ -31,7 +31,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png
 <div class="content-container-wo">
   <picture>
     <source media="(max-width: 480px)" 
-            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-400,f-auto">
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto">
     <source media="(min-width: 481px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-physical-digital-banner.png?tr=w-800,f-auto 800w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-physical-digital-banner.png?tr=w-1200,f-auto 1200w,

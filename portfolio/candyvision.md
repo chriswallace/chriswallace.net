@@ -31,7 +31,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnai
 <div class="content-container-wo mb-12">
   <picture>
     <source media="(max-width: 480px)" 
-            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-400,f-auto">
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-800,f-auto">
     <source media="(min-width: 481px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-banner.png?tr=w-800,f-auto 800w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-banner.png?tr=w-1200,f-auto 1200w,
