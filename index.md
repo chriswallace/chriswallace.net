@@ -44,11 +44,11 @@ description: Product design leader with over 20 years experience in e-commerce, 
       <a href="/portfolio/candy-league/" class="infinite-scroll__item">
         <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-600,f-auto" alt="Candy League" class="infinite-scroll__image">
       </a>
+      <a href="/portfolio/twelve-days-cryptoart/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-600,f-auto" alt="Twelve Days of CryptoArt" class="infinite-scroll__image">
+      </a>
       <a href="/portfolio/dc3-interactive-reader/" class="infinite-scroll__item">
         <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-600,f-auto" alt="DC3 Interactive Comic Book Reader" class="infinite-scroll__image">
-      </a>
-      <a href="/portfolio/candyvision/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-600,f-auto" alt="CandyVision" class="infinite-scroll__image">
       </a>
       <a href="/portfolio/pendulum-crypto-wallet/" class="infinite-scroll__item">
         <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-600,f-auto" alt="Pendulum Crypto Wallet (iOS App)" class="infinite-scroll__image">
@@ -71,11 +71,11 @@ description: Product design leader with over 20 years experience in e-commerce, 
       <a href="/portfolio/candy-league/" class="infinite-scroll__item">
         <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-600,f-auto" alt="Candy League" class="infinite-scroll__image">
       </a>
+      <a href="/portfolio/twelve-days-cryptoart/" class="infinite-scroll__item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-600,f-auto" alt="Twelve Days of CryptoArt" class="infinite-scroll__image">
+      </a>
       <a href="/portfolio/dc3-interactive-reader/" class="infinite-scroll__item">
         <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-600,f-auto" alt="DC3 Interactive Comic Book Reader" class="infinite-scroll__image">
-      </a>
-      <a href="/portfolio/candyvision/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-600,f-auto" alt="CandyVision" class="infinite-scroll__image">
       </a>
       <a href="/portfolio/pendulum-crypto-wallet/" class="infinite-scroll__item">
         <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-600,f-auto" alt="Pendulum Crypto Wallet (iOS App)" class="infinite-scroll__image">
