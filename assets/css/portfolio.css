@@ -20,7 +20,7 @@
 
 .portfolio-list__title,
 .portfolio-list__description {
-  @apply text-base lg:text-lg;
+  @apply text-lg;
 }
 
 .portfolio-list__title {

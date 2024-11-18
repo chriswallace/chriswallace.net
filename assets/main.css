@@ -2582,12 +2582,13 @@ footer {
 
 .testimonial {
   display: flex;
+  min-height: 340px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
   text-align: left;
@@ -2623,12 +2624,6 @@ footer {
   max-width: 55rem;
 }
 
-@media (min-width: 2560px) {
-  .testimonial__quote {
-    max-width: 42rem;
-  }
-}
-
 .testimonial__text {
   margin-bottom: 0.75rem;
   font-family: bricolage-grotesque-72-scond, system-ui, sans-serif;
@@ -2640,9 +2635,21 @@ footer {
   color: rgb(79 79 79 / var(--tw-text-opacity));
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) {
+  .testimonial__text {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 768px) {
   .testimonial__text {
     font-size: 52px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .testimonial__text {
+    font-size: 44px;
   }
 }
 
@@ -2656,7 +2663,15 @@ footer {
   margin-bottom: 0px;
   max-width: none;
   font-size: 0.9rem;
-  line-height: 1.75;
+  line-height: 1.5 !important;
+}
+
+@media (min-width: 768px) {
+  .testimonial__author {
+    font-size: 1rem;
+    line-height: 1.75;
+    letter-spacing: 0;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2743,17 +2758,8 @@ footer {
 
 .portfolio-list__title,
 .portfolio-list__description {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.75;
-  letter-spacing: 0;
-}
-
-@media (min-width: 1024px) {
-  .portfolio-list__title,
-.portfolio-list__description {
-    font-size: 1.2rem;
-    line-height: 1.75;
-  }
 }
 
 .portfolio-list__title {
