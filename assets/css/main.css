@@ -57,11 +57,11 @@ picture img {
 }
 
 .content-container {
-  @apply mx-[16px] md:mx-[32px] md:ml-[112px];
+  @apply px-[16px] md:px-[32px] md:pl-[112px] 3xl:pl-0;
 }
 
 .content-container-wo {
-  @apply md:ml-[80px];
+  @apply md:pl-[80px] 3xl:pl-0;
 }
 
 .content-container,
@@ -71,17 +71,11 @@ picture img {
 
 .content-container.wide,
 .content-container-wo.wide {
-  @apply 2xl:mx-auto 2xl:max-w-7xl 3xl:max-w-[2400px];
+  @apply 2xl:max-w-7xl 3xl:max-w-[2400px];
 }
 
 .sub-heading {
-  @apply text-base sm:text-lg mb-12 md:mb-16 max-w-prose;
-  font-variation-settings: "wght" 450;
-}
-
-.sub-heading-curated {
-  @apply text-base md:text-xl -mt-1 mb-12 relative;
-  line-height: 1.55;
+  @apply text-lg sm:text-xl mb-12 md:mb-16 max-w-prose;
 }
 
 .toc-toggle {
@@ -112,7 +106,7 @@ caption {
 /* Home Page */
 
 .portfolio-intro {
-  @apply 2xl:mb-16;
+  @apply mb-0 text-sm;
 }
 
 .portfolio-intro__icon {
@@ -141,42 +135,38 @@ caption {
 }
 
 .home-title-secondary {
-  @apply text-xl md:text-2xl leading-[1.4] md:leading-[1.4] mb-2;
-  font-variation-settings: "wght" 400;
+  @apply text-base md:text-lg leading-[1.4] md:leading-[1.4] mt-0 mb-2 font-normal;
 }
 
 .open-to-work {
   @apply text-sm bg-white mb-12 relative rounded-full p-2 pl-6 md:pl-3 flex gap-4 justify-between items-center shadow-md;
 
   .badge {
-    @apply uppercase sm:mb-0 px-8 py-3 inline-block relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs whitespace-nowrap no-underline hover:underline;
+    @apply uppercase sm:mb-0 px-8 py-3 inline-block relative rounded-full bg-gradient-to-b from-primary-600 to-primary-800 text-white text-xs whitespace-nowrap no-underline hover:underline font-thin;
     box-shadow: inset 0px -6px 0 -3px rgba(50, 20, 97, 0.4);
-    font-variation-settings: "wght" 140;
   }
 
   p {
-    @apply m-0 p-0 sm:pl-3 inline-block grow leading-snug;
-    font-variation-settings: "wght" 140;
+    @apply m-0 p-0 sm:pl-3 inline-block grow leading-snug font-thin;
 
     strong {
-      @apply text-black mr-2 md:mr-4;
-      font-variation-settings: "wght" 140;
+      @apply text-black mr-2 md:mr-4 font-thin;
     }
   }
 
   @media screen and (max-width: 640px) {
     p {
-      font-variation-settings: "wght" 300;
+      @apply font-light;
 
       strong {
-        font-variation-settings: "wght" 140;
+        @apply font-thin;
       }
     }
   }
 }
 
 .project-list {
-  @apply table md:block w-auto md:w-full text-xs sm:text-sm text-gray-400 max-w-none mb-4;
+  @apply font-mono table md:block w-auto md:w-full text-xs sm:text-xs lg:text-sm text-gray-400 max-w-none mb-4;
 }
 
 .project-list div {
@@ -184,11 +174,11 @@ caption {
 }
 
 .project-list dt {
-  @apply table-cell md:inline whitespace-nowrap md:whitespace-normal font-bold w-fit md:w-auto pr-4 md:pr-0;
+  @apply table-cell text-gray-400 dark:text-gray-400 md:inline whitespace-nowrap md:whitespace-normal font-semibold w-fit md:w-auto pr-4 md:pr-2;
 }
 
 .project-list dd {
-  @apply table-cell md:inline text-gray-950 dark:text-gray-100 pl-4 md:pl-0 ml-0;
+  @apply table-cell md:inline text-gray-800 dark:text-gray-200 pl-4 md:pl-0 ml-0;
 }
 
 /* Resume Page */
@@ -245,7 +235,7 @@ video::-webkit-media-controls {
 }
 
 .zoom-container {
-  @apply aspect-[40/27] mb-6;
+  @apply aspect-[40/27];
 }
 
 /* Zoomable styles */
@@ -273,7 +263,7 @@ video::-webkit-media-controls {
 }
 
 .announcement {
-  @apply mb-16 flex gap-4 text-center md:text-left text-xs;
+  @apply mb-16 flex gap-4 text-center md:text-left text-xs font-mono;
 }
 
 .announcement__content {
@@ -376,4 +366,10 @@ video::-webkit-media-controls {
 /* Pause animation on hover */
 .infinite-scroll:hover .infinite-scroll__scroller {
   animation-play-state: paused;
+}
+
+#meetChris .curtain-title {
+  @apply uppercase text-[1.8rem] lg:text-[2rem] h-0 overflow-y-hidden justify-self-stretch mt-1 md:mt-1 font-black;
+  font-family: "transducer-variable", sans-serif;
+  font-style: normal;
 }

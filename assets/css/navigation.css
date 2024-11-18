@@ -12,7 +12,7 @@
 
 .menu-button:hover i:before,
 .menu-button:hover i:after {
-  @apply bg-gray-900 dark:bg-white;
+  @apply bg-white;
 }
 
 .menu-button i {
@@ -51,7 +51,7 @@
 }
 
 .open-menu .navigation {
-  @apply bg-gray-200 dark:bg-gray-950;
+  @apply bg-gray-100 dark:bg-gray-950;
 }
 
 .navigation .logo {
@@ -76,11 +76,10 @@
 
 .menu {
   @apply order-2 md:order-1 md:h-screen grow;
+}
 
-  a {
-    @apply p-4 py-6 block capitalize leading-none no-underline decoration-2 text-primary-600 dark:text-white border-b border-gray-300 dark:border-gray-900 dark:bg-gray-950 hover:bg-gray-100 dark:hover:bg-primary-600;
-    font-variation-settings: "wght" 140;
-  }
+.menu a {
+  @apply p-4 py-6 block font-mono uppercase text-xs leading-none no-underline decoration-2 text-primary-600 dark:text-gray-200 border-b border-gray-300 dark:border-gray-900 dark:bg-gray-950 hover:bg-white dark:hover:bg-primary-600 dark:hover:text-white;
 }
 
 .site-title {

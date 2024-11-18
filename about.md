@@ -6,7 +6,7 @@ description: A seasoned Chief Design Officer with 20+ years of experience leadin
 thumbnail: /assets/images/thumbs/bio.png
 ---
 
-<div class="content-container">
+<div class="content-container wide">
     <div class="bio-grid">
         <div class="bio-grid__image-container fade-in-element">
             <img src="https://ik.imagekit.io/UltraDAO/wallace/wifey.jpg?tr=w-700,q=70" alt="me and my wife posing in front of her mom's family heirloom piano" class="bio-grid__image bio-grid__image--one">

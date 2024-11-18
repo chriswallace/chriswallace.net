@@ -12,7 +12,7 @@ description: Get the strategic oversight, vision, and expertise of an experience
     </h1>
   </div>
   <div class="{{ page.markdown }} max-w-none">
-    <p class="fade-in-element">Access design leadership for every phase of your company from product validation to growth to scaling design operations and leveling up existing capabilities.</p>
+    <p class="sub-heading fade-in-element">Access design leadership for every phase of your company from product validation to growth to scaling design operations and leveling up existing capabilities.</p>
     <hr class="hr-separator fade-in-element">
     <div class="services__container">
         <div class="services__package fade-in-element">
@@ -49,7 +49,7 @@ description: Get the strategic oversight, vision, and expertise of an experience
           <p class="services__ideal">Ideal for: Teams needing both strategic design leadership and hands-on execution to drive projects forward.</p>
         </div>
         <div class="services__package fade-in-element">
-          <h2 class="services__title">Organizational Design Upgrade</h2>
+          <h2 class="services__title">Team Up</h2>
           <p class="services__description">focus: mentor and grow</p>
           <div class="services__service-title"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg> Design Mentorship & Coaching</div>
           <div class="services__service-description">Providing mentorship to develop the skills and capabilities of internal design teams.</div>

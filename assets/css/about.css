@@ -1,17 +1,13 @@
 .bio-grid {
-  @apply sm:grid sm:grid-cols-3 sm:gap-6 lg:gap-24 md:pt-6;
-
-  p:first-of-type {
-    @apply mb-0 text-lg sm:text-xl;
-  }
+  @apply md:grid md:grid-cols-8 md:gap-6 lg:gap-16 md:pt-6;
 }
 
 .bio-grid__content {
-  @apply sm:col-span-2 mt-8 md:mt-16;
+  @apply md:col-span-5 lg:col-span-4 mt-8 md:mt-16;
 }
 
 .bio-grid__image-container {
-  @apply relative my-8 sm:mb-16 sm:mt-0 md:mb-0 w-auto aspect-square sm:aspect-[9/22] order-2;
+  @apply relative my-8 md:mb-16 md:mt-0 md:mb-0 w-auto aspect-square md:aspect-[9/22] order-2 md:col-span-3 lg:col-span-4;
 }
 
 .bio-grid__image-container img {
@@ -23,25 +19,25 @@
 }
 
 .bio-grid__image--one {
-  @apply left-0 top-[14%] w-[44%] sm:top-0 md:left-[4%] sm:w-[56%] rotate-[-1.8deg] z-20;
+  @apply left-0 top-[14%] w-[44%] md:top-0 md:left-[4%] md:w-[56%] rotate-[-1.8deg] z-20;
 }
 
 .bio-grid__image--two {
-  @apply left-[33%] top-0 w-[38%] sm:top-[12%] sm:left-[50%] sm:w-[50%] rotate-[1.5deg] z-10;
+  @apply left-[33%] top-0 w-[38%] md:top-[12%] md:left-[50%] md:w-[50%] rotate-[1.5deg] z-10;
 }
 
 .bio-grid__image--three {
-  @apply right-0 top-[32%] w-[38%] sm:top-[34%] sm:left-0 sm:right-auto sm:w-[58%] rotate-[3deg] z-30;
+  @apply right-0 top-[32%] w-[38%] md:top-[34%] md:left-0 md:right-auto md:w-[58%] rotate-[3deg] z-30;
 }
 
 .bio-grid__image--four {
-  @apply left-[35%] top-[61%] w-[60%] sm:top-[50%] sm:w-[54%] sm:left-auto sm:right-[5%] rotate-[-1.8deg] z-40;
+  @apply left-[35%] top-[61%] w-[60%] md:top-[50%] md:w-[54%] md:left-auto md:right-[5%] rotate-[-1.8deg] z-40;
 }
 
 .bio-grid__image--five {
-  @apply right-[5%] top-[5%] w-[20%] sm:top-[55%] sm:w-[35%] sm:left-[13%] sm:right-auto sm:rotate-[-1.8deg] z-10 md:z-40;
+  @apply right-[5%] top-[5%] w-[20%] md:top-[55%] md:w-[35%] md:left-[13%] md:right-auto md:rotate-[-1.8deg] z-10 md:z-40;
 }
 
 .bio-grid__image--six {
-  @apply left-[6%] top-[56%] w-[30%] sm:top-[65%] sm:w-[28%] sm:left-[44%] rotate-[1.8deg] z-40;
+  @apply left-[6%] top-[56%] w-[30%] md:top-[65%] md:w-[28%] md:left-[44%] rotate-[1.8deg] z-40;
 }

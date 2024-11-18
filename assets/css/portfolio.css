@@ -3,31 +3,36 @@
 }
 
 .portfolio-list {
-  @apply mb-12 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8;
+  @apply mb-12 grid grid-cols-1 lg:grid-cols-2 3xl:grid-cols-3 gap-4 3xl:gap-8;
 }
 
 .portfolio-list__item {
-  @apply mb-6;
+  @apply mb-12;
 }
 
 .portfolio-list__link {
-  @apply mb-2 inline-block;
+  @apply mb-0 inline-block;
 }
 
 .portfolio-list__image {
-  @apply rounded-2xl;
+  @apply rounded-2xl mb-3;
+}
+
+.portfolio-list__title,
+.portfolio-list__description {
+  @apply text-base lg:text-lg;
 }
 
 .portfolio-list__title {
-  @apply my-3;
+  @apply mt-3 mb-0 font-normal dark:text-white;
+}
+
+.portfolio-list__title a {
+  @apply font-semibold no-underline hover:underline hover:decoration-primary-500;
 }
 
 .portfolio-list__description {
-  @apply mb-0 text-sm;
-}
-
-.portfolio-list__description:last-of-type {
-  @apply mt-3;
+  @apply my-0;
 }
 
 .portfolio__video-container {

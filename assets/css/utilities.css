@@ -1,8 +1,8 @@
 @layer utilities {
   /* Base Typography */
+
   .base-text {
-    @apply text-base md:text-lg text-gray-500 dark:text-gray-400;
-    font-variation-settings: "wght" 140;
+    @apply text-base md:text-lg text-gray-500 dark:text-gray-400 font-thin;
   }
 
   .max-w-8xl {
@@ -14,8 +14,7 @@
   }
 
   .heading-base {
-    @apply text-gray-950 dark:text-white mb-6;
-    font-variation-settings: "wght" 140;
+    @apply text-gray-950 dark:text-white mb-6 font-thin;
   }
 
   .content-width {
@@ -91,15 +90,6 @@
   }
 }
 
-.emoji-font {
-  font-family: "Noto Color Emoji";
-}
-
-.wide-font {
-  @apply uppercase;
-  font-family: "condor-wide", sans-serif;
-}
-
 .no-scroll {
   overflow: hidden;
   height: 100%;
@@ -112,19 +102,4 @@
 
 .hidden {
   display: none;
-}
-
-.loader {
-  border: 8px solid #565656;
-  /* Light grey */
-  border-top: 8px solid #eb7272;
-  /* Green */
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 2s linear infinite;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }

@@ -15,21 +15,21 @@
 }
 
 .services__description {
-  @apply text-sm lg:text-lg mb-8 text-primary-600 dark:text-primary-500;
+  @apply mb-8 text-primary-600 dark:text-primary-500;
 }
 
 .services__package svg {
-  @apply text-green-500;
+  @apply text-green-500 mt-1;
 }
 
 .services__service-title {
-  @apply flex gap-[12px] items-start text-gray-800 dark:text-gray-100 mb-0.5;
+  @apply text-base font-medium flex gap-[12px] items-start text-gray-800 dark:text-gray-100 mb-0;
 }
 
 .services__service-description {
-  @apply text-xs ml-[36px] mb-8;
+  @apply text-base ml-[36px] mb-8;
 }
 
 .services__ideal {
-  @apply mt-8 text-xs italic text-gray-800 dark:text-gray-400;
+  @apply mt-8 text-sm italic text-gray-700 dark:text-gray-300;
 }

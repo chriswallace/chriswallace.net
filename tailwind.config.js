@@ -38,80 +38,104 @@ module.exports = {
         x: "x mandatory",
       },
       fontFamily: {
-        sans: ["cofo-sans-mono-variable", "sans-serif"],
+        sans: [
+          'bricolage-grotesque',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'sans-serif'
+        ],
+        sanscon: [
+          'bricolage-grotesque-72-scond',
+          'system-ui',
+          'sans-serif'
+        ],
+        mono: [
+          'cofo-sans-mono-variable',
+          'ui-monospace',
+          'SFMono-Regular',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          'monospace'
+        ],
       },
       fontSize: {
         xs: [
-          "0.84rem",
-          {
-            lineHeight: "1.75",
-          },
-        ],
-        sm: [
           "0.9rem",
           {
             lineHeight: "1.75",
           },
         ],
+        sm: [
+          "0.96rem",
+          {
+            lineHeight: "1.75",
+          },
+        ],
         base: [
-          "0.95rem",
+          "1rem",
           {
             lineHeight: "1.75",
             letterSpacing: "0",
           },
         ],
         lg: [
-          "1rem",
+          "1.2rem",
           {
             lineHeight: "1.75",
           },
         ],
         xl: [
-          "1.1rem",
+          "1.35rem",
           {
-            lineHeight: "1.75",
+            lineHeight: "1.65",
             letterSpacing: "0",
           },
         ],
         "2xl": [
-          "1.2rem",
+          "1.5rem",
           {
-            lineHeight: "1.75",
+            lineHeight: "1.5",
             letterSpacing: "0",
           },
         ],
         "3xl": [
-          "1.3rem",
+          "1.6rem",
           {
-            lineHeight: "1.75",
+            lineHeight: "1.5",
             letterSpacing: "0",
           },
         ],
         "4xl": [
-          "1.4rem",
+          "1.8rem",
           {
-            lineHeight: "1.75",
+            lineHeight: "1.5",
             letterSpacing: "0",
           },
         ],
         "5xl": [
-          "1.5rem",
+          "2rem",
           {
-            lineHeight: "1.75",
+            lineHeight: "1.4",
             letterSpacing: "0",
           },
         ],
         "6xl": [
-          "1.75rem",
+          "2.4rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "1.34",
             letterSpacing: "0",
           },
         ],
         "7xl": [
-          "2.5rem",
+          "4rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "1.25",
             letterSpacing: "0",
           },
         ]

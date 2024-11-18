@@ -84,11 +84,11 @@ description: Product design leader with over 20 years experience in e-commerce, 
   </div>
 </div>
 <div class="content-container">
-  <div class="my-16 space-y-16">
+  <div class="my-8 2xl:mt-12 space-y-8 2xl:space-y-12">
     <div class="space-y-4 fade-in-element">
       <div class="max-w-2xl">
         <span class="text-primary-600 dark:text-primary-500">New Service</span>
-        <h2 class="home-title-secondary mt-2">
+        <h2 class="home-title-secondary">
           <a href="/services" class="inline-block no-underline hover:underline hover:decoration-primary-500">
             Design Leadership on a Budget: Fractional Chief Design Officer
           </a>
@@ -98,7 +98,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
     <div class="space-y-4 fade-in-element">
       <div class="max-w-2xl">
         <span class="text-primary-600 dark:text-primary-500">New Article</span>
-        <h2 class="home-title-secondary mt-2">
+        <h2 class="home-title-secondary">
           <a href="/articles/the-design-systems-guide-for-big-companies" class="inline-block no-underline hover:underline hover:decoration-primary-500">
             The Design Systems Guide for Big Companies
           </a>

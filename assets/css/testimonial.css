@@ -1,23 +1,27 @@
 .testimonial {
-  @apply flex flex-col items-center justify-center rounded-2xl px-8 py-16 text-center;
+  @apply flex flex-col items-center justify-center rounded-2xl px-8 py-16 md:p-12 text-left;
+}
+
+.portfolio-list .testimonial {
+  @apply bg-transparent bg-gradient-to-br from-white dark:from-gray-900 to-gray-100 dark:to-gray-950;
 }
 
 .testimonial__quote {
-  @apply mx-auto max-w-[36rem] 2xl:max-w-2xl;
+  @apply mx-auto max-w-[55rem] 3xl:max-w-2xl;
 }
 
 .testimonial__text {
-  @apply mb-6 md:mb-8 text-lg;
+  @apply mb-3 font-sanscon !leading-none uppercase font-semibold text-[32px] lg:text-[52px] text-gray-700 dark:text-white/70;
 }
 
 .testimonial__author {
-  @apply mb-0 text-xs;
+  @apply mb-0 text-xs max-w-none dark:text-white/70;
 }
 
 .testimonial__emphasis {
-  @apply dark:text-white;
+  @apply text-primary-600 dark:text-primary-500 not-italic;
 }
 
 .testimonial__highlight {
-  @apply underline decoration-primary-500 underline-offset-4 dark:text-white;
+  @apply underline decoration-primary-600 underline-offset-4 text-primary-600 dark:text-white dark:decoration-primary-500 dark:decoration-white/60;
 }
