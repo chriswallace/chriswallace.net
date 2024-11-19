@@ -924,6 +924,10 @@ article {
   margin-bottom: 4rem;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -2735,8 +2739,8 @@ footer {
 
 @media (min-width: 1280px) {
   .portfolio-container {
-    margin-left: 32px;
-    margin-right: 32px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -2793,6 +2797,13 @@ footer {
 }
 
 @media (min-width: 768px) {
+  .portfolio-list__title,
+.portfolio-list__description {
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 2560px) {
   .portfolio-list__title,
 .portfolio-list__description {
     font-size: 1.2rem;
@@ -3764,6 +3775,7 @@ video::-webkit-media-controls {
 }
 
 .greeting__wave {
+  margin-right: 0.25rem;
   display: inline-block;
   animation: wave 5s ease-in-out infinite;
 }

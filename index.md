@@ -17,68 +17,208 @@ description: Product design leader with over 20 years experience in e-commerce, 
   
   <div class="greeting fade-in-element"><span class="greeting__wave">👋</span> Howdy! I'm Chris Wallace.</div>
   <h1 class="home-title fade-in-element">
-    <span class="typewriter" id="typewriter">A Hands-on Design Executive working with MLB, DC Comics, Microsoft, and Starbucks.</span>
+    <span class="typewriter" id="typewriter">A Hands-on Senior Product Design Leader looking to make waves.</span>
   </h1>
   
   <p class="portfolio-intro fade-in-element">Check out some of my <a href="/portfolio" class="portfolio-intro__link">latest work</a> <svg class="portfolio-intro__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
 </div>
 
-<div class="content-container-xo">
+<div class="content-container-xo mt-12 mb-20">
   <div class="infinite-scroll fade-in-element">
     <div class="infinite-scroll__scroller">
       <!-- First set -->
       <a href="/portfolio/palm-quest/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-600,f-auto" 
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
              alt="Palm Quest App Prototype" 
              class="infinite-scroll__image">
       </a>
       <a href="/portfolio/candy-physical-digital-feature/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-600,f-auto" alt="Candy.io Physical-Digital Checkout" class="infinite-scroll__image">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
+             alt="Candy.io Physical-Digital Checkout" 
+             class="infinite-scroll__image">
       </a>
       <a href="/portfolio/redacted-mlb-game/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-600,f-auto" alt="[Redacted] MLB Game" class="infinite-scroll__image">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
+             alt="[Redacted] MLB Game" 
+             class="infinite-scroll__image">
       </a>
       <a href="/portfolio/candy-marketplace-redesign/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-600,f-auto" alt="Candy Marketplace Redesign" class="infinite-scroll__image">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
+             alt="Candy Marketplace Redesign" 
+             class="infinite-scroll__image">
       </a>
       <a href="/portfolio/candy-league/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-600,f-auto" alt="Candy League" class="infinite-scroll__image">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
+             alt="Candy League" 
+             class="infinite-scroll__image">
       </a>
       <a href="/portfolio/twelve-days-cryptoart/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-600,f-auto" alt="Twelve Days of CryptoArt" class="infinite-scroll__image">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
+             alt="Twelve Days of CryptoArt" 
+             class="infinite-scroll__image">
       </a>
       <a href="/portfolio/dc3-interactive-reader/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-600,f-auto" alt="DC3 Interactive Comic Book Reader" class="infinite-scroll__image">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
+             alt="DC3 Interactive Comic Book Reader" 
+             class="infinite-scroll__image">
       </a>
       <a href="/portfolio/pendulum-crypto-wallet/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-600,f-auto" alt="Pendulum Crypto Wallet (iOS App)" class="infinite-scroll__image">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
+             alt="Pendulum Crypto Wallet (iOS App)" 
+             class="infinite-scroll__image">
       </a>
       <!-- second set -->
       <a href="/portfolio/palm-quest/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-600,f-auto" 
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
              alt="Palm Quest App Prototype" 
              class="infinite-scroll__image">
       </a>
       <a href="/portfolio/candy-physical-digital-feature/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-600,f-auto" alt="Candy.io Physical-Digital Checkout" class="infinite-scroll__image">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
+             alt="Candy.io Physical-Digital Checkout" 
+             class="infinite-scroll__image">
       </a>
       <a href="/portfolio/redacted-mlb-game/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-600,f-auto" alt="[Redacted] MLB Game" class="infinite-scroll__image">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
+             alt="[Redacted] MLB Game" 
+             class="infinite-scroll__image">
       </a>
       <a href="/portfolio/candy-marketplace-redesign/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-600,f-auto" alt="Candy Marketplace Redesign" class="infinite-scroll__image">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
+             alt="Candy Marketplace Redesign" 
+             class="infinite-scroll__image">
       </a>
       <a href="/portfolio/candy-league/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-600,f-auto" alt="Candy League" class="infinite-scroll__image">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
+             alt="Candy League" 
+             class="infinite-scroll__image">
       </a>
       <a href="/portfolio/twelve-days-cryptoart/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-600,f-auto" alt="Twelve Days of CryptoArt" class="infinite-scroll__image">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
+             alt="Twelve Days of CryptoArt" 
+             class="infinite-scroll__image">
       </a>
       <a href="/portfolio/dc3-interactive-reader/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-600,f-auto" alt="DC3 Interactive Comic Book Reader" class="infinite-scroll__image">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
+             alt="DC3 Interactive Comic Book Reader" 
+             class="infinite-scroll__image">
       </a>
       <a href="/portfolio/pendulum-crypto-wallet/" class="infinite-scroll__item">
-        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-600,f-auto" alt="Pendulum Crypto Wallet (iOS App)" class="infinite-scroll__image">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-760,q-70,f-auto" 
+             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-570,q-70,f-auto 1x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-760,q-70,f-auto 2x,
+                     https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-1140,q-70,f-auto 3x"
+             sizes="(max-width: 640px) 300px,
+                    (max-width: 1536px) 380px,
+                    (max-width: 2460px) 460px,
+                    540px"
+             alt="Pendulum Crypto Wallet (iOS App)" 
+             class="infinite-scroll__image">
       </a>
     </div>
   </div>

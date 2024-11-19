@@ -1,5 +1,5 @@
 .portfolio-container {
-  @apply mx-[16px] xl:mx-[32px];
+  @apply mx-[16px] xl:mx-0;
 }
 
 .portfolio-list {
@@ -32,11 +32,11 @@
 
 .portfolio-list__title,
 .portfolio-list__description {
-  @apply text-base md:text-lg my-2;
+  @apply text-base 3xl:text-lg my-2 md:leading-normal;
 }
 
 .portfolio-list__title {
-  @apply mt-0 mb-0 font-normal dark:text-white;
+  @apply my-0 font-normal dark:text-white;
 }
 
 .portfolio-list__title a {
