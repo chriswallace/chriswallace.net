@@ -28,11 +28,11 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
   </dl>
 </div>
 
-<div class="content-container-wo mb-12">
+<div class="fade-in-element content-container-wo mb-12">
   <div class="flex flex-col py-3 bg-black">
     <div class="zoomable max-h-[500px] mx-auto">
         <div class="video-player">
-            <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy"  class="fade-in-element max-h-full max-w-full">
+            <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy"  class="max-h-full max-w-full">
                 <source src="/assets/video/withdrawal-deposit.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
