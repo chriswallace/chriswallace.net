@@ -10,8 +10,12 @@
   @apply mx-auto max-w-[55rem];
 }
 
+.portfolio-list .testimonial__quote {
+  @apply max-w-[28rem];
+}
+
 .testimonial__text {
-  @apply mb-3 font-sanscon !leading-none uppercase font-semibold text-[32px] sm:text-[42px] md:text-[52px] 2xl:text-[44px] text-gray-700 dark:text-white/70;
+  @apply mb-3 font-sanscon !leading-none uppercase font-semibold text-[32px] md:text-[44px] text-gray-700 dark:text-white/70;
 }
 
 .testimonial__author {
@@ -23,5 +27,5 @@
 }
 
 .testimonial__highlight {
-  @apply underline decoration-primary-600 underline-offset-4 text-primary-600 dark:text-white dark:decoration-primary-500 dark:decoration-white/60;
+  @apply underline decoration-primary-600 underline-offset-4 text-primary-600 dark:text-white dark:decoration-primary-500 dark:decoration-primary-500;
 }

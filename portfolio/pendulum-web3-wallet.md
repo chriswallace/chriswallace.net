@@ -28,7 +28,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.p
   </dl>
 </div>
 
-<div class="content-container-wo mb-12">
+<div class="fade-in-element content-container-wo bg-[#E4B53B] mb-1.5">
   <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-800,f-auto">
@@ -38,20 +38,20 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.p
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=w-1600,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=w-2500,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=w-2500,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
 </div>
 
-<div class="content-container-wo bg-[#E4B043] text-center mb-12">
-  <video id="portfolioVideo" data-type="video" width="100%" controlslist="nodownload nofullscreen noremoteplayback" disablePictureInPicture muted playsinline autoplay loop loading="lazy" class="fade-in-element max-w-4xl mx-auto" poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/demo-workflows.mov/ik-video.mp4/ik-thumbnail.jpg?updatedAt=1730426417205">
+<div class="fade-in-element content-container-wo bg-[#E9B84D] text-center mb-12">
+  <video id="portfolioVideo" data-type="video" width="100%" controlslist="nodownload nofullscreen noremoteplayback" disablePictureInPicture muted playsinline autoplay loop loading="lazy" class="max-w-4xl mx-auto" poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/demo-workflows.mov/ik-video.mp4/ik-thumbnail.jpg?updatedAt=1730426417205">
       <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/demo-workflows.mov/ik-video.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
   </video>
 </div>
 
-<div class="content-container fade-in-element">
+<div class="content-container">
   <p class="fade-in-element">As a frequent crypto user, I set out to design an iOS-native crypto wallet with fun social features around digital collectibles. While creating the user flows, I considered factors like security and scalability, drawing on my own crypto experience for insights and implemented critical security measures to protect users' digital assets and secret keys and educate users on the importance of keeping their secret key safe.</p>
 
   <p class="fade-in-element">I also added a digital collectible activity feed, so users can stay in the loop with the latest developments, as well as a Collectibles section which sorts all owned NFTs by collection. This section makes it easy to browse and view a user's owned digital collectibles.</p>

@@ -629,6 +629,11 @@ video {
   margin-right: auto;
 }
 
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -966,11 +971,6 @@ video {
   background-color: rgb(11 16 18 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#190658\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(25 6 88 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#444444\] {
   --tw-bg-opacity: 1;
   background-color: rgb(68 68 68 / var(--tw-bg-opacity));
@@ -981,9 +981,14 @@ video {
   background-color: rgb(204 150 68 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#E4B043\] {
+.bg-\[\#E4B53B\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(228 176 67 / var(--tw-bg-opacity));
+  background-color: rgb(228 181 59 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#E9B84D\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 184 77 / var(--tw-bg-opacity));
 }
 
 .bg-black {
@@ -1897,6 +1902,10 @@ body.meetChris {
 
   .md\:pb-12 {
     padding-bottom: 3rem;
+  }
+
+  .md\:pl-0 {
+    padding-left: 0px;
   }
 
   .md\:pt-0 {

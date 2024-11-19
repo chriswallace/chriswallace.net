@@ -6,25 +6,37 @@
   @apply mb-12 grid grid-cols-1 lg:grid-cols-2 3xl:grid-cols-3 gap-4 3xl:gap-8;
 }
 
+.portfolio-list .zoom-container {
+  @apply mb-4;
+}
+
 .portfolio-list__item {
   @apply mb-12;
 }
 
 .portfolio-list__link {
-  @apply mb-0 inline-block;
+  @apply pb-0 mb-0 block;
 }
 
 .portfolio-list__image {
-  @apply rounded-2xl mb-3;
+  @apply rounded-2xl;
+}
+
+.portfolio-list__image {
+  @apply mb-4;
+}
+
+.zoom-container .portfolio-list__image {
+  @apply mb-0;
 }
 
 .portfolio-list__title,
 .portfolio-list__description {
-  @apply text-lg;
+  @apply text-base md:text-lg my-2;
 }
 
 .portfolio-list__title {
-  @apply mt-3 mb-0 font-normal dark:text-white;
+  @apply mt-0 mb-0 font-normal dark:text-white;
 }
 
 .portfolio-list__title a {
@@ -48,7 +60,7 @@
 }
 
 .portfolio__controls {
-  @apply absolute left-8 right-8 bottom-4 top-4 md:top-auto z-30 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-4;
+  @apply absolute left-8 right-8 bottom-4 top-4 md:top-auto z-30 flex flex-row items-end justify-between gap-6 md:gap-4;
 }
 
 .portfolio__play-button {

@@ -28,7 +28,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png
   </dl>
 </div>
 
-<div class="content-container-wo">
+<div class="content-container-wo md:pl-0">
   <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto">
