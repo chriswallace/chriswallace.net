@@ -15,7 +15,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
     <span class="announcement__bracket">]</span>
   </div>
   
-  <div class="greeting fade-in-element"><span class="greeting__wave-container"><span class="greeting__wave">👋</span></span> Howdy&mdash;I'm Chris, a Fractional Chief Design Officer in McKinney, Texas.</div>
+  <div class="greeting fade-in-element"><span class="greeting__wave-container"><span class="greeting__wave">👋</span></span> Howdy&mdash;I'm Chris, a Fractional Chief Design Officer in McKinney, Texas offering</div>
 
   <h1 class="home-title fade-in-element">Foundational &amp; transformative design leadership for your organization.</h1>
 
