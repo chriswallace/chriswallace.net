@@ -266,13 +266,3 @@ description: Product design leader with over 20 years experience in e-commerce, 
     </div>
   </div>
 </div>
-
-{% if jekyll.environment == 'production' %}
-
-<script src="/assets/js/typewriterHome.min.js?v={{ site.version }}"></script>
-
-{% else %}
-
-<script src="/assets/js/typewriterHome.js?v={{ site.version }}"></script>
-
-{% endif %}
