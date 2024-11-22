@@ -20,7 +20,7 @@ thumbnail: /assets/images/thumbs/bio.png
             <div class="fade-in-element primary-heading !mt-0">
                 <h1>{{ page.title | escape }}</h1>
             </div>
-            <p class="sub-heading fade-in-element">With a decade of experience at both large companies and startups across agency and product, I've learned a lot about building effective design teams, systems, and digital experiences that have a real impact.</p>
+            <p class="sub-heading fade-in-element">With two decades of experience at both large companies and startups across agency and product, I've learned a lot about building effective design teams, systems, and digital experiences that have a real impact.</p>
             <hr class="fade-in-element hr-separator">
             <p class="fade-in-element">Throughout my career, I've had the privilege of working in both agency and product company environments, each offering unique challenges and opportunities. As an agency executive at 10up, I scaled our design team from 5 to over 20 talented individuals across three continents, leading projects for high-profile clients like the California DMV, Starbucks, and Microsoft. This role honed my skills in managing diverse teams and delivering award-winning digital experiences, including Emmy Award-nominated second screen apps for shows like The Walking Dead, Mad Men, and Breaking Bad.</p>
             
