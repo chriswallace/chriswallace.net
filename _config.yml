@@ -42,7 +42,7 @@ defaults:
       type: "posts"
     values:
       layout: post
-      image: /assets/images/default-image.jpg  # Default social sharing image
+      image: /assets/images/default-image.png  # Default social sharing image
       author: Chris Wallace
 
 # Build settings
