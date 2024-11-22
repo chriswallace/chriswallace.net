@@ -2858,22 +2858,8 @@ footer {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  aspect-ratio: 9/12;
+  aspect-ratio: 16/9;
   background-color: rgb(0 0 0 / 0.5);
-}
-
-@media (min-width: 768px) {
-  .portfolio__video-container {
-    aspect-ratio: auto;
-    height: 100vh;
-  }
-}
-
-@media (min-width: 1024px) {
-  .portfolio__video-container {
-    aspect-ratio: 16/9;
-    height: auto;
-  }
 }
 
 @media (min-width: 1536px) {
@@ -2923,7 +2909,7 @@ footer {
   position: absolute;
   left: 2rem;
   right: 2rem;
-  bottom: 1rem;
+  bottom: 1.5rem;
   top: 1rem;
   z-index: 30;
   display: flex;
