@@ -112,30 +112,30 @@ module.exports = {
           },
         ],
         "4xl": [
-          "1.8rem",
+          "1.75rem",
           {
             lineHeight: "1.5",
             letterSpacing: "0",
           },
         ],
         "5xl": [
-          "2rem",
+          "2.75rem",
           {
-            lineHeight: "1.4",
+            lineHeight: "1.15",
             letterSpacing: "0",
           },
         ],
         "6xl": [
-          "2.4rem",
+          "3.4rem",
           {
-            lineHeight: "1.34",
+            lineHeight: "1.1",
             letterSpacing: "0",
           },
         ],
         "7xl": [
-          "4rem",
+          "4.6rem",
           {
-            lineHeight: "1.25",
+            lineHeight: "1.1",
             letterSpacing: "0",
           },
         ]

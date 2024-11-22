@@ -3,7 +3,7 @@
 }
 
 .portfolio-list {
-  @apply mb-12 grid grid-cols-1 lg:grid-cols-2 3xl:grid-cols-3 gap-4 3xl:gap-8;
+  @apply md:mx-auto md:max-w-[calc(100%-64px)] mb-12 grid grid-cols-1 lg:grid-cols-2 3xl:grid-cols-3 gap-4 3xl:gap-8;
 }
 
 .portfolio-list .zoom-container {
@@ -48,15 +48,15 @@
 }
 
 .portfolio__video-container {
-  @apply relative aspect-[9/12] sm:aspect-[16/9] mx-auto xl:rounded-b-2xl bg-black/50;
+  @apply relative aspect-[9/12] md:aspect-auto md:h-screen lg:aspect-[16/9] mx-auto 2xl:rounded-b-2xl bg-black/50;
 }
 
 .portfolio__video-overlay {
-  @apply absolute inset-0 z-20 bg-gradient-to-b from-transparent to-black/60 xl:rounded-b-2xl;
+  @apply absolute inset-0 z-20 bg-gradient-to-b from-transparent to-black/60 2xl:rounded-b-2xl;
 }
 
 .portfolio__video {
-  @apply absolute top-0 left-0 z-10 h-full w-full object-cover xl:rounded-b-2xl;
+  @apply absolute top-0 left-0 z-10 h-full w-full object-cover 2xl:rounded-b-2xl;
 }
 
 .portfolio__controls {

@@ -8,11 +8,12 @@ description: Get the strategic oversight, vision, and expertise of an experience
 <div class="content-container wide">
   <div class="primary-heading fade-in-element">
     <h1>
-      {{ page.title | escape }}
+      Fractional Chief Design Officer.<br>
+      Holistic design impact.
     </h1>
   </div>
   <div class="{{ page.markdown }} max-w-none">
-    <p class="sub-heading fade-in-element">Access design leadership for every phase of your company from product validation to growth to scaling design operations and leveling up existing capabilities.</p>
+    <p class="sub-heading fade-in-element">I partner with companies to create impact through increased design competency and nuanced user-centered strategies.</p>
     <hr class="hr-separator fade-in-element">
     <div class="services__container">
         <div class="services__package fade-in-element">
@@ -63,7 +64,7 @@ description: Get the strategic oversight, vision, and expertise of an experience
     <div>
       <a href="/contact" class="mt-4 block sm:flex text-sm md:text-lg rounded-2xl fade-in-element text-gray-700 dark:text-gray-100 bg-white/50 dark:bg-transparent dark:border dark:border-gray-900 p-6 md:px-10 sm:justify-between sm:items-center no-underline transform transition-all md:hover:px-8 md:hover:bg-white dark:md:hover:bg-primary-500 md:hover:shadow-md">
         <span>Want to work together?</span>
-        <span class="underline underline-offset-4 decoration-primary-500">Contact me for a quote &rarr;</span>
+        <span class="underline underline-offset-4 decoration-primary-500">Contact me &rarr;</span>
       </a>
     </div>
   </div>

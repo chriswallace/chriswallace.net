@@ -22,7 +22,7 @@
   }
 
   h1 {
-    @apply font-mono text-3xl md:text-4xl uppercase mb-12 leading-[1.3] md:leading-[1.4];
+    @apply font-sanscon text-5xl md:text-6xl xl:text-7xl font-black mb-12;
   }
 
   h2 {

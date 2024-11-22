@@ -18,7 +18,7 @@ thumbnail: /assets/images/thumbs/resume.png
   </div>
 
   <div itemscope itemtype="http://schema.org/Person">
-  <p itemprop="description" class="fade-in-element sub-heading !mb-4">Two-time Emmy-nominated design leader with 20 years of experience with 11+ years managing designers/design directors. Deep experience in UX/UI design, design prototyping (both in Figma and code), design systems, cross-functional collaboration and communicating with executive-level stakeholders.</p>
+  <p itemprop="description" class="fade-in-element sub-heading">I work with companies like DC Comics, Starbucks, Google, and even The California DMV to transform the digital product experience for millions of people worldwide. My approach to design is collaborative, reducing technical complexity to simple, delightful experiences for everyday users.</p>
   
   <h2 class="fade-in-element mt-12">Work Experience</h2>
 
@@ -31,11 +31,10 @@ thumbnail: /assets/images/thumbs/resume.png
       </div>
       <div class="description fade-in-element">
         <ul>
-          <li>Released and maintained a design system to improve efficiency in design and React/Next.js</li>
-          <li>Designed and tested new features for digital collectible withdrawal and physical+digital purchases</li>
-          <li>Led an overhaul of the Candy website and marketplace experience to better educate users and improve the overall user experience</li>
-          <li>Partnered with stakeholders to align technical goals with product vision, driving user-centered design and measurable outcomes</li>
-          <li>Created product prototypes in SvelteKit including an interactive comic book reader</li>
+          <li>Designed features for a digital collectible marketplace</li>
+          <li>Created product prototypes in Figma and with code</li>
+          <li>Created a design system and helped integrate it into Storybook</li>
+          <li>Collaborated cross-functionally to execute major organizational initiatives</li>
         </ul>
       </div>
     </div>
@@ -47,9 +46,9 @@ thumbnail: /assets/images/thumbs/resume.png
       </div>
       <div class="description fade-in-element">
         <ul>
-          <li>Founded a decentralized web3 creative studio developing entertainment media IP, digital products and blockchain-based collectibles</li>
-          <li>Built and managed a team of artists, engineers, and production specialists</li>
-          <li>Drove multi-million dollar revenue within the first six months</li>
+          <li>Co-founded a web3 creative studio for entertainment media IP, digital products and blockchain-based collectibles</li>
+          <li>Managed a team of digital artists and creatives</li>
+          <li>Bootstrapped revenue from zero to $2.6 million in six months</li>
         </ul>
       </div>
     </div>
@@ -61,9 +60,10 @@ thumbnail: /assets/images/thumbs/resume.png
       </div>
       <div class="description fade-in-element">
         <ul>
-          <li>Scaled design team from 5 to 20 across three continents and 16 countries</li>
-          <li>Led a design organization with 20 directors and UX, visual, and content designers</li>
-          <li>Personally oversaw large digital transformation projects for the California DMV, Starbucks, Microsoft</li>
+          <li>Managed a team of 20+ design leaders and visual, UX, and content designers internationally</li>
+          <li>Led design projects for Starbucks, Microsoft, Facebook, Google, and more.</li>
+          <li>Established design quality standards, addressing process and cross-functional collaboration issues</li>
+          <li>Crafted vision for design organization-wide and within specific client portfolio accounts</li>
         </ul>
       </div>
     </div>
@@ -75,9 +75,9 @@ thumbnail: /assets/images/thumbs/resume.png
       </div>
       <div class="description fade-in-element">
         <ul>
-          <li>Led the design and UX for a range of digital publishing clients like The Next Web, AMC Networks</li>
-          <li>Received two Emmy Award nominations for second screen apps: The Walking Dead, Breaking Bad, Mad Men</li>
-          <li>Successfully acquired by 10up in 2017</li>
+          <li>Managed a small design and engineering team</li>
+          <li>Led design of second screen companion apps for The Walking Dead, Breaking Bad, Mad Men, and more.</li>
+          <li>Created digital products for WordPress including plugins, themes, and developer tools</li>
         </ul>
       </div>
     </div>
@@ -89,9 +89,9 @@ thumbnail: /assets/images/thumbs/resume.png
       </div>
       <div class="description fade-in-element">
         <ul>
-          <li>Developed front-end interfaces for B2B and B2C digital products</li>
-          <li>Worked cross-functionally to provide design integration planning</li>
-          <li>Managed weekly deployments and visual QA for enterprise.com and other products</li>
+          <li>Wrote the front-end code for B2B and B2C products including enterprise.com</li>
+          <li>Worked cross-functionally with UX Architects and Java engineers to plan design integrations</li>
+          <li>Managed weekly deployments and performed visual QA</li>
         </ul>
       </div>
     </div>
@@ -104,8 +104,8 @@ thumbnail: /assets/images/thumbs/resume.png
       <div class="description fade-in-element">
         <ul>
           <li>Designed and developed e-commerce shops for small businesses, focusing on user-friendly interfaces</li>
-          <li>Collaborated with clients daily to plan and design store templates, ensuring brand consistency</li>
-          <li>Worked closely with brand designers to implement new identities throughout client shops, enhancing brand recognition</li>
+          <li>Collaborated with clients daily to plan and design store templates</li>
+          <li>Worked closely with logo designers to implement brand assets</li>
         </ul>
       </div>
     </div>
@@ -161,6 +161,7 @@ thumbnail: /assets/images/thumbs/resume.png
         <li itemprop="itemListElement">Best Environmental Initiative from an NFT project, <a href="https://nft.nyc/" target="_blank">NFT NYC</a> (2022)</li>
         <li itemprop="itemListElement">Outstanding Creative Achievement in Interactive Media – Social TV Experience (Nominee), Mad Men: The Fan Cut, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2015)</li>
         <li itemprop="itemListElement">Outstanding Interactive Program (Nominee), The Walking Dead Story Sync, <a href="https://emmys.com" target="_blank">Emmy Awards</a> (2013)</li>
+        <li itemprop="itemListElement">Best Second Screen App, The Walking Dead Story Sync, <a href="https://variety.com" target="_blank">Variety Awards</a> (2012)</li>
       </ul>
     </div>
   </div>

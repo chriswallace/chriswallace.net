@@ -20,11 +20,13 @@ thumbnail: /assets/images/thumbs/bio.png
             <div class="fade-in-element primary-heading !mt-0">
                 <h1>{{ page.title | escape }}</h1>
             </div>
-            <p class="sub-heading fade-in-element">With two decades of experience in product strategy, creative direction, and user experience, I have had the privilege of working with renowned brands such as MLB, DC Comics, Facebook, Microsoft, Starbucks, and The Nobel Prize.</p>
+            <p class="sub-heading fade-in-element">With a decade of experience at both large companies and startups across agency and product, I've learned a lot about building effective design teams, systems, and digital experiences that have a real impact.</p>
             <hr class="fade-in-element hr-separator">
-            <p class="fade-in-element">In my role as an agency executive, I led a team of over 20 designers and directors, collaborating with global clients to create award-winning apps and websites. This journey included designing Emmy Award-nominated second screen apps for iconic series like The Walking Dead, Mad Men, and Breaking Bad.</p>
-            <p class="fade-in-element">At Candy Digital, I spearheaded product design efforts, leading a redesign of the collectibles marketplace and various features. I developed a cohesive design system and crafted app prototypes, including an interactive comic book e-reader.</p>
-            <p class="fade-in-element">I'm great at hiring and mentoring designers, enhancing creative skills, expanding organizational capabilities, and driving impactful improvements in the projects I oversee. I am passionate about the synergy between brand and user experience and thrive on bringing innovative ideas to fruition.</p>
+            <p class="fade-in-element">Throughout my career, I've had the privilege of working in both agency and product company environments, each offering unique challenges and opportunities. As an agency executive at 10up, I scaled our design team from 5 to over 20 talented individuals across three continents, leading projects for high-profile clients like the California DMV, Starbucks, and Microsoft. This role honed my skills in managing diverse teams and delivering award-winning digital experiences, including Emmy Award-nominated second screen apps for shows like The Walking Dead, Mad Men, and Breaking Bad.</p>
+            
+            <p class="fade-in-element">Transitioning to a product-focused role at Candy Digital, I spearheaded the redesign of the collectibles marketplace, developed a cohesive design system, and crafted app prototypes. This work was instrumental in the company's product strategy and eventual acquisition by a larger conglomerate.</p>
+            
+            <p class="fade-in-element">I'm passionate about mentoring designers, enhancing creative skills, and establishing effective ways of working that lead to impactful products. I'm a founder and entrepreneur at heart, always taking the level of ownership necessary to make an outsized impact wherever I turn.</p>
             <p class="fade-in-element">Want to work together? <a href="mailto:chriswallace7@pm.me?subject=Design%20Inquiry&body=Let&rsquo;s%20work%20together!">Let's talk.</a></p>
             <div class="fade-in-element text-gray-900 dark:text-white">
                 <svg width="240" height="83" viewBox="0 0 240 83" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

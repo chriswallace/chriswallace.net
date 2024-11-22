@@ -1,5 +1,5 @@
 .resume-item {
-  @apply my-4;
+  @apply my-4 max-w-4xl;
 }
 
 .resume-item .metadata {
@@ -28,11 +28,11 @@
 }
 
 .resume-item .description {
-  @apply mb-12 text-base max-w-3xl pl-6;
+  @apply mb-12 text-base pl-6;
 }
 
 .resume-item .description ul {
-  @apply max-w-none space-y-6 mt-6 mb-16 list-disc;
+  @apply max-w-none space-y-0 mt-6 mb-8 list-disc;
 }
 
 .resume-item .description p {
