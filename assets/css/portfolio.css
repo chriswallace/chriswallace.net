@@ -48,7 +48,7 @@
 }
 
 .portfolio__video-container {
-  @apply relative aspect-[9/12] md:aspect-auto md:h-screen lg:aspect-[16/9] mx-auto 2xl:rounded-b-2xl bg-black/50;
+  @apply relative aspect-[9/12] md:aspect-auto md:h-screen lg:h-auto lg:aspect-[16/9] mx-auto 2xl:rounded-b-2xl bg-black/50;
 }
 
 .portfolio__video-overlay {

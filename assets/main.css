@@ -2872,6 +2872,7 @@ footer {
 @media (min-width: 1024px) {
   .portfolio__video-container {
     aspect-ratio: 16/9;
+    height: auto;
   }
 }
 
