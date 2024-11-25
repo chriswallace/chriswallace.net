@@ -5,14 +5,14 @@ description: Product design leader with over 20 years experience in e-commerce, 
 ---
 
 <div class="hidden-until-loaded">
-  <div class="flex flex-col justify-center h-screen">
-    <div class="text-4xl sm:text-6xl flex flex-col gap-12 xl:gap-0 h-[44vh] lg:h-[70vh] items-start justify-around">
+  <div class="flex flex-col justify-center mt-32 lg:mt-0 lg:h-screen">
+    <div class="text-4xl sm:text-6xl flex flex-col gap-12 lg:h-[75vh]">
       <div class="pl-6">
         <div class="text-container top flex flex-col md:flex-row justify-between">
             <p class="text-paragraph" data-splitting><a href="/bio" class="no-underline hover:no-underline text-gray-950 dark:text-gray-100 hover:text-black dark:hover:text-white">Chris Wallace</a></p>
         </div>
         <div class="text-container top flex flex-col md:flex-row justify-between">
-            <p class="text-paragraph text-primary-600 dark:text-primary-400" data-splitting>Product Design Leader</p>
+            <p class="text-paragraph text-primary-600 dark:text-primary-400" data-splitting>A Modern Design Leader</p>
         </div>
         </div>
         <div class="w-screen">
@@ -215,12 +215,15 @@ description: Product design leader with over 20 years experience in e-commerce, 
       </div>
     </div>
     </div>
-      <div class="pl-6 md:pl-[18vw]">
-        <div class="text-container bottom flex flex-col md:flex-row justify-between">
-            <p class="text-paragraph" data-splitting><a href="/design-services" class="no-underline hover:no-underline text-gray-950 dark:text-gray-100 hover:text-black dark:hover:text-white">Work With Me</a></p>
+      <div class="px-6 pt-6">
+        <div class="text-container bottom flex flex-col md:flex-row justify-end">
+            <p class="text-paragraph mb-20 md:mb-0 text-gray-600 dark:text-gray-400" data-splitting>Designing futuristic</p>
         </div>
-            <div class="text-container bottom flex flex-col md:flex-row justify-between">
-            <p class="text-paragraph mb-20 md:mb-0 text-gray-600 dark:text-gray-400" data-splitting>Available Nov '24</p>
+        <div class="text-container bottom flex flex-col md:flex-row justify-end">
+            <p class="text-paragraph mb-20 md:mb-0 text-gray-600 dark:text-gray-400" data-splitting>digital products</p>
+        </div>
+        <div class="text-container bottom flex flex-col md:flex-row justify-end lg:justify-between">
+            <p class="text-paragraph" data-splitting><a href="/design-services" class="no-underline hover:no-underline text-gray-950 dark:text-gray-100 hover:text-black dark:hover:text-white">Work with me</a></p>
         </div>
       </div>
     </div>

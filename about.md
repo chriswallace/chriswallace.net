@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hi, I'm Chris Wallace, a design leader with 20 years in both product and agency.
+title: Hi, I'm Chris Wallace, an award-winning design leader creating the future of digital products.
 permalink: /bio/
 description: A seasoned Chief Design Officer with 20+ years of experience leading design teams and crafting digital products that drive business growth.
 thumbnail: /assets/images/thumbs/bio.png
@@ -16,11 +16,13 @@ thumbnail: /assets/images/thumbs/bio.png
         <img src="https://ik.imagekit.io/UltraDAO/wallace/guitar.jpg?tr=w-700,q=70" alt="Me hugging my new Gibson guitar, a gift received for my birthday" class="bio-grid__image bio-grid__image--six">
     </div>
     <div class="bio-grid__content">
-        <p class="sub-heading fade-in-element">I work with brands like Google, AMC Networks, Microsoft, and Starbucks to deliver exceptional, award-winning digital products to the masses, driving meaningful revenue and increased brand sentiment. Not just a design leader&mdash;I create digital products for the future.</p>
+        <p class="sub-heading fade-in-element">Working with brands like Google, Facebook, MLB, and DC Comics, I design the future of digital products, driving meaningful revenue, increasing user loyalty, and catapulting brand appeal. More than just a design leader&mdash;I am constantly pushing myself and others to create unique, exceptional products for real people.</p>
 
-        <p class="fade-in-element">As an agency executive, I've scaled design teams from just a few to nearly two dozen talented individuals across three continents. Those teams guided clients like the California DMV, Starbucks, and Google, delivering digital products to tens of millions of users worldwide. Personally, I directly led initiatives for award-winning digital experiences and Emmy Award-nominated apps for shows like The Walking Dead, Mad Men, and Breaking Bad.</p>
+        <hr class="hr-separator fade-in-element">
 
-        <p class="fade-in-element">More recently, I've worked directly in startups both as a founder and Product Design Lead, spearheading critical design initiatives at <a href="https://candy.io" rel="noreferrer" target="_blank">Candy Digital</a>. After leading a redesign of their collectibles marketplace, I developed a cohesive design system and built multiple product prototypes in SvelteKit. Before that, I founded a web3 creative studio, bootstrapping our team to multi-million dollar revenue within six months and releasing the first large-scale metaverse wearable collection in <a href="https://decentraland.org" rel="noreferrer" target="_blank">Decentraland</a>.</p>
+        <p class="fade-in-element">As an agency executive, I've scaled design teams from just a few to nearly two dozen designers and directors across three continents. Those teams guided projects for the California DMV, Starbucks, Microsoft, and Google, delivering digital products to tens of millions of users worldwide. I also led design for award-winning interactive experiences and Emmy Award-nominated apps for shows like The Walking Dead, Mad Men, and Breaking Bad.</p>
+
+        <p class="fade-in-element">More recently, I've worked directly in web3 startups both as a founder and Product Design Lead, spearheading critical design initiatives at <a href="https://candy.io" rel="noreferrer" target="_blank">Candy Digital</a>. After a comprehensive redesigning of their digital collectible marketplace, I developed a new design system and built key product prototypes in SvelteKit. Before that, I founded a web3 creative studio, bootstrapping our team to multi-million dollar revenue within six months and releasing the first large-scale metaverse wearable collection in <a href="https://decentraland.org" rel="noreferrer" target="_blank">Decentraland</a>.</p>
 
         <p class="fade-in-element">The bottom line is, everywhere I go I aim to make an outsized impact. At my core, I'm a founder and entrepreneur, always taking the level of ownership necessary to create holistic solutions and consider users, business needs, and brand.</p>
         <p class="fade-in-element">I'd love to do that for you. <a href="mailto:chriswallace7@pm.me?subject=Design%20Inquiry&body=Let&rsquo;s%20work%20together!">Let's work together!</a></p>

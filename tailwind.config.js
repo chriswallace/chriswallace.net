@@ -43,7 +43,6 @@ module.exports = {
           'serif'
         ],
         sans: [
-          '"neue-haas-grotesk-text"',
           'system-ui',
           '-apple-system',
           'BlinkMacSystemFont',
@@ -66,74 +65,74 @@ module.exports = {
         xs: [
           "0.75rem",
           {
-            lineHeight: "1.75",
+            lineHeight: "1.2rem",
           },
         ],
         sm: [
           "0.82rem",
           {
-            lineHeight: "1.75",
+            lineHeight: "1.2rem",
           },
         ],
         base: [
           "16px",
           {
-            lineHeight: "1.75",
+            lineHeight: "1.5rem",
             letterSpacing: "0",
           },
         ],
         lg: [
-          "1.2rem",
+          "1.125rem",
           {
-            lineHeight: "1.75",
+            lineHeight: "1.9rem",
           },
         ],
         xl: [
-          "1.35rem",
+          "1.25rem",
           {
-            lineHeight: "1.65",
+            lineHeight: "1.9rem",
             letterSpacing: "0",
           },
         ],
         "2xl": [
           "1.5rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "2rem",
             letterSpacing: "0",
           },
         ],
         "3xl": [
-          "1.6rem",
+          "1.75rem",
           {
-            lineHeight: "1.5",
+            lineHeight: "3rem",
             letterSpacing: "0",
           },
         ],
         "4xl": [
-          "1.75rem",
+          "2.25rem",
           {
             lineHeight: "1.5",
             letterSpacing: "0",
           },
         ],
         "5xl": [
-          "2.25rem",
+          "2.625rem",
           {
-            lineHeight: "1.35",
+            lineHeight: "1.4",
             letterSpacing: "0",
           },
         ],
         "6xl": [
           "3.25rem",
           {
-            lineHeight: "1.25",
+            lineHeight: "1.4",
             letterSpacing: "0",
           },
         ],
         "7xl": [
-          "4.75rem",
+          "4.625rem",
           {
-            lineHeight: "1.25",
+            lineHeight: "1.4",
             letterSpacing: "0",
           },
         ]

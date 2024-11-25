@@ -11,7 +11,7 @@
 }
 
 .resume-item .metadata .place {
-  @apply flex-none order-1 md:order-2 whitespace-nowrap text-primary-600 dark:text-primary-500;
+  @apply flex-none order-1 md:order-2 font-medium whitespace-nowrap text-primary-600 dark:text-primary-400;
 }
 
 .resume-item .metadata .title {

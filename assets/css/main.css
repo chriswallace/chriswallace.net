@@ -70,10 +70,6 @@ picture img {
   @apply 2xl:max-w-7xl 3xl:max-w-[2400px];
 }
 
-.portfolio-group-heading {
-  @apply content-container 2xl:mx-auto px-[16px] lg:px-[32px] pb-3 2xl:pb-6;
-}
-
 .primary-heading h1 {
   @apply max-w-none;
 }
@@ -83,7 +79,11 @@ picture img {
 }
 
 .sub-heading {
-  @apply text-lg md:text-xl mb-12 md:mb-16 max-w-prose;
+  @apply text-xl dark:text-gray-100 mb-12 md:mb-16 max-w-prose;
+}
+
+.sub-heading + hr {
+  @apply -mt-8 mb-12;
 }
 
 .toc-toggle {
@@ -106,7 +106,7 @@ caption {
 }
 
 .project-list {
-  @apply table md:block w-auto md:w-full text-xs sm:text-xs lg:text-sm text-gray-400 max-w-none mb-4;
+  @apply table md:block w-auto md:w-full text-xs sm:text-xs lg:text-sm text-gray-400 max-w-none mb-4 md:mb-0;
 }
 
 .project-list div {
@@ -114,11 +114,11 @@ caption {
 }
 
 .project-list dt {
-  @apply table-cell text-gray-400 dark:text-gray-400 md:inline whitespace-nowrap md:whitespace-normal font-semibold w-fit md:w-auto pr-4 md:pr-2;
+  @apply table-cell text-gray-700 dark:text-gray-100 md:inline whitespace-nowrap md:whitespace-normal font-semibold w-fit md:w-auto pr-4 md:pr-2;
 }
 
 .project-list dd {
-  @apply table-cell md:inline text-gray-800 dark:text-gray-200 pl-4 md:pl-0 ml-0;
+  @apply table-cell md:inline text-gray-800 dark:text-gray-200 pl-4 md:pl-0 ml-0 py-1 md:py-0;
 }
 
 /* Resume Page */

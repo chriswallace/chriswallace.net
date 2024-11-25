@@ -11,16 +11,16 @@
 }
 
 .portfolio-list .testimonial__quote {
-  @apply max-w-[28rem];
+  @apply max-w-[55rem];
 }
 
 .testimonial__text {
-  @apply mb-3 font-serif leading-tight text-center text-4xl md:text-5xl text-gray-700 dark:text-white/70;
+  @apply max-w-none mb-3 font-serif leading-tight text-center text-3xl md:text-4xl text-gray-700 dark:text-white/70;
   font-variation-settings: "wght" 475;
 }
 
 .testimonial__author {
-  @apply mb-0 text-xs md:text-base text-center max-w-none dark:text-white/70 !leading-normal;
+  @apply mb-0 text-xs md:text-base text-center max-w-none text-gray-700 dark:text-gray-400 !leading-normal;
 }
 
 .testimonial__emphasis {

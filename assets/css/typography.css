@@ -1,11 +1,11 @@
 @layer base {
   html,
   body {
-    @apply text-base;
+    @apply text-base xl:text-lg;
   }
 
   body {
-    @apply text-gray-800 dark:text-gray-200;
+    @apply text-gray-800 dark:text-gray-300;
   }
 
   /* Headings */
@@ -43,7 +43,7 @@
 
   /* Links */
   a {
-    @apply font-medium dark:text-gray-200 underline underline-offset-4 decoration-2 decoration-primary-300 hover:decoration-primary-700 dark:decoration-primary-500 dark:hover:decoration-white dark:hover:text-white;
+    @apply font-medium text-primary-500 dark:text-primary-300 underline underline-offset-4 decoration-2 decoration-primary-300 hover:decoration-primary-700 dark:decoration-primary-500 dark:hover:decoration-white dark:hover:text-white;
     text-decoration-skip-ink: auto;
   }
 
