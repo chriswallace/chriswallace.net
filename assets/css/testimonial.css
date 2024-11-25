@@ -1,9 +1,9 @@
 .testimonial {
-  @apply flex flex-col items-center min-h-[340px] justify-center rounded-2xl px-12 py-16 md:p-12 text-left;
+  @apply flex flex-col items-center min-h-[340px] justify-center rounded-2xl px-5 py-16 md:p-12 text-left;
 }
 
 .portfolio-list .testimonial {
-  @apply bg-transparent bg-gradient-to-br from-white dark:from-gray-900 to-gray-100 dark:to-gray-950;
+  @apply bg-transparent bg-gradient-to-br from-white dark:from-gray-900 px-8 to-gray-100 dark:to-gray-950;
 }
 
 .testimonial__quote {
@@ -15,11 +15,12 @@
 }
 
 .testimonial__text {
-  @apply mb-3 font-sanscon !leading-none uppercase font-semibold text-[32px] md:text-[44px] text-gray-700 dark:text-white/70;
+  @apply mb-3 font-serif leading-tight text-center text-4xl md:text-5xl text-gray-700 dark:text-white/70;
+  font-variation-settings: "wght" 475;
 }
 
 .testimonial__author {
-  @apply mb-0 text-xs md:text-base max-w-none dark:text-white/70 !leading-normal;
+  @apply mb-0 text-xs md:text-base text-center max-w-none dark:text-white/70 !leading-normal;
 }
 
 .testimonial__emphasis {

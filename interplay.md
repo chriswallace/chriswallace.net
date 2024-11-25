@@ -17,7 +17,7 @@ description: Explore the Interplay algorithm, a generative Javascript-based algo
             </defs><path class="cls-1" d="m17,4l3,4h-2c0,4.42-3.58,8-8,8-1.92,0-3.69-.68-4.98-1.88l1.19-1.54c1,.9,2.33,1.42,3.79,1.42,3.31,0,6-2.69,6-6h-2l3-4h0ZM3.12,11.84h0s-.12.16-.12.16L0,8h2C2,3.58,5.58,0,10,0c1.92,0,3.69.68,4.98,1.88l-1.19,1.54c-1-.9-2.33-1.42-3.79-1.42-3.23,0-5.87,2.55-6,6h2l-1.58,2.1h0l-1.31,1.74h0Z"/></svg></i> Refresh
             </button></p>
         </div>
-        <div id="bgSwitch">
+        <div id="bgSwitch" class="pt-12">
             <div class="mb-0 md:mb-12 text-center mx-auto o-hidden relative fade-in-element">
                 <canvas id="artCanvas" width="1240" height="1754" class="w-auto max-w-full mx-auto"></canvas>
                 <div

@@ -6,12 +6,9 @@ permalink: /portfolio/candy-physical-digital-feature/
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png
 ---
 
-<div class="content-container">
+<div class="portfolio-group-heading">
   <a class="back fade-in-element" href="/portfolio">/portfolio</a>
   <h1 class="fade-in-element mb-3">Candy.io Physical-Digital Feature</h1>
-</div>
-
-<div class="content-container mb-8">
   <dl class="project-list fade-in-element">
     <div>
       <dt>Company</dt>
@@ -44,8 +41,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png
   </picture>
 </div>
 
-<div class="content-container-wo bg-[#444444] text-center mb-12">
-  <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy" class="fade-in-element max-h-full max-w-3xl mx-auto">
+<div class="content-container-wo bg-[#444444] fade-in-element text-center mb-12">
+  <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy" class="max-h-full max-w-3xl mx-auto">
       <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.mov/ik-video.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
   </video>

@@ -38,6 +38,10 @@ module.exports = {
         x: "x mandatory",
       },
       fontFamily: {
+        serif: [
+          '"norman-variable"',
+          'serif'
+        ],
         sans: [
           'bricolage-grotesque',
           'system-ui',
@@ -49,13 +53,7 @@ module.exports = {
           'Arial',
           'sans-serif'
         ],
-        sanscon: [
-          'bricolage-grotesque-72-scond',
-          'system-ui',
-          'sans-serif'
-        ],
         mono: [
-          'cofo-sans-mono-variable',
           'ui-monospace',
           'SFMono-Regular',
           'Menlo',
@@ -119,53 +117,53 @@ module.exports = {
           },
         ],
         "5xl": [
-          "2.75rem",
+          "2.25rem",
           {
-            lineHeight: "1.15",
+            lineHeight: "1.35",
             letterSpacing: "0",
           },
         ],
         "6xl": [
-          "3.4rem",
+          "3.25rem",
           {
-            lineHeight: "1.1",
+            lineHeight: "1.25",
             letterSpacing: "0",
           },
         ],
         "7xl": [
-          "4.6rem",
+          "4.75rem",
           {
-            lineHeight: "1.1",
+            lineHeight: "1.25",
             letterSpacing: "0",
           },
         ]
       },
       colors: {
         gray: {
-          50: "#f6f6f6",
-          100: "#e7e7e7",
-          200: "#d1d1d1",
-          300: "#b0b0b0",
-          400: "#919191",
-          500: "#6d6d6d",
-          600: "#5d5d5d",
-          700: "#4f4f4f",
-          800: "#454545",
-          900: "#3d3d3d",
-          950: "#141414",
+        '50': '#f5f6f6',
+        '100': '#e5e7e8',
+        '200': '#ced0d3',
+        '300': '#acb0b4',
+        '400': '#82888e',
+        '500': '#676d73',
+        '600': '#55595e',
+        '700': '#4b4e53',
+        '800': '#424448',
+        '900': '#3a3b3f',
+        '950': '#121212',
         },
         primary: {
-        '50': '#fff5ed',
-        '100': '#fee9d6',
-        '200': '#fccfac',
-        '300': '#faae77',
-        '400': '#f78140',
-        '500': '#f45c16',
-        '600': '#e54511',
-        '700': '#be3310',
-        '800': '#972915',
-        '900': '#7a2414',
-        '950': '#421008',
+        '50': '#f1f6fd',
+        '100': '#dfecfa',
+        '200': '#c6def7',
+        '300': '#9fc9f1',
+        '400': '#7bb1ea',
+        '500': '#508de1',
+        '600': '#3c71d4',
+        '700': '#325ec3',
+        '800': '#2e4d9f',
+        '900': '#2a437e',
+        '950': '#1e2b4d',
         },
       },
       minWidth: {

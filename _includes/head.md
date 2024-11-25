@@ -15,6 +15,8 @@
   {% seo title=true %}
 
   <link rel="stylesheet" href="https://use.typekit.net/eub1ezs.css" expires="31536000">
+  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
   <link rel="stylesheet" href="/assets/main.css?v={{ site.version }}" expires="31536000">
   <link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/UltraDAO/wallace/favicon.png" expires="31536000">
   <meta property="og:image" content="{{page.thumbnail | default: 'https://ik.imagekit.io/UltraDAO/wallace/chris-wallace.jpg'}}">

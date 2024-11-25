@@ -6,12 +6,9 @@ permalink: /portfolio/candyvision/
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png
 ---
 
-<div class="content-container">
+<div class="portfolio-group-heading">
   <a class="back fade-in-element" href="/portfolio">/portfolio</a>
   <h1 class="fade-in-element mb-3">CandyVision</h1>
-</div>
-
-<div class="content-container mb-8">
   <dl class="project-list fade-in-element">
     <div>
       <dt>Company</dt>

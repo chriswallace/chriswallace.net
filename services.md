@@ -1,19 +1,15 @@
 ---
 layout: default
 title: Services
-permalink: /services
+permalink: /design-services
 description: Get the strategic oversight, vision, and expertise of an experienced Chief Design Officer on your terms. As a Fractional CDO, I provide hands-on design leadership tailored to the unique needs of your organization, helping you drive impactful design strategies, establish a powerful brand presence, and scale your product or service experience.
 ---
 
-<div class="content-container wide">
+<div class="content-container pt-12 lg:pt-24 wide">
   <div class="primary-heading fade-in-element">
-    <h1>
-      Fractional Chief Design Officer.<br>
-      Holistic design impact.
-    </h1>
+    <h1>I offer <a href="/what-is-a-cdo">CDO</a>-level services for companies looking to develop a holistic design fluency.</h1>
   </div>
   <div class="{{ page.markdown }} max-w-none">
-    <p class="sub-heading fade-in-element">I partner with companies to create impact through increased design competency and nuanced user-centered strategies.</p>
     <hr class="hr-separator fade-in-element">
     <div class="services__container">
         <div class="services__package fade-in-element">
@@ -61,7 +57,7 @@ description: Get the strategic oversight, vision, and expertise of an experience
           <p class="services__ideal">Ideal for: Organizations looking to invest in their design teams' growth and development.</p>
         </div>
     </div>
-    <div>
+    <div class="mb-24">
       <a href="/contact" class="mt-4 block sm:flex text-sm md:text-lg rounded-2xl fade-in-element text-gray-700 dark:text-gray-100 bg-white/50 dark:bg-transparent dark:border dark:border-gray-900 p-6 md:px-10 sm:justify-between sm:items-center no-underline transform transition-all md:hover:px-8 md:hover:bg-white dark:md:hover:bg-primary-500 md:hover:shadow-md">
         <span>Want to work together?</span>
         <span class="underline underline-offset-4 decoration-primary-500">Contact me &rarr;</span>

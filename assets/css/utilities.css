@@ -103,3 +103,15 @@
 .hidden {
   display: none;
 }
+
+.notready {
+  padding-top: var(--s);
+}
+
+.ready {
+  padding-top: 0;
+}
+
+.hidden-until-loaded {
+  @apply invisible;
+}

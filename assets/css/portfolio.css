@@ -3,7 +3,7 @@
 }
 
 .portfolio-list {
-  @apply md:mx-auto md:max-w-[calc(100%-64px)] mb-12 grid grid-cols-1 lg:grid-cols-2 3xl:grid-cols-3 gap-4 3xl:gap-8;
+  @apply md:mx-auto max-w-6xl mx-auto mb-12 grid grid-cols-1 lg:grid-cols-2 gap-8;
 }
 
 .portfolio-list .zoom-container {
@@ -22,10 +22,6 @@
   @apply rounded-2xl;
 }
 
-.portfolio-list__image {
-  @apply mb-4;
-}
-
 .zoom-container .portfolio-list__image {
   @apply mb-0;
 }
@@ -36,7 +32,7 @@
 }
 
 .portfolio-list__title {
-  @apply my-0 font-normal dark:text-white;
+  @apply mt-4 mb-0 font-serif font-normal dark:text-white text-4xl;
 }
 
 .portfolio-list__title a {
@@ -48,15 +44,15 @@
 }
 
 .portfolio__video-container {
-  @apply relative aspect-[16/9] mx-auto 2xl:rounded-b-2xl bg-black/50;
+  @apply max-w-6xl mx-auto relative aspect-[16/9] xl:rounded-xl bg-black/50;
 }
 
 .portfolio__video-overlay {
-  @apply absolute inset-0 z-20 bg-gradient-to-b from-transparent to-black/60 2xl:rounded-b-2xl;
+  @apply absolute inset-0 z-20 bg-gradient-to-b from-transparent to-black/60 xl:rounded-xl;
 }
 
 .portfolio__video {
-  @apply absolute top-0 left-0 z-10 h-full w-full object-cover 2xl:rounded-b-2xl;
+  @apply absolute top-0 left-0 z-10 h-full w-full object-cover xl:rounded-xl;
 }
 
 .portfolio__controls {

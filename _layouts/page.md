@@ -2,11 +2,11 @@
 layout: default
 ---
 
-  <div class="primary-heading content-container fade-in-element">
+  <div class="primary-heading content-container pt-12 lg:pt-24 fade-in-element">
     <h1>
       {{ page.title | escape }}
     </h1>
-  </div>
-  <div class="{{ page.markdown }} max-w-none">
-    {{ content }}
+    <div class="{{ page.markdown }} max-w-none">
+      {{ content }}
+    </div>
   </div>

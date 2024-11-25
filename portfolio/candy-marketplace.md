@@ -6,26 +6,25 @@ permalink: /portfolio/candy-marketplace-redesign/
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png
 ---
 
-<div class="content-container">
+<div class="portfolio-group-heading">
   <a class="back fade-in-element" href="/portfolio">/portfolio</a>
   <h1 class="fade-in-element mb-3">Candy Marketplace Redesign</h1>
-</div>
-
-<div class="content-container mb-8">
-  <dl class="project-list fade-in-element">
-    <div>
-      <dt>Company</dt>
-      <dd>Candy Digital</dd>
-    </div>
-    <div>
-      <dt>Role</dt>
-      <dd>Product Design</dd>
-    </div>
-    <div>
-      <dt>Year</dt>
-      <dd>2024</dd>
-    </div>
-  </dl>
+  <div class="content-container mb-8">
+    <dl class="project-list fade-in-element">
+      <div>
+        <dt>Company</dt>
+        <dd>Candy Digital</dd>
+      </div>
+      <div>
+        <dt>Role</dt>
+        <dd>Product Design</dd>
+      </div>
+      <div>
+        <dt>Year</dt>
+        <dd>2024</dd>
+      </div>
+    </dl>
+  </div>
 </div>
 
 <div class="content-container-wo mb-12">

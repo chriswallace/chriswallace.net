@@ -3,11 +3,11 @@
 }
 
 .menu-button {
-  @apply relative align-top w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.75)] md:h-[var(--navbar-width)] mx-auto bg-gray-100 dark:bg-gray-950 hover:md:bg-primary-600;
+  @apply relative align-top w-[var(--navbar-width)] h-[var(--navbar-width)] mx-auto hover:md:bg-white dark:hover:md:bg-primary-600;
 }
 
 .open-menu .menu-button {
-  @apply bg-transparent;
+  @apply bg-transparent opacity-100;
 }
 
 .menu-button:hover i:before,
@@ -16,13 +16,13 @@
 }
 
 .menu-button i {
-  @apply block relative mx-auto h-2 w-[35%];
+  @apply hidden relative mx-auto h-2 w-[35%];
   transition: transform 100ms ease-in-out;
 }
 
 .menu-button i:before,
 .menu-button i:after {
-  @apply block overflow-hidden bg-gray-600 md:bg-primary-600 dark:md:bg-white w-full h-[2px] absolute top-[50%] content-[""];
+  @apply block overflow-hidden bg-white w-full h-[2px] absolute top-[50%] content-[""];
   transition: transform 100ms ease-in-out, backgroundColor 100ms ease-in-out;
 }
 
@@ -35,27 +35,31 @@
 }
 
 .open-menu .menu-button i {
-  @apply -translate-y-[2px];
+  @apply -translate-y-[2px] block;
 }
 
 .open-menu .menu-button i:before {
-  @apply -rotate-45 translate-y-2/4 bg-gray-400 dark:bg-white;
+  @apply -rotate-45 translate-y-2/4 bg-white;
 }
 
 .open-menu .menu-button i:after {
-  @apply rotate-45 translate-y-2/4 bg-gray-400 dark:bg-white;
+  @apply rotate-45 translate-y-2/4 bg-white;
 }
 
 .navigation {
-  @apply flex gap-0 h-screen mb-6 md:mb-0;
+  @apply flex gap-0 mb-6 md:mb-0;
 }
 
 .open-menu .navigation {
-  @apply bg-gray-100 dark:bg-gray-950;
+  @apply flex-col bg-primary-600 h-screen;
 }
 
 .navigation .logo {
-  @apply block w-[42px] h-auto my-0 mx-auto p-0 text-primary-500 dark:text-white dark:hover:text-gray-900 transition-all duration-150 ease-in-out;
+  @apply block w-[42px] h-auto my-0 mx-auto md:p-0 text-primary-500 dark:text-white transition-all duration-150 ease-in-out;
+}
+
+.open-menu .navigation .logo {
+  @apply hidden;
 }
 
 .navigation .logo path {
@@ -67,27 +71,28 @@
 }
 
 .branding {
-  @apply order-1 md:order-2 w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] shrink md:h-screen relative;
+  @apply order-2 w-[calc(var(--navbar-width)*.94)] md:w-[var(--navbar-width)] shrink relative;
 }
 
 .open-menu .branding {
-  @apply cursor-pointer bg-gray-100 dark:bg-gray-950 border-r md:border-l border-gray-300 dark:border-gray-900;
+  @apply cursor-pointer order-1 transform;
 }
 
 .menu {
-  @apply order-2 md:order-1 md:h-screen grow;
+  @apply order-1 items-center justify-center flex flex-col grow;
 }
 
-.menu a {
-  @apply p-4 py-6 block font-mono uppercase text-xs leading-none no-underline decoration-2 text-primary-600 dark:text-gray-200 border-b border-gray-300 dark:border-gray-900 dark:bg-gray-950 hover:bg-white dark:hover:bg-primary-600 dark:hover:text-white;
+.menu ul {
+  @apply max-w-none w-full;
+}
+
+.menu li a {
+  @apply py-3 px-5 pt-4 block font-serif capitalize text-4xl leading-none no-underline decoration-2 text-white hover:bg-white hover:text-black;
+  font-variation-settings: "wght" 400;
 }
 
 .site-title {
-  @apply md:bottom-0 md:left-0 w-[calc(var(--navbar-width)*.75)] md:w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.66)] block absolute p-0;
-}
-
-.site-title svg {
-  @apply w-[calc(var(--navbar-width)/2*.75)] md:w-[calc(var(--navbar-width)/2)] h-[calc(var(--navbar-width)*.66)] mx-auto;
+  @apply md:bottom-0 md:left-0 w-[var(--navbar-width)] h-[calc(var(--navbar-width)*.66)] block absolute p-0;
 }
 
 .open-menu .site-title {
@@ -95,9 +100,25 @@
 }
 
 .ui-navbar {
-  @apply w-[calc(220px+var(--navbar-width)*.75)] md:w-[calc(220px+var(--navbar-width))] fixed left-auto md:left-0 right-0 md:right-auto top-0 h-[60px] md:h-full z-40 overflow-x-hidden transform translate-x-[220px] md:-translate-x-[220px] transition-transform duration-200 ease-in-out;
+  @apply w-[calc(220px+var(--navbar-width)*.94)] md:w-[calc(220px+var(--navbar-width))] fixed left-0 right-auto top-0 overflow-hidden h-[calc(var(--navbar-width)*.94)] md:h-screen z-40 overflow-hidden transform -translate-x-[220px] transition-transform duration-200 ease-in-out;
 }
 
 .open-menu .ui-navbar {
   @apply translate-x-0 z-[999] h-full mb-0 pb-0 overflow-y-hidden;
+}
+
+.navigation .social {
+  @apply flex gap-4 pl-4 font-serif text-[16px] leading-tight;
+}
+
+.navigation .social p {
+  @apply text-[12px] text-white font-sans mr-4;
+}
+
+.navigation .social a {
+  @apply text-white underline underline-offset-4;
+}
+
+.navigation .social svg {
+  @apply fill-current;
 }

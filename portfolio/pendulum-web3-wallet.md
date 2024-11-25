@@ -6,12 +6,9 @@ permalink: /portfolio/pendulum-crypto-wallet/
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png
 ---
 
-<div class="content-container">
+<div class="portfolio-group-heading">
   <a class="back fade-in-element" href="/portfolio">/portfolio</a>
   <h1 class="fade-in-element mb-3">Pendulum Crypto Wallet</h1>
-</div>
-
-<div class="content-container mb-8">
   <dl class="project-list fade-in-element">
     <div>
       <dt>Company</dt>
@@ -51,7 +48,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.p
   </video>
 </div>
 
-<div class="content-container">
+<div class="content-container pt-6 pb-12">
   <p class="fade-in-element">As a frequent crypto user, I set out to design an iOS-native crypto wallet with fun social features around digital collectibles. While creating the user flows, I considered factors like security and scalability, drawing on my own crypto experience for insights and implemented critical security measures to protect users' digital assets and secret keys and educate users on the importance of keeping their secret key safe.</p>
 
   <p class="fade-in-element">I also added a digital collectible activity feed, so users can stay in the loop with the latest developments, as well as a Collectibles section which sorts all owned NFTs by collection. This section makes it easy to browse and view a user's owned digital collectibles.</p>

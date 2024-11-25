@@ -1,9 +1,9 @@
 .bio-grid {
-  @apply md:grid md:grid-cols-8 md:gap-6 lg:gap-16 md:pt-6;
+  @apply md:grid md:grid-cols-8 md:gap-6 lg:gap-16 mt-12 md:mt-20;
 }
 
 .bio-grid__content {
-  @apply md:col-span-5 lg:col-span-4 mt-8 md:mt-16;
+  @apply md:col-span-5 lg:col-span-4;
 }
 
 .bio-grid__image-container {
