@@ -5,19 +5,19 @@ description: Product design leader with over 20 years experience in e-commerce, 
 ---
 
 <div class="hidden-until-loaded">
-  <div class="flex flex-col justify-center mt-32 lg:mt-0 lg:h-screen">
-    <div class="text-4xl sm:text-6xl flex flex-col gap-12 lg:h-[75vh]">
-      <div class="pl-6">
-        <div class="text-container top flex flex-col md:flex-row justify-between">
-            <p class="text-paragraph" data-splitting><a href="/bio" class="no-underline hover:no-underline text-gray-950 dark:text-gray-100 hover:text-black dark:hover:text-white">Chris Wallace</a></p>
+  <div class="flex flex-col justify-between md:justify-center mt-20 lg:mt-0 lg:h-screen">
+    <div class="flex flex-col gap-4 lg:gap-12 lg:h-[75vh]">
+      <div class="pl-[16px] md:pl-[32px] pt-8 pb-4">
+        <div class="text-container flex flex-col md:flex-row justify-start">
+            <p class="text-paragraph mb-0" data-splitting><a href="/bio" class="no-underline hover:no-underline text-gray-950 dark:text-gray-100 hover:text-black dark:hover:text-white inline">Chris Wallace</a></p>
         </div>
-        <div class="text-container top flex flex-col md:flex-row justify-between">
-            <p class="text-paragraph text-primary-600 dark:text-primary-400" data-splitting>A Modern Design Leader</p>
+        <div class="text-container flex flex-col md:flex-row justify-start">
+            <p class="text-paragraph mb-20 md:mb-0 text-primary-600 dark:text-primary-400" data-splitting>Design Leader</p>
         </div>
-        </div>
-        <div class="w-screen">
+      </div>
+      <div class="w-screen">
         <div class="infinite-scroll">
-      <div class="infinite-scroll__scroller">
+        <div class="infinite-scroll__scroller">
         <!-- First set -->
         <a href="/portfolio/palm-quest/" class="infinite-scroll__item">
           <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-760,q-70,f-auto" 
@@ -215,14 +215,14 @@ description: Product design leader with over 20 years experience in e-commerce, 
       </div>
     </div>
     </div>
-      <div class="px-6 pt-6">
-        <div class="text-container bottom flex flex-col md:flex-row justify-end">
-            <p class="text-paragraph mb-20 md:mb-0 text-gray-600 dark:text-gray-400" data-splitting>Designing futuristic</p>
+      <div class="px-[16px] md:px-[32px] pt-6">
+        <div class="text-container flex flex-col items-end">
+            <p class="text-paragraph mb-0 text-gray-600 dark:text-gray-400" data-splitting>Designing futuristic</p>
         </div>
-        <div class="text-container bottom flex flex-col md:flex-row justify-end">
-            <p class="text-paragraph mb-20 md:mb-0 text-gray-600 dark:text-gray-400" data-splitting>digital products</p>
+        <div class="text-container flex flex-col items-end">
+            <p class="text-paragraph mb-0 text-gray-600 dark:text-gray-400" data-splitting>digital products</p>
         </div>
-        <div class="text-container bottom flex flex-col md:flex-row justify-end lg:justify-between">
+        <div class="text-container flex flex-col items-end">
             <p class="text-paragraph" data-splitting><a href="/design-services" class="no-underline hover:no-underline text-gray-950 dark:text-gray-100 hover:text-black dark:hover:text-white">Work with me</a></p>
         </div>
       </div>

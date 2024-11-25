@@ -203,7 +203,7 @@ video::-webkit-media-controls {
 }
 
 .text-container {
-  @apply w-full font-serif;
+  @apply w-full font-serif text-3xl md:text-5xl;
 }
 
 .text-paragraph {

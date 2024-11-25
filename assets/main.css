@@ -959,8 +959,8 @@ article {
   margin-top: 0.5rem;
 }
 
-.mt-32 {
-  margin-top: 8rem;
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .mt-4 {
@@ -1115,12 +1115,16 @@ article {
   flex-direction: column;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
 
-.justify-end {
-  justify-content: flex-end;
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-center {
@@ -1131,12 +1135,12 @@ article {
   justify-content: space-between;
 }
 
-.gap-12 {
-  gap: 3rem;
-}
-
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-6 {
@@ -1304,9 +1308,9 @@ article {
   padding-right: 1rem;
 }
 
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.px-\[16px\] {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .py-1 {
@@ -1332,8 +1336,12 @@ article {
   padding-bottom: 3rem;
 }
 
-.pl-6 {
-  padding-left: 1.5rem;
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pl-\[16px\] {
+  padding-left: 16px;
 }
 
 .pt-12 {
@@ -1352,6 +1360,10 @@ article {
   padding-top: 1.5rem;
 }
 
+.pt-8 {
+  padding-top: 2rem;
+}
+
 .pt-\[4px\] {
   padding-top: 4px;
 }
@@ -1363,12 +1375,6 @@ article {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-  letter-spacing: 0;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 1.5;
   letter-spacing: 0;
 }
 
@@ -3531,6 +3537,17 @@ video::-webkit-media-controls {
 .text-container {
   width: 100%;
   font-family: "norman-variable", serif;
+  font-size: 1.75rem;
+  line-height: 3rem;
+  letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+  .text-container {
+    font-size: 2.625rem;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
 }
 
 .text-paragraph {
@@ -3815,12 +3832,6 @@ video::-webkit-media-controls {
   .sm\:gap-4 {
     gap: 1rem;
   }
-
-  .sm\:text-6xl {
-    font-size: 3.25rem;
-    line-height: 1.4;
-    letter-spacing: 0;
-  }
 }
 
 @media (min-width: 768px) {
@@ -3852,9 +3863,18 @@ video::-webkit-media-controls {
     flex-direction: row;
   }
 
+  .md\:justify-center {
+    justify-content: center;
+  }
+
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .md\:px-\[32px\] {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .md\:pb-0 {
@@ -3863,6 +3883,10 @@ video::-webkit-media-controls {
 
   .md\:pl-0 {
     padding-left: 0px;
+  }
+
+  .md\:pl-\[32px\] {
+    padding-left: 32px;
   }
 
   .md\:pt-24 {
@@ -3920,8 +3944,8 @@ video::-webkit-media-controls {
     grid-template-columns: 1fr 300px;
   }
 
-  .lg\:justify-between {
-    justify-content: space-between;
+  .lg\:gap-12 {
+    gap: 3rem;
   }
 
   .lg\:self-start {
