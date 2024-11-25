@@ -57,7 +57,7 @@ picture img {
 }
 
 .content-container {
-  @apply mx-auto max-w-[calc(100%-16px)] lg:max-w-[calc(100%-32px)];
+  @apply mx-auto max-w-[calc(100%-32px)] lg:max-w-[calc(100%-64px)];
 }
 
 .content-container,
@@ -83,7 +83,7 @@ picture img {
 }
 
 .sub-heading {
-  @apply text-base md:text-lg  font-normal mb-12 md:mb-16 max-w-prose;
+  @apply text-lg md:text-xl mb-12 md:mb-16 max-w-prose;
 }
 
 .toc-toggle {

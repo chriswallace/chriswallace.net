@@ -1,10 +1,6 @@
 @layer utilities {
   /* Base Typography */
 
-  .base-text {
-    @apply text-base md:text-lg text-gray-500 dark:text-gray-400 font-thin;
-  }
-
   .max-w-8xl {
     @apply max-w-[2180px];
   }

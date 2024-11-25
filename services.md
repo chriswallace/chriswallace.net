@@ -7,7 +7,7 @@ description: Get the strategic oversight, vision, and expertise of an experience
 
 <div class="content-container pt-12 lg:pt-24 wide">
   <div class="primary-heading fade-in-element">
-    <h1>I offer <a href="/what-is-a-cdo">CDO</a>-level services for companies looking to develop a holistic design fluency.</h1>
+    <h1>I offer <a href="/fractional-cdo">CDO</a>-level services for companies looking to develop a holistic design fluency.</h1>
   </div>
   <div class="{{ page.markdown }} max-w-none">
     <hr class="hr-separator fade-in-element">

@@ -1,14 +1,11 @@
 @layer base {
-  html {
-    font-size: var(--font-size-base);
-
-    @screen 2xl {
-      font-size: calc(var(--font-size-base) * 1.2);
-    }
+  html,
+  body {
+    @apply text-base;
   }
 
   body {
-    @apply base-text text-gray-500 dark:text-gray-300;
+    @apply text-gray-800 dark:text-gray-200;
   }
 
   /* Headings */

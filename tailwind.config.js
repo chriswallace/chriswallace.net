@@ -43,7 +43,7 @@ module.exports = {
           'serif'
         ],
         sans: [
-          'bricolage-grotesque',
+          '"neue-haas-grotesk-text"',
           'system-ui',
           '-apple-system',
           'BlinkMacSystemFont',
@@ -64,19 +64,19 @@ module.exports = {
       },
       fontSize: {
         xs: [
-          "0.9rem",
+          "0.75rem",
           {
             lineHeight: "1.75",
           },
         ],
         sm: [
-          "0.96rem",
+          "0.82rem",
           {
             lineHeight: "1.75",
           },
         ],
         base: [
-          "1rem",
+          "16px",
           {
             lineHeight: "1.75",
             letterSpacing: "0",
@@ -173,55 +173,6 @@ module.exports = {
         4: "1rem",
         5: "1.25rem",
         6: "1.5rem",
-      },
-      typography: {
-        DEFAULT: {
-          css: {
-            p: {
-              "font-size": "1.25rem",
-              "font-weight": "300",
-            },
-            a: {
-              color: "#fff",
-              "&:hover": {
-                color: "#eee",
-              },
-            },
-            pre: {
-              "font-family": '"Source Code Pro", monospace',
-              display: "block",
-              margin: 0,
-              padding: "1rem",
-              "font-size": "0.8rem",
-              "white-space": "pre",
-              "white-space": "pre-wrap",
-              "word-break": "break-all",
-              "word-wrap": "break-word",
-              "background-color": "#333",
-              color: "#ccc",
-            },
-            code: {
-              padding: "0.2em 0.4em",
-              "font-size": "85%",
-              margin: 0,
-              color: "#ccc",
-              "background-color": "#333",
-              "border-radius": "4px",
-              "font-weight": "normal",
-              "&::before": {
-                content: "none !important",
-              },
-              "&::after": {
-                content: "none !important",
-              },
-            },
-            ".highlight": {
-              "white-space": "pre",
-              "overflow-x": "auto",
-              "border-radius": "4px",
-            },
-          },
-        },
       },
     },
   },
