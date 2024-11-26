@@ -27,7 +27,7 @@
   }
 
   .hr-separator {
-    @apply mt-0 mb-24 w-[48px] bg-primary-700 dark:bg-primary-700 border-none h-0.5 overflow-hidden;
+    @apply mt-3 mb-24 w-[48px] bg-primary-700 dark:bg-primary-700 border-none h-0.5 overflow-hidden;
   }
 
   /* Interactive Elements */

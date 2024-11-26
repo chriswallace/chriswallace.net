@@ -6,8 +6,10 @@ description: Get the strategic oversight, vision, and expertise of an experience
 ---
 
 <div class="content-container py-12 lg:py-24 wide">
-  <div class="primary-heading pb-12 lg:pb-24 fade-in-element">
-    <h1>Designing a thing is easy. Creating a healthy, successful design culture is hard. Let me help.</h1>
+  <div class="primary-heading fade-in-element">
+    <h1 class="block !max-w-5xl">Product Design + Experience Strategy that hits different.</h1>
+    <p class="text-xl lg:text-2xl font-medium block my-6">Get access to both hands-on and strategic design support from a seasoned product leader here to help solve some of your biggest problems. </p>
+    <hr class="hr-separator">
   </div>
   <div class="{{ page.markdown }} max-w-none">
     <div class="services__container">

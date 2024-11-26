@@ -621,6 +621,11 @@ video {
   margin-right: auto;
 }
 
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .\!mb-6 {
   margin-bottom: 1.5rem !important;
 }
@@ -791,6 +796,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.\!max-w-5xl {
+  max-width: 64rem !important;
 }
 
 .max-w-2xl {
@@ -1140,9 +1149,19 @@ video {
   line-height: 1.2rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.9rem;
+  letter-spacing: 0;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1.2rem;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .text-gray-600 {
@@ -2055,12 +2074,14 @@ body.meetChris {
     padding-bottom: 6rem;
   }
 
-  .lg\:pb-24 {
-    padding-bottom: 6rem;
-  }
-
   .lg\:pt-24 {
     padding-top: 6rem;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0;
   }
 
   .lg\:text-lg {

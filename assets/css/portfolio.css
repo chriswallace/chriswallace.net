@@ -6,6 +6,10 @@
   @apply content-container 2xl:mx-auto md:pb-6;
 }
 
+.portfolio-group-heading h1 {
+  @apply mt-12;
+}
+
 .portfolio-list {
   @apply md:mx-auto max-w-6xl mx-auto mb-12 grid grid-cols-1 lg:grid-cols-2 gap-8;
 }
@@ -36,8 +40,8 @@
 }
 
 .portfolio-list__title {
-  @apply mt-8 mb-1.5 font-serif dark:text-white text-2xl xl:text-3xl;
-  font-variation-settings: "wght" 550;
+  @apply mt-8 mb-1.5 font-serif dark:text-white text-xl xl:text-2xl tracking-tight;
+  font-variation-settings: "wght" 500;
 }
 
 .portfolio-list__title a {
