@@ -7,19 +7,7 @@
 }
 
 .services__package {
-  @apply items-start border-t-4 border-primary-600 pt-4;
-}
-
-.services__package:nth-child(2){
-    @apply border-primary-500;
-}
-
-.services__package:nth-child(3){
-    @apply border-primary-400;
-}
-
-.services__package:nth-child(4){
-    @apply border-primary-300;
+  @apply items-start border-t-4 border-primary-400 dark:border-primary-700 pt-4;
 }
 
 .services__package:nth-child(odd){
@@ -27,24 +15,12 @@
 }
 
 .services__title {
-  @apply mt-2 mb-0 text-xl lg:text-2xl;
+  @apply mt-2 mb-0 ~text-2xl/3xl;
   font-variation-settings: "wght" 600;
 }
 
 .services__description {
-  @apply text-primary-600 mb-8 text-lg capitalize;
-}
-
-.services__package:nth-child(2) .services__description{
-  @apply dark:text-primary-500;
-}
-
-.services__package:nth-child(3) .services__description{
-  @apply dark:text-primary-400;
-}
-
-.services__package:nth-child(4) .services__description{
-  @apply dark:text-primary-300;
+  @apply text-primary-600 dark:text-primary-400 mb-8 text-lg capitalize;
 }
 
 .services__package svg {

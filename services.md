@@ -1,11 +1,11 @@
 ---
 layout: page
-title: All gas, no brakes. Get an experienced designer, founder, and builder all in one neat package.
+title: All gas, no brakes.
 permalink: /design-services
 description: Get the strategic oversight, vision, and expertise of an experienced Chief Design Officer on your terms. As a Fractional CDO, I provide hands-on design leadership tailored to the unique needs of your organization, helping you drive impactful design strategies, establish a powerful brand presence, and scale your product or service experience.
 ---
 
-<p class="sub-heading fade-in-element mb-12">Whether you want a hands-on designer or <a href="/fractional-cdo">Fractional CDO</a>, I'm available and ready to make progress towards your most difficult challenges.</p>
+<p class="sub-heading fade-in-element mb-12">Ready to level up your design capabilities? Hire me as a <a href="/fractional-cdo">Fractional CDO</a> or Design Lead ready to solve your toughest challenges.</p>
 
 <div class="{{ page.markdown }} max-w-none">
   <div class="services__container">

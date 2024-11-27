@@ -3049,23 +3049,15 @@ article {
   align-items: flex-start;
   border-top-width: 4px;
   --tw-border-opacity: 1;
-  border-color: rgb(60 113 212 / var(--tw-border-opacity));
+  border-color: rgb(123 177 234 / var(--tw-border-opacity));
   padding-top: 1rem;
 }
 
-.services__package:nth-child(2) {
-  --tw-border-opacity: 1;
-  border-color: rgb(80 141 225 / var(--tw-border-opacity));
-}
-
-.services__package:nth-child(3) {
-  --tw-border-opacity: 1;
-  border-color: rgb(123 177 234 / var(--tw-border-opacity));
-}
-
-.services__package:nth-child(4) {
-  --tw-border-opacity: 1;
-  border-color: rgb(159 201 241 / var(--tw-border-opacity));
+@media (prefers-color-scheme: dark) {
+  .services__package {
+    --tw-border-opacity: 1;
+    border-color: rgb(50 94 195 / var(--tw-border-opacity));
+  }
 }
 
 .services__package:nth-child(odd) {
@@ -3075,18 +3067,8 @@ article {
 .services__title {
   margin-top: 0.5rem;
   margin-bottom: 0px;
-  font-size: 1.25rem;
-  line-height: 2rem;
-}
-
-@media (min-width: 64rem) {
-  .services__title {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-  }
-}
-
-.services__title {
+  font-size: clamp(1.5rem,1.39rem + 0.28vw,1.75rem)/* fluid type from 1.5rem at 40rem to 1.75rem at 128rem */;
+  line-height: clamp(2.5rem,2.39rem + 0.28vw,2.75rem)/* fluid from 2.5rem at 40rem to 2.75rem at 128rem */;
   font-variation-settings: "wght" 600;
 }
 
@@ -3100,19 +3082,9 @@ article {
 }
 
 @media (prefers-color-scheme: dark) {
-  .services__package:nth-child(2) .services__description {
-    --tw-text-opacity: 1;
-    color: rgb(80 141 225 / var(--tw-text-opacity));
-  }
-
-  .services__package:nth-child(3) .services__description {
+  .services__description {
     --tw-text-opacity: 1;
     color: rgb(123 177 234 / var(--tw-text-opacity));
-  }
-
-  .services__package:nth-child(4) .services__description {
-    --tw-text-opacity: 1;
-    color: rgb(159 201 241 / var(--tw-text-opacity));
   }
 }
 
@@ -3943,6 +3915,8 @@ video::-webkit-media-controls {
 
 .contact-card__content {
   display: inline-block;
+  font-size: clamp(1rem,0.89rem + 0.28vw,1.25rem)/* fluid type from 1rem at 40rem to 1.25rem at 128rem */;
+  line-height: clamp(1.65rem,1.49rem + 0.4vw,2rem)/* fluid from 1.65rem at 40rem to 2rem at 128rem */;
 }
 
 .contact-card__text {

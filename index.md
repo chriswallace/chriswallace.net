@@ -1,8 +1,7 @@
 ---
 layout: home
 title: Chris Wallace - Designer, Creative Director, and Front-End Engineer
-description: Product design leader with over 20 years experience in e-commerce, digital publishing, interactive media,
-and web3. Currently searching for my next long-term role.
+description: Product design leader with over 20 years experience in e-commerce, digital publishing, interactive media, and web3. Currently searching for my next long-term role.
 ---
 
 <div class="hidden-until-loaded">

@@ -347,7 +347,7 @@ video::-webkit-media-controls {
 }
 
 .contact-card__content {
-  @apply inline-block;
+  @apply inline-block ~text-base/xl;
 }
 
 .contact-card__text {
