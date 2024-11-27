@@ -3,11 +3,15 @@
 }
 
 .services__container {
-  @apply grid grid-cols-2 max-w-4xl 2xl:grid-cols-4 2xl:max-w-5xl gap-4 xl:gap-12;
+  @apply grid grid-cols-1 max-w-4xl xl:grid-cols-2 2xl:grid-cols-4 2xl:max-w-4xl gap-2 xl:gap-2;
 }
 
 .services__package {
-  @apply rounded-md items-start max-w-[380px];
+  @apply items-start border-t-2 border-primary-800 pt-6;
+}
+
+.services__package:nth-child(odd){
+  @apply pr-4;
 }
 
 .services__title {

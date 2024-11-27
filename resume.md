@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Chris Wallace, Chief Design Officer
+title: Résumé
 permalink: /resume/
-description: I work with companies like DC Comics, Starbucks, Google, and even The California DMV to create transformative digital products for millions of users worldwide. My approach to design is collaborative, reducing technical complexity to simple, delightful experiences.
+description: I work with companies like DC Comics, AMC Networks, Google, and even The California DMV to create award-winning digital products for millions of people around the world.
 thumbnail: /assets/images/thumbs/resume.png
 ---
 
 <div class="mb-48">
   <div itemscope itemtype="http://schema.org/Person">
-  <p itemprop="description" class="fade-in-element sub-heading !mt-4">With 20 years of experience in design and tech, I've worked with companies like DC Comics, Starbucks, Google, and The California DMV to create transformative digital products.</p>
+  <p itemprop="description" class="fade-in-element sub-heading !mt-4">I work with companies like DC Comics, AMC Networks, Google, and even The California DMV to create award-winning digital products for millions of people around the world.</p>
   
   <hr class="hr-separator fade-in-element">
 
@@ -24,7 +24,7 @@ thumbnail: /assets/images/thumbs/resume.png
           <div class="time-period" itemprop="worksFor">Mar 2024 - Oct 2024</div>
         </div>
         <div class="description fade-in-element">
-          <p>Led all product design efforts across the company. I redesigned our website and marketplace to learn about digital collectibles and gain access to better tools for buying and selling. I also designed net new features like withdrawing collectibles and buying paired physical and digital items. I also worked more holistically, taking the initiative to create a design system to make work easier and faster for our design and engineering teams. One of my favorite projects was designing and coding the app for an interactive comic book reader for digital DC Comics complete with x-ray, pop-up factoids, and panel reading modes.</p>
+          <p>Led product design efforts, redesigned website and marketplace, and created a design system. Designed an interactive comic book reader app for digital DC Comics.</p>
         </div>
       </div>
       <div class="job resume-item" itemprop="employee">
@@ -34,7 +34,7 @@ thumbnail: /assets/images/thumbs/resume.png
           <div class="time-period" itemprop="worksFor">Apr 2021 - Mar 2024</div>
         </div>
         <div class="description fade-in-element">
-          <p>I started UltraDAO Studios to bring together artists, engineers, and creators to make new IP through impeccable storytelling and engaging artistry. The result was Woodies, a collection of digital avatars on the Ethereum blockchain that sold out in less than 30 minutes. We made a record crypto donation of 73.824 ETH ($217,000) to plant one million trees with Trees for the Future. We later released an acclaimed animated short along with the first large-scale 3D avatars for metaverse platforms like Decentraland and Nifty Island.</p>
+          <p>Founded UltraDAO Studios, created Woodies digital avatars, and led a record crypto donation. Released an acclaimed animated short and large-scale 3D avatars for metaverse platforms.</p>
         </div>
       </div>
       <div class="job resume-item" itemprop="employee">
@@ -44,8 +44,7 @@ thumbnail: /assets/images/thumbs/resume.png
           <div class="time-period" itemprop="worksFor">Aug 2017 - Sep 2021</div>
         </div>
         <div class="description fade-in-element">
-          <p>Grew the design team from 5 people to 20 internationally, establishing new disciplines across user research, content design, and creative. I worked with amazing clients like Microsoft, Starbucks, and Google on websites and web-based products that impacted millions of users worldwide. My team led the California DMV’s move online during the pandemic, designing the Real ID microsite and a comprehensive digital transformation for the agency's user-facing infrastructure. I mentored designers and provided creative guidance and design review to ensure client projects stayed on track with a high level of quality.</p>
-          <p>Clients: ESPN, Facebook, Stanford eCorner, The New York Times, Google, Starbucks, Capital One, Northeastern University, Microsoft, FiveThirtyEight, Merck, Credit Karma, The Smithsonian, The Nobel Prize</p>
+          <p>Expanded design team, led projects for clients like Microsoft and Google, and directed the design team on California DMV’s digital transformation. Mentored designers and ensured high-quality client projects.</p>
         </div>
       </div>
       <div class="job resume-item" itemprop="employee">
@@ -55,8 +54,7 @@ thumbnail: /assets/images/thumbs/resume.png
           <div class="time-period" itemprop="worksFor">Dec 2009 - Aug 2017</div>
         </div>
         <div class="description fade-in-element">
-          <p>I led the design and development of award-winning digital experiences, including second-screen apps for AMC’s The Walking Dead, Breaking Bad, and Mad Men. This work resulted in AMC Story Sync, a groundbreaking interactive platform that redefined fan engagement. I partnered with clients like Frito-Lay and GoDaddy to design and build WordPress-powered apps and websites. In addition to client work, we ran a WordPress theme business called UpThemes offering open-source freemium products.</p>
-          <p>Clients: WEtv, IFC, Sundance Channel, The Walking Dead, Mad Men, Breaking Bad, Better Call Saul, Fear The Walking Dead, AMC Networks, Frito-Lay, The Next Web</p>
+          <p>Led design of award-winning, 2x Emmy-nominated digital experiences, including AMC Story Sync (The Walking Dead, Breaking Bad, and Mad Men). Partnered with clients like Frito-Lay and GoDaddy, and ran a WordPress theme business.</p>
         </div>
       </div>
       <div class="job resume-item" itemprop="employee">
@@ -66,7 +64,7 @@ thumbnail: /assets/images/thumbs/resume.png
           <div class="time-period" itemprop="worksFor">Aug 2007 - Dec 2009</div>
         </div>
         <div class="description fade-in-element">
-          <p>I built parts of the website and tools people use to book rentals. I worked closely with teams to make sure designs looked great and worked smoothly. I also checked every update to the site to catch mistakes and keep everything running well. My job was all about making the website easy to use and helpful for everyone.</p>
+          <p>Built website tools for booking rentals, ensured smooth design implementation, and maintained website functionality.</p>
         </div>
       </div>
       <div class="job resume-item" itemprop="employee">
@@ -76,7 +74,7 @@ thumbnail: /assets/images/thumbs/resume.png
           <div class="time-period" itemprop="worksFor">May 2006 - Aug 2007</div>
         </div>
         <div class="description fade-in-element">
-          <p>As a client-facing designer, I helped small businesses build online shops that were easy to use and matched their brands. I worked directly with clients to design store templates that fit their style and needs. I also teamed up with designers to make sure new logos and branding worked perfectly in their shops. I enjoyed helping businesses stand out and create great first impressions online.</p>
+          <p>Designed online shops for small businesses, collaborated on branding, and created store templates that matched client needs.</p>
         </div>
       </div>
     </div>

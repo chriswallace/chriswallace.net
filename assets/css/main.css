@@ -62,7 +62,7 @@ picture img {
 
 .content-container,
 .content-container-wo {
-  @apply mx-auto 2xl:max-w-7xl sm:ml-[128px] sm:mr-[64px] 2xl:mx-auto;
+  @apply py-24 mx-auto 2xl:max-w-7xl sm:ml-[128px] sm:mr-[64px] 2xl:mx-auto;
 }
 
 .content-container.wide,
@@ -75,7 +75,7 @@ picture img {
 }
 
 .sub-heading {
-  @apply text-xl dark:text-white mb-12 md:mb-16;
+  @apply text-xl max-w-prose mt-4 mb-12 md:mb-16;
 }
 
 .sub-heading + hr {

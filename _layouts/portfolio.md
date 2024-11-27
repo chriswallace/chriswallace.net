@@ -11,7 +11,7 @@ layout: compress
         {% include header.md %}
       </div>
       <div class="ui-content">
-        <div class="content-container-wo xl:mt-12">
+        <div class="content-container-wo !pt-6">
           <div class="portfolio__video-container">
             <div class="portfolio__video-overlay"></div>
             <video id="backgroundVideo" class="portfolio__video" poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/portfolio-poster.png" autoplay muted loop playsinline>

@@ -1447,6 +1447,10 @@ article {
   padding-top: 0px !important;
 }
 
+.\!pt-6 {
+  padding-top: 1.5rem !important;
+}
+
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -2317,17 +2321,10 @@ article {
 .resume-item .metadata > * {
   margin: 0px;
   text-align: left;
-  font-size: 0.82rem;
-  line-height: 1.2rem;
+  font-size: 16px;
+  line-height: 1.5rem;
+  letter-spacing: 0;
   font-weight: 400;
-}
-
-@media (min-width: 768px) {
-  .resume-item .metadata > * {
-    font-size: 16px;
-    line-height: 1.5rem;
-    letter-spacing: 0;
-  }
 }
 
 .resume-item .metadata .place {
@@ -2414,7 +2411,6 @@ article {
 
 .resume-item .description {
   margin-bottom: 3rem;
-  padding-left: 1.5rem;
   font-size: 16px;
   line-height: 1.5rem;
   letter-spacing: 0;
@@ -2811,6 +2807,8 @@ article {
 .portfolio-group-heading {
   margin-left: auto;
   margin-right: auto;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 @media (min-width: 640px) {
@@ -3045,27 +3043,34 @@ article {
 .services__container {
   display: grid;
   max-width: 56rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.5rem;
 }
 
 @media (min-width: 1280px) {
   .services__container {
-    gap: 3rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
   }
 }
 
 @media (min-width: 1536px) {
   .services__container {
-    max-width: 64rem;
+    max-width: 56rem;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
 .services__package {
-  max-width: 380px;
   align-items: flex-start;
-  border-radius: 0.375rem;
+  border-top-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(46 77 159 / var(--tw-border-opacity));
+  padding-top: 1.5rem;
+}
+
+.services__package:nth-child(odd) {
+  padding-right: 1rem;
 }
 
 .services__title {
@@ -3246,6 +3251,8 @@ picture img {
 .content-container-wo {
   margin-left: auto;
   margin-right: auto;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 @media (min-width: 640px) {
@@ -3284,7 +3291,9 @@ picture img {
 }
 
 .sub-heading {
+  margin-top: 1rem;
   margin-bottom: 3rem;
+  max-width: 65ch;
   font-size: 1.25rem;
   line-height: 1.9rem;
   letter-spacing: 0;
@@ -3293,13 +3302,6 @@ picture img {
 @media (min-width: 768px) {
   .sub-heading {
     margin-bottom: 4rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .sub-heading {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 
@@ -3980,12 +3982,6 @@ video::-webkit-media-controls {
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.9rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:mt-12 {
-    margin-top: 3rem;
   }
 }
 

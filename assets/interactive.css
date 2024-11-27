@@ -1065,6 +1065,10 @@ video {
   padding-top: 0px !important;
 }
 
+.\!pt-6 {
+  padding-top: 1.5rem !important;
+}
+
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -1980,12 +1984,6 @@ body.meetChris {
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.9rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:mt-12 {
-    margin-top: 3rem;
   }
 }
 
