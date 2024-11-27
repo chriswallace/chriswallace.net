@@ -24,7 +24,7 @@ thumbnail: /assets/images/thumbs/resume.png
           <div class="time-period" itemprop="worksFor">Mar 2024 - Oct 2024</div>
         </div>
         <div class="description fade-in-element">
-          <p>Led product design efforts, redesigned website and marketplace, and created a design system. Designed an interactive comic book reader app for digital DC Comics.</p>
+          <p>Led product design efforts, redesigned website and marketplace, and created a design system. Created an interactive comic book reader app for digital DC Comics and other prototypes. Worked with cross-functional partners to ship new features and improve user experience across our ecosystem of apps.</p>
         </div>
       </div>
       <div class="job resume-item" itemprop="employee">
@@ -34,7 +34,7 @@ thumbnail: /assets/images/thumbs/resume.png
           <div class="time-period" itemprop="worksFor">Apr 2021 - Mar 2024</div>
         </div>
         <div class="description fade-in-element">
-          <p>Founded UltraDAO Studios, created Woodies digital avatars, and led a record crypto donation. Released an acclaimed animated short and large-scale 3D avatars for metaverse platforms.</p>
+          <p>Founded UltraDAO Studios, created Woodies digital avatars, and led a record crypto donation. Bootstrapped the company to $2.6m revenue within six months. Released an acclaimed animated short and the first large-scale 3D avatars available on metaverse platforms.</p>
         </div>
       </div>
       <div class="job resume-item" itemprop="employee">
