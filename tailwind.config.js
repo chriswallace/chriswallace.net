@@ -78,6 +78,7 @@ module.exports = {
           "16px",
           {
             lineHeight: "1.5rem",
+            fontWeight: "400",
             letterSpacing: "0",
           },
         ],

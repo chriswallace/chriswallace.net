@@ -625,10 +625,6 @@ video {
   margin-top: 1rem !important;
 }
 
-.-mt-6 {
-  margin-top: -1.5rem;
-}
-
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -675,6 +671,10 @@ video {
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.mb-\[2em\] {
+  margin-bottom: 2em;
 }
 
 .ml-0 {
@@ -1090,8 +1090,8 @@ video {
   padding-top: 3rem;
 }
 
-.pt-24 {
-  padding-top: 6rem;
+.pt-28 {
+  padding-top: 7rem;
 }
 
 .pt-32 {
@@ -1124,10 +1124,15 @@ video {
   letter-spacing: 0;
 }
 
+.text-\[12em\] {
+  font-size: 12em;
+}
+
 .text-base {
   font-size: 16px;
   line-height: 1.5rem;
   letter-spacing: 0;
+  font-weight: 400;
 }
 
 .text-lg {
@@ -1149,6 +1154,14 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1.2rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.leading-\[0\.75\] {
+  line-height: 0.75;
 }
 
 .text-gray-800 {
@@ -1905,10 +1918,6 @@ body.meetChris {
     margin-bottom: 5rem;
   }
 
-  .md\:ml-\[80px\] {
-    margin-left: 80px;
-  }
-
   .md\:w-full {
     width: 100%;
   }
@@ -1963,6 +1972,10 @@ body.meetChris {
     padding: 2rem;
   }
 
+  .lg\:text-\[32em\] {
+    font-size: 32em;
+  }
+
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.9rem;
@@ -2002,6 +2015,11 @@ body.meetChris {
 
   .dark\:bg-gray-900\/20 {
     background-color: rgb(58 59 63 / 0.2);
+  }
+
+  .dark\:text-gray-100 {
+    --tw-text-opacity: 1;
+    color: rgb(229 231 232 / var(--tw-text-opacity));
   }
 
   .dark\:text-primary-500 {

@@ -1,20 +1,17 @@
 ---
-layout: default
-title: QQL Curation
+layout: page
+title: Studying the QQL Algorithm
 description: I'm fascinated by the complex patterns and hidden niceties that emerge from the QQL algorithm. I've spent countless hours generating and studying outputs to curate this series, many of which are now available for purchase through the official marketplace.
-permalink: /art/qql-studying-the-algorithm/
+permalink: /art/studying-the-qql-algorithm/
 thumbnail: https://ik.imagekit.io/UltraDAO/wallace/studying_the_algorithm.png?tr=w-1000,q-70
 ---
 
-<div class="content-container">
-  <a class="back fade-in-element" href="/art">/art</a>
-  <h1 class="fade-in-element">QQL: Studying the Algorithm</h1>
-  <div class="-mt-6 mb-12 text-lg text-gray-800 fade-in-element">
+  <div class="mb-12 text-lg font-medium text-gray-800 dark:text-gray-100 fade-in-element">
     Curated by Chris Wallace
   </div>
-  <p class="fade-in-element">I'm fascinated by the complex patterns and hidden niceties that emerge from the QQL algorithm. I've spent countless hours generating and studying outputs to curate this series, many of which are now available for purchase through the official marketplace.</p>
-  <p class="fade-in-element">Curator notes: This gallery is best experienced on a large 4k display with HDR enabled. Each row (except the first) was curated as a triptych, grouped with intention for various reasons. Sometimes they are grouped because of similar patterning and others based on color or saturation.</p>
-  <hr class="mb-16 md:mb-20 fade-in-element" />
+  <p class="fade-in-element">QQL is an exciting generative art algorithm crafted by the talented duo Tyler Hobbs and Dandelion Wist. It's not just about creating art; it's about inviting you into the creative process. With QQL, you get to play with the controls and watch as your unique vision comes to life, resulting in stunning patterns and visuals that are as diverse as they are beautiful.</p>
+  <p class="fade-in-element">Curator notes: This gallery is a testament to the magic of QQL. For the best experience, view it on a large 4k display with HDR enabled. Each row, except the first, is curated as a triptych, thoughtfully arranged based on pattern, color, or saturation. This setup not only showcases the algorithm's versatility but also its ability to create both harmonious series and standout individual pieces.</p>
+  <hr class="hr-separator mb-16 md:mb-20 fade-in-element" />
   <div id="art-collection" class="art-collection qql-collection">
     <div>
       <div class="gallery-row gallery-triple-wide-double-small">
@@ -360,7 +357,6 @@ thumbnail: https://ik.imagekit.io/UltraDAO/wallace/studying_the_algorithm.png?tr
       </div>
     </div>
   </div>
-</div>
 <div id="fullscreen-viewer" class="hidden"></div>
 {% include footer.md %}
 

@@ -24,42 +24,41 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnai
     </div>
   </dl>
 </div>
+  <div class="fade-in-element flex flex-col bg-[#CC9644] mb-1.5">
+    <picture>
+      <source media="(max-width: 480px)" 
+              srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-800,f-auto">
+      <source media="(min-width: 481px)" 
+              srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-800,f-auto 800w,
+                      https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-1200,f-auto 1200w,
+                      https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-1600,f-auto 1600w,
+                      https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-2500,f-auto 2500w">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-2500,f-auto"
+          class="max-h-[500px] w-auto mx-auto" 
+          alt="" 
+          loading="lazy">
+    </picture>
+  </div>
 
-<div class="fade-in-element md:ml-[80px] flex flex-col bg-[#CC9644] mb-1.5">
-  <picture>
-    <source media="(max-width: 480px)" 
-            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-800,f-auto">
-    <source media="(min-width: 481px)" 
-            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-800,f-auto 800w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-1200,f-auto 1200w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-1600,f-auto 1600w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-2500,f-auto 2500w">
-    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-2500,f-auto"
-         class="max-h-[500px] w-auto mx-auto" 
-         alt="" 
-         loading="lazy">
-  </picture>
-</div>
+  <div class="fade-in-element flex flex-col bg-[#CC9644] mb-1.5">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="w-full block max-w-[1400px] mx-auto" alt="" loading="lazy">
+  </div>
 
-<div class="fade-in-element content-container-wo flex flex-col bg-[#CC9644] mb-1.5">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="w-full block max-w-[1400px] mx-auto" alt="" loading="lazy">
-</div>
+  <div class="fade-in-element flex flex-col bg-[#CC9644] mb-1.5">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/2-twelve-days.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/2-twelve-days.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2-twelve-days.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2-twelve-days.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2-twelve-days.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2-twelve-days.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="w-full block max-w-[1400px] mx-auto" alt="" loading="lazy">
+  </div>
 
-<div class="fade-in-element md:ml-[80px] flex flex-col bg-[#CC9644] mb-1.5">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/2-twelve-days.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/2-twelve-days.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2-twelve-days.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2-twelve-days.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2-twelve-days.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2-twelve-days.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="w-full block max-w-[1400px] mx-auto" alt="" loading="lazy">
-</div>
+  <div class="fade-in-element flex flex-col bg-[#CC9644] mb-1.5">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/3-twelve-days.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/3-twelve-days.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3-twelve-days.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3-twelve-days.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3-twelve-days.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3-twelve-days.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="w-full block max-w-[1400px] mx-auto" alt="" loading="lazy">
+  </div>
 
-<div class="fade-in-element md:ml-[80px] flex flex-col bg-[#CC9644] mb-1.5">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/3-twelve-days.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/3-twelve-days.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3-twelve-days.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3-twelve-days.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3-twelve-days.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3-twelve-days.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="w-full block max-w-[1400px] mx-auto" alt="" loading="lazy">
-</div>
+  <div class="fade-in-element flex flex-col bg-[#CC9644] mb-1.5">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/4-twelve-days.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/4-twelve-days.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4-twelve-days.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4-twelve-days.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4-twelve-days.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4-twelve-days.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="w-full block max-w-[1400px] mx-auto" alt="" loading="lazy">
+  </div>
 
-<div class="fade-in-element md:ml-[80px] flex flex-col bg-[#CC9644] mb-1.5">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/4-twelve-days.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/4-twelve-days.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4-twelve-days.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4-twelve-days.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4-twelve-days.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4-twelve-days.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="w-full block max-w-[1400px] mx-auto" alt="" loading="lazy">
-</div>
-
-<div class="fade-in-element md:ml-[80px] flex flex-col bg-[#CC9644] mb-12">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/5-twelve-days.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/5-twelve-days.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5-twelve-days.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5-twelve-days.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5-twelve-days.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5-twelve-days.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="w-full block max-w-[1400px] mx-auto" alt="" loading="lazy">
-</div>
+  <div class="fade-in-element flex flex-col bg-[#CC9644] mb-12">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/5-twelve-days.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/5-twelve-days.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5-twelve-days.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5-twelve-days.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5-twelve-days.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5-twelve-days.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="w-full block max-w-[1400px] mx-auto" alt="" loading="lazy">
+  </div>
 
 <div class="content-container">
   <p class="fade-in-element">Twelve Days of CryptoArt is an experimental art event hosted by UltraDAO that reimagines the traditional art collecting experience through blockchain technology. As the product owner, I created a unique format where collectors decide to mint a daily artwork with the artist hidden for twelve consecutive days. Collectors were then given the option to swap to a future day's artwork with another unknown artist and unable to swap back to prior days. This created a fun dynamic between holding and swapping art without knowing the artist behind the works.</p>

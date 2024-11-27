@@ -559,6 +559,7 @@ html,
   font-size: 16px;
   line-height: 1.5rem;
   letter-spacing: 0;
+  font-weight: 400;
 }
 
 @media (min-width: 1280px) {
@@ -610,21 +611,21 @@ h1,
 h1 {
   margin-bottom: 3rem;
   font-family: "norman-variable", serif;
-  font-size: 2.625rem;
+  font-size: 2.25rem;
   line-height: 1.5;
   letter-spacing: 0;
 }
 
 @media (min-width: 1536px) {
   h1 {
-    font-size: 3.25rem;
+    font-size: 4.625rem;
     line-height: 1.5;
     letter-spacing: 0;
   }
 }
 
 h1 {
-  font-variation-settings: "wght" 550;
+  font-variation-settings: "wght" 475;
 }
 
 h2 {
@@ -1007,10 +1008,6 @@ article {
   margin-top: 1rem !important;
 }
 
-.-mt-6 {
-  margin-top: -1.5rem;
-}
-
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -1057,6 +1054,10 @@ article {
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.mb-\[2em\] {
+  margin-bottom: 2em;
 }
 
 .ml-0 {
@@ -1472,8 +1473,8 @@ article {
   padding-top: 3rem;
 }
 
-.pt-24 {
-  padding-top: 6rem;
+.pt-28 {
+  padding-top: 7rem;
 }
 
 .pt-32 {
@@ -1506,10 +1507,15 @@ article {
   letter-spacing: 0;
 }
 
+.text-\[12em\] {
+  font-size: 12em;
+}
+
 .text-base {
   font-size: 16px;
   line-height: 1.5rem;
   letter-spacing: 0;
+  font-weight: 400;
 }
 
 .text-lg {
@@ -1531,6 +1537,14 @@ article {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1.2rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.leading-\[0\.75\] {
+  line-height: 0.75;
 }
 
 .text-gray-800 {
@@ -1815,6 +1829,7 @@ article {
   font-size: 16px;
   line-height: 1.5rem;
   letter-spacing: 0;
+  font-weight: 400;
   --tw-text-opacity: 1;
   color: rgb(60 113 212 / var(--tw-text-opacity));
   text-decoration-color: #55595e;
@@ -2255,6 +2270,7 @@ article {
   font-size: 16px;
   line-height: 1.5rem;
   letter-spacing: 0;
+  font-weight: 400;
 }
 
 .contact-grid__text {
@@ -2426,6 +2442,7 @@ article {
   font-size: 16px;
   line-height: 1.5rem;
   letter-spacing: 0;
+  font-weight: 400;
 }
 
 .resume-item .description ul {
@@ -2753,6 +2770,7 @@ article {
     font-size: 16px;
     line-height: 1.5rem;
     letter-spacing: 0;
+    font-weight: 400;
   }
 }
 
@@ -3177,6 +3195,7 @@ article {
   font-size: 16px;
   line-height: 1.5rem;
   letter-spacing: 0;
+  font-weight: 400;
 }
 
 @media (min-width: 1024px) {
@@ -3400,6 +3419,7 @@ caption {
     font-size: 16px;
     line-height: 1.5rem;
     letter-spacing: 0;
+    font-weight: 400;
   }
 }
 
@@ -3952,10 +3972,6 @@ video::-webkit-media-controls {
     margin-bottom: 5rem;
   }
 
-  .md\:ml-\[80px\] {
-    margin-left: 80px;
-  }
-
   .md\:w-full {
     width: 100%;
   }
@@ -4010,6 +4026,10 @@ video::-webkit-media-controls {
     padding: 2rem;
   }
 
+  .lg\:text-\[32em\] {
+    font-size: 32em;
+  }
+
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.9rem;
@@ -4049,6 +4069,11 @@ video::-webkit-media-controls {
 
   .dark\:bg-gray-900\/20 {
     background-color: rgb(58 59 63 / 0.2);
+  }
+
+  .dark\:text-gray-100 {
+    --tw-text-opacity: 1;
+    color: rgb(229 231 232 / var(--tw-text-opacity));
   }
 
   .dark\:text-primary-500 {
