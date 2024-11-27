@@ -62,7 +62,7 @@ picture img {
 
 .content-container,
 .content-container-wo {
-  @apply py-24 mx-auto 2xl:max-w-7xl sm:ml-[128px] sm:mr-[64px] 2xl:mx-auto;
+  @apply mx-auto 2xl:max-w-7xl sm:ml-[128px] sm:mr-[64px] 2xl:mx-auto;
 }
 
 .content-container.wide,

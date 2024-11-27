@@ -25,7 +25,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png
   </dl>
 </div>
 
-<div class="content-container-wo !py-0 flex flex-col mb-12">
+<div class="content-container-wo flex flex-col mb-12">
   <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-800,f-auto">
@@ -43,7 +43,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block" alt="" loading="lazy">
 </div>
 
-<div class="content-container !py-0 fade-in-element">
+<div class="content-container fade-in-element">
   <p class="fade-in-element">DC3 is a program from Candy Digital and DC Comics which makes digital comics available for purchase by fans. They can be accessed and read through Candy's website and the user's own collection of purchased comics.</p>
 
   <p class="fade-in-element">The previous app was provided to us by DC and was a simplistic comic book reader, allowing users to read by paging through the comic or using a panel-based method.</p>
