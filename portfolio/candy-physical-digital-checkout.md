@@ -25,7 +25,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png
   </dl>
 </div>
 
-<div class="content-container-wo md:pl-0">
+<div class="content-container-wo !py-0 md:pl-0">
   <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto">
@@ -41,14 +41,14 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png
   </picture>
 </div>
 
-<div class="content-container-wo bg-[#444444] fade-in-element text-center mb-12">
+<div class="content-container-wo !py-0 bg-[#444444] fade-in-element text-center mb-12">
   <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy" class="max-h-full max-w-3xl mx-auto">
       <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.mov/ik-video.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
   </video>
 </div>
 
-<div class="content-container fade-in-element">
+<div class="content-container !py-0 fade-in-element">
   <p class="fade-in-element">Candy's marketplace now features innovative paired physical-digital collectibles. This new product type required a fresh approach to integrate shipping for physical items and clearly indicate which products include them. Additionally, we needed a way to identify claimed physical items in secondary markets.</p>
 
   <p class="fade-in-element">To tackle these challenges, I designed intuitive icons to show if a physical item is claimable or already claimed, and added them as badges on Drop pages. Text and banners were also used to ensure users fully understood their purchases.</p>

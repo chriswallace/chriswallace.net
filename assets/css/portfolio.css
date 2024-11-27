@@ -3,10 +3,7 @@
 }
 
 .portfolio-group-heading {
-  @apply content-container 2xl:mx-auto md:pb-6;
-}
-
-.portfolio-group-heading h1 {
+  @apply content-container !pt-0 2xl:mx-auto md:pb-6;
 }
 
 .portfolio-list {

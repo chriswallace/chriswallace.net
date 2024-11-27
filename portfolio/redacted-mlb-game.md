@@ -25,7 +25,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-th
   </dl>
 </div>
 
-<div class="content-container-wo">
+<div class="content-container-wo !py-0">
   <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-800,f-auto">
@@ -40,7 +40,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-th
          loading="lazy">
   </picture>
 </div>
-<div class="content-container pt-6 pb-12">
+<div class="content-container !py-0">
   <div class="fade-in-element max-w-prose flex aspect-square justify-center items-center rounded-2xl bg-white dark:bg-gray-900/20 p-4 lg:p-8 mb-12">
     <video id="portfolioVideo" data-type="video" controls muted playsinline autoplay loop loading="lazy" class="max-w-[80%] w-full h-auto shadow-2xl rounded-xl">
         <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/mlb-game-video.mp4/ik-video.mp4" type="video/mp4">
