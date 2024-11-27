@@ -129,7 +129,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
              alt="Twelve Days of CryptoArt" 
              class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/dc3-interactive-reader/" class="infinite-scroll__item">
+      <a href="/portfolio/dc3-interactive-comic-reader/" class="infinite-scroll__item">
         <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-760,q-70,f-auto" 
              srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-570,q-70,f-auto 1x,
                      https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-760,q-70,f-auto 2x,
@@ -226,7 +226,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
              alt="Twelve Days of CryptoArt" 
              class="infinite-scroll__image">
       </a>
-      <a href="/portfolio/dc3-interactive-reader/" class="infinite-scroll__item">
+      <a href="/portfolio/dc3-interactive-comic-reader/" class="infinite-scroll__item">
         <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-760,q-70,f-auto" 
              srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-570,q-70,f-auto 1x,
                      https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-760,q-70,f-auto 2x,

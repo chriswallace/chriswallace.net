@@ -1,36 +1,32 @@
-module.exports = {
+import fluid, { extract, screens, fontSize } from 'fluid-tailwind'
+
+export default {
   darkMode: "media", // or 'class'
   mode: "jit",
-  content: [
-    "./assets/**/*.{js,jsx,ts,tsx}",
-    "./_site/**/*.html",
-    "./_layouts/**/*.html",
-    "./_includes/**/*.html",
-    "./*.html",
-    "./*.md",
-    "./[!node_modules]**/*.md"
-  ],
+  content: {
+    files: [
+      "./assets/**/*.{js,jsx,ts,tsx}",
+      "./_site/**/*.html",
+      "./_layouts/**/*.html",
+      "./_includes/**/*.html",
+      "./*.html",
+      "./*.md",
+      "./[!node_modules]**/*.md"
+    ],
+    extract,
+  },
   theme: {
     container: {
-      center: true, // centers the container by default
-      padding: "0", // adds 1rem of padding on each side of the container
-      screens: {
-        'sm': "640px",
-        'md': "900px", 
-        'lg': "1280px",
-        'xl': "1640px",
-        '2xl': "1920px"
-      },
+      center: true,
+      padding: "0",
     },
+    screens: {
+      ...screens,
+      '2xl': '110rem',
+      '3xl': '128rem'
+    },
+    fontSize,
     extend: {
-      screens: {
-        '3xl': '2560px',
-        '4xl': '2940px',
-      },
-      spacing: {
-        '8xl': '96rem',
-        '9xl': '128rem',
-      },
       boxShadow: {
         "inset-display": "inset 0 3px 30px #0055aa",
       },
@@ -43,6 +39,7 @@ module.exports = {
           'serif'
         ],
         sans: [
+          '"instrument-sans-variable"',
           'system-ui',
           '-apple-system',
           'BlinkMacSystemFont',
@@ -65,76 +62,67 @@ module.exports = {
         xs: [
           "0.75rem",
           {
-            lineHeight: "1.2rem",
+            lineHeight: "1.5rem",
           },
         ],
         sm: [
           "0.82rem",
           {
-            lineHeight: "1.2rem",
+            lineHeight: "1.5rem",
           },
         ],
         base: [
-          "16px",
+          "1rem",
           {
-            lineHeight: "1.5rem",
-            fontWeight: "400",
-            letterSpacing: "0",
+            lineHeight: "1.65rem",
           },
         ],
         lg: [
           "1.125rem",
           {
-            lineHeight: "1.9rem",
+            lineHeight: "1.85rem",
           },
         ],
         xl: [
           "1.25rem",
           {
-            lineHeight: "1.9rem",
-            letterSpacing: "0",
+            lineHeight: "2rem",
           },
         ],
         "2xl": [
           "1.5rem",
           {
-            lineHeight: "2rem",
-            letterSpacing: "0",
+            lineHeight: "2.5rem",
           },
         ],
         "3xl": [
           "1.75rem",
           {
-            lineHeight: "3rem",
-            letterSpacing: "0",
+            lineHeight: "2.75rem",
           },
         ],
         "4xl": [
           "2.25rem",
           {
-            lineHeight: "1.5",
-            letterSpacing: "0",
+            lineHeight: "3.25rem",
           },
         ],
         "5xl": [
           "2.625rem",
           {
-            lineHeight: "1.5",
-            letterSpacing: "0",
+            lineHeight: "3.5rem",
           },
         ],
         "6xl": [
           "3.25rem",
           {
-            lineHeight: "1.5",
-            letterSpacing: "0",
+            lineHeight: "4.6rem",
           },
         ],
         "7xl": [
           "4.625rem",
           {
-            lineHeight: "1.5",
-            letterSpacing: "0",
+            lineHeight: "6.75rem",
           },
         ]
       },
@@ -178,6 +166,9 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/typography"),
+    fluid({
+      checkSC144: false // default: true
+    }),
     function ({ addUtilities }) {
       const newUtilities = {
         ".scroll-snap-x": {

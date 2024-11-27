@@ -11,7 +11,7 @@
 }
 
 .contact-grid__icon:after {
-  @apply absolute top-[-16px] right-[-16px] w-[16px] h-[16px] text-[12px] text-black rounded-full overflow-hidden p-0 leading-[1.5] text-center align-middle;
+  @apply absolute top-[-16px] right-[-16px] w-[16px] h-[16px] text-[12px] text-gray-100 dark:text-gray-950 rounded-full overflow-hidden p-0 leading-[1.5] text-center align-middle;
 }
 
 .contact-grid__icon--yes:after {
@@ -20,7 +20,7 @@
 }
 
 .contact-grid__icon--no:after {
-  @apply bg-primary-500;
+  @apply bg-red-500;
   content: "\2715";
 }
 
@@ -29,7 +29,7 @@
 }
 
 .contact-grid__title {
-  @apply mt-6 mb-0 text-base;
+  @apply mt-6 mb-0 ~text-sm/base font-medium;
 }
 
 .contact-grid__text {

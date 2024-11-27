@@ -43,6 +43,6 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbna
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/14.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/14.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/14.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/14.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/14.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/14.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-0" alt="" loading="lazy">
 </div>
 
-<div class="content-container">
+<div class="portfolio-content-wrapper">
   <p class="fade-in-element">Candy League offers MLB collectors on Candy.io seasonal challenges to collect items and complete sets, advancing on the leaderboard. Top participants earn early drop access, discounts, exclusive chasers, and end-of-season rewards. I designed a responsive baseball-themed landing page with a new logo, explaining rewards and coordinating content with product management.</p>
 </div>

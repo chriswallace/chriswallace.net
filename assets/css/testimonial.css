@@ -15,8 +15,7 @@
 }
 
 .testimonial__text {
-  @apply max-w-none mb-3 font-serif leading-tight text-center text-4xl md:text-4xl text-gray-700 dark:text-white/70;
-  font-variation-settings: "wght" 475;
+  @apply max-w-none mb-3 font-serif text-center ~text-2xl/4xl text-gray-700 dark:text-white/70;
 }
 
 .testimonial__author {

@@ -84,7 +84,7 @@ and web3. Currently searching for my next long-term role.
                 (max-width: 2460px) 460px,
                 540px" alt="Twelve Days of CryptoArt" class="infinite-scroll__image notready">
             </a>
-            <a href="/portfolio/dc3-interactive-reader/" class="infinite-scroll__item">
+            <a href="/portfolio/dc3-interactive-comic-reader/" class="infinite-scroll__item">
               <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-760,q-70,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-570,q-70,f-auto 1x,
                 https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-760,q-70,f-auto 2x,
                 https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1140,q-70,f-auto 3x" sizes="(max-width: 640px) 300px,
@@ -164,7 +164,7 @@ and web3. Currently searching for my next long-term role.
                 (max-width: 2460px) 460px,
                 540px" alt="Twelve Days of CryptoArt" class="infinite-scroll__image notready">
             </a>
-            <a href="/portfolio/dc3-interactive-reader/" class="infinite-scroll__item">
+            <a href="/portfolio/dc3-interactive-comic-reader/" class="infinite-scroll__item">
               <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-760,q-70,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-570,q-70,f-auto 1x,
                 https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-760,q-70,f-auto 2x,
                 https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1140,q-70,f-auto 3x" sizes="(max-width: 640px) 300px,

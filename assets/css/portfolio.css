@@ -2,6 +2,10 @@
   @apply mx-[16px] xl:mx-0;
 }
 
+.portfolio-content-wrapper{
+  @apply content-container flex flex-col items-center mb-48;
+}
+
 .portfolio-group-heading {
   @apply content-container !pt-0 2xl:mx-auto md:pb-6;
 }
@@ -36,8 +40,7 @@
 }
 
 .portfolio-list__title {
-  @apply mt-8 mb-1.5 font-serif dark:text-white text-xl xl:text-2xl tracking-tight;
-  font-variation-settings: "wght" 500;
+  @apply mt-8 mb-1.5 font-serif dark:text-white ~text-xl/2xl font-medium;
 }
 
 .portfolio-list__title a {
@@ -65,5 +68,5 @@
 }
 
 .portfolio__play-button {
-  @apply flex items-center justify-center gap-3 whitespace-nowrap text-[0.9rem] leading-[1.75] text-white;
+  @apply flex items-center justify-center gap-3 whitespace-nowrap text-xs leading-[1.75] text-white;
 }

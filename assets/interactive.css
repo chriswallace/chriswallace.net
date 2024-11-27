@@ -154,7 +154,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  font-family: "instrument-sans-variable", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -562,33 +562,39 @@ video {
   padding-left: 0;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .container {
-    max-width: 640px;
+    max-width: 40rem;
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 48rem) {
   .container {
-    max-width: 900px;
+    max-width: 48rem;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 64rem) {
   .container {
-    max-width: 1280px;
+    max-width: 64rem;
   }
 }
 
-@media (min-width: 1640px) {
+@media (min-width: 80rem) {
   .container {
-    max-width: 1640px;
+    max-width: 80rem;
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 110rem) {
   .container {
-    max-width: 1920px;
+    max-width: 110rem;
+  }
+}
+
+@media (min-width: 128rem) {
+  .container {
+    max-width: 128rem;
   }
 }
 
@@ -661,10 +667,6 @@ video {
   margin-bottom: 1rem;
 }
 
-.mb-48 {
-  margin-bottom: 12rem;
-}
-
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -721,10 +723,6 @@ video {
   display: block;
 }
 
-.inline-block {
-  display: inline-block;
-}
-
 .inline {
   display: inline;
 }
@@ -749,12 +747,12 @@ video {
   aspect-ratio: 1 / 1;
 }
 
-.h-3\.5 {
-  height: 0.875rem;
+.h-3 {
+  height: 0.75rem;
 }
 
-.h-\[84px\] {
-  height: 84px;
+.h-3\.5 {
+  height: 0.875rem;
 }
 
 .h-auto {
@@ -777,16 +775,16 @@ video {
   min-height: 300px;
 }
 
+.w-3 {
+  width: 0.75rem;
+}
+
 .w-3\.5 {
   width: 0.875rem;
 }
 
 .w-\[320px\] {
   width: 320px;
-}
-
-.w-\[84px\] {
-  width: 84px;
 }
 
 .w-auto {
@@ -941,10 +939,6 @@ video {
   border-radius: 1rem;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -965,10 +959,6 @@ video {
   border-width: 2px;
 }
 
-.border-4 {
-  border-width: 4px;
-}
-
 .border-b {
   border-bottom-width: 1px;
 }
@@ -976,11 +966,6 @@ video {
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(172 176 180 / var(--tw-border-opacity));
-}
-
-.border-gray-800 {
-  --tw-border-opacity: 1;
-  border-color: rgb(66 68 72 / var(--tw-border-opacity));
 }
 
 .border-primary-500 {
@@ -1037,6 +1022,10 @@ video {
   fill: currentColor;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .p-1\.5 {
   padding: 0.375rem;
 }
@@ -1086,12 +1075,12 @@ video {
   padding-bottom: 3rem;
 }
 
-.pt-12 {
-  padding-top: 3rem;
+.pl-6 {
+  padding-left: 1.5rem;
 }
 
-.pt-28 {
-  padding-top: 7rem;
+.pt-12 {
+  padding-top: 3rem;
 }
 
 .pt-32 {
@@ -1110,18 +1099,13 @@ video {
   padding-top: 4px;
 }
 
-.text-left {
-  text-align: left;
-}
-
 .text-center {
   text-align: center;
 }
 
 .text-2xl {
   font-size: 1.5rem;
-  line-height: 2rem;
-  letter-spacing: 0;
+  line-height: 2.5rem;
 }
 
 .text-\[12em\] {
@@ -1129,31 +1113,23 @@ video {
 }
 
 .text-base {
-  font-size: 16px;
-  line-height: 1.5rem;
-  letter-spacing: 0;
-  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.65rem;
 }
 
 .text-lg {
   font-size: 1.125rem;
-  line-height: 1.9rem;
+  line-height: 1.85rem;
 }
 
 .text-sm {
   font-size: 0.82rem;
-  line-height: 1.2rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.9rem;
-  letter-spacing: 0;
+  line-height: 1.5rem;
 }
 
 .text-xs {
   font-size: 0.75rem;
-  line-height: 1.2rem;
+  line-height: 1.5rem;
 }
 
 .font-medium {
@@ -1184,20 +1160,8 @@ video {
   color: rgb(60 113 212 / var(--tw-text-opacity));
 }
 
-.underline {
-  text-decoration-line: underline;
-}
-
 .no-underline {
   text-decoration-line: none;
-}
-
-.decoration-primary-500 {
-  text-decoration-color: #508de1;
-}
-
-.underline-offset-4 {
-  text-underline-offset: 4px;
 }
 
 .shadow-2xl {
@@ -1220,6 +1184,10 @@ video {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.\~pt-24\/16 {
+  padding-top: clamp(4rem,6.91rem + -2.27vw,6rem)/* fluid from 6rem at 40rem to 4rem at 128rem */;
 }
 
 html,
@@ -1245,7 +1213,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   body {
     font-size: 1em;
   }
@@ -1309,20 +1277,20 @@ i {
   font-size: 4.6rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .section {
     font-size: 5.2rem;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .section {
     padding: 1.5rem;
     font-size: 6rem;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .section {
     gap: 1rem;
     padding: 3rem;
@@ -1357,7 +1325,7 @@ i {
   justify-self: end;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .odd .number {
     order: 9999;
   }
@@ -1374,13 +1342,13 @@ i {
   color: rgb(231 211 238 / var(--tw-text-opacity));
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .factoids {
     font-size: 4.2rem;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .factoids {
     gap: 2rem;
     padding-left: 2rem;
@@ -1404,13 +1372,13 @@ i {
   vertical-align: middle;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .factoids img {
     height: 58px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .factoids img {
     top: -12px;
   }
@@ -1437,7 +1405,7 @@ i {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #meetChris {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-columns: 1fr auto;
@@ -1453,13 +1421,13 @@ i {
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #meetChris .curtain-title {
     margin-top: 0.25rem;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   #meetChris .curtain-title {
     font-size: 2rem;
   }
@@ -1478,7 +1446,7 @@ i {
   color: rgb(255 213 105 / var(--tw-text-opacity));
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #meetChris .branding {
     grid-column: span 3 / span 3;
     grid-column-start: 1;
@@ -1492,7 +1460,7 @@ i {
   opacity: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #meetChris .branding .lockup {
     gap: 1rem;
   }
@@ -1518,7 +1486,7 @@ i {
   text-align: left;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #meetChris .intro-to-chris {
     order: 3;
   }
@@ -1535,7 +1503,7 @@ i {
   opacity: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #meetChris .text-layer {
     order: 2;
     grid-column: span 2 / span 2;
@@ -1544,7 +1512,7 @@ i {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   #meetChris .text-layer {
     max-width: 7em;
     font-size: 7rem;
@@ -1603,13 +1571,13 @@ i {
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #chrisIntro .text-layer {
     font-size: 6rem;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   #chrisIntro .text-layer {
     margin-bottom: 0px;
   }
@@ -1627,7 +1595,7 @@ i {
   opacity: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   #chrisImage {
     margin-left: auto;
     margin-right: 1.5rem;
@@ -1660,14 +1628,14 @@ i {
   font-size: 4.2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #factoids2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 3rem;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   #factoids2 {
     font-size: 5rem;
   }
@@ -1679,7 +1647,7 @@ i {
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #factoids2 h2 {
     grid-column: span 2 / span 2;
   }
@@ -1697,7 +1665,7 @@ i {
   color: rgb(34 34 34 / var(--tw-text-opacity));
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   #factoids2 div {
     margin-bottom: 0.5rem;
     padding: 3rem;
@@ -1736,7 +1704,7 @@ i {
   opacity: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   #fiveThings .text-layer {
     font-size: 5.2rem;
   }
@@ -1756,7 +1724,7 @@ i {
   color: rgb(44 22 105 / var(--tw-text-opacity));
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .points {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1764,7 +1732,7 @@ i {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .points {
     font-size: 5.5rem;
   }
@@ -1809,7 +1777,7 @@ i {
   opacity: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .points .number {
     width: auto;
   }
@@ -1819,14 +1787,14 @@ i {
   font-variation-settings: "slnt" -6, "wdth" 50, "wght" 600;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .points .text-layer {
     grid-column: span 3 / span 3;
     margin-right: 3rem;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .points .text-layer {
     max-width: 100%;
   }
@@ -1836,7 +1804,7 @@ i {
   margin-left: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .points.odd .number {
     margin-right: 3rem;
   }
@@ -1861,13 +1829,13 @@ body.meetChris {
   font-size: 3rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   #whyMe {
     font-size: 4.5rem;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #whyMe {
     font-size: 6.2rem;
   }
@@ -1887,7 +1855,7 @@ body.meetChris {
   background-color: rgb(229 231 232 / var(--tw-bg-opacity));
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .sm\:mb-12 {
     margin-bottom: 3rem;
   }
@@ -1905,7 +1873,7 @@ body.meetChris {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -1939,7 +1907,7 @@ body.meetChris {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .lg\:sticky {
     position: sticky;
   }
@@ -1952,20 +1920,12 @@ body.meetChris {
     order: 2;
   }
 
-  .lg\:mt-16 {
-    margin-top: 4rem;
-  }
-
   .lg\:grid-cols-\[1fr\2c 300px\] {
     grid-template-columns: 1fr 300px;
   }
 
   .lg\:self-start {
     align-self: flex-start;
-  }
-
-  .lg\:p-12 {
-    padding: 3rem;
   }
 
   .lg\:p-8 {
@@ -1978,11 +1938,11 @@ body.meetChris {
 
   .lg\:text-lg {
     font-size: 1.125rem;
-    line-height: 1.9rem;
+    line-height: 1.85rem;
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 110rem) {
   .\32xl\:mt-12 {
     margin-top: 3rem;
   }

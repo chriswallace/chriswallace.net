@@ -1,52 +1,60 @@
-.resume-item {
-  @apply my-4 max-w-4xl;
+.resume {
+  @apply my-4;
 }
 
-.resume-item .metadata {
+.resume__item {
+  @apply my-4;
+}
+
+.resume__metadata {
   @apply border-b border-gray-300 dark:border-gray-700 flex content-end gap-1 md:gap-2 mb-4 py-2 items-end flex-wrap;
 }
 
-.resume-item .metadata > * {
-  @apply m-0 text-left text-base font-normal;
+.resume__metadata-item {
+  @apply m-0 text-left font-normal;
 }
 
-.resume-item .metadata .place {
-  @apply flex-none order-1 md:order-2 font-medium whitespace-nowrap text-primary-600 dark:text-primary-400;
+.resume__metadata{
+  @apply ~text-base/lg font-medium text-gray-700 dark:text-gray-100;
 }
 
-.resume-item .metadata .title {
-  @apply pl-0 pb-0 mb-0 shrink text-gray-700 dark:text-gray-100 order-3 md:order-1 flex-[0_1_100%] md:flex-initial;
+.resume__metadata-item--place {
+  @apply flex-none order-1 md:order-2 whitespace-nowrap;
+}
+
+.resume__metadata-item--title {
+  @apply pl-0 pb-0 mb-0 shrink text-primary-600 dark:text-primary-400 order-3 md:order-1 flex-[0_1_100%] md:flex-initial;
   font-weight: 500;
 }
 
-.resume-item .metadata .time-period {
+.resume__metadata-item--time-period {
   @apply text-right pr-0 justify-self-end order-2 md:order-3 whitespace-nowrap flex-none md:flex-1;
 }
 
-.resume-item .metadata .time-period:before {
+.resume__metadata-item--time-period:before {
   @apply inline-block mr-1 md:mr-2 content-["•"] md:content-none;
 }
 
-.resume-item .description {
-  @apply mb-12 text-base;
+.resume__description {
+  @apply mb-12 ~text-sm/base;
 }
 
-.resume-item .description ul {
+.resume__description-list {
   @apply max-w-none space-y-0 mt-6 mb-8 list-disc;
 }
 
-.resume-item .description p {
+.resume__description-paragraph {
   @apply mb-4;
 }
 
-.skills-list {
-  @apply text-sm grid grid-cols-[40%_auto] sm:grid-cols-[auto_1fr] gap-y-6 gap-x-12 max-w-3xl;
+.skills {
+  @apply grid grid-cols-[40%_auto] sm:grid-cols-[auto_1fr] gap-y-6 gap-x-12 max-w-3xl;
 }
 
-.skills-list dt {
-  @apply break-words;
+.skills__term {
+  @apply break-words font-medium;
 }
 
-.skills-list dd {
+.skills__description {
   @apply text-gray-700 dark:text-gray-300 ml-0 mb-0;
 }

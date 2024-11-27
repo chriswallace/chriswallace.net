@@ -17,13 +17,9 @@ thumbnail: /assets/images/thumbs/bio.png
     </div>
     <div class="bio-grid__content">
         <p class="sub-heading fade-in-element">Throughout my career, I've partnered with renowned brands like The Walking Dead, Breaking Bad, MLB, and DC Comics to redefine digital experiences. My design leadership has been instrumental in driving a startup from zero to $2.6 million in revenue within six months and earning Emmy nominations for innovative second screen apps. I focus on boosting revenue, enhancing brand appeal, and turning users into loyal advocates.</p>
-
         <hr class="hr-separator fade-in-element">
-
         <p class="fade-in-element">As an agency executive, I've expanded our design team from a few talented individuals to a global force of nearly two dozen designers and leaders. We've delivered impactful projects for clients like the California DMV, Starbucks, Microsoft, and Google, reaching millions. Leading design for Emmy-nominated interactive experiences has been a highlight of my career.</p>
-
         <p class="fade-in-element">In the web3 space, I've taken on roles as a founder, Chief Design Officer, and Product Design Lead. At <a href="https://candy.io" rel="noreferrer" target="_blank">Candy Digital</a>, I led a major redesign of their digital collectible marketplace and developed a new design system. I also founded a web3 creative studio, achieving multi-million dollar revenue and launching a pioneering metaverse wearable collection in <a href="https://decentraland.org" rel="noreferrer" target="_blank">Decentraland</a>.</p>
-
         <p class="fade-in-element">My passion lies in making a tangible impact. As a founder and entrepreneur, I am dedicated to crafting solutions that align user experience with business goals and brand identity. I am ready to bring this strategic vision and leadership to your organization, fostering growth and innovation.</p>
         <p class="fade-in-element">I'd love to do that for you. <a href="mailto:chriswallace7@pm.me?subject=Design%20Inquiry&body=Let&rsquo;s%20work%20together!">Let's work together!</a></p>
         <div class="fade-in-element text-gray-900 dark:text-white">

@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Product Design + Experience Strategy that hits different.
+title: All gas, no brakes. Get an experienced designer, founder, and builder all in one neat package.
 permalink: /design-services
 description: Get the strategic oversight, vision, and expertise of an experienced Chief Design Officer on your terms. As a Fractional CDO, I provide hands-on design leadership tailored to the unique needs of your organization, helping you drive impactful design strategies, establish a powerful brand presence, and scale your product or service experience.
 ---
 
-<p class="sub-heading fade-in-element mb-12">Get the strategic oversight, vision, and expertise of an experienced design leader on your terms. I provide hands-on design and <a href="/fractional-cdo">Fractional CDO</a> services tailored to the unique needs of your organization, helping you drive impactful design strategies, establish a powerful brand presence, and scale your product or service experience.</p>
+<p class="sub-heading fade-in-element mb-12">Whether you want a hands-on designer or <a href="/fractional-cdo">Fractional CDO</a>, I'm available and ready to make progress towards your most difficult challenges.</p>
 
 <div class="{{ page.markdown }} max-w-none">
   <div class="services__container">
@@ -54,13 +54,13 @@ description: Get the strategic oversight, vision, and expertise of an experience
         <p class="services__ideal">Ideal for: Organizations looking to invest in their design teams' growth and development.</p>
       </div>
   </div>
-  <div class="fade-in-element mt-4 lg:mt-16 mb-24 text-left text-xl max-w-none flex items-center gap-6 border border-gray-800 rounded-xl p-8 lg:p-12 inline-block">
-    <img class="rounded-full border-primary-500 border-4 w-[84px] h-[84px] cover" src="/assets/images/profile-photo.png" />
-    <div class="inline-block">
-      <span class="block">Ready to work with me?</span>
-      <a href="/contact" class="">
-        <span class="underline underline-offset-4 decoration-primary-500">Reach out &rarr;</span>
-      </a>
+  <a href="/contact" class="contact-card fade-in-element">
+    <img class="contact-card__image" src="/assets/images/profile-photo.png" />
+    <div class="contact-card__content">
+      <span class="contact-card__text">Ready to work with me?</span>
+      <span class="contact-card__link">
+        <span>Reach out &rarr;</span>
+      </span>
     </div>
-  </div>
+  </a>
 </div>

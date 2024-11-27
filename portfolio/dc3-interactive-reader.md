@@ -2,13 +2,13 @@
 layout: default
 title: DC3 Interactive Reader
 description: A custom digital comic book reading Progressive Web App for DC Comics and Candy Digital.
-permalink: /portfolio/dc3-interactive-reader/
+permalink: /portfolio/dc3-interactive-comic-reader/
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png
 ---
 
 <div class="portfolio-group-heading">
   <a class="back fade-in-element" href="/portfolio">/portfolio</a>
-  <h1 class="fade-in-element mb-3">DC3 Interactive Reader</h1>
+  <h1 class="fade-in-element mb-3">DC3 Interactive Comic Reader</h1>
   <dl class="project-list fade-in-element">
     <div>
       <dt>Company</dt>
@@ -43,7 +43,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/9.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block" alt="" loading="lazy">
 </div>
 
-<div class="content-container fade-in-element">
+<div class="portfolio-content-wrapper">
   <p class="fade-in-element">DC3 is a program from Candy Digital and DC Comics which makes digital comics available for purchase by fans. They can be accessed and read through Candy's website and the user's own collection of purchased comics.</p>
 
   <p class="fade-in-element">The previous app was provided to us by DC and was a simplistic comic book reader, allowing users to read by paging through the comic or using a panel-based method.</p>

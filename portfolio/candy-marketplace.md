@@ -50,7 +50,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumb
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
 </div>
 
-<div class="content-container fade-in-element">
+<div class="portfolio-content-wrapper">
   <p class="fade-in-element">As the lead and sole designer at Candy, I led initiatives ranging from wireframing to brand identity and copywriting. Most importantly, I undertook a comprehensive redesign of Candy's Marketplace, focusing on several key areas: the homepage, drops page, individual product drop page, product detail pages, and the overall marketplace section. The primary objective was to enhance the appeal of the products, simplify user understanding, and establish consistent UX patterns across both drops and secondary listings for purchases.</p>
 
   <p class="fade-in-element">I designed a new homepage with an emphasis on educating users about Candy's products and digital collectibles, highlighting their value to collectors. This educational approach helps provide context around our products, offering users deeper insights into the brands and the utility they can expect to receive.</p>
