@@ -1428,10 +1428,6 @@ article {
   padding-top: 0px !important;
 }
 
-.\!pt-6 {
-  padding-top: 1.5rem !important;
-}
-
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -2949,7 +2945,7 @@ article {
   background-color: rgb(0 0 0 / 0.5);
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 40rem) {
   .portfolio__video-container {
     border-radius: 0.75rem;
   }
@@ -2966,7 +2962,7 @@ article {
   --tw-gradient-to: rgb(0 0 0 / 0.6) var(--tw-gradient-to-position);
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 40rem) {
   .portfolio__video-overlay {
     border-radius: 0.75rem;
   }
@@ -2983,7 +2979,7 @@ article {
      object-fit: cover;
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 40rem) {
   .portfolio__video {
     border-radius: 0.75rem;
   }
@@ -3972,6 +3968,10 @@ video::-webkit-media-controls {
 
   .sm\:gap-4 {
     gap: 1rem;
+  }
+
+  .sm\:pt-6 {
+    padding-top: 1.5rem;
   }
 }
 

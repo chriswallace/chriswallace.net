@@ -1067,10 +1067,6 @@ video {
   padding-top: 0px !important;
 }
 
-.\!pt-6 {
-  padding-top: 1.5rem !important;
-}
-
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -1870,6 +1866,10 @@ body.meetChris {
 
   .sm\:gap-4 {
     gap: 1rem;
+  }
+
+  .sm\:pt-6 {
+    padding-top: 1.5rem;
   }
 }
 

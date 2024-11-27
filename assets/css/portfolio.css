@@ -52,15 +52,15 @@
 }
 
 .portfolio__video-container {
-  @apply max-w-6xl mx-auto relative aspect-[16/9] xl:rounded-xl bg-black/50;
+  @apply max-w-6xl mx-auto relative aspect-[16/9] sm:rounded-xl bg-black/50;
 }
 
 .portfolio__video-overlay {
-  @apply absolute inset-0 z-20 bg-gradient-to-b from-transparent to-black/60 xl:rounded-xl;
+  @apply absolute inset-0 z-20 bg-gradient-to-b from-transparent to-black/60 sm:rounded-xl;
 }
 
 .portfolio__video {
-  @apply absolute top-0 left-0 z-10 h-full w-full object-cover xl:rounded-xl;
+  @apply absolute top-0 left-0 z-10 h-full w-full object-cover sm:rounded-xl;
 }
 
 .portfolio__controls {
