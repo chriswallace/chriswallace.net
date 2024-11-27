@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Hi, I'm Chris Wallace, an award-winning design leader creating the future of digital products.
+title: I'm Chris Wallace—a seasoned design leader pioneering the next generation of digital products.
 permalink: /bio/
-description: A seasoned Chief Design Officer with 20+ years of experience leading design teams and crafting digital products that drive business growth.
+description: I'm a design executive with 20 years of experience leading design teams and crafting immersive digital products.
 thumbnail: /assets/images/thumbs/bio.png
 ---
 

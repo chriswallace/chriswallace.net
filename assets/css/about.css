@@ -1,5 +1,5 @@
 .bio-grid {
-  @apply md:grid md:grid-cols-8 md:gap-12 lg:gap-20 mt-12 md:mt-20;
+  @apply md:grid md:grid-cols-8 md:gap-12 lg:gap-20 mt-12;
 }
 
 .bio-grid__content {

@@ -11,11 +11,5 @@
 }
 
 .back {
-  @apply text-primary-600 decoration-gray-600 dark:text-gray-300 mb-8 lg:mb-12 ml-[66px] lg:ml-[44px] pt-[30px] sm:pt-[27px] inline-block text-xs sm:text-base;
-}
-
-@media screen and (min-width: 1690px) {
-  .back {
-    @apply ml-0;
-  }
+  @apply text-primary-600 decoration-gray-600 dark:text-gray-300 mb-6 mt-24 sm:mt-[30px] inline-block text-base;
 }

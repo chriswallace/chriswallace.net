@@ -5,6 +5,6 @@ _site
 vendor
 .bundle
 ssl
-.vscode/settings.json
 _frames
 _capture
+.vscode

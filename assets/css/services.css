@@ -3,15 +3,15 @@
 }
 
 .services__container {
-  @apply grid grid-cols-1 gap-4 xl:grid-cols-2 3xl:grid-cols-4 xl:gap-x-24 xl:gap-y-12;
+  @apply grid grid-cols-2 max-w-4xl 2xl:grid-cols-4 2xl:max-w-5xl gap-4 xl:gap-12;
 }
 
 .services__package {
-  @apply rounded-md items-start;
+  @apply rounded-md items-start max-w-[380px];
 }
 
 .services__title {
-  @apply mt-0 mb-0 text-3xl;
+  @apply mt-0 mb-0 text-2xl;
   font-variation-settings: "wght" 600;
 }
 
@@ -24,13 +24,13 @@
 }
 
 .services__service-title {
-  @apply text-base font-medium flex gap-[12px] items-start text-gray-800 dark:text-gray-100 mb-0;
+  @apply text-lg font-medium flex gap-[12px] items-start text-gray-800 dark:text-gray-100 mb-0;
 }
 
 .services__service-description {
-  @apply text-base ml-[36px] mb-8;
+  @apply text-lg ml-[36px] mb-8;
 }
 
 .services__ideal {
-  @apply mt-8 text-sm italic text-gray-700 dark:text-gray-300;
+  @apply mt-8 text-base italic text-gray-700 dark:text-gray-300;
 }

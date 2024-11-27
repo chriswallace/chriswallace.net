@@ -87,7 +87,7 @@
 }
 
 .menu li a {
-  @apply pt-3 pb-1 lg:pt-5 lg:pt-3 px-5 block font-serif capitalize text-2xl lg:text-4xl no-underline decoration-2 text-white hover:bg-white hover:text-black;
+  @apply pt-3 pb-1 lg:pt-5 lg:pt-3 px-5 block font-serif capitalize text-2xl lg:text-2xl no-underline decoration-2 text-white hover:bg-white hover:text-black;
   font-variation-settings: "wght" 400;
 }
 

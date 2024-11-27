@@ -1,0 +1,54 @@
+@layer components {
+  .hidden-until-loaded {
+    @apply invisible;
+  }
+
+  .flex-col-center {
+    @apply flex flex-col justify-between md:justify-center lg:mt-0 lg:h-screen;
+  }
+
+  .flex-col-height {
+    @apply flex flex-col h-[100vh] justify-between items-end;
+  }
+
+  .main-heading,
+  .secondary-heading {
+    @apply px-[16px] pt-3;
+  }
+
+  .text-container {
+    @apply flex flex-col md:flex-row justify-end;
+  }
+
+  .text-paragraph {
+    @apply mb-0 text-right;
+  }
+
+  .hover-text {
+    @apply text-gray-950 dark:text-gray-100 hover:text-black dark:hover:text-white;
+  }
+
+  .text-primary {
+    @apply text-primary-600 dark:text-primary-400;
+  }
+
+  .infinite-scroll {
+    @apply relative overflow-hidden;
+  }
+
+  .infinite-scroll__scroller {
+    @apply flex;
+  }
+
+  .infinite-scroll__item {
+    @apply block relative transition-all duration-300 ease-in-out;
+  }
+
+  .infinite-scroll__image {
+    @apply transition-all duration-300 box-border object-cover cursor-pointer;
+  }
+
+  .text-gray {
+    @apply text-gray-600 dark:text-gray-400;
+  }
+}

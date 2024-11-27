@@ -19,21 +19,21 @@
   }
 
   h1 {
-    @apply font-serif text-6xl md:text-7xl mb-12;
-    font-variation-settings: "wght" 400;
+    @apply font-serif text-5xl 2xl:text-6xl mb-12;
+    font-variation-settings: "wght" 550;
   }
 
   h2 {
-    @apply font-serif text-4xl mt-16 sm:mt-24;
+    @apply font-serif text-3xl mt-16 sm:mt-24;
     font-variation-settings: "wght" 500;
   }
 
   h3 {
-    @apply text-3xl mb-6 mt-6 sm:mt-12;
+    @apply text-2xl mb-6 mt-6 sm:mt-12;
   }
 
   h4 {
-    @apply text-3xl pb-2 mt-6 sm:mt-12 mb-6 dark:border-gray-200 font-medium;
+    @apply text-xl pb-2 mt-6 sm:mt-12 mb-6 dark:border-gray-200 font-medium;
   }
 
   h5,
