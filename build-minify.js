@@ -12,8 +12,8 @@ const individualFilesToMinify = [
     './assets/js/fxhash.js',
     './assets/js/gallery-viewer.js',
     './assets/js/interplay-page.js',
-    './assets/js/typewriterHome.js',
     './assets/js/portfolioVideo.js',
+    './assets/js/homepage.js',
     './assets/js/toc-toggle.js'
 ];
 

@@ -33,5 +33,14 @@ description: Product design leader with over 20 years experience in e-commerce, 
   </div>
 </div>
 
-<script src="/assets/js/portfolioVideo.js"></script>
-<script src="/assets/js/homepage.js"></script>
+{% if jekyll.environment == 'production' %}
+
+<script src="/assets/js/portfolioVideo.min.js?v={{ site.version }}" expires="31536000"></script>
+<script src="/assets/js/homepage.min.js?v={{ site.version }}" expires="31536000"></script>
+
+{% else %}
+
+<script src="/assets/js/portfolioVideo.js?v={{ site.version }}" expires="31536000"></script>
+<script src="/assets/js/homepage.js?v={{ site.version }}" expires="31536000"></script>
+
+{% endif %}
