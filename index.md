@@ -14,7 +14,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
   <div class="animated-headline">
     <div class="text-container">
       <div class="text-paragraph backwards text-2xl" data-splitting>Chris Wallace</div>
-      <div class="text-paragraph forwards text-gray-950 dark:text-white text-4xl" data-splitting>Product Design Leader</div>
+      <div class="text-paragraph forwards text-gray-950 dark:text-white text-4xl" data-splitting>Senior Product Design Leader</div>
     </div>
   </div>
   <div>
