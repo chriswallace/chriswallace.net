@@ -194,12 +194,12 @@ video::-webkit-media-controls {
 }
 
 .text-container {
-  @apply w-full font-serif text-2xl md:text-4xl;
+  @apply w-full font-serif text-5xl md:text-4xl text-center;
   font-variation-settings: "wght" 500;
 }
 
 .text-paragraph {
-  @apply mb-0 overflow-hidden uppercase leading-tight;
+  @apply mb-1 overflow-hidden uppercase leading-tight;
 }
 
 .top {

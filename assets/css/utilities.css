@@ -41,6 +41,10 @@
     @apply text-gray-950 dark:text-white mb-6 font-thin;
   }
 
+  .text-shadow{
+    text-shadow: 0 4px 12px rgba(0,0,0,.6),0 6px 36px rgba(0,0,0,1);
+  }
+
   .content-width {
     @apply max-w-3xl;
   }

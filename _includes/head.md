@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
   <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
   <link rel="stylesheet" href="/assets/main.css?v={{ site.version }}" expires="31536000">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.3.3/dist/gsap.min.js" expires="31536000"></script>
+  <script src="https://unpkg.com/splitting/dist/splitting.min.js" expires="31536000"></script>
+
   <link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/UltraDAO/wallace/favicon.png" expires="31536000">
   <meta property="og:image" content="{{page.thumbnail | default: 'https://ik.imagekit.io/UltraDAO/wallace/chris-wallace.jpg'}}">
   <meta property="twitter:image" content="{{page.thumbnail | default: 'https://ik.imagekit.io/UltraDAO/wallace/chris-wallace.jpg'}}">

@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
       el.classList.remove('hidden-until-loaded');
     });
     fadeInElements();
-    startGSAPAnimations();
   });
 });
 
@@ -59,49 +58,4 @@ function fadeInElements() {
   });
 
   observeElements(elements); // Observe initial elements
-
-  Splitting();
-}
-
-function startGSAPAnimations() {
-  const sections = document.querySelectorAll('.text-container');
-
-  sections.forEach((section) => {
-    const heading = {
-      section: section,
-      get chars() {
-        return this.section.querySelectorAll('.text-paragraph .word > .char, .whitespace');
-      },
-      isVisible: true
-    };
-
-    const timelineSettings = {
-      staggerValue: 0.014,
-      charsDuration: 0.5
-    };
-
-    const timeline = gsap.timeline({ paused: true })
-      .addLabel('start')
-      .to('.infinite-scroller', {
-        duration: 0,
-        onComplete: () => {
-          const images = document.querySelectorAll('img');
-          images.forEach((image, index) => {
-            setTimeout(() => {
-              image.classList.remove('notready');
-              image.classList.add('ready');
-            }, index * 50);
-          });
-        }
-      })
-      .from(heading.chars, {
-        duration: timelineSettings.charsDuration,
-        ease: 'Power3.easeInOut',
-        y: '105%',
-        stagger: timelineSettings.staggerValue
-      })
-      .addLabel('switchtime');
-
-    timeline.play();
-  });
 }

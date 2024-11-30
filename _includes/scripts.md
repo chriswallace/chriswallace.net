@@ -10,6 +10,3 @@
 <script src="/assets/js/zoomable.js?v={{ site.version }}" expires="31536000"></script>
 
 {% endif %}
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.3.3/dist/gsap.min.js"></script>
-<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
