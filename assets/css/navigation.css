@@ -51,7 +51,7 @@
 }
 
 .open-menu .navigation {
-  @apply flex-col bg-primary-600 h-screen;
+  @apply flex-col bg-white dark:bg-gray-950 h-screen;
 }
 
 .navigation .logo {
@@ -87,8 +87,7 @@
 }
 
 .menu li a {
-  @apply pt-3 pb-1 lg:pt-5 lg:pt-3 px-5 block font-serif capitalize text-2xl lg:text-2xl no-underline decoration-2 text-white hover:bg-white hover:text-black;
-  font-variation-settings: "wght" 400;
+  @apply pt-3 pb-2 px-4 block font-sans font-normal capitalize text-lg no-underline decoration-2 text-white hover:bg-primary-500 hover:text-black;
 }
 
 .site-title {
@@ -100,11 +99,11 @@
 }
 
 .ui-navbar {
-  @apply w-[calc(220px+var(--navbar-width)*.94)] md:w-[calc(220px+var(--navbar-width))] fixed left-0 right-auto top-0 overflow-hidden h-[calc(var(--navbar-width)*.94)] md:h-screen z-40 overflow-hidden transform -translate-x-[220px] transition-transform duration-200 ease-in-out;
+  @apply w-[calc(220px+var(--navbar-width)*.94)] md:w-[calc(220px+var(--navbar-width))] fixed left-0 right-auto top-0 overflow-hidden h-[calc(var(--navbar-width)*.94)] z-40 overflow-hidden transform -translate-x-[220px];
 }
 
 .open-menu .ui-navbar {
-  @apply translate-x-0 z-[999] h-full mb-0 pb-0 overflow-y-hidden;
+  @apply translate-x-0 z-[999] h-screen mb-0 pb-0 overflow-y-hidden;
 }
 
 .navigation .social {

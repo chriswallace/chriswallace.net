@@ -11,5 +11,5 @@
 }
 
 .back {
-  @apply text-primary-600 decoration-primary-300 dark:decoration-gray-600 dark:text-gray-300 mb-6 mt-24 sm:mt-[30px] inline-block text-base;
+  @apply decoration-primary-300 dark:decoration-gray-600 mb-6 mt-24 sm:mt-[30px] inline-block text-base;
 }

@@ -32,10 +32,6 @@
   @apply mt-6 mb-0 ~text-sm/base font-medium;
 }
 
-.contact-grid__text {
-  @apply text-gray-500 dark:text-gray-600;
-}
-
 .contact-grid__item:nth-child(even) {
   @apply border-r-0 md:border-r;
 }

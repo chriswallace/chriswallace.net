@@ -598,6 +598,18 @@ video {
   }
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .visible {
   visibility: visible;
 }
@@ -1093,10 +1105,6 @@ video {
 
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.pt-\[4px\] {
-  padding-top: 4px;
 }
 
 .text-center {

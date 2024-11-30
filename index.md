@@ -24,9 +24,22 @@ description: Product design leader with over 20 years experience in e-commerce, 
           Your browser does not support HTML5 video.
       </video>
       <div class="portfolio__controls invisible">
-        <button id="playButton" class="portfolio__play-button" onclick="togglePlay()">
-            <svg id="playIcon" width="12" height="20" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.4353 10.8295L1.80706 0.23623C1.06251 -0.342509 0 0.208084 0 1.17265V22.8274C0 23.7919 1.06251 24.3425 1.80706 23.7638L15.4353 13.1705C16.1882 12.5853 16.1882 11.4147 15.4353 10.8295Z" class="fill-current" /></svg>
-            <div class="pt-[4px]" id="buttonText">Play Showreel</div>
+        <button id="playButton" class="portfolio__play-button" onclick="togglePlay()" aria-label="Pause video">
+            <svg id="playIcon" width="12" height="20" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1C0 0.447716 0.447715 0 1 0H5C5.55228 0 6 0.447715 6 1V23C6 23.5523 5.55228 24 5 24H1C0.447715 24 0 23.5523 0 23V1Z" class="fill-current"/>
+                <path d="M10 1C10 0.447716 10.4477 0 11 0H15C15.5523 0 16 0.447715 16 1V23C16 23.5523 15.5523 24 15 24H11C10.4477 24 10 23.5523 10 23V1Z" class="fill-current"/>
+            </svg>
+            <span id="buttonText" class="sr-only">Pause</span>
+        </button>
+        <button id="muteButton" class="portfolio__play-button" onclick="toggleMute()" aria-label="Unmute video">
+            <svg id="muteIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 9a5 5 0 0 1 .95 2.293"/>
+                <path d="M19.364 5.636a9 9 0 0 1 1.889 9.96"/>
+                <path d="m2 2 20 20"/>
+                <path d="m7 7-.587.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298V11"/>
+                <path d="M9.828 4.172A.686.686 0 0 1 11 4.657v.686"/>
+            </svg>
+            <span id="muteText" class="sr-only">Unmute</span>
         </button>
       </div>
     </div>

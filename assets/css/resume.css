@@ -56,5 +56,5 @@
 }
 
 .skills__description {
-  @apply text-gray-700 dark:text-gray-300 ml-0 mb-0;
+  @apply ml-0 mb-0;
 }
