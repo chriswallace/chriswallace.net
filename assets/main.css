@@ -1036,10 +1036,6 @@ article {
   min-height: 300px;
 }
 
-.min-h-screen {
-  min-height: 100vh;
-}
-
 .w-3 {
   width: 0.75rem;
 }
@@ -1320,6 +1316,11 @@ article {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-\[16px\] {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .py-1 {
@@ -4095,6 +4096,11 @@ video::-webkit-media-controls {
 
   .lg\:p-8 {
     padding: 2rem;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:pr-\[32px\] {
