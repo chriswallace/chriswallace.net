@@ -100,3 +100,7 @@
   opacity: 0;
   will-change: transform;
 }
+
+.video-controls {
+  transition: opacity 0.3s ease-in-out;
+}

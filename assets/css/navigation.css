@@ -22,7 +22,7 @@
 
 .menu-button i:before,
 .menu-button i:after {
-  @apply block overflow-hidden bg-white w-full h-[2px] absolute top-[50%] content-[""];
+  @apply block overflow-hidden bg-gray-950 dark:bg-white w-full h-[2px] absolute top-[50%] content-[""];
   transition: transform 100ms ease-in-out, backgroundColor 100ms ease-in-out;
 }
 
@@ -39,11 +39,11 @@
 }
 
 .open-menu .menu-button i:before {
-  @apply -rotate-45 translate-y-2/4 bg-white;
+  @apply -rotate-45 translate-y-2/4 bg-gray-800 dark:bg-white;
 }
 
 .open-menu .menu-button i:after {
-  @apply rotate-45 translate-y-2/4 bg-white;
+  @apply rotate-45 translate-y-2/4 bg-gray-800 dark:bg-white;
 }
 
 .navigation {
@@ -87,7 +87,7 @@
 }
 
 .menu li a {
-  @apply pt-3 pb-2 px-4 block font-sans font-normal capitalize text-lg no-underline decoration-2 text-white hover:bg-primary-500 hover:text-black;
+  @apply pt-3 pb-2 md:pt-1.5 md:pb-0.5 px-4 block font-sans font-normal capitalize text-lg no-underline decoration-2 text-gray-800 dark:text-white hover:bg-primary-600 hover:text-white;
 }
 
 .site-title {
@@ -99,7 +99,7 @@
 }
 
 .ui-navbar {
-  @apply w-[calc(220px+var(--navbar-width)*.94)] md:w-[calc(220px+var(--navbar-width))] fixed left-0 right-auto top-0 overflow-hidden h-[calc(var(--navbar-width)*.94)] z-40 overflow-hidden transform -translate-x-[220px];
+  @apply w-[calc(220px+var(--navbar-width)*.94)] md:w-[calc(220px+var(--navbar-width))] fixed left-0 right-auto top-0 overflow-hidden h-[calc(var(--navbar-width)*.94)] z-40 overflow-hidden transform -translate-x-[220px] transition-transform duration-200 ease-in-out;
 }
 
 .open-menu .ui-navbar {
@@ -111,11 +111,11 @@
 }
 
 .navigation .social p {
-  @apply text-[12px] text-white leading-relaxed font-sans mr-4;
+  @apply text-[12px] text-gray-700 dark:text-gray-300 leading-relaxed font-sans mr-4;
 }
 
 .navigation .social a {
-  @apply text-white underline underline-offset-4;
+  @apply text-gray-800 dark:text-gray-100 hover:text-gray-950 dark:hover:text-white underline underline-offset-4;
 }
 
 .navigation .social svg {

@@ -39,11 +39,27 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
 </div>
 
 <div class="portfolio-content-wrapper">
-  <p class="fade-in-element">As the sole product designer at Candy Digital, I spearheaded the design of a highly-requested feature: enabling users to withdraw digital collectibles to their self-custodied wallets. This feature empowers users with full control over their NFTs, allowing them to transfer and sell through various decentralized marketplaces. My role involved designing the user flow for both withdrawals and deposits, seamlessly integrating these processes into the existing My Collection section of Candy.io.</p>
+  <p class="fade-in-element">
+    Users across the Candy Digital platform were increasingly seeking greater autonomy over their digital collectibles. The ability to transfer NFTs to self-custodied wallets had become a crucial feature request, as collectors wanted to participate in the broader NFT ecosystem and trade on various decentralized marketplaces.
+  </p>
 
-  <p class="fade-in-element">To achieve this, I delved into the technical intricacies of web3 wallets and blockchain technology, focusing on transaction authorization, wallet connectivity, and user security on Candy.io. Leveraging my expertise with WalletConnect and Web3 Wallet, I crafted a streamlined user experience. Users can effortlessly select collectibles, connect their wallet, and submit withdrawal requests. These requests are then reviewed by our fraud and risk team before being executed on the blockchain.</p>
+  <p class="fade-in-element">
+    As the sole product designer, I took on the challenge of creating a seamless bidirectional transfer system that would integrate naturally with our existing My Collection section. The solution needed to balance sophisticated blockchain interactions with an intuitive user experience, while maintaining the platform's security standards.
+  </p>
 
-  <p class="fade-in-element">Designing the deposit process presented additional challenges, as it requires users to sign transactions to transfer collectibles back to Candy.io. I prioritized simplicity and user education, ensuring users understand the potential feature limitations when moving collectibles to self-custodied wallets.</p>
+  <p class="fade-in-element">
+    The implementation process involved several key phases:
+  </p>
 
-  <p class="fade-in-element">Post-development, I coordinated a beta testing phase with a select group of users utilizing Metamask as the initial supported wallet. The feedback from these successful transactions informed the subsequent rollout to all users.</p>
+  <ul class="fade-in-element mt-0 pl-4 list-disc">
+    <li>Deep technical research into web3 wallet integration, particularly WalletConnect and Web3 Wallet implementations</li>
+    <li>Development of an intuitive bulk-selection interface for managing multiple collectibles</li>
+    <li>Creation of clear withdrawal flows incorporating wallet connectivity and transaction authorization</li>
+    <li>Implementation of educational elements to help users understand self-custody implications</li>
+    <li>Design of a deposit workflow guiding users through transaction signing</li>
+  </ul>
+
+  <p class="fade-in-element">
+    Following a targeted beta testing phase with Metamask users, the feature launched successfully platform-wide. The implementation earned positive feedback for its straightforward approach to complex blockchain interactions, while maintaining security through our fraud and risk team's oversight. This addition transformed how users interact with their digital assets, enabling them to freely participate in the broader NFT ecosystem while retaining the option to return to institutional custody.
+  </p>
 </div>

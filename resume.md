@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Résumé
+title: Résumé / CV
 permalink: /resume/
 description: I work with companies like DC Comics, AMC Networks, Google, and even The California DMV to create award-winning digital products for millions of people around the world.
 thumbnail: /assets/images/thumbs/resume.png

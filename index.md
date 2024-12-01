@@ -4,6 +4,24 @@ title: Chris Wallace - Executive Design + Leadership
 description: Product design leader with over 20 years experience in e-commerce, digital publishing, interactive media, and web3. Currently searching for my next long-term role.
 ---
 
+<div class="notifications--button">
+  <button id="notifs" class="notifications--button-inner">2</button>
+</div>
+
+<div id="notificationsOverlay" class="notifications--overlay hidden"></div>
+
+<div class="notifications hidden opacity-0 -translate-y-2">
+  <div class="notifications--notification-title">Notifications</div>
+  <a class="notifications--notification-item article" href="/articles/the-design-systems-guide-for-big-companies">
+    <span class="notifications--notification-overline">New article</span> 
+    <span>Design Systems for Big Companies</span>
+  </a>
+  <a class="notifications--notification-item portfolio" href="/design-services">
+    <span class="notifications--notification-overline">New service</span> 
+    <span>Fractional Chief Designer Officer</span>
+  </a>
+</div>
+
 <div class="content-preloader flex flex-col gap-4">
   <div class="logo-container">
     <div class="gradient-rect"></div>
@@ -14,7 +32,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
   <div class="animated-headline">
     <div class="text-container">
       <div class="text-paragraph backwards text-2xl" data-splitting>Chris Wallace</div>
-      <div class="text-paragraph forwards text-gray-950 dark:text-white text-4xl" data-splitting>Senior Product Design Leader</div>
+      <div class="text-paragraph forwards text-gray-950 dark:text-white text-4xl" data-splitting>Executive Design + Leadership</div>
     </div>
   </div>
   <div>
@@ -50,10 +68,12 @@ description: Product design leader with over 20 years experience in e-commerce, 
 
 <script src="/assets/js/portfolioVideo.min.js?v={{ site.version }}" expires="31536000"></script>
 <script src="/assets/js/homepage.min.js?v={{ site.version }}" expires="31536000"></script>
+<script src="/assets/js/notifications.min.js?v={{ site.version }}" expires="31536000"></script>
 
 {% else %}
 
 <script src="/assets/js/portfolioVideo.js?v={{ site.version }}" expires="31536000"></script>
 <script src="/assets/js/homepage.js?v={{ site.version }}" expires="31536000"></script>
+<script src="/assets/js/notifications.js?v={{ site.version }}" expires="31536000"></script>
 
 {% endif %}

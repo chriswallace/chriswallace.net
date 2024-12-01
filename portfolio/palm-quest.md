@@ -54,8 +54,32 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail
 </div>
 
 <div class="portfolio-content-wrapper">
-  <p class="fade-in-element">I was asked to conceptualize what a token airdrop farming experience might look like for an L2 blockchain on the Ethereum network. The result was a concept called "Palm Quest" which housed a series of blockchain-based activities that allowed users to both earn points (named "fronds") and learn about the blockchain network itself.</p>
-  <p class="fade-in-element">This project included collaborating with a team across multiple disciplines. Not only did I design the brand identity and application, I also designed a series of game ideas, quests, and created the prototype web application in SvelteKit.</p>
-  <p class="fade-in-element">I also dove into custom cursor design and web components, creating a set of UI dialogs that can be dragged around the screen and minimized into a small toolbar. I also connected the app to the blockchain to enable wallet connection and also added a fun "frond party" animation when the user first enters the experience.</p>
-  <p class="fade-in-element"><a href="https://palm-quest.vercel.app/" target="_blank">Visit Palm Quest &rarr;</a></p>
+  <p class="fade-in-element">
+    The blockchain industry faced a challenge in making token airdrops more engaging and educational for users, particularly on L2 networks. Traditional airdrop mechanisms often lacked user engagement and failed to educate participants about the underlying technology.
+  </p>
+
+  <p class="fade-in-element">
+    I was tasked with reimagining the airdrop farming experience for an L2 blockchain on the Ethereum network, with the goal of creating an interactive platform that would both reward and educate users.
+  </p>
+
+  <p class="fade-in-element">
+    To address this, I developed "Palm Quest" - a gamified platform that combines learning with earning. I led multiple initiatives including:
+  </p>
+  
+  <ul class="fade-in-element list-disc pl-6 mb-4">
+    <li>Designing a cohesive brand identity and user interface</li>
+    <li>Creating engaging game mechanics and quest systems</li>
+    <li>Building a prototype web application using SvelteKit</li>
+    <li>Implementing advanced features like custom cursor design and draggable UI components</li>
+    <li>Integrating blockchain wallet connectivity</li>
+    <li>Developing interactive animations including a "frond party" celebration system</li>
+  </ul>
+
+  <p class="fade-in-element">
+    The final product successfully transformed the traditional airdrop experience into an interactive journey where users could earn points ("fronds") while learning about blockchain technology. The platform features a unique combination of educational content and gamified elements, all wrapped in an intuitive interface that makes blockchain interaction more accessible to users.
+  </p>
+
+  <p class="fade-in-element">
+    <a href="https://palm-quest.vercel.app/" target="_blank">Visit Palm Quest &rarr;</a>
+  </p>
 </div>

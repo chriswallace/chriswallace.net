@@ -44,5 +44,11 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbna
 </div>
 
 <div class="portfolio-content-wrapper">
-  <p class="fade-in-element">Candy League offers MLB collectors on Candy.io seasonal challenges to collect items and complete sets, advancing on the leaderboard. Top participants earn early drop access, discounts, exclusive chasers, and end-of-season rewards. I designed a responsive baseball-themed landing page with a new logo, explaining rewards and coordinating content with product management.</p>
+  <p class="fade-in-element">At Candy.io, our MLB digital collectibles platform faced a challenge with user engagement in our seasonal Candy League challenges. While we had an existing leaderboard system with valuable rewards—including early drop access, discounts, and exclusive items—participation remained lower than desired.</p>
+
+  <p class="fade-in-element">My task was to revitalize the Candy League program through a compelling, branded landing page that would clearly communicate its value proposition and drive increased participation, particularly highlighting the rewards for top 50 leaderboard positions.</p>
+
+  <p class="fade-in-element">I approached this by developing a comprehensive design solution that included creating a new logo and implementing a responsive, baseball-themed landing page. Working closely with product management, I crafted messaging that emphasized the reward structure and seasonal progression system. The design maintained strong baseball visual elements while ensuring the rewards and participation benefits were front and center.</p>
+
+  <p class="fade-in-element">The refreshed landing page successfully delivered a stronger, more appealing presentation of Candy League, effectively communicating the program's value to both existing collectors and new players. The baseball-themed design elements and clear reward structure helped create a more engaging and accessible entry point for our collecting challenges.</p>
 </div>

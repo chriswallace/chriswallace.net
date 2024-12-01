@@ -51,16 +51,23 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumb
 </div>
 
 <div class="portfolio-content-wrapper">
-  <p class="fade-in-element">As the lead and sole designer at Candy, I led initiatives ranging from wireframing to brand identity and copywriting. Most importantly, I undertook a comprehensive redesign of Candy's Marketplace, focusing on several key areas: the homepage, drops page, individual product drop page, product detail pages, and the overall marketplace section. The primary objective was to enhance the appeal of the products, simplify user understanding, and establish consistent UX patterns across both drops and secondary listings for purchases.</p>
+  <p class="fade-in-element">
+    When I joined Candy Digital's marketplace for digital collectibles, the platform was facing a crucial inflection point. While the core technology was solid, users were struggling to understand the true value of digital collectibles, and the platform's design language varied significantly between primary drops and secondary listings. The marketplace needed to evolve to better serve both newcomers and experienced collectors alike.
+  </p>
 
-  <p class="fade-in-element">I designed a new homepage with an emphasis on educating users about Candy's products and digital collectibles, highlighting their value to collectors. This educational approach helps provide context around our products, offering users deeper insights into the brands and the utility they can expect to receive.</p>
+  <p class="fade-in-element">
+    As lead product designer, I embarked on a comprehensive redesign that would transform how users discover, understand, and collect digital items. The challenge wasn't just about aesthetics—it was about crafting an experience that could effectively communicate the unique value of each collectible while making the platform more intuitive and engaging.
+  </p>
 
-  <p class="fade-in-element">For the drop and product detail pages, I introduced a media slider that allows users to swipe through images and videos, showcasing each piece of media as intended. Additionally, I designed new feature areas that provide detailed information about the utility purchasers can expect, such as available physical rewards/claims and exclusive comic readers for DC Comics, among other examples.</p>
+  <p class="fade-in-element">
+    I began by reimagining the homepage as an educational journey, introducing users to the world of digital collectibles through compelling visuals and clear messaging. For product presentations, I designed an immersive media experience that lets collectors explore items through high-quality images and videos, bringing each piece to life. I paid special attention to highlighting the tangible benefits of ownership, from physical redemptions to exclusive content access, making sure users could easily understand what makes each collectible special.
+  </p>
 
-  <p class="fade-in-element">I helped create a new product called CandyVision by naming it, designing the logo, supporting brand assets, landing page, and game. There were a number of challenges and constraints as this project was condensed into a two-week timeline. We successfully launched the game and had over 850 players get involved during our initial MLB All-Star Game Home Run Derby activation.</p>
+  <p class="fade-in-element">
+    Throughout the process, I developed a robust design system that would serve as the foundation for all future marketplace experiences. This wasn't just about consistency—it was about creating a visual language that could scale with the platform and adapt to new product categories while maintaining a premium feel.
+  </p>
 
-  <p class="fade-in-element">For Candy League, which offers challenges and rewards for users who collect Candy digital collectibles, I designed a new logo and landing page, translating content from Product to the new page. Because Candy League is primarily for MLB collectors, creatively I wanted to evoke a feeling of being at the ballpark.</p>
-
-  <p class="fade-in-element">Finally, I designed a series of components in Figma that were integrated into a new design system, which I have been building concurrently as I work through various parts of the Candy app. This design system ensures a cohesive and consistent user experience across the entire platform.</p>
-
+  <p class="fade-in-element">
+    The result is a marketplace that better serves its community: one that educates while it showcases, guides while it sells, and delivers a premium collecting experience worthy of the brands we partner with. The new design patterns have become the standard for how we present digital collectibles, setting the stage for continued platform growth and innovation.
+  </p>
 </div>

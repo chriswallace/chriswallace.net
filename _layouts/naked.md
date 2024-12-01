@@ -10,7 +10,7 @@ layout: compress
       <div class="ui-navbar">
         {% include header.md %}
       </div>
-      <div class="ui-content !pt-0 relative">
+      <div class="ui-content relative">
         {{ content }}
       </div>
     </div>

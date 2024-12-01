@@ -12,7 +12,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnai
   <dl class="project-list fade-in-element">
     <div>
       <dt>Role</dt>
-      <dd>Curator, Designer, Smart Contract Developer</dd>
+      <dd>Product Manager, Curator, Designer, Engineer</dd>
     </div>
     <div>
       <dt>Company</dt>
@@ -61,13 +61,13 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnai
   </div>
 
 <div class="portfolio-content-wrapper">
-  <p class="fade-in-element">Twelve Days of CryptoArt is an experimental art event hosted by UltraDAO that reimagines the traditional art collecting experience through blockchain technology. As the product owner, I created a unique format where collectors decide to mint a daily artwork with the artist hidden for twelve consecutive days. Collectors were then given the option to swap to a future day's artwork with another unknown artist and unable to swap back to prior days. This created a fun dynamic between holding and swapping art without knowing the artist behind the works.</p>
+  <p class="fade-in-element">The traditional art market often relies heavily on artist reputation and name recognition, creating bias in how collectors value artwork. At UltraDAO, we identified an opportunity to challenge this paradigm and create a more equitable collecting experience that would put the focus back on the art itself.</p>
 
-  <p class="fade-in-element">I built the smart contract that powered the daily art releases. Each collector received a mint pass that they could exchange for one of that day's artworks. The contract handled the timing of releases, randomly assigned artwork numbers, and revealed the artwork details at the right time - all while keeping transaction costs low. Hundreds of collectors participated and over two dozen artists across two seasons of the event.</p>
+  <p class="fade-in-element">As the product owner, I was tasked with designing and implementing a novel art collection format that would eliminate preconceptions about artists while maintaining engagement over an extended period. The challenge was to create both technical infrastructure and community excitement for an entirely new way of collecting art.</p>
 
-  <p class="fade-in-element">The project's design emphasized simplicity and mystery. The minimalist interface featured a countdown timer to the next reveal, clear minting instructions, and seamless wallet integration. Each day brought excitement as collectors speculated on who the artist might be, analyzing the works and creating a shared experience of anticipation and discovery within the community.</p>
+  <p class="fade-in-element">I developed a unique twelve-day format where collectors could mint one anonymous artwork daily, with the artists' identities hidden until the end. I built a custom smart contract that managed daily art releases, mint passes, random artwork assignment, and timed reveals while optimizing for low transaction costs. The system included a strategic swapping mechanism where collectors could exchange their piece for future days' works, but couldn't swap back - creating engaging game theory dynamics. The user interface was designed with minimalism in mind, featuring a countdown timer, clear instructions, and seamless wallet integration.</p>
 
-  <p class="fade-in-element">To maintain the mystery, all artworks remained anonymous until the final reveal. The intent was to foster an environment where collectors focused purely on the artistic merit of each piece, free from preconceptions about the artist's identity or previous work. The project successfully demonstrated how blockchain technology can enable new forms of art curation and collecting experiences.</p>
+  <p class="fade-in-element">The project successfully attracted hundreds of collectors and over two dozen artists across two seasons. By keeping artworks anonymous until the final reveal, we created an environment where collectors made decisions based purely on artistic merit. The daily reveal format generated consistent community engagement and speculation, while the swapping mechanism added an exciting strategic element. The project demonstrated how blockchain technology could reshape traditional art collecting paradigms, creating more equitable and engaging experiences for both artists and collectors.</p>
 
   <p class="fade-in-element">
     <a href="https://twelvedays.ultradao.org" target="_blank">Twelve Days of CryptoArt &rarr;</a>

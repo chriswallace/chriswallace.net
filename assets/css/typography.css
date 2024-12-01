@@ -61,7 +61,13 @@
   ul,
   ol,
   dl {
-    @apply max-w-prose mb-12;
+    @apply max-w-prose mb-12 w-full;
+  }
+
+  p + ul,
+  p + ol,
+  p + dl{
+    @apply relative -top-4;
   }
 
   dt {

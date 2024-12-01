@@ -14,6 +14,7 @@
 @import "portfolio.css";
 @import "services.css";
 @import "homepage.css";
+@import "notifications.css";
 
 body {
   @apply bg-gray-100 dark:bg-gray-950;
@@ -206,38 +207,6 @@ video::-webkit-media-controls {
   @apply mt-2;
 }
 
-.announcement {
-  @apply mb-16 flex gap-4 text-center md:text-left text-xs;
-}
-
-.announcement__content {
-  @apply grow sm:flex sm:justify-between gap-4;
-}
-
-.announcement__date {
-  @apply dark:text-primary-500 whitespace-nowrap;
-}
-
-.announcement__text {
-  @apply grow sm:flex-1;
-}
-
-.announcement__link {
-  @apply whitespace-nowrap;
-}
-
-.greeting {
-  @apply mb-8 text-lg md:text-xl;
-}
-
-.greeting__wave-container {
-  @apply block md:inline text-5xl md:text-xl relative;
-}
-
-.greeting__wave {
-  @apply inline-block animate-[wave_5s_ease-in-out_infinite] mr-1;
-}
-
 .gallery-row {
   @apply grid grid-cols-3 md:grid-cols-3 gap-2;
 
@@ -252,81 +221,6 @@ video::-webkit-media-controls {
   h3 {
     @apply mt-0 mb-12;
   }
-}
-
-/* Infinite Scroll */
-.infinite-scroll {
-  --item-count: 8;
-  --item-width: min(300px, calc(100vw - 2rem));
-  --total-width: calc(var(--item-width) * var(--item-count) * 2);
-
-  @screen sm {
-    --item-width: 380px;
-  }
-
-  @screen 2xl {
-    --item-width: 460px;
-  }
-  @media (min-width: 2460px) {
-    --item-width: 540px;
-  }
-
-  @apply relative overflow-hidden;
-}
-
-.infinite-scroll__scroller {
-  @apply flex;
-  width: var(--total-width);
-  animation: scroll 40s linear infinite;
-}
-
-.infinite-scroll__item {
-  @apply block relative transition-all duration-300 ease-in-out;
-  width: var(--item-width);
-}
-
-.infinite-scroll__image {
-  --s: calc(var(--item-width) / 40 * 27);
-  @apply transition-all duration-300;
-  box-sizing: border-box;
-  width: var(--item-width);
-  height: var(--s);
-  object-fit: cover;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.infinite-scroll:hover .infinite-scroll__item {
-  @apply opacity-50;
-}
-
-.infinite-scroll__item:hover {
-  @apply !opacity-100;
-}
-
-.infinite-scroll__item:hover .infinite-scroll__image {
-  @apply shadow-lg;
-}
-
-/* Animation */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(var(--item-width) * var(--item-count) * -1));
-  }
-}
-
-/* Pause animation on hover */
-.infinite-scroll:hover .infinite-scroll__scroller {
-  animation-play-state: paused;
-}
-
-#meetChris .curtain-title {
-  @apply uppercase text-[1.8rem] lg:text-[2rem] h-0 overflow-y-hidden justify-self-stretch mt-1 md:mt-1 font-black;
-  font-family: "transducer-variable", sans-serif;
-  font-style: normal;
 }
 
 /* Contact Card Component */
@@ -359,6 +253,6 @@ video::-webkit-media-controls {
 }
 
 .contact-card:hover .contact-card__link {
-  @apply decoration-primary-500 hover:decoration-white;
+  @apply decoration-primary-500 dark:decoration-white;
 }
 

@@ -47,7 +47,9 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-th
         Your browser does not support HTML5 video.
     </video>
   </div>
-  <p class="fade-in-element">I created a prototype for a conceptual MLB mobile game in order to establish a design style guide for a native iOS and Android app. These screens, alongside a detailed style guide, were provided as a resource to third-party developers working within the Candy ecosystem.</p>
+  <p class="fade-in-element">Candy Digital needed to establish consistent design patterns for an upcoming MLB mobile game that would be developed by a third-party game developer. I was tasked with creating a comprehensive prototype that would demonstrate some UX and brand/visual language references.</p>
 
-  <p class="fade-in-element">This work is redacted due to its unreleased content. Updates will be made as more information is available publicly.</p>
+  <p class="fade-in-element">To address this challenge, I developed a series of high-fidelity mockups and interactive prototypes that showcased key user flows, game mechanics, and UI components. The deliverables included detailed documentation of typography, color systems, component libraries, and animation guidelines.</p>
+
+  <p class="fade-in-element">This design system successfully unified the vision across development teams and accelerated the production process. While the full details remain confidential, the framework established through this work continues to guide the game's development. Updates will be made as more information becomes available publicly.</p>
 </div>

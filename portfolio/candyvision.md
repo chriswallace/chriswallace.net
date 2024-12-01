@@ -45,5 +45,9 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnai
 </div>
 
 <div class="portfolio-content-wrapper">
-  <p>CandyVision was an activation for Candy Digital's MLB collectors where they could predict finalists and winners of the 2024 MLB Home Run Derby and take home some awesome prizes like signed memorabilia and digital collectibles. There was a pro edition where collectors who owned a specific NFT would be eligible to play against other holders to win bigger prizes. This project was particularly challenging because we had to come up with a name, logo, landing page, app design, and integrate it all into our website in just a few short weeks. Not only did we hit the deadline but we had record engagement on the website as a result.</p>
+  <p class="fade-in-element">When MLB's Home Run Derby approached, Candy Digital needed a way to engage their collector community and drive excitement around the event. The challenge was to create an interactive prediction game that would reward both general participants and NFT holders with prizes like signed memorabilia and digital collectibles.</p>
+
+  <p class="fade-in-element">Working against a tight timeline of just a few weeks, our team developed CandyVision from the ground up. I designed everything from the brand identity and logo to a fully responsive landing page and game interface. The experience was designed with two tiers: a standard edition open to all fans, and an exclusive "pro" version where verified NFT holders could compete for premium rewards.</p>
+
+  <p class="fade-in-element">Despite the compressed timeline, the launch was a success—CandyVision drove record-breaking engagement on our platform and created a new benchmark for future MLB activations.</p>
 </div>
