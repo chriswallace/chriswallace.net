@@ -1,10 +1,19 @@
 .text-paragraph {
-  @apply max-w-none grow text-left overflow-hidden;
+  @apply max-w-none grow text-left;
+}
+
+.text-paragraph .word{
+  @apply overflow-hidden;
+  height: 1em;
+}
+
+.text-paragraph a{
+  @apply no-underline text-primary-600 dark:text-primary-500 leading-none;
 }
 
 .text-paragraph .word > .char{
   display: inline-block;
-  transform: translateY(105%);
+  transform: translateY(100%);
   opacity: 0;
 }
 

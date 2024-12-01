@@ -1,21 +1,30 @@
 ---
-layout: page
-title: I'm Chris Wallace—a digital pioneer crafting the future of design and product.
+layout: default
+title: Chris Wallace, a Senior Design Leader in McKinney, Texas
 permalink: /bio/
-description: I'm a design executive with 20 years of experience leading design teams and crafting immersive digital products.
+description: I'm a design executive with 20 years of experience leading teams and building digital products.
 thumbnail: /assets/images/thumbs/bio.png
 ---
 
-<div class="bio-grid mb-24">
-    <div class="bio-grid__image-container fade-in-element">
-        <img src="https://ik.imagekit.io/UltraDAO/wallace/wifey.jpg?tr=w-700,q=70" alt="me and my wife posing in front of her mom's family heirloom piano" class="bio-grid__image bio-grid__image--one">
-        <img src="https://ik.imagekit.io/UltraDAO/wallace/lincoln.jpg?tr=w-700,q=70" alt="a portrait of me in a suit leaning against my car, a Lincoln MKZ" class="bio-grid__image bio-grid__image--two">
-        <img src="https://ik.imagekit.io/UltraDAO/wallace/maddie.jpg?tr=w-700,q=70" alt="my daughter and I posing for a photo at sunset on Mount Haleakala in Maui, Hawaii" class="bio-grid__image bio-grid__image--three">
-        <img src="https://ik.imagekit.io/UltraDAO/wallace/work.jpg?tr=w-700,q=70" alt="Me talking to Jason Cohen, founder of WP Engine, at a WordPress industry event" class="bio-grid__image bio-grid__image--four">
-        <img src="https://ik.imagekit.io/UltraDAO/wallace/dare.jpg?tr=w-700,q=70" alt="Me wearing a fanny pack from the D.A.R.E. program, smiling" class="bio-grid__image bio-grid__image--five">
-        <img src="https://ik.imagekit.io/UltraDAO/wallace/guitar.jpg?tr=w-700,q=70" alt="Me hugging my new Gibson guitar, a gift received for my birthday" class="bio-grid__image bio-grid__image--six">
+<div class="overflow-hidden">
+    <div class="bio-grid__image-container max-h-screen mx-auto z-0 fade-in-element">
+        <img src="https://ik.imagekit.io/UltraDAO/wallace/wifey.jpg?tr=w-1400,q=70" alt="me and my wife posing in front of her mom's family heirloom piano" class="bio-grid__image bio-grid__image--one">
+        <img src="https://ik.imagekit.io/UltraDAO/wallace/lincoln.jpg?tr=w-1400,q=70" alt="a portrait of me in a suit leaning against my car, a Lincoln MKZ" class="bio-grid__image bio-grid__image--two">
+        <img src="https://ik.imagekit.io/UltraDAO/wallace/maddie.jpg?tr=w-1400,q=70" alt="my daughter and I posing for a photo at sunset on Mount Haleakala in Maui, Hawaii" class="bio-grid__image bio-grid__image--three">
+        <img src="https://ik.imagekit.io/UltraDAO/wallace/work.jpg?tr=w-1400,q=70" alt="Me talking to Jason Cohen, founder of WP Engine, at a WordPress industry event" class="bio-grid__image bio-grid__image--four">
+        <img src="https://ik.imagekit.io/UltraDAO/wallace/dare.jpg?tr=w-1400,q=70" alt="Me wearing a fanny pack from the D.A.R.E. program, smiling" class="bio-grid__image bio-grid__image--five">
+        <img src="https://ik.imagekit.io/UltraDAO/wallace/guitar.jpg?tr=w-1400,q=70" alt="Me hugging my new Gibson guitar, a gift received for my birthday" class="bio-grid__image bio-grid__image--six">
     </div>
-    <div class="bio-grid__content">
+</div>
+
+<div class="min-h-[50vh] flex justify-center items-center px-4">
+    <div id="mainHeadline" class="max-w-[620px] lg:max-w-[940px] text-container relative z-10">
+        <p class="text-paragraph mx-auto font-serif text-4xl lg:text-5xl" data-splitting>Hello. I'm Chris Wallace—a digital pioneer crafting the future of design and product.</p>
+    </div>        
+</div>
+
+<div class="content-container mb-24 flex justify-center">
+    <div class="max-w-prose mx-auto">
         <p class="sub-heading fade-in-element">Throughout my career, I've partnered with renowned brands like The Walking Dead, Breaking Bad, MLB, and DC Comics to redefine digital experiences. My design leadership has been instrumental in driving a startup from zero to $2.6 million in revenue within six months and earning Emmy nominations for innovative second screen apps. I focus on boosting revenue, enhancing brand appeal, and turning users into loyal advocates.</p>
         <hr class="hr-separator fade-in-element">
         <p class="fade-in-element">As an agency executive, I've expanded our design team from a few talented individuals to a global force of nearly two dozen designers and leaders. We've delivered impactful projects for clients like the California DMV, Starbucks, Microsoft, and Google, reaching millions. Leading design for Emmy-nominated interactive experiences has been a highlight of my career.</p>
@@ -45,5 +54,6 @@ thumbnail: /assets/images/thumbs/bio.png
             </div>
         </div>
     </div>
-
 </div>
+
+<script src="/assets/js/about.js"></script>

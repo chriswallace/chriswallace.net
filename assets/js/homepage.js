@@ -68,30 +68,17 @@ function startGSAPAnimations() {
       ease: "power2.out"
     });
 
-  // Handle text animations separately for forwards and backwards
+  // Handle text animations
   sections.forEach((section) => {
-    // Forward animation (left to right)
-    const forwardChars = section.querySelectorAll('.text-paragraph.forwards .word > .char, .forwards .whitespace');
-    if (forwardChars.length) {
-      mainTimeline.to(forwardChars, {
+    const chars = section.querySelectorAll('.text-paragraph .word > .char, .whitespace');
+    if (chars.length) {
+      mainTimeline.to(chars, {
         duration: 0.5,
         ease: 'Power3.easeInOut',
         y: '0',
         stagger: 0.014,
         opacity: 1,
       }, "-=0.2");
-    }
-
-    // Backward animation (right to left)
-    const backwardChars = section.querySelectorAll('.text-paragraph.backwards .word > .char, .backwards .whitespace');
-    if (backwardChars.length) {
-      mainTimeline.to([...backwardChars].reverse(), {
-        duration: 0.5,
-        ease: 'Power3.easeInOut',
-        y: '0',
-        stagger: 0.014,
-        opacity: 1,
-      }, "-=0.5"); // Overlap with forward animation
     }
   });
 

@@ -195,12 +195,11 @@ video::-webkit-media-controls {
 }
 
 .text-container {
-  @apply w-full font-serif text-5xl md:text-4xl text-center;
-  font-variation-settings: "wght" 500;
+  @apply w-full font-serif text-5xl md:text-4xl text-center font-semibold;
 }
 
 .text-paragraph {
-  @apply mb-1 overflow-hidden uppercase leading-tight;
+  @apply mb-1 overflow-hidden uppercase leading-[1.25];
 }
 
 .top {
@@ -254,5 +253,9 @@ video::-webkit-media-controls {
 
 .contact-card:hover .contact-card__link {
   @apply decoration-primary-500 dark:decoration-white;
+}
+
+.text-highlight {
+  @apply dark:text-white;
 }
 

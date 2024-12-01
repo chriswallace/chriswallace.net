@@ -638,9 +638,17 @@ video {
   z-index: 0;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.\!mb-4 {
+  margin-bottom: 1rem !important;
 }
 
 .\!mt-4 {
@@ -787,8 +795,16 @@ video {
   max-height: 100%;
 }
 
+.max-h-screen {
+  max-height: 100vh;
+}
+
 .min-h-\[300px\] {
   min-height: 300px;
+}
+
+.min-h-\[50vh\] {
+  min-height: 50vh;
 }
 
 .w-3 {
@@ -829,6 +845,10 @@ video {
 
 .max-w-\[1400px\] {
   max-width: 1400px;
+}
+
+.max-w-\[620px\] {
+  max-width: 620px;
 }
 
 .max-w-\[80\%\] {
@@ -1116,6 +1136,14 @@ video {
   text-align: center;
 }
 
+.font-sans {
+  font-family: "instrument-sans-variable", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+}
+
+.font-serif {
+  font-family: "norman-variable", serif;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2.5rem;
@@ -1124,6 +1152,11 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 3.25rem;
+}
+
+.text-5xl {
+  font-size: 2.625rem;
+  line-height: 3.5rem;
 }
 
 .text-\[12em\] {
@@ -1152,6 +1185,18 @@ video {
 
 .font-medium {
   font-weight: 500;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 .leading-\[0\.75\] {
@@ -1217,6 +1262,11 @@ video {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.\~text-lg\/xl {
+  font-size: clamp(1.125rem,1.068rem + 0.142vw,1.25rem)/* fluid type from 1.125rem at 40rem to 1.25rem at 128rem */;
+  line-height: clamp(1.85rem,1.78rem + 0.17vw,2rem)/* fluid from 1.85rem at 40rem to 2rem at 128rem */;
 }
 
 .\~pt-24\/16 {
@@ -1888,6 +1938,11 @@ body.meetChris {
   background-color: rgb(229 231 232 / var(--tw-bg-opacity));
 }
 
+.hover\:text-gray-950:hover {
+  --tw-text-opacity: 1;
+  color: rgb(18 18 18 / var(--tw-text-opacity));
+}
+
 @media (min-width: 40rem) {
   .sm\:mb-12 {
     margin-bottom: 3rem;
@@ -1961,6 +2016,10 @@ body.meetChris {
     order: 2;
   }
 
+  .lg\:max-w-\[940px\] {
+    max-width: 940px;
+  }
+
   .lg\:grid-cols-\[1fr\2c 300px\] {
     grid-template-columns: 1fr 300px;
   }
@@ -1971,6 +2030,11 @@ body.meetChris {
 
   .lg\:p-8 {
     padding: 2rem;
+  }
+
+  .lg\:text-5xl {
+    font-size: 2.625rem;
+    line-height: 3.5rem;
   }
 
   .lg\:text-\[20em\] {
@@ -2036,5 +2100,10 @@ body.meetChris {
   .dark\:hover\:bg-gray-800:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(66 68 72 / var(--tw-bg-opacity));
+  }
+
+  .dark\:hover\:text-white:hover {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }

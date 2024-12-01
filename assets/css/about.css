@@ -1,13 +1,5 @@
-.bio-grid {
-  @apply md:grid md:grid-cols-8 md:gap-12 lg:gap-20 mt-12;
-}
-
-.bio-grid__content {
-  @apply md:col-span-5 lg:col-span-4;
-}
-
 .bio-grid__image-container {
-  @apply relative my-8 md:mb-16 md:mt-0 md:mb-0 w-auto aspect-square md:aspect-[9/22] order-2 md:col-span-3 lg:col-span-4;
+  @apply relative my-8 w-auto aspect-square order-2;
 }
 
 .bio-grid__image-container img {
@@ -19,25 +11,25 @@
 }
 
 .bio-grid__image--one {
-  @apply left-0 top-[14%] w-[44%] md:top-0 md:left-[4%] md:w-[56%] rotate-[-1.8deg] z-20;
+  @apply left-0 top-[14%] w-[44%] rotate-[-1.8deg] z-20;
 }
 
 .bio-grid__image--two {
-  @apply left-[33%] top-0 w-[38%] md:top-[12%] md:left-[50%] md:w-[50%] rotate-[1.5deg] z-10;
+  @apply left-[33%] top-0 w-[38%] rotate-[1.5deg] z-10;
 }
 
 .bio-grid__image--three {
-  @apply right-0 top-[32%] w-[38%] md:top-[34%] md:left-0 md:right-auto md:w-[58%] rotate-[3deg] z-30;
+  @apply right-0 top-[32%] w-[38%] rotate-[3deg] z-30;
 }
 
 .bio-grid__image--four {
-  @apply left-[35%] top-[61%] w-[60%] md:top-[50%] md:w-[54%] md:left-auto md:right-[5%] rotate-[-1.8deg] z-40;
+  @apply left-[35%] top-[61%] w-[60%] rotate-[-1.8deg] z-40;
 }
 
 .bio-grid__image--five {
-  @apply right-[5%] top-[5%] w-[20%] md:top-[55%] md:w-[35%] md:left-[13%] md:right-auto md:rotate-[-1.8deg] z-10 md:z-40;
+  @apply right-[5%] top-[5%] w-[20%] z-10 md:z-40;
 }
 
 .bio-grid__image--six {
-  @apply left-[6%] top-[56%] w-[30%] md:top-[65%] md:w-[28%] md:left-[44%] rotate-[1.8deg] z-40;
+  @apply left-[6%] top-[56%] w-[30%] rotate-[1.8deg] z-40;
 }
