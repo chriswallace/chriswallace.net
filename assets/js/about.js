@@ -7,80 +7,72 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainTimeline = gsap.timeline();
 
   const images = document.querySelectorAll('.bio-grid__image');
-  images.forEach((img, index) => {
-    img.addEventListener('load', () => {
-      const startX = (Math.random() - 0.5) * 200;
-      const startY = (Math.random() - 0.5) * 200;
-      const startRotation = (Math.random() - 0.5) * 45;
-
-      gsap.from(img, {
-        duration: 1.2,
-        x: startX,
-        y: startY,
-        rotation: startRotation,
-        opacity: 0,
-        scale: 0.8,
-        ease: "power2.out"
-      });
-
-      // Add floating animation to images after they appear
-      const floatX = (Math.random() - 0.5) * 20;
-      const floatY = (Math.random() - 0.5) * 20;
-      const floatRotation = (Math.random() - 0.5) * 10;
-      const duration = 1.2 + Math.random() * 1.4;
-
-      gsap.to(img, {
-        x: floatX,
-        y: floatY,
-        rotation: floatRotation,
-        duration: duration,
-        ease: "sine.inOut"
-      });
+  
+  // Create load promises for all images
+  const imageLoadPromises = Array.from(images).map(img => {
+    return new Promise(resolve => {
+      if (img.complete) {
+        resolve();
+      } else {
+        img.addEventListener('load', resolve);
+      }
     });
+  });
 
-    // Trigger the load event manually if the image is already cached
-    if (img.complete) {
-      img.dispatchEvent(new Event('load'));
+  // Initial animation for all images
+  mainTimeline.from(images, {
+    duration: 1.2,
+    x: () => (Math.random() - 0.5) * 200,
+    y: () => (Math.random() - 0.5) * 200,
+    rotation: () => (Math.random() - 0.5) * 45,
+    opacity: 0,
+    scale: 0.8,
+    ease: "power2.out",
+    stagger: {
+      amount: 0.6,
+      from: "random"
     }
   });
 
-  // 1. Handle text animations for the main headline
-  const chars = mainHeadline.querySelectorAll('.word > .char, .whitespace');
-  if (chars.length) {
-    mainTimeline.to(chars, {
-      duration: 0.5,
-      ease: 'Power3.easeInOut',
-      y: '0',
-      stagger: 0.008,
-      opacity: 1,
-    }, "-=0.2");
-  }
+  // Move text-related animations into a separate timeline
+  const textTimeline = gsap.timeline();
 
-  // Pause the timeline initially
-  mainTimeline.pause();
-
-  // Trigger headline animation when it scrolls into view
+  // Move text animations into the observer callback
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        // Reset and play image animations first
         mainTimeline.restart();
+        
+        // Then handle text animations
+        const chars = mainHeadline.querySelectorAll('.word > .char, .whitespace');
+        if (chars.length) {
+          gsap.to(chars, {
+            duration: 0.5,
+            ease: 'Power3.easeInOut',
+            y: '0',
+            stagger: 0.008,
+            opacity: 1,
+          });
+          
+          gsap.to(mainHeadline.querySelectorAll('.word'), {
+            className: 'word text-highlight',
+            stagger: {
+              each: 0.3,
+              from: "start",
+              ease: "none"
+            },
+            delay: 0.8,
+          });
+        }
+        
         observer.unobserve(mainHeadline);
       }
     });
   }, { threshold: 0.1 });
 
+  // Only pause mainTimeline
+  mainTimeline.pause();
+
   observer.observe(mainHeadline);
-
-  // 2. Add text highlights with stagger
-  const wordBlocks = mainHeadline.querySelectorAll('.word');
-  mainTimeline.to(wordBlocks, {
-    className: 'word text-highlight',
-    stagger: {
-      each: 0.3,
-      from: "start",
-      ease: "none"
-    },
-    delay: 0.4, // Delay by about a second before starting
-  });
-
 }); 

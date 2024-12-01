@@ -1,5 +1,5 @@
 .bio-grid__image-container {
-  @apply relative my-8 w-auto aspect-square order-2;
+  @apply relative mt-8 w-auto aspect-square order-2 w-full;
 }
 
 .bio-grid__image-container img {
@@ -19,7 +19,7 @@
 }
 
 .bio-grid__image--three {
-  @apply right-0 top-[32%] w-[38%] rotate-[3deg] z-30;
+  @apply right-0 top-[33%] w-[39%] rotate-[3deg] z-30;
 }
 
 .bio-grid__image--four {

@@ -31,8 +31,8 @@ description: Product design leader with over 20 years experience in e-commerce, 
 <div class="flex flex-col md:flex-row h-screen w-screen justify-center md:justify-between items-between md:items-center gap-6 z-0 p-4 lg:p-8">
   <div class="animated-headline">
     <div class="text-container">
-      <div class="text-paragraph backwards text-2xl font-medium !mb-4" data-splitting>Chris Wallace</div>
-      <div class="text-paragraph forwards text-gray-950 dark:text-white text-5xl font-semibold" data-splitting>Executive Design + Leadership</div>
+      <div class="text-paragraph backwards ~text-base/2xl font-medium !mb-4" data-splitting>Chris Wallace</div>
+      <div class="text-paragraph forwards text-gray-950 dark:text-white ~text-4xl/5xl font-semibold" data-splitting>Executive Design + Leadership</div>
       <div class="text-paragraph backwards" data-splitting>
         <a class="font-sans font-normal ~text-lg/xl capitalize hover:text-gray-950 dark:hover:text-white" href="/bio">Meet Me &rarr;</a>
       </div>

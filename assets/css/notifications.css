@@ -8,7 +8,7 @@
 }
 
 .notifications--button-inner{
-  @apply rounded-full flex leading-[0] text-center text-[12px] font-bold bg-red-500 justify-center items-center content-center aspect-square w-full h-full relative text-white;
+  @apply rounded-full flex leading-[0] text-center text-sm font-bold bg-red-500 justify-center items-center content-center aspect-square w-full h-full relative text-white;
 }
 
 .notifications--overlay{
