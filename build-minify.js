@@ -13,6 +13,7 @@ const individualFilesToMinify = [
     './assets/js/gallery-viewer.js',
     './assets/js/interplay-page.js',
     './assets/js/portfolioVideo.js',
+    './assets/js/notifications.js',
     './assets/js/homepage.js',
     './assets/js/toc-toggle.js'
 ];
