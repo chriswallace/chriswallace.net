@@ -6,15 +6,22 @@ description: I'm a design executive with 20 years of experience leading teams an
 thumbnail: /assets/images/thumbs/bio.png
 ---
 
-<div class="lg:grid grid-cols-2 lg:gap-12 justify-center items-center mx-auto">
+<div class="content-preloader flex flex-col gap-4">
+  <div class="logo-container">
+    <div class="gradient-rect"></div>
+  </div>
+</div>
+
+<div class="main-content" style="opacity: 0">
+  <div class="lg:grid grid-cols-2 lg:gap-12 justify-center items-center mx-auto">
     <div class="flex flex-col justify-center mb-12 lg:mb-0 lg:block">
         <div class="bio-grid__image-container overflow-x-hidden">
-            <img src="https://ik.imagekit.io/UltraDAO/wallace/wifey.jpg?tr=w-1400,q=70" alt="me and my wife posing in front of her mom's family heirloom piano" class="bio-grid__image bio-grid__image--one">
-            <img src="https://ik.imagekit.io/UltraDAO/wallace/lincoln.jpg?tr=w-1400,q=70" alt="a portrait of me in a suit leaning against my car, a Lincoln MKZ" class="bio-grid__image bio-grid__image--two">
-            <img src="https://ik.imagekit.io/UltraDAO/wallace/maddie.jpg?tr=w-1400,q=70" alt="my daughter and I posing for a photo at sunset on Mount Haleakala in Maui, Hawaii" class="bio-grid__image bio-grid__image--three">
-            <img src="https://ik.imagekit.io/UltraDAO/wallace/work.jpg?tr=w-1400,q=70" alt="Me talking to Jason Cohen, founder of WP Engine, at a WordPress industry event" class="bio-grid__image bio-grid__image--four">
-            <img src="https://ik.imagekit.io/UltraDAO/wallace/dare.jpg?tr=w-1400,q=70" alt="Me wearing a fanny pack from the D.A.R.E. program, smiling" class="bio-grid__image bio-grid__image--five">
-            <img src="https://ik.imagekit.io/UltraDAO/wallace/guitar.jpg?tr=w-1400,q=70" alt="Me hugging my new Gibson guitar, a gift received for my birthday" class="bio-grid__image bio-grid__image--six">
+            <img data-src="https://ik.imagekit.io/UltraDAO/wallace/wifey.jpg?tr=w-1400,q=70" alt="me and my wife posing in front of her mom's family heirloom piano" class="bio-grid__image bio-grid__image--one" style="visibility: visible">
+            <img data-src="https://ik.imagekit.io/UltraDAO/wallace/lincoln.jpg?tr=w-1400,q=70" alt="a portrait of me in a suit leaning against my car, a Lincoln MKZ" class="bio-grid__image bio-grid__image--two" style="visibility: visible">
+            <img data-src="https://ik.imagekit.io/UltraDAO/wallace/maddie.jpg?tr=w-1400,q=70" alt="my daughter and I posing for a photo at sunset on Mount Haleakala in Maui, Hawaii" class="bio-grid__image bio-grid__image--three" style="visibility: visible">
+            <img data-src="https://ik.imagekit.io/UltraDAO/wallace/work.jpg?tr=w-1400,q=70" alt="Me talking to Jason Cohen, founder of WP Engine, at a WordPress industry event" class="bio-grid__image bio-grid__image--four" style="visibility: visible">
+            <img data-src="https://ik.imagekit.io/UltraDAO/wallace/dare.jpg?tr=w-1400,q=70" alt="Me wearing a fanny pack from the D.A.R.E. program, smiling" class="bio-grid__image bio-grid__image--five" style="visibility: visible">
+            <img data-src="https://ik.imagekit.io/UltraDAO/wallace/guitar.jpg?tr=w-1400,q=70" alt="Me hugging my new Gibson guitar, a gift received for my birthday" class="bio-grid__image bio-grid__image--six" style="visibility: visible">
         </div>
     </div>
     <div class="lg:order-1">
@@ -22,6 +29,7 @@ thumbnail: /assets/images/thumbs/bio.png
             <p class="text-paragraph font-serif text-4xl lg:text-5xl" data-splitting>Hi &mdash; I'm Chris Wallace, a digital pioneer creating the future of product design.</p>
         </div>
     </div>
+  </div>
 </div>
 
 <div class="content-container mb-24 flex justify-center">
