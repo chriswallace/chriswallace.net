@@ -4,8 +4,8 @@ title: "AI in Digital Products: Are You Marketing It Wrong?"
 date: 2024-11-01
 categories: marketing
 permalink: /articles/marketing-ai-digital-products
-thumbnail: /assets/images/ai-marketing-guide.png
-image: /assets/images/ai-marketing-guide.png
+thumbnail: /assets/images/thumbnail-ai-digital-products.png
+image: /assets/images/thumbnail-ai-digital-products.png
 ---
 
 <div class="sm:grid sm:grid-cols-1 lg:grid-cols-[1fr,300px] gap-8">

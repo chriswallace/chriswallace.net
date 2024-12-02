@@ -4,8 +4,8 @@ title: "The Design Systems Guide for Big Companies"
 date: 2024-11-01
 categories: design-systems
 permalink: /articles/the-design-systems-guide-for-big-companies
-thumbnail: /assets/images/design-systems-guide.png
-image: /assets/images/design-systems-guide.png
+thumbnail: /assets/images/thumbnail-design-systems-guide.png
+image: /assets/images/thumbnail-design-systems-guide.png
 ---
 
 <div class="sm:grid sm:grid-cols-1 lg:grid-cols-[1fr,300px] gap-8">
