@@ -71,11 +71,11 @@ picture img {
 }
 
 .sub-heading {
-  @apply ~text-lg/xl max-w-prose mt-6 lg:mt-4 mb-12 md:mb-16;
+  @apply ~text-xl/2xl max-w-prose mt-6 lg:mt-4 mb-12 md:mb-16;
 }
 
 .sub-heading + hr {
-  @apply -mt-4 md:-mt-8 mb-8 md:mb-12;
+  @apply -mt-4 md:-mt-8 ;
 }
 
 .toc-toggle {

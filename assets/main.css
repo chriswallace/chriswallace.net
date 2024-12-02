@@ -1492,9 +1492,9 @@ article {
   line-height: clamp(2.5rem,2.39rem + 0.28vw,2.75rem)/* fluid from 2.5rem at 40rem to 2.75rem at 128rem */;
 }
 
-.\~text-3xl\/4xl {
-  font-size: clamp(1.75rem,1.52rem + 0.57vw,2.25rem)/* fluid type from 1.75rem at 40rem to 2.25rem at 128rem */;
-  line-height: clamp(2.75rem,2.52rem + 0.57vw,3.25rem)/* fluid from 2.75rem at 40rem to 3.25rem at 128rem */;
+.\~text-3xl\/5xl {
+  font-size: clamp(1.75rem,1.352rem + 0.994vw,2.625rem)/* fluid type from 1.75rem at 40rem to 2.625rem at 128rem */;
+  line-height: clamp(2.75rem,2.41rem + 0.85vw,3.5rem)/* fluid from 2.75rem at 40rem to 3.5rem at 128rem */;
 }
 
 .\~text-4xl\/5xl {
@@ -1528,8 +1528,8 @@ article {
 /* Layout */
 
 .hr-separator {
-  margin-top: 0.75rem;
-  margin-bottom: 6rem;
+  margin-top: 0px;
+  margin-bottom: 8rem;
   height: 0.125rem;
   width: 48px;
   overflow: hidden;
@@ -3574,8 +3574,8 @@ picture img {
   margin-top: 1.5rem;
   margin-bottom: 3rem;
   max-width: 65ch;
-  font-size: clamp(1.125rem,1.068rem + 0.142vw,1.25rem)/* fluid type from 1.125rem at 40rem to 1.25rem at 128rem */;
-  line-height: clamp(1.85rem,1.78rem + 0.17vw,2rem)/* fluid from 1.85rem at 40rem to 2rem at 128rem */;
+  font-size: clamp(1.25rem,1.14rem + 0.28vw,1.5rem)/* fluid type from 1.25rem at 40rem to 1.5rem at 128rem */;
+  line-height: clamp(2rem,1.77rem + 0.57vw,2.5rem)/* fluid from 2rem at 40rem to 2.5rem at 128rem */;
 }
 
 @media (min-width: 48rem) {
@@ -3592,13 +3592,11 @@ picture img {
 
 .sub-heading + hr {
   margin-top: -1rem;
-  margin-bottom: 2rem;
 }
 
 @media (min-width: 48rem) {
   .sub-heading + hr {
     margin-top: -2rem;
-    margin-bottom: 3rem;
   }
 }
 
