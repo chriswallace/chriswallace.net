@@ -1383,11 +1383,6 @@ article {
   line-height: 2.5rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 3.25rem;
-}
-
 .text-\[12em\] {
   font-size: 12em;
 }
@@ -1412,6 +1407,10 @@ article {
   line-height: 1.5rem;
 }
 
+.\!font-medium {
+  font-weight: 500 !important;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -1420,8 +1419,8 @@ article {
   font-weight: 400;
 }
 
-.font-semibold {
-  font-weight: 600;
+.\!capitalize {
+  text-transform: capitalize !important;
 }
 
 .capitalize {
@@ -1488,14 +1487,19 @@ article {
   transition-duration: 150ms;
 }
 
+.\~text-2xl\/3xl {
+  font-size: clamp(1.5rem,1.39rem + 0.28vw,1.75rem)/* fluid type from 1.5rem at 40rem to 1.75rem at 128rem */;
+  line-height: clamp(2.5rem,2.39rem + 0.28vw,2.75rem)/* fluid from 2.5rem at 40rem to 2.75rem at 128rem */;
+}
+
+.\~text-3xl\/4xl {
+  font-size: clamp(1.75rem,1.52rem + 0.57vw,2.25rem)/* fluid type from 1.75rem at 40rem to 2.25rem at 128rem */;
+  line-height: clamp(2.75rem,2.52rem + 0.57vw,3.25rem)/* fluid from 2.75rem at 40rem to 3.25rem at 128rem */;
+}
+
 .\~text-4xl\/5xl {
   font-size: clamp(2.25rem,2.08rem + 0.426vw,2.625rem)/* fluid type from 2.25rem at 40rem to 2.625rem at 128rem */;
   line-height: clamp(3.25rem,3.14rem + 0.28vw,3.5rem)/* fluid from 3.25rem at 40rem to 3.5rem at 128rem */;
-}
-
-.\~text-base\/2xl {
-  font-size: clamp(1rem,0.77rem + 0.57vw,1.5rem)/* fluid type from 1rem at 40rem to 1.5rem at 128rem */;
-  line-height: clamp(1.65rem,1.26rem + 0.97vw,2.5rem)/* fluid from 1.65rem at 40rem to 2.5rem at 128rem */;
 }
 
 .\~text-lg\/xl {
@@ -1513,12 +1517,12 @@ article {
   font-variation-settings: 'wdth' 100, 'wght' 400;
 }
 
-.font-medium {
-  font-variation-settings: 'wdth' 100, 'wght' 500;
+.\!font-medium {
+  font-variation-settings: 'wdth' 100, 'wght' 500 !important;
 }
 
-.font-semibold {
-  font-variation-settings: 'wdth' 100, 'wght' 600;
+.font-medium {
+  font-variation-settings: 'wdth' 100, 'wght' 500;
 }
 
 /* Layout */
@@ -3318,15 +3322,16 @@ article {
   justify-content: center;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+  padding-top: 3px;
   text-align: center;
   font-size: 0.82rem;
   line-height: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 0;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-  font-variation-settings: 'wdth' 100, 'wght' 700;
+  font-variation-settings: 'wdth' 100, 'wght' 500;
 }
 
 .notifications--overlay {
@@ -4150,11 +4155,6 @@ video::-webkit-media-controls {
 
   .lg\:pr-\[32px\] {
     padding-right: 32px;
-  }
-
-  .lg\:text-5xl {
-    font-size: 2.625rem;
-    line-height: 3.5rem;
   }
 
   .lg\:text-\[20em\] {

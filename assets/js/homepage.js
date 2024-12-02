@@ -34,8 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
         video.addEventListener('loadeddata', resolve, { once: true });
       }
     }),
-    // Add minimum 2 second delay
-    new Promise(resolve => setTimeout(resolve, 2000))
   ]).then(() => {
     
     // Start animations

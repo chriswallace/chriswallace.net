@@ -13,7 +13,7 @@ thumbnail: /assets/images/thumbs/bio.png
 </div>
 
 <div class="main-content" style="opacity: 0">
-  <div class="lg:grid grid-cols-2 lg:gap-12 justify-center items-center mx-auto">
+  <div class="lg:grid grid-cols-2 lg:gap-12 mb-12 justify-center items-center mx-auto">
     <div class="flex flex-col justify-center mb-12 lg:mb-0 lg:block">
         <div class="bio-grid__image-container overflow-x-hidden">
             <img data-src="https://ik.imagekit.io/UltraDAO/wallace/wifey.jpg?tr=w-1400,q=70" alt="me and my wife posing in front of her mom's family heirloom piano" class="bio-grid__image bio-grid__image--one" style="visibility: visible">
@@ -26,7 +26,7 @@ thumbnail: /assets/images/thumbs/bio.png
     </div>
     <div class="lg:order-1">
         <div id="mainHeadline" class="text-container px-[16px] lg:px-0 lg:pr-[32px]">
-            <p class="text-paragraph font-serif text-4xl lg:text-5xl" data-splitting>Hi &mdash; I'm Chris Wallace, a digital pioneer creating the future of product design.</p>
+            <p class="text-paragraph font-serif !font-medium ~text-3xl/4xl" data-splitting>Hi &mdash; I'm Chris Wallace, a design leader creating the future of digital experience.</p>
         </div>
     </div>
   </div>
