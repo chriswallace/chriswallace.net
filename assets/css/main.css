@@ -75,7 +75,7 @@ picture img {
 }
 
 .sub-heading + hr {
-  @apply -mt-4 md:-mt-8 ;
+  @apply -mt-4 md:-mt-8;
 }
 
 .toc-toggle {

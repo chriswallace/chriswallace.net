@@ -32,9 +32,13 @@
 }
 
 .notifications--notification-item .notifications--notification-overline{
-  @apply border-t-0 pt-2 leading-none font-medium text-xs block text-primary-500 dark:text-primary-400 uppercase;
+  @apply border-t-0 pt-2 pb-1 font-medium text-xs block text-primary-500 dark:text-primary-400 uppercase;
 }
 
 .notifications--notification-item:hover .notifications--notification-overline{
   @apply dark:text-primary-300;
+}
+
+.notifications--notification-item span{
+   @apply leading-tight block;
 }

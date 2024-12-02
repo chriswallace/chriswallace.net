@@ -5,13 +5,17 @@ description: Product design leader with over 20 years experience in e-commerce, 
 ---
 
 <div class="notifications--button opacity-0">
-  <button id="notifs" class="notifications--button-inner">2</button>
+  <button id="notifs" class="notifications--button-inner">3</button>
 </div>
 
 <div id="notificationsOverlay" class="notifications--overlay hidden"></div>
 
 <div class="notifications hidden opacity-0 -translate-y-2">
-  <div class="notifications--notification-title">Notifications</div>
+  <div class="notifications--notification-title">What's New?</div>
+  <a class="notifications--notification-item article" href="/articles/marketing-ai-digital-products">
+    <span class="notifications--notification-overline">New article</span> 
+    <span>AI in Digital Products: Are You Marketing It Wrong?</span>
+  </a>
   <a class="notifications--notification-item article" href="/articles/the-design-systems-guide-for-big-companies">
     <span class="notifications--notification-overline">New article</span> 
     <span>Design Systems for Big Companies</span>
