@@ -61,7 +61,7 @@
   ul,
   ol,
   dl {
-    @apply max-w-prose mb-12 w-full;
+    @apply max-w-prose mb-12;
   }
 
   p + ul,
