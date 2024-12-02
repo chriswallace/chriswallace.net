@@ -15,6 +15,7 @@
   {% seo title=true %}
 
   <link rel="stylesheet" href="https://use.typekit.net/eub1ezs.css" expires="31536000">
+  <link rel="stylesheet" href="/assets/content-preloader.css" />
   <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
   <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
   <link rel="stylesheet" href="/assets/main.css?v={{ site.version }}" expires="31536000">

@@ -727,10 +727,6 @@ video {
   margin-top: 0.5rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -948,10 +944,6 @@ video {
   overflow: hidden;
 }
 
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-
 .text-ellipsis {
   text-overflow: ellipsis;
 }
@@ -1077,11 +1069,6 @@ video {
   padding-right: 1rem;
 }
 
-.px-\[16px\] {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -1133,10 +1120,6 @@ video {
   font-family: "instrument-sans-variable", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
 
-.font-serif {
-  font-family: "norman-variable", serif;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2.5rem;
@@ -1164,10 +1147,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1.5rem;
-}
-
-.\!font-medium {
-  font-weight: 500 !important;
 }
 
 .font-medium {
@@ -1249,11 +1228,6 @@ video {
 .\~text-2xl\/3xl {
   font-size: clamp(1.5rem,1.39rem + 0.28vw,1.75rem)/* fluid type from 1.5rem at 40rem to 1.75rem at 128rem */;
   line-height: clamp(2.5rem,2.39rem + 0.28vw,2.75rem)/* fluid from 2.5rem at 40rem to 2.75rem at 128rem */;
-}
-
-.\~text-3xl\/5xl {
-  font-size: clamp(1.75rem,1.352rem + 0.994vw,2.625rem)/* fluid type from 1.75rem at 40rem to 2.625rem at 128rem */;
-  line-height: clamp(2.75rem,2.41rem + 0.85vw,3.5rem)/* fluid from 2.75rem at 40rem to 3.5rem at 128rem */;
 }
 
 .\~text-4xl\/5xl {
@@ -2009,32 +1983,12 @@ body.meetChris {
     top: 0px;
   }
 
-  .lg\:order-1 {
-    order: 1;
-  }
-
   .lg\:order-2 {
     order: 2;
   }
 
-  .lg\:mb-0 {
-    margin-bottom: 0px;
-  }
-
-  .lg\:block {
-    display: block;
-  }
-
-  .lg\:grid {
-    display: grid;
-  }
-
   .lg\:grid-cols-\[1fr\2c 300px\] {
     grid-template-columns: 1fr 300px;
-  }
-
-  .lg\:gap-12 {
-    gap: 3rem;
   }
 
   .lg\:self-start {
@@ -2043,15 +1997,6 @@ body.meetChris {
 
   .lg\:p-8 {
     padding: 2rem;
-  }
-
-  .lg\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .lg\:pr-\[32px\] {
-    padding-right: 32px;
   }
 
   .lg\:text-\[20em\] {

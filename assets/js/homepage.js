@@ -97,4 +97,26 @@ function startGSAPAnimations() {
       },
       ease: "power2.out"
     })
+
+  const notificationsButton = document.querySelector('.notifications--button');
+
+  // Remove the opacity-0 class before starting the animation
+  notificationsButton.classList.remove('opacity-0');
+
+  // Add animation for notifications button
+  mainTimeline.from(notificationsButton, {
+    duration: 0.6,
+    opacity: 0,
+    y: 10,
+    ease: "power2.out",
+    onStart: () => {
+      gsap.to(notificationsButton, {
+        duration: 0.1,
+        x: -2,
+        repeat: 3,
+        yoyo: true,
+        ease: "power1.inOut"
+      });
+    }
+  });
 }

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const mainHeadline = document.getElementById('mainHeadline');
   const preloader = document.querySelector('.content-preloader');
-  const mainContent = document.querySelector('.main-content');
+  const mainContent = document.querySelector('.about-content');
   const images = document.querySelectorAll('.bio-grid__image');
   
   // Don't set initial visibility with GSAP
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         stagger: 0.008,
         opacity: 1,
       });
-      
+
       gsap.to(mainHeadline.querySelectorAll('.word'), {
         className: 'word text-highlight',
         stagger: {

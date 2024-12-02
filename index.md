@@ -4,7 +4,7 @@ title: Chris Wallace - Executive Design + Leadership
 description: Product design leader with over 20 years experience in e-commerce, digital publishing, interactive media, and web3. Currently searching for my next long-term role.
 ---
 
-<div class="notifications--button">
+<div class="notifications--button opacity-0">
   <button id="notifs" class="notifications--button-inner">2</button>
 </div>
 

@@ -1,0 +1,45 @@
+.content-preloader {
+  position: fixed;
+  inset: 0px;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 18 18 / var(--tw-bg-opacity));
+}
+
+.content-preloader .logo {
+  position: relative;
+  width: 15rem;
+}
+
+.content-preloader .logo::before {
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  --tw-content: '';
+  content: var(--tw-content);
+  background: linear-gradient(
+    90deg,
+    #000000 0%,
+    #000000 40%,
+    #1093F6 50%,
+    #000000 60%,
+    #000000 100%
+  );
+  animation: gradientSlide 2s linear infinite;
+}
+
+@keyframes gradientSlide {
+  to {
+    transform: translateX(50%);
+  }
+}
+
+.content-preloader .logo path {
+  stroke: currentColor;
+  stroke-width: 2;
+}

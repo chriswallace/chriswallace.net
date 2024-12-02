@@ -1,0 +1,31 @@
+.content-preloader{
+  @apply flex h-screen justify-center items-center inset-0 fixed bg-gray-950;
+}
+
+.content-preloader .logo {
+  @apply w-60 relative;
+}
+
+.content-preloader .logo::before {
+  @apply absolute top-0 left-[-100%] w-[200%] h-full content-[''];
+  background: linear-gradient(
+    90deg,
+    #000000 0%,
+    #000000 40%,
+    #1093F6 50%,
+    #000000 60%,
+    #000000 100%
+  );
+  animation: gradientSlide 2s linear infinite;
+}
+
+@keyframes gradientSlide {
+  to {
+    transform: translateX(50%);
+  }
+}
+
+.content-preloader .logo path {
+  @apply stroke-current;
+  stroke-width: 2;
+}
