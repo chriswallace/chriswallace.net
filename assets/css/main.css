@@ -87,8 +87,17 @@ picture img {
   @apply max-w-full;
 }
 
-caption {
-  @apply ~text-xs/base my-2 mx-4 sm:my-4 block text-center;
+figcaption {
+  @apply ~text-xs/sm text-gray-600 dark:text-gray-400 my-2 mx-4 sm:mt-2 sm:mb-8 block text-center;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari and Opera */
 }
 
 /* Home Page */

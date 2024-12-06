@@ -15,6 +15,10 @@
   @apply content-container !pt-0 2xl:mx-auto md:pb-6;
 }
 
+.portfolio-group-heading dd{
+  @apply dark:text-white/70;
+}
+
 .portfolio-list {
   @apply md:mx-auto max-w-6xl mx-auto mb-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-2 lg:gap-6;
 }

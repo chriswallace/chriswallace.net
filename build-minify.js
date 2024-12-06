@@ -3,6 +3,7 @@ const terser = require('terser');
 
 const filesToConcatAndMinify = [
     './assets/js/navigation.js',
+    './assets/js/video-player.js',
     './assets/js/animations.js',
     './assets/js/image-lazyloader.js',
     './assets/js/zoomable.js',
@@ -11,7 +12,6 @@ const filesToConcatAndMinify = [
 const individualFilesToMinify = [
     './assets/js/fxhash.js',
     './assets/js/interplay-page.js',
-    './assets/js/portfolioVideo.js',
     './assets/js/notifications.js',
     './assets/js/homepage.js',
     './assets/js/toc-toggle.js'
