@@ -12,6 +12,10 @@ description: Product design leader with over 20 years experience in e-commerce, 
 
 <div class="notifications hidden opacity-0 -translate-y-2">
   <div class="notifications--notification-title">What's New?</div>
+  <a class="notifications--notification-item article" href="/portfolio/woodies">
+    <span class="notifications--notification-overline">New case study</span> 
+    <span>Woodies</span>
+  </a>
   <a class="notifications--notification-item article" href="/articles/marketing-ai-digital-products">
     <span class="notifications--notification-overline">New article</span> 
     <span>AI in Digital Products: Are You Marketing It Wrong?</span>
@@ -44,7 +48,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
   </div>
   <div>
     <div class="video-container">
-      <video-player id="backgroundVideo" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/portfolio-video.mp4" class="rounded-xl text-primary-600"></video-player>
+      <video-player id="backgroundVideo" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/portfolio-video.mp4" class="rounded-xl text-primary-600" autoplay></video-player>
     </div>
   </div>
 </div>

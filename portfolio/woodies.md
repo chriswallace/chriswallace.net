@@ -41,10 +41,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
 
 <div class="content-container-wo fade-in-element text-center mb-12">
   <div class="flex mb-2 sm:mb-6 justify-start items-center">
-    <figure>
-      <video-player class="aspect-video sm:shadow-xl sm:rounded-xl w-full max-w-5xl text-primary-600" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/Woodies%20Origin.mp4"></video-player>
-      <figcaption>Woodies Origin, our acclaimed animated short film</figcaption>
-    </figure>
+    <video-player class="sm:shadow-xl w-full max-w-5xl text-primary-600" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/Woodies%20Origin.mp4" video-poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-origin-thumbnail.png?tr=q-70" video-title="Woodies Origin" video-description="The origin story of the Woodies begins! Magic fills the forest with life to protect against a new evil.
+"></video-player>
   </div>
 </div>
 <div class="content-container">
@@ -59,10 +57,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
 
 <div class="content-container-wo text-center mb-12">
   <div class="max-w-5xl">
-    <figure class="col-span-4 fade-in-element mb-24">
-      <video-player class="aspect-video shadow-xl rounded-xl w-full text-primary-600" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/Woodies_%20Interview%20with%20Lead%20Artist%20Gossamer%20Rozen.mp4?"></video-player>
-      <figcaption>An interview with lead artist, Gossamer Rozen</figcaption>
-    </figure>
+      <video-player class="col-span-4 fade-in-element mb-24 shadow-xl w-full text-primary-600" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/Woodies_%20Interview%20with%20Lead%20Artist%20Gossamer%20Rozen.mp4?" video-poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-grid-3d.png" video-title="An Interview With Gossamer Rozen" video-description="Meet the lead artist behind the Woodies 10k generative character project"></video-player>
     <figure class="fade-in-element">
       <div class="grid grid-cols-2 xl:grid-cols-4 gap-1.5 md:gap-4">
         <video data-type="video" muted playsinline autoplay loop loading="lazy" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback" class="aspect-square rounded-xl">
@@ -203,11 +198,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
   </p>
 </div>
 
-<div class="md:mb-0.5 fade-in-element">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies.png?tr=q-70" class="aspect-square sm:aspect-video lg:aspect-auto object-cover" alt="">
-</div>
-
-<div class="md:bg-[#4E403E] md:mb-0.5 fade-in-element">
+<div class="md:bg-[#F9DBCB] md:mb-0.5 fade-in-element">
   <div class="content-container md:h-screen flex justify-center bg-flex justify-center items-center my-12 md:my-0">
     <div class="zoom-container max-w-[740px]">
       <div class="zoomable">
@@ -225,10 +216,79 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
                   (max-width: 1600px) 1600px, 
                   2000px" 
             class="ml-0 mr-auto lg:mx-auto lg:shadow-xl rounded-xl" 
-            alt="Woodies NEMESIS artwork" 
+            alt="" 
             loading="lazy"
           >
-          <figcaption class="md:text-white md:dark:text-white">Legends of Wondermist Card Back Design</figcaption>
+          <figcaption class="md:text-black/60 md:dark:text-black/60">Legends of Wondermist Card Back Design</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="md:bg-[#D5EED1] md:mb-0.5 fade-in-element">
+  <div class="content-container md:h-screen flex justify-center items-center justify-center items-center my-12 md:my-0">
+    <div class="zoom-container max-w-[740px]">
+      <div class="zoomable">
+        <figure>
+          <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-goodies.webp?tr=q-60" class="ml-0 mr-auto lg:mx-auto lg:shadow-xl rounded-xl" alt="">
+          <figcaption class="text-black/60 dark:text-white/70 sm:text-black/60 sm:dark:text-black/60">A line of merch from our second 'Woodies Goodies' merch drop</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="md:bg-[#C7E4DE] md:mb-0.5 fade-in-element">
+  <div class="content-container md:h-screen flex justify-center bg-flex justify-center items-center my-12 md:my-0">
+    <div class="zoom-container max-w-[500px]">
+      <div class="zoomable">
+        <figure>
+          <img 
+            src="https://ik.imagekit.io/UltraDAO/chriswallace.net/snowboard-concepts.png?tr=w-800,f-auto" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/snowboard-concepts.png?tr=w-400,f-auto 400w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/snowboard-concepts.png?tr=w-800,f-auto 800w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/snowboard-concepts.png?tr=w-1200,f-auto 1200w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/snowboard-concepts.png?tr=w-1600,f-auto 1600w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/snowboard-concepts.png?tr=w-2000,f-auto 2000w" 
+            sizes="(max-width: 400px) 400px, 
+                  (max-width: 800px) 800px, 
+                  (max-width: 1200px) 1200px, 
+                  (max-width: 1600px) 1600px, 
+                  2000px" 
+            class="ml-0 mr-auto lg:mx-auto lg:shadow-xl rounded-xl" 
+            alt="" 
+            loading="lazy"
+          >
+          <figcaption class="md:text-black/60 md:dark:text-black/60">Woodies Snowboard Concept Art by Me</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="md:bg-[#271918] md:mb-0.5 fade-in-element">
+  <div class="content-container md:h-screen flex justify-center bg-flex justify-center items-center my-12 md:my-0">
+    <div class="zoom-container max-w-[500px]">
+      <div class="zoomable">
+        <figure>
+          <img 
+            src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-logo.png?tr=w-800,f-auto" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-logo.png?tr=w-400,f-auto 400w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-logo.png?tr=w-800,f-auto 800w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-logo.png?tr=w-1200,f-auto 1200w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-logo.png?tr=w-1600,f-auto 1600w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-logo.png?tr=w-2000,f-auto 2000w" 
+            sizes="(max-width: 400px) 400px, 
+                  (max-width: 800px) 800px, 
+                  (max-width: 1200px) 1200px, 
+                  (max-width: 1600px) 1600px, 
+                  2000px" 
+            class="ml-0 mr-auto lg:mx-auto lg:shadow-xl rounded-xl" 
+            alt="" 
+            loading="lazy"
+          >
+          <figcaption class="md:text-white md:dark:text-white">NEMESIS Logo Design</figcaption>
         </figure>
       </div>
     </div>
@@ -253,7 +313,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
                   (max-width: 1600px) 1600px, 
                   2000px" 
             class="ml-0 mr-auto lg:mx-auto lg:shadow-xl rounded-xl" 
-            alt="Woodies NEMESIS artwork" 
+            alt="" 
             loading="lazy"
           >
           <figcaption class="md:text-white/70 md:dark:text-white/70">Woodies NEMESIS artwork by Waxbones</figcaption>
@@ -262,20 +322,6 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
     </div>
   </div>
 </div>
-
-<div class="md:bg-[#D5EED1] md:mb-0.5 fade-in-element">
-  <div class="content-container md:h-screen flex justify-center items-center justify-center items-center my-12 md:my-0">
-    <div class="zoom-container max-w-[740px]">
-      <div class="zoomable">
-        <figure>
-          <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-goodies.webp?tr=q-60" class="ml-0 mr-auto lg:mx-auto lg:shadow-xl rounded-xl" alt="">
-          <figcaption class="text-black/60 dark:text-white/70 sm:text-black/60 sm:dark:text-black/60">A line of merch from our second 'Woodies Goodies' merch drop</figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="bg-[#B0A885] mb-0.5 md:h-screen fade-in-element">
   <div class="content-container flex justify-center items-center bg-flex justify-center items-center">
     <div class="image-gallery">

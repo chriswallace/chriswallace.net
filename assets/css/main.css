@@ -137,14 +137,6 @@ figcaption {
   @apply fill-current;
 }
 
-.video-player {
-  @apply aspect-[40/27] flex flex-col items-center justify-center sm:rounded-md overflow-hidden bg-black;
-}
-
-.video-player video {
-  @apply max-w-full h-auto block mx-auto;
-}
-
 /* Custom Controls (Optional) */
 /* You can hide the default controls and implement custom controls if needed.
 This gives you more control over the look and feel of the player: */

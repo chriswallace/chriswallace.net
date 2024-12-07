@@ -67,12 +67,8 @@
 }
 
 video-player {
-  @apply block w-full h-full;
+  @apply w-full rounded-xl;
   will-change: transform, opacity;
-}
-
-video-player::part(video) {
-  @apply absolute inset-0 aspect-video rounded-xl;
 }
 
 .video-controls {
