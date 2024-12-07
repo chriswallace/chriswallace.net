@@ -100,7 +100,7 @@ function startGSAPAnimations() {
 
   // Reveal and zoom video
   if (videoPlayer) {
-    const video = videoPlayer.shadowRoot.querySelector('video');
+    const video = videoPlayer;
     if (video) {
       mainTimeline.to(video, {
         duration: 0.8,
