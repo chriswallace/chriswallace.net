@@ -208,8 +208,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
 </div>
 
 <div class="md:bg-[#4E403E] md:mb-0.5 fade-in-element">
-  <div class="content-container md:py-12 h-screen flex justify-center bg-flex justify-center items-center">
-    <div class="zoom-container max-h-[450px]">
+  <div class="content-container md:h-screen flex justify-center bg-flex justify-center items-center my-12 md:my-0">
+    <div class="zoom-container max-w-[740px]">
       <div class="zoomable">
         <figure>
           <img 
@@ -228,16 +228,16 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
             alt="Woodies NEMESIS artwork" 
             loading="lazy"
           >
-          <figcaption class="text-white dark:text-white">Legends of Wondermist Card Back Design</figcaption>
+          <figcaption class="md:text-white md:dark:text-white">Legends of Wondermist Card Back Design</figcaption>
         </figure>
       </div>
     </div>
   </div>
 </div>
 
-<div class="md:bg-[#242516] md:py-12 md:mb-0.5 fade-in-element">
-  <div class="content-container flex justify-center items-center bg-flex justify-center items-center my-12">
-    <div class="zoom-container max-h-[450px]">
+<div class="md:bg-[#242516] md:mb-0.5 fade-in-element">
+  <div class="content-container my-12 md:h-screen flex justify-center items-center bg-flex justify-center items-center md:my-0">
+    <div class="zoom-container max-w-[740px]">
       <div class="zoomable">
         <figure>
           <img 
@@ -256,16 +256,16 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
             alt="Woodies NEMESIS artwork" 
             loading="lazy"
           >
-          <figcaption class="text-white/70 dark:text-white/70">Woodies NEMESIS artwork by Waxbones</figcaption>
+          <figcaption class="md:text-white/70 md:dark:text-white/70">Woodies NEMESIS artwork by Waxbones</figcaption>
         </figure>
       </div>
     </div>
   </div>
 </div>
 
-<div class="md:bg-[#D5EED1] md:py-12 md:mb-0.5 fade-in-element">
-  <div class="content-container flex justify-center items-center bg-flex justify-center items-center my-12">
-    <div class="zoom-container max-w-[960px]">
+<div class="md:bg-[#D5EED1] md:mb-0.5 fade-in-element">
+  <div class="content-container md:h-screen flex justify-center items-center justify-center items-center my-12 md:my-0">
+    <div class="zoom-container max-w-[740px]">
       <div class="zoomable">
         <figure>
           <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-goodies.webp?tr=q-60" class="ml-0 mr-auto lg:mx-auto lg:shadow-xl rounded-xl" alt="">
@@ -276,7 +276,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
   </div>
 </div>
 
-<div class="bg-[#B0A885] mb-0.5 fade-in-element">
+<div class="bg-[#B0A885] mb-0.5 md:h-screen fade-in-element">
   <div class="content-container flex justify-center items-center bg-flex justify-center items-center">
     <div class="image-gallery">
       <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis1.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis1.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-h-[100vh]" alt="" loading="lazy">
@@ -287,8 +287,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
   </div>
 </div>
 
-<div class="bg-[#121524] pt-12 md:pb-12 md:mb-0.5 fade-in-element">
-  <div class="content-container flex justify-center items-center bg-flex justify-center items-center">
+<div class="bg-[#121524] pt-16 pb-12 md:py-0 md:mb-0.5 fade-in-element">
+  <div class="md:h-screen content-container flex justify-center items-center bg-flex justify-center items-center">
     <figure>
       <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-poster.png?tr=w-800" class="ml-0 mr-auto lg:mx-auto max-w-[400px] lg:shadow-xl rounded-xl" alt="">
       <figcaption>Woodies NEMESIS artwork by Waxbones</figcaption>
@@ -296,7 +296,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
   </div>
 </div>
 
-<div class="bg-[#121524] mb-12 overflow-hidden fade-in-element">
+<div class="bg-[#262B43] mb-12 overflow-hidden fade-in-element">
   <div class="content-container flex gap-0 justify-center items-center bg-flex justify-center items-center">
     <div class="image-gallery">
       <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-1.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-1.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-h-[100vh]" alt="" loading="lazy">
