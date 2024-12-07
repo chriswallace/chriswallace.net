@@ -44,7 +44,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
   </div>
   <div>
     <div class="video-container">
-      <video-player id="backgroundVideo" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/portfolio-video.mp4"></video-player>
+      <video-player id="backgroundVideo" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/portfolio-video.mp4" class="rounded-xl text-primary-600"></video-player>
     </div>
   </div>
 </div>

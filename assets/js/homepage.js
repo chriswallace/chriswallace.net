@@ -9,10 +9,18 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Set initial states
   if (videoPlayer) {
+    videoPlayer.style.opacity = '0';
+    videoPlayer.style.transform = 'scale(0.95)';
+    
     const video = videoPlayer.shadowRoot.querySelector('video');
     if (video) {
-      video.style.opacity = '0';
-      video.style.transform = 'scale(0.95)';
+      video.muted = true;
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.log("Auto-play failed:", error);
+        });
+      }
     }
   }
   
@@ -61,7 +69,6 @@ function startGSAPAnimations() {
   const sections = document.querySelectorAll('.text-container');
   const videoPlayer = document.querySelector('video-player');
   const preloader = document.querySelector('.content-preloader');
-  const controls = document.querySelector('.portfolio__controls');
   const headlines = document.querySelectorAll('.animated-headline');
 
   // Create main timeline
@@ -98,28 +105,19 @@ function startGSAPAnimations() {
     }
   });
 
-  // Reveal and zoom video
+  // Update video animation
   if (videoPlayer) {
-    const video = videoPlayer;
-    if (video) {
-      mainTimeline.to(video, {
-        duration: 0.8,
-        opacity: 1,
-        scale: 1,
-        ease: "power2.out"
-      });
-    }
-  }
-
-  // Show controls
-  if (controls) {
-    mainTimeline.to(controls, {
-      duration: 0.3,
+    // First ensure initial styles are applied
+    gsap.set(videoPlayer, {
+      opacity: 0,
+      scale: 0.95
+    });
+    
+    // Animate the video-player element
+    mainTimeline.to(videoPlayer, {
+      duration: 0.8,
       opacity: 1,
-      visibility: 'visible',
-      onStart: () => {
-        controls.classList.remove('invisible');
-      },
+      scale: 1,
       ease: "power2.out"
     });
   }

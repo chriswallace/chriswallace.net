@@ -3401,13 +3401,22 @@ article {
   }
 }
 
-.homepage-video {
+.video-container {
+  overflow: hidden;
+}
+
+video-player {
+  display: block;
+  height: 100%;
+  width: 100%;
+  will-change: transform, opacity;
+}
+
+video-player::part(video) {
   position: absolute;
   inset: 0px;
   aspect-ratio: 16 / 9;
   border-radius: 0.75rem;
-  opacity: 0;
-  will-change: transform;
 }
 
 .video-controls {

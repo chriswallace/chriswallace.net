@@ -61,14 +61,18 @@
   }
 }
 
-.video-container{
+.video-container {
   @apply relative w-full md:w-[65vw] aspect-video;
+  overflow: hidden;
 }
 
-.homepage-video {
+video-player {
+  @apply block w-full h-full;
+  will-change: transform, opacity;
+}
+
+video-player::part(video) {
   @apply absolute inset-0 aspect-video rounded-xl;
-  opacity: 0;
-  will-change: transform;
 }
 
 .video-controls {
