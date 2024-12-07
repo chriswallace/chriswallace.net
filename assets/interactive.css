@@ -905,12 +905,12 @@ video {
   max-width: 400px;
 }
 
-.max-w-\[500px\] {
-  max-width: 500px;
-}
-
 .max-w-\[80\%\] {
   max-width: 80%;
+}
+
+.max-w-\[960px\] {
+  max-width: 960px;
 }
 
 .max-w-full {

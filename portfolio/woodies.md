@@ -265,10 +265,10 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
 
 <div class="md:bg-[#D5EED1] md:py-12 md:mb-0.5 fade-in-element">
   <div class="content-container flex justify-center items-center bg-flex justify-center items-center my-12">
-    <div class="zoom-container max-w-[500px]">
+    <div class="zoom-container max-w-[960px]">
       <div class="zoomable">
         <figure>
-          <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-goodies.gif" class="ml-0 mr-auto lg:mx-auto lg:shadow-xl rounded-xl" alt="">
+          <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-goodies.webp?tr=q-60" class="ml-0 mr-auto lg:mx-auto lg:shadow-xl rounded-xl" alt="">
           <figcaption class="text-black/60 dark:text-white/70 sm:text-black/60 sm:dark:text-black/60">A line of merch from our second 'Woodies Goodies' merch drop</figcaption>
         </figure>
       </div>
