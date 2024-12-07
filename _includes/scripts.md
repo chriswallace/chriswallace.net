@@ -6,6 +6,7 @@
 
 <script src="/assets/js/navigation.js?v={{ site.version }}" expires="31536000"></script>
 <script src="/assets/js/animations.js?v={{ site.version }}" expires="31536000"></script>
+<script src="/assets/js/card-flip.js?v={{ site.version }}" expires="31536000"></script>
 <script src="/assets/js/video-player.js?v={{ site.version }}" expires="31536000"></script>
 <script src="/assets/js/image-lazyloader.js?v={{ site.version }}" expires="31536000"></script>
 <script src="/assets/js/zoomable.js?v={{ site.version }}" expires="31536000"></script>

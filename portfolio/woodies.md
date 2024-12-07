@@ -6,7 +6,7 @@ permalink: /portfolio/woodies/
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png
 ---
 
-<div style="background-image: url(https://ik.imagekit.io/UltraDAO/chriswallace.net/hero_bg.webp?tr=q-75,w-2000);" class="relative bg-cover bg-[25%_bottom] min-h-[360px] md:h-screen flex flex-col justify-between items-start fade-in-element md:pb-8 mb-12 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-black before:opacity-70 z-20">
+<div style="background-image: url(https://ik.imagekit.io/UltraDAO/chriswallace.net/hero_bg.webp?tr=q-75,w-2000);" class="relative bg-cover bg-[25%_bottom] min-h-[480px] md:h-screen flex flex-col justify-between items-start fade-in-element md:pb-8 mb-12 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-black before:opacity-70 z-20 overflow-x-hidden">
   <div class="content-container w-full relative z-30">
     <a class="back text-white dark:text-white" href="/portfolio">/portfolio</a>
   </div>
@@ -42,7 +42,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
 <div class="content-container-wo fade-in-element text-center mb-12">
   <div class="flex mb-2 sm:mb-6 justify-start items-center">
     <figure>
-      <video-player class="aspect-video sm:shadow-xl sm:rounded-xl w-full max-w-5xl text-primary-500" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/Woodies%20Origin.mp4"></video-player>
+      <video-player class="aspect-video sm:shadow-xl sm:rounded-xl w-full max-w-5xl text-primary-600" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/Woodies%20Origin.mp4"></video-player>
       <figcaption>Woodies Origin, our acclaimed animated short film</figcaption>
     </figure>
   </div>
@@ -60,7 +60,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
 <div class="content-container-wo text-center mb-12">
   <div class="max-w-5xl">
     <figure class="col-span-4 fade-in-element mb-24">
-      <video-player class="aspect-video shadow-xl rounded-xl w-full text-primary-500" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/Woodies_%20Interview%20with%20Lead%20Artist%20Gossamer%20Rozen.mp4?"></video-player>
+      <video-player class="aspect-video shadow-xl rounded-xl w-full text-primary-600" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/Woodies_%20Interview%20with%20Lead%20Artist%20Gossamer%20Rozen.mp4?"></video-player>
       <figcaption>An interview with lead artist, Gossamer Rozen</figcaption>
     </figure>
     <figure class="fade-in-element">
@@ -128,11 +128,11 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
 
 <div class="content-container mb-12">
   <p class="fade-in-element">
-    Soon following the release of the Woodies Generative Characters collection, we collaborated with nearly a dozen artists from UltraDAO and others in the Web3 space to create a series of digital trading cards called Legends of Wondermist. This collection included pieces from some of the top artists in the world, including Mike Shinoda of Linkin Park, DesLucrece,  Waxbones, Amrit Pal Singh, and Diela Maharanie.
+    Soon following the release of the Woodies Generative Characters collection, we collaborated with nearly two dozen artists to create a series of digital trading cards called Legends of Wondermist. This collection included pieces from top artists including Mike Shinoda of Linkin Park, DesLucrece, Waxbones, Amrit Pal Singh, and Diela Maharanie.
   </p>
 </div>
 
-<div class="content-container mb-12">
+<div class="content-container mb-24">
   <div class="flex mb-2">
     <picture class="rounded-xl fade-in-element">
       <source
@@ -151,24 +151,49 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
     </picture>
   </div>
   <div class="grid grid-cols-5 gap-2">
-    <div class="snap-center shrink-0">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/5226c8a7be87ae9d7c319eea8eb25c0d.gif?tr=q-60,w-640" class="w-[320px] fade-in-element" alt="Steampunk Dreams by mrLakon">
+    <div class="card flip-card">
+      <div class="card-front">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/5226c8a7be87ae9d7c319eea8eb25c0d.gif?tr=q-60,w-640" class="w-[320px] fade-in-element" alt="Steampunk Dreams by mrLakon">
+      </div>
+      <div class="card-back">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/card-back.png?tr=q-60,w-640" class="w-[320px]" alt="Card Back">
+      </div>
     </div>
-    <div class="snap-center shrink-0">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/6ea029b8908fef4a5d4a00797fc0a8a6%20(1).gif?tr=q-60,w-640" class="w-[320px] fade-in-element" alt="Lost and Found by DesLucrece">
+    <div class="card flip-card">
+      <div class="card-front">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/6ea029b8908fef4a5d4a00797fc0a8a6%20(1).gif?tr=q-60,w-640" class="w-[320px] fade-in-element" alt="Lost and Found by DesLucrece">
+      </div>
+      <div class="card-back">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/card-back.png?tr=q-60,w-640" class="w-[320px]" alt="Card Back">
+      </div>
     </div>
-    <div class="snap-center shrink-0">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/55d5f37e9d2f6c228592551b86529bbb.gif?tr=q-60,w-640" class="w-[320px] fade-in-element" alt="Midnight Meditation by Valerie Lopez">
+    <div class="card flip-card">
+      <div class="card-front">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/55d5f37e9d2f6c228592551b86529bbb.gif?tr=q-60,w-640" class="w-[320px] fade-in-element" alt="Midnight Meditation by Valerie Lopez">
+      </div>
+      <div class="card-back">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/card-back.png" class="w-[320px]" alt="Card Back">
+      </div>
     </div>
-    <div class="snap-center shrink-0">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/GM06-the-winds-of-yanu.gif?tr=q-60,w-640" class="w-[320px] fade-in-element" alt="The Winds of Yanu by Mike Shinoda">
+    <div class="card flip-card">
+      <div class="card-front">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/GM06-the-winds-of-yanu.gif?tr=q-60,w-640" class="w-[320px] fade-in-element" alt="The Winds of Yanu by Mike Shinoda">
+      </div>
+      <div class="card-back">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/card-back.png" class="w-[320px]" alt="Card Back">
+      </div>
     </div>
-    <div class="snap-center shrink-0">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/1b82487e348f95d1f27ef1707b97046c.gif?tr=q-60,w-640" class="w-[320px] fade-in-element" alt="Frazzled by Waxbones">
+    <div class="card flip-card">
+      <div class="card-front">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/1b82487e348f95d1f27ef1707b97046c.gif?tr=q-60,w-640" class="w-[320px] fade-in-element" alt="Frazzled by Waxbones">
+      </div>
+      <div class="card-back">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/card-back.png" class="w-[320px]" alt="Card Back">
+      </div>
     </div>
   </div>
 </div>
-<div class="content-container mb-12">
+<div class="content-container mb-24">
   <p class="fade-in-element">
     True to our environmental roots, we made one of Web3's largest charitable contributions to Trees for the Future, funding the planting of one million trees. This initiative connected our digital forest to real-world impact, demonstrating how Web3 projects can drive meaningful change.
   </p>
@@ -176,6 +201,113 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
   <p class="fade-in-element">
     Woodies represents a new model for entertainment IP - one that combines storytelling, technology, and community ownership to create something truly innovative. For me, this project stands as a career highlight, proving that we can build successful projects that not only entertain but also inspire and make a tangible difference in the world.
   </p>
+</div>
+
+<div class="md:mb-0.5 fade-in-element">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies.png?tr=q-70" class="aspect-square sm:aspect-video lg:aspect-auto object-cover" alt="">
+</div>
+
+<div class="md:bg-[#4E403E] md:mb-0.5 fade-in-element">
+  <div class="content-container md:py-12 h-screen flex justify-center bg-flex justify-center items-center">
+    <div class="zoom-container max-h-[450px]">
+      <div class="zoomable">
+        <figure>
+          <img 
+            src="https://ik.imagekit.io/UltraDAO/chriswallace.net/legends-of-wondermist-logo.png?tr=w-800,f-auto" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/legends-of-wondermist-logo.png?tr=w-400,f-auto 400w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/legends-of-wondermist-logo.png?tr=w-800,f-auto 800w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/legends-of-wondermist-logo.png?tr=w-1200,f-auto 1200w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/legends-of-wondermist-logo.png?tr=w-1600,f-auto 1600w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/legends-of-wondermist-logo.png?tr=w-2000,f-auto 2000w" 
+            sizes="(max-width: 400px) 400px, 
+                  (max-width: 800px) 800px, 
+                  (max-width: 1200px) 1200px, 
+                  (max-width: 1600px) 1600px, 
+                  2000px" 
+            class="ml-0 mr-auto lg:mx-auto lg:shadow-xl rounded-xl" 
+            alt="Woodies NEMESIS artwork" 
+            loading="lazy"
+          >
+          <figcaption class="text-white dark:text-white">Legends of Wondermist Card Back Design</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="md:bg-[#242516] md:py-12 md:mb-0.5 fade-in-element">
+  <div class="content-container flex justify-center items-center bg-flex justify-center items-center my-12">
+    <div class="zoom-container max-h-[450px]">
+      <div class="zoomable">
+        <figure>
+          <img 
+            src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-posters.png?tr=w-800,f-auto" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-posters.png?tr=w-400,f-auto 400w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-posters.png?tr=w-800,f-auto 800w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-posters.png?tr=w-1200,f-auto 1200w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-posters.png?tr=w-1600,f-auto 1600w, 
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-posters.png?tr=w-2000,f-auto 2000w" 
+            sizes="(max-width: 400px) 400px, 
+                  (max-width: 800px) 800px, 
+                  (max-width: 1200px) 1200px, 
+                  (max-width: 1600px) 1600px, 
+                  2000px" 
+            class="ml-0 mr-auto lg:mx-auto lg:shadow-xl rounded-xl" 
+            alt="Woodies NEMESIS artwork" 
+            loading="lazy"
+          >
+          <figcaption class="text-white/70 dark:text-white/70">Woodies NEMESIS artwork by Waxbones</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="md:bg-[#D5EED1] md:py-12 md:mb-0.5 fade-in-element">
+  <div class="content-container flex justify-center items-center bg-flex justify-center items-center my-12">
+    <div class="zoom-container max-w-[500px]">
+      <div class="zoomable">
+        <figure>
+          <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-goodies.gif" class="ml-0 mr-auto lg:mx-auto lg:shadow-xl rounded-xl" alt="">
+          <figcaption class="text-black/60 dark:text-white/70 sm:text-black/60 sm:dark:text-black/60">A line of merch from our second 'Woodies Goodies' merch drop</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-[#B0A885] mb-0.5 fade-in-element">
+  <div class="content-container flex justify-center items-center bg-flex justify-center items-center">
+    <div class="image-gallery">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis1.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis1.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-h-[100vh]" alt="" loading="lazy">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis2.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis2.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis2.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis2.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis2.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis2.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-h-[100vh]" alt="" loading="lazy">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis3.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis3.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis3.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis3.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis3.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis3.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-h-[100vh]" alt="" loading="lazy">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis4.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis4.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis4.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis4.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis4.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis4.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-h-[100vh]" alt="" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<div class="bg-[#121524] pt-12 md:pb-12 md:mb-0.5 fade-in-element">
+  <div class="content-container flex justify-center items-center bg-flex justify-center items-center">
+    <figure>
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-poster.png?tr=w-800" class="ml-0 mr-auto lg:mx-auto max-w-[400px] lg:shadow-xl rounded-xl" alt="">
+      <figcaption>Woodies NEMESIS artwork by Waxbones</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="bg-[#121524] mb-12 overflow-hidden fade-in-element">
+  <div class="content-container flex gap-0 justify-center items-center bg-flex justify-center items-center">
+    <div class="image-gallery">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-1.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-1.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-h-[100vh]" alt="" loading="lazy">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-2.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-2.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-2.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-2.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-2.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-2.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-h-[100vh]" alt="" loading="lazy">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-3.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-3.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-3.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-3.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-3.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-3.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-h-[100vh]" alt="" loading="lazy">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-4.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-4.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-4.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-4.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-4.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-app-4.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-h-[100vh]" alt="" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<div class="content-container mb-12">
 
   <p class="fade-in-element">
     Explore the world of Woodies through our animated film, collections, and metaverse experiences using the links below:
@@ -191,6 +323,5 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
     <li><a href="https://opensea.io/collection/legends-of-wondermist">Legends of Wondermist on OpenSea</a></li>
     <li><a href="https://opensea.io/collection/woodies-special-mints">Woodies Special Mints on OpenSea</a></li>
     <li><a href="https://opensea.io/collection/woodies-lore">Woodies Lore on OpenSea</a></li>
-    
   </ul>
 </div>

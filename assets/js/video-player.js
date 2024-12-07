@@ -181,8 +181,8 @@ class VideoPlayer extends HTMLElement {
                     }
 
                     .play-button-inner {
-                        width: 80px;
-                        height: 80px;
+                        width: 72px;
+                        height: 72px;
                         background-color: var(--theme-color);
                         border-radius: 50%;
                         display: flex;
@@ -194,10 +194,10 @@ class VideoPlayer extends HTMLElement {
                         opacity: 1;
                     }
                     .play-button svg {
-                        width: 40px;
-                        height: 40px;
+                        width: 24px;
+                        height: 24px;
                         transform: translateX(2px);
-                        fill: black;
+                        fill: white;
                         stroke: transparent;
                     }
                     button {
@@ -290,9 +290,10 @@ class VideoPlayer extends HTMLElement {
                 </div>
                 <div id="playButton" class="play-button">
                     <div class="play-button-inner">
-                        <svg class="icon" id="playIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v18l15-9L5 3z" />
-                        </svg>
+<svg width="14" height="16" viewBox="0 0 14 16" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 14.3507V1.64929C0.5 0.871991 1.34797 0.391878 2.0145 0.791793L12.599 7.14251C13.2464 7.53091 13.2464 8.46909 12.599 8.85749L2.0145 15.2082C1.34797 15.6081 0.5 15.128 0.5 14.3507Z" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
                     </div>
                     <span class="sr-only">Play</span>
                 </div>

@@ -40,10 +40,21 @@ document.addEventListener('DOMContentLoaded', function () {
     function zoomIn(zoomable) {
         const position = getOriginalPosition(zoomable);
         originalPosition[zoomable] = position;
-
-        const viewportWidth = window.innerWidth * 0.9; // 90% of the viewport width
-        const viewportHeight = window.innerHeight * 0.9; // 90% of the viewport height
+        
+        const viewportWidth = window.innerWidth * 0.9;
+        const viewportHeight = window.innerHeight * 0.9;
         const { width, height } = calculateAspectRatio(viewportWidth, viewportHeight);
+
+        // Set container height just before animation
+        requestAnimationFrame(() => {
+            zoomable.parentNode.style.height = `${position.height}px`;
+            zoomable.classList.add('zoom-fullscreen');
+            zoomable.style.top = '50%';
+            zoomable.style.left = '50%';
+            zoomable.style.width = `${width}px`;
+            zoomable.style.height = `${height}px`;
+            zoomable.style.transform = 'translate(-50%, -50%)';
+        });
 
         // Set initial position and dimensions
         zoomable.style.position = 'fixed';
@@ -52,16 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
         zoomable.style.width = `${position.width}px`;
         zoomable.style.height = `${position.height}px`;
         zoomable.style.zIndex = '9999';
-
-        // Add transition and animate to fullscreen
-        requestAnimationFrame(() => {
-            zoomable.classList.add('zoom-fullscreen');
-            zoomable.style.top = '50%';
-            zoomable.style.left = '50%';
-            zoomable.style.width = `${width}px`;
-            zoomable.style.height = `${height}px`;
-            zoomable.style.transform = 'translate(-50%, -50%)';
-        });
     }
 
     // Animate zoomable element back to its original position
@@ -76,7 +77,9 @@ document.addEventListener('DOMContentLoaded', function () {
         zoomable.style.height = `${position.height}px`;
         zoomable.style.transform = 'none';
 
+        // Reset container height after animation completes
         setTimeout(() => {
+            zoomable.parentNode.style.height = '';
             zoomable.classList.remove('zoom-fullscreen');
             zoomable.style.zIndex = '1';
             zoomable.style.position = '';
@@ -101,6 +104,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Handle zoom-in and zoom-out on click
     zoomables.forEach((zoomable) => {
+        // Add cursor styles
+        zoomable.style.cursor = 'zoom-in';
+        
         zoomable.addEventListener('click', function () {
             const isFullscreen = zoomable.classList.contains('zoom-fullscreen');
             const dataType = zoomable.getAttribute('data-type');
@@ -110,6 +116,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.body.classList.add('zoom-active');
                 zoomIn(zoomable);
                 disableScroll();
+                // Change cursor to zoom-out when in fullscreen
+                zoomable.style.cursor = 'zoom-out';
 
                 // Handle video playback
                 if (dataType === 'video') {
@@ -119,6 +127,8 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 document.body.classList.remove('zoom-active');
                 zoomOut(zoomable);
+                // Change cursor back to zoom-in
+                zoomable.style.cursor = 'zoom-in';
 
                 // Handle video mute
                 if (dataType === 'video') {
