@@ -359,49 +359,44 @@ class VideoPlayer extends HTMLElement {
 
                     .volume-bars {
                         display: flex;
-                        gap: 0;
                         align-items: flex-end;
+                        justify-content: space-between;
+                        gap: 0;
                         height: 18px;
-                        padding: 0 8px;
+                        padding: 0;
+                        width: calc(4px * 5);
                         cursor: pointer;
                     }
 
                     .volume-bar {
-                        width: 5px;
+                        width: 4px;
                         opacity: 0.3;
                         transition: opacity 0.2s, height 0.2s;
+                        cursor: pointer;
                         position: relative;
+                        height: 20px;
                     }
 
-                    .volume-bar::before {
+                    .volume-bar:after{
                         content: '';
                         position: absolute;
                         background: white;
-                        top: 0;
+                        bottom: 0;
                         left: 50%;
                         transform: translateX(-50%);
-                        width: 3px;
+                        width: 2px;
                         height: 100%;
-                        cursor: pointer;
                     }
 
                     .volume-bar.active {
                         opacity: 1;
                     }
 
-                    .volume-bar:hover ~ .volume-bar {
-                        opacity: 0.3 !important;
-                    }
-
-                    .volume-bars:hover .volume-bar {
-                        opacity: 1;
-                    }
-
-                    .volume-bar:nth-child(1) { height: 3px; }
-                    .volume-bar:nth-child(2) { height: 6px; }
-                    .volume-bar:nth-child(3) { height: 9px; }
-                    .volume-bar:nth-child(4) { height: 12px; }
-                    .volume-bar:nth-child(5) { height: 15px; }
+                    .volume-bar:nth-child(1):after { height: 3px; }
+                    .volume-bar:nth-child(2):after { height: 7px; }
+                    .volume-bar:nth-child(3):after { height: 11px; }
+                    .volume-bar:nth-child(4):after { height: 15px; }
+                    .volume-bar:nth-child(5):after { height: 19px; }
 
                     /* Initial state styles */
                     :host(.paused:not([data-has-interacted])) .controls {

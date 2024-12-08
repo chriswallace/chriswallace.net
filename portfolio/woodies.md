@@ -6,7 +6,7 @@ permalink: /portfolio/woodies/
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png
 ---
 
-<div style="background-image: url(https://ik.imagekit.io/UltraDAO/chriswallace.net/hero_bg.webp?tr=q-75,w-2000);" class="relative bg-cover bg-[25%_bottom] min-h-[480px] md:h-screen flex flex-col justify-between items-start fade-in-element md:pb-8 mb-12 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-black before:opacity-70 z-20 overflow-x-hidden">
+<div style="background-image: url(https://ik.imagekit.io/UltraDAO/chriswallace.net/14.png?tr=q-70,w-1800);" class="relative min-h-[480px] bg-cover bg-[center_center] md:h-screen flex flex-col justify-between items-start fade-in-element md:pb-8 mb-12 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-50% before:from-gray-950/0 before:to-black dark:before:to-gray-950 before:opacity-100 z-20 overflow-x-hidden">
   <div class="content-container w-full relative z-30">
     <a class="back text-white dark:text-white" href="/portfolio">/portfolio</a>
   </div>
@@ -19,7 +19,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
       </div>
       <div>
         <dt class="!text-white">Role</dt>
-        <dd class="text-white/70">Project Lead, Designer, Executive Producer, Engineer, Artist</dd>
+        <dd class="text-white/70">Product Lead, Designer, Executive Producer, Engineer, Artist</dd>
       </div>
       <div>
         <dt class="!text-white">Year</dt>
@@ -35,7 +35,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
   </p>
 
   <p class="fade-in-element">
-    As project lead, I assembled and directed a world-class team of artists, storytellers, and engineers to create something truly innovative. We set out to build more than just digital collectibles - we wanted to create an entire universe that would resonate deeply with our community while pushing the boundaries of what was possible in Web3.
+    As Product Lead, I assembled and directed a world-class team of artists, storytellers, and engineers to create something truly innovative. We set out to build more than just digital collectibles - we wanted to create an entire universe that would resonate deeply with our community while pushing the boundaries of what was possible in Web3.
   </p>
 </div>
 
@@ -88,7 +88,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
   </p>
 
   <p class="fade-in-element">
-    Woodies broke new ground technologically by becoming the first NFT project to offer full 3D metaverse-ready avatars for every character. We partnered with platforms like Decentraland and Nifty Island to bring our entire collection into virtual worlds, allowing owners to truly embody their Woodies across the metaverse.
+    Woodies broke new ground by becoming the first NFT project to offer full 3D metaverse-ready avatars for every character. We partnered with platforms like <a href="https://decentraland.org">Decentraland</a> and <a href="https://niftyisland.com">Nifty Island</a> to bring our entire collection into virtual worlds, allowing owners to truly embody their Woodies across the metaverse.
   </p>
 </div>
 
@@ -111,13 +111,13 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
   </p>
 
   <p class="fade-in-element">
-    The first 3D release enabled all Woodies holders to play with their new avatars in <a href="https://decentraland.org">Decentraland</a>, a blockchain-powered metaverse where players can buy their own plots of land and build worlds together.
+    The first 3D release enabled all Woodies holders to play with their new avatars in Decentraland, a blockchain-powered metaverse where players can buy their own plots of land and build worlds together.
   </p>
 
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/WoodiesxDCL.gif" class="w-full max-w-prose fade-in-element mb-12 object-cover aspect-[5/2.6] shadow-xl rounded-xl" alt="">
 
   <p class="fade-in-element">
-    After that, we worked with <a href="https://niftyisland.com">Nifty Island</a> to bring all 9,739 models into their metaverse platform, where players get an island and can build a variety of structures, program games, and visit other islands to earn in-game currency.
+    After that, we worked with Nifty Island to bring all 9,739 models into their metaverse platform, where players get an island and can build a variety of structures, program games, and visit other islands to earn in-game currency.
   </p>
 </div>
 

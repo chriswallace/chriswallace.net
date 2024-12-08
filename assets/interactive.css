@@ -1173,8 +1173,8 @@ video {
   background-size: cover;
 }
 
-.bg-\[25\%_bottom\] {
-  background-position: 25% bottom;
+.bg-\[center_center\] {
+  background-position: center center;
 }
 
 .object-cover {
@@ -2095,11 +2095,16 @@ body.meetChris {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
-.before\:from-transparent::before {
+.before\:from-gray-950\/0::before {
   content: var(--tw-content);
-  --tw-gradient-from: transparent var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: rgb(18 18 18 / 0) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(18 18 18 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.before\:from-50\%::before {
+  content: var(--tw-content);
+  --tw-gradient-from-position: 50%;
 }
 
 .before\:to-black::before {
@@ -2107,9 +2112,9 @@ body.meetChris {
   --tw-gradient-to: #000 var(--tw-gradient-to-position);
 }
 
-.before\:opacity-70::before {
+.before\:opacity-100::before {
   content: var(--tw-content);
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .before\:content-\[\'\'\]::before {
@@ -2405,6 +2410,11 @@ body.meetChris {
 
   .dark\:text-white\/70 {
     color: rgb(255 255 255 / 0.7);
+  }
+
+  .dark\:before\:to-gray-950::before {
+    content: var(--tw-content);
+    --tw-gradient-to: #121212 var(--tw-gradient-to-position);
   }
 
   .dark\:hover\:bg-gray-800:hover {
