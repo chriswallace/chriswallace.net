@@ -64,8 +64,10 @@ class VideoPlayer extends HTMLElement {
                         this.classList.add('paused');
                     }
                 });
+                this.updatePlayButtonIcon(false);
             } else {
                 this.classList.add('paused');
+                this.updatePlayButtonIcon(true);
             }
 
             // Set loop based on attribute
