@@ -6,6 +6,8 @@ permalink: /portfolio/candy-marketplace-redesign/
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png
 ---
 
+<link rel="stylesheet" href="/assets/legendary.css">
+
 <div class="portfolio-group-heading">
   <a class="back fade-in-element" href="/portfolio">/portfolio</a>
   <h1 class="fade-in-element mb-3">Candy Marketplace Redesign</h1>
@@ -40,14 +42,72 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumb
          loading="lazy">
   </picture>
   
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-gray-950 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-gray-950 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-gray-950 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-gray-950 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-gray-950 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-gray-950 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-gray-950 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-gray-950 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
+
+  <div class="aspect-[4/3] md:aspect-[21/9] md:mb-0.5 fade-in-element flex flex-col justify-center items-center bg-gray-950 rounded-sm">
+    <figure class="flex flex-col justify-center items-center gap-4">
+      <div
+      role="button"
+      class="lgnd"
+      aria-disabled="false">
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__p"></span>
+        <span class="lgnd__text text-xs leading-none">Legendary</span>
+        <svg class="effects" xmlns="http://www.w3.org/2000/svg"><defs><filter id="fire"><feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" /><feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                result="fire"
+              /><feBlend in="SourceGraphic" in2="fire" /></filter></defs></svg>
+      </div>
+      <figcaption class="mb-0 text-gray-400 dark:text-gray-400">Custom legendary badge with CSS animation</figcaption>
+    </figure>
+  </div>
 </div>
 
 <div class="portfolio-content-wrapper">
