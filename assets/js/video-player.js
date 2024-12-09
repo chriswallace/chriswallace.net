@@ -658,7 +658,9 @@ class VideoPlayer extends HTMLElement {
 
     showControls(forceShow = false) {
         clearTimeout(this.hideControlsTimeout);
-        this.controls.style.opacity = '1';
+        if (this.controls) {
+            this.controls.style.opacity = '1';
+        }
 
         if (!this.video.paused || forceShow) {
             this.hideControlsTimeout = setTimeout(() => {
