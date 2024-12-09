@@ -1,10 +1,9 @@
 .text-paragraph {
-  @apply max-w-none grow text-left;
+  @apply dark:text-white max-w-none grow text-left !leading-none;
 }
 
 .text-paragraph .word{
   @apply overflow-hidden;
-  height: 1em;
 }
 
 .text-paragraph a{
@@ -12,6 +11,7 @@
 }
 
 .text-paragraph .word > .char{
+  margin-top: .22em;
   display: inline-block;
   transform: translateY(100%);
   opacity: 0;
@@ -34,11 +34,11 @@
   height: 100%;
   background: linear-gradient(
     90deg,
-    #000000 0%,
-    #000000 40%,
+    #181818 0%,
+    #181818 40%,
     #1093F6 50%,
-    #000000 60%,
-    #000000 100%
+    #181818 60%,
+    #181818 100%
   );
   background-size: 200% 100%;
   animation: gradientSlide 2s linear infinite;
@@ -62,8 +62,7 @@
 }
 
 .video-container {
-  @apply relative w-full md:w-[65vw] aspect-video;
-  overflow: hidden;
+  @apply relative w-full aspect-video;
 }
 
 video-player {

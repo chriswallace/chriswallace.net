@@ -6,7 +6,6 @@
   @apply min-h-0 mb-4;
 }
 
-
 .portfolio-content-wrapper{
   @apply content-container flex flex-col items-center mb-48;
 }

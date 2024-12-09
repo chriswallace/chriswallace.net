@@ -1,38 +1,13 @@
 .notifications{
-  @apply z-40 fixed top-[16px] lg:top-3 right-[16px] lg:right-3 flex-col rounded-xl shadow-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-gray-950 ml-[var(--navbar-width+12px)] min-w-[180px] max-w-[75vw] md:max-w-[35vw] transform transition-all duration-200;
-}
-
-.notifications--button{
-  @apply flex z-50 justify-end fixed top-0 right-0 p-6 w-[var(--navbar-width)] h-[var(--navbar-width)];
-  text-shadow: 0 2px 3px rgba(0,0,0,0.6);
-}
-
-.notifications--button-inner{
-  @apply rounded-full flex leading-[0] pt-[3px] font-medium text-center text-sm bg-red-600 justify-center items-center content-center aspect-square w-full h-full relative text-white;
-}
-
-.notifications--overlay{
-  @apply fixed inset-0 bg-gray-950/50 z-30 transform transition-all duration-300;
+  @apply space-y-6;
 }
 
 .notifications--notification-item{
-  @apply px-4 py-1.5 no-underline ~text-sm/base hover:bg-primary-100 text-gray-700 hover:text-primary-950 dark:text-gray-300 hover:dark:text-primary-100 hover:dark:bg-gradient-to-r hover:dark:from-primary-600 hover:dark:to-primary-800;
-}
-
-.notifications > :first-child{
-  @apply hover:rounded-t-xl;
-}
-
-.notifications > :last-child{
-  @apply hover:rounded-b-xl;
-}
-
-.notifications--notification-title{
-  @apply px-4 pt-3 pb-1.5 text-sm font-bold uppercase text-gray-700 dark:text-gray-200;
+  @apply ~text-base/xl no-underline text-gray-950 dark:text-white block;
 }
 
 .notifications--notification-item .notifications--notification-overline{
-  @apply border-t-0 pt-2 pb-1 font-medium text-xs block text-primary-500 dark:text-primary-400 uppercase;
+  @apply border-t-0 pt-2 font-sans pb-1 font-medium text-xs block text-primary-500 dark:text-primary-400 uppercase;
 }
 
 .notifications--notification-item:hover .notifications--notification-overline{
