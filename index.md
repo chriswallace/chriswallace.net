@@ -52,7 +52,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
     <a class="inline-block mx-auto relative transition-transform transition-200 hover:scale-105" href="/portfolio/woodies/">
       <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black from-0% to-60% ~p-4/8 z-20">
         <span class="text-white uppercase tracking-widest ~text-xs/sm decoration-offset-4">Don't miss this</span>
-        <h3 class="mt-3 mb-0 font-serif font-semibold ~text-xl/5xl max-w-[75%] md:max-w-[50%]">Woodies&mdash;a web3 entertainment brand powered by nature</h3>
+        <h3 class="mt-3 mb-0 font-serif font-semibold ~text-xl/5xl max-w-[75%] md:max-w-[50%] text-white">Woodies&mdash;a web3 entertainment brand powered by nature</h3>
       </div>
       <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-thumbnail.webp?tr=q-50,f-auto" class="mx-auto max-w-full rounded-xl shadow-xl relative z-10" alt="" loading="lazy" width="1600" height="1080">
     </a>
