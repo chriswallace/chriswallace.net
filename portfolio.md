@@ -16,42 +16,49 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
     <div class="portfolio-list">
         <div class="portfolio-list__item fade-in-element">
             <a class="portfolio-list__link" href="/portfolio/woodies/">
-                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-thumbnail.webp?tr=q-70,w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-thumbnail.webp?tr=q-70,w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-thumbnail.webp?tr=q-70,w-800,f-auto 800w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px" class="portfolio-list__image" alt="" loading="lazy">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-thumbnail.webp?tr=q-50,w-1000,f-auto" class="portfolio-list__image object-cover aspect-[40/27]" alt="" loading="lazy" width="800" height="540">
             </a>
             <h3 class="portfolio-list__title"><a href="/portfolio/woodies/">Woodies</a></h3>
             <p class="portfolio-list__description">Developing fun entertainment IP on the blockchain.</p>
         </div>
         <div class="portfolio-list__item fade-in-element">
+            <a href="/portfolio/dc3-interactive-comic-reader/">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
+            </a>
+            <h3 class="portfolio-list__title"><a href="/portfolio/dc3-interactive-comic-reader/">DC3 Interactive Comic Reader</a></h3>
+            <p class="portfolio-list__description">An interactive comic book reader application for Candy's DC3 digital comic collection.</p>
+        </div>
+        <div class="portfolio-list__item fade-in-element">
             <a class="portfolio-list__link" href="/portfolio/palm-quest/">
-                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             </a>
             <h3 class="portfolio-list__title"><a href="/portfolio/palm-quest/">Palm Quest App Prototype</a></h3>
             <p class="portfolio-list__description">Creating a gamified airdrop farming experience with SvelteKit.</p>
         </div>
         <div class="portfolio-list__item fade-in-element">
             <a class="portfolio-list__link" href="/portfolio/candy-physical-digital-feature/">
-                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             </a>
             <h3 class="portfolio-list__title"><a href="/portfolio/candy-physical-digital-feature/">Candy.io Physical-Digital Checkout</a></h3>
             <p class="portfolio-list__description">Designing a new feature for Candy's existing checkout process.</p>
         </div>
         <div class="portfolio-list__item fade-in-element">
             <a class="portfolio-list__link" href="/portfolio/twelve-days-cryptoart/">
-                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             </a>
             <h3 class="portfolio-list__title"><a href="/portfolio/twelve-days-cryptoart/">Twelve Days of CryptoArt</a></h3>
             <p class="portfolio-list__description">An experimental art event featuring daily mystery NFT drops and artist reveals.</p>
         </div>
         <div class="portfolio-list__item fade-in-element">
             <a class="portfolio-list__link" href="/portfolio/redacted-mlb-game/">
-                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             </a>
             <h3 class="portfolio-list__title"><a href="/portfolio/redacted-mlb-game/">[Redacted] MLB Game</a></h3>
             <p class="portfolio-list__description">A series of mockups for a mobile game concept using digital collectibles as game pieces.</p>
         </div>
         <div class="portfolio-list__item fade-in-element">
             <a class="portfolio-list__link" href="/portfolio/candy-marketplace-redesign/">
-                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             </a>
             <h3 class="portfolio-list__title"><a href="/portfolio/candy-marketplace-redesign/">Candy Marketplace Redesign</a></h3>
             <p class="portfolio-list__description">A gradual, deliberate shift in design language and product features.</p>
@@ -64,47 +71,15 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
         </div>
         <div class="portfolio-list__item fade-in-element">
             <a class="portfolio-list__link" href="/portfolio/candy-league/">
-                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             </a>
             <h3 class="portfolio-list__title"><a href="/portfolio/candy-league/">Candy League</a></h3>
             <p class="portfolio-list__description">Adding clarity and identity to one of Candy's most popular challenge products.</p>
         </div>
         <div class="portfolio-list__item fade-in-element">
-            <div class="zoom-container">
-                <a href="/portfolio/dc3-interactive-comic-reader/">
-                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
-                </a>
-            </div>
-            <h3 class="portfolio-list__title"><a href="/portfolio/dc3-interactive-comic-reader/">DC3 Interactive Comic Reader</a></h3>
-            <p class="portfolio-list__description">An interactive comic book reader application for Candy's DC3 digital comic collection.</p>
-        </div>
-        <div class="portfolio-list__item fade-in-element">
             <a class="portfolio-list__link" href="/portfolio/candyvision/">
-                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             </a>
-            <h3 class="portfolio-list__title"><a href="/portfolio/candyvision/">CandyVision</a></h3>
-            <p class="portfolio-list__description">Releasing a new challenge product to Candy's MLB collectible holders.</p>
-        </div>
-        <div class="portfolio-list__item fade-in-element">
-            <a class="portfolio-list__link" href="/portfolio/candy-digital-collectible-deposit-withdrawal/">
-                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
-            </a>
-            <h3 class="portfolio-list__title"><a href="/portfolio/candy-digital-collectible-deposit-withdrawal/">Digital Collectible Deposit/Withdrawal</a></h3>
-            <p class="portfolio-list__description">Web3 withdrawal and deposit of digital collectibles between Candy and self-custody wallets.</p>
-        </div>
-        <div class="portfolio-list__item fade-in-element">
-            <a class="portfolio-list__link" href="/portfolio/pendulum-crypto-wallet/">
-                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.png?tr=w-1600,f-auto 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px" class="portfolio-list__image" alt="" loading="lazy">
-            </a>
-            <h3 class="portfolio-list__title"><a href="/portfolio/pendulum-crypto-wallet/" target="_blank">Pendulum Crypto Wallet (iOS App)</a></h3>
-            <p class="portfolio-list__description">Pendulum is a crypto wallet concept with social and digital collectible features.</p>
-        </div>
-        <div class="portfolio-list__item fade-in-element">
-            <div class="zoom-container">
-                <div class="zoomable">
-                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/wallace-museum-5.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/wallace-museum-5.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/wallace-museum-5.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/wallace-museum-5.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/wallace-museum-5.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/wallace-museum-5.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-list__image" alt="" loading="lazy">
-                </div>
-            </div>
             <h3 class="portfolio-list__title"><a href="https://wallacemuseum.com" target="_blank">Wallace Museum</a></h3>
             <p class="portfolio-list__description">Virtual generative art museum with Ethereum and Tezos wallet integration.</p>
         </div>
@@ -117,8 +92,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
         <div class="portfolio-list__item fade-in-element">
             <div class="zoom-container">
                 <div class="zoomable">
-                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-list__image dark:hidden" alt="" loading="lazy">
-                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-list__image hidden dark:block" alt="" loading="lazy">
+                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv.png?tr=w-1000,f-auto" class="portfolio-list__image dark:hidden" alt="" loading="lazy" width="800" height="540">
+                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-1000,f-auto" class="portfolio-list__image hidden dark:block" alt="" loading="lazy" width="800" height="540">
                 </div>
             </div>
             <h3 class="portfolio-list__title"><a href="https://10up.com/our-work/california-dmv-website-redesign/" target="_blank">California DMV Digital Transformation</a></h3>
@@ -128,8 +103,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             <div class="zoom-container">
                 <div class="zoomable">
                     <div class="image-gallery">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/starbucks-stories-dark-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/starbucks-stories-dark-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/starbucks-stories-dark-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/starbucks-stories-dark-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/starbucks-stories-dark-1.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/starbucks-stories-dark-1.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-list__image" alt="" loading="lazy">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/starbucks-stories-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/starbucks-stories-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/starbucks-stories-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/starbucks-stories-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/starbucks-stories-dark.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/starbucks-stories-dark.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-list__image" alt="" loading="lazy">
+                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/starbucks-stories-dark-1.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
+                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/starbucks-stories-dark.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
                     </div>
                 </div>
             </div>
@@ -139,7 +114,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
         <div class="portfolio-list__item fade-in-element">
             <div class="zoom-container">
                 <div class="zoomable">
-                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/google-site-kit-dark.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/google-site-kit-dark.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/google-site-kit-dark.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/google-site-kit-dark.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/google-site-kit-dark.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/google-site-kit-dark.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-list__image" alt="" loading="lazy">
+                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/google-site-kit-dark.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
                 </div>
             </div>
             <h3 class="portfolio-list__title"><a href="https://sitekit.withgoogle.com" target="_blank">Google Site Kit</a></h3>
@@ -148,8 +123,8 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
         <div class="portfolio-list__item fade-in-element">
             <div class="zoom-container">
                 <div class="zoomable">
-                    <img src="/assets/images/mad-men.png" srcset="/assets/images/mad-men.png 400w, /assets/images/mad-men.png 800w, /assets/images/mad-men.png 1200w, /assets/images/mad-men.png 1600w, /assets/images/mad-men.png 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-list__image dark:hidden" alt="" loading="lazy">
-                    <img src="/assets/images/mad-men-dark.png" srcset="/assets/images/mad-men-dark.png 400w, /assets/images/mad-men-dark.png 800w, /assets/images/mad-men-dark.png 1200w, /assets/images/mad-men-dark.png 1600w, /assets/images/mad-men-dark.png 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="portfolio-list__image hidden dark:block" alt="" loading="lazy">
+                    <img src="/assets/images/mad-men.png" class="portfolio-list__image dark:hidden" alt="" loading="lazy" width="800" height="540">
+                    <img src="/assets/images/mad-men-dark.png" class="portfolio-list__image hidden dark:block" alt="" loading="lazy" width="800" height="540">
                 </div>
             </div>
             <h3 class="portfolio-list__title"><a href="https://www.youtube.com/watch?v=X9UVZjvmmbw" target="_blank">Mad Men: The Fan Cut</a></h3>
