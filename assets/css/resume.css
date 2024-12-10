@@ -15,7 +15,7 @@
 }
 
 .resume__metadata{
-  @apply ~text-base/lg font-medium text-gray-700 dark:text-gray-100;
+  @apply ~text-base/lg font-medium text-highlight;
 }
 
 .resume__metadata-item--place {

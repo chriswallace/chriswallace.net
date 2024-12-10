@@ -2558,11 +2558,6 @@ body.meetChris {
     color: rgb(152 157 163 / var(--tw-text-opacity));
   }
 
-  .dark\:text-primary-500 {
-    --tw-text-opacity: 1;
-    color: rgb(80 141 225 / var(--tw-text-opacity));
-  }
-
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));

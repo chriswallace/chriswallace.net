@@ -49,7 +49,7 @@
 }
 
 .about-content .text-paragraph {
-  @apply font-serif !font-medium text-3xl md:text-4xl 2xl:text-6xl;
+  @apply font-serif !font-medium text-muted text-3xl md:text-4xl 2xl:text-6xl;
 }
 
 .bio-grid__author {

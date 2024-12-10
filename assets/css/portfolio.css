@@ -31,11 +31,15 @@
 }
 
 .portfolio-list__link {
-  @apply pb-0 mb-0 block;
+  @apply pb-0 mb-0 block no-underline text-foreground;
 }
 
 .portfolio-list__image {
-  @apply rounded-2xl;
+  @apply rounded-2xl transition-all duration-300;
+}
+
+a.portfolio-list__link:hover .portfolio-list__image {
+  @apply rounded-[250px];
 }
 
 .zoom-container .portfolio-list__image {
@@ -48,15 +52,11 @@
 }
 
 .portfolio-list__title {
-  @apply mt-8 mb-1.5 font-serif ~text-xl/2xl;
-}
-
-.portfolio-list__title a {
-  @apply font-medium no-underline text-gray-950 dark:text-white hover:underline hover:decoration-primary-500;
+  @apply mt-4 mb-1.5 font-serif font-medium ~text-xl/2xl;
 }
 
 .portfolio-list__description {
-  @apply my-0 ~text-base/sm;
+  @apply my-0 ~text-base/sm text-muted;
 }
 
 .portfolio__video-container {

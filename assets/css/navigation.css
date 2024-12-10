@@ -55,7 +55,7 @@
 }
 
 .navigation .logo {
-  @apply block w-[42px] h-auto my-0 mx-auto md:p-0 text-primary-500 dark:text-white transition-all duration-150 ease-in-out;
+  @apply block w-[42px] h-auto my-0 mx-auto md:p-0 text-primary-500 transition-all duration-150 ease-in-out;
 }
 
 .open-menu .navigation .logo {
@@ -87,7 +87,7 @@
 }
 
 .menu li a {
-  @apply pt-3 pb-2 md:pt-1.5 md:pb-0.5 px-4 block font-sans font-normal capitalize text-lg no-underline decoration-2 text-gray-800 dark:text-white hover:bg-primary-600 hover:text-white;
+  @apply pt-3 pb-2 md:pt-1.5 md:pb-0.5 px-4 block font-sans font-normal capitalize text-lg no-underline decoration-2 text-highlight hover:bg-primary-600 hover:text-white;
 }
 
 .site-title {
@@ -111,11 +111,11 @@
 }
 
 .navigation .social p {
-  @apply text-[12px] text-gray-700 dark:text-gray-300 leading-relaxed font-sans mr-4;
+  @apply text-[12px] text-muted leading-relaxed font-sans mr-4;
 }
 
 .navigation .social a {
-  @apply text-gray-800 dark:text-gray-100 hover:text-gray-950 dark:hover:text-white underline underline-offset-4;
+  @apply text-highlight underline underline-offset-4;
 }
 
 .navigation .social svg {

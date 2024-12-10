@@ -3,7 +3,7 @@
 }
 
 .notifications--notification-item{
-  @apply ~text-base/xl no-underline text-gray-950 dark:text-white block;
+  @apply ~text-base/xl no-underline text-highlight block;
 }
 
 .notifications--notification-item .notifications--notification-overline{
@@ -11,9 +11,13 @@
 }
 
 .notifications--notification-item:hover .notifications--notification-overline{
-  @apply dark:text-primary-300;
+  @apply opacity-80 no-underline;
 }
 
 .notifications--notification-item span{
    @apply leading-tight block;
+}
+
+.notifications--notification-item:hover span{
+  @apply underline;
 }

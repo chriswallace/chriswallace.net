@@ -1,5 +1,5 @@
 .text-paragraph {
-  @apply dark:text-white max-w-none grow text-left !leading-none;
+  @apply max-w-none grow text-left !leading-none;
 }
 
 .text-paragraph .word{
@@ -7,7 +7,7 @@
 }
 
 .text-paragraph a{
-  @apply no-underline text-primary-600 dark:text-primary-500 leading-none;
+  @apply no-underline text-primary leading-none;
 }
 
 .text-paragraph .word > .char{
@@ -66,7 +66,7 @@
 }
 
 video-player {
-  @apply w-full rounded-xl;
+  @apply w-full sm:rounded-xl;
   will-change: transform, opacity;
 }
 

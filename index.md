@@ -14,10 +14,10 @@ description: Product design leader with over 20 years experience in e-commerce, 
   <div class="animated-headline my-[30px]">
     <div class="text-container place-content-between flex flex-row justify-end items-end md:justify-between gap-0">
       <div>
-        <div class="text-paragraph forwards text-lg !capitalize font-medium" data-splitting>Chris Wallace</div>
+        <div class="text-paragraph text-highlight forwards text-lg !capitalize font-medium" data-splitting>Chris Wallace</div>
       </div>
       <div>
-        <div class="text-paragraph backwards text-lg !capitalize font-medium hidden md:block" data-splitting>Executive Design + Leadership</div>
+        <div class="text-paragraph text-highlight backwards text-lg !capitalize font-medium hidden md:block" data-splitting>Executive Design + Leadership</div>
       </div>
     </div>
   </div>
@@ -68,34 +68,19 @@ description: Product design leader with over 20 years experience in e-commerce, 
   <h2 class="font-serif fade-in-element mb-0 flex justify-between items-end"><span class="~text-2xl/5xl">Dive right in.</span><a href="/portfolio" class="~text-lg/3xl">Scope my portfolio &rarr;</a></h2>
   <div class="portfolio-list !max-w-none !mt-8">
     <div class="portfolio-list__item fade-in-element">
-        <a class="portfolio-list__link" href="/portfolio/redacted-mlb-game/">
-            <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
-        </a>
-        <h3 class="portfolio-list__title"><a href="/portfolio/redacted-mlb-game/">[Redacted] MLB Game</a></h3>
-        <p class="portfolio-list__description">A series of mockups for a mobile game concept using digital collectibles as game pieces.</p>
+      <a class="portfolio-list__link" href="/portfolio/dc3-interactive-comic-reader/">
+          <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
+          <h3 class="portfolio-list__title">DC3 Interactive Comic Reader</h3>
+          <p class="portfolio-list__description">An interactive comic book reader application for Candy's DC3 digital comic collection.</p>
+      </a>
     </div>
     <div class="portfolio-list__item fade-in-element">
-        <a href="/portfolio/dc3-interactive-comic-reader/">
-            <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
-        </a>
-        <h3 class="portfolio-list__title"><a href="/portfolio/dc3-interactive-comic-reader/">DC3 Interactive Comic Reader</a></h3>
-        <p class="portfolio-list__description">An interactive comic book reader application for Candy's DC3 digital comic collection.</p>
+      <a class="portfolio-list__link" href="/portfolio/palm-quest/">
+          <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
+          <h3 class="portfolio-list__title">Palm Quest App Prototype</h3>
+          <p class="portfolio-list__description">Creating a gamified airdrop farming experience with SvelteKit.</p>
+      </a>
     </div>
-    <div class="portfolio-list__item fade-in-element">
-        <a class="portfolio-list__link" href="/portfolio/palm-quest/">
-            <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
-        </a>
-        <h3 class="portfolio-list__title"><a href="/portfolio/palm-quest/">Palm Quest App Prototype</a></h3>
-        <p class="portfolio-list__description">Creating a gamified airdrop farming experience with SvelteKit.</p>
-    </div>
-    <div class="portfolio-list__item fade-in-element">
-        <a class="portfolio-list__link" href="/portfolio/candy-physical-digital-feature/">
-            <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
-        </a>
-        <h3 class="portfolio-list__title"><a href="/portfolio/candy-physical-digital-feature/">Candy.io Physical-Digital Checkout</a></h3>
-        <p class="portfolio-list__description">Designing a new feature for Candy's existing checkout process.</p>
-    </div>
-
   </div>
 </div>
 
