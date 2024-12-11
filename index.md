@@ -25,7 +25,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
 
 <div id="aboutSection" class="content-container ~mb-16/32">
   <div class="max-w-prose">
-    <p class="~text-xl/2xl"><strong>I'm Chris Wallace</strong>: a design executive with 20 years in startups, product, and agency. Empathy, craft, and vision are the tools I use to build successful, high-performing design orgs. I've worked with Microsoft, Starbucks, Google, Facebook, The Nobel Prize, The Walking Dead, Breaking Bad, et al.</p>
+    <p class="~text-lg/2xl"><strong>I'm Chris Wallace</strong>: a design executive with 20 years in startups, product, and agency. Empathy, craft, and vision are the tools I use to build successful, high-performing design orgs. I've worked with Microsoft, Starbucks, Google, Facebook, The Nobel Prize, The Walking Dead, Breaking Bad, et al.</p>
   </div>
 </div>
 
