@@ -63,7 +63,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 <p class="portfolio-list__description">A gradual, deliberate shift in design language and product features.</p>
             </a>
         </div>
-        <div class="testimonial fade-in-element min-h-[300px] bg-gray-200 dark:bg-[#202020] text-center flex flex-col justify-center items-center py-12 px-12 rounded-md">
+        <div class="testimonial testimonial-stage fade-in-element">
             <blockquote class="testimonial__quote">
                 <p class="testimonial__text">"Chris is <em class="testimonial__emphasis">by far</em> the best designer <span class="testimonial__highlight">I've ever worked with</span>."</p>
                 <p class="testimonial__author text-xs">&mdash; Yaro Plashenko, Head of Product, Ecosystem & Product Partnerships @ Immutable</p>
@@ -83,7 +83,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 <p class="portfolio-list__description">Virtual generative art museum with Ethereum and Tezos wallet integration.</p>
             </a>
         </div>
-        <div class="testimonial fade-in-element min-h-[300px] bg-gray-200 dark:bg-[#202020] text-center flex flex-col justify-center items-center py-12 px-12 rounded-md">
+        <div class="testimonial testimonial-stage fade-in-element">
             <blockquote class="testimonial__quote">
                 <p class="testimonial__text">"If your goal is to work with someone who inspires, motivates and brings it day in and day out then look no further! His expertise <span class="testimonial__highlight">made me a stronger designer</span>."</p>
                 <p class="testimonial__author text-xs">&mdash; Aaron Frebowitz, Design Director @ Candy Digital</p>

@@ -3,7 +3,7 @@
 }
 
 .animated-headline .text-paragraph{
-  @apply text-highlight ~text-6xl/7xl !capitalize font-medium inline md:inline-block;
+  @apply text-highlight ~text-5xl/7xl !capitalize font-medium block md:inline;
 }
 
 .text-paragraph {

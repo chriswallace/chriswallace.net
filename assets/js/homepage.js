@@ -70,6 +70,7 @@ function startGSAPAnimations() {
   const videoPlayer = document.querySelector('video-player');
   const preloader = document.querySelector('.content-preloader');
   const headlines = document.querySelectorAll('.animated-headline');
+  const aboutSection = document.querySelector('#aboutSection');
 
   // Create main timeline
   const mainTimeline = gsap.timeline()
@@ -91,13 +92,13 @@ function startGSAPAnimations() {
       ease: "power2.out"
     });
 
-
   // Update video animation
   if (videoPlayer) {
     // First ensure initial styles are applied
     gsap.set(videoPlayer, {
       opacity: 0,
-      scale: 0.95
+      scale: 1,
+      top: 16
     });
     
     // Animate the video-player element
@@ -105,6 +106,7 @@ function startGSAPAnimations() {
       duration: 0.8,
       opacity: 1,
       scale: 1,
+      top: 0,
       ease: "power2.out"
     });
   }
@@ -123,27 +125,20 @@ function startGSAPAnimations() {
     }
   });
 
-  const notificationsButton = document.querySelector('.notifications--button');
-
-  if (notificationsButton) {
-    // Remove the opacity-0 class before starting the animation
-    notificationsButton.classList.remove('opacity-0');
-
-    // Add animation for notifications button
-    mainTimeline.from(notificationsButton, {
-      duration: 0.6,
+  // About section animation
+  if (aboutSection) {
+    // Set initial state
+    gsap.set(aboutSection, {
       opacity: 0,
-      y: 10,
-      ease: "power2.out",
-      onStart: () => {
-        gsap.to(notificationsButton, {
-          duration: 0.1,
-          x: -2,
-          repeat: 3,
-          yoyo: true,
-          ease: "power1.inOut"
-        });
-      }
+      y: 30
     });
+
+    // Add to main timeline
+    mainTimeline.to(aboutSection, {
+      duration: 0.8,
+      opacity: 1,
+      y: 0,
+      ease: "power3.out"
+    }, "-=0.4"); // Overlap with previous animation
   }
 }

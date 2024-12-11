@@ -10,29 +10,29 @@ description: Product design leader with over 20 years experience in e-commerce, 
   </div>
 </div>
 
-<div class="content-container relative ~mt-40/24 mb-8">
+<div class="content-container relative ~mt-32/24 mb-8">
   <div class="animated-headline">
     <div class="text-container">
-      <div class="text-paragraph forwards" data-splitting>Bold Design + Product Leadership</div>
+      <div class="text-paragraph forwards" data-splitting>Transformative design.</div>
+      <div class="text-paragraph backwards" data-splitting>Exceptional leadership.</div>
     </div>
   </div>
 </div>
 
-<div class="content-container-wo">
+<div class="content-container-wo mb-8">
   <video-player id="backgroundVideo" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/portfolio-video.mp4" video-title="2024 Showreel" video-description="A collection of works from my latest role leading product design at Candy Digital." class="text-primary-600 mb-12" autoplay playsinline muted loop nocontrols></video-player>
 </div>
 
-<div class="content-container">
-  <div class="max-w-prose fade-in-element">
+<div id="aboutSection" class="content-container ~mb-16/32">
+  <div class="max-w-prose">
     <p class="~text-xl/2xl"><strong>I'm Chris Wallace</strong>: a design executive with 20 years in startups, product, and agency. Empathy, craft, and vision are the tools I use to build successful, high-performing design orgs. I've worked with Microsoft, Starbucks, Google, Facebook, The Nobel Prize, The Walking Dead, Breaking Bad, et al.</p>
-    <p>This site is built on <a href="https://jekyllrb.com">Jekyll</a> and <a href="https://tailwindcss.com/">TailwindCSS</a>, hosted by <a href="https://pages.github.com/">Github Pages</a>. Typeset in <a href="https://fonts.adobe.com/fonts/norman-variable">Norman Variable</a> and <a href="https://fonts.adobe.com/fonts/acumin">Acumin</a>.</p>
   </div>
 </div>
 
-<div class="content-container space-y-24 md:py-12">
+<div class="content-container space-y-24 my-32">
   <div class="md:grid md:grid-cols-3">
     <div>
-      <h2 class="~text-2xl/4xl md:mt-1.5 fade-in-element">What's new?</h2>
+      <h2 class="~text-2xl/4xl md:mt-1.5 fade-in-element">Freshly published</h2>
     </div>
     <div class="notifications md:col-span-2">
       <a class="notifications--notification-item article fade-in-element" href="/articles/marketing-ai-digital-products">
@@ -83,6 +83,12 @@ description: Product design leader with over 20 years experience in e-commerce, 
           <p class="portfolio-list__description">Creating a gamified airdrop farming experience with SvelteKit.</p>
       </a>
     </div>
+  </div>
+</div>
+
+<div class="content-container ~mb-16/32 fade-in-element">
+  <div class="max-w-prose">
+    <p class="~text-sm/base">This site is built on <a href="https://jekyllrb.com">Jekyll</a> and <a href="https://tailwindcss.com/">TailwindCSS</a>, hosted by <a href="https://pages.github.com/">Github Pages</a>. Typeset in <a href="https://fonts.adobe.com/fonts/norman-variable">Norman Variable</a> and <a href="https://fonts.adobe.com/fonts/instrument-sans-variable">Instrument Sans Variable</a>.</p>
   </div>
 </div>
 

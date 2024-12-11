@@ -651,7 +651,7 @@ h1 {
   margin-bottom: 3rem;
   font-family: "norman-variable", serif;
   font-size: clamp(2.25rem,1.17rem + 2.699vw,4.625rem)/* fluid type from 2.25rem at 40rem to 4.625rem at 128rem */;
-  line-height: clamp(3.25rem,1.66rem + 3.98vw,6.75rem)/* fluid from 3.25rem at 40rem to 6.75rem at 128rem */;
+  line-height: clamp(3.25rem,1.09rem + 5.4vw,8rem)/* fluid from 3.25rem at 40rem to 8rem at 128rem */;
   font-variation-settings: "wght" 475;
 }
 
@@ -971,6 +971,11 @@ article {
   margin-bottom: 3rem;
 }
 
+.my-32 {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
 .\!mt-4 {
   margin-top: 1rem !important;
 }
@@ -1157,10 +1162,6 @@ article {
 
 .max-h-full {
   max-height: 100%;
-}
-
-.min-h-\[300px\] {
-  min-height: 300px;
 }
 
 .min-h-\[480px\] {
@@ -1422,10 +1423,6 @@ article {
   border-radius: 0.5rem;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
 .rounded-sm {
   border-radius: 0.125rem;
 }
@@ -1521,11 +1518,6 @@ article {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(206 208 211 / var(--tw-bg-opacity));
-}
-
 .bg-gray-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(18 18 18 / var(--tw-bg-opacity));
@@ -1603,11 +1595,6 @@ article {
   padding: 2rem;
 }
 
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1616,11 +1603,6 @@ article {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .py-3 {
@@ -1836,6 +1818,11 @@ article {
   line-height: clamp(1.85rem,1.44rem + 1.02vw,2.75rem)/* fluid from 1.85rem at 40rem to 2.75rem at 128rem */;
 }
 
+.\~text-sm\/base {
+  font-size: clamp(0.82rem,0.74rem + 0.2vw,1rem)/* fluid type from 0.82rem at 40rem to 1rem at 128rem */;
+  line-height: clamp(1.5rem,1.43rem + 0.17vw,1.65rem)/* fluid from 1.5rem at 40rem to 1.65rem at 128rem */;
+}
+
 .\~text-xl\/2xl {
   font-size: clamp(1.25rem,1.14rem + 0.28vw,1.5rem)/* fluid type from 1.25rem at 40rem to 1.5rem at 128rem */;
   line-height: clamp(2rem,1.77rem + 0.57vw,2.5rem)/* fluid from 2rem at 40rem to 2.5rem at 128rem */;
@@ -1851,8 +1838,12 @@ article {
   line-height: 1.5rem;
 }
 
-.\~mt-40\/24 {
-  margin-top: clamp(6rem,11.82rem + -4.55vw,10rem)/* fluid from 10rem at 40rem to 6rem at 128rem */;
+.\~mt-32\/24 {
+  margin-top: clamp(6rem,8.91rem + -2.27vw,8rem)/* fluid from 8rem at 40rem to 6rem at 128rem */;
+}
+
+.\~mb-16\/32 {
+  margin-bottom: clamp(4rem,2.18rem + 4.55vw,8rem)/* fluid from 4rem at 40rem to 8rem at 128rem */;
 }
 
 .\~p-4\/8 {
@@ -3038,13 +3029,39 @@ article {
   align-items: center;
   justify-content: center;
   border-radius: 1rem;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 0px;
+  padding-right: 0px;
   text-align: left;
 }
 
 @media (min-width: 48rem) {
   .testimonial {
     padding: 3rem;
+  }
+}
+
+.testimonial-stage {
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(206 208 211 / var(--tw-bg-opacity));
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .testimonial-stage {
+    --tw-bg-opacity: 1;
+    background-color: rgb(32 32 32 / var(--tw-bg-opacity));
   }
 }
 
@@ -3585,11 +3602,11 @@ a.portfolio-list__link:hover .portfolio-list__image {
 }
 
 .animated-headline .text-paragraph {
-  display: inline;
+  display: block;
   font-weight: 500;
   text-transform: capitalize !important;
-  font-size: clamp(3.25rem,2.625rem + 1.563vw,4.625rem)/* fluid type from 3.25rem at 40rem to 4.625rem at 128rem */;
-  line-height: clamp(4.6rem,3.62rem + 2.44vw,6.75rem)/* fluid from 4.6rem at 40rem to 6.75rem at 128rem */;
+  font-size: clamp(2.625rem,1.716rem + 2.273vw,4.625rem)/* fluid type from 2.625rem at 40rem to 4.625rem at 128rem */;
+  line-height: clamp(3.5rem,1.45rem + 5.11vw,8rem)/* fluid from 3.5rem at 40rem to 8rem at 128rem */;
   font-variation-settings: 'wdth' 100, 'wght' 500;
 }
 
@@ -3602,7 +3619,7 @@ a.portfolio-list__link:hover .portfolio-list__image {
 
 @media (min-width: 48rem) {
   .animated-headline .text-paragraph {
-    display: inline-block;
+    display: inline;
   }
 }
 
@@ -4545,11 +4562,6 @@ video::-webkit-media-controls {
     padding-bottom: 0px;
   }
 
-  .md\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
   .md\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -4681,11 +4693,6 @@ video::-webkit-media-controls {
   .dark\:border-gray-700 {
     --tw-border-opacity: 1;
     border-color: rgb(75 78 83 / var(--tw-border-opacity));
-  }
-
-  .dark\:bg-\[\#202020\] {
-    --tw-bg-opacity: 1;
-    background-color: rgb(32 32 32 / var(--tw-bg-opacity));
   }
 
   .dark\:bg-gray-900\/20 {

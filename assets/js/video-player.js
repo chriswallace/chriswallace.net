@@ -87,6 +87,14 @@ class VideoPlayer extends HTMLElement {
 
         // Add this after other event listeners
         document.addEventListener('fullscreenchange', () => this.handleFullscreenChange());
+
+        // Add after existing element initialization
+        this.setupAccessibilityFeatures();
+        
+        // Add to existing event listeners
+        this.video.addEventListener('loadedmetadata', () => {
+            this.setupCaptions();
+        });
     }
 
     render(isTouchDevice = false) {
@@ -478,6 +486,23 @@ class VideoPlayer extends HTMLElement {
                         display: flex;
                         align-items: center;
                     }
+
+                    /* Add focus styles */
+                    button:focus-visible,
+                    .progress-bar:focus-visible {
+                        outline: 2px solid var(--theme-color);
+                        outline-offset: 2px;
+                    }
+                    
+                    /* Add high contrast mode support */
+                    @media (forced-colors: active) {
+                        .icon {
+                            forced-color-adjust: auto;
+                        }
+                        .progress-bar-fill {
+                            background: CanvasText;
+                        }
+                    }
                 ` : ''}
             </style>
             ${!isTouchDevice ? `<div class="video-overlay"></div>` : ''}
@@ -816,6 +841,106 @@ class VideoPlayer extends HTMLElement {
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = Math.floor(seconds % 60);
         return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+    }
+
+    setupAccessibilityFeatures() {
+        // Set explicit tab order for controls
+        const tabOrder = [
+            this.playButton,
+            this.muteButton, 
+            this.volumeBars,
+            this.progressBar,
+            this.fullscreenButton
+        ];
+        
+        tabOrder.forEach((element, index) => {
+            if (element) {
+                element.setAttribute('tabindex', index + 1);
+            }
+        });
+
+        // Add ARIA labels and roles
+        this.video.setAttribute('aria-label', this.getAttribute('video-title') || 'Video player');
+        this.progressBar?.setAttribute('role', 'slider');
+        this.progressBar?.setAttribute('aria-label', 'Progress');
+        this.progressBar?.setAttribute('aria-valuemin', '0');
+        this.progressBar?.setAttribute('aria-valuemax', '100');
+        this.progressBar?.setAttribute('aria-valuenow', '0');
+
+        // Add keyboard controls
+        this.setupKeyboardControls();
+    }
+
+    setupCaptions() {
+        // Check for caption tracks
+        const tracks = this.video.textTracks;
+        if (tracks.length > 0) {
+            // Add caption toggle button
+            const captionButton = document.createElement('button');
+            captionButton.innerHTML = `
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5z"/>
+                    <path d="M7 8h3m-3 4h7m-7 4h3"/>
+                    <path d="M14 8h3m-3 4h3m-3 4h3"/>
+                </svg>
+                <span class="sr-only">Toggle Captions</span>
+            `;
+            captionButton.setAttribute('aria-label', 'Toggle closed captions');
+            
+            // Insert before fullscreen button
+            const rightControls = this.shadowRoot.querySelector('.right-controls');
+            rightControls?.insertBefore(captionButton, this.fullscreenButton);
+
+            // Handle caption toggling
+            let captionsOn = false;
+            captionButton.addEventListener('click', () => {
+                captionsOn = !captionsOn;
+                Array.from(tracks).forEach(track => {
+                    if (track.kind === 'captions' || track.kind === 'subtitles') {
+                        track.mode = captionsOn ? 'showing' : 'hidden';
+                    }
+                });
+                captionButton.setAttribute('aria-pressed', captionsOn);
+            });
+        }
+    }
+
+    setupKeyboardControls() {
+        this.addEventListener('keydown', (e) => {
+            switch(e.key) {
+                case ' ':
+                case 'k':
+                    e.preventDefault();
+                    this.togglePlay();
+                    break;
+                case 'm':
+                    e.preventDefault();
+                    this.toggleMute();
+                    break;
+                case 'f':
+                    e.preventDefault();
+                    this.toggleFullscreen();
+                    break;
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    this.video.currentTime = Math.max(0, this.video.currentTime - 5);
+                    break;
+                case 'ArrowRight':
+                    e.preventDefault();
+                    this.video.currentTime = Math.min(this.video.duration, this.video.currentTime + 5);
+                    break;
+                case 'ArrowUp':
+                    e.preventDefault();
+                    this.video.volume = Math.min(1, this.video.volume + 0.1);
+                    this.updateVolumeBars(this.video.volume);
+                    break;
+                case 'ArrowDown':
+                    e.preventDefault();
+                    this.video.volume = Math.max(0, this.video.volume - 0.1);
+                    this.updateVolumeBars(this.video.volume);
+                    break;
+            }
+        });
     }
 }
 

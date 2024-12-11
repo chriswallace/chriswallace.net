@@ -1,5 +1,9 @@
 .testimonial {
-  @apply flex flex-col items-center min-h-[340px] justify-center rounded-2xl p-8 md:p-12 text-left;
+  @apply flex flex-col items-center min-h-[340px] justify-center rounded-2xl py-8 px-0 md:p-12 text-left;
+}
+
+.testimonial-stage{
+  @apply min-h-[300px] bg-gray-200 dark:bg-[#202020] text-center flex flex-col justify-center items-center py-12 px-12 rounded-md;
 }
 
 .portfolio-list .testimonial {
