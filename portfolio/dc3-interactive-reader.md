@@ -68,7 +68,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png
     <div class="bg-[#000000] md:py-4 mr-auto flex justify-center items-center mb-2 rounded-xl">
       <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" width="1520" height="840" alt="" loading="lazy">
     </div>
-    <figcaption>Icons and visual elements</figcaption>
+    <figcaption>Popups and information overlays</figcaption>
   </figure>
 
 </div>
