@@ -9,7 +9,7 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-version: 3.6.5
+version: 3.6.6
 
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
@@ -27,7 +27,7 @@ github_username: chriswallace
 twitter:
   username: chriswallace
   card: summary_large_image
-logo: /assets/images/logo.png  # Path to your site's logo
+logo: /assets/images/logo.png # Path to your site's logo
 social:
   name: Chris Wallace
   links:
@@ -36,13 +36,12 @@ social:
 
 # Default front matter settings
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: post
-      image: /assets/images/default-image.png  # Default social sharing image
+      image: /assets/images/default-image.png # Default social sharing image
       author: Chris Wallace
 
 # Build settings
