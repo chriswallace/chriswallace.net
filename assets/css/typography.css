@@ -1,6 +1,6 @@
 @layer base {
   .text-foreground {
-    @apply text-gray-700 dark:text-gray-400;
+    @apply text-gray-700 dark:text-gray-300;
   }
 
   .text-highlight{
@@ -16,7 +16,7 @@
   }
 
   strong{
-    @apply font-semibold text-highlight;
+    @apply font-medium text-highlight;
   }
   
   html,

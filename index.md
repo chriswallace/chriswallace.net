@@ -13,23 +13,37 @@ description: Product design leader with over 20 years experience in e-commerce, 
 <div class="content-container relative ~mt-32/24 mb-8">
   <div class="animated-headline">
     <div class="text-container">
-      <div class="text-paragraph forwards" data-splitting>Transformative design.</div>
-      <div class="text-paragraph backwards" data-splitting>Exceptional leadership.</div>
+      <div class="text-paragraph forwards" data-splitting>Digital transformation?</div>
+      <div class="text-paragraph backwards" data-splitting>It's kinda my thing.</div>
     </div>
   </div>
 </div>
 
-<div class="content-container-wo mb-8">
+<div class="content-container-wo my-16">
   <video-player id="backgroundVideo" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/portfolio-video.mp4" video-title="2024 Showreel" video-description="A collection of works from my latest role leading product design at Candy Digital." class="text-primary-600 mb-12" autoplay playsinline muted loop nocontrols></video-player>
 </div>
 
 <div id="aboutSection" class="content-container ~mb-16/32">
   <div class="max-w-prose">
-    <p class="~text-lg/2xl"><strong>I'm Chris Wallace</strong>: a design executive with 20 years in startups, product, and agency. Empathy, craft, and vision are the tools I use to build successful, high-performing design orgs. I've worked with Microsoft, Starbucks, Google, Facebook, The Nobel Prize, The Walking Dead, Breaking Bad, et al.</p>
+    <p class="~text-lg/2xl"><strong>I'm Chris Wallace</strong>, a design executive with 20 years in startups, product, and agency. Empathy, craft, and vision are the tools I use to build successful, high-performing design orgs. I&lsquo;m looking for a new leadership role where I can lead a meaningful brand and user experience transformation.</p>
   </div>
+  <dl class="grid grid-cols-2 gap-6 md:flex md:flex-row md:gap-12 max-w-none">
+    <div>
+      <dt>Work Status</dt>
+      <dd class="ml-0 flex gap-2 items-center"><i class="w-[6px] h-[6px] bg-green-500 overflow-hidden rounded-full inline-block mb-1.5 shadow-[0_0_8px_4px_rgba(0,255,0,0.45)]"></i> <a class="no-underline text-foreground hover:underline" href="/contact">Available</a></dd>
+    </div>
+    <div>
+      <dt>Available to Start</dt>
+      <dd class="ml-0">December 2024</dd>
+    </div>
+    <div class="col-span-2">
+      <dt>Former Clients</dt>
+      <dd class="ml-0">Microsoft, Starbucks, Google, The Walking Dead, Breaking Bad, Mad Men, et al.</dd>
+    </div>
+  </dl>
 </div>
 
-<div class="content-container space-y-24 my-32">
+<div class="content-container space-y-24 ~my-20/32">
   <div class="md:grid md:grid-cols-3">
     <div>
       <h2 class="~text-2xl/4xl md:mt-1.5 fade-in-element">Freshly published</h2>
@@ -54,7 +68,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
     <a class="inline-block mx-auto relative transition-transform transition-200 hover:scale-105 rounded-xl shadow-xl overflow-hidden" href="/portfolio/woodies/">
       <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black from-0% to-60% ~p-4/8 z-20">
         <span class="text-white uppercase tracking-widest ~text-xs/sm decoration-offset-4">Don't miss this</span>
-        <h3 class="mt-3 mb-0 font-serif font-semibold ~text-xl/5xl max-w-[75%] md:max-w-[50%] text-white">Woodies&mdash;a web3 entertainment brand powered by nature</h3>
+        <h3 class="mt-3 mb-0 font-serif font-semibold ~text-xl/5xl max-w-[85%] md:max-w-[50%] text-white">Woodies&mdash;a web3 entertainment brand powered by nature</h3>
       </div>
       <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-thumbnail.webp?tr=q-50,f-auto" class="mx-auto max-w-full relative z-10" alt="" loading="lazy" width="1600" height="1080">
     </a>

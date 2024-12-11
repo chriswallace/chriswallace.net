@@ -3,7 +3,7 @@
 }
 
 .notifications--notification-item{
-  @apply ~text-base/xl no-underline text-highlight block;
+  @apply ~text-xl/2xl no-underline text-highlight block;
 }
 
 .notifications--notification-item .notifications--notification-overline{
