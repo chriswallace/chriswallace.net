@@ -578,6 +578,30 @@ video {
   }
 }
 
+strong {
+  --tw-text-opacity: 1;
+  color: rgb(18 18 18 / var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  strong {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
+strong {
+  font-weight: 600;
+  font-variation-settings: 'wdth' 100, 'wght' 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  strong {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
 html,
   body {
   font-size: clamp(1rem,0.89rem + 0.28vw,1.25rem)/* fluid type from 1rem at 40rem to 1.25rem at 128rem */;
@@ -947,11 +971,6 @@ article {
   margin-bottom: 3rem;
 }
 
-.my-\[30px\] {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
 .\!mt-4 {
   margin-top: 1rem !important;
 }
@@ -1277,16 +1296,8 @@ article {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
 .flex-col {
   flex-direction: column;
-}
-
-.place-content-between {
-  place-content: space-between;
 }
 
 .items-start {
@@ -1680,10 +1691,6 @@ article {
   text-transform: uppercase;
 }
 
-.\!capitalize {
-  text-transform: capitalize !important;
-}
-
 .leading-\[0\.75\] {
   line-height: 0.75;
 }
@@ -1811,6 +1818,11 @@ article {
   line-height: clamp(1.85rem,1.44rem + 1.02vw,2.75rem)/* fluid from 1.85rem at 40rem to 2.75rem at 128rem */;
 }
 
+.\~text-xl\/2xl {
+  font-size: clamp(1.25rem,1.14rem + 0.28vw,1.5rem)/* fluid type from 1.25rem at 40rem to 1.5rem at 128rem */;
+  line-height: clamp(2rem,1.77rem + 0.57vw,2.5rem)/* fluid from 2rem at 40rem to 2.5rem at 128rem */;
+}
+
 .\~text-xl\/5xl {
   font-size: clamp(1.25rem,0.625rem + 1.563vw,2.625rem)/* fluid type from 1.25rem at 40rem to 2.625rem at 128rem */;
   line-height: clamp(2rem,1.32rem + 1.7vw,3.5rem)/* fluid from 2rem at 40rem to 3.5rem at 128rem */;
@@ -1819,6 +1831,10 @@ article {
 .\~text-xs\/sm {
   font-size: clamp(0.75rem,0.72rem + 0.08vw,0.82rem)/* fluid type from 0.75rem at 40rem to 0.82rem at 128rem */;
   line-height: 1.5rem;
+}
+
+.\~mt-40\/24 {
+  margin-top: clamp(6rem,11.82rem + -4.55vw,10rem)/* fluid from 10rem at 40rem to 6rem at 128rem */;
 }
 
 .\~p-4\/8 {
@@ -3052,8 +3068,10 @@ article {
   max-width: none;
   text-align: center;
   font-family: "norman-variable", serif;
+  font-weight: 500;
   font-size: clamp(1.5rem,1.16rem + 0.85vw,2.25rem)/* fluid type from 1.5rem at 40rem to 2.25rem at 128rem */;
   line-height: clamp(2.5rem,2.16rem + 0.85vw,3.25rem)/* fluid from 2.5rem at 40rem to 3.25rem at 128rem */;
+  font-variation-settings: 'wdth' 100, 'wght' 500;
 }
 
 .testimonial__author {
@@ -3525,9 +3543,46 @@ a.portfolio-list__link:hover .portfolio-list__image {
   font-style: italic;
 }
 
+.animated-headline .text-container {
+  text-align: left;
+}
+
+.animated-headline .text-paragraph {
+  --tw-text-opacity: 1;
+  color: rgb(18 18 18 / var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .animated-headline .text-paragraph {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
+.animated-headline .text-paragraph {
+  display: inline;
+  font-weight: 500;
+  text-transform: capitalize !important;
+  font-size: clamp(3.25rem,2.625rem + 1.563vw,4.625rem)/* fluid type from 3.25rem at 40rem to 4.625rem at 128rem */;
+  line-height: clamp(4.6rem,3.62rem + 2.44vw,6.75rem)/* fluid from 4.6rem at 40rem to 6.75rem at 128rem */;
+  font-variation-settings: 'wdth' 100, 'wght' 500;
+}
+
+@media (prefers-color-scheme: dark) {
+  .animated-headline .text-paragraph {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
+@media (min-width: 48rem) {
+  .animated-headline .text-paragraph {
+    display: inline-block;
+  }
+}
+
 .text-paragraph {
   max-width: none;
-  flex-grow: 1;
   text-align: left;
   line-height: 1 !important;
 }
@@ -4413,10 +4468,6 @@ video::-webkit-media-controls {
     margin-top: 8rem;
   }
 
-  .md\:block {
-    display: block;
-  }
-
   .md\:grid {
     display: grid;
   }
@@ -4439,10 +4490,6 @@ video::-webkit-media-controls {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .md\:justify-between {
-    justify-content: space-between;
   }
 
   .md\:gap-4 {

@@ -91,19 +91,6 @@ function startGSAPAnimations() {
       ease: "power2.out"
     });
 
-  // Handle text animations
-  sections.forEach((section) => {
-    const chars = section.querySelectorAll('.text-paragraph .word > .char, .whitespace');
-    if (chars.length) {
-      mainTimeline.to(chars, {
-        duration: 0.5,
-        ease: 'Power3.easeInOut',
-        y: '0',
-        stagger: 0.014,
-        opacity: 1,
-      }, "-=0.2");
-    }
-  });
 
   // Update video animation
   if (videoPlayer) {
@@ -121,6 +108,20 @@ function startGSAPAnimations() {
       ease: "power2.out"
     });
   }
+  
+  // Handle text animations
+  sections.forEach((section) => {
+    const chars = section.querySelectorAll('.text-paragraph .word > .char, .whitespace');
+    if (chars.length) {
+      mainTimeline.to(chars, {
+        duration: 0.5,
+        ease: 'Power3.easeInOut',
+        y: '0',
+        stagger: 0.014,
+        opacity: 1,
+      }, "-=0.2");
+    }
+  });
 
   const notificationsButton = document.querySelector('.notifications--button');
 

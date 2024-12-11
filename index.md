@@ -10,21 +10,23 @@ description: Product design leader with over 20 years experience in e-commerce, 
   </div>
 </div>
 
-<div class="content-container relative mb-8 md:mb-0">
-  <div class="animated-headline my-[30px]">
-    <div class="text-container place-content-between flex flex-row justify-end items-end md:justify-between gap-0">
-      <div>
-        <div class="text-paragraph text-highlight forwards text-lg !capitalize font-medium" data-splitting>Chris Wallace</div>
-      </div>
-      <div>
-        <div class="text-paragraph text-highlight backwards text-lg !capitalize font-medium hidden md:block" data-splitting>Executive Design + Leadership</div>
-      </div>
+<div class="content-container relative ~mt-40/24 mb-8">
+  <div class="animated-headline">
+    <div class="text-container">
+      <div class="text-paragraph forwards" data-splitting>Bold Design + Product Leadership</div>
     </div>
   </div>
 </div>
 
-<div class="content-container mx-auto">
-  <video-player id="backgroundVideo" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/portfolio-video.mp4" video-title="2024 Showreel" video-description="A collection of works from my latest role leading product design at Candy Digital." class="text-primary-600" autoplay playsinline muted loop></video-player>
+<div class="content-container-wo">
+  <video-player id="backgroundVideo" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/portfolio-video.mp4" video-title="2024 Showreel" video-description="A collection of works from my latest role leading product design at Candy Digital." class="text-primary-600 mb-12" autoplay playsinline muted loop nocontrols></video-player>
+</div>
+
+<div class="content-container">
+  <div class="max-w-prose fade-in-element">
+    <p class="~text-xl/2xl"><strong>I'm Chris Wallace</strong>: a design executive with 20 years in startups, product, and agency. Empathy, craft, and vision are the tools I use to build successful, high-performing design orgs. I've worked with Microsoft, Starbucks, Google, Facebook, The Nobel Prize, The Walking Dead, Breaking Bad, et al.</p>
+    <p>This site is built on <a href="https://jekyllrb.com">Jekyll</a> and <a href="https://tailwindcss.com/">TailwindCSS</a>, hosted by <a href="https://pages.github.com/">Github Pages</a>. Typeset in <a href="https://fonts.adobe.com/fonts/norman-variable">Norman Variable</a> and <a href="https://fonts.adobe.com/fonts/acumin">Acumin</a>.</p>
+  </div>
 </div>
 
 <div class="content-container space-y-24 md:py-12">

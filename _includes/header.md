@@ -34,9 +34,6 @@
             </svg>
           </a>
         </div>
-        <p>
-          Copyright &copy; 2023-2024 Chris Wallace. Built with <a href="https://jekyllrb.com">Jekyll</a> and <a href="https://pages.github.com">Github Pages</a>.
-        </p>
       </div>
     </div>
   </nav>

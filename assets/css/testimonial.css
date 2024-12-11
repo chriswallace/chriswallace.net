@@ -15,7 +15,7 @@
 }
 
 .testimonial__text {
-  @apply max-w-none mb-3 font-serif text-center ~text-2xl/4xl text-foreground;
+  @apply max-w-none mb-3 font-medium font-serif text-center ~text-2xl/4xl text-foreground;
 }
 
 .testimonial__author {

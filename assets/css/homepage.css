@@ -1,5 +1,13 @@
+.animated-headline .text-container{
+  @apply text-left;
+}
+
+.animated-headline .text-paragraph{
+  @apply text-highlight ~text-6xl/7xl !capitalize font-medium inline md:inline-block;
+}
+
 .text-paragraph {
-  @apply max-w-none grow text-left !leading-none;
+  @apply max-w-none text-left !leading-none;
 }
 
 .text-paragraph .word{
