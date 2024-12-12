@@ -79,8 +79,15 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
         <div class="portfolio-list__item fade-in-element">
             <a class="portfolio-list__link" href="/portfolio/candyvision/">
                 <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
+                <h3 class="portfolio-list__title">CandyVision</h3>
+                <p class="portfolio-list__description">A new challenge product for MLB fans, debuted for the 2024 All-Start Game.</p>
+            </a>
+        </div>
+        <div class="portfolio-list__item fade-in-element">
+            <a class="portfolio-list__link portfolio-list__link--external" href="https://wallacemuseum.com" target="_blank">
+                <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/wallace-museum.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
                 <h3 class="portfolio-list__title">Wallace Museum</h3>
-                <p class="portfolio-list__description">Virtual generative art museum with Ethereum and Tezos wallet integration.</p>
+                <p class="portfolio-list__description">A digital art gallery showcasing my expansive private collection.</p>
             </a>
         </div>
         <div class="testimonial testimonial-stage fade-in-element">
@@ -89,19 +96,17 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 <p class="testimonial__author text-xs">&mdash; Aaron Frebowitz, Design Director @ Candy Digital</p>
             </blockquote>
         </div>
-        <div class="portfolio-list__item fade-in-element">
-            <a class="portfolio-list__link" href="https://10up.com/our-work/california-dmv-website-redesign/" target="_blank">
-                <div class="zoom-container">
-                    <div class="zoomable">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv.png?tr=w-1000,f-auto" class="portfolio-list__image dark:hidden" alt="" loading="lazy" width="800" height="540">
-                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-1000,f-auto" class="portfolio-list__image hidden dark:block" alt="" loading="lazy" width="800" height="540">
-                    </div>
+        <div class="portfolio-list__item portfolio-list__link--external fade-in-element">
+            <div class="zoom-container !mb-8">
+                <div class="zoomable">
+                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv.png?tr=w-1000,f-auto" class="portfolio-list__image dark:hidden" alt="" loading="lazy" width="800" height="540">
+                    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-1000,f-auto" class="portfolio-list__image hidden dark:block" alt="" loading="lazy" width="800" height="540">
                 </div>
-                <h3 class="portfolio-list__title">California DMV Digital Transformation</h3>
-                <p class="portfolio-list__description">Directed a comprehensive redesign of the California DMV's website and application suite, enhancing user experience for millions of drivers across the U.S.</p>
-            </a>
+            </div>
+            <h3 class="portfolio-list__title"><a href="https://10up.com/our-work/california-dmv-website-redesign/" target="_blank">California DMV Digital Transformation</a></h3>
+            <p class="portfolio-list__description">Directed a comprehensive redesign of the California DMV's website and application suite, enhancing user experience for millions of drivers across the U.S.</p>
         </div>
-        <div class="portfolio-list__item fade-in-element">
+        <div class="portfolio-list__item portfolio-list__link--external fade-in-element">
             <div class="portfolio-list__link">
                 <div class="zoom-container">
                     <div class="zoomable">
@@ -115,7 +120,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 <p class="portfolio-list__description">Revamped the online newsroom for Starbucks, focusing on visual design and branding to enhance storytelling and user engagement.</p>
             </div>
         </div>
-        <div class="portfolio-list__item fade-in-element">
+        <div class="portfolio-list__item portfolio-list__link--external fade-in-element">
             <div class="portfolio-list__link">
                 <div class="zoom-container">
                     <div class="zoomable">
@@ -126,7 +131,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 <p class="portfolio-list__description">Oversaw the design of Google's official WordPress plugin.</p>
             </div>
         </div>
-        <div class="portfolio-list__item fade-in-element">
+        <div class="portfolio-list__item portfolio-list__link--external fade-in-element">
             <div class="portfolio-list__link">
                 <div class="zoom-container">
                     <div class="zoomable">
@@ -138,9 +143,9 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
                 <p class="portfolio-list__description">Led the design of a web application for AMC's "Mad Men," creating a platform for fans to submit and share video clips, blending modern design with retro aesthetics.</p>
             </div>
         </div>
-        <div class="portfolio-list__item fade-in-element">
+        <div class="portfolio-list__item portfolio-list__link--external fade-in-element">
             <div class="portfolio-list__link">
-                <div class="zoom-container">
+                <div class="zoom-container aspect-[40/27]">
                     <div class="zoomable">
                         <div class="video-player">
                             <video id="portfolioVideo" width="100%" controls muted playsinline autoplay loading="lazy" class="aspect-[40/27] object-cover rounded-xl">
@@ -157,3 +162,23 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
     </div>
 
 </div>
+
+<style>
+.portfolio-list__link--external .portfolio-list__title::after {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.25rem;
+    background-image: url('/assets/images/external-link.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+@media (prefers-color-scheme: dark) {
+    .portfolio-list__link--external .portfolio-list__title::after {
+        filter: invert(1);
+    }
+}
+</style>

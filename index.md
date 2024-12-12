@@ -10,33 +10,36 @@ description: Product design leader with over 20 years experience in e-commerce, 
   </div>
 </div>
 
-<div class="content-container flex flex-col justify-between h-screen">
-  <div id="aboutSection" class="relative mt-24 mb-3">
-    <div class="animated-headline">
-      <div class="text-container">
-        <div class="text-paragraph forwards" data-splitting>Building digital products for the next generation.</div>
+<div class="animation">
+  <div class="content-container flex flex-col justify-between h-screen">
+    <div id="aboutSection" class="relative mt-24 mb-3">
+      <div class="animated-headline">
+        <div class="text-container">
+          <div class="text-paragraph forwards" data-splitting>Building digital products for the next generation.</div>
+        </div>
+      </div>
+      <div class="my-6">
+        <p class="~text-sm/lg mb-[1em]">Hi, I'm Chris&mdash;a design leader with 20 years in startups, product, and agency. I use tried-and-true design methods to solve problems, increase brand impact, and make digital products feel like magic. I help companies design and ship futuristic experiences.</p>
+        <p class="~text-base/xl"><a href="/bio">Meet me &rarr;</a></p>
       </div>
     </div>
-    <div class="my-6">
-      <p class="~text-sm/lg mb-[1em]">Hi, I'm Chris&mdash;a design leader with 20 years in startups, product, and agency. I use tried-and-true design methods to solve problems, increase brand impact, and make digital products feel like magic. I help companies design and ship futuristic experiences.</p>
-      <p class="~text-base/xl"><a href="/bio">Meet me &rarr;</a></p>
-    </div>
-  </div>
 
-  <dl id="workStatus" class="work-status">
-    <div class="work-status--work-status animated">
-      <dt>Work Status</dt>
-      <dd><i></i> <a class="no-underline text-foreground hover:underline" href="/contact">Available</a></dd>
-    </div>
-    <div class="work-status--available animated">
-      <dt>Available to Start</dt>
-      <dd class="ml-0">December 2024</dd>
-    </div>
-    <div class="work-status--past-clients animated">
-      <dt>Past Clients</dt>
-      <dd class="ml-0">MSFT, SBUX, GOOG, AMCN, et al.</dd>
-    </div>
-  </dl>
+    <dl id="workStatus" class="work-status">
+      <div class="work-status--work-status animated">
+        <dt>Work Status</dt>
+        <dd><i></i> <a class="no-underline text-foreground hover:underline" href="/contact">Available</a></dd>
+      </div>
+      <div class="work-status--available animated">
+        <dt>Available to Start</dt>
+        <dd class="ml-0">December 2024</dd>
+      </div>
+      <div class="work-status--past-clients animated">
+        <dt>Past Clients</dt>
+        <dd class="ml-0">MSFT, SBUX, GOOG, AMCN, et al.</dd>
+      </div>
+    </dl>
+
+  </div>
 </div>
 
 <hr class="hr-separator !w-full" />
@@ -62,14 +65,15 @@ description: Product design leader with over 20 years experience in e-commerce, 
     </div>
   </div>
 
-  <div class="flex justify-center fade-in-element">
-    <a class="inline-block mx-auto relative transition-transform transition-200 hover:scale-105 rounded-xl shadow-xl overflow-hidden" href="/portfolio/woodies/">
-      <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black from-0% to-60% ~p-4/8 z-20">
-        <span class="text-white uppercase tracking-widest ~text-xs/sm decoration-offset-4">Don't miss this</span>
-        <h3 class="mt-3 mb-0 font-serif font-semibold ~text-xl/5xl max-w-[85%] md:max-w-[50%] text-white">Woodies&mdash;a web3 entertainment brand powered by nature</h3>
-      </div>
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-thumbnail.webp?tr=q-50,f-auto" class="mx-auto max-w-full relative z-10" alt="" loading="lazy" width="1600" height="1080">
-    </a>
+  <div class="flex justify-center">
+    <media-card
+      href="/portfolio/woodies/"
+      class="shadow-xl rounded-xl fade-in-element" 
+      overline="Don't miss this"
+      title="Woodies—a web3 entertainment brand powered by nature"
+      media-src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-thumbnail.mp4"
+      media-type="video">
+    </media-card>
   </div>
 
   <div class="testimonial fade-in-element">
