@@ -3,7 +3,7 @@
 }
 
 .text-paragraph{
-  @apply text-highlight ~text-4xl/6xl !capitalize font-medium block md:inline;
+  @apply text-highlight ~text-5xl/6xl !capitalize font-medium block md:inline;
 }
 
 .text-paragraph {
@@ -26,7 +26,7 @@
 }
 
 .work-status{
-  @apply grid grid-cols-2 md:flex md:flex-row md:gap-12 mb-0 max-w-none text-sm;
+  @apply grid grid-cols-2 md:flex md:flex-row md:gap-24 mb-0 max-w-none text-sm;
 }
 
 .work-status--work-status dd{

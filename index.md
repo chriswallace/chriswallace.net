@@ -18,8 +18,8 @@ description: Product design leader with over 20 years experience in e-commerce, 
       </div>
     </div>
     <div class="mt-12 sm:mt-6 ~mb-16/32">
-      <p class="~text-lg/xl mb-[1em]">Hi, I'm Chris&mdash;a design leader with 20 years in startups, product, and agency. Design today has become extremely complicated. I use tried-and-true design methods to solve problems, increase brand impact, and make digital products feel like magic.</p>
-      <p><a href="/bio">Meet me &rarr;</a></p>
+      <p class="~text-base/xl mb-[1em]">Hi, I'm Chris&mdash;a design leader with 20 years in startups, product, and agency. Design today has become extremely complicated. I use tried-and-true design methods to solve problems, increase brand impact, and make digital products feel like magic.</p>
+      <p class="~text-base/xl"><a href="/bio">Meet me &rarr;</a></p>
     </div>
   </div>
 
@@ -41,7 +41,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
 
 <hr class="hr-separator !w-full" />
 
-<div class="content-container space-y-24 ~my-20/32">
+<div class="content-container space-y-24 ~my-8/32">
   <div class="md:grid md:grid-cols-3">
     <div>
       <h2 class="~text-2xl/4xl md:mt-1.5 fade-in-element">Freshly published</h2>

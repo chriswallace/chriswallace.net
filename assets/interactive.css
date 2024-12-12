@@ -1526,14 +1526,14 @@ video {
   line-height: clamp(1.3rem,1.59rem + -0.23vw,1.5rem)/* fluid from 1.5rem at 40rem to 1.3rem at 128rem */;
 }
 
+.\~text-base\/xl {
+  font-size: clamp(1rem,0.89rem + 0.28vw,1.25rem)/* fluid type from 1rem at 40rem to 1.25rem at 128rem */;
+  line-height: clamp(1.5rem,1.27rem + 0.57vw,2rem)/* fluid from 1.5rem at 40rem to 2rem at 128rem */;
+}
+
 .\~text-lg\/3xl {
   font-size: clamp(1.125rem,0.841rem + 0.71vw,1.75rem)/* fluid type from 1.125rem at 40rem to 1.75rem at 128rem */;
   line-height: clamp(1.75rem,1.3rem + 1.14vw,2.75rem)/* fluid from 1.75rem at 40rem to 2.75rem at 128rem */;
-}
-
-.\~text-lg\/xl {
-  font-size: clamp(1.125rem,1.068rem + 0.142vw,1.25rem)/* fluid type from 1.125rem at 40rem to 1.25rem at 128rem */;
-  line-height: clamp(1.75rem,1.64rem + 0.28vw,2rem)/* fluid from 1.75rem at 40rem to 2rem at 128rem */;
 }
 
 .\~text-sm\/base {
@@ -1551,9 +1551,9 @@ video {
   line-height: clamp(1.2rem,1.15rem + 0.11vw,1.3rem)/* fluid from 1.2rem at 40rem to 1.3rem at 128rem */;
 }
 
-.\~my-20\/32 {
-  margin-top: clamp(5rem,3.64rem + 3.41vw,8rem)/* fluid from 5rem at 40rem to 8rem at 128rem */;
-  margin-bottom: clamp(5rem,3.64rem + 3.41vw,8rem)/* fluid from 5rem at 40rem to 8rem at 128rem */;
+.\~my-8\/32 {
+  margin-top: clamp(2rem,-0.73rem + 6.82vw,8rem)/* fluid from 2rem at 40rem to 8rem at 128rem */;
+  margin-bottom: clamp(2rem,-0.73rem + 6.82vw,8rem)/* fluid from 2rem at 40rem to 8rem at 128rem */;
 }
 
 .\~mb-16\/32 {
