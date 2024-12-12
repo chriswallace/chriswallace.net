@@ -22,7 +22,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
               </div>
             </div>
             <div class="my-6">
-              <p class="~text-sm/2xl mb-[1em]">Hi, I'm Chris&mdash;a design leader with 20 years in startups, product, and agency. I use tried-and-true design methods to solve problems, increase brand impact, and make digital products feel like magic. I help companies design and ship futuristic experiences.</p>
+              <p class="~text-sm/lg mb-[1em]">Hi, I'm Chris&mdash;a design leader with 20 years in startups, product, and agency. I use tried-and-true design methods to solve problems, increase brand impact, and make digital products feel like magic. I help companies design and ship futuristic experiences.</p>
               <p class="~text-base/xl"><a href="/bio">Meet me &rarr;</a></p>
             </div>
           </div>
