@@ -1,5 +1,5 @@
 .bio-grid {
-  @apply lg:grid grid-cols-2 lg:gap-12 mb-12 justify-center items-center mx-auto overflow-x-hidden;
+  @apply lg:grid grid-cols-2 lg:gap-12 mb-12 justify-center items-center mx-auto overflow-x-hidden max-w-5xl;
 }
 
 .bio-grid__image-wrapper {
@@ -45,11 +45,11 @@
 }
 
 .about-content .text-container {
-  @apply text-left px-[16px] lg:px-0 lg:pr-12 max-w-prose;
+  @apply text-left px-[16px] lg:px-0 lg:pr-12 mx-auto max-w-3xl;
 }
 
 .about-content .text-paragraph {
-  @apply font-serif !font-medium text-muted ~text-4xl/6xl;
+  @apply font-serif !font-medium text-muted text-4xl;
 }
 
 .bio-grid__author {

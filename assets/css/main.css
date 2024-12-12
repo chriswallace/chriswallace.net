@@ -72,7 +72,7 @@ picture img {
 }
 
 .sub-heading {
-  @apply ~text-xl/2xl max-w-prose mt-6 lg:mt-4 mb-12 md:mb-16;
+  @apply ~text-lg/xl max-w-prose mt-6 lg:mt-4 mb-12 md:mb-16;
 }
 
 .sub-heading + hr {
@@ -93,12 +93,12 @@ figcaption {
 }
 
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari and Opera */
+  display: none; /* Chrome, Safari and Opera */
 }
 
 /* Home Page */
@@ -252,4 +252,3 @@ video::-webkit-media-controls {
 .text-highlight {
   @apply dark:text-white;
 }
-

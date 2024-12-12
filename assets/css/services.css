@@ -10,16 +10,16 @@
   @apply items-start border-t-4 border-primary-400 dark:border-primary-700 pt-4;
 }
 
-.services__package:nth-child(odd){
+.services__package:nth-child(odd) {
   @apply pr-4;
 }
 
 .services__title {
-  @apply mt-2 mb-0 ~text-2xl/3xl font-semibold;
+  @apply mt-2 mb-0 ~text-xl/2xl font-medium;
 }
 
 .services__description {
-  @apply text-foreground mb-8 text-lg capitalize;
+  @apply text-foreground mb-8 text-base font-medium capitalize;
 }
 
 .services__package svg {
@@ -35,5 +35,5 @@
 }
 
 .services__ideal {
-  @apply mt-8 italic text-muted;
+  @apply mt-8 italic text-muted text-sm;
 }

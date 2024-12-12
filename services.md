@@ -5,7 +5,7 @@ permalink: /design-services
 description: Get the strategic oversight, vision, and expertise of an experienced Chief Design Officer on your terms. As a Fractional CDO, I provide hands-on design leadership tailored to the unique needs of your organization, helping you drive impactful design strategies, establish a powerful brand presence, and scale your product or service experience.
 ---
 
-<p class="sub-heading fade-in-element mb-12">Ready to level up your design capabilities? Hire me as a <a href="/fractional-cdo">Fractional CDO</a> or Design Lead ready to solve your toughest challenges.</p>
+<p class="sub-heading fade-in-element mb-12">Ready to level up your design capabilities? I'm available on both an individual project and ongoing basis to help you level up your design capabilities.</p>
 
 <div class="{{ page.markdown }} max-w-none">
   <div class="services__container">
@@ -18,7 +18,7 @@ description: Get the strategic oversight, vision, and expertise of an experience
         <div class="services__service-description">Creating a compelling brand identity that resonates with your target market.</div>
         <div class="services__service-title"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg> MVP Design Strategy</div>
         <div class="services__service-description">Strategic design planning for your minimum viable product to attract investors.</div>
-        <p class="services__ideal">Ideal for: Early-stage startups seeking to validate their product concept and attract initial funding.</p>
+        <p class="services__ideal">Ideal for: Early-stage startups seeking to validate product concepts and seek funding.</p>
       </div>
       <div class="services__package fade-in-element">
         <h2 class="services__title">Zero to One</h2>

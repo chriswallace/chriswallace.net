@@ -3,28 +3,28 @@
     @apply text-gray-700 dark:text-gray-300;
   }
 
-  .text-highlight{
+  .text-highlight {
     @apply text-gray-950 dark:text-white;
   }
 
-  .text-primary{
+  .text-primary {
     @apply text-primary-600 dark:text-primary-500;
   }
 
-  .text-muted{
-    @apply text-gray-500;
+  .text-muted {
+    @apply text-gray-600 dark:text-gray-400;
   }
 
-  strong{
+  strong {
     @apply font-medium text-highlight;
   }
-  
+
   html,
   body {
     @apply ~text-base/xl;
   }
 
-  body{
+  body {
     @apply text-foreground;
   }
 
@@ -86,7 +86,7 @@
 
   p + ul,
   p + ol,
-  p + dl{
+  p + dl {
     @apply relative -top-4;
   }
 

@@ -14,8 +14,8 @@
   @apply m-0 text-left font-normal;
 }
 
-.resume__metadata{
-  @apply ~text-base/lg font-medium text-highlight;
+.resume__metadata {
+  @apply ~text-sm/base font-medium text-highlight;
 }
 
 .resume__metadata-item--place {
@@ -39,8 +39,8 @@
   @apply mb-12 ~text-sm/base;
 }
 
-.resume__description-list {
-  @apply max-w-none space-y-0 mt-6 mb-8 list-disc;
+.resume__description ul {
+  @apply max-w-none space-y-2 mt-6 mb-8 list-disc;
 }
 
 .resume__description-paragraph {
@@ -48,7 +48,7 @@
 }
 
 .skills {
-  @apply grid grid-cols-[40%_auto] sm:grid-cols-[auto_1fr] gap-y-6 gap-x-12 max-w-3xl;
+  @apply grid grid-cols-[30%_auto] sm:grid-cols-[auto_1fr] gap-y-6 gap-x-12 max-w-3xl ~text-sm/base;
 }
 
 .skills__term {

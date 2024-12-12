@@ -8,7 +8,7 @@ thumbnail: /assets/images/thumbs/resume.png
 
 <div class="resume">
   <div itemscope itemtype="http://schema.org/Person">
-    <p itemprop="description" class="fade-in-element sub-heading !mt-4">I work with companies like DC Comics, AMC Networks, Google, and even The California DMV to create award-winning digital products for millions of people around the world.</p>
+    <p itemprop="description" class="fade-in-element sub-heading !mt-4">I'm a product design leader who transforms complex challenges into elegant solutions. With 20 years of experience building award-winning digital products for global brands, I combine strategic vision with hands-on expertise across design, engineering, and team leadership. My approach balances user-centered design with business objectives, consistently delivering results for organizations from startups to Fortune 500 companies.</p>
     
     <hr class="hr-separator fade-in-element">
 
@@ -24,7 +24,7 @@ thumbnail: /assets/images/thumbs/resume.png
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Mar 2024 - Oct 2024</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p class="mb-6">Led product design efforts, redesigned website and marketplace, and created a design system. Created an interactive comic book reader app for digital DC Comics and other prototypes. Worked with cross-functional partners to ship new features and improve user experience across our ecosystem of apps.</p>
+            <p class="mb-6">Led product design initiatives, crafting polished, user-centered solutions across a complex ecosystem of apps. Redefined the digital comic book reading experience with an interactive comic reader for DC Comics. Designed and implemented a comprehensive design system to improve scalability and consistency. Collaborated with Product, Engineering, and Marketing regularly.</p>
             <p>Key Partners: MLB, DC Comics, Netflix's Stranger Things, WWE, NASCAR</p>
           </div>
         </div>
@@ -35,7 +35,7 @@ thumbnail: /assets/images/thumbs/resume.png
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Apr 2021 - Mar 2024</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p class="mb-6">Founded UltraDAO Studios, created Woodies digital avatars, and led a record crypto donation. Bootstrapped the company to $2.6m revenue within six months. Released an acclaimed animated short and the first large-scale 3D avatars available on metaverse platforms.</p>
+            <p class="mb-6">Founded UltraDAO Studios and launched Woodies digital avatars, blending art, storytelling, and community engagement. Led a record-setting environmental initiative, donating funds to plant over a million trees globally. Bootstrapped operations to $2.6M in revenue within six months through innovative, user-centered projects. Exec. Produced a critically acclaimed animated short and first large-scale 3D avatars for metaverse platforms.</p>
             <p>Brands: Woodies, Legends of Wondermist, Twelve Days of CryptoArt, ULTRAPASS</p>
           </div>
         </div>
@@ -46,7 +46,7 @@ thumbnail: /assets/images/thumbs/resume.png
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Aug 2017 - Sep 2021</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p class="mb-6">Expanded design team, led projects for clients like Microsoft and Google, and directed the design team on California DMV’s digital transformation. Mentored designers and ensured high-quality client projects.</p>
+            <p class="mb-6">Managed a design team of 25, fostering a collaborative and innovative culture. Spearheaded digital transformation projects, including the redesign of the California DMV’s digital services. Delivered high-quality, scalable design solutions for global brands like Microsoft, Google, and Facebook. Mentored designers and implemented processes to elevate the team’s craft and execution.</p>
             <p>Key Clients: Microsoft, Google, Starbucks, Facebook, California DMV, Capital One, Credit Karma, The New York Times, The Nobel Prize, The Smithsonian, The White House</p>
           </div>
         </div>
@@ -57,7 +57,7 @@ thumbnail: /assets/images/thumbs/resume.png
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Dec 2009 - Aug 2017</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p class="mb-6">Led design of award-winning, 2x Emmy-nominated digital experiences, including AMC Story Sync (The Walking Dead, Breaking Bad, and Mad Men). Partnered with clients like Frito-Lay and GoDaddy, and ran a WordPress theme business.</p>
+            <p class="mb-6">Led design of Emmy-nominated and award-winning interactive experiences, including AMC Story Sync for The Walking Dead and Mad Men. Partnered with brands like Frito-Lay and GoDaddy to develop engaging digital products. Managed and scaled a successful WordPress theme product brand.</p>
             <p>Key Clients: The Walking Dead, Breaking Bad, Mad Men, WEtv, AMCtv, IFC, Sundance Channel, GoDaddy, Frito-Lay</p>
           </div>
         </div>
@@ -86,16 +86,18 @@ thumbnail: /assets/images/thumbs/resume.png
       <h2 class="fade-in-element">Skills</h2>
 
       <dl class="fade-in-element skills" itemprop="knowsAbout">
+        <dt class="skills__term">Leadership & Strategy</dt>
+        <dd class="skills__description">Design Strategy, People Management, Team Planning & Budgeting, Cross-Functional Collaboration, Digital Transformation</dd>
         <dt class="skills__term">Design Systems</dt>
-        <dd class="skills__description">Storybook, Figma, component libraries, native apps</dd>
-        <dt class="skills__term">Languages</dt>
-        <dd class="skills__description">JavaScript, TypeScript, HTML5, CSS3, SCSS</dd>
+        <dd class="skills__description">Storybook, Figma, component libraries, native apps, typography</dd>
+        <dt class="skills__term">Development</dt>
+        <dd class="skills__description">Front-End Design, Full-Stack Engineering, JavaScript, TypeScript, HTML5, CSS3, SCSS</dd>
         <dt class="skills__term">Libraries &amp; Frameworks</dt>
         <dd class="skills__description">Svelte, SvelteKit, React, Next.js</dd>
         <dt class="skills__term">Performance Tools</dt>
         <dd class="skills__description">Vercel, ImageKit, Lighthouse</dd>
         <dt class="skills__term">Additional</dt>
-        <dd class="skills__description">Web3, blockchain development, responsive design, accessibility best practices</dd>
+        <dd class="skills__description">Web3, blockchain development, responsive design, accessibility best practices, writing</dd>
       </dl>
 
       <h2 class="fade-in-element">Education</h2>

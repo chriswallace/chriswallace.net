@@ -983,6 +983,11 @@ article {
   margin-bottom: 3rem;
 }
 
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .\!mt-4 {
   margin-top: 1rem !important;
 }
@@ -1851,6 +1856,11 @@ article {
   line-height: clamp(1.3rem,1.21rem + 0.23vw,1.5rem)/* fluid from 1.3rem at 40rem to 1.5rem at 128rem */;
 }
 
+.\~text-sm\/lg {
+  font-size: clamp(0.82rem,0.681rem + 0.347vw,1.125rem)/* fluid type from 0.82rem at 40rem to 1.125rem at 128rem */;
+  line-height: clamp(1.3rem,1.1rem + 0.51vw,1.75rem)/* fluid from 1.3rem at 40rem to 1.75rem at 128rem */;
+}
+
 .\~text-xl\/5xl {
   font-size: clamp(1.25rem,0.625rem + 1.563vw,2.625rem)/* fluid type from 1.25rem at 40rem to 2.625rem at 128rem */;
   line-height: clamp(2rem,1.32rem + 1.7vw,3.5rem)/* fluid from 2rem at 40rem to 3.5rem at 128rem */;
@@ -2519,7 +2529,17 @@ article {
 
 .navigation .social p {
   --tw-text-opacity: 1;
-  color: rgb(103 109 115 / var(--tw-text-opacity));
+  color: rgb(85 89 94 / var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .navigation .social p {
+    --tw-text-opacity: 1;
+    color: rgb(152 157 163 / var(--tw-text-opacity));
+  }
+}
+
+.navigation .social p {
   margin-right: 1rem;
   font-family: "instrument-sans-variable", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
   font-size: 12px;
@@ -2750,8 +2770,8 @@ article {
 
 .resume__metadata {
   font-weight: 500;
-  font-size: clamp(1rem,0.943rem + 0.142vw,1.125rem)/* fluid type from 1rem at 40rem to 1.125rem at 128rem */;
-  line-height: clamp(1.5rem,1.39rem + 0.28vw,1.75rem)/* fluid from 1.5rem at 40rem to 1.75rem at 128rem */;
+  font-size: clamp(0.82rem,0.74rem + 0.2vw,1rem)/* fluid type from 0.82rem at 40rem to 1rem at 128rem */;
+  line-height: clamp(1.3rem,1.21rem + 0.23vw,1.5rem)/* fluid from 1.3rem at 40rem to 1.5rem at 128rem */;
   font-variation-settings: 'wdth' 100, 'wght' 500;
 }
 
@@ -2840,17 +2860,17 @@ article {
   line-height: clamp(1.3rem,1.21rem + 0.23vw,1.5rem)/* fluid from 1.3rem at 40rem to 1.5rem at 128rem */;
 }
 
-.resume__description-list {
+.resume__description ul {
   margin-top: 1.5rem;
   margin-bottom: 2rem;
   max-width: none;
   list-style-type: disc;
 }
 
-.resume__description-list > :not([hidden]) ~ :not([hidden]) {
+.resume__description ul > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .resume__description-paragraph {
@@ -2860,10 +2880,12 @@ article {
 .skills {
   display: grid;
   max-width: 48rem;
-  grid-template-columns: 40% auto;
+  grid-template-columns: 30% auto;
   row-gap: 1.5rem;
   -moz-column-gap: 3rem;
        column-gap: 3rem;
+  font-size: clamp(0.82rem,0.74rem + 0.2vw,1rem)/* fluid type from 0.82rem at 40rem to 1rem at 128rem */;
+  line-height: clamp(1.3rem,1.21rem + 0.23vw,1.5rem)/* fluid from 1.3rem at 40rem to 1.5rem at 128rem */;
 }
 
 @media (min-width: 40rem) {
@@ -2887,6 +2909,7 @@ article {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3rem;
+  max-width: 64rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
   justify-content: center;
@@ -2999,7 +3022,9 @@ article {
 }
 
 .about-content .text-container {
-  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 48rem;
   padding-left: 16px;
   padding-right: 16px;
   text-align: left;
@@ -3015,11 +3040,21 @@ article {
 
 .about-content .text-paragraph {
   --tw-text-opacity: 1;
-  color: rgb(103 109 115 / var(--tw-text-opacity));
+  color: rgb(85 89 94 / var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .about-content .text-paragraph {
+    --tw-text-opacity: 1;
+    color: rgb(152 157 163 / var(--tw-text-opacity));
+  }
+}
+
+.about-content .text-paragraph {
   font-family: "norman-variable", serif;
+  font-size: 2.25rem;
+  line-height: 3.25rem;
   font-weight: 500 !important;
-  font-size: clamp(2.25rem,1.8rem + 1.14vw,3.25rem)/* fluid type from 2.25rem at 40rem to 3.25rem at 128rem */;
-  line-height: clamp(3.25rem,2.64rem + 1.53vw,4.6rem)/* fluid from 3.25rem at 40rem to 4.6rem at 128rem */;
   font-variation-settings: 'wdth' 100, 'wght' 500 !important;
 }
 
@@ -3382,7 +3417,17 @@ a.portfolio-list__link:hover .portfolio-list__image {
 
 .portfolio-list__description {
   --tw-text-opacity: 1;
-  color: rgb(103 109 115 / var(--tw-text-opacity));
+  color: rgb(85 89 94 / var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .portfolio-list__description {
+    --tw-text-opacity: 1;
+    color: rgb(152 157 163 / var(--tw-text-opacity));
+  }
+}
+
+.portfolio-list__description {
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: clamp(0.82rem,1.08rem + -0.2vw,1rem)/* fluid type from 1rem at 40rem to 0.82rem at 128rem */;
@@ -3509,10 +3554,10 @@ a.portfolio-list__link:hover .portfolio-list__image {
 .services__title {
   margin-top: 0.5rem;
   margin-bottom: 0px;
-  font-weight: 600;
-  font-size: clamp(1.5rem,1.39rem + 0.28vw,1.75rem)/* fluid type from 1.5rem at 40rem to 1.75rem at 128rem */;
-  line-height: clamp(2.5rem,2.39rem + 0.28vw,2.75rem)/* fluid from 2.5rem at 40rem to 2.75rem at 128rem */;
-  font-variation-settings: 'wdth' 100, 'wght' 600;
+  font-weight: 500;
+  font-size: clamp(1.25rem,1.14rem + 0.28vw,1.5rem)/* fluid type from 1.25rem at 40rem to 1.5rem at 128rem */;
+  line-height: clamp(2rem,1.77rem + 0.57vw,2.5rem)/* fluid from 2rem at 40rem to 2.5rem at 128rem */;
+  font-variation-settings: 'wdth' 100, 'wght' 500;
 }
 
 .services__description {
@@ -3529,9 +3574,11 @@ a.portfolio-list__link:hover .portfolio-list__image {
 
 .services__description {
   margin-bottom: 2rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
   text-transform: capitalize;
+  font-variation-settings: 'wdth' 100, 'wght' 500;
 }
 
 .services__package svg {
@@ -3591,8 +3638,20 @@ a.portfolio-list__link:hover .portfolio-list__image {
 
 .services__ideal {
   --tw-text-opacity: 1;
-  color: rgb(103 109 115 / var(--tw-text-opacity));
+  color: rgb(85 89 94 / var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .services__ideal {
+    --tw-text-opacity: 1;
+    color: rgb(152 157 163 / var(--tw-text-opacity));
+  }
+}
+
+.services__ideal {
   margin-top: 2rem;
+  font-size: 0.82rem;
+  line-height: 1.3rem;
   font-style: italic;
 }
 
@@ -3615,8 +3674,8 @@ a.portfolio-list__link:hover .portfolio-list__image {
 .text-paragraph {
   display: block;
   font-weight: 500;
-  font-size: clamp(2.625rem,2.341rem + 0.71vw,3.25rem)/* fluid type from 2.625rem at 40rem to 3.25rem at 128rem */;
-  line-height: clamp(3.5rem,3rem + 1.25vw,4.6rem)/* fluid from 3.5rem at 40rem to 4.6rem at 128rem */;
+  font-size: clamp(1.75rem,1.07rem + 1.7vw,3.25rem)/* fluid type from 1.75rem at 40rem to 3.25rem at 128rem */;
+  line-height: clamp(2.75rem,1.91rem + 2.1vw,4.6rem)/* fluid from 2.75rem at 40rem to 4.6rem at 128rem */;
   font-variation-settings: 'wdth' 100, 'wght' 500;
 }
 
@@ -3991,8 +4050,8 @@ picture img {
   margin-top: 1.5rem;
   margin-bottom: 3rem;
   max-width: 65ch;
-  font-size: clamp(1.25rem,1.14rem + 0.28vw,1.5rem)/* fluid type from 1.25rem at 40rem to 1.5rem at 128rem */;
-  line-height: clamp(2rem,1.77rem + 0.57vw,2.5rem)/* fluid from 2rem at 40rem to 2.5rem at 128rem */;
+  font-size: clamp(1.125rem,1.068rem + 0.142vw,1.25rem)/* fluid type from 1.125rem at 40rem to 1.25rem at 128rem */;
+  line-height: clamp(1.75rem,1.64rem + 0.28vw,2rem)/* fluid from 1.75rem at 40rem to 2rem at 128rem */;
 }
 
 @media (min-width: 48rem) {
@@ -4488,10 +4547,6 @@ video::-webkit-media-controls {
     margin-bottom: 1.5rem;
   }
 
-  .sm\:mt-6 {
-    margin-top: 1.5rem;
-  }
-
   .sm\:grid {
     display: grid;
   }
@@ -4804,4 +4859,3 @@ video::-webkit-media-controls {
     }
   }
 }
-

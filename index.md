@@ -11,14 +11,14 @@ description: Product design leader with over 20 years experience in e-commerce, 
 </div>
 
 <div class="content-container flex flex-col justify-between h-screen">
-  <div id="aboutSection" class="relative mt-24 mb-8">
+  <div id="aboutSection" class="relative mt-24 mb-3">
     <div class="animated-headline">
       <div class="text-container">
-        <div class="text-paragraph forwards" data-splitting>Design makes everything better.</div>
+        <div class="text-paragraph forwards" data-splitting>Building digital products for the next generation.</div>
       </div>
     </div>
-    <div class="mt-12 sm:mt-6 ~mb-16/32">
-      <p class="~text-base/xl mb-[1em]">Hi, I'm Chris&mdash;a design leader with 20 years in startups, product, and agency. Design today has become extremely complicated. I use tried-and-true design methods to solve problems, increase brand impact, and make digital products feel like magic.</p>
+    <div class="my-6">
+      <p class="~text-sm/lg mb-[1em]">Hi, I'm Chris&mdash;a design leader with 20 years in startups, product, and agency. I use tried-and-true design methods to solve problems, increase brand impact, and make digital products feel like magic. I help companies design and ship futuristic experiences.</p>
       <p class="~text-base/xl"><a href="/bio">Meet me &rarr;</a></p>
     </div>
   </div>

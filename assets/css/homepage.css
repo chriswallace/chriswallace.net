@@ -3,7 +3,7 @@
 }
 
 .text-paragraph {
-  @apply text-highlight ~text-5xl/6xl font-medium block md:inline;
+  @apply text-highlight ~text-3xl/6xl font-medium block md:inline;
 }
 
 .text-paragraph {

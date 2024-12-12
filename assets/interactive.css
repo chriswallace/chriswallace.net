@@ -673,6 +673,11 @@ video {
   margin-bottom: 3rem;
 }
 
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .\!mt-4 {
   margin-top: 1rem !important;
 }
@@ -1541,6 +1546,11 @@ video {
   line-height: clamp(1.3rem,1.21rem + 0.23vw,1.5rem)/* fluid from 1.3rem at 40rem to 1.5rem at 128rem */;
 }
 
+.\~text-sm\/lg {
+  font-size: clamp(0.82rem,0.681rem + 0.347vw,1.125rem)/* fluid type from 0.82rem at 40rem to 1.125rem at 128rem */;
+  line-height: clamp(1.3rem,1.1rem + 0.51vw,1.75rem)/* fluid from 1.3rem at 40rem to 1.75rem at 128rem */;
+}
+
 .\~text-xl\/5xl {
   font-size: clamp(1.25rem,0.625rem + 1.563vw,2.625rem)/* fluid type from 1.25rem at 40rem to 2.625rem at 128rem */;
   line-height: clamp(2rem,1.32rem + 1.7vw,3.5rem)/* fluid from 2rem at 40rem to 3.5rem at 128rem */;
@@ -2292,10 +2302,6 @@ body.meetChris {
 
   .sm\:mb-6 {
     margin-bottom: 1.5rem;
-  }
-
-  .sm\:mt-6 {
-    margin-top: 1.5rem;
   }
 
   .sm\:grid {
