@@ -1,23 +1,23 @@
-.notifications{
+.notifications {
   @apply space-y-6;
 }
 
-.notifications--notification-item{
-  @apply ~text-xl/2xl no-underline text-highlight block;
+.notifications--notification-item {
+  @apply ~text-base/2xl no-underline text-highlight block;
 }
 
-.notifications--notification-item .notifications--notification-overline{
+.notifications--notification-item .notifications--notification-overline {
   @apply border-t-0 pt-2 font-sans pb-1 font-medium text-xs block text-primary-500 dark:text-primary-400 uppercase;
 }
 
-.notifications--notification-item:hover .notifications--notification-overline{
+.notifications--notification-item:hover .notifications--notification-overline {
   @apply opacity-80 no-underline;
 }
 
-.notifications--notification-item span{
-   @apply leading-tight block;
+.notifications--notification-item span {
+  @apply leading-tight block;
 }
 
-.notifications--notification-item:hover span{
+.notifications--notification-item:hover span {
   @apply underline;
 }

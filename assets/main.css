@@ -3808,8 +3808,8 @@ video-player {
 .notifications--notification-item {
   display: block;
   text-decoration-line: none;
-  font-size: clamp(1.25rem,1.14rem + 0.28vw,1.5rem)/* fluid type from 1.25rem at 40rem to 1.5rem at 128rem */;
-  line-height: clamp(2rem,1.77rem + 0.57vw,2.5rem)/* fluid from 2rem at 40rem to 2.5rem at 128rem */;
+  font-size: clamp(1rem,0.77rem + 0.57vw,1.5rem)/* fluid type from 1rem at 40rem to 1.5rem at 128rem */;
+  line-height: clamp(1.5rem,1.05rem + 1.14vw,2.5rem)/* fluid from 1.5rem at 40rem to 2.5rem at 128rem */;
 }
 
 @media (prefers-color-scheme: dark) {
