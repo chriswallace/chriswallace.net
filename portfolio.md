@@ -160,25 +160,4 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             </div>
         </div>
     </div>
-
 </div>
-
-<style>
-.portfolio-list__link--external .portfolio-list__title::after {
-    content: '';
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    margin-left: 0.25rem;
-    background-image: url('/assets/images/external-link.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: middle;
-}
-
-@media (prefers-color-scheme: dark) {
-    .portfolio-list__link--external .portfolio-list__title::after {
-        filter: invert(1);
-    }
-}
-</style>

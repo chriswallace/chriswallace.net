@@ -11,33 +11,41 @@ description: Product design leader with over 20 years experience in e-commerce, 
 </div>
 
 <div class="animation">
-  <div class="content-container flex flex-col justify-between h-screen">
-    <div id="aboutSection" class="relative mt-24 mb-3">
-      <div class="animated-headline">
-        <div class="text-container">
-          <div class="text-paragraph forwards" data-splitting>Building digital products for the next generation.</div>
+  <div class="relative overflow-hidden">
+    <div class="content-container">
+      <div class="flex flex-row w-full gap-6">
+        <div class="h-screen flex flex-col justify-between">
+          <div id="aboutSection" class="mt-24 mb-3 z-20">
+            <div class="animated-headline">
+              <div class="text-container">
+                <div class="text-paragraph forwards" data-splitting>Building digital products for the next generation.</div>
+              </div>
+            </div>
+            <div class="my-6">
+              <p class="~text-sm/2xl mb-[1em]">Hi, I'm Chris&mdash;a design leader with 20 years in startups, product, and agency. I use tried-and-true design methods to solve problems, increase brand impact, and make digital products feel like magic. I help companies design and ship futuristic experiences.</p>
+              <p class="~text-base/xl"><a href="/bio">Meet me &rarr;</a></p>
+            </div>
+          </div>
+          <dl id="workStatus" class="work-status">
+            <div class="work-status--work-status animated">
+              <dt>Work Status</dt>
+              <dd><i></i> <a class="no-underline text-foreground hover:underline" href="/contact">Available</a></dd>
+            </div>
+            <div class="work-status--available animated">
+              <dt>Available to Start</dt>
+              <dd class="ml-0">December 2024</dd>
+            </div>
+            <div class="work-status--past-clients animated">
+              <dt>Past Clients</dt>
+              <dd class="ml-0">MSFT, SBUX, GOOG, AMCN, et al.</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="hidden lg:block flex flex-col justify-center lg:max-w-none">
+          <img class="max-h-[95vh] h-auto" id="arden" src="https://ik.imagekit.io/UltraDAO/chriswallace.net/arden-3d-body.png" alt="">
         </div>
       </div>
-      <div class="my-6">
-        <p class="~text-sm/lg mb-[1em]">Hi, I'm Chris&mdash;a design leader with 20 years in startups, product, and agency. I use tried-and-true design methods to solve problems, increase brand impact, and make digital products feel like magic. I help companies design and ship futuristic experiences.</p>
-        <p class="~text-base/xl"><a href="/bio">Meet me &rarr;</a></p>
-      </div>
     </div>
-
-    <dl id="workStatus" class="work-status">
-      <div class="work-status--work-status animated">
-        <dt>Work Status</dt>
-        <dd><i></i> <a class="no-underline text-foreground hover:underline" href="/contact">Available</a></dd>
-      </div>
-      <div class="work-status--available animated">
-        <dt>Available to Start</dt>
-        <dd class="ml-0">December 2024</dd>
-      </div>
-      <div class="work-status--past-clients animated">
-        <dt>Past Clients</dt>
-        <dd class="ml-0">MSFT, SBUX, GOOG, AMCN, et al.</dd>
-      </div>
-    </dl>
 
   </div>
 </div>
