@@ -3615,7 +3615,6 @@ a.portfolio-list__link:hover .portfolio-list__image {
 .text-paragraph {
   display: block;
   font-weight: 500;
-  text-transform: capitalize !important;
   font-size: clamp(2.625rem,2.341rem + 0.71vw,3.25rem)/* fluid type from 2.625rem at 40rem to 3.25rem at 128rem */;
   line-height: clamp(3.5rem,3rem + 1.25vw,4.6rem)/* fluid from 3.5rem at 40rem to 4.6rem at 128rem */;
   font-variation-settings: 'wdth' 100, 'wght' 500;
@@ -3738,14 +3737,14 @@ a.portfolio-list__link:hover .portfolio-list__image {
     90deg,
     #181818 0%,
     #181818 40%,
-    #1093F6 50%,
+    #1093f6 50%,
     #181818 60%,
     #181818 100%
   );
   background-size: 200% 100%;
   animation: gradientSlide 2s linear infinite;
-  -webkit-mask-image: url('/assets/images/w.svg');
-  mask-image: url('/assets/images/w.svg');
+  -webkit-mask-image: url("/assets/images/w.svg");
+  mask-image: url("/assets/images/w.svg");
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
