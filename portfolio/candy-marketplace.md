@@ -98,7 +98,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumb
         <span class="lgnd__p"></span>
         <span class="lgnd__p"></span>
         <span class="lgnd__text text-xs leading-none">Legendary</span>
-        <svg class="effects" xmlns="http://www.w3.org/2000/svg"><defs><filter id="fire"><feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" /><feColorMatrix
+        <svg class="effects" xmlns="http://www.w3.org/2000/svg"><defs><filter id="fire" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" /><feColorMatrix
                 in="blur"
                 mode="matrix"
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"

@@ -7,70 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   Splitting();
   
-  // Set initial states
-  if (videoPlayer) {
-    videoPlayer.style.opacity = '0';
-    videoPlayer.style.transform = 'scale(0.95)';
-    
-    const video = videoPlayer.shadowRoot.querySelector('video');
-    if (video) {
-      video.muted = true;
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.log("Auto-play failed:", error);
-        });
-      }
-    }
-  }
-  
   if (controls) {
     controls.classList.add('invisible');
   }
-  
-  if (playButton) {
-    playButton.style.display = 'flex';
-  }
-  
-  // Ensure video starts muted and playing
-  if (videoPlayer) {
-    const video = videoPlayer.shadowRoot.querySelector('video');
-    if (video) {
-      video.muted = true;
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.log("Auto-play failed:", error);
-        });
-      }
-    }
-  }
 
-  // Wait for everything to be ready
-  Promise.all([
-    document.fonts.ready,
-    new Promise(resolve => {
-      if (videoPlayer) {
-        const video = videoPlayer.shadowRoot.querySelector('video');
-        if (video && video.readyState >= 2) {
-          resolve();
-        } else if (video) {
-          video.addEventListener('loadeddata', resolve, { once: true });
-        }
-      }
-    }),
-  ]).then(() => {
-    // Start animations
-    startGSAPAnimations();
-  });
+  startGSAPAnimations();
+
 });
 
 function startGSAPAnimations() {
   const sections = document.querySelectorAll('.text-container');
-  const videoPlayer = document.querySelector('video-player');
   const preloader = document.querySelector('.content-preloader');
   const headlines = document.querySelectorAll('.animated-headline');
   const aboutSection = document.querySelector('#aboutSection');
+  const workStatus = document.querySelector('#workStatus');
 
   // Create main timeline
   const mainTimeline = gsap.timeline()
@@ -92,24 +42,7 @@ function startGSAPAnimations() {
       ease: "power2.out"
     });
 
-  // Update video animation
-  if (videoPlayer) {
-    // First ensure initial styles are applied
-    gsap.set(videoPlayer, {
-      opacity: 0,
-      scale: 1,
-      top: 16
-    });
-    
-    // Animate the video-player element
-    mainTimeline.to(videoPlayer, {
-      duration: 0.8,
-      opacity: 1,
-      scale: 1,
-      top: 0,
-      ease: "power2.out"
-    });
-  }
+  
   
   // Handle text animations
   sections.forEach((section) => {
@@ -140,5 +73,26 @@ function startGSAPAnimations() {
       y: 0,
       ease: "power3.out"
     }, "-=0.4"); // Overlap with previous animation
+  }
+
+  // Work status animated elements
+  if (workStatus) {
+    const animatedElements = workStatus.querySelectorAll('.animated');
+    if (animatedElements.length) {
+      // Set initial state
+      gsap.set(animatedElements, {
+        opacity: 0,
+        y: 20
+      });
+
+      // Add to main timeline
+      mainTimeline.to(animatedElements, {
+        duration: 0.6,
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        ease: "power2.out"
+      }, "-=0.3"); 
+    }
   }
 }

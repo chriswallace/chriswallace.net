@@ -10,38 +10,36 @@ description: Product design leader with over 20 years experience in e-commerce, 
   </div>
 </div>
 
-<div class="content-container relative ~mt-32/24 mb-8">
-  <div class="animated-headline">
-    <div class="text-container">
-      <div class="text-paragraph forwards" data-splitting>Digital transformation?</div>
-      <div class="text-paragraph backwards" data-splitting>It's kinda my thing.</div>
+<div class="content-container flex flex-col justify-between h-screen">
+  <div id="aboutSection" class="relative mt-24 mb-8">
+    <div class="animated-headline">
+      <div class="text-container">
+        <div class="text-paragraph forwards" data-splitting>Design makes everything better.</div>
+      </div>
+    </div>
+    <div class="mt-12 sm:mt-6 ~mb-16/32">
+      <p class="~text-lg/xl mb-[1em]">Hi, I'm Chris&mdash;a design leader with 20 years in startups, product, and agency. Design today has become extremely complicated. I use tried-and-true design methods to solve problems, increase brand impact, and make digital products feel like magic.</p>
+      <p><a href="/bio">Meet me &rarr;</a></p>
     </div>
   </div>
-</div>
 
-<div class="content-container-wo my-16">
-  <video-player id="backgroundVideo" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/portfolio-video.mp4" video-title="2024 Showreel" video-description="A collection of works from my latest role leading product design at Candy Digital." class="text-primary-600 mb-12" autoplay playsinline muted loop nocontrols></video-player>
-</div>
-
-<div id="aboutSection" class="content-container ~mb-16/32">
-  <div class="max-w-prose">
-    <p class="~text-lg/2xl"><strong>I'm Chris Wallace</strong>, a design executive with 20 years in startups, product, and agency. Empathy, craft, and vision are the tools I use to build successful, high-performing design orgs. I&lsquo;m looking for a new leadership role where I can lead a meaningful brand and user experience transformation.</p>
-  </div>
-  <dl class="grid grid-cols-2 gap-6 md:flex md:flex-row md:gap-12 max-w-none">
-    <div>
+  <dl id="workStatus" class="work-status">
+    <div class="work-status--work-status animated">
       <dt>Work Status</dt>
-      <dd class="ml-0 flex gap-2 items-center"><i class="w-[6px] h-[6px] bg-green-500 overflow-hidden rounded-full inline-block mb-1.5 shadow-[0_0_8px_4px_rgba(0,255,0,0.45)]"></i> <a class="no-underline text-foreground hover:underline" href="/contact">Available</a></dd>
+      <dd><i></i> <a class="no-underline text-foreground hover:underline" href="/contact">Available</a></dd>
     </div>
-    <div>
+    <div class="work-status--available animated">
       <dt>Available to Start</dt>
       <dd class="ml-0">December 2024</dd>
     </div>
-    <div class="col-span-2">
-      <dt>Former Clients</dt>
-      <dd class="ml-0">Microsoft, Starbucks, Google, The Walking Dead, Breaking Bad, Mad Men, et al.</dd>
+    <div class="work-status--past-clients animated">
+      <dt>Past Clients</dt>
+      <dd class="ml-0">MSFT, SBUX, GOOG, AMCN, et al.</dd>
     </div>
   </dl>
 </div>
+
+<hr class="hr-separator !w-full" />
 
 <div class="content-container space-y-24 ~my-20/32">
   <div class="md:grid md:grid-cols-3">

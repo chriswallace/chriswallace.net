@@ -1,9 +1,9 @@
-.animated-headline .text-container{
+.text-container{
   @apply text-left;
 }
 
-.animated-headline .text-paragraph{
-  @apply text-highlight ~text-4xl/7xl !capitalize font-medium block md:inline;
+.text-paragraph{
+  @apply text-highlight ~text-4xl/6xl !capitalize font-medium block md:inline;
 }
 
 .text-paragraph {
@@ -19,10 +19,26 @@
 }
 
 .text-paragraph .word > .char{
-  margin-top: .22em;
+  @apply pt-[0.75em] pr-[0.05em] mt-[-0.5em] mr-[-0.05em];
   display: inline-block;
   transform: translateY(100%);
   opacity: 0;
+}
+
+.work-status{
+  @apply grid grid-cols-2 md:flex md:flex-row md:gap-12 mb-0 max-w-none text-sm;
+}
+
+.work-status--work-status dd{
+  @apply ml-1 flex gap-2 items-center;
+}
+
+.work-status--work-status i{
+  @apply w-[6px] h-[6px] bg-green-500 overflow-hidden rounded-full inline-block mb-1.5 shadow-[0_0_8px_4px_rgba(0,255,0,0.45)]
+}
+
+.work-status .work-status--past-clients{
+  @apply col-span-2 md:flex-1;
 }
 
 .logo-container {

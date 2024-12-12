@@ -1,3 +1,8 @@
+// Add this helper function at the top level, before the DOMContentLoaded listener
+function randomFloat(min, max) {
+  return min + Math.random() * (max - min);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   Splitting();
   
@@ -86,14 +91,14 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 0.5,
         ease: 'Power3.easeInOut',
         y: '0',
-        stagger: 0.008,
+        stagger: 0.012,
         opacity: 1,
       });
 
-      gsap.to(mainHeadline.querySelectorAll('.word'), {
+      gsap.to(mainHeadline.querySelectorAll('.word:not([data-char="—"])'), {
         className: 'word text-highlight',
         stagger: {
-          each: 0.3,
+          each: 0.175 * randomFloat(0.25, 1),
           from: "start",
           ease: "none"
         },

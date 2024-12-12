@@ -193,11 +193,7 @@ video::-webkit-media-controls {
 }
 
 .text-container {
-  @apply w-full font-serif text-5xl md:text-4xl text-center font-semibold;
-}
-
-.text-paragraph {
-  @apply mb-1 overflow-hidden uppercase leading-[1.25];
+  @apply font-serif font-semibold;
 }
 
 .top {

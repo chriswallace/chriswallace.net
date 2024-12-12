@@ -19,12 +19,13 @@
   display: inline-block;
   -webkit-appearance: none;
   appearance: none;
-  transform: scale(140%);
+  transform: scale(100%);
 }
 .lgnd__p, .lgnd__text {
   transition: background 0.15s linear;
 }
 .lgnd__p {
+  -webkit-filter: blur(0.75px);
   animation-duration: 0.68s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -297,7 +298,7 @@
   transform: translateY(0.1em);
 }
 .lgnd:hover {
-  transform: scale(150%);
+  transform: scale(105%);
 }
 .lgnd:focus .lgnd__p, .lgnd:focus .lgnd__text, .lgnd:hover .lgnd__p, .lgnd:hover .lgnd__text {
   background: #f46325;

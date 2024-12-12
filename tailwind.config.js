@@ -62,25 +62,25 @@ export default {
         xs: [
           "0.75rem",
           {
-            lineHeight: "1.5rem",
+            lineHeight: "1.2rem",
           },
         ],
         sm: [
           "0.82rem",
           {
-            lineHeight: "1.5rem",
+            lineHeight: "1.3rem",
           },
         ],
         base: [
           "1rem",
           {
-            lineHeight: "1.65rem",
+            lineHeight: "1.5rem",
           },
         ],
         lg: [
           "1.125rem",
           {
-            lineHeight: "1.85rem",
+            lineHeight: "1.75rem",
           },
         ],
         xl: [
@@ -120,9 +120,9 @@ export default {
           },
         ],
         "7xl": [
-          "4.625rem",
+          "7rem",
           {
-            lineHeight: "8rem",
+            lineHeight: "10.5rem",
           },
         ]
       },

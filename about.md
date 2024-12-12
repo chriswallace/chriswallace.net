@@ -26,7 +26,7 @@ thumbnail: /assets/images/thumbs/bio.png
     </div>
     <div class="bio-grid__text-container">
         <div id="mainHeadline" class="text-container">
-            <p class="text-paragraph" data-splitting>Hi &mdash; I'm Chris Wallace, a senior design leader pioneering the future of digital experiences.</p>
+            <p class="text-paragraph" data-splitting>I'm Chris Wallace&mdash;a senior design leader pioneering the future of digital experiences.</p>
         </div>
     </div>
   </div>
@@ -34,8 +34,10 @@ thumbnail: /assets/images/thumbs/bio.png
 
 <div class="content-container mb-24">
     <div class="max-w-prose mx-auto">
-        <p class="sub-heading">I'm a builder. Always have been. My curiosity for emerging tech and exceptional design begs me to question boundaries and build beyond them. It's why I led multiple startups to successful exits, ventured into the nascent space of web3, and released an <a href="https://www.youtube.com/watch?v=encMCWoBc3o" rel="noreferrer" target="_blank">acclaimed animated short film</a>.</p>
+        <p class="sub-heading">I'm a builder who loves making complex things feel simple and delightful. For over two decades, I've been fascinated by the intersection of design and technology—using that curiosity to push boundaries and create magical digital experiences. This drive led me to successfully exit multiple startups, pioneer web3 innovations, and even create an <a href="https://www.youtube.com/watch?v=encMCWoBc3o" rel="noreferrer" target="_blank">acclaimed animated short film</a>.</p>
         <hr class="hr-separator">
+        <p>My journey has been about transforming complicated challenges into elegant solutions. Working with iconic brands like AMC Networks, The Nobel Prize, MLB, and DC Comics, I've consistently found ways to make digital experiences more human and engaging. When I led a startup to $2.6 million in six months, it wasn't just about the numbers—it was about creating products that genuinely resonated with people.</p>
+        <p>As my career evolved into agency leadership, I built a remote design team of nearly two dozen global talents. Together, we tackled complex projects for the California DMV, Starbucks, Microsoft, and Google—always focusing on turning intricate requirements into intuitive experiences. Our work on Emmy-nominated apps for The Walking Dead and Mad Men proved that even the most sophisticated entertainment platforms could feel effortless to users.</p>
         <p>In two decades, I've reshaped digital experiences with iconic brands like AMC Networks, The Nobel Prize, MLB, and DC Comics. My leadership catapulted a startup to $2.6 million in six months, won awards, and created tremendous value for consumers. Crafting products that are bold and different has been the consistent thread throughout my career.</p>
         <p>As an agency executive, I grew a remote design team to nearly two dozen global talents, delivering standout projects for the California DMV, Starbucks, Microsoft, and Google. Leading multiple Emmy-nominated apps for The Walking Dead and Mad Men was instrumental in achieving a successful exit for my small UX-centered agency.</p>
         <p>In web3, I've been a founder, Chief Design Officer, and Product Design Lead. At <a href="https://candy.io" rel="noreferrer" target="_blank">Candy Digital</a>, I spearheaded a major marketplace redesign and new design system. I also launched a web3 creative studio, achieving multi-million dollar revenue and pioneering the first large-scale wearable avatar collection in <a href="https://decentraland.org" rel="noreferrer" target="_blank">Decentraland</a>.</p>
@@ -62,15 +64,15 @@ thumbnail: /assets/images/thumbs/bio.png
             </svg>
             <p class="bio-grid__author">Chris Wallace</p>
         </div>
-        <h2 class="bio-grid__heading">Buzzwords</h2>
-        <p class="bio-grid__text">These may or may not mean anything to you but I have to include them to win over our new AI overlords: Product Design, UX/UI, User Research, Content Design, Design Systems, Figma, Web3, Blockchain, React, Next.js, SvelteKit, HTML, CSS, JavaScript, Typescript, Prototyping, Midjourney, Chat-GPT, Claude, Runway, Canva.</p>
-        <h2 class="bio-grid__heading">Media and Interviews</h2>
+        <h2 class="bio-grid__heading">Tools & Technologies</h2>
+        <p class="bio-grid__text">I believe in using the right tool for the job. My toolkit spans traditional design, emerging tech, and development: Product Design, UX/UI, Design Systems, Figma, Web3, React, Next.js, SvelteKit. I'm equally comfortable diving into AI tools like Midjourney, ChatGPT, and Claude, or crafting experiences with HTML, CSS, and TypeScript. What matters isn't the tools themselves, but how we use them to create meaningful experiences.</p>
+        <h2 class="bio-grid__heading">Featured Conversations</h2>
         <ul class="bio-grid__list">
-            <li class="bio-grid__list-item"><a href="https://www.culture3.xyz/posts/chris-wallace-and-his-plan-to-bring-hollywood-production-quality-into-web3">Chris Wallace's plan to bring Hollywood production quality to web3</a></li>
-            <li class="bio-grid__list-item"><a href="https://podcasts.proof.xyz/artist-spotlight-woodies-artist-and-collector-chris-wallace/">The Woodies PFP and a Guide to HEN Collecting with Chris Wallace with Kevin Rose</a></li>
-            <li class="bio-grid__list-item"><a href="https://www.youtube.com/watch?v=xKiwjL7zzTc">The future of decentralized IP</a></li>
+            <li class="bio-grid__list-item"><a href="https://www.culture3.xyz/posts/chris-wallace-and-his-plan-to-bring-hollywood-production-quality-into-web3">How Hollywood-quality production can transform web3 experiences</a></li>
+            <li class="bio-grid__list-item"><a href="https://podcasts.proof.xyz/artist-spotlight-woodies-artist-and-collector-chris-wallace/">Discussing digital collectibles and community with Kevin Rose</a></li>
+            <li class="bio-grid__list-item"><a href="https://www.youtube.com/watch?v=xKiwjL7zzTc">Exploring the future of decentralized IP and creative ownership</a></li>
         </ul>
-        <h2 class="bio-grid__heading">Music I'm digging</h2>
+        <h2 class="bio-grid__heading">Current Playlist</h2>
         <div class="bio-grid__music-list">
             <div class="bio-grid__music-item">
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/63TSwNxnZA6QJXuTCELlBW?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>

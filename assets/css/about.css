@@ -45,11 +45,11 @@
 }
 
 .about-content .text-container {
-  @apply px-[16px] lg:px-0 lg:pr-12 max-w-prose;
+  @apply text-left px-[16px] lg:px-0 lg:pr-12 max-w-prose;
 }
 
 .about-content .text-paragraph {
-  @apply font-serif !font-medium text-muted text-3xl md:text-4xl 2xl:text-6xl;
+  @apply font-serif !font-medium text-muted ~text-4xl/6xl;
 }
 
 .bio-grid__author {
