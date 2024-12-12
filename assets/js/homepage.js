@@ -11,8 +11,22 @@ document.addEventListener("DOMContentLoaded", () => {
     controls.classList.add('invisible');
   }
 
-  startGSAPAnimations();
-
+  // Wait for image preload before starting animations
+  const ardenElement = document.querySelector('#arden');
+  if (ardenElement) {
+    const ardenImage = ardenElement.querySelector('img');
+    if (ardenImage) {
+      if (ardenImage.complete) {
+        startGSAPAnimations();
+      } else {
+        ardenImage.onload = startGSAPAnimations;
+      }
+    } else {
+      startGSAPAnimations();
+    }
+  } else {
+    startGSAPAnimations();
+  }
 });
 
 function startGSAPAnimations() {
@@ -21,6 +35,7 @@ function startGSAPAnimations() {
   const headlines = document.querySelectorAll('.animated-headline');
   const aboutSection = document.querySelector('#aboutSection');
   const workStatus = document.querySelector('#workStatus');
+  const arden = document.querySelector('#arden');
 
   // Create main timeline
   const mainTimeline = gsap.timeline()
@@ -94,5 +109,17 @@ function startGSAPAnimations() {
         ease: "power2.out"
       }, "-=0.3"); 
     }
+  }
+
+  // About section animation
+  if (arden) {
+
+    // Add to main timeline
+    mainTimeline.from(arden, {
+      duration: 0.8,
+      opacity: 0,
+      y: 10,
+      ease: "power3.out"
+    }, "-=0.4"); // Overlap with previous animation
   }
 }
