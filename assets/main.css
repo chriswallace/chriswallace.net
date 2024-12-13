@@ -652,9 +652,9 @@ h1,
   margin-bottom: 3rem;
   font-family: "norman-variable", serif;
   font-weight: 700;
-  font-size: clamp(2.25rem,0.73rem + 3.81vw,5.6rem)/* fluid type from 2.25rem at 40rem to 5.6rem at 128rem */;
-  line-height: clamp(3.25rem,1.55rem + 4.26vw,7rem)/* fluid from 3.25rem at 40rem to 7rem at 128rem */;
   font-variation-settings: 'wdth' 100, 'wght' 700;
+  font-size: clamp(2.25rem,0.96rem + 3.21vw,4.5rem)/* fluid type from 2.25rem at 40rem to 4.5rem at 110rem */;
+  line-height: clamp(3.25rem,1.79rem + 3.64vw,5.8rem)/* fluid from 3.25rem at 40rem to 5.8rem at 110rem */;
 }
 
 h2,
@@ -2872,6 +2872,7 @@ article {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   overflow-x: hidden;
 }
 
@@ -2903,7 +2904,6 @@ article {
   aspect-ratio: 1 / 1;
   width: auto;
   width: 100%;
-  overflow: hidden;
 }
 
 .bio-grid__image {
@@ -3001,24 +3001,11 @@ article {
 .about-content .text-paragraph {
   margin-bottom: 0px;
   font-family: "norman-variable", serif;
-  font-size: 2.25rem;
-  line-height: 3.25rem;
   font-weight: 600;
+  line-height: 1 !important;
   font-variation-settings: 'wdth' 100, 'wght' 600;
-}
-
-@media (min-width: 40rem) {
-  .about-content .text-paragraph {
-    font-size: 2.625rem;
-    line-height: 3.5rem;
-  }
-}
-
-@media (min-width: 64rem) {
-  .about-content .text-paragraph {
-    font-size: 2.25rem;
-    line-height: 3.25rem;
-  }
+  font-size: clamp(2.25rem,3rem + -0.586vw,2.625rem)/* fluid type from 2.625rem at 64rem to 2.25rem at 128rem */;
+  line-height: clamp(3.25rem,3.75rem + -0.39vw,3.5rem)/* fluid from 3.5rem at 64rem to 3.25rem at 128rem */;
 }
 
 .bio-grid__author {
@@ -3566,9 +3553,9 @@ a.portfolio-list__link:hover .portfolio-list__image {
   margin-bottom: 3rem;
   font-family: "norman-variable", serif;
   font-weight: 700;
-  font-size: clamp(2.25rem,0.73rem + 3.81vw,5.6rem)/* fluid type from 2.25rem at 40rem to 5.6rem at 128rem */;
-  line-height: clamp(3.25rem,1.55rem + 4.26vw,7rem)/* fluid from 3.25rem at 40rem to 7rem at 128rem */;
   font-variation-settings: 'wdth' 100, 'wght' 700;
+  font-size: clamp(2.25rem,0.96rem + 3.21vw,4.5rem)/* fluid type from 2.25rem at 40rem to 4.5rem at 110rem */;
+  line-height: clamp(3.25rem,1.79rem + 3.64vw,5.8rem)/* fluid from 3.25rem at 40rem to 5.8rem at 110rem */;
   display: block;
 }
 
@@ -3579,9 +3566,28 @@ a.portfolio-list__link:hover .portfolio-list__image {
 }
 
 .text-paragraph {
+  --tw-text-opacity: 1;
+  color: rgb(18 18 18 / var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .text-paragraph {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
+.text-paragraph {
   max-width: none;
   text-align: left;
-  line-height: 1 !important;
+  line-height: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .text-paragraph {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
 }
 
 .text-paragraph .word {

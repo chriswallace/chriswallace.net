@@ -7,7 +7,7 @@
 }
 
 .text-paragraph {
-  @apply max-w-none text-left !leading-none;
+  @apply max-w-none text-left text-highlight leading-none;
 }
 
 .text-paragraph .word {
