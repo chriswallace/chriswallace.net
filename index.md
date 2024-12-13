@@ -11,42 +11,36 @@ description: Product design leader with over 20 years experience in e-commerce, 
 </div>
 
 <div class="animation">
-  <div class="relative overflow-hidden">
+  <div class="relative bg-cover bg-center bg-gray-950 bg-[url(https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-tree-bg.png?tr=q-60)] text-white">
     <div class="content-container">
-      <div class="flex flex-row w-full gap-6">
-        <div class="h-screen flex flex-col justify-between">
-          <div id="aboutSection" class="mt-24 mb-3 z-20">
-            <div class="animated-headline">
-              <div class="text-container">
-                <div class="text-paragraph forwards" data-splitting>Building digital products for the next generation.</div>
-              </div>
-            </div>
-            <div class="my-6">
-              <p class="~text-sm/lg mb-[1em]">Hi, I'm Chris&mdash;a design leader with 20 years in startups, product, and agency. I use tried-and-true design methods to solve problems, increase brand impact, and make digital products feel like magic. I help companies design and ship futuristic experiences.</p>
-              <p class="~text-base/xl"><a href="/bio">Meet me &rarr;</a></p>
+      <div class="h-screen max-w-prose flex flex-col justify-between">
+        <div class="~mt-40/24 mb-3 z-20">
+          <div class="animated-headline">
+            <div class="text-container">
+              <div class="text-paragraph forwards" data-splitting>Building digital products for the next generation.</div>
             </div>
           </div>
-          <dl id="workStatus" class="work-status">
-            <div class="work-status--work-status animated">
-              <dt>Work Status</dt>
-              <dd><i></i> <a class="no-underline text-foreground hover:underline" href="/contact">Available</a></dd>
-            </div>
-            <div class="work-status--available animated">
-              <dt>Available to Start</dt>
-              <dd class="ml-0">December 2024</dd>
-            </div>
-            <div class="work-status--past-clients animated">
-              <dt>Past Clients</dt>
-              <dd class="ml-0">MSFT, SBUX, GOOG, AMCN, et al.</dd>
-            </div>
-          </dl>
+          <div id="aboutSection" class="my-6">
+            <p class="~text-base/lg mb-[1em]">Hi, I'm Chris&mdash;a design leader with 20 years in startups, product, and agency. I use tried-and-true design methods to solve problems, increase brand impact, and make digital products feel like magic. I help companies design and ship futuristic experiences.</p>
+            <p class="~text-base/lg"><a class="text-white" href="/bio">Meet me &rarr;</a></p>
+          </div>
         </div>
-        <div class="hidden lg:block flex flex-col justify-center lg:max-w-none">
-          <img class="max-h-[95vh] h-auto" id="arden" src="https://ik.imagekit.io/UltraDAO/chriswallace.net/arden-3d-body.png" alt="">
-        </div>
+        <dl id="workStatus" class="work-status">
+          <div class="work-status--work-status animated">
+            <dt>Work Status</dt>
+            <dd><i></i> <a class="no-underline text-white hover:underline" href="/contact">Available</a></dd>
+          </div>
+          <div class="work-status--available animated">
+            <dt>Available to Start</dt>
+            <dd class="ml-0">December 2024</dd>
+          </div>
+          <div class="work-status--past-clients animated">
+            <dt>Past Clients</dt>
+            <dd class="ml-0">MSFT, SBUX, GOOG, AMCN, et al.</dd>
+          </div>
+        </dl>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -76,7 +70,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
   <div class="flex justify-center">
     <media-card
       href="/portfolio/woodies/"
-      class="shadow-xl rounded-xl fade-in-element" 
+      class="shadow-xl rounded-xl w-full fade-in-element" 
       overline="Don't miss this"
       title="Woodies—a web3 entertainment brand powered by nature"
       media-src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-thumbnail.mp4"

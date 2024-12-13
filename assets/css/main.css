@@ -54,10 +54,6 @@ picture img {
   }
 }
 
-.logo {
-  @apply text-primary-600 dark:text-primary-600;
-}
-
 .content-container {
   @apply mx-auto max-w-[calc(100%-32px)] lg:max-w-[calc(100%-64px)];
 }

@@ -7,7 +7,7 @@
 }
 
 .bio-grid__image-container {
-  @apply relative mt-8 w-auto aspect-square order-2 w-full;
+  @apply relative mt-8 w-auto aspect-square order-2 w-full overflow-hidden;
 }
 
 .bio-grid__image {

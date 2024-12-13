@@ -10,31 +10,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const preloader = document.querySelector('.content-preloader');
   const mainContent = document.querySelector('.about-content');
   const images = document.querySelectorAll('.bio-grid__image');
-  
-  // Don't set initial visibility with GSAP
-  // Instead, rely on CSS initial state
+  const contentSections = document.querySelectorAll('.content-container > .max-w-prose > *');
   
   // Create load promises for all images
   const imageLoadPromises = Array.from(images).map(img => {
     return new Promise(resolve => {
-      // Create a new image to preload
       const preloadImage = new Image();
-      
-      // When this image loads, resolve the promise
       preloadImage.onload = () => {
-        img.src = preloadImage.src; // Set the source
+        img.src = preloadImage.src;
         resolve();
       };
-      
-      // Start loading the image
       preloadImage.src = img.getAttribute('data-src');
-      
-      // If image is already cached, resolve immediately
       if (preloadImage.complete) {
         img.src = preloadImage.src;
         resolve();
       }
     });
+  });
+
+  // Initial setup - hide content sections
+  gsap.set(contentSections, { 
+    opacity: 0,
+    y: 30
   });
 
   // Wait for everything to be ready
@@ -43,26 +40,34 @@ document.addEventListener("DOMContentLoaded", () => {
     ...imageLoadPromises,
     new Promise(resolve => setTimeout(resolve, 2000))
   ]).then(() => {
+    // Create main timeline
+    const mainTL = gsap.timeline();
+
     // Fade out preloader
-    gsap.to(preloader, {
+    mainTL.to(preloader, {
       duration: 0.5,
       opacity: 0,
-      onComplete: () => {
-        preloader.style.display = 'none';
-        
-        // Show main content
-        gsap.to(mainContent, {
-          duration: 0.5,
-          opacity: 1,
-          onComplete: startMainAnimations
-        });
-      }
-    });
+      onComplete: () => preloader.style.display = 'none'
+    })
+
+    // Show main content
+    .to(mainContent, {
+      duration: 0.5,
+      opacity: 1
+    })
+
+    // Animate hero section (images and text)
+    .add(animateHeroSection())
+
+    // Animate content sections
+    .add(animateContentSections(), "-=0.5");
   });
 
-  function startMainAnimations() {
+  function animateHeroSection() {
+    const heroTL = gsap.timeline();
+
     // Animate images
-    gsap.to(images, {
+    heroTL.to(images, {
       duration: 1.2,
       opacity: 1,
       scale: 1,
@@ -73,37 +78,49 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "power2.out",
     });
 
-    // Then add the random position animations
+    // Add random position animations
     images.forEach(img => {
-      gsap.from(img, {
+      heroTL.from(img, {
         duration: 1.2,
         x: () => (Math.random() - 0.5) * 200,
         y: () => (Math.random() - 0.5) * 200,
         rotation: () => (Math.random() - 0.5) * 45,
         ease: "power2.out",
-      });
+      }, "<");
     });
 
     // Handle text animations
     const chars = mainHeadline.querySelectorAll('.word > .char, .whitespace');
     if (chars.length) {
-      gsap.to(chars, {
+      heroTL.to(chars, {
         duration: 0.5,
         ease: 'Power3.easeInOut',
         y: '0',
         stagger: 0.012,
         opacity: 1,
-      });
-
-      gsap.to(mainHeadline.querySelectorAll('.word:not([data-char="—"])'), {
+      }, "-=1")
+      .to(mainHeadline.querySelectorAll('.word:not([data-char="—"])'), {
         className: 'word text-highlight',
         stagger: {
           each: 0.175 * randomFloat(0.25, 1),
           from: "start",
           ease: "none"
         },
-        delay: 0.8,
-      });
+      }, "-=0.5");
     }
+
+    return heroTL;
+  }
+
+  function animateContentSections() {
+    return gsap.to(contentSections, {
+      duration: 0.8,
+      opacity: 1,
+      y: 0,
+      stagger: {
+        amount: 1.2,
+        ease: "power2.out"
+      }
+    });
   }
 }); 

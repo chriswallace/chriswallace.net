@@ -120,9 +120,9 @@ export default {
           },
         ],
         "7xl": [
-          "7rem",
+          "5.6rem",
           {
-            lineHeight: "10.5rem",
+            lineHeight: "7rem",
           },
         ]
       },
