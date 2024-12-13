@@ -963,6 +963,11 @@ article {
   margin-bottom: 3rem;
 }
 
+.my-24 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -1811,10 +1816,6 @@ article {
 .\~my-8\/32 {
   margin-top: clamp(2rem,-0.73rem + 6.82vw,8rem)/* fluid from 2rem at 40rem to 8rem at 128rem */;
   margin-bottom: clamp(2rem,-0.73rem + 6.82vw,8rem)/* fluid from 2rem at 40rem to 8rem at 128rem */;
-}
-
-.\~mt-40\/24 {
-  margin-top: clamp(6rem,11.82rem + -4.55vw,10rem)/* fluid from 10rem at 40rem to 6rem at 128rem */;
 }
 
 .\~mb-16\/32 {
@@ -3594,8 +3595,8 @@ a.portfolio-list__link:hover .portfolio-list__image {
   font-weight: 500;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-  font-size: clamp(2.625rem,1.273rem + 3.381vw,5.6rem)/* fluid type from 2.625rem at 40rem to 5.6rem at 128rem */;
-  line-height: clamp(3.5rem,1.91rem + 3.98vw,7rem)/* fluid from 3.5rem at 40rem to 7rem at 128rem */;
+  font-size: clamp(2.25rem,0.73rem + 3.81vw,5.6rem)/* fluid type from 2.25rem at 40rem to 5.6rem at 128rem */;
+  line-height: clamp(3.25rem,1.55rem + 4.26vw,7rem)/* fluid from 3.25rem at 40rem to 7rem at 128rem */;
   font-variation-settings: 'wdth' 100, 'wght' 500;
 }
 
@@ -4439,6 +4440,10 @@ video::-webkit-media-controls {
 
   .sm\:grid {
     display: grid;
+  }
+
+  .sm\:h-screen {
+    height: 100vh;
   }
 
   .sm\:grid-cols-1 {

@@ -13,8 +13,8 @@ description: Product design leader with over 20 years experience in e-commerce, 
 <div class="animation">
   <div class="relative bg-cover bg-center bg-gray-950 bg-[url(https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-tree-bg.png?tr=q-60)] text-white">
     <div class="content-container">
-      <div class="h-screen max-w-prose flex flex-col justify-between">
-        <div class="~mt-40/24 mb-3 z-20">
+      <div class="sm:h-screen max-w-prose flex flex-col justify-between">
+        <div class="my-24 z-20">
           <div class="animated-headline">
             <div class="text-container">
               <div class="text-paragraph forwards" data-splitting>Building digital products for the next generation.</div>

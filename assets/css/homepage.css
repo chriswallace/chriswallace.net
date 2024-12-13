@@ -3,7 +3,7 @@
 }
 
 .text-paragraph {
-  @apply text-white ~text-5xl/7xl font-medium block md:inline;
+  @apply text-white ~text-4xl/7xl font-medium block md:inline;
 }
 
 .text-paragraph {

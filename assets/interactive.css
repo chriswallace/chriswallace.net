@@ -665,6 +665,11 @@ video {
   margin-bottom: 3rem;
 }
 
+.my-24 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -1515,10 +1520,6 @@ video {
   margin-bottom: clamp(2rem,-0.73rem + 6.82vw,8rem)/* fluid from 2rem at 40rem to 8rem at 128rem */;
 }
 
-.\~mt-40\/24 {
-  margin-top: clamp(6rem,11.82rem + -4.55vw,10rem)/* fluid from 10rem at 40rem to 6rem at 128rem */;
-}
-
 .\~mb-16\/32 {
   margin-bottom: clamp(4rem,2.18rem + 4.55vw,8rem)/* fluid from 4rem at 40rem to 8rem at 128rem */;
 }
@@ -2249,6 +2250,10 @@ body.meetChris {
 
   .sm\:grid {
     display: grid;
+  }
+
+  .sm\:h-screen {
+    height: 100vh;
   }
 
   .sm\:grid-cols-1 {
