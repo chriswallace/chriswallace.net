@@ -15,7 +15,7 @@
 }
 
 .services__title {
-  @apply mt-2 mb-0 ~text-xl/2xl font-medium;
+  @apply mt-2 mb-0;
 }
 
 .services__description {

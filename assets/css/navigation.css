@@ -3,7 +3,7 @@
 }
 
 .menu-button {
-  @apply relative align-top w-[var(--navbar-width)] h-[var(--navbar-width)] mx-auto text-white bg-transparent hover:bg-gray-950 transition-all duration-300;
+  @apply relative align-top w-[var(--navbar-width)] h-[var(--navbar-width)] mx-auto text-white bg-gray-800 dark:bg-transparent hover:text-gray-950 hover:bg-white dark:hover:text-white dark:hover:bg-gray-950 transition-all duration-300;
 }
 
 .open-menu .menu-button {
@@ -56,7 +56,6 @@
 
 .navigation .logo {
   @apply block w-[42px] h-auto my-0 mx-auto md:p-0;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));
 }
 
 .open-menu .navigation .logo {

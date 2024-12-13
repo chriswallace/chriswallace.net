@@ -6,7 +6,7 @@ description: I've been designing and building websites and apps for 20 years. He
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
 ---
 
-<div class="portfolio-container">
+<div class="content-container">
     <div class="testimonial fade-in-element">
         <blockquote class="testimonial__quote">
             <p class="testimonial__text">"I <em class="testimonial__emphasis">love</em> working with Chris. He has the rare mix of design instincts and technical ability that <span class="testimonial__highlight">makes him incredibly effective</span>."</p>
@@ -97,7 +97,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
             </blockquote>
         </div>
         <div class="portfolio-list__item portfolio-list__link--external fade-in-element">
-            <div class="zoom-container !mb-8">
+            <div class="zoom-container">
                 <div class="zoomable">
                     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv.png?tr=w-1000,f-auto" class="portfolio-list__image dark:hidden" alt="" loading="lazy" width="800" height="540">
                     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv-dark.png?tr=w-1000,f-auto" class="portfolio-list__image hidden dark:block" alt="" loading="lazy" width="800" height="540">

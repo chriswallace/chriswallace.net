@@ -3,7 +3,7 @@
 }
 
 .text-paragraph {
-  @apply text-white ~text-4xl/7xl font-medium block md:inline;
+  @apply h1 block md:inline;
 }
 
 .text-paragraph {
@@ -15,7 +15,7 @@
 }
 
 .text-paragraph a {
-  @apply no-underline text-white leading-none;
+  @apply no-underline leading-none;
 }
 
 .text-paragraph .word > .char {
@@ -29,10 +29,6 @@
   @apply grid grid-cols-2 md:flex md:flex-row md:gap-24 mb-0 max-w-none text-sm;
 }
 
-.work-status dt{
-  @apply text-white;
-}
-
 .work-status--work-status dd {
   @apply ml-1 flex gap-2 items-center;
 }
@@ -43,6 +39,40 @@
 
 .work-status .work-status--past-clients {
   @apply col-span-2 md:flex-1;
+}
+
+.rotator {
+  @apply h-[1.5em] overflow-hidden relative;
+}
+
+.rotator__track {
+  @apply absolute;
+  animation: rotate 12s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+}
+
+.rotator__item {
+  @apply h-[1.5em] block;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-1.5em);
+  }
+  40% {
+    transform: translateY(-3em);
+  }
+  60% {
+    transform: translateY(-4.5em);
+  }
+  80% {
+    transform: translateY(-6em);
+  }
+  100% {
+    transform: translateY(-7.5em);
+  }
 }
 
 .logo-container {

@@ -46,6 +46,7 @@ class Card extends HTMLElement {
           border-radius: 12px;
           box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
           overflow: hidden;
+          container-type: inline-size;
         }
 
         .overlay {
@@ -55,7 +56,7 @@ class Card extends HTMLElement {
           flex-direction: column;
           justify-content: flex-end;
           background: linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 60%);
-          padding: 2rem;
+          padding: 1rem;
           z-index: 2;
         }
 
@@ -63,18 +64,17 @@ class Card extends HTMLElement {
           color: white;
           text-transform: uppercase;
           letter-spacing: 0.1em;
-          font-size: clamp(0.5rem, 0.6rem + 0.25vw, 0.875rem);
+          font-size: 0.75rem;
         }
 
         .title {
           color: white;
-          font-size: 1.75rem;
-          font-size: clamp(1.25rem, 1rem + 1.25vw, 1.75rem);
+          font-size: 0.8rem;
           font-weight: 600;
-          margin-top: 0.75rem;
+          margin-top: 0.35rem;
           margin-bottom: 0;
-          max-width: 85%;
-          line-height: 1.15;
+          max-width: 95%;
+          line-height: 1.25;
         }
 
         .media-container {
@@ -107,9 +107,32 @@ class Card extends HTMLElement {
           transition: text-decoration-color 200ms;
         }
 
-        @media (min-width: 768px) {
+        @container (min-width: 300px) {
           .title {
+            font-size: 1.2rem;
+            margin-top: 0.45rem;
+          }
+          .overlay{
+            padding: 1.5rem;
+          }
+        }
+
+        @container (min-width: 500px) {
+          .title {
+            font-size: 1.5rem;
+            max-width: 85%;
+            margin-top: 0.6rem;
+          }
+          .overlay{
+            padding: 2rem;
+          }
+        }
+
+        @container (min-width: 700px) {
+          .title {
+            font-size: 2rem;
             max-width: 75%;
+            margin-top: 0.75rem;
           }
         }
       </style>

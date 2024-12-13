@@ -1,6 +1,6 @@
 @layer base {
   .text-foreground {
-    @apply text-gray-700 dark:text-gray-300;
+    @apply text-gray-800 dark:text-gray-300;
   }
 
   .text-highlight {
@@ -38,32 +38,36 @@
     @apply heading-base;
   }
 
-  h1 {
-    @apply font-serif ~text-4xl/7xl mb-12;
-    font-variation-settings: "wght" 475;
+  h1,
+  .h1 {
+    @apply font-serif ~text-4xl/7xl font-bold mb-12;
   }
 
-  h2 {
-    @apply font-serif ~text-2xl/3xl mt-16 sm:mt-24;
-    font-variation-settings: "wght" 500;
+  h2,
+  .h2 {
+    @apply font-serif ~text-2xl/3xl font-semibold mt-16 sm:mt-24;
   }
 
-  h3 {
-    @apply ~text-xl/2xl mb-6 mt-6 sm:mt-12;
+  h3,
+  .h3 {
+    @apply font-serif ~text-xl/2xl font-medium mb-6 mt-6 sm:mt-12;
   }
 
-  h4 {
-    @apply ~text-lg/xl pb-2 mt-6 sm:mt-12 mb-6 dark:border-gray-200 font-medium;
+  h4,
+  .h4 {
+    @apply ~text-lg/xl font-medium pb-2 mt-6 sm:mt-12 mb-6 dark:border-gray-200;
   }
 
   h5,
-  h6 {
+  .h5,
+  h6,
+  .h6 {
     @apply text-lg pb-2 mt-6 sm:mt-12 mb-2 dark:border-gray-200;
   }
 
   /* Links */
   a {
-    @apply font-medium text-primary-500 dark:text-primary-300 underline underline-offset-4 decoration-2 decoration-primary-300 hover:decoration-primary-700 dark:decoration-primary-500 dark:hover:decoration-white dark:hover:text-white;
+    @apply text-foreground underline underline-offset-4 decoration-2 decoration-primary-300 hover:decoration-primary-700 dark:decoration-primary-500 dark:hover:decoration-white dark:hover:text-white;
     text-decoration-skip-ink: auto;
   }
 

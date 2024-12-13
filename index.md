@@ -11,36 +11,47 @@ description: Product design leader with over 20 years experience in e-commerce, 
 </div>
 
 <div class="animation">
-  <div class="relative bg-cover bg-center bg-gray-950 bg-[url(https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-tree-bg.png?tr=q-60)] text-white">
+  <div class="relative">
     <div class="content-container">
-      <div class="sm:h-screen max-w-prose flex flex-col justify-between">
-        <div class="my-24 z-20">
+      <div class="sm:h-screen max-w-prose flex flex-col justify-between gap-6">
+        <div class="mt-24 mb-0 z-20">
           <div class="animated-headline">
             <div class="text-container">
-              <div class="text-paragraph forwards" data-splitting>Building digital products for the next generation.</div>
+              <div class="text-paragraph forwards" data-splitting>Crafting digital products for the next generation.</div>
             </div>
           </div>
           <div id="aboutSection" class="my-6">
-            <p class="~text-base/lg mb-[1em]">Hi, I'm Chris Wallace&mdash;I believe design is a tool for connection, a driver of change, and a language that unites culture.</p>
-            <p class="~text-base/lg"><a class="text-white" href="/bio">Meet me &rarr;</a></p>
+            <p class="~text-base/lg mb-[1em]">I'm a senior design leader and technologist with 20 years in product and agency. I build high-functioning teams and transformative products used by real people, driving culture and elevating brands to their full potential.</p>
           </div>
         </div>
         <dl id="workStatus" class="work-status">
           <div class="work-status--work-status animated">
-            <dt>Work Status</dt>
-            <dd><i></i> <a class="no-underline text-white hover:underline" href="/contact">Available</a></dd>
+            <dt class="font-semibold">Work Status</dt>
+            <dd><i></i> <a class="no-underline hover:underline" href="/contact">Available</a></dd>
           </div>
           <div class="work-status--available animated">
-            <dt>Available to Start</dt>
-            <dd class="ml-0">December 2024</dd>
+            <dt class="font-semibold">Now Booking</dt>
+            <dd class="ml-0">January 2025</dd>
           </div>
           <div class="work-status--past-clients animated">
-            <dt>Past Clients</dt>
-            <dd class="ml-0">MSFT, SBUX, GOOG, AMCN, et al.</dd>
+            <dt class="font-semibold">Ask Me About</dt>
+            <dd class="ml-0">
+              <div class="rotator">
+                <div class="rotator__track">
+                  <div class="rotator__item">Fractional Design Leadership</div>
+                  <div class="rotator__item">My Experience in Web3</div>
+                  <div class="rotator__item">What Makes a Product Great</div>
+                  <div class="rotator__item">The Future of Design &amp; AI</div>
+                  <div class="rotator__item">What Makes a Design Leader Great</div>
+                  <div class="rotator__item">Fractional Design Leadership</div>
+                </div>
+              </div>
+            </dd>
           </div>
         </dl>
       </div>
     </div>
+
   </div>
 </div>
 

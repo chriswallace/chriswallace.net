@@ -26,7 +26,7 @@ thumbnail: /assets/images/thumbs/bio.png
     </div>
     <div class="bio-grid__text-container">
         <div id="mainHeadline" class="text-container">
-            <p class="text-paragraph" data-splitting>I'm Chris Wallace&mdash;an experienced design leader, UX engineer, and founder living in McKinney, Texas.</p>
+            <h1 class="text-paragraph" data-splitting>I'm Chris Wallace&mdash;an experienced design leader, UX engineer, and founder living in McKinney, Texas.</h1>
         </div>
     </div>
   </div>

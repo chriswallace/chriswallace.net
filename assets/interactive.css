@@ -665,18 +665,9 @@ video {
   margin-bottom: 3rem;
 }
 
-.my-24 {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
-}
-
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-}
-
-.\!mb-8 {
-  margin-bottom: 2rem !important;
 }
 
 .\!mt-4 {
@@ -781,6 +772,10 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
 }
 
 .mt-6 {
@@ -1227,10 +1222,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(https\:\/\/ik\.imagekit\.io\/UltraDAO\/chriswallace\.net\/woodies-tree-bg\.png\?tr\=q-60\)\] {
-  background-image: url(https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-tree-bg.png?tr=q-60);
-}
-
 .from-\[\#233524\] {
   --tw-gradient-from: #233524 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(35 53 36 / 0) var(--tw-gradient-to-position);
@@ -1257,10 +1248,6 @@ video {
 
 .bg-\[center_center\] {
   background-position: center center;
-}
-
-.bg-center {
-  background-position: center;
 }
 
 .object-cover {
@@ -1370,6 +1357,10 @@ video {
 
 .font-medium {
   font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .uppercase {
