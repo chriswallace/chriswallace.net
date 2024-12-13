@@ -5,7 +5,7 @@ permalink: /design-services
 description: Get the strategic oversight, vision, and expertise of an experienced Chief Design Officer on your terms. As a Fractional CDO, I provide hands-on design leadership tailored to the unique needs of your organization, helping you drive impactful design strategies, establish a powerful brand presence, and scale your product or service experience.
 ---
 
-<p class="sub-heading fade-in-element mb-12">Ready to level up your design capabilities? I'm available on both an individual project and ongoing basis to help you level up your design capabilities.</p>
+<p class="sub-heading fade-in-element mb-12">Ready to level up your design capabilities? I'm available on both an individual project and ongoing basis.</p>
 
 <div class="{{ page.markdown }} max-w-none">
   <div class="services__container">
