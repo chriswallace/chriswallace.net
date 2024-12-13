@@ -21,7 +21,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
             </div>
           </div>
           <div id="aboutSection" class="my-6">
-            <p class="~text-base/lg mb-[1em]">Hi, I'm Chris&mdash;I believe design is a tool for connection, a driver of change, and a language that unites culture.</p>
+            <p class="~text-base/lg mb-[1em]">Hi, I'm Chris Wallace&mdash;I believe design is a tool for connection, a driver of change, and a language that unites culture.</p>
             <p class="~text-base/lg"><a class="text-white" href="/bio">Meet me &rarr;</a></p>
           </div>
         </div>
