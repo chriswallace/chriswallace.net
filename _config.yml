@@ -7,8 +7,6 @@
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-encoding: utf-8
 # Site settings
 version: 3.8.7
 
