@@ -653,8 +653,8 @@ h1,
   font-family: "norman-variable", serif;
   font-weight: 500;
   font-variation-settings: 'wdth' 100, 'wght' 500;
-  font-size: clamp(1.75rem,0.18rem + 3.93vw,4.5rem)/* fluid type from 1.75rem at 40rem to 4.5rem at 110rem */;
-  line-height: clamp(2.75rem,1.01rem + 4.36vw,5.8rem)/* fluid from 2.75rem at 40rem to 5.8rem at 110rem */;
+  font-size: clamp(2.625rem,1.554rem + 2.679vw,4.5rem)/* fluid type from 2.625rem at 40rem to 4.5rem at 110rem */;
+  line-height: clamp(3.5rem,2.19rem + 3.29vw,5.8rem)/* fluid from 3.5rem at 40rem to 5.8rem at 110rem */;
 }
 
 h2,
@@ -3582,8 +3582,8 @@ a.portfolio-list__link:hover .portfolio-list__image {
   font-family: "norman-variable", serif;
   font-weight: 500;
   font-variation-settings: 'wdth' 100, 'wght' 500;
-  font-size: clamp(1.75rem,0.18rem + 3.93vw,4.5rem)/* fluid type from 1.75rem at 40rem to 4.5rem at 110rem */;
-  line-height: clamp(2.75rem,1.01rem + 4.36vw,5.8rem)/* fluid from 2.75rem at 40rem to 5.8rem at 110rem */;
+  font-size: clamp(2.625rem,1.554rem + 2.679vw,4.5rem)/* fluid type from 2.625rem at 40rem to 4.5rem at 110rem */;
+  line-height: clamp(3.5rem,2.19rem + 3.29vw,5.8rem)/* fluid from 3.5rem at 40rem to 5.8rem at 110rem */;
   display: block;
 }
 
@@ -4101,6 +4101,8 @@ figcaption {
   width: -moz-fit-content;
   width: fit-content;
   white-space: nowrap;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
   padding-right: 1rem;
   font-weight: 500;
   --tw-text-opacity: 1;
@@ -4114,6 +4116,13 @@ figcaption {
     width: auto;
     white-space: normal;
     padding-right: 0.5rem;
+  }
+}
+
+@media (min-width: 110rem) {
+  .project-list dt {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 

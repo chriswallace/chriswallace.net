@@ -112,7 +112,7 @@ figcaption {
 }
 
 .project-list dt {
-  @apply table-cell text-gray-700 dark:text-gray-100 md:inline whitespace-nowrap md:whitespace-normal font-medium w-fit md:w-auto pr-4 md:pr-2;
+  @apply table-cell py-0.5 2xl:py-0 text-gray-700 dark:text-gray-100 md:inline whitespace-nowrap md:whitespace-normal font-medium w-fit md:w-auto pr-4 md:pr-2;
 }
 
 .project-list dd {

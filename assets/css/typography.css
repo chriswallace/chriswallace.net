@@ -40,7 +40,7 @@
 
   h1,
   .h1 {
-    @apply font-serif ~/2xl:~text-3xl/7xl font-medium mb-12;
+    @apply font-serif ~/2xl:~text-5xl/7xl font-medium mb-12;
   }
 
   h2,
