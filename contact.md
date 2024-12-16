@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact
-permalink: /contact
+permalink: /contact/
 description: I'm available for contract and full-time opportunities with forward-thinking companies looking to level up their design capabilities.
 ---
 
