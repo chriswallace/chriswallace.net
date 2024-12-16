@@ -3,7 +3,7 @@ layout: post
 title: "The Design Systems Guide for Big Companies"
 date: 2024-11-01
 categories: design-systems
-permalink: /articles/the-design-systems-guide-for-big-companies
+permalink: /articles/the-design-systems-guide-for-big-companies/
 thumbnail: /assets/images/thumbnail-design-systems-guide.png
 image: /assets/images/thumbnail-design-systems-guide.png
 ---

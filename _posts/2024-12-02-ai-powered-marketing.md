@@ -3,7 +3,7 @@ layout: post
 title: "AI in Digital Products: Are You Marketing It Wrong?"
 date: 2024-11-01
 categories: marketing
-permalink: /articles/marketing-ai-digital-products
+permalink: /articles/marketing-ai-digital-products/
 thumbnail: /assets/images/thumbnail-ai-digital-products.png
 image: /assets/images/thumbnail-ai-digital-products.png
 ---
