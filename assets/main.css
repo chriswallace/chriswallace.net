@@ -1464,6 +1464,10 @@ article {
   border-bottom-width: 1px;
 }
 
+.border-t {
+  border-top-width: 1px;
+}
+
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(206 208 211 / var(--tw-border-opacity));
