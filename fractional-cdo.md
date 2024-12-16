@@ -1,7 +1,7 @@
 ---
 layout: post
 title: What is a Fractional CDO?
-permalink: fractional-cdo
+permalink: /fractional-cdo/
 description: Learn about the role of a Fractional Chief Design Officer and why your company might need one.
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: All gas, no brakes.
-permalink: /design-services
+permalink: /design-services/
 description: Get the strategic oversight, vision, and expertise of an experienced Chief Design Officer on your terms. As a Fractional CDO, I provide hands-on design leadership tailored to the unique needs of your organization, helping you drive impactful design strategies, establish a powerful brand presence, and scale your product or service experience.
 ---
 
