@@ -339,7 +339,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
 <div class="bg-[#121524] md:h-screen pt-16 pb-12 md:py-0 md:mb-0.5 fade-in-element">
   <div class="md:h-screen content-container flex justify-center items-center justify-center items-center">
     <figure>
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-poster.png?tr=w-800" width="800" height="1067" class="max-w-[400px] lg:shadow-xl rounded-xl" alt="">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/nemesis-poster.png?tr=w-800" width="400" height="533" class="max-w-full lg:shadow-xl rounded-xl" alt="">
       <figcaption>Woodies NEMESIS artwork by Waxbones</figcaption>
     </figure>
   </div>
