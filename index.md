@@ -17,10 +17,10 @@ description: Product design leader with over 20 years experience in e-commerce, 
         <div class="mt-24 mb-0 z-20">
           <div class="animated-headline">
             <div class="text-container">
-              <div class="text-paragraph forwards" data-splitting>Crafting digital products for the next generation.</div>
+              <div class="text-paragraph forwards" data-splitting>Leading design for the next generation of digital products.</div>
             </div>
           </div>
-          <div id="aboutSection" class="my-6">
+          <div id="aboutSection" class="~my-3/6">
             <p class="~text-base/lg mb-[1em]">I'm a senior design leader and technologist with 20 years in product and agency. I build high-functioning teams and transformative products used by real people, driving culture and elevating brands to their full potential.</p>
           </div>
         </div>
@@ -96,7 +96,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
     </blockquote>
   </div>
 
-  <h2 class="font-serif fade-in-element mb-0 flex justify-between items-end"><span class="~text-2xl/5xl">Dive right in.</span><a href="/portfolio" class="~text-lg/3xl">Scope my portfolio &rarr;</a></h2>
+  <h2 class="font-serif fade-in-element mb-0 flex justify-between items-end"><span class="~text-2xl/5xl">Dive right in.</span><a href="/portfolio" class="~text-lg/3xl mb-1.5">My portfolio &rarr;</a></h2>
   <div class="portfolio-list !max-w-none !mt-8">
     <div class="portfolio-list__item fade-in-element">
       <a class="portfolio-list__link" href="/portfolio/dc3-interactive-comic-reader/">
@@ -112,12 +112,6 @@ description: Product design leader with over 20 years experience in e-commerce, 
           <p class="portfolio-list__description">Creating a gamified airdrop farming experience with SvelteKit.</p>
       </a>
     </div>
-  </div>
-</div>
-
-<div class="content-container ~mb-16/32 fade-in-element">
-  <div class="max-w-prose">
-    <p class="~text-sm/base">This site is built on <a href="https://jekyllrb.com">Jekyll</a> and <a href="https://tailwindcss.com/">TailwindCSS</a>, hosted by <a href="https://pages.github.com/">Github Pages</a>. Typeset in <a href="https://fonts.adobe.com/fonts/norman-variable">Norman Variable</a> and <a href="https://fonts.adobe.com/fonts/instrument-sans-variable">Instrument Sans Variable</a>.</p>
   </div>
 </div>
 

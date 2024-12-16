@@ -12,8 +12,10 @@ layout: compress
       </div>
       <div class="ui-content">
         {{ content }}
+        {% include footer.md %}
       </div>
     </div>
+
     {% include scripts.md %}
 
   </body>

@@ -1,11 +1,11 @@
 class Card extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
   }
 
   static get observedAttributes() {
-    return ['overline', 'title', 'media-src', 'media-type'];
+    return ["overline", "title", "media-src", "media-type"];
   }
 
   connectedCallback() {
@@ -17,11 +17,11 @@ class Card extends HTMLElement {
   }
 
   render() {
-    const overline = this.getAttribute('overline') || '';
-    const title = this.getAttribute('title') || '';
-    const mediaSrc = this.getAttribute('media-src') || '';
-    const mediaType = this.getAttribute('media-type') || 'image';
-    const href = this.getAttribute('href') || '';
+    const overline = this.getAttribute("overline") || "";
+    const title = this.getAttribute("title") || "";
+    const mediaSrc = this.getAttribute("media-src") || "";
+    const mediaType = this.getAttribute("media-type") || "image";
+    const href = this.getAttribute("href") || "";
 
     const content = `
       <div class="overlay">
@@ -29,11 +29,12 @@ class Card extends HTMLElement {
         <h3 class="title">${title}</h3>
       </div>
       <div class="media-container">
-        ${mediaType === 'video' 
-          ? `<video autoplay muted loop playsinline disablePictureInPicture preload="auto">
+        ${
+          mediaType === "video"
+            ? `<video autoplay muted loop playsinline disablePictureInPicture preload="auto">
               <source src="${mediaSrc}" type="video/mp4">
             </video>`
-          : `<img src="${mediaSrc}" alt="${title}">`
+            : `<img src="${mediaSrc}" alt="${title}">`
         }
       </div>
     `;
@@ -64,12 +65,12 @@ class Card extends HTMLElement {
           color: white;
           text-transform: uppercase;
           letter-spacing: 0.1em;
-          font-size: 0.75rem;
+          font-size: 0.7rem;
         }
 
         .title {
           color: white;
-          font-size: 0.8rem;
+          font-size: 0.86rem;
           font-weight: 600;
           margin-top: 0.35rem;
           margin-bottom: 0;
@@ -109,7 +110,7 @@ class Card extends HTMLElement {
 
         @container (min-width: 300px) {
           .title {
-            font-size: 1.2rem;
+            font-size: 1rem;
             margin-top: 0.45rem;
           }
           .overlay{
@@ -119,26 +120,32 @@ class Card extends HTMLElement {
 
         @container (min-width: 500px) {
           .title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             max-width: 85%;
             margin-top: 0.6rem;
           }
           .overlay{
             padding: 2rem;
           }
+          .overline {
+            font-size: 0.8rem;
+          }
         }
 
         @container (min-width: 700px) {
           .title {
             font-size: 2rem;
-            max-width: 75%;
+            max-width: 66%;
             margin-top: 0.75rem;
+          }
+          .overline {
+            font-size: 0.9rem;
           }
         }
       </style>
-      ${href ? `<a href="${href}" target="_blank" rel="noopener noreferrer">${content}</a>` : content}
+      ${href ? `<a href="${href}">${content}</a>` : content}
     `;
   }
 }
 
-customElements.define('media-card', Card); 
+customElements.define("media-card", Card);

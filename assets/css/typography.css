@@ -40,12 +40,12 @@
 
   h1,
   .h1 {
-    @apply font-serif ~/2xl:~text-4xl/7xl font-bold mb-12;
+    @apply font-serif ~/2xl:~text-4xl/7xl font-medium mb-12;
   }
 
   h2,
   .h2 {
-    @apply font-serif ~text-2xl/3xl font-semibold mt-16 sm:mt-24;
+    @apply font-serif ~text-2xl/3xl font-medium mt-16 sm:mt-24;
   }
 
   h3,
