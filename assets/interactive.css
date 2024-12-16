@@ -1511,8 +1511,8 @@ video {
   line-height: clamp(2.5rem,2.05rem + 1.14vw,3.5rem)/* fluid from 2.5rem at 40rem to 3.5rem at 128rem */;
 }
 
-.\~text-\[6\.5rem\]\/\[30rem\] {
-  font-size: clamp(6.5rem,-4.18rem + 26.7vw,30rem)/* fluid type from 6.5rem at 40rem to 30rem at 128rem */;
+.\~text-\[5\.6rem\]\/\[30rem\] {
+  font-size: clamp(5.6rem,-5.49rem + 27.73vw,30rem)/* fluid type from 5.6rem at 40rem to 30rem at 128rem */;
 }
 
 .\~text-base\/lg {
