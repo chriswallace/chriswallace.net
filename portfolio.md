@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Portfolio
-permalink: /portfolio
+permalink: /portfolio/
 description: I've been designing and building websites and apps for 20 years. Here are some of the most notable projects I've contributed to.
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-home-thumb.png
 ---
