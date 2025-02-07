@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Chris Wallace - Executive Design + Leadership
-description: Product design leader with over 20 years experience in e-commerce, digital publishing, interactive media, and web3. Currently searching for my next long-term role.
+description: Product design leader with over 20 years experience in e-commerce, digital publishing, interactive media, and web3. Currently doing product design @ Roblox.
 ---
 
 <div class="content-preloader flex flex-col gap-4">
@@ -27,11 +27,11 @@ description: Product design leader with over 20 years experience in e-commerce, 
         <dl id="workStatus" class="work-status">
           <div class="work-status--work-status animated">
             <dt class="font-semibold">Work Status</dt>
-            <dd><i></i> <a class="no-underline hover:underline" href="/contact">Available</a></dd>
+            <dd><i style="background-color: #ffbf46;"></i> <a class="no-underline hover:underline" href="/contact">Limited Openings</a></dd>
           </div>
           <div class="work-status--available animated">
-            <dt class="font-semibold">Now Booking</dt>
-            <dd class="ml-0">January 2025</dd>
+            <dt class="font-semibold">Available In</dt>
+            <dd class="ml-0">February 2025</dd>
           </div>
           <div class="work-status--past-clients animated">
             <dt class="font-semibold">Ask Me About</dt>
