@@ -7,7 +7,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png
 ---
 
 <div class="portfolio-group-heading">
-  <a class="back fade-in-element" href="/portfolio">/portfolio</a>
+  <a class="back fade-in-element" href="/">/portfolio</a>
   <h1 class="fade-in-element mb-3">Candy.io Physical-Digital Feature</h1>
   <dl class="project-list fade-in-element">
     <div>

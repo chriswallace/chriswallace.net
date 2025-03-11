@@ -34,7 +34,7 @@
 }
 
 .work-status--work-status i {
-  @apply w-[6px] h-[6px] bg-green-500 overflow-hidden rounded-full inline-block mb-1.5 shadow-[0_0_8px_4px_rgba(0,255,0,0.45)];
+  @apply w-[6px] h-[6px] bg-yellow-500 overflow-hidden rounded-full inline-block mb-1.5 shadow-[0_0_8px_4px_rgba(255,255,0,0.45)];
 }
 
 .work-status .work-status--past-clients {

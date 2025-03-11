@@ -7,7 +7,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-thumbnail.p
 ---
 
 <div class="portfolio-group-heading">
-  <a class="back fade-in-element" href="/portfolio">/portfolio</a>
+  <a class="back fade-in-element" href="/">/portfolio</a>
   <h1 class="fade-in-element mb-3">Pendulum Crypto Wallet</h1>
   <dl class="project-list fade-in-element">
     <div>

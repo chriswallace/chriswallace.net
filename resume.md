@@ -19,6 +19,16 @@ thumbnail: /assets/images/thumbs/resume.png
       <div class="resume__jobs" itemscope itemtype="http://schema.org/Organization">
         <div class="resume__item" itemprop="employee">
           <h3 class="resume__metadata fade-in-element">
+            <span class="resume__metadata-item--title" itemprop="roleName">Product Design</span>
+            <span class="resume__metadata-item--place" itemprop="name">Roblox</span>
+            <span class="resume__metadata-item--time-period" itemprop="worksFor">Feb 2025 - Present</span>
+          </h3>
+          <div class="resume__description fade-in-element">
+            <p class="mb-6">Designing ✨ magical 🪄 avatar tools for devs and creators. I work with the Avatars team on Avatar Auto-Setup, a feature that allows easy import and configuration of avatars, clothing, and accessories in Roblox Studio and beyond.</p>
+          </div>
+        </div>
+        <div class="resume__item" itemprop="employee">
+          <h3 class="resume__metadata fade-in-element">
             <span class="resume__metadata-item--title" itemprop="roleName">Lead Product Designer</span>
             <span class="resume__metadata-item--place" itemprop="name">Candy Digital</span>
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Mar 2024 - Oct 2024</span>

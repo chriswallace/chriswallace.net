@@ -1249,10 +1249,6 @@ article {
   max-width: 30rem;
 }
 
-.max-w-\[400px\] {
-  max-width: 400px;
-}
-
 .max-w-\[500px\] {
   max-width: 500px;
 }
@@ -3669,8 +3665,8 @@ a.portfolio-list__link:hover .portfolio-list__image {
   overflow: hidden;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
-  --tw-shadow: 0 0 8px 4px rgba(0,255,0,0.45);
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+  --tw-shadow: 0 0 8px 4px rgba(255,255,0,0.45);
   --tw-shadow-colored: 0 0 8px 4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }

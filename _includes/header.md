@@ -12,7 +12,6 @@
     <ul>
       <li class="fade-in-element"><a href="/" aria-label="Home">home</a></li>
       <li class="fade-in-element"><a href="/bio" aria-label="About">about me</a></li>
-      <li class="fade-in-element"><a href="/portfolio" aria-label="Portfolio">portfolio</a></li>
       <li class="fade-in-element"><a href="/design-services" aria-label="Services">services</a></li>
       <li class="fade-in-element"><a href="/resume" aria-label="R&eacute;sum&eacute;">R&eacute;sum&eacute; / CV</a></li>
       <li class="fade-in-element"><a href="/contact" aria-label="Contact">contact</a></li>
