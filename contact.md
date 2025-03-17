@@ -5,7 +5,7 @@ permalink: /contact/
 description: I'm available for contract and full-time opportunities with forward-thinking companies looking to level up their design capabilities.
 ---
 
-<p class="fade-in-element sub-heading">Ready to take your company's design capabilities to the next level? Reach out at <a href="mailto:chriswallace7@pm.me?subject=Design%20Inquiry&body=Let's%20work%20together!">chriswallace7@pm.me</a> to get started.</p>
+<p class="fade-in-element sub-heading">Ready to take your company's design capabilities to the next level? Reach out at <a href="mailto:him@chriswallace.net?subject=Design%20Inquiry&body=Let's%20work%20together!">him@chriswallace.net</a> to get started.</p>
 
 <div class="contact-grid fade-in-element">
     <div class="contact-grid__item">
