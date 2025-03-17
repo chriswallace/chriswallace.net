@@ -1,4 +1,4 @@
-import fluid, { extract, screens, fontSize } from 'fluid-tailwind'
+import fluid, { extract, screens, fontSize } from "fluid-tailwind";
 
 export default {
   darkMode: "media", // or 'class'
@@ -11,7 +11,7 @@ export default {
       "./_includes/**/*.html",
       "./*.html",
       "./*.md",
-      "./[!node_modules]**/*.md"
+      "./[!node_modules]**/*.md",
     ],
     extract,
   },
@@ -22,8 +22,8 @@ export default {
     },
     screens: {
       ...screens,
-      '2xl': '110rem',
-      '3xl': '128rem'
+      "2xl": "110rem",
+      "3xl": "128rem",
     },
     fontSize,
     extend: {
@@ -34,28 +34,25 @@ export default {
         x: "x mandatory",
       },
       fontFamily: {
-        serif: [
-          '"norman-variable"',
-          'serif'
-        ],
+        serif: ['"norman-variable"', "serif"],
         sans: [
           '"instrument-sans-variable"',
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
-          'Arial',
-          'sans-serif'
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
         ],
         mono: [
-          'ui-monospace',
-          'SFMono-Regular',
-          'Menlo',
-          'Monaco',
-          'Consolas',
-          'monospace'
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "monospace",
         ],
       },
       fontSize: {
@@ -124,34 +121,34 @@ export default {
           {
             lineHeight: "5.8rem",
           },
-        ]
+        ],
       },
       colors: {
         gray: {
-        '50': '#f5f6f6',
-        '100': '#e5e7e8',
-        '200': '#ced0d3',
-        '300': '#acb0b4',
-        '400': '#989DA3',
-        '500': '#676d73',
-        '600': '#55595e',
-        '700': '#4b4e53',
-        '800': '#424448',
-        '900': '#3a3b3f',
-        '950': '#121212',
+          50: "#f5f6f6",
+          100: "#e5e7e8",
+          200: "#ced0d3",
+          300: "#acb0b4",
+          400: "#989DA3",
+          500: "#676d73",
+          600: "#55595e",
+          700: "#4b4e53",
+          800: "#424448",
+          900: "#3a3b3f",
+          950: "#121212",
         },
         primary: {
-        '50': '#f1f6fd',
-        '100': '#dfecfa',
-        '200': '#c6def7',
-        '300': '#9fc9f1',
-        '400': '#7bb1ea',
-        '500': '#508de1',
-        '600': '#3c71d4',
-        '700': '#325ec3',
-        '800': '#2e4d9f',
-        '900': '#2a437e',
-        '950': '#1e2b4d',
+          50: "#f1f6fd",
+          100: "#dfecfa",
+          200: "#c6def7",
+          300: "#9fc9f1",
+          400: "#7bb1ea",
+          500: "#508de1",
+          600: "#3c71d4",
+          700: "#325ec3",
+          800: "#2e4d9f",
+          900: "#2a437e",
+          950: "#1e2b4d",
         },
       },
       minWidth: {
@@ -167,7 +164,7 @@ export default {
   plugins: [
     require("@tailwindcss/typography"),
     fluid({
-      checkSC144: false // default: true
+      checkSC144: false, // default: true
     }),
     function ({ addUtilities }) {
       const newUtilities = {

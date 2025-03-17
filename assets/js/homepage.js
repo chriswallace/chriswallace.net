@@ -114,5 +114,49 @@ document.addEventListener("DOMContentLoaded", () => {
         );
       }
     }
+
+    // Add shrink animation for top section on larger screens
+    const topSection = document.querySelector(".content-container > div"); // Target the div with sm:h-screen class
+
+    if (topSection) {
+      // Remove the Tailwind class and set initial height
+      topSection.classList.remove("sm:h-screen");
+      gsap.set(topSection, { minHeight: "100vh" });
+
+      // Check if screen is large enough
+      if (window.innerWidth >= 768) {
+        mainTimeline.to(topSection, {
+          duration: 1.2,
+          minHeight: "70vh",
+          ease: "power3.inOut",
+          delay: 1,
+          onComplete: () => {
+            gsap.to(topSection, {
+              duration: 0.06,
+              minHeight: "71vh",
+              yoyo: true,
+              repeat: 1,
+              ease: "power2.inOut",
+            });
+          },
+        });
+      }
+    }
+  });
+
+  // Modified resize handler to target the correct element
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      const topSection = document.querySelector(".content-container > div");
+      if (topSection) {
+        gsap.to(topSection, {
+          duration: 0.3,
+          minHeight: window.innerWidth >= 768 ? "70vh" : "100vh",
+          ease: "power2.inOut",
+        });
+      }
+    }, 250);
   });
 });

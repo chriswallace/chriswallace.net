@@ -1,5 +1,5 @@
 .testimonial {
-  @apply flex flex-col items-center min-h-[340px] justify-center rounded-2xl py-8 px-0 md:p-12 text-left;
+  @apply flex flex-col items-center min-h-[340px] justify-center rounded-2xl py-8 px-4 md:p-12 text-left;
 }
 
 .testimonial-stage {

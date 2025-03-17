@@ -965,6 +965,10 @@ video {
   max-width: 36rem;
 }
 
+.shrink {
+  flex-shrink: 1;
+}
+
 .grow {
   flex-grow: 1;
 }
@@ -976,6 +980,10 @@ video {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.resize {
+  resize: both;
 }
 
 .list-outside {
@@ -1519,11 +1527,6 @@ video {
 .\~text-base\/sm {
   font-size: clamp(0.82rem,1.08rem + -0.2vw,1rem)/* fluid type from 1rem at 40rem to 0.82rem at 128rem */;
   line-height: clamp(1.3rem,1.59rem + -0.23vw,1.5rem)/* fluid from 1.5rem at 40rem to 1.3rem at 128rem */;
-}
-
-.\~text-lg\/3xl {
-  font-size: clamp(1.125rem,0.841rem + 0.71vw,1.75rem)/* fluid type from 1.125rem at 40rem to 1.75rem at 128rem */;
-  line-height: clamp(1.75rem,1.3rem + 1.14vw,2.75rem)/* fluid from 1.75rem at 40rem to 2.75rem at 128rem */;
 }
 
 .\~text-sm\/base {

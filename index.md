@@ -17,21 +17,22 @@ description: Product design leader with over 20 years experience in e-commerce, 
         <div class="mt-24 mb-0 z-20">
           <div class="animated-headline">
             <div class="text-container">
-              <div class="text-paragraph forwards" data-splitting>Leading design for the next generation of digital products.</div>
+              <div class="text-paragraph forwards" data-splitting>Leading digital product design and prototyping with AI.</div>
             </div>
           </div>
           <div id="aboutSection" class="~my-3/6">
-            <p class="~text-base/lg mb-[1em]">I'm a senior design leader and technologist with 20 years in product and agency. I build high-functioning teams and transformative products used by real people, driving culture and elevating brands to their full potential.</p>
+            <p class="~text-base/lg mb-[1em]">I'm a senior design leader and technologist who leverages customized LLMs to architect, design, and code better products. Let's lean into the future responsibly together.</p>
+            <p><a href="/contact">Reach out, let's talk &rarr;</a></p>
           </div>
         </div>
         <dl id="workStatus" class="work-status">
           <div class="work-status--work-status animated">
             <dt class="font-semibold">Work Status</dt>
-            <dd><i></i> <a class="no-underline hover:underline" href="/contact">Limited Openings</a></dd>
+            <dd><i></i> <a class="no-underline hover:underline" href="/contact">Open to Full-Time</a></dd>
           </div>
-          <div class="work-status--available animated">
-            <dt class="font-semibold">Available In</dt>
-            <dd class="ml-0">March 2025</dd>
+          <div class="work-status--currently animated">
+            <dt class="font-semibold">Currently</dt>
+            <dd class="ml-0">Product Design @ Roblox</dd>
           </div>
           <div class="work-status--past-clients animated">
             <dt class="font-semibold">Ask Me About</dt>
