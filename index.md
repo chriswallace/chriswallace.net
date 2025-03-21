@@ -17,12 +17,11 @@ description: Product design leader with over 20 years experience in e-commerce, 
         <div class="mt-24 mb-0 z-20">
           <div class="animated-headline">
             <div class="text-container">
-              <div class="text-paragraph forwards" data-splitting>Leading digital product design and prototyping with AI.</div>
+              <div class="text-paragraph forwards" data-splitting>Heyo&mdash;I'm Chris, a designer and builder leveraging AI to ship better products.</div>
             </div>
           </div>
           <div id="aboutSection" class="~my-3/6">
-            <p class="~text-base/lg mb-[1em]">I'm a senior design leader and technologist who leverages customized LLMs to architect, design, and code better products. Let's lean into the future responsibly together.</p>
-            <p><a href="/contact">Reach out, let's talk &rarr;</a></p>
+            <p><a href="/bio">Read my bio</a> <span class="inline-block px-3">or</span> <a href="/contact">contact me &rarr;</a></p>
           </div>
         </div>
         <dl id="workStatus" class="work-status">
@@ -59,25 +58,6 @@ description: Product design leader with over 20 years experience in e-commerce, 
 <hr class="hr-separator !w-full" />
 
 <div class="content-container space-y-24 ~my-8/32">
-  <div class="md:grid md:grid-cols-3">
-    <div>
-      <h2 class="~text-2xl/4xl md:mt-1.5 fade-in-element">Freshly published</h2>
-    </div>
-    <div class="notifications md:col-span-2">
-      <a class="notifications--notification-item article fade-in-element" href="/articles/marketing-ai-digital-products">
-        <span class="notifications--notification-overline">New Article</span>
-        <span>AI in Digital Products: Are You Marketing It Wrong?</span>
-      </a>
-      <a class="notifications--notification-item article fade-in-element" href="/articles/the-design-systems-guide-for-big-companies">
-        <span class="notifications--notification-overline">New Article</span>
-        <span>Design Systems for Big Companies</span>
-      </a>
-      <a class="notifications--notification-item portfolio fade-in-element" href="/design-services">
-        <span class="notifications--notification-overline">New Service</span>
-        <span>Fractional Chief Designer Officer</span>
-      </a>
-    </div>
-  </div>
 
   <div class="flex justify-center">
     <media-card
@@ -91,7 +71,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
   </div>
 
   <div class="testimonial fade-in-element">
-    <blockquote class="testimonial__quote !max-w-[65rem]">
+    <blockquote class="testimonial__quote !max-w-[45rem]">
         <p class="testimonial__text">"Chris is an <em class="testimonial__emphasis">exceptionally talented and proactive</em> team member, consistently pushing boundaries to deliver innovative, impactful solutions. His technical expertise, thoughtful approach to design, and keen user-centric mindset <span class="testimonial__highlight">set him apart</span> in the field.</p>
         <p class="testimonial__author">— Eric Ginsberg, Marketing Director @ Candy Digital</p>
     </blockquote>
