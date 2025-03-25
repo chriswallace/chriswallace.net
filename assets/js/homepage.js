@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ]).then(() => {
     mainTimeline
       .to(preloader, {
-        duration: 0.5,
+        duration: 0.2,
         opacity: 0,
         onComplete: () => {
           if (preloader) {
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       })
       .to(headlines, {
-        duration: 0.3,
+        duration: 0.2,
         opacity: 1,
         y: 0,
         ease: "power2.out",
@@ -68,10 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
         mainTimeline.to(
           chars,
           {
-            duration: 0.5,
+            duration: 0.6,
             ease: "Power3.easeInOut",
             y: "0",
-            stagger: 0.01,
+            stagger: 0.003,
             opacity: 1,
           },
           "-=0.2"
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
           y: 0,
           ease: "power3.out",
         },
-        "-=0.3"
+        "+=0.5"
       );
     }
 
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
           y: 0,
           ease: "power3.out",
         },
-        "-=0.3"
+        "-=0.6"
       );
 
       const animatedElements = Array.from(
@@ -113,13 +113,27 @@ document.addEventListener("DOMContentLoaded", () => {
         mainTimeline.from(
           animatedElements,
           {
-            duration: 0.6,
+            duration: 0.3,
             opacity: 0,
             y: 30,
-            stagger: 0.3,
+            stagger: 0.05,
             ease: "power2.out",
           },
-          "-=0.3"
+          "-=0.8"
+        );
+      }
+
+      // HR separator animation
+      const hrSeparator = document.querySelector(".hr-separator");
+      if (hrSeparator) {
+        mainTimeline.to(
+          hrSeparator,
+          {
+            duration: 0.4,
+            width: "100%",
+            ease: "power2.inOut",
+          },
+          "-=0.4"
         );
       }
     }
@@ -129,13 +143,13 @@ document.addEventListener("DOMContentLoaded", () => {
       mainTimeline.to(
         woodiesSection,
         {
-          duration: 0.8,
+          duration: 0.6,
           opacity: 1,
           y: 0,
           ease: "power3.out",
           delay: 0.3, // Small delay after top section finishes
         },
-        "+=0.2"
+        "-=0.6"
       );
     }
 
@@ -163,21 +177,5 @@ document.addEventListener("DOMContentLoaded", () => {
     lazyLoadElements.forEach((element) => {
       observer.observe(element);
     });
-  });
-
-  // Modified resize handler to target the correct element
-  let resizeTimeout;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-      const topSection = document.querySelector(".content-container > div");
-      if (topSection) {
-        gsap.to(topSection, {
-          duration: 0.3,
-          minHeight: window.innerWidth >= 768 ? "70vh" : "100vh",
-          ease: "power2.inOut",
-        });
-      }
-    }, 250);
   });
 });

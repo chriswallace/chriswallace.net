@@ -131,3 +131,9 @@ video-player {
 .video-controls {
   transition: opacity 0.3s ease-in-out;
 }
+
+.hr-separator {
+  @apply h-px;
+  width: 0;
+  transform-origin: left;
+}

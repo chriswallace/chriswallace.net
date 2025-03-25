@@ -3767,6 +3767,12 @@ video-player {
   transition: opacity 0.3s ease-in-out;
 }
 
+.hr-separator {
+  height: 1px;
+  width: 0;
+  transform-origin: left;
+}
+
 .notifications > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
