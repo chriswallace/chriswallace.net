@@ -6,9 +6,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const headlines = document.querySelectorAll(".animated-headline");
   const aboutSection = document.querySelector("#aboutSection");
   const workStatus = document.querySelector("#workStatus");
+  const woodiesSection = document.querySelector(
+    'media-card[href="/portfolio/woodies/"]'
+  );
+  const lazyLoadElements = document.querySelectorAll(
+    ".lazy-load:not(media-card[href='/portfolio/woodies/'])"
+  );
 
   // Initial setup - hide all content
-  gsap.set([headlines, aboutSection, workStatus], {
+  gsap.set([headlines, aboutSection, workStatus, woodiesSection], {
+    opacity: 0,
+    y: 30,
+  });
+
+  gsap.set(lazyLoadElements, {
     opacity: 0,
     y: 30,
   });
@@ -23,15 +34,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Wait for everything to be ready
+  // Create main timeline for initial content
+  const mainTimeline = gsap.timeline();
+
+  // Wait for fonts and initial content
   Promise.all([
     document.fonts.ready,
-    new Promise((resolve) => setTimeout(resolve, 2000)), // Simulate loading delay
+    new Promise((resolve) => setTimeout(resolve, 1000)),
   ]).then(() => {
-    // Create main timeline
-    const mainTimeline = gsap
-      .timeline()
-      // Fade out preloader
+    mainTimeline
       .to(preloader, {
         duration: 0.5,
         opacity: 0,
@@ -41,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         },
       })
-      // Show headlines
       .to(headlines, {
         duration: 0.3,
         opacity: 1,
@@ -49,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power2.out",
       });
 
-    // Handle text animations
+    // Text animations
     sections.forEach((section) => {
       const chars = section.querySelectorAll(
         ".text-paragraph .word > .char, .whitespace"
@@ -69,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // About section animation
+    // About section
     if (aboutSection) {
       mainTimeline.to(
         aboutSection,
@@ -80,10 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
           ease: "power3.out",
         },
         "-=0.3"
-      ); // Overlap with previous animation
+      );
     }
 
-    // Work status animated elements
+    // Work status
     if (workStatus) {
       mainTimeline.to(
         workStatus,
@@ -94,12 +104,11 @@ document.addEventListener("DOMContentLoaded", () => {
           ease: "power3.out",
         },
         "-=0.3"
-      ); // Ensure workStatus itself is animated
+      );
 
       const animatedElements = Array.from(
         workStatus.querySelectorAll(".animated")
       );
-      console.log("Animated elements found:", animatedElements.length);
       if (animatedElements.length) {
         mainTimeline.from(
           animatedElements,
@@ -115,33 +124,45 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Add shrink animation for top section on larger screens
-    const topSection = document.querySelector(".content-container > div"); // Target the div with sm:h-screen class
-
-    if (topSection) {
-      // Remove the Tailwind class and set initial height
-      topSection.classList.remove("sm:h-screen");
-      gsap.set(topSection, { minHeight: "100vh" });
-
-      // Check if screen is large enough
-      if (window.innerWidth >= 768) {
-        mainTimeline.to(topSection, {
-          duration: 1.2,
-          minHeight: "70vh",
-          ease: "power3.inOut",
-          delay: 1,
-          onComplete: () => {
-            gsap.to(topSection, {
-              duration: 0.06,
-              minHeight: "71vh",
-              yoyo: true,
-              repeat: 1,
-              ease: "power2.inOut",
-            });
-          },
-        });
-      }
+    // Animate Woodies section after top section
+    if (woodiesSection) {
+      mainTimeline.to(
+        woodiesSection,
+        {
+          duration: 0.8,
+          opacity: 1,
+          y: 0,
+          ease: "power3.out",
+          delay: 0.3, // Small delay after top section finishes
+        },
+        "+=0.2"
+      );
     }
+
+    // Setup intersection observer for remaining lazy load elements
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            gsap.to(entry.target, {
+              duration: 0.8,
+              opacity: 1,
+              y: 0,
+              ease: "power3.out",
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "50px",
+      }
+    );
+
+    lazyLoadElements.forEach((element) => {
+      observer.observe(element);
+    });
   });
 
   // Modified resize handler to target the correct element

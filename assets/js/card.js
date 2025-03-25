@@ -57,7 +57,7 @@ class Card extends HTMLElement {
           flex-direction: column;
           justify-content: flex-end;
           background: linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 60%);
-          padding: 1rem;
+          padding: clamp(0.75rem, 0.5rem + 2vw, 2rem);
           z-index: 2;
         }
 
@@ -70,12 +70,15 @@ class Card extends HTMLElement {
 
         .title {
           color: white;
-          font-size: 0.86rem;
+          font-size: clamp(1.2rem, 1rem + 2vw, 4rem);
           font-weight: 600;
           margin-top: 0.35rem;
           margin-bottom: 0;
           max-width: 95%;
           line-height: 1.25;
+          font-family: "New Title", serif;
+          text-transform: uppercase;
+          letter-spacing: 0;
         }
 
         .media-container {
@@ -106,41 +109,6 @@ class Card extends HTMLElement {
           text-decoration-skip-ink: auto;
           text-decoration: underline solid rgba(255,255,255,0);
           transition: text-decoration-color 200ms;
-        }
-
-        @container (min-width: 300px) {
-          .title {
-            font-size: 1rem;
-            margin-top: 0.45rem;
-          }
-          .overlay{
-            padding: 1.5rem;
-          }
-        }
-
-        @container (min-width: 500px) {
-          .title {
-            font-size: 1.4rem;
-            max-width: 85%;
-            margin-top: 0.6rem;
-          }
-          .overlay{
-            padding: 2rem;
-          }
-          .overline {
-            font-size: 0.8rem;
-          }
-        }
-
-        @container (min-width: 700px) {
-          .title {
-            font-size: 2rem;
-            max-width: 66%;
-            margin-top: 0.75rem;
-          }
-          .overline {
-            font-size: 0.9rem;
-          }
         }
       </style>
       ${href ? `<a href="${href}">${content}</a>` : content}

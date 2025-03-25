@@ -1,6 +1,6 @@
 @layer base {
   .text-foreground {
-    @apply text-gray-800 dark:text-gray-300;
+    @apply text-gray-800 dark:text-gray-400;
   }
 
   .text-highlight {
@@ -67,7 +67,7 @@
 
   /* Links */
   a {
-    @apply text-foreground underline underline-offset-4 decoration-2 decoration-primary-300 hover:decoration-primary-700 dark:decoration-primary-500 dark:hover:decoration-white dark:hover:text-white;
+    @apply text-primary underline underline-offset-4 decoration-2 decoration-primary-300 hover:decoration-primary-700 dark:decoration-primary-500 dark:hover:decoration-white dark:hover:text-white;
     text-decoration-skip-ink: auto;
   }
 

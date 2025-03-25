@@ -3,11 +3,11 @@
 }
 
 .text-paragraph {
-  @apply h1 block md:inline;
+  @apply h1 block md:inline mb-4;
 }
 
 .text-paragraph {
-  @apply max-w-none text-left text-highlight leading-none;
+  @apply max-w-none text-left text-highlight leading-[0.75] uppercase;
 }
 
 .text-paragraph .word {
@@ -92,11 +92,11 @@
   height: 100%;
   background: linear-gradient(
     90deg,
-    #181818 0%,
-    #181818 40%,
-    #1093f6 50%,
-    #181818 60%,
-    #181818 100%
+    #1a1b18 0%,
+    #1a1b18 40%,
+    #dadf40 50%,
+    #1a1b18 60%,
+    #1a1b18 100%
   );
   background-size: 200% 100%;
   animation: gradientSlide 2s linear infinite;

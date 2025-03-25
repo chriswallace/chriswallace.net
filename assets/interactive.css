@@ -124,7 +124,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #ced0d3;
+  border-color: #cacac5;
   /* 2 */
 }
 
@@ -154,7 +154,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: "instrument-sans-variable", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  font-family: "General Sans", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -489,7 +489,7 @@ textarea {
 input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
-  color: #989DA3;
+  color: #7c7d73;
   /* 2 */
 }
 
@@ -497,7 +497,7 @@ input::placeholder,
 textarea::placeholder {
   opacity: 1;
   /* 1 */
-  color: #989DA3;
+  color: #7c7d73;
   /* 2 */
 }
 
@@ -833,10 +833,6 @@ video {
   height: 0.875rem;
 }
 
-.h-\[\.94em\] {
-  height: .94em;
-}
-
 .h-auto {
   height: auto;
 }
@@ -961,10 +957,6 @@ video {
   max-width: 36rem;
 }
 
-.shrink {
-  flex-shrink: 1;
-}
-
 .grow {
   flex-grow: 1;
 }
@@ -1024,10 +1016,6 @@ video {
 
 .justify-start {
   justify-content: flex-start;
-}
-
-.justify-end {
-  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1150,22 +1138,22 @@ video {
 
 .border-gray-200 {
   --tw-border-opacity: 1;
-  border-color: rgb(206 208 211 / var(--tw-border-opacity));
+  border-color: rgb(202 202 197 / var(--tw-border-opacity));
 }
 
 .border-gray-300 {
   --tw-border-opacity: 1;
-  border-color: rgb(172 176 180 / var(--tw-border-opacity));
+  border-color: rgb(167 168 160 / var(--tw-border-opacity));
 }
 
 .border-primary-500 {
   --tw-border-opacity: 1;
-  border-color: rgb(80 141 225 / var(--tw-border-opacity));
+  border-color: rgb(224 203 18 / var(--tw-border-opacity));
 }
 
 .border-primary-800 {
   --tw-border-opacity: 1;
-  border-color: rgb(46 77 159 / var(--tw-border-opacity));
+  border-color: rgb(128 92 19 / var(--tw-border-opacity));
 }
 
 .bg-\[\#000000\] {
@@ -1230,7 +1218,7 @@ video {
 
 .bg-gray-950 {
   --tw-bg-opacity: 1;
-  background-color: rgb(18 18 18 / var(--tw-bg-opacity));
+  background-color: rgb(26 27 24 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -1302,6 +1290,11 @@ video {
   padding-bottom: 0.25rem;
 }
 
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1344,11 +1337,11 @@ video {
 }
 
 .font-serif {
-  font-family: "norman-variable", serif;
+  font-family: "New Title", serif;
 }
 
 .text-2xl {
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 2.5rem;
 }
 
@@ -1374,10 +1367,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1.2rem;
-}
-
-.font-black {
-  font-weight: 900;
 }
 
 .font-medium {
@@ -1411,27 +1400,22 @@ video {
 
 .text-gray-400 {
   --tw-text-opacity: 1;
-  color: rgb(152 157 163 / var(--tw-text-opacity));
+  color: rgb(124 125 115 / var(--tw-text-opacity));
 }
 
 .text-gray-800 {
   --tw-text-opacity: 1;
-  color: rgb(66 68 72 / var(--tw-text-opacity));
-}
-
-.text-primary-200 {
-  --tw-text-opacity: 1;
-  color: rgb(198 222 247 / var(--tw-text-opacity));
+  color: rgb(57 58 53 / var(--tw-text-opacity));
 }
 
 .text-primary-500 {
   --tw-text-opacity: 1;
-  color: rgb(80 141 225 / var(--tw-text-opacity));
+  color: rgb(224 203 18 / var(--tw-text-opacity));
 }
 
 .text-primary-600 {
   --tw-text-opacity: 1;
-  color: rgb(60 113 212 / var(--tw-text-opacity));
+  color: rgb(193 160 13 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1507,12 +1491,8 @@ video {
 }
 
 .\~text-2xl\/5xl {
-  font-size: clamp(1.5rem,0.989rem + 1.278vw,2.625rem)/* fluid type from 1.5rem at 40rem to 2.625rem at 128rem */;
+  font-size: clamp(2rem,1.27rem + 1.82vw,3.6rem)/* fluid type from 2rem at 40rem to 3.6rem at 128rem */;
   line-height: clamp(2.5rem,2.05rem + 1.14vw,3.5rem)/* fluid from 2.5rem at 40rem to 3.5rem at 128rem */;
-}
-
-.\~text-\[5\.6rem\]\/\[30rem\] {
-  font-size: clamp(5.6rem,-5.49rem + 27.73vw,30rem)/* fluid type from 5.6rem at 40rem to 30rem at 128rem */;
 }
 
 .\~text-base\/sm {
@@ -1533,10 +1513,6 @@ video {
 .\~my-8\/32 {
   margin-top: clamp(2rem,-0.73rem + 6.82vw,8rem)/* fluid from 2rem at 40rem to 8rem at 128rem */;
   margin-bottom: clamp(2rem,-0.73rem + 6.82vw,8rem)/* fluid from 2rem at 40rem to 8rem at 128rem */;
-}
-
-.\~pt-16\/32 {
-  padding-top: clamp(4rem,2.18rem + 4.55vw,8rem)/* fluid from 4rem at 40rem to 8rem at 128rem */;
 }
 
 .\~pt-24\/16 {
@@ -2220,8 +2196,8 @@ body.meetChris {
 
 .before\:from-gray-950\/0::before {
   content: var(--tw-content);
-  --tw-gradient-from: rgb(18 18 18 / 0) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(18 18 18 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: rgb(26 27 24 / 0) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(26 27 24 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -2247,7 +2223,7 @@ body.meetChris {
 
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(229 231 232 / var(--tw-bg-opacity));
+  background-color: rgb(229 229 226 / var(--tw-bg-opacity));
 }
 
 .hover\:underline:hover {
@@ -2498,31 +2474,26 @@ body.meetChris {
 
   .dark\:border-gray-700 {
     --tw-border-opacity: 1;
-    border-color: rgb(75 78 83 / var(--tw-border-opacity));
+    border-color: rgb(69 70 63 / var(--tw-border-opacity));
   }
 
-  .dark\:border-gray-800 {
+  .dark\:border-gray-950 {
     --tw-border-opacity: 1;
-    border-color: rgb(66 68 72 / var(--tw-border-opacity));
+    border-color: rgb(26 27 24 / var(--tw-border-opacity));
   }
 
   .dark\:bg-gray-900\/20 {
-    background-color: rgb(58 59 63 / 0.2);
+    background-color: rgb(49 50 47 / 0.2);
   }
 
   .dark\:text-gray-100 {
     --tw-text-opacity: 1;
-    color: rgb(229 231 232 / var(--tw-text-opacity));
+    color: rgb(229 229 226 / var(--tw-text-opacity));
   }
 
   .dark\:text-gray-400 {
     --tw-text-opacity: 1;
-    color: rgb(152 157 163 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-primary-600 {
-    --tw-text-opacity: 1;
-    color: rgb(60 113 212 / var(--tw-text-opacity));
+    color: rgb(124 125 115 / var(--tw-text-opacity));
   }
 
   .dark\:text-white {
@@ -2536,12 +2507,12 @@ body.meetChris {
 
   .dark\:before\:to-gray-950::before {
     content: var(--tw-content);
-    --tw-gradient-to: #121212 var(--tw-gradient-to-position);
+    --tw-gradient-to: #1a1b18 var(--tw-gradient-to-position);
   }
 
   .dark\:hover\:bg-gray-800:hover {
     --tw-bg-opacity: 1;
-    background-color: rgb(66 68 72 / var(--tw-bg-opacity));
+    background-color: rgb(57 58 53 / var(--tw-bg-opacity));
   }
 }
 

@@ -87,7 +87,7 @@
 }
 
 .menu li a {
-  @apply pt-3 pb-2 md:pt-1.5 md:pb-0.5 px-4 block font-sans font-normal capitalize text-lg no-underline decoration-2 text-highlight hover:bg-primary-600 hover:text-white;
+  @apply pt-3 pb-2 md:py-1.5 px-4 block font-sans font-normal capitalize text-lg no-underline decoration-2 text-highlight hover:bg-primary-600 hover:text-primary-950;
 }
 
 .site-title {

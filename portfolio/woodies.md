@@ -8,7 +8,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
 
 <div style="background-image: url(https://ik.imagekit.io/UltraDAO/chriswallace.net/14.png?tr=q-70,w-1800);" class="relative min-h-[480px] bg-cover bg-[center_center] md:h-screen flex flex-col justify-between items-start fade-in-element md:pb-8 mb-12 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-50% before:from-gray-950/0 before:to-black dark:before:to-gray-950 before:opacity-100 z-20 overflow-x-hidden">
   <div class="content-container w-full relative z-30">
-    <a class="back text-white dark:text-white" href="/portfolio">/portfolio</a>
+    <a class="back text-white dark:text-white" href="/">/portfolio</a>
   </div>
   <div class="content-container w-full relative z-30">
     <h1 class="mb-3 text-white">Woodies</h1>

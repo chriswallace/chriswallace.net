@@ -29,7 +29,7 @@
 }
 
 .contact-grid__title {
-  @apply mt-6 mb-0 ~text-sm/base font-medium;
+  @apply mt-6 mb-0 ~text-sm/base font-medium font-sans;
 }
 
 .contact-grid__item:nth-child(even) {

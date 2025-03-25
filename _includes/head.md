@@ -14,6 +14,7 @@
   <meta http-equiv="Expires" content="86400">
   {% seo title=true %}
 
+  <link href="https://api.fontshare.com/v2/css?f[]=new-title@1&f[]=general-sans@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/eub1ezs.css" expires="31536000">
   <link rel="stylesheet" href="/assets/content-preloader.css" />
   <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />

@@ -13,7 +13,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
 <div class="animation">
   <div class="relative">
     <div class="content-container">
-      <div class="sm:h-screen max-w-prose flex flex-col justify-between gap-6">
+      <div class="max-w-prose flex flex-col justify-between gap-6">
         <div class="mt-24 mb-0 z-20">
           <div class="animated-headline">
             <div class="text-container">
@@ -51,15 +51,14 @@ description: Product design leader with over 20 years experience in e-commerce, 
         </dl>
       </div>
     </div>
-
   </div>
 </div>
 
-<hr class="hr-separator !w-full" />
+<hr class="hr-separator !w-full lazy-load" />
 
-<div class="content-container space-y-24 ~my-8/32">
+<div class="content-container space-y-24 ~my-8/32 lazy-load">
 
-  <div class="flex justify-center">
+  <div class="flex justify-center lazy-load">
     <media-card
       href="/portfolio/woodies/"
       class="shadow-xl rounded-xl w-full fade-in-element" 
@@ -70,97 +69,90 @@ description: Product design leader with over 20 years experience in e-commerce, 
     </media-card>
   </div>
 
-  <div class="testimonial fade-in-element">
+  <div class="testimonial fade-in-element lazy-load">
     <blockquote class="testimonial__quote !max-w-[45rem]">
         <p class="testimonial__text">"Chris is an <em class="testimonial__emphasis">exceptionally talented and proactive</em> team member, consistently pushing boundaries to deliver innovative, impactful solutions. His technical expertise, thoughtful approach to design, and keen user-centric mindset <span class="testimonial__highlight">set him apart</span> in the field.</p>
         <p class="testimonial__author">— Eric Ginsberg, Marketing Director @ Candy Digital</p>
     </blockquote>
   </div>
 
-  <h2 class="font-serif fade-in-element mb-0 flex justify-between items-end"><span class="~text-2xl/5xl">My portfolio.</span></h2>
+  <h2 class="font-serif fade-in-element mb-0 flex justify-between items-end"><span class="~text-2xl/5xl">Now for the portfolio.</span></h2>
   <div class="portfolio-list !max-w-none !mt-8">
-    <div class="testimonial fade-in-element">
-        <blockquote class="testimonial__quote">
-            <p class="testimonial__text">"I <em class="testimonial__emphasis">love</em> working with Chris. He has the rare mix of design instincts and technical ability that <span class="testimonial__highlight">makes him incredibly effective</span>."</p>
-            <p class="testimonial__author">— Mike Chabot, Director of Engineering @ Candy Digital</p>
-        </blockquote>
-    </div>
-    <div class="portfolio-list__item fade-in-element">
+    <div class="portfolio-list__item fade-in-element lazy-load">
         <a class="portfolio-list__link" href="/portfolio/dc3-interactive-comic-reader/">
             <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             <h3 class="portfolio-list__title">DC3 Interactive Comic Reader</h3>
             <p class="portfolio-list__description">An interactive comic book reader application for Candy's DC3 digital comic collection.</p>
         </a>
     </div>
-    <div class="portfolio-list__item fade-in-element">
+    <div class="portfolio-list__item fade-in-element lazy-load">
         <a class="portfolio-list__link" href="/portfolio/palm-quest/">
             <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             <h3 class="portfolio-list__title">Palm Quest App Prototype</h3>
             <p class="portfolio-list__description">Creating a gamified airdrop farming experience with SvelteKit.</p>
         </a>
     </div>
-    <div class="portfolio-list__item fade-in-element">
+    <div class="testimonial fade-in-element lazy-load">
+        <blockquote class="testimonial__quote">
+            <p class="testimonial__text">"I <em class="testimonial__emphasis">love</em> working with Chris. He has the rare mix of design instincts and technical ability that <span class="testimonial__highlight">makes him incredibly effective</span>."</p>
+            <p class="testimonial__author">— Mike Chabot, Director of Engineering @ Candy Digital</p>
+        </blockquote>
+    </div>
+    <div class="portfolio-list__item fade-in-element lazy-load">
         <a class="portfolio-list__link" href="/portfolio/candy-physical-digital-feature/">
             <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             <h3 class="portfolio-list__title">Candy.io Physical-Digital Checkout</h3>
             <p class="portfolio-list__description">Designing a new feature for Candy's existing checkout process.</p>
         </a>
     </div>
-    <div class="portfolio-list__item fade-in-element">
+    <div class="portfolio-list__item fade-in-element lazy-load">
         <a class="portfolio-list__link" href="/portfolio/twelve-days-cryptoart/">
             <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             <h3 class="portfolio-list__title">Twelve Days of CryptoArt</h3>
             <p class="portfolio-list__description">An experimental art event featuring daily mystery NFT drops and artist reveals.</p>
         </a>
     </div>
-    <div class="portfolio-list__item fade-in-element">
+    <div class="portfolio-list__item fade-in-element lazy-load">
         <a class="portfolio-list__link" href="/portfolio/redacted-mlb-game/">
             <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             <h3 class="portfolio-list__title">[Redacted] MLB Game</h3>
             <p class="portfolio-list__description">A series of mockups for a mobile game concept using digital collectibles as game pieces.</p>
         </a>
     </div>
-    <div class="portfolio-list__item fade-in-element">
+    <div class="portfolio-list__item fade-in-element lazy-load">
         <a class="portfolio-list__link" href="/portfolio/candy-marketplace-redesign/">
             <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             <h3 class="portfolio-list__title">Candy Marketplace Redesign</h3>
             <p class="portfolio-list__description">A gradual, deliberate shift in design language and product features.</p>
         </a>
     </div>
-    <div class="testimonial testimonial-stage fade-in-element">
+    <div class="testimonial testimonial-stage fade-in-element lazy-load">
         <blockquote class="testimonial__quote">
             <p class="testimonial__text">"Chris is <em class="testimonial__emphasis">by far</em> the best designer <span class="testimonial__highlight">I've ever worked with</span>."</p>
             <p class="testimonial__author text-xs">&mdash; Yaro Plashenko, Head of Product, Ecosystem & Product Partnerships @ Immutable</p>
         </blockquote>
     </div>
-    <div class="portfolio-list__item fade-in-element">
+    <div class="portfolio-list__item fade-in-element lazy-load">
         <a class="portfolio-list__link" href="/portfolio/candy-league/">
             <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             <h3 class="portfolio-list__title">Candy League</h3>
             <p class="portfolio-list__description">Adding clarity and identity to one of Candy's most popular challenge products.</p>
         </a>
     </div>
-    <div class="portfolio-list__item fade-in-element">
-        <a class="portfolio-list__link" href="/portfolio/candyvision/">
-            <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-thumbnail.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
-            <h3 class="portfolio-list__title">CandyVision</h3>
-            <p class="portfolio-list__description">A new challenge product for MLB fans, debuted for the 2024 All-Start Game.</p>
-        </a>
-    </div>
-    <div class="portfolio-list__item fade-in-element">
+    <div class="portfolio-list__item fade-in-element lazy-load">
         <a class="portfolio-list__link portfolio-list__link--external" href="https://wallacemuseum.com" target="_blank">
             <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/wallace-museum.png?tr=w-1000,f-auto" class="portfolio-list__image" alt="" loading="lazy" width="800" height="540">
             <h3 class="portfolio-list__title">Wallace Museum</h3>
             <p class="portfolio-list__description">A digital art gallery showcasing my expansive private collection.</p>
         </a>
     </div>
-    <div class="testimonial testimonial-stage fade-in-element">
+    <div class="testimonial testimonial-stage fade-in-element lazy-load">
         <blockquote class="testimonial__quote">
             <p class="testimonial__text">"If your goal is to work with someone who inspires, motivates and brings it day in and day out then look no further! His expertise <span class="testimonial__highlight">made me a stronger designer</span>."</p>
             <p class="testimonial__author text-xs">&mdash; Aaron Frebowitz, Design Director @ Candy Digital</p>
         </blockquote>
     </div>
-    <div class="portfolio-list__item portfolio-list__link--external fade-in-element">
+    <div class="portfolio-list__item portfolio-list__link--external fade-in-element lazy-load">
         <div class="zoom-container">
             <div class="zoomable">
                 <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/california-dmv.png?tr=w-1000,f-auto" class="portfolio-list__image dark:hidden" alt="" loading="lazy" width="800" height="540">
@@ -170,7 +162,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
         <h3 class="portfolio-list__title"><a href="https://10up.com/our-work/california-dmv-website-redesign/" target="_blank">California DMV Digital Transformation</a></h3>
         <p class="portfolio-list__description">Directed a comprehensive redesign of the California DMV's website and application suite, enhancing user experience for millions of drivers across the U.S.</p>
     </div>
-    <div class="portfolio-list__item portfolio-list__link--external fade-in-element">
+    <div class="portfolio-list__item portfolio-list__link--external fade-in-element lazy-load">
         <div class="portfolio-list__link">
             <div class="zoom-container">
                 <div class="zoomable">
@@ -184,7 +176,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
             <p class="portfolio-list__description">Revamped the online newsroom for Starbucks, focusing on visual design and branding to enhance storytelling and user engagement.</p>
         </div>
     </div>
-    <div class="portfolio-list__item portfolio-list__link--external fade-in-element">
+    <div class="portfolio-list__item portfolio-list__link--external fade-in-element lazy-load">
         <div class="portfolio-list__link">
             <div class="zoom-container">
                 <div class="zoomable">
@@ -195,7 +187,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
             <p class="portfolio-list__description">Oversaw the design of Google's official WordPress plugin.</p>
         </div>
     </div>
-    <div class="portfolio-list__item portfolio-list__link--external fade-in-element">
+    <div class="portfolio-list__item portfolio-list__link--external fade-in-element lazy-load">
         <div class="portfolio-list__link">
             <div class="zoom-container">
                 <div class="zoomable">
@@ -207,7 +199,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
             <p class="portfolio-list__description">Led the design of a web application for AMC's "Mad Men," creating a platform for fans to submit and share video clips, blending modern design with retro aesthetics.</p>
         </div>
     </div>
-    <div class="portfolio-list__item portfolio-list__link--external fade-in-element">
+    <div class="portfolio-list__item portfolio-list__link--external fade-in-element lazy-load">
         <div class="portfolio-list__link">
             <div class="zoom-container aspect-[40/27]">
                 <div class="zoomable">
