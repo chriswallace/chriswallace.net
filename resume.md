@@ -114,11 +114,11 @@ thumbnail: /assets/images/thumbs/resume.png
 
       <div class="resume__schools" itemscope itemtype="http://schema.org/EducationalOrganization">
         <div class="resume__item">
-          <div class="resume__metadata fade-in-element">
+          <h3 class="resume__metadata fade-in-element">
             <span class="resume__metadata-item--title" itemprop="alumniOf">Graphic Design</span>
             <span class="resume__metadata-item--place" itemprop="name">Missouri State University</span>
             <span class="resume__metadata-item--time-period">2004</span>
-          </div>
+          </h3>
           <div class="resume__description fade-in-element">
             <p>Attended Missouri State University (formerly Southwest Missouri State) for Graphic Design. Withdrew for medical reasons and went directly into the workforce.</p>
           </div>

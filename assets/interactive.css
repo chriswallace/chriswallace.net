@@ -2243,10 +2243,6 @@ body.meetChris {
     display: grid;
   }
 
-  .sm\:h-screen {
-    height: 100vh;
-  }
-
   .sm\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }

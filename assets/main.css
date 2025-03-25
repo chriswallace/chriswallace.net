@@ -2746,6 +2746,8 @@ article {
   order: 1;
   flex: none;
   white-space: nowrap;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 @media (min-width: 48rem) {
@@ -2761,6 +2763,8 @@ article {
   flex-shrink: 1;
   padding-left: 0px;
   padding-bottom: 0px;
+  font-size: 2rem;
+  line-height: 2.5rem;
   --tw-text-opacity: 1;
   color: rgb(193 160 13 / var(--tw-text-opacity));
 }
@@ -2790,6 +2794,9 @@ article {
   white-space: nowrap;
   padding-right: 0px;
   text-align: right;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 0.025em;
 }
 
 @media (min-width: 48rem) {
@@ -4454,10 +4461,6 @@ video::-webkit-media-controls {
 
   .sm\:grid {
     display: grid;
-  }
-
-  .sm\:h-screen {
-    height: 100vh;
   }
 
   .sm\:grid-cols-1 {
