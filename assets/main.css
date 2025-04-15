@@ -1181,10 +1181,6 @@ article {
   min-height: 480px;
 }
 
-.\!w-full {
-  width: 100% !important;
-}
-
 .w-3 {
   width: 0.75rem;
 }
@@ -1288,10 +1284,6 @@ article {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.resize {
-  resize: both;
 }
 
 .list-outside {

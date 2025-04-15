@@ -85,10 +85,12 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png
 </div>
 
 <div class="content-container mb-24">
-  <p class="fade-in-element">After refining the functionality and UI, I wrote a migration script to convert the existing DC3 comics to the new format. This allowed us to maintain compatibility with the existing comics while adding interactive features for new comics.</p>
+  <p class="fade-in-element">After refining the functionality and UI with Claude as my code-pilot, I also created a migration script to convert the existing DC3 comics to the new format. This allowed us to maintain compatibility with the existing comics while adding interactive features for new comics.</p>
+  
+  <p class="fade-in-element">Using Claude was critical for this prototype, which allowed me to execute on my vision quickly while delivering a solid codebase for future enhancements.</p>
 
   <p class="fade-in-element">
-    <a class="cta" href="https://comic.candy.io" target="_blank">
+    <a class="cta" href="https://dc3-interactive-reader.vercel.app/" target="_blank">
       Try the DC3 Interactive Reader Prototype &rarr;
     </a>
   </p>
