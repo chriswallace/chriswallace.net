@@ -124,7 +124,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #cacac5;
+  border-color: #d0d2bc;
   /* 2 */
 }
 
@@ -489,7 +489,7 @@ textarea {
 input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
-  color: #7c7d73;
+  color: #9ca17a;
   /* 2 */
 }
 
@@ -497,7 +497,7 @@ input::placeholder,
 textarea::placeholder {
   opacity: 1;
   /* 1 */
-  color: #7c7d73;
+  color: #9ca17a;
   /* 2 */
 }
 
@@ -1130,22 +1130,22 @@ video {
 
 .border-gray-200 {
   --tw-border-opacity: 1;
-  border-color: rgb(202 202 197 / var(--tw-border-opacity));
+  border-color: rgb(208 210 188 / var(--tw-border-opacity));
 }
 
 .border-gray-300 {
   --tw-border-opacity: 1;
-  border-color: rgb(167 168 160 / var(--tw-border-opacity));
+  border-color: rgb(183 187 155 / var(--tw-border-opacity));
 }
 
 .border-primary-500 {
   --tw-border-opacity: 1;
-  border-color: rgb(224 203 18 / var(--tw-border-opacity));
+  border-color: rgb(189 216 10 / var(--tw-border-opacity));
 }
 
 .border-primary-800 {
   --tw-border-opacity: 1;
-  border-color: rgb(128 92 19 / var(--tw-border-opacity));
+  border-color: rgb(88 103 13 / var(--tw-border-opacity));
 }
 
 .bg-\[\#000000\] {
@@ -1210,7 +1210,7 @@ video {
 
 .bg-gray-950 {
   --tw-bg-opacity: 1;
-  background-color: rgb(26 27 24 / var(--tw-bg-opacity));
+  background-color: rgb(28 30 21 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -1392,22 +1392,22 @@ video {
 
 .text-gray-400 {
   --tw-text-opacity: 1;
-  color: rgb(124 125 115 / var(--tw-text-opacity));
+  color: rgb(156 161 122 / var(--tw-text-opacity));
 }
 
 .text-gray-800 {
   --tw-text-opacity: 1;
-  color: rgb(57 58 53 / var(--tw-text-opacity));
+  color: rgb(64 67 49 / var(--tw-text-opacity));
 }
 
 .text-primary-500 {
   --tw-text-opacity: 1;
-  color: rgb(224 203 18 / var(--tw-text-opacity));
+  color: rgb(189 216 10 / var(--tw-text-opacity));
 }
 
 .text-primary-600 {
   --tw-text-opacity: 1;
-  color: rgb(193 160 13 / var(--tw-text-opacity));
+  color: rgb(148 173 3 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1480,11 +1480,6 @@ video {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.\~text-2xl\/5xl {
-  font-size: clamp(2rem,1.27rem + 1.82vw,3.6rem)/* fluid type from 2rem at 40rem to 3.6rem at 128rem */;
-  line-height: clamp(2.5rem,2.05rem + 1.14vw,3.5rem)/* fluid from 2.5rem at 40rem to 3.5rem at 128rem */;
 }
 
 .\~text-base\/sm {
@@ -2188,8 +2183,8 @@ body.meetChris {
 
 .before\:from-gray-950\/0::before {
   content: var(--tw-content);
-  --tw-gradient-from: rgb(26 27 24 / 0) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(26 27 24 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: rgb(28 30 21 / 0) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(28 30 21 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -2215,7 +2210,7 @@ body.meetChris {
 
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(229 229 226 / var(--tw-bg-opacity));
+  background-color: rgb(232 233 222 / var(--tw-bg-opacity));
 }
 
 .hover\:underline:hover {
@@ -2462,26 +2457,26 @@ body.meetChris {
 
   .dark\:border-gray-700 {
     --tw-border-opacity: 1;
-    border-color: rgb(69 70 63 / var(--tw-border-opacity));
+    border-color: rgb(77 82 57 / var(--tw-border-opacity));
   }
 
   .dark\:border-gray-950 {
     --tw-border-opacity: 1;
-    border-color: rgb(26 27 24 / var(--tw-border-opacity));
+    border-color: rgb(28 30 21 / var(--tw-border-opacity));
   }
 
   .dark\:bg-gray-900\/20 {
-    background-color: rgb(49 50 47 / 0.2);
+    background-color: rgb(55 58 45 / 0.2);
   }
 
   .dark\:text-gray-100 {
     --tw-text-opacity: 1;
-    color: rgb(229 229 226 / var(--tw-text-opacity));
+    color: rgb(232 233 222 / var(--tw-text-opacity));
   }
 
   .dark\:text-gray-400 {
     --tw-text-opacity: 1;
-    color: rgb(124 125 115 / var(--tw-text-opacity));
+    color: rgb(156 161 122 / var(--tw-text-opacity));
   }
 
   .dark\:text-white {
@@ -2495,12 +2490,12 @@ body.meetChris {
 
   .dark\:before\:to-gray-950::before {
     content: var(--tw-content);
-    --tw-gradient-to: #1a1b18 var(--tw-gradient-to-position);
+    --tw-gradient-to: #1c1e15 var(--tw-gradient-to-position);
   }
 
   .dark\:hover\:bg-gray-800:hover {
     --tw-bg-opacity: 1;
-    background-color: rgb(57 58 53 / var(--tw-bg-opacity));
+    background-color: rgb(64 67 49 / var(--tw-bg-opacity));
   }
 }
 

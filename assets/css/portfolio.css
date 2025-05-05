@@ -52,7 +52,7 @@ a.portfolio-list__link:hover .portfolio-list__image {
 }
 
 .portfolio-list__title {
-  @apply mt-4 mb-1.5 h2;
+  @apply mt-4 mb-1.5;
 }
 
 .portfolio-list__description {

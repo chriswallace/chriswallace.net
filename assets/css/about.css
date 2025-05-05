@@ -49,7 +49,7 @@
 }
 
 .about-content .text-paragraph {
-  @apply mb-0 font-serif font-medium ~lg:~text-5xl/4xl !leading-[.7];
+  @apply mb-0 font-serif font-light ~lg:~text-5xl/4xl !leading-[.7];
 }
 
 .bio-grid__author {

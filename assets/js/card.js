@@ -71,14 +71,14 @@ class Card extends HTMLElement {
         .title {
           color: white;
           font-size: clamp(1.2rem, 1rem + 2vw, 4rem);
-          font-weight: 600;
+          font-weight: 400;
           margin-top: 0.35rem;
           margin-bottom: 0;
           max-width: 95%;
           line-height: 1.25;
           font-family: "New Title", serif;
           text-transform: uppercase;
-          letter-spacing: 0;
+          letter-spacing: 0.03em;
         }
 
         .media-container {

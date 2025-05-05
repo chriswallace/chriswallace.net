@@ -40,22 +40,22 @@
 
   h1,
   .h1 {
-    @apply font-serif ~/2xl:~text-5xl/6xl font-medium mb-12;
+    @apply font-serif ~/3xl:~text-5xl/6xl font-light mb-12;
   }
 
   h2,
   .h2 {
-    @apply font-serif ~text-2xl/3xl font-medium mt-16 sm:mt-24;
+    @apply font-serif ~text-3xl/4xl font-light mt-16 sm:mt-24;
   }
 
   h3,
   .h3 {
-    @apply font-serif ~text-xl/2xl font-medium mb-6 mt-6 sm:mt-12;
+    @apply font-serif ~text-2xl/3xl font-light mb-6 mt-6 sm:mt-12;
   }
 
   h4,
   .h4 {
-    @apply ~text-lg/xl font-medium pb-2 mt-6 sm:mt-12 mb-6 dark:border-gray-200;
+    @apply ~text-lg/xl font-light pb-2 mt-6 sm:mt-12 mb-6 dark:border-gray-200;
   }
 
   h5,

@@ -7,7 +7,7 @@
 }
 
 .text-paragraph {
-  @apply max-w-none text-left text-highlight leading-[0.75] uppercase;
+  @apply max-w-none text-left text-highlight leading-[0.6] uppercase;
 }
 
 .text-paragraph .word {
@@ -19,14 +19,14 @@
 }
 
 .text-paragraph .word > .char {
-  @apply pt-[0.75em] pr-[0.05em] mt-[-0.5em] mr-[-0.05em];
+  @apply pt-[0.65em] pr-[0.05em] pb-[0.25em] mt-[-0.5em] mr-[-0.05em];
   display: inline-block;
   transform: translateY(100%);
   opacity: 0;
 }
 
 .work-status {
-  @apply grid grid-cols-2 md:flex md:flex-row md:gap-24 mb-0 max-w-none text-sm;
+  @apply grid grid-cols-2 md:flex md:flex-row md:gap-6 lg:gap-12 2xl:gap-24 mb-0 max-w-none text-sm;
 }
 
 .work-status--work-status dd {
@@ -42,7 +42,7 @@
 }
 
 .rotator {
-  @apply h-[1.5em] overflow-hidden relative;
+  @apply h-[1.5em] w-full overflow-hidden relative;
 }
 
 .rotator__track {

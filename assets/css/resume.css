@@ -15,20 +15,20 @@
 }
 
 .resume__metadata {
-  @apply ~text-sm/base font-medium text-highlight;
+  @apply text-2xl tracking-wide text-highlight;
 }
 
 .resume__metadata-item--place {
-  @apply text-2xl flex-none order-1 md:order-2 whitespace-nowrap;
+  @apply flex-none order-1 md:order-2 whitespace-nowrap;
 }
 
 .resume__metadata-item--title {
-  @apply text-2xl pl-0 pb-0 mb-0 shrink text-primary-600 dark:text-primary-400 order-3 md:order-1 flex-[0_1_100%] md:flex-initial;
+  @apply pl-0 pb-0 mb-0 shrink text-primary-600 dark:text-primary-400 order-3 md:order-1 flex-[0_1_100%] md:flex-initial;
   font-weight: 500;
 }
 
 .resume__metadata-item--time-period {
-  @apply text-xl text-right pr-0 tracking-wide justify-self-end order-2 md:order-3 whitespace-nowrap flex-none md:flex-1;
+  @apply text-right pr-0 tracking-wide justify-self-end order-2 md:order-3 whitespace-nowrap flex-none md:flex-1;
 }
 
 .resume__metadata-item--time-period:before {

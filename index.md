@@ -76,7 +76,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
     </blockquote>
   </div>
 
-  <h2 class="font-serif mb-0 flex justify-between items-end"><span class="~text-2xl/5xl">Now for the portfolio.</span></h2>
+  <h2 class="font-serif mb-0 flex justify-between items-end lazy-load">Now for the portfolio.</h2>
   <div class="portfolio-list !max-w-none !mt-8">
     <div class="portfolio-list__item lazy-load">
         <a class="portfolio-list__link" href="/portfolio/dc3-interactive-comic-reader/">
