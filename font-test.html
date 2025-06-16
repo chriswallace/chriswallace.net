@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Test - Tabular</title>
+
+  <!-- Preconnect to Fontshare -->
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+
+  <!-- Load Tabular font from Fontshare -->
+  <link href="https://api.fontshare.com/v2/css?f[]=tabular@1&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Tabular", sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+    }
+
+    .test-section {
+      margin-bottom: 30px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .weight-300 {
+      font-weight: 300;
+    }
+
+    .weight-400 {
+      font-weight: 400;
+    }
+
+    .weight-500 {
+      font-weight: 500;
+    }
+
+    .weight-600 {
+      font-weight: 600;
+    }
+
+    .weight-700 {
+      font-weight: 700;
+    }
+
+    .fallback {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Tabular Font Test</h1>
+
+  <div class="test-section">
+    <h2>Font Weight Tests</h2>
+    <p class="weight-300">This is Tabular at weight 300 (Light)</p>
+    <p class="weight-400">This is Tabular at weight 400 (Regular)</p>
+    <p class="weight-500">This is Tabular at weight 500 (Medium)</p>
+    <p class="weight-600">This is Tabular at weight 600 (Semi-Bold)</p>
+    <p class="weight-700">This is Tabular at weight 700 (Bold)</p>
+  </div>
+
+  <div class="test-section">
+    <h2>Comparison with Fallback</h2>
+    <p>This text uses Tabular font</p>
+    <p class="fallback">This text uses Arial fallback font</p>
+  </div>
+
+  <div class="test-section">
+    <h2>Numbers and Special Characters</h2>
+    <p>0123456789 !@#$%^&*()_+-=[]{}|;:'",./<>?</p>
+    <p>The quick brown fox jumps over the lazy dog</p>
+    <p>THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG</p>
+  </div>
+
+  <script>
+    // Check if font is loaded
+    document.fonts.ready.then(() => {
+      console.log('Fonts loaded');
+      const testElement = document.createElement('span');
+      testElement.style.fontFamily = 'Tabular';
+      testElement.textContent = 'Test';
+      document.body.appendChild(testElement);
+
+      const computedStyle = window.getComputedStyle(testElement);
+      console.log('Computed font-family:', computedStyle.fontFamily);
+
+      document.body.removeChild(testElement);
+    });
+
+    // Font loading status
+    document.fonts.load('400 1em "Tabular"').then(() => {
+      console.log('Tabular font loaded successfully');
+    }).catch((error) => {
+      console.error('Failed to load Tabular font:', error);
+    });
+  </script>
+</body>
+
+</html>

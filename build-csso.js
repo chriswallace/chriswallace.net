@@ -1,14 +1,33 @@
-const csso = require('csso');
-const fs = require('fs');
+const csso = require("csso");
+const fs = require("fs");
 
-const preloaderCss = fs.readFileSync('./assets/css/content-preloader.css', 'utf8');
-const minifiedPreloaderCss = csso.minify(preloaderCss).css;
-fs.writeFileSync('./assets/content-preloader.css', minifiedPreloaderCss);
+function minifyCSS(inputPath, outputPath, description) {
+  try {
+    const css = fs.readFileSync(inputPath, "utf8");
+    const minifiedCss = csso.minify(css, {
+      restructure: false, // Disable restructuring to avoid issues with CSS custom properties
+      forceMediaMerge: false, // Disable media query merging to be safer
+    }).css;
+    fs.writeFileSync(outputPath, minifiedCss);
+    console.log(`✓ Minified ${description}`);
+  } catch (error) {
+    console.warn(`⚠ Warning: Could not minify ${description}:`, error.message);
+    console.log(`  Copying original file instead...`);
+    // Copy the original file if minification fails
+    const originalCss = fs.readFileSync(inputPath, "utf8");
+    fs.writeFileSync(outputPath, originalCss);
+  }
+}
 
-const preloaderCss = fs.readFileSync('./assets/css/legendary.css', 'utf8');
-const minifiedPreloaderCss = csso.minify(preloaderCss).css;
-fs.writeFileSync('./assets/legendary.css', minifiedPreloaderCss);
-
-const css = fs.readFileSync('./assets/css/main.css', 'utf8');
-const minifiedCss = csso.minify(css).css;
-fs.writeFileSync('./assets/main.css', minifiedCss);
+// Minify CSS files
+minifyCSS(
+  "./assets/css/content-preloader.css",
+  "./assets/content-preloader.css",
+  "content-preloader.css"
+);
+minifyCSS(
+  "./assets/css/legendary.css",
+  "./assets/legendary.css",
+  "legendary.css"
+);
+minifyCSS("./assets/css/main.css", "./assets/main.css", "main.css");

@@ -5,7 +5,7 @@
     "css:build": "npx tailwindcss -i ./assets/css/main.css -o ./assets/main.css && npx tailwindcss -i ./assets/css/legendary.css -o ./assets/legendary.css && npx tailwindcss -i ./assets/css/interactive.css -o ./assets/interactive.css && npx tailwindcss -i ./assets/css/content-preloader.css -o ./assets/content-preloader.css",
     "csso:minify": "node build-csso.js",
     "js:minify": "node build-minify.js",
-    "css:watch": "nodemon -e css -x 'npm run css:build'",
+    "css:watch": "nodemon -e css,md,html -x 'npm run css:build'",
     "browser-sync": "browser-sync start --config bs-config.js",
     "start": "npm-run-all -p jekyll:serve css:watch browser-sync"
   },

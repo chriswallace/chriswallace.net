@@ -1,37 +1,45 @@
-<header class="navigation" role="banner">
-  <div class="branding">
-    <button id="menu-button" class="menu-button fade-in-element" aria-label="Open Navigation Menu" aria-expanded="false">
-      <svg class="logo" width="88" height="34" viewBox="0 0 88 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 15.6558C1 9.16894 1 5.92553 2.81982 3.7621C3.10629 3.42155 3.42155 3.10629 3.7621 2.81982C5.92553 1 9.16894 1 15.6558 1C20.6932 1 23.2119 1 25.1443 2.26268C25.4526 2.4641 25.7461 2.68723 26.0226 2.93038C27.7562 4.45457 28.4299 6.88152 29.7774 11.7354L32.6449 22.0643C32.8357 22.7518 33.4616 23.2275 34.175 23.2275C34.8884 23.2275 35.5143 22.7517 35.7051 22.0643L40.8982 3.35799C41.2851 1.96447 42.5538 1 44 1C45.4462 1 46.7149 1.96447 47.1018 3.35799L52.2949 22.0643C52.4857 22.7518 53.1116 23.2275 53.825 23.2275C54.5384 23.2275 55.1643 22.7517 55.3551 22.0643L58.2226 11.7354C59.5701 6.88152 60.2438 4.45457 61.9774 2.93038C62.2539 2.68723 62.5474 2.4641 62.8557 2.26268C64.7881 1 67.3068 1 72.3443 1C78.8311 1 82.0745 1 84.2379 2.81982C84.5785 3.10629 84.8937 3.42155 85.1802 3.7621C87 5.92553 87 9.16894 87 15.6558V17.4948C87 24.804 87 28.4586 84.7293 30.7293C82.4587 33 78.804 33 71.4949 33H16.5052C9.19596 33 5.54135 33 3.27068 30.7293C1 28.4586 1 24.804 1 17.4948V15.6558Z" />
-      </svg>
-      <i></i>
-    </button>
-
-  </div>
+<div class="ui-navbar fade-in-element">
+  <button id="menu-button" class="menu-button" aria-label="Open Navigation Menu" aria-expanded="false">
+    <svg width="20" viewBox="0 0 133 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M47.0261 53.2844C47.0261 52.766 47.4464 52.3457 47.9649 52.3457V52.3457C68.7029 52.3457 85.5144 69.1572 85.5144 89.8952V132.94L47.0261 120.604V53.2844Z" fill="currentColor"/>
+      <path d="M0.255859 1.06569C0.255859 0.547241 0.676147 0.126953 1.1946 0.126953V0.126953C21.9326 0.126953 38.7441 16.9384 38.7441 37.6765V117.729L1.31025 105.731C0.682035 105.53 0.255859 104.946 0.255859 104.286V1.06569Z" fill="currentColor"/>
+      <path d="M93.7969 31.0852C93.7969 30.5668 94.2172 30.1465 94.7356 30.1465V30.1465C115.474 30.1465 132.285 46.958 132.285 67.696V133.882C132.285 140.738 125.609 145.609 119.08 143.516L93.7969 135.413V31.0852Z" fill="currentColor"/>
+    </svg>
+  </button>
+  
   <nav id="navigation-items" class="menu" aria-label="Main Navigation">
-    <ul>
-      <li class="fade-in-element"><a href="/" aria-label="Home">home</a></li>
-      <li class="fade-in-element"><a href="/bio" aria-label="Bio">bio</a></li>
-      <li class="fade-in-element"><a href="/design-services" aria-label="Services">services</a></li>
-      <li class="fade-in-element"><a href="/resume" aria-label="R&eacute;sum&eacute;">R&eacute;sum&eacute; / CV</a></li>
-      <li class="fade-in-element"><a href="/contact" aria-label="Contact">contact</a></li>
+    <div class="menu__header">
+      <button id="menu-close" class="menu__close" aria-label="Close Navigation Menu">
+        <i></i>
+      </button>
+      <a href="/" class="menu__logo" aria-label="Home">
+        <svg width="46" height="51" viewBox="0 0 46 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.063 18.4518C16.063 18.2756 16.2058 18.1328 16.382 18.1328V18.1328C23.4281 18.1328 29.1401 23.8448 29.1401 30.8909V45.5163L16.063 41.3249V18.4518Z" fill="currentColor"/>
+          <path d="M0.171875 0.709581C0.171875 0.533428 0.314675 0.390625 0.490828 0.390625V0.390625C7.53695 0.390625 13.249 6.10264 13.249 13.1488V40.3481L0.530123 36.2716C0.316677 36.2032 0.171875 36.0047 0.171875 35.7806V0.709581Z" fill="currentColor"/>
+          <path d="M31.9542 10.9088C31.9542 10.7326 32.097 10.5898 32.2731 10.5898V10.5898C39.3192 10.5898 45.0312 16.3019 45.0312 23.348V45.8358C45.0312 48.1654 42.763 49.8203 40.5446 49.1093L31.9542 46.356V10.9088Z" fill="currentColor"/>
+        </svg>
+      </a>
+    </div>
+    
+    <ul class="menu__list">
+      <li class="menu__item"><a href="/" class="menu__link" aria-label="Portfolio">Portfolio</a></li>
+      <li class="menu__item"><a href="/bio" class="menu__link" aria-label="Bio">Bio</a></li>
+      <li class="menu__item"><a href="/design-services" class="menu__link" aria-label="Services">Services</a></li>
+      <li class="menu__item"><a href="/resume" class="menu__link" aria-label="Resume">Resume / CV</a></li>
+      <li class="menu__item"><a href="/contact" class="menu__link" aria-label="Contact">Contact</a></li>
     </ul>
-    <div class="social">
-      <div class="grow">
-        <div class="brand mb-8 flex gap-6 items-center">
-          <a href="https://twitter.com/chriswallace" fill="current" aria-label="Twitter">
-            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve"><path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z"  /></svg>
-          </a>
-          <a href="https://bsky.app/profile/chriswallace.net" aria-label="BlueSky">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="current" viewBox="0 -3.268 64 68.414" width="21" height="24"><path d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512 4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405 1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873 3.805zm36.254 0C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456 7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825 18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745z"/></svg>
-          </a>
-          <a href="https://linkedin.com/in/chriswallace2" aria-label="LinkedIn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="current" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" />
-            </svg>
-          </a>
-        </div>
-      </div>
+    
+    <div class="menu__social">
+      <a href="https://twitter.com/chriswallace" aria-label="Twitter">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z"/>
+        </svg>
+      </a>
+      <a href="https://bsky.app/profile/chriswallace.net" aria-label="BlueSky">
+        <svg width="21" height="24" viewBox="0 -3.268 64 68.414" fill="currentColor">
+          <path d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512 4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405 1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873 3.805zm36.254 0C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456 7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825 18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745z"/>
+        </svg>
+      </a>
     </div>
   </nav>
-</header>
+</div>

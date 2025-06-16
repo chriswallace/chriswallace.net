@@ -1,250 +1,394 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+/* CSS Layers - Define order of precedence */
+@layer reset, base, tokens, components, utilities, overrides;
+
+/* Import organized by layers */
 @import "tokens.css";
-@import "utilities.css";
 @import "typography.css";
-@import "buttons.css";
-@import "cards.css";
+@import "utilities.css";
+
+/* Remaining component imports - larger files that benefit from separation */
 @import "navigation.css";
 @import "contact-grid.css";
 @import "resume.css";
 @import "about.css";
 @import "testimonial.css";
-@import "animations.css";
 @import "portfolio.css";
 @import "services.css";
 @import "homepage.css";
 @import "notifications.css";
+@import "legendary.css";
 
-body {
-  @apply bg-white dark:bg-gray-950;
-}
-
-picture img {
-  @apply w-full;
-}
-
-.ui-content {
-  @apply z-0 relative;
-}
-
-.zoom-active .ui-content {
-  @apply static;
-}
-
-.open-menu .ui-content:after {
-  @apply fixed top-0 left-0 w-screen h-screen bg-black -z-10 opacity-0 pointer-events-none transition-opacity duration-200;
-  content: "";
-}
-
-.open-menu .ui-content:after {
-  @apply opacity-70 z-50;
-}
-
-.site-logo {
-  @apply ml-[16px] md:ml-[60px] mb-8 relative top-[-3px] block md:hidden text-primary-600 dark:text-primary-600 my-[.45rem];
-
-  svg {
-    @apply block max-w-[42px];
+@layer base {
+  body {
+    @apply text-foreground bg-background;
   }
 
-  path {
-    @apply fill-current;
+  /* Ensure all images stay within containers */
+  img {
+    @apply max-w-full h-auto;
+  }
+
+  picture img {
+    @apply w-full max-w-full;
+  }
+
+  /* Prevent container overflow */
+  * {
+    box-sizing: border-box;
   }
 }
 
-.content-container {
-  @apply mx-auto max-w-[calc(100%-32px)] lg:max-w-[calc(100%-64px)];
-}
+@layer components {
+  /* UI Framework Components */
+  .ui-content {
+    @apply z-0 relative;
+  }
 
-.content-container,
-.content-container-wo {
-  @apply mx-auto 2xl:max-w-7xl sm:ml-[128px] sm:mr-[64px] 2xl:mx-auto;
-}
+  .zoom-active .ui-content {
+    @apply static;
+  }
 
-.primary-heading h1 {
-  @apply max-w-none my-0;
-}
+  .open-menu .ui-content:after {
+    @apply fixed top-0 left-0 w-screen h-screen bg-black -z-10 opacity-0 pointer-events-none transition-opacity duration-200;
+    content: "";
+  }
 
-.sub-heading {
-  @apply ~text-lg/xl max-w-prose mt-6 lg:mt-4 mb-12 md:mb-16;
-}
+  .open-menu .ui-content:after {
+    @apply opacity-40 z-50 backdrop-blur-md;
+  }
 
-.sub-heading + hr {
-  @apply -mt-4 md:-mt-8;
-}
+  .site-logo {
+    @apply ml-[16px] md:ml-[60px] mb-8 relative top-[-3px] block md:hidden text-gray-400 my-[.45rem];
 
-.toc-toggle {
-  flex-shrink: 0;
-  transition: background-color 0.2s;
-}
+    svg {
+      @apply block max-w-[42px];
+    }
 
-.toc-container ol {
-  @apply max-w-full;
-}
+    path {
+      @apply fill-current;
+    }
+  }
 
-figcaption {
-  @apply ~text-xs/sm text-gray-600 dark:text-gray-400 my-2 mx-4 sm:mt-2 sm:mb-8 block text-center;
-}
+  /* Layout Components */
+  .content-container {
+    @apply mx-auto max-w-[calc(100%-32px)] lg:max-w-[calc(100%-64px)] overflow-hidden;
+  }
 
-.hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
+  .content-container,
+  .content-container-wo {
+    @apply mx-auto 2xl:max-w-7xl sm:ml-[128px] sm:mr-[64px] 2xl:mx-auto overflow-hidden;
+  }
 
-.hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
-}
+  .sub-heading {
+    @apply max-w-prose mt-6 lg:mt-4 mb-12 md:mb-16;
+  }
 
-/* Home Page */
+  .sub-heading + hr {
+    @apply -mt-2 md:-mt-4;
+  }
 
-.portfolio-intro__icon {
-  @apply inline;
-}
+  .toc-toggle {
+    flex-shrink: 0;
+    transition: background-color 0.2s;
+  }
 
-.project-list {
-  @apply table md:block w-auto md:w-full ~text-xs/sm max-w-none mb-4 md:mb-0;
-}
+  .toc-container ol {
+    @apply max-w-full;
+  }
 
-.project-list div {
-  @apply table-row md:inline-block mr-6;
-}
+  figcaption {
+    @apply ~text-xs/sm text-gray-400 my-2 mx-4 sm:mt-2 sm:mb-8 block text-center;
+  }
 
-.project-list dt {
-  @apply table-cell py-0.5 2xl:py-0 text-gray-700 dark:text-gray-100 md:inline whitespace-nowrap md:whitespace-normal font-medium w-fit md:w-auto pr-4 md:pr-2;
-}
+  /* Button Components - Consolidated from buttons.css */
+  .button {
+    @apply cursor-pointer rounded-lg px-3 py-2 bg-foreground text-primary-700 hover:bg-primary-500 hover:text-foreground transition-colors duration-150 ease-in-out;
+  }
 
-.project-list dd {
-  @apply table-cell md:inline pl-4 md:pl-0 ml-0 py-0;
-}
+  .button svg {
+    @apply inline-block mr-1 align-middle w-[18px] h-[18px] top-[-4px] fill-current stroke-current;
+  }
 
-/* Resume Page */
+  .button-dark {
+    @apply button bg-primary-800 text-foreground hover:bg-primary-700;
+  }
 
-.download-resume {
-  @apply mb-6 relative;
-}
+  .back {
+    @apply decoration-foreground mb-6 ml-[62px] sm:ml-0 mt-[28px] inline-block text-base text-gray-400;
+  }
 
-.feather {
-  @apply inline text-primary-500;
-}
+  /* Card Components - Consolidated from cards.css */
+  .card-container {
+    @apply w-80 h-80;
+    perspective: 1000px;
+  }
 
-.feather path {
-  @apply fill-current;
-}
+  .card {
+    @apply relative w-full h-full transition-transform duration-[600ms];
+    transform-style: preserve-3d;
+    aspect-ratio: 23/32;
+  }
 
-/* Custom Controls (Optional) */
-/* You can hide the default controls and implement custom controls if needed.
-This gives you more control over the look and feel of the player: */
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
 
-/* Hide default controls */
-video::-webkit-media-controls {
-  @apply hidden !important;
-}
+  .card-front,
+  .card-back {
+    @apply absolute w-full h-full;
+    backface-visibility: hidden;
+  }
 
-/* Resume Page */
+  .card-back {
+    transform: rotateY(180deg);
+  }
 
-.job-title {
-  @apply mb-0;
-}
+  /* Utility Components */
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 
-.job-metadata {
-  @apply mt-0 mb-4 text-primary-700;
-}
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
 
-/* QQL Page */
+  /* Portfolio Components */
+  .portfolio-intro__icon {
+    @apply inline;
+  }
 
-.qql-collection .gallery-row .media-wrapper {
-  @apply mb-4;
-}
+  .project-list {
+    @apply table md:block w-auto md:w-full ~text-xs/sm max-w-none mb-4 md:mb-0;
+  }
 
-/* Interplay Page */
+  .project-list div {
+    @apply table-row md:inline-block mr-6;
+  }
 
-.interplay-grid {
-  @apply grid md:grid-cols-2 gap-8;
-}
+  .project-list dt {
+    @apply table-cell py-0.5 2xl:py-0 text-gray-400 md:inline whitespace-nowrap md:whitespace-normal font-medium w-fit md:w-auto pr-4 md:pr-2;
+  }
 
-/* Zoomable styles */
-.zoomable {
-  @apply cursor-pointer transition-transform duration-300 ease-in-out z-10 flex flex-col justify-center;
-}
+  .project-list dd {
+    @apply table-cell md:inline pl-4 md:pl-0 ml-0 py-0;
+  }
 
-.zoom-fullscreen {
-  @apply z-[999] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-in-out;
-}
+  /* Resume Components */
+  .download-resume {
+    @apply mb-6 relative;
+  }
 
-/* Overlay */
-.page-overlay {
-  @apply hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 z-[999] pointer-events-none;
-}
+  .job-title {
+    @apply mb-0 text-white;
+  }
 
-.zoom-active .page-overlay {
-  @apply block pointer-events-auto;
-}
+  .job-metadata {
+    @apply mt-0 mb-4 text-gray-400;
+  }
 
-/* Ensure media maintains a 4:3 aspect ratio */
-.zoomable[data-type="video"],
-.zoomable img {
-  @apply w-auto h-auto;
-}
+  /* Gallery Components */
+  .qql-collection .gallery-row .media-wrapper {
+    @apply mb-4;
+  }
 
-.text-container {
-  @apply font-serif font-semibold;
-}
+  .interplay-grid {
+    @apply grid md:grid-cols-2 gap-8;
+  }
 
-.top {
-  @apply mt-2;
-}
-
-.gallery-row {
-  @apply grid grid-cols-3 md:grid-cols-3 gap-2;
+  .gallery-row {
+    @apply grid grid-cols-3 md:grid-cols-3 gap-2;
+  }
 
   .image-wrapper {
-    @apply flex justify-center;
+    @apply relative overflow-hidden rounded-lg;
   }
 
-  img {
-    @apply mb-4 w-full;
+  .image-wrapper img {
+    @apply w-full h-full object-cover transition-transform duration-300 hover:scale-105;
   }
 
-  h3 {
-    @apply mt-0 mb-12;
+  .image-wrapper h3 {
+    @apply absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent text-white p-4 m-0;
+  }
+
+  /* Image Gallery Components */
+  .image-gallery {
+    @apply w-full overflow-hidden;
+  }
+
+  .image-gallery img {
+    @apply w-full max-w-full h-auto object-contain;
+  }
+
+  /* Contact Components */
+  .contact-card {
+    @apply block p-6 bg-gray-950 border-gray-700 border rounded-lg shadow-sm hover:shadow-md transition-all duration-200 no-underline mb-16;
+  }
+
+  .contact-card:hover {
+    @apply shadow-lg no-underline bg-primary-600;
+  }
+
+  .contact-card__image {
+    @apply w-12 h-12 rounded-full mb-4 transition-transform duration-200;
+  }
+
+  .contact-card:hover .contact-card__image {
+    @apply scale-110;
+  }
+
+  .contact-card__content {
+    @apply space-y-2;
+  }
+
+  .contact-card__text {
+    @apply text-foreground-muted transition-colors duration-200;
+  }
+
+  .contact-card__link {
+    @apply text-foreground font-medium transition-colors duration-200;
+  }
+
+  .contact-card:hover .contact-card__text,
+  .contact-card:hover .contact-card__link {
+    @apply text-white;
   }
 }
 
-/* Contact Card Component */
-.contact-card {
-  @apply no-underline mt-4 lg:mt-16 mb-24 text-left text-xl max-w-none flex items-center gap-6 border-2 border-gray-200 dark:border-gray-800 rounded-xl p-8 lg:p-12 inline-block transition-all duration-150;
-}
+@layer utilities {
+  .feather {
+    @apply inline text-gray-400;
+  }
 
-.contact-card:hover {
-  @apply border-primary-600 dark:border-primary-500;
-}
+  .feather path {
+    @apply fill-current;
+  }
 
-.contact-card__image {
-  @apply rounded-full border-primary-400 dark:border-primary-500 border-4 w-[84px] h-[84px] object-cover transition-transform duration-150;
-}
+  .text-highlight {
+    @apply text-foreground;
+  }
 
-.contact-card:hover .contact-card__image {
-  @apply scale-105;
-}
+  /* Zoom functionality */
+  .zoomable {
+    @apply cursor-pointer transition-transform duration-300 ease-in-out z-10 flex flex-col justify-center overflow-hidden;
+  }
 
-.contact-card__content {
-  @apply inline-block ~text-base/xl;
-}
+  .zoom-fullscreen {
+    @apply z-[999] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-in-out;
+  }
 
-.contact-card__text {
-  @apply block text-gray-950 dark:text-white;
-}
+  .page-overlay {
+    @apply hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 z-[999] pointer-events-none;
+  }
 
-.contact-card__link {
-  @apply underline underline-offset-4 decoration-primary-300 dark:decoration-primary-500;
-}
+  .zoom-active .page-overlay {
+    @apply block pointer-events-auto;
+  }
 
-.contact-card:hover .contact-card__link {
-  @apply decoration-primary-500 dark:decoration-white;
-}
+  .zoomable[data-type="video"],
+  .zoomable img {
+    @apply w-auto h-auto max-w-full;
+  }
 
-.text-highlight {
-  @apply dark:text-white;
+  .text-container {
+    @apply font-serif font-semibold;
+  }
+
+  .top {
+    @apply mt-2;
+  }
+
+  /* Video controls */
+  video::-webkit-media-controls {
+    @apply hidden !important;
+  }
+
+  /* Container overflow prevention */
+  .overflow-safe {
+    @apply overflow-hidden;
+  }
+
+  .image-container {
+    @apply w-full overflow-hidden;
+  }
+
+  .image-container img {
+    @apply w-full h-auto max-w-full object-contain;
+  }
+
+  /* Animation utilities - Consolidated from animations.css */
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+
+  .animate-wave {
+    animation: wave 2s ease-in-out infinite;
+  }
+
+  /* Animation keyframes */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @keyframes wave {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Content Fade-in Animations */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.2s ease-out forwards;
+  }
+
+  .fade-in-up-delay-1 {
+    animation-delay: 0.2s;
+  }
+
+  .fade-in-up-delay-2 {
+    animation-delay: 0.4s;
+  }
+
+  .fade-in-up-delay-3 {
+    animation-delay: 0.6s;
+  }
+
+  .fade-in-up-delay-4 {
+    animation-delay: 0.8s;
+  }
+
+  .fade-in-up-delay-5 {
+    animation-delay: 1.0s;
+  }
+
+  .fade-in-up-delay-6 {
+    animation-delay: 1.2s;
+  }
+
+  .fade-in-up-delay-7 {
+    animation-delay: 1.4s;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

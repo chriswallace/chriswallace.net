@@ -2,284 +2,300 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-html,
-body {
-  @apply overflow-x-hidden;
-  scroll-behavior: smooth;
+/* Define layer order for this standalone stylesheet */
+@layer base, components, utilities;
+
+@layer base {
+  html,
+  body {
+    @apply overflow-x-hidden m-0 h-auto antialiased;
+    scroll-behavior: smooth;
+    font-family: "transducer-variable", sans-serif;
+    font-variation-settings: "slnt" 0, "wdth" 0, "wght" 400;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  body {
+    @apply text-[0.78em] md:text-[1em] text-[#ECD6CD] bg-[#FF4B4B];
+  }
+
+  body.no-scroll {
+    @apply overflow-hidden h-full;
+  }
+
+  a {
+    @apply text-[#FFD569];
+    transition: color 200ms linear;
+  }
+
+  a:after {
+    @apply ml-2;
+    content: ">";
+    transition: margin 200ms ease-in-out, color 200ms linear;
+  }
+
+  a:hover:after {
+    @apply ml-4;
+  }
+
+  a:hover,
+  a:hover:after {
+    @apply text-[#f9f1a5];
+  }
+
+  i {
+    font-variation-settings: "slnt" -7, "wdth" 0, "wght" 400;
+    font-style: normal;
+  }
 }
 
-body.no-scroll {
-  @apply overflow-hidden h-full;
+@layer components {
+  #container {
+    @apply w-full h-screen;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+
+  .section {
+    @apply w-full min-h-screen grid gap-2 lg:gap-4 p-6 md:p-6 lg:p-12 items-center content-center mx-auto text-[4.6rem] sm:text-[5.2rem] md:text-[6rem] lg:text-[7rem] bg-[#FF4B4B];
+    scroll-snap-align: start;
+  }
+
+  .text-layer {
+    @apply relative z-10;
+  }
+
+  .bright {
+    @apply text-[#FFD569];
+  }
+
+  .odd {
+    @apply text-right;
+  }
+
+  .odd .text-layer {
+    @apply text-right;
+  }
+
+  .odd .number {
+    @apply lg:order-last justify-self-end;
+  }
+
+  .factoids {
+    @apply text-[3.4rem] md:text-[4.2rem] bg-[#2c1669] text-[#e7d3ee] items-start lg:px-8 lg:py-16 gap-4 lg:gap-8 grid-cols-1;
+    font-variation-settings: "slnt" 0, "wdth" 40, "wght" 300;
+    line-height: 1;
+  }
+
+  .factoids img {
+    @apply h-[42px] md:h-[58px] w-auto inline relative align-middle top-[-5px] lg:top-[-12px];
+  }
+
+  /* Shared factoid styles */
+  .first,
+  .second,
+  .third,
+  .fourth,
+  .fifth,
+  .sixth {
+    @apply opacity-0 mb-4 max-w-[12em];
+    font-variation-settings: "slnt" 0, "wdth" 2, "wght" 400;
+  }
+
+  /* Meet Chris Section */
+  #meetChris {
+    @apply grid-cols-1 md:grid-cols-3 place-content-stretch place-items-end text-white grid-rows-[auto_1fr_auto] md:grid-cols-[1fr_auto];
+  }
+
+  #meetChris .curtain-title {
+    @apply uppercase text-[1.8rem] lg:text-[2rem] h-0 overflow-y-hidden justify-self-stretch mt-1 md:mt-1;
+    font-family: "transducer-variable", sans-serif;
+    font-variation-settings: "slnt" 0, "wdth" 140, "wght" 900;
+    font-style: normal;
+  }
+
+  #meetChris .branding {
+    @apply md:col-span-3 md:col-start-1 place-self-start text-[#FFD569] w-auto;
+  }
+
+  #meetChris .branding .lockup {
+    @apply flex items-center gap-2 md:gap-4 opacity-0;
+  }
+
+  #meetChris .branding .mark {
+    @apply max-w-[34px] h-auto;
+  }
+
+  #meetChris .intro-to-chris,
+  #meetChris .text-layer {
+    @apply z-20;
+    font-variation-settings: "slnt" 0, "wdth" 25, "wght" 400;
+  }
+
+  #meetChris .intro-to-chris {
+    @apply order-2 md:order-3 w-full text-left mb-6 inline relative;
+  }
+
+  #meetChris .text-layer {
+    @apply uppercase col-span-1 md:col-span-2 order-3 md:order-2 justify-self-start opacity-0 mb-4 md:mb-0 text-[4.5rem] md:text-[6rem] lg:text-[7rem] max-w-[9em] lg:max-w-[7em];
+    font-variation-settings: "slnt" 0, "wdth" 0, "wght" 560;
+    line-height: 0.88;
+  }
+
+  #meetChris .bright {
+    font-variation-settings: "slnt" 0, "wdth" 0, "wght" 730;
+  }
+
+  /* Five Things Section */
+  #fiveThings {
+    @apply text-[#2c1669] bg-white;
+  }
+
+  #fiveThings .bright {
+    @apply text-[#5c5f6d];
+  }
+
+  #fiveThings .text-layer {
+    @apply uppercase text-[4.5rem] md:text-[6rem] lg:text-[7rem] max-w-[9em] lg:max-w-[7em];
+    font-variation-settings: "slnt" 0, "wdth" 0, "wght" 560;
+    line-height: 0.88;
+  }
+
+  #fiveThings .bright {
+    font-variation-settings: "slnt" 0, "wdth" 0, "wght" 730;
+  }
+
+  /* Chris Intro Section */
+  #chrisIntro {
+    @apply bg-black text-white relative;
+    grid-template-columns: auto;
+    align-content: end;
+    background-image: url("/assets/images/cw-media-2.jpg");
+    background-size: cover;
+    background-position: 24% center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #chrisIntro .overlay {
+    @apply inset-0 absolute bg-[#111] opacity-50 z-10;
+    mix-blend-mode: darken;
+  }
+
+  #chrisIntro .text-layer {
+    @apply mb-12 lg:mb-0 max-w-[10em] md:text-[6rem] uppercase;
+    line-height: 0.93;
+  }
+
+  #chrisImage {
+    @apply opacity-0 z-0 max-w-[220px] h-auto block lg:ml-auto lg:mr-6;
+    transform: rotate(200deg);
+  }
+
+  #helloBubble {
+    @apply opacity-0 left-[75%] top-[0] absolute w-[85px];
+  }
+
+  #chrisImage img {
+    @apply w-full max-w-[220px] h-auto rounded-full;
+  }
+
+  /* Factoids 2 Section */
+  #factoids2 {
+    @apply text-[4.2rem] lg:text-[5rem] py-16 grid-cols-1 md:grid-cols-2 md:gap-12;
+  }
+
+  #factoids2 h2 {
+    @apply md:col-span-2 text-center pt-12 mb-12;
+  }
+
+  #factoids2 div {
+    @apply relative bg-white text-[#222] text-[2.6rem] lg:text-[3.8rem] rounded-md p-8 lg:p-12 lg:pb-12 mb-0 lg:mb-2;
+  }
+
+  #factoids2 div:nth-child(even) {
+    @apply ml-auto mr-0;
+  }
+
+  #factoids2 .second {
+    @apply opacity-0;
+  }
+
+  #factoids2 .third {
+    @apply opacity-0;
+  }
+
+  #factoids2 .fourth {
+    @apply opacity-0;
+  }
+
+  #factoids2 div:last-child {
+    @apply mb-0;
+  }
+
+  /* Points System */
+  .points {
+    @apply grid-cols-1 md:grid-cols-[auto_1fr] md:gap-8 lg:gap-12 items-center;
+  }
+
+  #pointOne.points {
+    @apply opacity-0;
+  }
+
+  #pointTwo.points {
+    @apply opacity-0;
+  }
+
+  #pointThree.points {
+    @apply opacity-0;
+  }
+
+  #pointFour.points {
+    @apply opacity-0;
+  }
+
+  #pointFive.points {
+    @apply opacity-0;
+  }
+
+  .points .bright {
+    font-variation-settings: "slnt" 0, "wdth" 0, "wght" 730;
+  }
+
+  .points .number {
+    @apply text-[8rem] lg:text-[12rem] leading-none justify-self-start;
+    font-variation-settings: "slnt" 0, "wdth" 0, "wght" 900;
+  }
+
+  .points .text-layer {
+    @apply text-[4.5rem] md:text-[6rem] lg:text-[7rem] max-w-[9em] lg:max-w-[7em];
+  }
+
+  .points.odd .number {
+    @apply justify-self-end;
+  }
+
+  .points.odd .text-layer {
+    @apply text-right;
+  }
+
+  /* Why Me Section */
+  #whyMe {
+    @apply bg-black text-white relative;
+    background-image: url("/assets/images/cw-media-2.jpg");
+    background-size: cover;
+    background-position: 24% center;
+  }
+
+  #whyMe div {
+    @apply relative z-20;
+  }
 }
 
-body {
-  @apply m-0 h-auto text-[0.78em] md:text-[1em] text-[#ECD6CD] bg-[#FF4B4B] antialiased;
-  font-family: "transducer-variable", sans-serif;
-  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 400;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: -2px;
-}
-
-a {
-  @apply text-[#FFD569];
-  transition: color 200ms linear;
-}
-
-a:after {
-  @apply ml-2;
-  content: ">";
-  transition: margin 200ms ease-in-out, color 200ms linear;
-}
-
-a:hover:after {
-  @apply ml-4;
-}
-
-a:hover,
-a:hover:after {
-  @apply text-[#f9f1a5];
-}
-
-i {
-  font-variation-settings: "slnt" -7, "wdth" 0, "wght" 400;
-  font-style: normal;
-}
-
-#container {
-  @apply w-full h-screen;
-  scroll-snap-type: y mandatory; /* vertical snapping */
-  overflow-y: scroll;
-}
-
-.section {
-  @apply w-full min-h-screen grid gap-2 lg:gap-4 p-6 md:p-6 lg:p-12 items-center content-center mx-auto text-[4.6rem] sm:text-[5.2rem] md:text-[6rem] lg:text-[7rem] bg-[#FF4B4B];
-  scroll-snap-align: start; /* Each section snaps to the start of the container */
-}
-
-.text-layer {
-  @apply relative z-10;
-}
-
-.bright {
-  @apply text-[#FFD569];
-}
-
-.odd {
-  @apply text-right;
-}
-
-.odd .text-layer {
-  @apply text-right;
-}
-
-.odd .number {
-  @apply lg:order-last justify-self-end;
-}
-
-.factoids {
-  @apply text-[3.4rem] md:text-[4.2rem] bg-[#2c1669] text-[#e7d3ee] items-start lg:px-8 lg:py-16 gap-4 lg:gap-8 grid-cols-1;
-  font-variation-settings: "slnt" 0, "wdth" 40, "wght" 300;
-  line-height: 1;
-}
-
-.factoids img {
-  @apply h-[42px] md:h-[58px] w-auto inline relative align-middle top-[-5px] lg:top-[-12px];
-}
-
-.first,
-.second,
-.third,
-.fourth,
-.fifth,
-.sixth {
-  @apply opacity-0 mb-4 max-w-[12em];
-  font-variation-settings: "slnt" 0, "wdth" 2, "wght" 400;
-}
-
-#meetChris {
-  @apply grid-cols-1 md:grid-cols-3 place-content-stretch place-items-end text-white grid-rows-[auto_1fr_auto] md:grid-cols-[1fr_auto];
-}
-
-#meetChris .curtain-title {
-  @apply uppercase text-[1.8rem] lg:text-[2rem] h-0 overflow-y-hidden justify-self-stretch mt-1 md:mt-1;
-  font-family: "transducer-variable", sans-serif;
-  font-variation-settings: "slnt" 0, "wdth" 140, "wght" 900;
-  font-style: normal;
-}
-
-#meetChris .branding {
-  @apply md:col-span-3 md:col-start-1 place-self-start text-[#FFD569] w-auto;
-}
-
-#meetChris .branding .lockup {
-  @apply flex items-center gap-2 md:gap-4 opacity-0;
-}
-
-#meetChris .branding .mark {
-  @apply max-w-[34px] h-auto;
-}
-
-#meetChris .intro-to-chris,
-#meetChris .text-layer {
-  @apply z-20;
-  font-variation-settings: "slnt" 0, "wdth" 25, "wght" 400;
-}
-
-#meetChris .intro-to-chris {
-  @apply order-2 md:order-3 w-full text-left mb-6 inline relative;
-}
-
-#meetChris .text-layer {
-  @apply uppercase col-span-1 md:col-span-2 order-3 md:order-2 justify-self-start opacity-0 mb-4 md:mb-0 text-[4.5rem] md:text-[6rem] lg:text-[7rem] max-w-[9em] lg:max-w-[7em];
-  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 560;
-  line-height: 0.88;
-}
-
-#meetChris .bright {
-  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 730;
-}
-
-#fiveThings {
-  @apply text-[#2c1669] bg-white;
-}
-
-#fiveThings .bright {
-  @apply text-[#420fce];
-}
-
-#chrisIntro {
-  @apply bg-black text-white relative;
-  grid-template-columns: auto;
-  align-content: end;
-  background-image: url("/assets/images/cw-media-2.jpg");
-  background-size: cover;
-  background-position: 24% center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-#chrisIntro .overlay {
-  @apply inset-0 absolute bg-[#111] opacity-50 z-10;
-  mix-blend-mode: darken;
-}
-
-#chrisIntro .text-layer {
-  @apply mb-12 lg:mb-0 max-w-[10em] md:text-[6rem] uppercase;
-  line-height: 0.93;
-}
-
-#chrisImage {
-  @apply opacity-0 z-0 max-w-[220px] h-auto block lg:ml-auto lg:mr-6;
-  transform: rotate(200deg);
-}
-
-#helloBubble {
-  @apply opacity-0 left-[75%] top-[0] absolute w-[85px];
-}
-
-#chrisImage img {
-  @apply w-full max-w-[220px] h-auto rounded-full;
-}
-
-#factoids2 {
-  @apply text-[4.2rem] lg:text-[5rem] py-16 grid-cols-1 md:grid-cols-2 md:gap-12;
-}
-
-#factoids2 h2 {
-  @apply md:col-span-2 text-center pt-12 mb-12;
-}
-
-#factoids2 div {
-  @apply relative bg-white text-[#222] text-[2.6rem] lg:text-[3.8rem] rounded-md p-8 lg:p-12 lg:pb-12 mb-0 lg:mb-2;
-}
-
-#factoids2 div:nth-child(even) {
-  @apply ml-auto mr-0;
-}
-
-#factoids2 .first {
-  @apply z-10;
-}
-
-#factoids2 .second {
-  @apply z-20;
-}
-
-#factoids2 .third {
-  @apply z-30;
-}
-
-#factoids2 .fourth {
-  @apply z-40;
-}
-
-#factoids2 div:last-child {
-  @apply mb-12;
-}
-
-#fiveThings .text-layer {
-  @apply opacity-0 lg:text-[5.2rem] max-w-[12em];
-}
-
-#fiveThings .bright {
-  font-variation-settings: "slnt" 0, "wdth" 0, "wght" 600;
-}
-
-.points {
-  @apply md:grid md:grid-cols-4 text-[3.6rem] md:text-[4.6rem] lg:text-[5.5rem] justify-center items-center bg-[#e8dae8] text-[#2c1669];
-}
-
-#pointOne.points {
-  @apply bg-[#F1E5F5];
-}
-
-#pointTwo.points {
-  @apply bg-[#e7d3ee];
-}
-
-#pointThree.points {
-  @apply bg-[#DDC1E7];
-}
-
-#pointFour.points {
-  @apply bg-[#D3AEE0];
-}
-
-#pointFive.points {
-  @apply bg-[#C99CD9];
-}
-
-.points .bright {
-  @apply text-[#420fce];
-}
-
-.points .number {
-  @apply w-[148px] lg:w-auto text-center text-[10rem] top-[18px] relative opacity-0;
-  font-variation-settings: "slnt" -6, "wdth" 50, "wght" 600;
-}
-
-.points .text-layer {
-  @apply md:col-span-3 lg:max-w-full md:mr-12;
-}
-
-.points.odd .number {
-  @apply ml-auto md:mr-12;
-}
-
-.points.odd .text-layer {
-  @apply md:ml-12 md:mr-0;
-}
-
-body.meetChris {
-  @apply bg-[#2c1669] text-[#f2f2f2];
-}
-
-#whyMe {
-  @apply text-[3rem] sm:text-[4.5rem] md:text-[6.2rem] grid-cols-1 py-12 pt-[6rem];
-  font-variation-settings: "slnt" 0, "wdth" 22, "wght" 450;
-}
-
-#whyMe div {
-  @apply mb-12 opacity-0;
+@layer utilities {
+  body.meetChris {
+    @apply bg-[#2c1669];
+  }
 }

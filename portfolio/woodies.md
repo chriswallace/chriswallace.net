@@ -41,7 +41,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
 
 <div class="content-container-wo fade-in-element text-center mb-12">
   <div class="flex mb-2 sm:mb-6 justify-start items-center">
-    <video-player class="sm:shadow-xl w-full max-w-5xl text-primary-600" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/Woodies%20Origin.mp4" video-poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-origin-thumbnail.png?tr=q-70" video-title="Woodies Origin" video-description="The origin story of the Woodies begins! Magic fills the forest with life to protect against a new evil." playsinline></video-player>
+    <video-player class="sm:shadow-xl w-full max-w-5xl text-gray-600" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/Woodies%20Origin.mp4" video-poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-origin-thumbnail.png?tr=q-70" video-title="Woodies Origin" video-description="The origin story of the Woodies begins! Magic fills the forest with life to protect against a new evil." playsinline></video-player>
   </div>
 </div>
 <div class="content-container">
@@ -56,7 +56,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thum
 
 <div class="content-container-wo text-center mb-12">
   <div class="max-w-5xl">
-      <video-player class="col-span-4 fade-in-element mb-24 shadow-xl w-full text-primary-600" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/Woodies_%20Interview%20with%20Lead%20Artist%20Gossamer%20Rozen.mp4?" video-poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-grid-3d.png" video-title="An Interview With Gossamer Rozen" video-description="Meet the lead artist behind the Woodies 10k generative character project" playsinline></video-player>
+      <video-player class="col-span-4 fade-in-element mb-24 shadow-xl w-full text-gray-600" video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/Woodies_%20Interview%20with%20Lead%20Artist%20Gossamer%20Rozen.mp4?" video-poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-grid-3d.png" video-title="An Interview With Gossamer Rozen" video-description="Meet the lead artist behind the Woodies 10k generative character project" playsinline></video-player>
     <figure class="fade-in-element">
       <div class="grid grid-cols-2 xl:grid-cols-4 gap-1.5 md:gap-4">
         <video data-type="video" muted playsinline autoplay loop loading="lazy" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback" class="aspect-square rounded-xl">

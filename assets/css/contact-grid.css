@@ -1,17 +1,39 @@
+@layer components {
+  .contact-grid {
+    @apply grid gap-6 md:grid-cols-2 lg:grid-cols-3;
+  }
+
+  .contact-grid__item {
+    @apply block p-6 no-underline;
+  }
+
+  .contact-grid__icon {
+    @apply max-w-[48px] max-h-[48px] stroke-primary-300 mx-auto;
+  }
+
+  .contact-grid__title {
+    @apply text-lg font-medium text-white mb-2 text-center;
+  }
+
+  .contact-grid__description {
+    @apply text-gray-400 text-center text-sm;
+  }
+
+  .contact-grid__link {
+    @apply text-foreground font-medium hover:text-foreground transition-colors duration-200;
+  }
+}
+
 .contact-grid {
-  @apply grid grid-cols-2 md:grid-cols-3 max-w-6xl gap-0 mb-12 justify-center items-stretch text-center;
+  @apply grid grid-cols-2 md:grid-cols-3 gap-0 mb-12 justify-center items-stretch text-center;
 }
 
 .contact-grid__item {
-  @apply border-b border-gray-300 dark:border-gray-700 border-r px-6 pt-16 pb-12 md:pt-16 relative;
-}
-
-.contact-grid__icon {
-  @apply max-w-[48px] max-h-[48px] mx-auto p-0 relative;
+  @apply border-b border-gray-700 border-r px-6 pt-16 pb-12 md:pt-16 relative;
 }
 
 .contact-grid__icon:after {
-  @apply absolute top-[-16px] right-[-16px] w-[16px] h-[16px] text-[12px] text-gray-100 dark:text-gray-950 rounded-full overflow-hidden p-0 leading-[1.5] text-center align-middle;
+  @apply absolute top-[16px] right-[16px] w-[16px] h-[16px] text-[12px] text-gray-950 rounded-full overflow-hidden p-0 leading-[1.5] text-center align-middle;
 }
 
 .contact-grid__icon--yes:after {
@@ -25,11 +47,7 @@
 }
 
 .contact-grid__svg {
-  @apply max-w-[48px] max-h-[48px] stroke-primary-600 dark:stroke-primary-500 mx-auto;
-}
-
-.contact-grid__title {
-  @apply mt-6 mb-0 ~text-sm/base font-medium font-sans;
+  @apply max-w-[48px] max-h-[48px] stroke-primary-300 mx-auto;
 }
 
 .contact-grid__item:nth-child(even) {

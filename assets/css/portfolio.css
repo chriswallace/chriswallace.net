@@ -15,7 +15,7 @@
 }
 
 .portfolio-group-heading dd{
-  @apply dark:text-white/70;
+  @apply text-white/70;
 }
 
 .portfolio-list {
@@ -48,7 +48,7 @@ a.portfolio-list__link:hover .portfolio-list__image {
 
 .portfolio-list__title,
 .portfolio-list__description {
-  @apply my-2 md:leading-normal;
+  @apply my-2 md:leading-normal ~text-base/sm;
 }
 
 .portfolio-list__title {

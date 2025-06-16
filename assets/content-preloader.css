@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   --tw-bg-opacity: 1;
-  background-color: rgb(28 30 21 / var(--tw-bg-opacity));
+  background-color: rgb(26 28 24 / var(--tw-bg-opacity));
 }
 
 .content-preloader .logo {
@@ -26,7 +26,7 @@
     90deg,
     #181818 0%,
     #181818 40%,
-    #1093F6 50%,
+    #727685 50%,
     #181818 60%,
     #181818 100%
   );

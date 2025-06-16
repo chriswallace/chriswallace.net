@@ -7,7 +7,7 @@
 }
 
 .services__package {
-  @apply items-start border-t-4 border-primary-400 dark:border-primary-700 pt-4;
+  @apply items-start border-t-4 border-primary-300 pt-4;
 }
 
 .services__package:nth-child(odd) {
@@ -36,4 +36,30 @@
 
 .services__ideal {
   @apply mt-8 italic text-muted text-sm;
+}
+
+@layer components {
+  .services {
+    @apply grid gap-8 md:gap-12 lg:gap-16;
+  }
+
+  .services__service {
+    @apply items-start border-t-4 border-primary-300 pt-4;
+  }
+
+  .services__service-icon {
+    @apply w-6 h-6 stroke-primary-300 shrink-0 mt-0.5;
+  }
+
+  .services__service-title {
+    @apply text-white mb-0 flex items-start gap-3 text-base font-medium text-gray-400;
+  }
+
+  .services__service-description {
+    @apply ml-9 mb-8 text-base lg:min-h-[54px] 2xl:min-h-[72px] text-white;
+  }
+
+  .services__ideal {
+    @apply text-gray-400 mt-8 text-sm italic;
+  }
 }

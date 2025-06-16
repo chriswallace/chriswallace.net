@@ -2,31 +2,40 @@
   /* Base Typography */
 
   .font-thin {
-    font-variation-settings: 'wdth' 100, 'wght' 100;
+    font-weight: 100;
+    font-variation-settings: 'wght' 100;
   }
   .font-extralight {
-    font-variation-settings: 'wdth' 100, 'wght' 200;
+    font-weight: 200;
+    font-variation-settings: 'wght' 200;
   }
   .font-light {
-    font-variation-settings: 'wdth' 100, 'wght' 300;
+    font-weight: 300;
+    font-variation-settings: 'wght' 300;
   }
   .font-normal {
-    font-variation-settings: 'wdth' 100, 'wght' 400;
+    font-weight: 400;
+    font-variation-settings: 'wght' 400;
   }
   .font-medium {
-    font-variation-settings: 'wdth' 100, 'wght' 500;
+    font-weight: 500;
+    font-variation-settings: 'wght' 500;
   }
   .font-semibold {
-    font-variation-settings: 'wdth' 100, 'wght' 600;
+    font-weight: 600;
+    font-variation-settings: 'wght' 600;
   }
   .font-bold {
-    font-variation-settings: 'wdth' 100, 'wght' 700;
+    font-weight: 700;
+    font-variation-settings: 'wght' 700;
   }
   .font-extrabold {
-    font-variation-settings: 'wdth' 100, 'wght' 800;
+    font-weight: 800;
+    font-variation-settings: 'wght' 800;
   }
   .font-black {
-    font-variation-settings: 'wdth' 100, 'wght' 900;
+    font-weight: 900;
+    font-variation-settings: 'wght' 900;
   }
 
   .max-w-8xl {
@@ -38,11 +47,15 @@
   }
 
   .heading-base {
-    @apply text-gray-950 dark:text-white mb-6 font-thin;
+    @apply mb-6 font-thin;
   }
 
-  .text-shadow{
-    text-shadow: 0 4px 12px rgba(0,0,0,.6),0 6px 36px rgba(0,0,0,1);
+  .top {
+    @apply mt-2;
+  }
+
+  .text-shadow {
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), 0 6px 36px rgba(0, 0, 0, 1);
   }
 
   .content-width {
@@ -59,7 +72,7 @@
   }
 
   .hr-separator {
-    @apply mt-0 mb-32 w-[48px] bg-primary-700 dark:bg-primary-700 border-none h-0.5 overflow-hidden;
+    @apply mt-0 mb-8 w-[48px] bg-gray-400 border-none h-0.5 overflow-hidden;
   }
 
   .zoom-placeholder {
@@ -69,15 +82,8 @@
   }
 
   .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
     clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
   }
 
   /* Interactive Elements */
@@ -92,6 +98,14 @@
 
   .pause-animation {
     animation-play-state: paused;
+  }
+
+  .fade-in-element {
+    @apply opacity-0 transition-opacity duration-700 ease-in-out;
+  }
+
+  .fade-in-element.visible {
+    @apply opacity-100;
   }
 
   /* Custom Animations */

@@ -1,21 +1,20 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const hashContainer = document.getElementById('hash');
-    if ($fx && $fx.hash) {
-        hashContainer.innerHTML = "Hash: " + $fx.hash;
-    }
+document.addEventListener("DOMContentLoaded", () => {
+  const hashContainer = document.getElementById("hash");
+  if ($fx && $fx.hash) {
+    hashContainer.innerHTML = "Hash: " + $fx.hash;
+  }
 
-    const refreshBtn = document.getElementById('refresh-btn');
+  const refreshBtn = document.getElementById("refresh-btn");
 
-    refreshBtn.addEventListener("click", function (e) {
-        location.reload();
-    });
+  refreshBtn.addEventListener("click", function (e) {
+    location.reload();
+  });
 
-    let output = '';
+  let output = "";
 
-    for (let [key, value] of Object.entries($fx._features)) {
-        output += `<strong>${key}:</strong> ${value}<br>`;
-    }
+  for (let [key, value] of Object.entries($fx._features)) {
+    output += `<strong>${key}:</strong> ${value}<br>`;
+  }
 
-    document.getElementById('metadata').innerHTML = output;
-
+  document.getElementById("metadata").innerHTML = output;
 });

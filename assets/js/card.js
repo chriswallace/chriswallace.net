@@ -76,7 +76,7 @@ class Card extends HTMLElement {
           margin-bottom: 0;
           max-width: 95%;
           line-height: 1.25;
-          font-family: "New Title", serif;
+          font-family: "TTCommonsProVariable", serif;
           text-transform: uppercase;
           letter-spacing: 0.03em;
         }

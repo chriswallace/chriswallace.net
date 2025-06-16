@@ -22,7 +22,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
   <div class="mt-8 mb-16 2xl:mt-12 space-y-8 2xl:space-y-12">
     <div class="space-y-4 fade-in-element">
       <div class="max-w-2xl">
-        <span class="text-primary">Let's take a step back</span>
+        <span class="text-gray">Let's take a step back</span>
         <h2 class="home-title-secondary">
           <a href="/fractional-cdo">
             What is a Fractional CDO?
@@ -32,7 +32,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
     </div>
     <div class="space-y-4 fade-in-element">
       <div class="max-w-2xl">
-        <span class="text-primary">Annnd a step forward again</span>
+        <span class="text-gray">Annnd a step forward again</span>
         <h2 class="home-title-secondary">
           <a href="/services">
             Here's how I create design impact for <em>your company</em>
@@ -42,7 +42,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
     </div>
     <div class="space-y-4 fade-in-element">
       <div class="max-w-2xl">
-        <span class="text-primary">What makes me qualified? Idk but</span>
+        <span class="text-gray">What makes me qualified? Idk but</span>
         <h2 class="home-title-secondary">
           <a href="/portfolio">
             I make a lotta stuff with my bare hands <svg class="portfolio-intro__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -257,7 +257,7 @@ description: Product design leader with over 20 years experience in e-commerce, 
 <div class="content-container pt-6 pb-12">
   <div class="mt-6 space-y-4 fade-in-element">
     <div class="max-w-2xl">
-      <span class="text-primary">Sometimes I write about</span>
+      <span class="text-gray">Sometimes I write about</span>
       <h2 class="home-title-secondary">
         <a href="/articles/the-design-systems-guide-for-big-companies">
           The Design Systems Guide for Big Companies

@@ -1,7 +1,6 @@
 import fluid, { extract, screens, fontSize } from "fluid-tailwind";
 
 export default {
-  darkMode: "media", // or 'class'
   mode: "jit",
   content: {
     files: [
@@ -35,9 +34,9 @@ export default {
         x: "x mandatory",
       },
       fontFamily: {
-        serif: ['"New Title"', "serif"],
+        serif: ['"Tabular"', "serif"],
         sans: [
-          '"General Sans"',
+          '"Tabular"',
           "system-ui",
           "-apple-system",
           "BlinkMacSystemFont",
@@ -48,6 +47,7 @@ export default {
           "sans-serif",
         ],
         mono: [
+          '"Tabular"',
           "ui-monospace",
           "SFMono-Regular",
           "Menlo",
@@ -58,98 +58,89 @@ export default {
       },
       fontSize: {
         xs: [
-          "0.75rem",
+          "0.6rem",
           {
-            lineHeight: "1.2rem",
+            lineHeight: "1.4rem",
           },
         ],
         sm: [
-          "0.82rem",
-          {
-            lineHeight: "1.3rem",
-          },
-        ],
-        base: [
-          "1rem",
+          "0.7rem",
           {
             lineHeight: "1.5rem",
           },
         ],
-        lg: [
-          "1.125rem",
+        base: [
+          "0.8rem",
           {
-            lineHeight: "1.75rem",
+            lineHeight: "1.6rem",
+          },
+        ],
+        lg: [
+          "0.9rem",
+          {
+            lineHeight: "1.5rem",
           },
         ],
         xl: [
+          "1rem",
+          {
+            lineHeight: "1.7rem",
+          },
+        ],
+        "2xl": [
+          "1.1rem",
+          {
+            lineHeight: "1.8rem",
+          },
+        ],
+        "3xl": [
           "1.25rem",
           {
             lineHeight: "2rem",
           },
         ],
-        "2xl": [
-          "2rem",
-          {
-            lineHeight: "2.5rem",
-          },
-        ],
-        "3xl": [
-          "2.6rem",
-          {
-            lineHeight: "2.75rem",
-          },
-        ],
         "4xl": [
-          "3.2rem",
+          "1.35rem",
           {
-            lineHeight: "3.25rem",
+            lineHeight: "2rem",
           },
         ],
         "5xl": [
-          "3.6rem",
+          "1.5rem",
           {
-            lineHeight: "3.5rem",
-          },
-        ],
-        "6xl": [
-          "5rem",
-          {
-            lineHeight: "4.6rem",
-          },
-        ],
-        "7xl": [
-          "6rem",
-          {
-            lineHeight: "5.8rem",
+            lineHeight: "2rem",
           },
         ],
       },
       colors: {
+        background: "#1A1C18",
+        foreground: "#FFF1CC",
+        "foreground-muted": "#CBBE9B",
         gray: {
-          50: "#f4f5f0",
-          100: "#e8e9de",
-          200: "#d0d2bc",
-          300: "#b7bb9b",
-          400: "#9ca17a",
-          500: "#7f855d",
-          600: "#646947",
-          700: "#4d5239",
-          800: "#404331",
-          900: "#373a2d",
-          950: "#1c1e15",
+          50: "#f6f7f6",
+          100: "#e4e6e1",
+          200: "#c9ccc3",
+          300: "#a6aa9e",
+          400: "#828879",
+          500: "#676d5f",
+          600: "#51574a",
+          700: "#43473e",
+          800: "#373b34",
+          900: "#30332e",
+          950: "#1a1c18",
         },
         primary: {
-          50: "#ffffe5",
-          100: "#fbffc8",
-          200: "#f6ff97",
-          300: "#ebfb5b",
-          400: "#d6f00f",
-          500: "#bdd80a",
-          600: "#94ad03",
-          700: "#6e8308",
-          800: "#58670d",
-          900: "#495710",
-          950: "#263102",
+          50: "#fcf5f0",
+          100: "#f9e6db",
+          200: "#f1cbb7",
+          300: "#e8a889",
+          400: "#de7b59",
+          500: "#d5522e",
+          600: "#c9442d",
+          700: "#a73327",
+          800: "#862b26",
+          900: "#6c2722",
+          950: "#3a1110",
         },
       },
       minWidth: {
@@ -159,6 +150,9 @@ export default {
         4: "1rem",
         5: "1.25rem",
         6: "1.5rem",
+      },
+      maxWidth: {
+        prose: "81.25ch",
       },
     },
   },

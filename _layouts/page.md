@@ -2,7 +2,7 @@
 layout: default
 ---
 
-  <div class="content-container ~pt-24/16">
+  <div class="content-container pt-[15svh]">
     <div class="primary-heading fade-in-element">
       <h1>
         {{ page.title | escape }}

@@ -1,139 +1,197 @@
-.text-container {
-  @apply text-left;
+.home h1 {
+  padding-top: 100px;
+  padding-top: 25svh;
 }
 
-.text-paragraph {
-  @apply h1 block md:inline mb-4;
+.home p:last-of-type {
+  padding-bottom: 25svh;
 }
 
-.text-paragraph {
-  @apply max-w-none text-left text-highlight leading-[0.6] uppercase;
+/* Portfolio Cover Sections */
+.portfolio-cover {
+  @apply no-underline;
 }
 
-.text-paragraph .word {
-  @apply overflow-hidden;
-}
-
-.text-paragraph a {
-  @apply no-underline leading-none;
-}
-
-.text-paragraph .word > .char {
-  @apply pt-[0.65em] pr-[0.05em] pb-[0.25em] mt-[-0.5em] mr-[-0.05em];
-  display: inline-block;
-  transform: translateY(100%);
+.portfolio-cover__container {
+  @apply relative flex flex-col justify-end items-start pb-8 mb-4 max-w-[2000px] aspect-video mx-auto;
+  @apply z-20 overflow-hidden transition-all duration-700 ease-in-out;
   opacity: 0;
+  transform: translateY(30px);
 }
 
-.work-status {
-  @apply grid grid-cols-2 md:flex md:flex-row md:gap-6 lg:gap-12 2xl:gap-24 mb-0 max-w-none text-sm;
+.portfolio-cover__container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transition: transform 0.3s ease-in-out;
 }
 
-.work-status--work-status dd {
-  @apply ml-1 flex gap-2 items-center;
+.portfolio-cover__container:hover::after {
+  transform: scale(1.02);
 }
 
-.work-status--work-status i {
-  @apply w-[6px] h-[6px] bg-yellow-500 overflow-hidden rounded-full inline-block mb-1.5 shadow-[0_0_8px_4px_rgba(255,255,0,0.45)];
+.portfolio-cover__container.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.work-status .work-status--past-clients {
-  @apply col-span-2 md:flex-1;
+.portfolio-cover__container::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-b from-50% from-gray-950/0 to-black dark:to-gray-950 opacity-100;
+  z-index: 1;
 }
 
-.rotator {
-  @apply h-[1.5em] w-full overflow-hidden relative;
+/* Portfolio Background Images */
+.portfolio-cover__container--woodies::after {
+  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/14.png?tr=q-70');
 }
 
-.rotator__track {
-  @apply absolute;
-  animation: rotate 12s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+.portfolio-cover__container--candy-marketplace::after {
+  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-banner.png?tr=q-70');
 }
 
-.rotator__item {
-  @apply h-[1.5em] block;
+.portfolio-cover__container--palm-quest::after {
+  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-banner.png?tr=q-70');
 }
 
-@keyframes rotate {
+.portfolio-cover__container--candy-league::after {
+  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-banner.png?tr=q-70');
+}
+
+.portfolio-cover__container--candyvision::after {
+  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/candyvision-banner.png?tr=q-70');
+}
+
+.portfolio-cover__container--pendulum::after {
+  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/pendulum-banner.png?tr=q-70');
+  background-color: #E4B53B;
+}
+
+.portfolio-cover__container--web3-withdrawal::after {
+  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png?tr=q-70');
+}
+
+.portfolio-cover__container--dc3::after {
+  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-banner.png?tr=q-70');
+}
+
+.portfolio-cover__container--twelve-days::after {
+  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=q-70');
+}
+
+.portfolio-cover__container--redacted-mlb::after {
+  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-banner.png?tr=q-70');
+}
+
+@media (min-width: 768px) {
+  .portfolio-cover__container {
+    @apply pb-8;
+  }
+}
+
+.portfolio-cover__content {
+  @apply w-full absolute bottom-4 xl:top-12 z-30 mx-4 xl:mx-12;
+}
+
+.portfolio-cover__title {
+  @apply mb-1 text-white text-xl;
+}
+
+.portfolio-cover__meta {
+  @apply text-white/70 text-sm mb-0;
+}
+
+.portfolio-cover__container--final {
+  @apply mb-24;
+}
+
+/* Infinite Scroll Portfolio Grid */
+.infinite-scroll {
+  @apply max-w-6xl mx-auto overflow-hidden;
+}
+
+.infinite-scroll__scroller {
+  @apply flex gap-4 md:gap-6 lg:gap-8;
+  animation: scroll 45s linear infinite;
+  will-change: transform;
+}
+
+.infinite-scroll__item {
+  @apply block no-underline transition-all duration-300 ease-in-out flex-shrink-0;
+  width: 280px;
+}
+
+@media (min-width: 768px) {
+  .infinite-scroll__item {
+    width: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .infinite-scroll__item {
+    width: 360px;
+  }
+}
+
+.infinite-scroll__item:hover {
+  @apply transform scale-105;
+}
+
+.infinite-scroll__image {
+  @apply w-full h-auto rounded-xl transition-all duration-300 ease-in-out;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.infinite-scroll__item:hover .infinite-scroll__image {
+  @apply shadow-2xl;
+}
+
+/* Animation keyframes - moves exactly 50% to seamlessly loop with duplicated content */
+@keyframes scroll {
   0% {
-    transform: translateY(0);
-  }
-  20% {
-    transform: translateY(-1.5em);
-  }
-  40% {
-    transform: translateY(-3em);
-  }
-  60% {
-    transform: translateY(-4.5em);
-  }
-  80% {
-    transform: translateY(-6em);
+    transform: translateX(0);
   }
   100% {
-    transform: translateY(-7.5em);
+    transform: translateX(-50%);
   }
 }
 
-.logo-container {
-  width: 120px;
-  height: 34px;
-  position: relative;
+/* Pause animation on hover */
+.infinite-scroll:hover .infinite-scroll__scroller {
+  animation-play-state: paused;
 }
 
-.logo-mask {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.gradient-rect {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    #1a1b18 0%,
-    #1a1b18 40%,
-    #dadf40 50%,
-    #1a1b18 60%,
-    #1a1b18 100%
-  );
-  background-size: 200% 100%;
-  animation: gradientSlide 2s linear infinite;
-  -webkit-mask-image: url("/assets/images/w.svg");
-  mask-image: url("/assets/images/w.svg");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-}
-
-@keyframes gradientSlide {
-  0% {
-    background-position: 100% 0;
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .infinite-scroll__scroller {
+    @apply gap-3;
+    animation-duration: 35s;
   }
-  100% {
-    background-position: -100% 0;
+  
+  .infinite-scroll__item {
+    width: 240px;
+  }
+  
+  .infinite-scroll__image {
+    aspect-ratio: 1;
   }
 }
 
-.video-container {
-  @apply relative w-full aspect-video;
+/* Large screen optimization */
+@media (min-width: 1200px) {
+  .infinite-scroll__scroller {
+    @apply gap-10;
+    animation-duration: 55s;
+  }
 }
 
-video-player {
-  @apply w-full sm:rounded-xl;
-  will-change: transform, opacity;
-}
-
-.video-controls {
-  transition: opacity 0.3s ease-in-out;
-}
-
-.hr-separator {
-  @apply h-px;
-  width: 0;
-  transform-origin: left;
+figcaption{
+  @apply mb-0;
 }

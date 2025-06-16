@@ -3,15 +3,19 @@
 }
 
 .testimonial-stage {
-  @apply min-h-[300px] bg-gray-200 dark:bg-[#202020] text-center flex flex-col justify-center items-center py-12 px-12 rounded-md;
+  @apply min-h-[300px] bg-gray-800 text-center flex flex-col justify-center items-center py-12 px-12 rounded-md;
 }
 
 .portfolio-list .testimonial {
-  @apply bg-transparent bg-gradient-to-br from-white dark:from-gray-900 to-gray-100 dark:to-gray-950;
+  @apply bg-transparent bg-gradient-to-br from-gray-900 to-gray-950;
 }
 
 .testimonial__quote {
   @apply mx-auto max-w-[55rem];
+
+  a {
+    @apply underline decoration-foreground underline-offset-4 text-highlight;
+  }
 }
 
 .portfolio-list .testimonial__quote {
@@ -19,7 +23,7 @@
 }
 
 .testimonial__text {
-  @apply max-w-none mb-3 font-serif ~text-3xl/5xl font-light text-center text-foreground;
+  @apply max-w-none mb-3 font-serif ~text-lg/xl font-normal text-center text-foreground;
 }
 
 .testimonial__author {
@@ -27,9 +31,9 @@
 }
 
 .testimonial__emphasis {
-  @apply text-primary not-italic;
+  @apply text-gray not-italic;
 }
 
 .testimonial__highlight {
-  @apply underline decoration-primary-600 underline-offset-4 text-highlight dark:decoration-primary-500 dark:decoration-primary-500;
+  @apply underline decoration-foreground underline-offset-4 text-highlight;
 }

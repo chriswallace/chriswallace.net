@@ -14,33 +14,12 @@
   <meta http-equiv="Expires" content="86400">
   {% seo title=true %}
 
-  <!-- Preload critical fonts -->
-  <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=new-title@1&display=swap" as="style">
-  <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=general-sans@1&display=swap" as="style">
-  <link rel="preload" href="https://use.typekit.net/eub1ezs.css" as="style">
+  <!-- Preconnect to Fontshare -->
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 
-  <!-- Load fonts with font-display settings -->
-  <style>
-    @font-face {
-      font-family: 'General Sans';
-      font-display: swap;
-      src: local('General Sans');
-    }
-    @font-face {
-      font-family: 'New Title';
-      font-display: swap;
-      src: local('New Title');
-    }
-  </style>
-
-  <link href="https://api.fontshare.com/v2/css?f[]=new-title@1&f[]=general-sans@1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/eub1ezs.css" expires="31536000">
-  <link rel="stylesheet" href="/assets/content-preloader.css" />
-  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
-  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
-  <link rel="stylesheet" href="/assets/main.css?v={{ site.version }}" expires="31536000">
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.3.3/dist/gsap.min.js" expires="31536000"></script>
-  <script src="https://unpkg.com/splitting/dist/splitting.min.js" expires="31536000"></script>
+  <!-- Load Tabular font from Fontshare -->
+  <link href="https://api.fontshare.com/v2/css?f[]=tabular@1&display=swap" rel="stylesheet">
 
   <!-- Font loading optimization -->
   <script>
@@ -49,8 +28,9 @@
       document.documentElement.classList.add('fonts-loading');
       
       Promise.all([
-        document.fonts.load('1em "General Sans"'),
-        document.fonts.load('1em "New Title"')
+        document.fonts.load('400 1em "Tabular"'),
+        document.fonts.load('300 1em "Tabular"'),
+        document.fonts.load('700 1em "Tabular"')
       ]).then(() => {
         // Remove loading class and add loaded class when fonts are ready
         document.documentElement.classList.remove('fonts-loading');
@@ -63,6 +43,14 @@
       });
     }
   </script>
+
+  <link rel="stylesheet" href="/assets/content-preloader.css" />
+  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+  <link rel="stylesheet" href="/assets/main.css?v={{ site.version }}" expires="31536000">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.3.3/dist/gsap.min.js" expires="31536000"></script>
+  <script src="https://unpkg.com/splitting/dist/splitting.min.js" expires="31536000"></script>
+  <script src="/assets/js/text-scrambler.min.js?v={{ site.version }}" expires="31536000"></script>
 
   <link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/UltraDAO/wallace/favicon.png" expires="31536000">
   <meta property="og:image" content="{{page.thumbnail | default: 'https://ik.imagekit.io/UltraDAO/wallace/chris-wallace.jpg'}}">

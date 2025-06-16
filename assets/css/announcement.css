@@ -6,7 +6,7 @@
   }
 
   &__date {
-    @apply whitespace-nowrap dark:text-primary-600;
+    @apply whitespace-nowrap text-gray-400;
   }
 
   &__text {
