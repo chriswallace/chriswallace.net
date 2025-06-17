@@ -2082,10 +2082,6 @@ figcaption {
   max-width: 64rem;
 }
 
-.max-w-6xl {
-  max-width: 72rem;
-}
-
 .max-w-\[1400px\] {
   max-width: 1400px;
 }
@@ -2149,6 +2145,10 @@ figcaption {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.resize {
+  resize: both;
 }
 
 .list-outside {
@@ -2569,6 +2569,11 @@ figcaption {
   line-height: 1.5rem;
 }
 
+.text-xl {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+
 .text-xs {
   font-size: 0.6rem;
   line-height: 1.4rem;
@@ -2679,6 +2684,12 @@ figcaption {
 
 .opacity-100 {
   opacity: 1;
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-2xl {
@@ -3224,17 +3235,24 @@ video::-webkit-media-controls {
 }
 
 .resume {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .resume__item {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 48rem) {
+  .resume__item {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .resume__metadata {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-end;
@@ -3243,8 +3261,8 @@ video::-webkit-media-controls {
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(67 71 62 / var(--tw-border-opacity));
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 @media (min-width: 48rem) {
@@ -3338,33 +3356,54 @@ video::-webkit-media-controls {
 }
 
 .resume__description {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   font-size: clamp(0.7rem,0.59rem + 0.27vw,0.94rem)/* fluid type from 0.7rem at 40rem to 0.94rem at 128rem */;
   line-height: clamp(1.5rem,1.45rem + 0.11vw,1.6rem)/* fluid from 1.5rem at 40rem to 1.6rem at 128rem */;
 }
 
+@media (min-width: 48rem) {
+  .resume__description {
+    margin-bottom: 5rem;
+  }
+}
+
+.resume__description p {
+  margin-bottom: 1.5rem;
+}
+
 .resume__description ul {
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
   max-width: none;
   list-style-type: disc;
 }
 
 .resume__description ul > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
 .resume__description-paragraph {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.resume h2 {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 48rem) {
+  .resume h2 {
+    margin-top: 5rem;
+  }
 }
 
 .skills {
   display: grid;
   max-width: 48rem;
   grid-template-columns: 30% auto;
-  row-gap: 1.5rem;
+  row-gap: 2rem;
   -moz-column-gap: 3rem;
        column-gap: 3rem;
   font-size: clamp(0.7rem,0.59rem + 0.27vw,0.94rem)/* fluid type from 0.7rem at 40rem to 0.94rem at 128rem */;
@@ -5248,6 +5287,71 @@ figcaption {
   }
 }
 
+/* Ghost Canvas Styles */
+
+.home .ui-content {
+  position: relative;
+  z-index: 10;
+}
+
+.home .ui-frame {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure ghost canvas doesn't interfere with interactions */
+
+canvas[style*="pointer-events: none"] {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Add subtle backdrop filter for enhanced effect on supported browsers */
+
+@supports ((-webkit-backdrop-filter: blur(0px)) or (backdrop-filter: blur(0px))) {
+  .home .ui-content {
+    -webkit-backdrop-filter: blur(0.1px);
+            backdrop-filter: blur(0.1px);
+  }
+}
+
+/* Dark mode adjustments */
+
+@media (prefers-color-scheme: dark) {
+  .home canvas[style*="z-index: -1"] {
+    opacity: 0.4 !important;
+    mix-blend-mode: screen;
+  }
+}
+
+/* Light mode adjustments */
+
+@media (prefers-color-scheme: light) {
+  .home canvas[style*="z-index: -1"] {
+    opacity: 0.3 !important;
+    mix-blend-mode: multiply;
+  }
+}
+
+/* Performance optimizations */
+
+.home canvas {
+  will-change: auto;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Reduce motion for accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .home canvas[style*="z-index: -1"] {
+    display: none;
+  }
+}
+
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -5394,10 +5498,6 @@ figcaption {
     max-width: 840px;
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -5482,13 +5582,13 @@ figcaption {
     order: 2;
   }
 
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .lg\:mx-auto {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .lg\:mb-12 {
-    margin-bottom: 3rem;
   }
 
   .lg\:mb-8 {
@@ -5503,6 +5603,10 @@ figcaption {
     max-width: 22rem;
   }
 
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .lg\:grid-cols-\[1fr\2c 300px\] {
     grid-template-columns: 1fr 300px;
   }
@@ -5511,8 +5615,8 @@ figcaption {
     flex-direction: row;
   }
 
-  .lg\:gap-12 {
-    gap: 3rem;
+  .lg\:gap-8 {
+    gap: 2rem;
   }
 
   .lg\:self-start {

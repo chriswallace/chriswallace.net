@@ -1533,10 +1533,6 @@ i {
   max-width: 64rem;
 }
 
-.max-w-6xl {
-  max-width: 72rem;
-}
-
 .max-w-\[1400px\] {
   max-width: 1400px;
 }
@@ -1600,6 +1596,10 @@ i {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.resize {
+  resize: both;
 }
 
 .list-outside {
@@ -2020,6 +2020,11 @@ i {
   line-height: 1.5rem;
 }
 
+.text-xl {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+
 .text-xs {
   font-size: 0.6rem;
   line-height: 1.4rem;
@@ -2130,6 +2135,12 @@ i {
 
 .opacity-100 {
   opacity: 1;
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-2xl {
@@ -2337,10 +2348,6 @@ body.meetChris {
     max-width: 840px;
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2425,13 +2432,13 @@ body.meetChris {
     order: 2;
   }
 
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .lg\:mx-auto {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .lg\:mb-12 {
-    margin-bottom: 3rem;
   }
 
   .lg\:mb-8 {
@@ -2446,6 +2453,10 @@ body.meetChris {
     max-width: 22rem;
   }
 
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .lg\:grid-cols-\[1fr\2c 300px\] {
     grid-template-columns: 1fr 300px;
   }
@@ -2454,8 +2465,8 @@ body.meetChris {
     flex-direction: row;
   }
 
-  .lg\:gap-12 {
-    gap: 3rem;
+  .lg\:gap-8 {
+    gap: 2rem;
   }
 
   .lg\:self-start {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.md %}
-  <body>
+  <body class="{{ page.layout }}">
     <div class="ui-frame">
       <div class="ui-navbar">
         {% include header.md %}

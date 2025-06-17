@@ -2,13 +2,13 @@
 layout: page
 title: Résumé / CV
 permalink: /resume/
-description: I work with companies like DC Comics, AMC Networks, Google, and even The California DMV to create award-winning digital products for millions of people around the world.
+description: Senior product design leader with 20+ years building teams, mentoring designers, and creating award-winning digital products. Currently seeking a leadership role where I can grow design organizations and connect great people.
 thumbnail: /assets/images/thumbs/resume.png
 ---
 
 <div class="resume">
   <div itemscope itemtype="http://schema.org/Person">
-    <p itemprop="description" class="fade-in-element sub-heading !mt-4" data-scramble>I'm a product design leader who transforms complex challenges into elegant solutions. With 20 years of experience building award-winning digital products for global brands, I combine strategic vision with hands-on expertise across design, engineering, and team leadership. My approach balances user-centered design with business objectives, consistently delivering results for organizations from startups to Fortune 500 companies.</p>
+    <p itemprop="description" class="fade-in-element sub-heading !mt-4" data-scramble>I'm a senior product design leader with 20 years of experience building design teams and mentoring designers at companies like Roblox, 10up, Google, Microsoft, and DC Comics. I believe the best products come from the best teams, and I'm passionate about creating environments where exceptional craft thrives.</p>
     
     <hr class="hr-separator fade-in-element">
 
@@ -24,7 +24,7 @@ thumbnail: /assets/images/thumbs/resume.png
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Feb 2025 - Present</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p class="mb-6" data-scramble>Designing ✨ magical 🪄 avatar tools for devs and creators. I work with the Avatars team on Avatar Auto-Setup, a feature that allows easy import and configuration of avatars, clothing, and accessories in Roblox Studio and beyond.</p>
+            <p class="mb-6" data-scramble>Designing tools for avatar creation and customization on the Avatars team. Leading Avatar Auto-Setup feature development while mentoring team members and collaborating across product, engineering, and design to improve the creator experience for millions of Roblox developers.</p>
           </div>
         </div>
         <div class="resume__item" itemprop="employee">
@@ -34,7 +34,7 @@ thumbnail: /assets/images/thumbs/resume.png
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Mar 2024 - Oct 2024</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p class="mb-6" data-scramble>Led product design initiatives, crafting polished, user-centered solutions across a complex ecosystem of apps. Redefined the digital comic book reading experience with an interactive comic reader for DC Comics. Designed and implemented a comprehensive design system to improve scalability and consistency. Collaborated with Product, Engineering, and Marketing regularly.</p>
+            <p class="mb-6" data-scramble>Led product design initiatives across a complex ecosystem of digital collectible apps. Mentored junior designers while crafting user-centered solutions including an interactive comic reader for DC Comics. Built a comprehensive design system to improve team efficiency and product consistency.</p>
             <p data-scramble>Key Partners: MLB, DC Comics, Netflix's Stranger Things, WWE, NASCAR</p>
           </div>
         </div>
@@ -45,7 +45,7 @@ thumbnail: /assets/images/thumbs/resume.png
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Apr 2021 - Mar 2024</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p class="mb-6" data-scramble>Founded UltraDAO Studios and launched Woodies digital avatars, blending art, storytelling, and community engagement. Led a record-setting environmental initiative, donating funds to plant over a million trees globally. Bootstrapped operations to $2.6M in revenue within six months through innovative, user-centered projects. Exec. Produced a critically acclaimed animated short and first large-scale 3D avatars for metaverse platforms.</p>
+            <p class="mb-6" data-scramble>Founded and led UltraDAO Studios, building a creative team from scratch that generated $2.6M in revenue within six months. Fostered a collaborative culture focused on exceptional craft while launching Woodies digital avatars and leading environmental initiatives that planted over a million trees globally.</p>
             <p data-scramble>Brands: Woodies, Legends of Wondermist, Twelve Days of CryptoArt, ULTRAPASS</p>
           </div>
         </div>
@@ -56,7 +56,7 @@ thumbnail: /assets/images/thumbs/resume.png
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Aug 2017 - Sep 2021</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p class="mb-6" data-scramble>Managed a design team of 25, fostering a collaborative and innovative culture. Spearheaded digital transformation projects, including the redesign of the California DMV's digital services. Delivered high-quality, scalable design solutions for global brands like Microsoft, Google, and Facebook. Mentored designers and implemented processes to elevate the team's craft and execution.</p>
+            <p class="mb-6" data-scramble>Grew and managed a design team from 8 to 25 people, creating processes and culture that enabled exceptional work for global brands. Mentored designers at all levels, implemented career development programs, and led digital transformation projects including the California DMV redesign.</p>
             <p data-scramble>Key Clients: Microsoft, Google, Starbucks, Facebook, California DMV, Capital One, Credit Karma, The New York Times, The Nobel Prize, The Smithsonian, The White House</p>
           </div>
         </div>

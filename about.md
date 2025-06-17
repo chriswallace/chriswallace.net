@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Chris Wallace, a Senior Design Executive in McKinney, Texas
+title: Chris Wallace, Senior Product Design Leader
 permalink: /bio/
-description: I'm a product design leader pioneering the future of digital experience.
+description: I'm a senior product design leader focused on building teams, mentoring designers, and creating cultures where exceptional craft thrives.
 thumbnail: /assets/images/thumbs/bio.png
 ---
 
@@ -12,12 +12,12 @@ thumbnail: /assets/images/thumbs/bio.png
             <span class="wave-hand">👋</span>
         </div>
         <h1 class="fade-in-up fade-in-up-delay-1">Hi, I'm Chris.</h1>
-        <p class="sub-heading fade-in-up fade-in-up-delay-2" data-scramble>For over twenty years, companies have turned to me when they need to transform complex technical challenges into experiences people actually want to use. This work has helped startups achieve exits worth tens of millions, entertainment companies win awards for their digital platforms, and creators tell stories through <a href="/portfolio/woodies">new mediums</a>.</p>
+        <p class="sub-heading fade-in-up fade-in-up-delay-2" data-scramble>I'm a senior product design leader who believes the best products come from the best teams. For over twenty years, I've focused on building design organizations where talented people can do their best work—mentoring designers, connecting great people, and maintaining a high bar for craft.</p>
         <hr class="hr-separator fade-in-up fade-in-up-delay-3">
-        <p class="fade-in-up fade-in-up-delay-4" data-scramble>Organizations like AMC Networks, The Nobel Prize, MLB, and DC Comics have each faced unique digital challenges—from engaging audiences across platforms to making complex information accessible. When one startup needed to reach millions in revenue quickly, the solution wasn't just good design, but understanding what users genuinely needed.</p>
-        <p class="fade-in-up fade-in-up-delay-4" data-scramble>Leading a twenty-four person design team meant solving problems at scale. The California DMV needed to modernize citizen services. Starbucks, Microsoft, and Google each had different platform challenges. The Walking Dead and Mad Men required sophisticated entertainment experiences that felt effortless to viewers—work that helped the agency achieve a successful exit.</p>
-        <p class="fade-in-up fade-in-up-delay-4" data-scramble>At Roblox, millions of creators need better tools to bring their ideas to life. The Avatars team focuses on removing technical friction from avatar creation in Roblox Studio, so creators spend time on imagination rather than troubleshooting.</p>
-        <p class="fade-in-up fade-in-up-delay-4" data-scramble>The most interesting problems are often the ones that seem impossible to solve—new products with no precedent, experimental interfaces, teams ready to push into uncharted territory. Companies facing these challenges need someone who can see a path forward.</p>
-        <p class="fade-in-up fade-in-up-delay-4" data-scramble><a href="mailto:chriswallace7@pm.me?subject=Design%20Inquiry&body=Let&rsquo;s%20work%20together!">Let's work together</a>.</p>
+        <p class="fade-in-up fade-in-up-delay-4" data-scramble>At 10up, I grew our design team from 8 to 25 people, creating processes and culture that enabled us to deliver exceptional work for clients like Microsoft, Google, and the California DMV. The real success wasn't just the projects—it was watching designers grow, take on leadership roles, and push each other to new levels of craft.</p>
+        <p class="fade-in-up fade-in-up-delay-4" data-scramble>When I founded UltraDAO Studios, I built a creative team from scratch that generated $2.6M in six months while maintaining uncompromising quality standards. But what I'm most proud of is the collaborative environment we created—one where every team member felt empowered to contribute their best ideas.</p>
+        <p class="fade-in-up fade-in-up-delay-4" data-scramble>At Roblox, I work with the Avatars team to remove friction from the creator experience, but I'm equally focused on how we work together as a team. Great products emerge from great collaboration, and great collaboration happens when people feel supported to take risks and push boundaries.</p>
+        <p class="fade-in-up fade-in-up-delay-4" data-scramble>I'm looking for my next opportunity to lead a product design team where mentorship is valued, craft is non-negotiable, and building great designers is just as important as building great products. If you're building a design organization that values growth, connection, and exceptional work, I'd love to talk.</p>
+        <p class="fade-in-up fade-in-up-delay-4" data-scramble><a href="mailto:chriswallace7@pm.me?subject=Design%20Leadership%20Opportunity&body=Let&rsquo;s%20discuss%20how%20we%20can%20work%20together!">Let's connect</a>.</p>
     </div>
 </div>

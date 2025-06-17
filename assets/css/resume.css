@@ -1,13 +1,13 @@
 .resume {
-  @apply my-4;
+  @apply my-8;
 }
 
 .resume__item {
-  @apply my-4;
+  @apply my-8 md:my-12;
 }
 
 .resume__metadata {
-  @apply border-b border-gray-700 flex content-end gap-1 md:gap-2 mb-4 py-2 items-end flex-wrap;
+  @apply border-b border-gray-700 flex content-end gap-1 md:gap-2 mb-6 py-3 items-end flex-wrap;
 }
 
 .resume__metadata-item {
@@ -36,19 +36,27 @@
 }
 
 .resume__description {
-  @apply mb-12 ~text-sm/base;
+  @apply mb-16 md:mb-20 ~text-sm/base;
+}
+
+.resume__description p {
+  @apply mb-6;
 }
 
 .resume__description ul {
-  @apply max-w-none space-y-2 mt-6 mb-8 list-disc;
+  @apply max-w-none space-y-3 mt-8 mb-10 list-disc;
 }
 
 .resume__description-paragraph {
-  @apply mb-4;
+  @apply mb-6;
+}
+
+.resume h2 {
+  @apply mt-16 md:mt-20 mb-8;
 }
 
 .skills {
-  @apply grid grid-cols-[30%_auto] sm:grid-cols-[auto_1fr] gap-y-6 gap-x-12 max-w-3xl ~text-sm/base;
+  @apply grid grid-cols-[30%_auto] sm:grid-cols-[auto_1fr] gap-y-8 gap-x-12 max-w-3xl ~text-sm/base;
 }
 
 .skills__term {

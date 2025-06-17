@@ -1,0 +1,56 @@
+/* Ghost Canvas Styles */
+.home .ui-content {
+  position: relative;
+  z-index: 10;
+}
+
+.home .ui-frame {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure ghost canvas doesn't interfere with interactions */
+canvas[style*="pointer-events: none"] {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Add subtle backdrop filter for enhanced effect on supported browsers */
+@supports (backdrop-filter: blur(0px)) {
+  .home .ui-content {
+    backdrop-filter: blur(0.1px);
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .home canvas[style*="z-index: -1"] {
+    opacity: 0.4 !important;
+    mix-blend-mode: screen;
+  }
+}
+
+/* Light mode adjustments */
+@media (prefers-color-scheme: light) {
+  .home canvas[style*="z-index: -1"] {
+    opacity: 0.3 !important;
+    mix-blend-mode: multiply;
+  }
+}
+
+/* Performance optimizations */
+.home canvas {
+  will-change: auto;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .home canvas[style*="z-index: -1"] {
+    display: none;
+  }
+} 

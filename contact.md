@@ -2,29 +2,29 @@
 layout: page
 title: Contact
 permalink: /contact/
-description: I'm available for contract and full-time opportunities with forward-thinking companies looking to level up their design capabilities.
+description: I'm seeking senior product design leadership opportunities where I can mentor teams, build design organizations, and connect great people to create exceptional products.
 ---
 
-<p class="fade-in-element sub-heading" data-scramble>Ready to take your company's design capabilities to the next level? Reach out at <a href="mailto:him@chriswallace.net?subject=Design%20Inquiry&body=Let's%20work%20together!">him@chriswallace.net</a> to get started.</p>
+<p class="fade-in-element sub-heading" data-scramble>Looking for a senior design leader who can build teams, mentor designers, and create cultures where exceptional craft thrives? Let's connect at <a href="mailto:him@chriswallace.net?subject=Design%20Leadership%20Opportunity&body=Let's%20discuss%20how%20we%20can%20work%20together!">him@chriswallace.net</a>.</p>
 
 <div class="contact-grid fade-in-element">
     <div class="contact-grid__item">
         <div class="contact-grid__icon contact-grid__icon--yes">
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="contact-grid__svg lucide lucide-building-2"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
         </div>
-        <h3 class="contact-grid__title" data-scramble>Work inquiries</h3>
-    </div>
-    <div class="contact-grid__item">
-        <div class="contact-grid__icon contact-grid__icon--yes">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="contact-grid__svg lucide lucide-handshake"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
-        </div>
-        <h3 class="contact-grid__title" data-scramble>Professional introduction</h3>
+        <h3 class="contact-grid__title" data-scramble>Full-time leadership roles</h3>
     </div>
     <div class="contact-grid__item">
         <div class="contact-grid__icon contact-grid__icon--yes">
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="contact-grid__svg lucide lucide-users-round"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></svg>
         </div>
-        <h3 class="contact-grid__title" data-scramble>Collaboration request</h3>
+        <h3 class="contact-grid__title" data-scramble>Design team consulting</h3>
+    </div>
+    <div class="contact-grid__item">
+        <div class="contact-grid__icon contact-grid__icon--yes">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="contact-grid__svg lucide lucide-handshake"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
+        </div>
+        <h3 class="contact-grid__title" data-scramble>Professional networking</h3>
     </div>
     <div class="contact-grid__item">
         <div class="contact-grid__icon contact-grid__icon--yes">

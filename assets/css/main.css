@@ -21,6 +21,7 @@
 @import "homepage.css";
 @import "notifications.css";
 @import "legendary.css";
+@import "ghost-canvas.css";
 
 @layer base {
   body {
