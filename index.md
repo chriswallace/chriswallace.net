@@ -5,8 +5,8 @@ description: Product design leader with over 20 years experience in e-commerce, 
 ---
 
 <div class="z-50 relative">
-  <div class="fixed top-6 left-24 right-8 z-10 fade-in-up">
-    <div class="flex flex-col md:flex-row justify-between w-full gap-4 text-sm text-foreground">
+  <div class="fixed top-3 md:top-6 left-24 right-4 md:right-8 z-10 fade-in-up">
+    <div class="flex flex-col md:flex-row justify-between w-full md:gap-4 text-sm text-foreground">
       <div class="text-right" data-scramble>Chris Wallace</div>
       <div class="text-right" data-scramble>2025</div>
       <div class="text-right" data-scramble>Design + Code</div>

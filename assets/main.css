@@ -568,7 +568,7 @@ strong {
 
 html,
   body {
-  font-size: clamp(0.8rem,0.75rem + 0.11vw,0.9rem)/* fluid type from 0.8rem at 40rem to 0.9rem at 128rem */;
+  font-size: clamp(0.94rem,0.91rem + 0.07vw,1rem)/* fluid type from 0.94rem at 40rem to 1rem at 128rem */;
   line-height: clamp(1.5rem,1.65rem + -0.11vw,1.6rem)/* fluid from 1.6rem at 40rem to 1.5rem at 128rem */;
 }
 
@@ -596,7 +596,7 @@ h1,
   font-family: "Tabular", serif;
   font-weight: 400;
   font-variation-settings: 'wght' 400;
-  font-size: clamp(1.35rem,1.28rem + 0.17vw,1.5rem)/* fluid type from 1.35rem at 40rem to 1.5rem at 128rem */;
+  font-size: clamp(1.4rem,1.35rem + 0.11vw,1.5rem)/* fluid type from 1.4rem at 40rem to 1.5rem at 128rem */;
   line-height: 2rem;
 }
 
@@ -604,7 +604,7 @@ h2,
   .h2 {
   margin-top: 4rem;
   font-family: "Tabular", serif;
-  font-size: clamp(1.25rem,1.2rem + 0.11vw,1.35rem)/* fluid type from 1.25rem at 40rem to 1.35rem at 128rem */;
+  font-size: clamp(1.3rem,1.25rem + 0.11vw,1.4rem)/* fluid type from 1.3rem at 40rem to 1.4rem at 128rem */;
   line-height: 2rem;
   font-weight: 400;
   font-variation-settings: 'wght' 400;
@@ -622,7 +622,7 @@ h3,
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
   font-family: "Tabular", serif;
-  font-size: clamp(1.1rem,1.03rem + 0.17vw,1.25rem)/* fluid type from 1.1rem at 40rem to 1.25rem at 128rem */;
+  font-size: clamp(1.2rem,1.15rem + 0.11vw,1.3rem)/* fluid type from 1.2rem at 40rem to 1.3rem at 128rem */;
   line-height: clamp(1.8rem,1.71rem + 0.23vw,2rem)/* fluid from 1.8rem at 40rem to 2rem at 128rem */;
   font-weight: 400;
   font-variation-settings: 'wght' 400;
@@ -640,7 +640,7 @@ h4,
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  font-size: clamp(0.9rem,0.85rem + 0.11vw,1rem)/* fluid type from 0.9rem at 40rem to 1rem at 128rem */;
+  font-size: clamp(1rem,0.95rem + 0.11vw,1.1rem)/* fluid type from 1rem at 40rem to 1.1rem at 128rem */;
   line-height: clamp(1.5rem,1.41rem + 0.23vw,1.7rem)/* fluid from 1.5rem at 40rem to 1.7rem at 128rem */;
   font-weight: 400;
   font-variation-settings: 'wght' 400;
@@ -660,7 +660,7 @@ h5,
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 
@@ -886,8 +886,8 @@ picture img {
 
 @media (max-width: 767px) {
   .menu-button {
-    height: 62px;
-    width: 62px;
+    height: 54px;
+    width: 54px;
     /* 48px * 1.3 = 62.4px */
   }
 }
@@ -1063,16 +1063,6 @@ picture img {
   width: 2rem;
 }
 
-/* Scale up menu logo on smaller screens */
-
-@media (max-width: 767px) {
-  .menu__logo svg {
-    height: 42px;
-    width: 42px;
-    /* 32px * 1.3 = 41.6px */
-  }
-}
-
 .menu__close {
   display: flex;
   height: 2rem;
@@ -1096,6 +1086,8 @@ picture img {
 
 @media (max-width: 767px) {
   .menu__close {
+    left: -0.5rem;
+    top: -0.5rem;
     height: 42px;
     width: 42px;
     /* 32px * 1.3 = 41.6px */
@@ -1174,7 +1166,7 @@ picture img {
   padding-right: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  font-size: 0.8rem;
+  font-size: 0.94rem;
   line-height: 1.6rem;
   text-transform: capitalize;
   --tw-text-opacity: 1;
@@ -1202,7 +1194,6 @@ picture img {
     padding-right: 21px;
     padding-top: 16px;
     padding-bottom: 16px;
-    font-size: 21px;
     /* 16px * 1.3 = 20.8px, 12px * 1.3 = 15.6px, 16px * 1.3 = 20.8px */
   }
 }
@@ -1302,7 +1293,7 @@ picture img {
 .contact-grid__title {
   margin-bottom: 0.5rem;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1525,7 +1516,7 @@ figcaption {
   margin-left: 62px;
   margin-top: 28px;
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 0.94rem;
   line-height: 1.6rem;
   --tw-text-opacity: 1;
   color: rgb(130 136 121 / var(--tw-text-opacity));
@@ -1816,12 +1807,12 @@ figcaption {
   left: 6rem;
 }
 
-.right-8 {
-  right: 2rem;
+.right-4 {
+  right: 1rem;
 }
 
-.top-6 {
-  top: 1.5rem;
+.top-3 {
+  top: 0.75rem;
 }
 
 .z-10 {
@@ -2555,7 +2546,7 @@ figcaption {
 }
 
 .text-2xl {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.8rem;
 }
 
@@ -2564,12 +2555,12 @@ figcaption {
 }
 
 .text-base {
-  font-size: 0.8rem;
+  font-size: 0.94rem;
   line-height: 1.6rem;
 }
 
 .text-lg {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 
@@ -2735,12 +2726,8 @@ figcaption {
   transition-duration: 150ms;
 }
 
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .\~text-base\/sm {
-  font-size: clamp(0.7rem,0.85rem + -0.11vw,0.8rem)/* fluid type from 0.8rem at 40rem to 0.7rem at 128rem */;
+  font-size: clamp(0.7rem,1.05rem + -0.27vw,0.94rem)/* fluid type from 0.94rem at 40rem to 0.7rem at 128rem */;
   line-height: clamp(1.5rem,1.65rem + -0.11vw,1.6rem)/* fluid from 1.6rem at 40rem to 1.5rem at 128rem */;
 }
 
@@ -3274,9 +3261,8 @@ video::-webkit-media-controls {
 }
 
 .resume__metadata {
-  font-size: 1.1rem;
-  line-height: 1.8rem;
-  letter-spacing: 0.025em;
+  font-size: clamp(0.94rem,0.82rem + 0.3vw,1.2rem)/* fluid type from 0.94rem at 40rem to 1.2rem at 128rem */;
+  line-height: clamp(1.6rem,1.51rem + 0.23vw,1.8rem)/* fluid from 1.6rem at 40rem to 1.8rem at 128rem */;
   --tw-text-opacity: 1;
   color: rgb(255 241 204 / var(--tw-text-opacity));
 }
@@ -3353,7 +3339,7 @@ video::-webkit-media-controls {
 
 .resume__description {
   margin-bottom: 3rem;
-  font-size: clamp(0.7rem,0.65rem + 0.11vw,0.8rem)/* fluid type from 0.7rem at 40rem to 0.8rem at 128rem */;
+  font-size: clamp(0.7rem,0.59rem + 0.27vw,0.94rem)/* fluid type from 0.7rem at 40rem to 0.94rem at 128rem */;
   line-height: clamp(1.5rem,1.45rem + 0.11vw,1.6rem)/* fluid from 1.5rem at 40rem to 1.6rem at 128rem */;
 }
 
@@ -3381,7 +3367,7 @@ video::-webkit-media-controls {
   row-gap: 1.5rem;
   -moz-column-gap: 3rem;
        column-gap: 3rem;
-  font-size: clamp(0.7rem,0.65rem + 0.11vw,0.8rem)/* fluid type from 0.7rem at 40rem to 0.8rem at 128rem */;
+  font-size: clamp(0.7rem,0.59rem + 0.27vw,0.94rem)/* fluid type from 0.7rem at 40rem to 0.94rem at 128rem */;
   line-height: clamp(1.5rem,1.45rem + 0.11vw,1.6rem)/* fluid from 1.5rem at 40rem to 1.6rem at 128rem */;
 }
 
@@ -3400,6 +3386,41 @@ video::-webkit-media-controls {
 .skills__description {
   margin-left: 0px;
   margin-bottom: 0px;
+}
+
+.wave-hand {
+  margin-bottom: 2rem;
+  display: inline-block;
+  font-size: 2.5rem;
+}
+
+@media (min-width: 48rem) {
+  .wave-hand {
+    font-size: 4rem;
+  }
+}
+
+.wave-hand {
+  animation: wave 6s ease-in-out infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0%, 85% {
+    transform: rotate(0deg);
+  }
+
+  5%, 15% {
+    transform: rotate(-10deg);
+  }
+
+  10%, 20% {
+    transform: rotate(12deg);
+  }
+
+  25%, 100% {
+    transform: rotate(0deg);
+  }
 }
 
 .testimonial {
@@ -3481,7 +3502,7 @@ video::-webkit-media-controls {
   font-family: "Tabular", serif;
   --tw-text-opacity: 1;
   color: rgb(255 241 204 / var(--tw-text-opacity));
-  font-size: clamp(0.9rem,0.85rem + 0.11vw,1rem)/* fluid type from 0.9rem at 40rem to 1rem at 128rem */;
+  font-size: clamp(1rem,0.95rem + 0.11vw,1.1rem)/* fluid type from 1rem at 40rem to 1.1rem at 128rem */;
   line-height: clamp(1.5rem,1.41rem + 0.23vw,1.7rem)/* fluid from 1.5rem at 40rem to 1.7rem at 128rem */;
   font-weight: 400;
   font-variation-settings: 'wght' 400;
@@ -3691,7 +3712,7 @@ a.portfolio-list__link:hover .portfolio-list__image {
 .portfolio-list__description {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  font-size: clamp(0.7rem,0.85rem + -0.11vw,0.8rem)/* fluid type from 0.8rem at 40rem to 0.7rem at 128rem */;
+  font-size: clamp(0.7rem,1.05rem + -0.27vw,0.94rem)/* fluid type from 0.94rem at 40rem to 0.7rem at 128rem */;
   line-height: clamp(1.5rem,1.65rem + -0.11vw,1.6rem)/* fluid from 1.6rem at 40rem to 1.5rem at 128rem */;
 }
 
@@ -3712,7 +3733,7 @@ a.portfolio-list__link:hover .portfolio-list__image {
   color: rgb(130 136 121 / var(--tw-text-opacity));
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: clamp(0.7rem,0.85rem + -0.11vw,0.8rem)/* fluid type from 0.8rem at 40rem to 0.7rem at 128rem */;
+  font-size: clamp(0.7rem,1.05rem + -0.27vw,0.94rem)/* fluid type from 0.94rem at 40rem to 0.7rem at 128rem */;
   line-height: clamp(1.5rem,1.65rem + -0.11vw,1.6rem)/* fluid from 1.6rem at 40rem to 1.5rem at 128rem */;
 }
 
@@ -3757,7 +3778,7 @@ a.portfolio-list__link:hover .portfolio-list__image {
 
 .services__description {
   margin-bottom: 2rem;
-  font-size: 0.8rem;
+  font-size: 0.94rem;
   line-height: 1.6rem;
   text-transform: capitalize;
   --tw-text-opacity: 1;
@@ -3777,7 +3798,7 @@ a.portfolio-list__link:hover .portfolio-list__image {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: 0.8rem;
+  font-size: 0.94rem;
   line-height: 1.6rem;
   font-weight: 500;
   font-variation-settings: 'wght' 500;
@@ -3788,7 +3809,7 @@ a.portfolio-list__link:hover .portfolio-list__image {
 .services__service-description {
   margin-left: 36px;
   margin-bottom: 2rem;
-  font-size: 0.8rem;
+  font-size: 0.94rem;
   line-height: 1.6rem;
 }
 
@@ -3962,7 +3983,7 @@ a.portfolio-list__link:hover .portfolio-list__image {
 
 .portfolio-cover__title {
   margin-bottom: 0.25rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.7rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -4113,7 +4134,7 @@ figcaption {
 .notifications--notification-item {
   display: block;
   text-decoration-line: none;
-  font-size: clamp(0.8rem,0.66rem + 0.34vw,1.1rem)/* fluid type from 0.8rem at 40rem to 1.1rem at 128rem */;
+  font-size: clamp(0.94rem,0.82rem + 0.3vw,1.2rem)/* fluid type from 0.94rem at 40rem to 1.2rem at 128rem */;
   line-height: clamp(1.6rem,1.51rem + 0.23vw,1.8rem)/* fluid from 1.6rem at 40rem to 1.8rem at 128rem */;
   --tw-text-opacity: 1;
   color: rgb(255 241 204 / var(--tw-text-opacity));
@@ -5312,6 +5333,14 @@ figcaption {
 }
 
 @media (min-width: 48rem) {
+  .md\:right-8 {
+    right: 2rem;
+  }
+
+  .md\:top-6 {
+    top: 1.5rem;
+  }
+
   .md\:my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -5462,6 +5491,10 @@ figcaption {
     margin-bottom: 3rem;
   }
 
+  .lg\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
   .lg\:ml-0 {
     margin-left: 0px;
   }
@@ -5503,7 +5536,7 @@ figcaption {
   }
 
   .lg\:text-lg {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.5rem;
   }
 

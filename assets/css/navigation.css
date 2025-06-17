@@ -10,7 +10,7 @@
   /* Scale up menu button by 1.3x on smaller screens */
   @media (max-width: 767px) {
     .menu-button {
-      @apply w-[62px] h-[62px]; /* 48px * 1.3 = 62.4px */
+      @apply w-[54px] h-[54px]; /* 48px * 1.3 = 62.4px */
     }
   }
 
@@ -114,12 +114,6 @@
     @apply w-8 h-8;
   }
 
-  /* Scale up menu logo on smaller screens */
-  @media (max-width: 767px) {
-    .menu__logo svg {
-      @apply w-[42px] h-[42px]; /* 32px * 1.3 = 41.6px */
-    }
-  }
 
   .menu__close {
     @apply w-8 h-8 bg-primary-700 hover:bg-primary-600 rounded flex items-center justify-center transition-colors duration-200;
@@ -128,7 +122,7 @@
   /* Scale up menu close button on smaller screens */
   @media (max-width: 767px) {
     .menu__close {
-      @apply w-[42px] h-[42px]; /* 32px * 1.3 = 41.6px */
+      @apply w-[42px] h-[42px] -left-2 -top-2; /* 32px * 1.3 = 41.6px */
     }
   }
 
@@ -180,7 +174,7 @@
   /* Scale up menu link padding and font size on smaller screens */
   @media (max-width: 767px) {
     .menu__link {
-      @apply px-[21px] py-[16px] text-[21px]; /* 16px * 1.3 = 20.8px, 12px * 1.3 = 15.6px, 16px * 1.3 = 20.8px */
+      @apply px-[21px] py-[16px]; /* 16px * 1.3 = 20.8px, 12px * 1.3 = 15.6px, 16px * 1.3 = 20.8px */
     }
   }
 

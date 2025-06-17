@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   document.fonts.ready.then(() => {
-    document.querySelectorAll('.hidden-until-loaded').forEach(el => {
-      el.classList.remove('hidden-until-loaded');
+    document.querySelectorAll(".hidden-until-loaded").forEach((el) => {
+      el.classList.remove("hidden-until-loaded");
     });
     fadeInElements();
   });
@@ -27,9 +27,7 @@ function fadeInElements() {
     );
   }
 
-  const elements = document.querySelectorAll(
-    ".fade-in-element:not(.visible)"
-  );
+  const elements = document.querySelectorAll(".fade-in-element:not(.visible)");
 
   scrollStop(function () {
     observerIndex = 0; // Reset index when scrolling stops

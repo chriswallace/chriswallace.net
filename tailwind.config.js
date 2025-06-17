@@ -70,37 +70,37 @@ export default {
           },
         ],
         base: [
-          "0.8rem",
+          "0.94rem",
           {
             lineHeight: "1.6rem",
           },
         ],
         lg: [
-          "0.9rem",
+          "1rem",
           {
             lineHeight: "1.5rem",
           },
         ],
         xl: [
-          "1rem",
+          "1.1rem",
           {
             lineHeight: "1.7rem",
           },
         ],
         "2xl": [
-          "1.1rem",
+          "1.2rem",
           {
             lineHeight: "1.8rem",
           },
         ],
         "3xl": [
-          "1.25rem",
+          "1.3rem",
           {
             lineHeight: "2rem",
           },
         ],
         "4xl": [
-          "1.35rem",
+          "1.4rem",
           {
             lineHeight: "2rem",
           },

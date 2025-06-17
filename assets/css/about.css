@@ -1,0 +1,12 @@
+.wave-hand {
+  @apply text-[2.5rem] md:text-[4rem] inline-block mb-8;
+  animation: wave 6s ease-in-out infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0%, 85% { transform: rotate(0deg); }
+  5%, 15% { transform: rotate(-10deg); }
+  10%, 20% { transform: rotate(12deg); }
+  25%, 100% { transform: rotate(0deg); }
+}

@@ -15,7 +15,7 @@
 }
 
 .resume__metadata {
-  @apply text-2xl tracking-wide text-highlight;
+  @apply ~text-base/2xl text-highlight;
 }
 
 .resume__metadata-item--place {
