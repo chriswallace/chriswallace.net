@@ -10,11 +10,11 @@ class GhostCanvas {
 
     // Configuration
     this.config = {
-      ghostCount: 2,
-      maxRadius: 100,
-      minRadius: 60,
-      opacity: 0.02,
-      speed: 0.5,
+      ghostCount: 1, // Single entity
+      maxRadius: 400,
+      minRadius: 350,
+      opacity: 0.6,
+      speed: 0.2, // Slow, mysterious movement
       noiseScale: 0.005,
       distortionIntensity: 15,
     };
@@ -40,8 +40,8 @@ class GhostCanvas {
     this.canvas.style.width = "100vw";
     this.canvas.style.height = "100vh";
     this.canvas.style.pointerEvents = "none";
-    this.canvas.style.zIndex = "-1";
-    this.canvas.style.opacity = "0.6";
+    this.canvas.style.zIndex = "-1"; // Back to background
+    this.canvas.style.opacity = "0.8";
 
     this.ctx = this.canvas.getContext("2d");
     document.body.appendChild(this.canvas);
@@ -64,6 +64,14 @@ class GhostCanvas {
         noiseOffsetX: Math.random() * 1000,
         noiseOffsetY: Math.random() * 1000,
         intensity: 0.3 + Math.random() * 0.7,
+        pulsePhase: Math.random() * Math.PI * 2,
+        pulseSpeed: 0.002 + Math.random() * 0.003,
+        distortionPhase: Math.random() * Math.PI * 2,
+        distortionSpeed: 0.001 + Math.random() * 0.002,
+        tendrilRandomness: Math.random() * 0.5 + 0.5,
+        coreFluctuation: Math.random() * 0.3 + 0.7,
+        lastDirectionChange: 0,
+        directionChangeInterval: 3000 + Math.random() * 4000,
       });
     }
   }
@@ -109,93 +117,327 @@ class GhostCanvas {
         this.time
       );
 
-      // Smooth directional movement with noise influence
-      ghost.baseX += ghost.speedX + noiseX * 2;
-      ghost.baseY += ghost.speedY + noiseY * 2;
-
-      // Wrap around screen edges with buffer
-      const buffer = ghost.radius * 2;
-      if (ghost.baseX < -buffer) ghost.baseX = this.width + buffer;
-      if (ghost.baseX > this.width + buffer) ghost.baseX = -buffer;
-      if (ghost.baseY < -buffer) ghost.baseY = this.height + buffer;
-      if (ghost.baseY > this.height + buffer) ghost.baseY = -buffer;
-
-      // Add subtle oscillation
-      ghost.phase += 0.02;
-      ghost.x = ghost.baseX + Math.sin(ghost.phase) * 30;
-      ghost.y = ghost.baseY + Math.cos(ghost.phase * 0.7) * 20;
-
-      // Occasionally change direction slightly
-      if (Math.random() < 0.005) {
-        ghost.speedX += (Math.random() - 0.5) * 0.2;
-        ghost.speedY += (Math.random() - 0.5) * 0.2;
+      // Random direction changes for more alive behavior
+      if (
+        this.time - ghost.lastDirectionChange >
+        ghost.directionChangeInterval
+      ) {
+        ghost.speedX += (Math.random() - 0.5) * 0.4;
+        ghost.speedY += (Math.random() - 0.5) * 0.4;
+        ghost.lastDirectionChange = this.time;
+        ghost.directionChangeInterval = 3000 + Math.random() * 4000;
 
         // Keep speed within bounds
-        ghost.speedX = Math.max(
-          -this.config.speed * 2,
-          Math.min(this.config.speed * 2, ghost.speedX)
-        );
-        ghost.speedY = Math.max(
-          -this.config.speed * 2,
-          Math.min(this.config.speed * 2, ghost.speedY)
-        );
+        const maxSpeed = this.config.speed * 3;
+        ghost.speedX = Math.max(-maxSpeed, Math.min(maxSpeed, ghost.speedX));
+        ghost.speedY = Math.max(-maxSpeed, Math.min(maxSpeed, ghost.speedY));
       }
+
+      // Smooth directional movement with noise influence
+      ghost.baseX += ghost.speedX + noiseX * 3;
+      ghost.baseY += ghost.speedY + noiseY * 3;
+
+      // Keep within canvas bounds with soft boundaries
+      const margin = ghost.radius;
+      if (ghost.baseX < margin) {
+        ghost.baseX = margin;
+        ghost.speedX = Math.abs(ghost.speedX) * 0.5; // Bounce and slow down
+      }
+      if (ghost.baseX > this.width - margin) {
+        ghost.baseX = this.width - margin;
+        ghost.speedX = -Math.abs(ghost.speedX) * 0.5;
+      }
+      if (ghost.baseY < margin) {
+        ghost.baseY = margin;
+        ghost.speedY = Math.abs(ghost.speedY) * 0.5;
+      }
+      if (ghost.baseY > this.height - margin) {
+        ghost.baseY = this.height - margin;
+        ghost.speedY = -Math.abs(ghost.speedY) * 0.5;
+      }
+
+      // Update random phases
+      ghost.phase += 0.02 + Math.sin(this.time * 0.001) * 0.01;
+      ghost.pulsePhase += ghost.pulseSpeed;
+      ghost.distortionPhase += ghost.distortionSpeed;
+
+      // Add subtle oscillation with random variations
+      const oscillationX =
+        Math.sin(ghost.phase) * 20 + Math.sin(ghost.phase * 1.3) * 10;
+      const oscillationY =
+        Math.cos(ghost.phase * 0.7) * 15 + Math.cos(ghost.phase * 0.9) * 8;
+
+      ghost.x = ghost.baseX + oscillationX;
+      ghost.y = ghost.baseY + oscillationY;
     });
   }
 
   drawDistortion(ghost) {
-    const gradient = this.ctx.createRadialGradient(
-      ghost.x,
-      ghost.y,
+    const centerX = ghost.x;
+    const centerY = ghost.y;
+    const maxRadius = ghost.radius;
+
+    // First, draw the colored glow layer behind everything
+    this.drawGlowLayer(ghost, centerX, centerY, maxRadius);
+
+    // Then draw the dark singularity on top
+    this.drawShadowLayer(ghost, centerX, centerY, maxRadius);
+  }
+
+  drawGlowLayer(ghost, centerX, centerY, maxRadius) {
+    // Create a larger, softer glow behind the singularity
+    const glowRadius = maxRadius * 2.2;
+    const glowIntensity = this.config.opacity * ghost.intensity * 0.5;
+
+    // Subtle green color that shifts over time
+    const hueShift = Math.sin(ghost.distortionPhase * 0.5) * 30;
+    const baseHue = 120 + hueShift; // Green range (120 is pure green)
+
+    // Multiple glow layers for depth
+    const glowLayers = 4;
+    for (let layer = 0; layer < glowLayers; layer++) {
+      const layerProgress = layer / glowLayers;
+      const layerRadius = glowRadius * (0.3 + layerProgress * 0.7);
+      const layerOpacity = glowIntensity * (1 - layerProgress * 0.6);
+
+      const glowGradient = this.ctx.createRadialGradient(
+        centerX,
+        centerY,
+        0,
+        centerX,
+        centerY,
+        layerRadius
+      );
+
+      // More saturated green glow
+      const saturation = 70 - layer * 12;
+      const lightness = 30 + layer * 8;
+
+      glowGradient.addColorStop(
+        0,
+        `hsla(${baseHue}, ${saturation}%, ${lightness}%, ${layerOpacity})`
+      );
+      glowGradient.addColorStop(
+        0.4,
+        `hsla(${baseHue + 10}, ${saturation * 0.8}%, ${lightness * 0.8}%, ${
+          layerOpacity * 0.7
+        })`
+      );
+      glowGradient.addColorStop(
+        0.8,
+        `hsla(${baseHue + 20}, ${saturation * 0.5}%, ${lightness * 0.6}%, ${
+          layerOpacity * 0.3
+        })`
+      );
+      glowGradient.addColorStop(
+        1,
+        `hsla(${baseHue}, ${saturation}%, ${lightness}%, 0)`
+      );
+
+      this.ctx.fillStyle = glowGradient;
+      this.ctx.beginPath();
+
+      // Organic glow shape
+      const points = 12;
+      const pulseIntensity = Math.sin(ghost.pulsePhase + layer * 0.3) * 0.1;
+
+      this.ctx.moveTo(
+        centerX + Math.cos(0) * layerRadius * (1 + pulseIntensity),
+        centerY + Math.sin(0) * layerRadius * (1 + pulseIntensity)
+      );
+
+      for (let p = 1; p <= points; p++) {
+        const angle = (p / points) * Math.PI * 2;
+        const distortion =
+          Math.sin(angle * 2 + ghost.distortionPhase + layer * 0.2) * 0.15 +
+          Math.cos(angle * 3 + ghost.pulsePhase) * 0.1;
+
+        const radius = layerRadius * (1 + distortion + pulseIntensity);
+
+        this.ctx.lineTo(
+          centerX + Math.cos(angle) * radius,
+          centerY + Math.sin(angle) * radius
+        );
+      }
+
+      this.ctx.closePath();
+      this.ctx.fill();
+    }
+  }
+
+  drawShadowLayer(ghost, centerX, centerY, maxRadius) {
+    // Create multiple concentric rings for gravitational lensing effect
+    const rings = 8;
+
+    for (let ring = 0; ring < rings; ring++) {
+      const ringProgress = ring / rings;
+      const ringRadius = maxRadius * (0.2 + ringProgress * 0.8);
+      const ringOpacity =
+        this.config.opacity * (1 - ringProgress * 0.7) * ghost.intensity;
+
+      // Create distortion gradient for each ring
+      const gradient = this.ctx.createRadialGradient(
+        centerX,
+        centerY,
+        ringRadius * 0.1,
+        centerX,
+        centerY,
+        ringRadius
+      );
+
+      // Dark void colors with subtle variations
+      const hue = Math.sin(ghost.distortionPhase + ring * 0.5) * 40; // More color variation
+      const innerDarkness = ringOpacity * (0.9 - ring * 0.08);
+      const outerDarkness = ringOpacity * (0.3 - ring * 0.03);
+
+      gradient.addColorStop(0, `hsla(${240 + hue}, 20%, 5%, ${innerDarkness})`);
+      gradient.addColorStop(
+        0.3,
+        `hsla(${220 + hue}, 30%, 8%, ${innerDarkness * 0.8})`
+      );
+      gradient.addColorStop(
+        0.7,
+        `hsla(${200 + hue}, 25%, 12%, ${outerDarkness})`
+      );
+      gradient.addColorStop(1, `hsla(${180 + hue}, 15%, 15%, 0)`);
+
+      this.ctx.fillStyle = gradient;
+      this.ctx.beginPath();
+
+      // Create organic, pulsing shape with more random distortion
+      const points = 16;
+      const pulseIntensity = Math.sin(ghost.pulsePhase + ring * 0.2) * 0.15;
+      const randomDistortion = Math.sin(ghost.distortionPhase * 1.3) * 0.1;
+
+      this.ctx.moveTo(
+        centerX +
+          Math.cos(0) * ringRadius * (1 + pulseIntensity + randomDistortion),
+        centerY +
+          Math.sin(0) * ringRadius * (1 + pulseIntensity + randomDistortion)
+      );
+
+      for (let p = 1; p <= points; p++) {
+        const angle = (p / points) * Math.PI * 2;
+
+        // Create more chaotic gravitational distortion
+        const distortion =
+          Math.sin(angle * 3 + ghost.distortionPhase + ring * 0.3) * 0.2 +
+          Math.cos(angle * 2 + ghost.pulsePhase + ring * 0.1) * 0.15 +
+          Math.sin(angle * 5 + this.time * 0.006 + ring) * 0.08 +
+          (Math.random() - 0.5) * 0.05; // Add pure randomness
+
+        const radius =
+          ringRadius * (1 + distortion + pulseIntensity + randomDistortion);
+
+        this.ctx.lineTo(
+          centerX + Math.cos(angle) * radius,
+          centerY + Math.sin(angle) * radius
+        );
+      }
+
+      this.ctx.closePath();
+      this.ctx.fill();
+    }
+
+    // Add central void/singularity core with fluctuation
+    const coreRadius =
+      maxRadius *
+      0.25 *
+      ghost.coreFluctuation *
+      (1 + Math.sin(ghost.pulsePhase) * 0.2);
+    const coreGradient = this.ctx.createRadialGradient(
+      centerX,
+      centerY,
       0,
-      ghost.x,
-      ghost.y,
-      ghost.radius
+      centerX,
+      centerY,
+      coreRadius
     );
 
-    // Create subtle bump effect with varying opacity
-    const centerOpacity = this.config.opacity * ghost.intensity;
-    const edgeOpacity = centerOpacity * 0.1;
+    const coreIntensity = this.config.opacity * ghost.intensity * 0.9;
+    coreGradient.addColorStop(0, `rgba(0, 0, 0, ${coreIntensity})`);
+    coreGradient.addColorStop(0.6, `rgba(10, 5, 20, ${coreIntensity * 0.8})`);
+    coreGradient.addColorStop(1, `rgba(20, 10, 30, ${coreIntensity * 0.3})`);
 
-    gradient.addColorStop(0, `rgba(255, 255, 255, ${centerOpacity})`);
-    gradient.addColorStop(0.3, `rgba(255, 255, 255, ${centerOpacity * 0.7})`);
-    gradient.addColorStop(0.7, `rgba(255, 255, 255, ${centerOpacity * 0.3})`);
-    gradient.addColorStop(1, `rgba(255, 255, 255, 0)`);
-
-    this.ctx.fillStyle = gradient;
+    this.ctx.fillStyle = coreGradient;
     this.ctx.beginPath();
-    this.ctx.arc(ghost.x, ghost.y, ghost.radius, 0, Math.PI * 2);
+    this.ctx.arc(centerX, centerY, coreRadius, 0, Math.PI * 2);
     this.ctx.fill();
 
-    // Add inner shadow for depth
-    const shadowGradient = this.ctx.createRadialGradient(
-      ghost.x,
-      ghost.y,
-      0,
-      ghost.x,
-      ghost.y,
-      ghost.radius * 0.6
-    );
+    // Add more random, spindly energy tendrils
+    const tendrils = 8 + Math.floor(Math.random() * 4); // 8-12 tendrils
+    for (let t = 0; t < tendrils; t++) {
+      const tendrilAngle =
+        (t / tendrils) * Math.PI * 2 +
+        ghost.distortionPhase * 0.5 +
+        Math.sin(this.time * 0.003 + t) * 0.3;
+      const tendrilLength =
+        maxRadius *
+        (1.2 + Math.sin(ghost.pulsePhase + t) * 0.4 + Math.random() * 0.3);
+      const tendrilWidth =
+        4 + Math.sin(ghost.distortionPhase + t) * 6 + Math.random() * 4;
 
-    shadowGradient.addColorStop(0, "rgba(0, 0, 0, 0)");
-    shadowGradient.addColorStop(1, `rgba(0, 0, 0, ${centerOpacity * 0.5})`);
+      // Make tendrils more spindly and random
+      const segments = 3;
+      let currentX = centerX + Math.cos(tendrilAngle) * coreRadius;
+      let currentY = centerY + Math.sin(tendrilAngle) * coreRadius;
 
-    this.ctx.fillStyle = shadowGradient;
-    this.ctx.beginPath();
-    this.ctx.arc(ghost.x, ghost.y, ghost.radius * 0.6, 0, Math.PI * 2);
-    this.ctx.fill();
+      for (let s = 0; s < segments; s++) {
+        const segmentProgress = (s + 1) / segments;
+        const segmentAngle =
+          tendrilAngle + (Math.random() - 0.5) * 0.8 * ghost.tendrilRandomness;
+        const segmentLength =
+          (tendrilLength / segments) * (1 + Math.random() * 0.5);
+
+        const endX = currentX + Math.cos(segmentAngle) * segmentLength;
+        const endY = currentY + Math.sin(segmentAngle) * segmentLength;
+
+        const tendrilGradient = this.ctx.createLinearGradient(
+          currentX,
+          currentY,
+          endX,
+          endY
+        );
+        const tendrilOpacity =
+          this.config.opacity *
+          ghost.intensity *
+          0.3 *
+          (1 - segmentProgress * 0.5);
+
+        tendrilGradient.addColorStop(0, `rgba(20, 10, 40, ${tendrilOpacity})`);
+        tendrilGradient.addColorStop(
+          0.5,
+          `rgba(10, 5, 25, ${tendrilOpacity * 0.6})`
+        );
+        tendrilGradient.addColorStop(1, `rgba(0, 0, 0, 0)`);
+
+        this.ctx.strokeStyle = tendrilGradient;
+        this.ctx.lineWidth = tendrilWidth * (1 - segmentProgress * 0.3);
+        this.ctx.lineCap = "round";
+        this.ctx.beginPath();
+        this.ctx.moveTo(currentX, currentY);
+        this.ctx.lineTo(endX, endY);
+        this.ctx.stroke();
+
+        currentX = endX;
+        currentY = endY;
+      }
+    }
   }
 
   render() {
     // Clear canvas
     this.ctx.clearRect(0, 0, this.width, this.height);
 
-    // Set blend mode for subtle effect
-    this.ctx.globalCompositeOperation = "overlay";
-
-    // Draw each ghost distortion
+    // Draw each singularity with layered effects
     this.ghosts.forEach((ghost) => {
-      this.drawDistortion(ghost);
+      // First draw the glow with normal blending
+      this.ctx.globalCompositeOperation = "screen"; // Additive glow effect
+      this.drawGlowLayer(ghost, ghost.x, ghost.y, ghost.radius);
+
+      // Then draw the shadow with multiply blending
+      this.ctx.globalCompositeOperation = "multiply";
+      this.drawShadowLayer(ghost, ghost.x, ghost.y, ghost.radius);
     });
 
     // Reset blend mode
