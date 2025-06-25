@@ -19,10 +19,7 @@ description: Senior product design leader with over 20 years experience building
     <h1 class="fade-in-up fade-in-up-delay-1" data-scramble>Ghost in the Machine</h1>
     <p class="fade-in-up fade-in-up-delay-2" data-scramble>We are entering a new chapter in product design&mdash;one defined less by what we make, and more by how it's made. AI-assisted tools now generate layouts, write code, optimize flows. The machinery of design is faster, cheaper, and increasingly autonomous. For some, that's a threat. For others, a shortcut.</p>
     <p class="fade-in-up fade-in-up-delay-3" data-scramble>But for those of us who've spent years inside the systems—leading teams, building platforms, sweating the details—it's something else entirely: a moment of reckoning.</p>
-    <p class="fade-in-up fade-in-up-delay-4" data-scramble>Because design has never just been about execution. It's about interpretation. About knowing what not to build. About tuning into nuance, and making choices that respect both complexity and context. AI can extend our reach, but it can't replace the rigor of taste. It can't intuit when a product feels emotionally off. It doesn't know how to design for trust, or joy, or the subtle rhythms of human behavior.</p>
-    <p class="fade-in-up fade-in-up-delay-5" data-scramble>That's the real frontier now: not scaling output, but deepening meaning. And that only happens when design is guided by people who know what matters—who can hold the line between what's possible and what's appropriate.</p>
-    <p class="fade-in-up fade-in-up-delay-6" data-scramble>This portfolio is a record of that belief. It's not just a gallery of outcomes, but a map of how I think—how I approach systems and storytelling, brand and behavior, vision and velocity.</p>
-    <p class="fade-in-up fade-in-up-delay-7" data-scramble>In an age of infinite generation, discernment is the new superpower. And that, still, is human.</p>
+    <p class="fade-in-up fade-in-up-delay-4" data-scramble>In an age of infinite generation, discernment is the new superpower. And that, still, is human.</p>
   </div>
 </div>
 
@@ -34,21 +31,7 @@ description: Senior product design leader with over 20 years experience building
     </div>
   </div>
 </div>
-<div class="content-container-wo mb-12">
-  <picture class="bg-black/30">
-    <source media="(max-width: 480px)" 
-            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-thumbnail.png?tr=w-800,f-auto">
-    <source media="(min-width: 481px)" 
-            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-banner.png?tr=w-800,f-auto 800w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-banner.png?tr=w-1200,f-auto 1200w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-banner.png?tr=w-1600,f-auto 1600w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-banner.png?tr=w-2500,f-auto 2500w">
-    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-redesign-banner.png?tr=w-2500,f-auto"
-         class="fade-in-element w-full block mb-1.5 bg-black/30" 
-         alt="" 
-         loading="lazy">
-  </picture>
-  
+<div class="content-container-wo mb-12">  
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
@@ -127,7 +110,7 @@ description: Senior product design leader with over 20 years experience building
          alt="" 
          loading="lazy">
   </picture>
-  <div class="bg-black/30 fade-in-element content-container-wo mb-1.5">
+  <div class="bg-black/30 fade-in-element w-full mb-1.5">
     <div class="flex flex-col py-3 bg-black">
       <div class="zoomable mx-auto">
           <div class="video-player">
@@ -154,32 +137,52 @@ description: Senior product design leader with over 20 years experience building
   </picture>
   <div class="fade-in-element min-h-1/2 bg-black/30 flex items-center justify-center w-full mb-1.5">
     <figure class="my-12">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-1.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-1.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" width="1520" height="840" alt="" class="max-w-[90vw] md:max-w-[800px] mx-auto rounded-xl" loading="lazy">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-1.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-1.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" width="1520" height="840" alt="" class="max-w-[80%] mx-auto rounded-xl" loading="lazy">
       <figcaption>Futuristic UI designed for the app</figcaption>
     </figure>
   </div>
   <div class="fade-in-element min-h-1/2 bg-black/30 flex items-center justify-center w-full mb-1.5">
     <figure class="my-12">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-2.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-2.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-2.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-2.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-2.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" width="1520" height="840" alt="" class="max-w-[90vw] md:max-w-[800px] mx-auto rounded-xl" loading="lazy">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-2.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-2.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-2.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-2.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-assets-2.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" width="1520" height="840" alt="" class="max-w-[80%] mx-auto rounded-xl" loading="lazy">
       <figcaption>Icons and visual elements</figcaption>
     </figure>
   </div>
   <div class="fade-in-element min-h-1/2 bg-black/30 flex items-center justify-center w-full mb-1.5">
     <figure class="my-12">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" width="1520" height="840" alt="" class="max-w-[90vw] md:max-w-[800px] mx-auto rounded-xl" loading="lazy">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-overlays.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" width="1520" height="840" alt="" class="max-w-[80%] mx-auto rounded-xl" loading="lazy">
       <figcaption>Popups and information overlays</figcaption>
     </figure>
   </div>
-  <div class="h-auto w-full fade-in-element flex justify-center items-center">
-    <div class="image-gallery max-w-full aspect-[2000/1397]">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-w-full md:max-w-[840px] w-full h-auto mb-1.5" alt="" loading="lazy">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-w-full md:max-w-[840px] w-full h-auto mb-1.5" alt="" loading="lazy">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-w-full md:max-w-[840px] w-full h-auto mb-1.5" alt="" loading="lazy">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-w-full md:max-w-[840px] w-full h-auto mb-1.5" alt="" loading="lazy">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-w-full md:max-w-[840px] w-full h-auto mb-1.5" alt="" loading="lazy">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-w-full md:max-w-[840px] w-full h-auto mb-1.5" alt="" loading="lazy">
-    </div>
-</div>
+  <div class="fade-in-element min-h-1/2 bg-black/30 flex items-center justify-center w-full mb-1.5">
+    <figure class="my-12">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-900,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-320,f-auto 320w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-640,f-auto 640w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-768,f-auto 768w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-900,f-auto 900w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-1024,f-auto 1024w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-1280,f-auto 1280w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-1536,f-auto 1536w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-1800,f-auto 1800w" sizes="(max-width: 320px) 320px, (max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 900px) 900px, 900px" class="max-w-[80%] md:max-w-[80%] mx-auto rounded-xl" alt="Overdrive Splash Screen" loading="lazy">
+    </figure>
+  </div>
+  <div class="fade-in-element min-h-1/2 bg-black/30 flex items-center justify-center w-full mb-1.5">
+    <figure class="my-12">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-900,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-320,f-auto 320w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-640,f-auto 640w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-768,f-auto 768w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-900,f-auto 900w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-1024,f-auto 1024w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-1280,f-auto 1280w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-1536,f-auto 1536w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-1800,f-auto 1800w" sizes="(max-width: 320px) 320px, (max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 900px) 900px, 900px" class="max-w-[80%] md:max-w-[80%] mx-auto rounded-xl" alt="Overdrive Puzzles Interface" loading="lazy">
+    </figure>
+  </div>
+  <div class="fade-in-element min-h-1/2 bg-black/30 flex items-center justify-center w-full mb-1.5">
+    <figure class="my-12">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-900,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-320,f-auto 320w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-640,f-auto 640w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-768,f-auto 768w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-900,f-auto 900w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-1024,f-auto 1024w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-1280,f-auto 1280w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-1536,f-auto 1536w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-1800,f-auto 1800w" sizes="(max-width: 320px) 320px, (max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 900px) 900px, 900px" class="max-w-[80%] md:max-w-[80%] mx-auto rounded-xl" alt="Overdrive Puzzles Detail" loading="lazy">
+    </figure>
+  </div>
+  <div class="fade-in-element min-h-1/2 bg-black/30 flex items-center justify-center w-full mb-1.5">
+    <figure class="my-12">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-900,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-320,f-auto 320w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-640,f-auto 640w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-768,f-auto 768w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-900,f-auto 900w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-1024,f-auto 1024w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-1280,f-auto 1280w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-1536,f-auto 1536w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-1800,f-auto 1800w" sizes="(max-width: 320px) 320px, (max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 900px) 900px, 900px" class="max-w-[80%] md:max-w-[80%] mx-auto rounded-xl" alt="Overdrive Marketplace" loading="lazy">
+    </figure>
+  </div>
+  <div class="fade-in-element min-h-1/2 bg-black/30 flex items-center justify-center w-full mb-1.5">
+    <figure class="my-12">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-900,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-320,f-auto 320w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-640,f-auto 640w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-768,f-auto 768w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-900,f-auto 900w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-1024,f-auto 1024w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-1280,f-auto 1280w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-1536,f-auto 1536w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-1800,f-auto 1800w" sizes="(max-width: 320px) 320px, (max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 900px) 900px, 900px" class="max-w-[80%] md:max-w-[80%] mx-auto rounded-xl" alt="Overdrive Home Screen" loading="lazy">
+    </figure>
+  </div>
+  <div class="fade-in-element min-h-1/2 bg-black/30 flex items-center justify-center w-full mb-1.5">
+    <figure class="my-12">
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-900,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-320,f-auto 320w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-640,f-auto 640w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-768,f-auto 768w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-900,f-auto 900w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-1024,f-auto 1024w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-1280,f-auto 1280w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-1536,f-auto 1536w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-1800,f-auto 1800w" sizes="(max-width: 320px) 320px, (max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 900px) 900px, 900px" class="max-w-[80%] md:max-w-[80%] mx-auto rounded-xl" alt="Overdrive Reader Interface" loading="lazy">
+    </figure>
+  </div>
 
 <picture>
   <source media="(max-width: 480px)" 
@@ -199,7 +202,6 @@ description: Senior product design leader with over 20 years experience building
 <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
 <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
 <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-<div class="content-container-wo">
   <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-thumbnail.png?tr=w-800,f-auto">
@@ -213,8 +215,8 @@ description: Senior product design leader with over 20 years experience building
          alt="" 
          loading="lazy">
   </picture>
-  <div class="fade-in-element flex aspect-video justify-center items-center bg-black/30 p-4 lg:p-8 mb-1.5">
-    <video id="portfolioVideo" data-type="video" controls muted playsinline autoplay loop loading="lazy" class="w-auto h-full rounded-xl">
+  <div class="fade-in-element w-full flex justify-center items-center bg-black/100 p-4 lg:p-8 mb-1.5">
+    <video id="portfolioVideo" data-type="video" controls muted playsinline autoplay loop loading="lazy" class="w-full h-full max-w-[500px] max-h-[500px] rounded-xl">
         <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/mlb-game-video.mp4/ik-video.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
@@ -234,4 +236,88 @@ description: Senior product design leader with over 20 years experience building
   </picture>
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/11.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/11.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/11.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/11.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/11.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/11.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/14.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/14.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/14.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/14.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/14.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/14.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-0" alt="" loading="lazy">
+    <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-homepage-mobile.png?tr=q-70&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-homepage-desktop.png?tr=q-70&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-homepage-desktop.png?tr=q-70&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-homepage-desktop.png?tr=q-70&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-homepage-desktop.png?tr=q-70&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-dark-mobile.png?tr=q-70&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-dark-desktop.png?tr=q-70&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-dark-desktop.png?tr=q-70&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-dark-desktop.png?tr=q-70&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-dark-desktop.png?tr=q-70&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-2-mobile.png?tr=q-70&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-2-desktop.png?tr=q-70&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-2-desktop.png?tr=q-70&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-2-desktop.png?tr=q-70&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-2-desktop.png?tr=q-70&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-dark-mobile.png?tr=q-70&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-dark-desktop.png?tr=q-70&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-dark-desktop.png?tr=q-70&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-dark-desktop.png?tr=q-70&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-dark-desktop.png?tr=q-70&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-light-mobile.png?tr=q-70&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-light-desktop.png?tr=q-70&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-light-desktop.png?tr=q-70&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-light-desktop.png?tr=q-70&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-light-desktop.png?tr=q-70&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-interview-mobile.png?tr=q-70&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-interview-desktop.png?tr=q-70&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-interview-desktop.png?tr=q-70&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-interview-desktop.png?tr=q-70&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-interview-desktop.png?tr=q-70&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-promo-mobile.png?tr=q-70&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-promo-desktop.png?tr=q-70&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-promo-desktop.png?tr=q-70&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-promo-desktop.png?tr=q-70&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-promo-desktop.png?tr=q-70&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-promo-2-mobile.png?tr=q-70&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-promo-2-desktop.png?tr=q-70&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-promo-2-desktop.png?tr=q-70&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-promo-2-desktop.png?tr=q-70&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-promo-2-desktop.png?tr=q-70&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-mintpass-mobile.png?tr=q-70&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-mintpass-desktop.png?tr=q-70&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-mintpass-desktop.png?tr=q-70&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-mintpass-desktop.png?tr=q-70&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-mintpass-desktop.png?tr=q-70&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-social-mobile.png?tr=q-70&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-social-desktop.png?tr=q-70&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-social-desktop.png?tr=q-70&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-social-desktop.png?tr=q-70&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-social-desktop.png?tr=q-70&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-creator-mobile.png?tr=q-70&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-creator-desktop.png?tr=q-70&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-creator-desktop.png?tr=q-70&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-creator-desktop.png?tr=q-70&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-creator-desktop.png?tr=q-70&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-ultrapass-mobile.png?tr=q-70&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-ultrapass-desktop.png?tr=q-70&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-ultrapass-desktop.png?tr=q-70&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-ultrapass-desktop.png?tr=q-70&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-ultrapass-desktop.png?tr=q-70&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
 </div>

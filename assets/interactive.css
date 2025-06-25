@@ -1333,10 +1333,6 @@ i {
   margin-bottom: 0.5rem;
 }
 
-.mb-20 {
-  margin-bottom: 5rem;
-}
-
 .mb-24 {
   margin-bottom: 6rem;
 }
@@ -1437,10 +1433,6 @@ i {
   display: none;
 }
 
-.aspect-\[2000\/1397\] {
-  aspect-ratio: 2000/1397;
-}
-
 .aspect-\[4\/3\] {
   aspect-ratio: 4/3;
 }
@@ -1451,10 +1443,6 @@ i {
 
 .aspect-square {
   aspect-ratio: 1 / 1;
-}
-
-.aspect-video {
-  aspect-ratio: 16 / 9;
 }
 
 .h-3 {
@@ -1517,10 +1505,6 @@ i {
   width: 100%;
 }
 
-.max-w-2xl {
-  max-width: 42rem;
-}
-
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -1563,10 +1547,6 @@ i {
 
 .max-w-\[840px\] {
   max-width: 840px;
-}
-
-.max-w-\[90vw\] {
-  max-width: 90vw;
 }
 
 .max-w-full {
@@ -1706,12 +1686,6 @@ i {
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
-.space-y-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1842,6 +1816,10 @@ i {
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-black\/100 {
+  background-color: rgb(0 0 0 / 1);
 }
 
 .bg-black\/30 {
@@ -2159,6 +2137,12 @@ i {
   outline-style: solid;
 }
 
+.ring {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
 .blur {
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2340,12 +2324,8 @@ body.meetChris {
     width: 100%;
   }
 
-  .md\:max-w-\[800px\] {
-    max-width: 800px;
-  }
-
-  .md\:max-w-\[840px\] {
-    max-width: 840px;
+  .md\:max-w-\[80\%\] {
+    max-width: 80%;
   }
 
   .md\:grid-cols-3 {
@@ -2504,18 +2484,6 @@ body.meetChris {
 @media (min-width: 80rem) {
   .xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 110rem) {
-  .\32xl\:mt-12 {
-    margin-top: 3rem;
-  }
-
-  .\32xl\:space-y-12 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(3rem * var(--tw-space-y-reverse));
   }
 }
 
