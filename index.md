@@ -4,18 +4,16 @@ title: Chris Wallace - Senior Product Design Leader
 description: Senior product design leader with over 20 years experience building teams, mentoring designers, and creating high-craft digital experiences. Seeking a leadership role where I can grow design organizations and connect great people.
 ---
 
-<div class="z-50 relative">
-  <div class="fixed top-3 md:top-6 left-24 right-4 md:right-8 z-10 fade-in-up">
-    <div class="flex flex-col md:flex-row justify-between w-full md:gap-4 text-sm text-foreground">
-      <div class="text-right" data-scramble>Chris Wallace</div>
-      <div class="text-right" data-scramble>2025</div>
-      <div class="text-right" data-scramble>Design Leadership</div>
-    </div>
+<div class="mt-3 md:mt-6 ml-24 mr-4 md:mr-8 mb-12 fade-in-up">
+  <div class="flex flex-col md:flex-row justify-between w-full md:gap-4 text-sm text-foreground">
+    <div class="text-right" data-scramble>Chris Wallace</div>
+    <div class="text-right" data-scramble>2025</div>
+    <div class="text-right" data-scramble>Design Leadership</div>
   </div>
 </div>
 
 <div class="home content-container relative z-10">
-  <div class="max-w-prose mx-auto">
+  <div class=" mx-auto">
     <h1 class="fade-in-up fade-in-up-delay-1" data-scramble>Ghost in the Machine</h1>
     <p class="fade-in-up fade-in-up-delay-2" data-scramble>We are entering a new chapter in product design&mdash;one defined less by what we make, and more by how it's made. AI-assisted tools now generate layouts, write code, optimize flows. The machinery of design is faster, cheaper, and increasingly autonomous. For some, that's a threat. For others, a shortcut.</p>
     <p class="fade-in-up fade-in-up-delay-3" data-scramble>But for those of us who've spent years inside the systems—leading teams, building platforms, sweating the details—it's something else entirely: a moment of reckoning.</p>

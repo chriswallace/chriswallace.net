@@ -52,7 +52,8 @@
   <script src="https://unpkg.com/splitting/dist/splitting.min.js" expires="31536000"></script>
   <script src="/assets/js/text-scrambler.min.js?v={{ site.version }}" expires="31536000"></script>
 
-  <link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/UltraDAO/wallace/favicon.png" expires="31536000">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg" expires="31536000">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" expires="31536000">
   <meta property="og:image" content="{{page.thumbnail | default: 'https://ik.imagekit.io/UltraDAO/wallace/chris-wallace.jpg'}}">
   <meta property="twitter:image" content="{{page.thumbnail | default: 'https://ik.imagekit.io/UltraDAO/wallace/chris-wallace.jpg'}}">
 

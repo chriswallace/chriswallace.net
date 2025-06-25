@@ -1,8 +1,11 @@
-.home h1 {
-  padding-top: 100px;
-  padding-top: 25svh;
+.home h1{
+  @apply mt-16 mb-6;
 }
 
-.home p:last-of-type {
-  padding-bottom: 25svh;
+.home p{
+  @apply text-sm mb-4 max-w-[40rem];
+
+  &:last-of-type{
+    @apply mb-24;
+  }
 }
