@@ -6,7 +6,7 @@ description: Design leadership and team-building services for organizations read
 ---
 
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
-  <div class="fade-in-up fade-in-up-delay-2 group relative">
+  <div class="fade-in-element group relative">
     <div class="border border-gray-700 rounded-lg p-8 h-full hover:border-gray-400 transition-colors">
       <div class="flex items-start justify-between mb-6">
         <h2 class="mt-0 text-xl" data-scramble>Team Building</h2>
@@ -31,7 +31,7 @@ description: Design leadership and team-building services for organizations read
       </p>
     </div>
   </div>
-  <div class="fade-in-up fade-in-up-delay-3 group relative">
+  <div class="fade-in-element group relative">
     <div class="border border-gray-700 rounded-lg p-8 h-full hover:border-gray-400 transition-colors">
       <div class="flex items-start justify-between mb-6">
         <h2 class="mt-0 text-xl" data-scramble>Design Leadership</h2>
@@ -56,7 +56,7 @@ description: Design leadership and team-building services for organizations read
       </p>
     </div>
   </div>
-  <div class="fade-in-up fade-in-up-delay-4 group relative">
+  <div class="fade-in-element group relative">
     <div class="border border-gray-700 rounded-lg p-8 h-full hover:border-gray-400 transition-colors">
       <div class="flex items-start justify-between mb-6">
         <h2 class="mt-0 text-xl" data-scramble>Craft Excellence</h2>
@@ -81,7 +81,7 @@ description: Design leadership and team-building services for organizations read
       </p>
     </div>
   </div>
-  <div class="fade-in-up fade-in-up-delay-5 group relative">
+  <div class="fade-in-element group relative">
     <div class="border border-gray-700 rounded-lg p-8 h-full hover:border-gray-400 transition-colors">
       <div class="flex items-start justify-between mb-6">
         <h2 class="mt-0 text-xl" data-scramble>Organizational Design</h2>
@@ -106,7 +106,7 @@ description: Design leadership and team-building services for organizations read
       </p>
     </div>
   </div>
-  <a href="/contact" class="contact-card fade-in-up fade-in-up-delay-6 lg:col-span-2">
+  <a href="/contact" class="contact-card fade-in-element lg:col-span-2">
     <img class="contact-card__image" src="/assets/images/profile-photo.png" />
     <div class="contact-card__content">
       <span class="contact-card__text" data-scramble>Ready to build something great together?</span>
