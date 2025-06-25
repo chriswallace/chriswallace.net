@@ -58,19 +58,19 @@ export default {
       },
       fontSize: {
         xs: [
-          "0.6rem",
+          "0.75rem",
           {
             lineHeight: "1.4rem",
           },
         ],
         sm: [
-          "0.7rem",
+          "0.825rem",
           {
             lineHeight: "1.5rem",
           },
         ],
         base: [
-          "0.94rem",
+          "0.95rem",
           {
             lineHeight: "1.6rem",
           },
@@ -82,31 +82,31 @@ export default {
           },
         ],
         xl: [
-          "1.1rem",
+          "1.05rem",
           {
             lineHeight: "1.7rem",
           },
         ],
         "2xl": [
-          "1.2rem",
+          "1.1rem",
           {
             lineHeight: "1.8rem",
           },
         ],
         "3xl": [
-          "1.3rem",
+          "1.15rem",
           {
             lineHeight: "2rem",
           },
         ],
         "4xl": [
-          "1.4rem",
+          "1.2rem",
           {
             lineHeight: "2rem",
           },
         ],
         "5xl": [
-          "1.5rem",
+          "1.25rem",
           {
             lineHeight: "2rem",
           },

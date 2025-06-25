@@ -10,7 +10,7 @@ description: Design leadership and team-building services for organizations read
     <div class="border border-gray-700 rounded-lg p-8 h-full hover:border-gray-400 transition-colors">
       <div class="flex items-start justify-between mb-6">
         <h2 class="mt-0 text-xl" data-scramble>Team Building</h2>
-        <span class="text-sm uppercase font-bold tracking-wider text-blue-950 bg-blue-500 px-2 py-1 rounded">grow & scale</span>
+        <span class="text-xs uppercase font-bold tracking-wider text-blue-950 bg-blue-500 px-2 py-1 rounded">grow & scale</span>
       </div>
       <div class="space-y-3 mb-6">
         <div>
@@ -35,7 +35,7 @@ description: Design leadership and team-building services for organizations read
     <div class="border border-gray-700 rounded-lg p-8 h-full hover:border-gray-400 transition-colors">
       <div class="flex items-start justify-between mb-6">
         <h2 class="mt-0 text-xl" data-scramble>Design Leadership</h2>
-        <span class="text-sm uppercase font-bold tracking-wider text-green-950 bg-green-500 px-2 py-1 rounded">lead & mentor</span>
+        <span class="text-xs uppercase font-bold tracking-wider text-green-950 bg-green-500 px-2 py-1 rounded">lead & mentor</span>
       </div>
       <div class="space-y-3 mb-6">
         <div>
@@ -60,7 +60,7 @@ description: Design leadership and team-building services for organizations read
     <div class="border border-gray-700 rounded-lg p-8 h-full hover:border-gray-400 transition-colors">
       <div class="flex items-start justify-between mb-6">
         <h2 class="mt-0 text-xl" data-scramble>Craft Excellence</h2>
-        <span class="text-sm uppercase font-bold tracking-wider text-primary-950 bg-primary-500 px-2 py-1 rounded">elevate quality</span>
+        <span class="text-xs uppercase font-bold tracking-wider text-primary-950 bg-primary-500 px-2 py-1 rounded">elevate quality</span>
       </div>
       <div class="space-y-3 mb-6">
         <div>
@@ -85,7 +85,7 @@ description: Design leadership and team-building services for organizations read
     <div class="border border-gray-700 rounded-lg p-8 h-full hover:border-gray-400 transition-colors">
       <div class="flex items-start justify-between mb-6">
         <h2 class="mt-0 text-xl" data-scramble>Organizational Design</h2>
-        <span class="text-sm uppercase font-bold tracking-wider text-purple-950 bg-purple-500 px-2 py-1 rounded">connect & align</span>
+        <span class="text-xs uppercase font-bold tracking-wider text-purple-950 bg-purple-500 px-2 py-1 rounded">connect & align</span>
       </div>
       <div class="space-y-3 mb-6">
         <div>

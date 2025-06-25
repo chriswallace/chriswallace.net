@@ -470,6 +470,58 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.pathname === "/index.html"
   ) {
     new GhostCanvas();
+
+    // Initialize scroll-based background color animation
+    let isScrolling = false;
+    let scrollTimeout;
+
+    const handleScrollBackground = () => {
+      const scrollY = window.scrollY;
+      const maxScroll = 200; // Distance to fully transition to dark color
+
+      // Calculate opacity for the overlay
+      const progress = Math.min(scrollY / maxScroll, 1);
+
+      if (!isScrolling) {
+        isScrolling = true;
+        // Create or update the background overlay
+        let overlay = document.querySelector(".scroll-background-overlay");
+        if (!overlay) {
+          overlay = document.createElement("div");
+          overlay.className = "scroll-background-overlay";
+          overlay.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #181818;
+            opacity: 0;
+            pointer-events: none;
+            z-index: -1;
+            transition: opacity 0.3s ease-out;
+          `;
+          document.body.appendChild(overlay);
+        }
+      }
+
+      // Update overlay opacity
+      const overlay = document.querySelector(".scroll-background-overlay");
+      if (overlay) {
+        overlay.style.opacity = progress;
+      }
+
+      // Clear the timeout and set a new one
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        isScrolling = false;
+      }, 150);
+    };
+
+    // Add scroll listener
+    window.addEventListener("scroll", handleScrollBackground, {
+      passive: true,
+    });
   }
 });
 

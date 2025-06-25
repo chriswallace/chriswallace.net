@@ -1971,7 +1971,7 @@ i {
 }
 
 .text-2xl {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.8rem;
 }
 
@@ -1980,7 +1980,7 @@ i {
 }
 
 .text-base {
-  font-size: 0.94rem;
+  font-size: 0.95rem;
   line-height: 1.6rem;
 }
 
@@ -1990,17 +1990,17 @@ i {
 }
 
 .text-sm {
-  font-size: 0.7rem;
+  font-size: 0.825rem;
   line-height: 1.5rem;
 }
 
 .text-xl {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.7rem;
 }
 
 .text-xs {
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   line-height: 1.4rem;
 }
 
@@ -2169,7 +2169,7 @@ i {
 }
 
 .\~text-base\/sm {
-  font-size: clamp(0.7rem,1.05rem + -0.27vw,0.94rem)/* fluid type from 0.94rem at 40rem to 0.7rem at 128rem */;
+  font-size: clamp(0.825rem,1.007rem + -0.142vw,0.95rem)/* fluid type from 0.95rem at 40rem to 0.825rem at 128rem */;
   line-height: clamp(1.5rem,1.65rem + -0.11vw,1.6rem)/* fluid from 1.6rem at 40rem to 1.5rem at 128rem */;
 }
 

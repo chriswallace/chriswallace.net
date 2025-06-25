@@ -4,7 +4,7 @@
   }
 
   .menu-button {
-    @apply relative w-12 h-12 bg-foreground text-primary-600 hover:bg-primary-600 hover:text-foreground transition-all duration-300 rounded-lg flex items-center justify-center;
+    @apply relative w-12 h-12 bg-background text-foreground border border-foreground/30 hover:border-primary-600 hover:bg-primary-600 hover:text-foreground transition-all duration-300 rounded-lg flex items-center justify-center;
   }
 
   /* Scale up menu button by 1.3x on smaller screens */

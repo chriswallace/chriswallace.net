@@ -32,18 +32,16 @@
   @apply border-b border-gray-700 border-r px-6 pt-16 pb-12 md:pt-16 relative;
 }
 
-.contact-grid__icon:after {
-  @apply absolute top-[16px] right-[16px] w-[16px] h-[16px] text-[12px] text-gray-950 rounded-full overflow-hidden p-0 leading-[1.5] text-center align-middle;
+.contact-grid__status-icon {
+  @apply absolute top-[16px] right-[16px] w-[16px] h-[16px];
 }
 
-.contact-grid__icon--yes:after {
-  @apply bg-green-500;
-  content: "\2713";
+.contact-grid__icon--yes .contact-grid__status-icon {
+  @apply text-green-500;
 }
 
-.contact-grid__icon--no:after {
-  @apply bg-red-500;
-  content: "\2715";
+.contact-grid__icon--no .contact-grid__status-icon {
+  @apply text-red-500;
 }
 
 .contact-grid__svg {
