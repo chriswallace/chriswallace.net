@@ -113,7 +113,7 @@ export default {
         ],
       },
       colors: {
-        background: "#2a333c",
+        background: "#111116",
         foreground: "#f5f8f8",
         "foreground-muted": "#b5bfc4",
         gray: {
