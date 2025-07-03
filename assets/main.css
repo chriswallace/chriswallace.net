@@ -782,7 +782,7 @@ article {
 
 body {
   --tw-bg-opacity: 1;
-  background-color: rgb(42 51 60 / var(--tw-bg-opacity));
+  background-color: rgb(17 17 22 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(245 248 248 / var(--tw-text-opacity));
 }
@@ -864,7 +864,7 @@ picture img {
   border-width: 1px;
   border-color: rgb(245 248 248 / 0.3);
   --tw-bg-opacity: 1;
-  background-color: rgb(42 51 60 / var(--tw-bg-opacity));
+  background-color: rgb(17 17 22 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(245 248 248 / var(--tw-text-opacity));
   transition-property: all;
@@ -893,7 +893,7 @@ picture img {
 
 .open-menu .menu-button {
   --tw-bg-opacity: 1;
-  background-color: rgb(42 51 60 / var(--tw-bg-opacity));
+  background-color: rgb(17 17 22 / var(--tw-bg-opacity));
 }
 
 .menu-button i {
