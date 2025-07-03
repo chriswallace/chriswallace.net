@@ -1281,6 +1281,10 @@ i {
   margin-bottom: 3rem;
 }
 
+.\!mb-4 {
+  margin-bottom: 1rem !important;
+}
+
 .\!mt-4 {
   margin-top: 1rem !important;
 }
@@ -1333,6 +1337,10 @@ i {
   margin-bottom: 2rem;
 }
 
+.mb-\[1vh\] {
+  margin-bottom: 1vh;
+}
+
 .mb-\[2em\] {
   margin-bottom: 2em;
 }
@@ -1377,6 +1385,10 @@ i {
   margin-top: 0.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -1385,8 +1397,8 @@ i {
   margin-top: 2rem;
 }
 
-.mt-\[25svh\] {
-  margin-top: 25svh;
+.mt-\[15svh\] {
+  margin-top: 15svh;
 }
 
 .block {

@@ -5,10 +5,11 @@ description: Senior product design leader with over 20 years experience building
 ---
 
 <div class="content-container-wo mb-12">
-  <div class="flex justify-between fade-in-element mt-[25svh] mb-4">
-    <div>Chris Wallace</div>
-    <div>Design Samples</div>
-    <div>2024 - 2025</div>
+  <div class="fade-in-element mt-[15svh] mb-[1vh]">
+    <h1 class="!mb-4">Chris Wallace Design</h1>
+    <p>I am a product design leader with 20 years working with brands like Roblox, DC Comics, MLB, Meta, Microsoft, The Walking Dead, Breaking Bad, and more.</p>
+    <p><a href="/bio/">About me</a></p>
+    <p class="mt-20 !mb-4">Scroll for recent work &darr;</p>
   </div>
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
