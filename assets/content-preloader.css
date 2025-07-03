@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   --tw-bg-opacity: 1;
-  background-color: rgb(26 28 24 / var(--tw-bg-opacity));
+  background-color: rgb(82 87 93 / var(--tw-bg-opacity));
 }
 
 .content-preloader .logo {
@@ -24,11 +24,11 @@
   content: var(--tw-content);
   background: linear-gradient(
     90deg,
-    #181818 0%,
-    #181818 40%,
-    #727685 50%,
-    #181818 60%,
-    #181818 100%
+    #C9442D 0%,
+    #C9442D 40%,
+    #FFF1CC 50%,
+    #C9442D 60%,
+    #C9442D 100%
   );
   animation: gradientSlide 2s linear infinite;
 }

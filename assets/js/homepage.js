@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: #181818;
+          background-color:rgb(14, 17, 21);
           opacity: 0;
           pointer-events: none;
           z-index: -1;

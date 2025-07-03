@@ -150,7 +150,7 @@
 
   /* Five Things Section */
   #fiveThings {
-    @apply text-[#2c1669] bg-white;
+    @apply text-[#2c1669] bg-gray-100;
   }
 
   #fiveThings .bright {
@@ -169,7 +169,7 @@
 
   /* Chris Intro Section */
   #chrisIntro {
-    @apply bg-black text-white relative;
+    @apply bg-gray-950 text-white relative;
     grid-template-columns: auto;
     align-content: end;
     background-image: url("/assets/images/cw-media-2.jpg");
@@ -180,7 +180,7 @@
   }
 
   #chrisIntro .overlay {
-    @apply inset-0 absolute bg-[#111] opacity-50 z-10;
+    @apply inset-0 absolute bg-gray-900 opacity-50 z-10;
     mix-blend-mode: darken;
   }
 
@@ -212,7 +212,7 @@
   }
 
   #factoids2 div {
-    @apply relative bg-white text-[#222] text-[2.6rem] lg:text-[3.8rem] rounded-md p-8 lg:p-12 lg:pb-12 mb-0 lg:mb-2;
+    @apply relative bg-gray-100 text-gray-800 text-[2.6rem] lg:text-[3.8rem] rounded-md p-8 lg:p-12 lg:pb-12 mb-0 lg:mb-2;
   }
 
   #factoids2 div:nth-child(even) {
@@ -283,7 +283,7 @@
 
   /* Why Me Section */
   #whyMe {
-    @apply bg-black text-white relative;
+    @apply bg-gray-950 text-white relative;
     background-image: url("/assets/images/cw-media-2.jpg");
     background-size: cover;
     background-position: 24% center;

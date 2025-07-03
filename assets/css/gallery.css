@@ -35,7 +35,7 @@
 }
 
 .page-overlay {
-  @apply fixed inset-0 w-screen h-screen bg-black/75 z-[9998] hidden 
+  @apply fixed inset-0 w-screen h-screen bg-gray-950/75 z-[9998] hidden 
          pointer-events-none;
 
   .zoom-active & {

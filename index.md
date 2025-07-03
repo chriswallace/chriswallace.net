@@ -4,32 +4,12 @@ title: Chris Wallace - Senior Product Design Leader
 description: Senior product design leader with over 20 years experience building teams, mentoring designers, and creating high-craft digital experiences. Seeking a leadership role where I can grow design organizations and connect great people.
 ---
 
-<div class="mt-3 md:mt-6 ml-24 mr-4 md:mr-8 mb-12 fade-in-element">
-  <div class="flex flex-col md:flex-row justify-between w-full md:gap-4 text-sm text-foreground">
-    <div class="text-right" data-scramble>Chris Wallace</div>
-    <div class="text-right" data-scramble>2025</div>
-    <div class="text-right" data-scramble>Design Leadership</div>
+<div class="content-container-wo mb-12">
+  <div class="flex justify-between fade-in-element mt-[25svh] mb-4">
+    <div>Chris Wallace</div>
+    <div>Design Samples</div>
+    <div>2024 - 2025</div>
   </div>
-</div>
-
-<div class="home content-container relative z-10">
-  <div class="mx-auto">
-    <h1 class="fade-in-element" data-scramble>Ghost in the Machine</h1>
-    <p class="fade-in-element" data-scramble>We are entering a new chapter in product design&mdash;one defined less by what we make, and more by how it's made. AI-assisted tools now generate layouts, write code, optimize flows. The machinery of design is faster, cheaper, and increasingly autonomous. For some, that's a threat. For others, a shortcut.</p>
-    <p class="fade-in-element" data-scramble>But for those of us who've spent years inside the systems—leading teams, building platforms, sweating the details—it's something else entirely: a moment of reckoning.</p>
-    <p class="fade-in-element" data-scramble>In an age of infinite generation, discernment is the new superpower. And that, still, is human.</p>
-  </div>
-</div>
-
-<div class="content-container mb-4">
-  <div class="fade-in-element">
-    <div class="flex flex-row justify-between w-full gap-4 text-sm text-foreground">
-      <div data-scramble>Recent Work</div>
-      <div data-scramble>2024 - Present</div>
-    </div>
-  </div>
-</div>
-<div class="content-container-wo mb-12">  
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">

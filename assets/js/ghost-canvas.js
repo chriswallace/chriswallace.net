@@ -11,12 +11,12 @@ class GhostCanvas {
     // Configuration
     this.config = {
       ghostCount: 1, // Single entity
-      maxRadius: 400,
-      minRadius: 350,
-      opacity: 0.6,
-      speed: 0.2, // Slow, mysterious movement
+      maxRadius: 500, // Increased for more dramatic effect
+      minRadius: 400, // Increased for more dramatic effect
+      opacity: 0.9, // Increased for more visibility
+      speed: 0.3, // Slightly faster, more mysterious movement
       noiseScale: 0.005,
-      distortionIntensity: 15,
+      distortionIntensity: 20, // More intense distortion
     };
 
     this.init();
@@ -41,7 +41,7 @@ class GhostCanvas {
     this.canvas.style.height = "100vh";
     this.canvas.style.pointerEvents = "none";
     this.canvas.style.zIndex = "-1"; // Back to background
-    this.canvas.style.opacity = "0.8";
+    this.canvas.style.opacity = "0.95"; // Much more visible
 
     this.ctx = this.canvas.getContext("2d");
     document.body.appendChild(this.canvas);
@@ -186,12 +186,12 @@ class GhostCanvas {
 
   drawGlowLayer(ghost, centerX, centerY, maxRadius) {
     // Create a larger, softer glow behind the singularity
-    const glowRadius = maxRadius * 2.2;
-    const glowIntensity = this.config.opacity * ghost.intensity * 0.5;
+    const glowRadius = maxRadius * 2.8; // Increased glow radius
+    const glowIntensity = this.config.opacity * ghost.intensity * 0.8; // More intense glow
 
-    // Subtle green color that shifts over time
-    const hueShift = Math.sin(ghost.distortionPhase * 0.5) * 30;
-    const baseHue = 120 + hueShift; // Green range (120 is pure green)
+    // Very dark colors for strong contrast against warm background
+    const hueShift = Math.sin(ghost.distortionPhase * 0.3) * 10;
+    const baseHue = 240 + hueShift; // Dark blue-purple range
 
     // Multiple glow layers for depth
     const glowLayers = 4;
@@ -209,24 +209,30 @@ class GhostCanvas {
         layerRadius
       );
 
-      // More saturated green glow
-      const saturation = 70 - layer * 12;
-      const lightness = 30 + layer * 8;
+      // Very dark glow for contrast against warm background
+      const saturation = 40 - layer * 5; // Moderate saturation
+      const lightness = 3 + layer * 2; // Extremely dark for strong contrast
 
       glowGradient.addColorStop(
         0,
         `hsla(${baseHue}, ${saturation}%, ${lightness}%, ${layerOpacity})`
       );
       glowGradient.addColorStop(
-        0.4,
-        `hsla(${baseHue + 10}, ${saturation * 0.8}%, ${lightness * 0.8}%, ${
-          layerOpacity * 0.7
+        0.3,
+        `hsla(${baseHue - 15}, ${saturation * 0.9}%, ${lightness * 0.7}%, ${
+          layerOpacity * 0.8
         })`
       );
       glowGradient.addColorStop(
-        0.8,
-        `hsla(${baseHue + 20}, ${saturation * 0.5}%, ${lightness * 0.6}%, ${
-          layerOpacity * 0.3
+        0.6,
+        `hsla(${baseHue - 30}, ${saturation * 0.6}%, ${lightness * 0.5}%, ${
+          layerOpacity * 0.5
+        })`
+      );
+      glowGradient.addColorStop(
+        0.9,
+        `hsla(${baseHue - 45}, ${saturation * 0.3}%, ${lightness * 0.3}%, ${
+          layerOpacity * 0.2
         })`
       );
       glowGradient.addColorStop(
@@ -267,7 +273,7 @@ class GhostCanvas {
 
   drawShadowLayer(ghost, centerX, centerY, maxRadius) {
     // Create multiple concentric rings for gravitational lensing effect
-    const rings = 8;
+    const rings = 12; // More rings for more dramatic effect
 
     for (let ring = 0; ring < rings; ring++) {
       const ringProgress = ring / rings;
@@ -285,21 +291,25 @@ class GhostCanvas {
         ringRadius
       );
 
-      // Dark void colors with subtle variations
-      const hue = Math.sin(ghost.distortionPhase + ring * 0.5) * 40; // More color variation
-      const innerDarkness = ringOpacity * (0.9 - ring * 0.08);
-      const outerDarkness = ringOpacity * (0.3 - ring * 0.03);
+      // Pure black void with minimal color hints for maximum contrast
+      const hue = Math.sin(ghost.distortionPhase + ring * 0.3) * 5; // Very subtle color variation
+      const innerDarkness = ringOpacity * (0.98 - ring * 0.04); // Almost completely opaque
+      const outerDarkness = ringOpacity * (0.6 - ring * 0.03); // Stronger outer rings
 
-      gradient.addColorStop(0, `hsla(${240 + hue}, 20%, 5%, ${innerDarkness})`);
+      gradient.addColorStop(0, `hsla(${220 + hue}, 20%, 1%, ${innerDarkness})`); // Near pure black
       gradient.addColorStop(
         0.3,
-        `hsla(${220 + hue}, 30%, 8%, ${innerDarkness * 0.8})`
+        `hsla(${215 + hue}, 15%, 2%, ${innerDarkness * 0.95})`
       );
       gradient.addColorStop(
-        0.7,
-        `hsla(${200 + hue}, 25%, 12%, ${outerDarkness})`
+        0.6,
+        `hsla(${210 + hue}, 10%, 3%, ${innerDarkness * 0.8})`
       );
-      gradient.addColorStop(1, `hsla(${180 + hue}, 15%, 15%, 0)`);
+      gradient.addColorStop(
+        0.9,
+        `hsla(${205 + hue}, 8%, 5%, ${outerDarkness})`
+      );
+      gradient.addColorStop(1, `hsla(${200 + hue}, 5%, 8%, 0)`);
 
       this.ctx.fillStyle = gradient;
       this.ctx.beginPath();
@@ -339,12 +349,12 @@ class GhostCanvas {
       this.ctx.fill();
     }
 
-    // Add central void/singularity core with fluctuation
+    // Add central void/singularity core with fluctuation - pure black center
     const coreRadius =
       maxRadius *
-      0.25 *
+      0.3 * // Larger core for more dramatic effect
       ghost.coreFluctuation *
-      (1 + Math.sin(ghost.pulsePhase) * 0.2);
+      (1 + Math.sin(ghost.pulsePhase) * 0.3); // More fluctuation
     const coreGradient = this.ctx.createRadialGradient(
       centerX,
       centerY,
@@ -354,10 +364,11 @@ class GhostCanvas {
       coreRadius
     );
 
-    const coreIntensity = this.config.opacity * ghost.intensity * 0.9;
-    coreGradient.addColorStop(0, `rgba(0, 0, 0, ${coreIntensity})`);
-    coreGradient.addColorStop(0.6, `rgba(10, 5, 20, ${coreIntensity * 0.8})`);
-    coreGradient.addColorStop(1, `rgba(20, 10, 30, ${coreIntensity * 0.3})`);
+    const coreIntensity = this.config.opacity * ghost.intensity * 0.99; // Nearly completely opaque
+    coreGradient.addColorStop(0, `rgba(0, 0, 0, ${coreIntensity})`); // Pure black center
+    coreGradient.addColorStop(0.5, `rgba(2, 2, 5, ${coreIntensity * 0.95})`); // Very dark blue-black
+    coreGradient.addColorStop(0.8, `rgba(5, 5, 10, ${coreIntensity * 0.8})`); // Slightly lighter
+    coreGradient.addColorStop(1, `rgba(8, 8, 15, ${coreIntensity * 0.5})`);
 
     this.ctx.fillStyle = coreGradient;
     this.ctx.beginPath();
@@ -431,12 +442,12 @@ class GhostCanvas {
 
     // Draw each singularity with layered effects
     this.ghosts.forEach((ghost) => {
-      // First draw the glow with normal blending
+      // First draw the glow with screen blending for dramatic effect
       this.ctx.globalCompositeOperation = "screen"; // Additive glow effect
       this.drawGlowLayer(ghost, ghost.x, ghost.y, ghost.radius);
 
-      // Then draw the shadow with multiply blending
-      this.ctx.globalCompositeOperation = "multiply";
+      // Then draw the shadow with normal blending for maximum darkness
+      this.ctx.globalCompositeOperation = "source-over"; // Normal blending for pure black effect
       this.drawShadowLayer(ghost, ghost.x, ghost.y, ghost.radius);
     });
 
@@ -495,7 +506,7 @@ document.addEventListener("DOMContentLoaded", () => {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #181818;
+            background-color:rgb(14, 17, 21);
             opacity: 0;
             pointer-events: none;
             z-index: -1;
