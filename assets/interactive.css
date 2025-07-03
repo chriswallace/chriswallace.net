@@ -1397,8 +1397,8 @@ i {
   margin-top: 2rem;
 }
 
-.mt-\[15svh\] {
-  margin-top: 15svh;
+.mt-\[240px\] {
+  margin-top: 240px;
 }
 
 .block {
@@ -1543,6 +1543,10 @@ i {
 
 .max-w-\[840px\] {
   max-width: 840px;
+}
+
+.max-w-\[calc\(100vw-40px\)\] {
+  max-width: calc(100vw - 40px);
 }
 
 .max-w-full {
@@ -2398,6 +2402,10 @@ body.meetChris {
 
   .lg\:ml-0 {
     margin-left: 0px;
+  }
+
+  .lg\:mt-\[15svh\] {
+    margin-top: 15svh;
   }
 
   .lg\:max-w-\[22rem\] {

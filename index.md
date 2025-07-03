@@ -5,7 +5,7 @@ description: Senior product design leader with over 20 years experience building
 ---
 
 <div class="content-container-wo mb-12">
-  <div class="fade-in-element mt-[15svh] mb-[1vh]">
+  <div class="fade-in-element mt-[240px] lg:mt-[15svh] mb-[1vh] max-w-[calc(100vw-40px)] mx-auto">
     <h1 class="!mb-4">Chris Wallace Design</h1>
     <p>I am a product design leader with 20 years working with brands like Roblox, DC Comics, MLB, Meta, Microsoft, The Walking Dead, Breaking Bad, and more.</p>
     <p><a href="/bio/">About me</a></p>
