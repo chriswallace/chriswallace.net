@@ -1814,10 +1814,6 @@ i {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-black\/100 {
-  background-color: rgb(0 0 0 / 1);
-}
-
 .bg-black\/30 {
   background-color: rgb(0 0 0 / 0.3);
 }
@@ -2301,10 +2297,6 @@ body.meetChris {
 
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:max-w-\[80\%\] {
-    max-width: 80%;
   }
 
   .md\:grid-cols-3 {
