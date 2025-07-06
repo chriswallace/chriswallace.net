@@ -1281,6 +1281,10 @@ i {
   margin-bottom: 3rem;
 }
 
+.\!mb-0 {
+  margin-bottom: 0px !important;
+}
+
 .\!mb-4 {
   margin-bottom: 1rem !important;
 }
@@ -1427,6 +1431,10 @@ i {
 
 .hidden {
   display: none;
+}
+
+.aspect-\[16\/9\] {
+  aspect-ratio: 16/9;
 }
 
 .aspect-\[4\/3\] {
@@ -2289,6 +2297,10 @@ body.meetChris {
 
   .md\:aspect-\[21\/9\] {
     aspect-ratio: 21/9;
+  }
+
+  .md\:aspect-video {
+    aspect-ratio: 16 / 9;
   }
 
   .md\:h-screen {
