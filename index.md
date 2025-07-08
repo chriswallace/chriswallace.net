@@ -26,6 +26,32 @@ description: Senior product design leader with over 20 years experience building
   </picture>
   <picture class="fade-in-element">
     <source media="(max-width: 480px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-mobile.png?tr=w-800,q-60,f-auto">
+    <source media="(min-width: 481px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-desktop.png?tr=w-800,q-60,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-desktop.png?tr=w-1200,q-60,f-auto 1200w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-desktop.png?tr=w-1600,q-60,f-auto 1600w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-desktop.png?tr=w-2500,q-60,f-auto 2500w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-desktop.png?tr=w-2500,q-60,f-auto"
+         class="fade-in-element w-full block mb-1.5" 
+         alt="" 
+         loading="lazy">
+  </picture>
+  <picture class="fade-in-element">
+    <source media="(max-width: 480px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-overlay-mobile.png?tr=w-800,q-60,f-auto">
+    <source media="(min-width: 481px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-overlay-desktop.png?tr=w-800,q-60,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-overlay-desktop.png?tr=w-1200,q-60,f-auto 1200w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-overlay-desktop.png?tr=w-1600,q-60,f-auto 1600w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-overlay-desktop.png?tr=w-2500,q-60,f-auto 2500w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-overlay-desktop.png?tr=w-2500,q-60,f-auto"
+         class="fade-in-element w-full block mb-1.5" 
+         alt="" 
+         loading="lazy">
+  </picture>
+  <picture class="fade-in-element">
+    <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-desktop.png?tr=w-800,q-60,f-auto 800w,
@@ -50,7 +76,32 @@ description: Senior product design leader with over 20 years experience building
          alt="" 
          loading="lazy">
   </picture>
-  <video src="https://ik.imagekit.io/UltraDAO/chriswallace.net/demo-workflows.mov/ik-video.mp4" autoplay loop nocontrols muted></video>
+  <picture class="fade-in-element">
+    <source media="(max-width: 480px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-icons-mobile.png?tr=w-800,q-60,f-auto">
+    <source media="(min-width: 481px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-icons-desktop.png?tr=w-800,q-60,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-icons-desktop.png?tr=w-1200,q-60,f-auto 1200w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-icons-desktop.png?tr=w-1600,q-60,f-auto 1600w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-icons-desktop.png?tr=w-2500,q-60,f-auto 2500w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-icons-desktop.png?tr=w-2500,q-60,f-auto"
+         class="fade-in-element w-full block mb-1.5" 
+         alt="" 
+         loading="lazy">
+  </picture>
+  <picture class="fade-in-element">
+    <source media="(max-width: 480px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-features-mobile.png?tr=w-800,q-60,f-auto">
+    <source media="(min-width: 481px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-features-desktop.png?tr=w-800,q-60,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-features-desktop.png?tr=w-1200,q-60,f-auto 1200w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-features-desktop.png?tr=w-1600,q-60,f-auto 1600w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-features-desktop.png?tr=w-2500,q-60,f-auto 2500w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-features-desktop.png?tr=w-2500,q-60,f-auto"
+         class="fade-in-element w-full block mb-1.5" 
+         alt="" 
+         loading="lazy">
+  </picture>
   <picture class="fade-in-element">
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-mobile.png?tr=w-800,q-60,f-auto">
