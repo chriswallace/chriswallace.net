@@ -1477,10 +1477,6 @@ i {
   max-height: 450px;
 }
 
-.max-h-\[500px\] {
-  max-height: 500px;
-}
-
 .max-h-full {
   max-height: 100%;
 }
@@ -1543,14 +1539,6 @@ i {
 
 .max-w-\[740px\] {
   max-width: 740px;
-}
-
-.max-w-\[80\%\] {
-  max-width: 80%;
-}
-
-.max-w-\[840px\] {
-  max-width: 840px;
 }
 
 .max-w-\[calc\(100vw-40px\)\] {
@@ -1710,10 +1698,6 @@ i {
   border-radius: 0.25rem;
 }
 
-.rounded-2xl {
-  border-radius: 1rem;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -1767,19 +1751,9 @@ i {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#030303\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(3 3 3 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#084C2B\] {
   --tw-bg-opacity: 1;
   background-color: rgb(8 76 43 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#0B1012\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(11 16 18 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#121524\] {
@@ -1849,11 +1823,6 @@ i {
 .bg-purple-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(168 85 247 / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .from-\[\#233524\] {
@@ -2109,12 +2078,6 @@ i {
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-2xl {
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2436,12 +2399,12 @@ body.meetChris {
     align-self: flex-start;
   }
 
-  .lg\:p-12 {
-    padding: 3rem;
+  .lg\:p-0 {
+    padding: 0px;
   }
 
-  .lg\:p-8 {
-    padding: 2rem;
+  .lg\:p-12 {
+    padding: 3rem;
   }
 
   .lg\:text-left {
@@ -2474,10 +2437,6 @@ body.meetChris {
   .dark\:border-gray-700 {
     --tw-border-opacity: 1;
     border-color: rgb(120 127 138 / var(--tw-border-opacity));
-  }
-
-  .dark\:bg-gray-900\/20 {
-    background-color: rgb(82 87 93 / 0.2);
   }
 
   .dark\:text-gray-100 {

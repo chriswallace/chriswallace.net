@@ -28,13 +28,13 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png
 <div class="content-container-wo md:pl-0">
   <picture>
     <source media="(max-width: 480px)" 
-            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/physical-digital.png?tr=w-800,f-auto">
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-checkout-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
-            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-physical-digital-banner.png?tr=w-800,f-auto 800w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-physical-digital-banner.png?tr=w-1200,f-auto 1200w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-physical-digital-banner.png?tr=w-1600,f-auto 1600w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-physical-digital-banner.png?tr=w-2500,f-auto 2500w">
-    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-physical-digital-banner.png?tr=w-2500,f-auto"
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-checkout-desktop.png?tr=w-800,q-60,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-checkout-desktop.png?tr=w-1200,q-60,f-auto 1200w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-checkout-desktop.png?tr=w-1600,q-60,f-auto 1600w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-checkout-desktop.png?tr=w-2500,q-60,f-auto 2500w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-checkout-desktop.png?tr=w-2500,q-60,f-auto"
          class="fade-in-element w-full block mb-1.5" 
          alt="" 
          loading="lazy">

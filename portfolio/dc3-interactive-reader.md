@@ -28,14 +28,53 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png
 <div class="flex flex-col mb-12 max-w-[1680px] mx-auto">
   <picture>
     <source media="(max-width: 480px)" 
-            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png?tr=w-800,f-auto">
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
-            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-800,f-auto 800w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-1200,f-auto 1200w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-1600,f-auto 1600w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-2500,f-auto 2500w">
-    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-banner.png?tr=w-2500,f-auto"
-         class="fade-in-element mb-1.5" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-desktop.png?tr=w-800,q-60,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-desktop.png?tr=w-1200,q-60,f-auto 1200w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-desktop.png?tr=w-1600,q-60,f-auto 1600w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-desktop.png?tr=w-2500,q-60,f-auto 2500w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-desktop.png?tr=w-2500,q-60,f-auto"
+         class="fade-in-element w-full block mb-1.5" 
+         alt="" 
+         loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-mobile.png?tr=w-800,q-60,f-auto">
+    <source media="(min-width: 481px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-desktop.png?tr=w-800,q-60,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-desktop.png?tr=w-1200,q-60,f-auto 1200w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-desktop.png?tr=w-1600,q-60,f-auto 1600w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-desktop.png?tr=w-2500,q-60,f-auto 2500w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-desktop.png?tr=w-2500,q-60,f-auto"
+         class="fade-in-element w-full block mb-1.5" 
+         alt="" 
+         loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-mobile.png?tr=w-800,q-60,f-auto">
+    <source media="(min-width: 481px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-800,q-60,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-1200,q-60,f-auto 1200w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-1600,q-60,f-auto 1600w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-2500,q-60,f-auto 2500w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-2500,q-60,f-auto"
+         class="fade-in-element w-full block mb-1.5" 
+         alt="" 
+         loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-comic-mobile.png?tr=w-800,q-60,f-auto">
+    <source media="(min-width: 481px)" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-comic-desktop.png?tr=w-800,q-60,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-comic-desktop.png?tr=w-1200,q-60,f-auto 1200w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-comic-desktop.png?tr=w-1600,q-60,f-auto 1600w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-comic-desktop.png?tr=w-2500,q-60,f-auto 2500w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-comic-desktop.png?tr=w-2500,q-60,f-auto"
+         class="fade-in-element w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
@@ -71,17 +110,6 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-1.png
     <figcaption>Popups and information overlays</figcaption>
   </figure>
 
-</div>
-
-<div class="bg-[#030303] md:h-screen mb-12 fade-in-element flex justify-center items-center">
-  <div class="image-gallery max-w-full aspect-[4/3]">
-    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-splash-screen.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-w-[840px] w-full h-auto rounded-xl" alt="" loading="lazy">
-    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-1.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-w-[840px] w-full h-auto rounded-xl" alt="" loading="lazy">
-    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-puzzles-2.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-w-[840px] w-full h-auto rounded-xl" alt="" loading="lazy">
-    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-marketplace.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-w-[840px] w-full h-auto rounded-xl" alt="" loading="lazy">
-    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-home-screen.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-w-[840px] w-full h-auto rounded-xl" alt="" loading="lazy">
-    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-800,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-reader.png?tr=w-2000,f-auto 2000w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, 2000px" class="max-w-[840px] w-full h-auto rounded-xl" alt="" loading="lazy">
-  </div>
 </div>
 
 <div class="content-container mb-24">

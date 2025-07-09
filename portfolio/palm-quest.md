@@ -28,29 +28,23 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail
 <div class="content-container-wo">
   <picture>
     <source media="(max-width: 480px)" 
-            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail.png?tr=w-800,f-auto">
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-home-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
-            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-banner.png?tr=w-800,f-auto 800w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-banner.png?tr=w-1200,f-auto 1200w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-banner.png?tr=w-1600,f-auto 1600w,
-                    https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-banner.png?tr=w-2500,f-auto 2500w">
-    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-banner.png?tr=w-2500,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+            srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-home-desktop.png?tr=w-800,q-60,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-home-desktop.png?tr=w-1200,q-60,f-auto 1200w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-home-desktop.png?tr=w-1600,q-60,f-auto 1600w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-home-desktop.png?tr=w-2500,q-60,f-auto 2500w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-home-desktop.png?tr=w-2500,q-60,f-auto"
+         class="fade-in-element mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
   
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-4.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-4.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-4.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-4.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-4.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-4.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-</div>
-
-<div class="content-container-wo bg-[#0B1012] text-center mb-12">
-  <video id="portfolioVideo" data-type="video" width="100%" controls muted playsinline autoplay loop loading="lazy" class="fade-in-element max-h-full max-w-3xl mx-auto">
-      <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest.mov/ik-video.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-  </video>
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
+  
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-4.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-4.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-4.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-4.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-4.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-4.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-24" alt="" loading="lazy">
 </div>
 
 <div class="portfolio-content-wrapper">

@@ -24,23 +24,46 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnai
     </div>
   </dl>
 </div>
-  <div class="fade-in-element flex flex-col bg-[#CC9644] mb-1.5">
-    <picture>
-      <source media="(max-width: 480px)" 
-              srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-thumbnail.png?tr=w-800,f-auto">
-      <source media="(min-width: 481px)" 
-              srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-800,f-auto 800w,
-                      https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-1200,f-auto 1200w,
-                      https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-1600,f-auto 1600w,
-                      https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-2500,f-auto 2500w">
-      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/twelve-days-banner.png?tr=w-2500,f-auto"
-          class="max-h-[500px] w-auto mx-auto" 
-          alt="" 
-          loading="lazy">
-    </picture>
-  </div>
 
-  <div class="fade-in-element flex flex-col bg-[#CC9644] mb-1.5">
+<div class="content-container-wo mb-12">
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-dark-mobile.png?tr=q-60&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-dark-desktop.png?tr=q-60&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-dark-desktop.png?tr=q-60&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-dark-desktop.png?tr=q-60&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-dark-desktop.png?tr=q-60&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-2-mobile.png?tr=q-60&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-2-desktop.png?tr=q-60&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-2-desktop.png?tr=q-60&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-2-desktop.png?tr=q-60&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artworks-2-desktop.png?tr=q-60&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-dark-mobile.png?tr=q-60&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-dark-desktop.png?tr=q-60&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-dark-desktop.png?tr=q-60&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-dark-desktop.png?tr=q-60&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-dark-desktop.png?tr=q-60&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-light-mobile.png?tr=q-60&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-light-desktop.png?tr=q-60&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-light-desktop.png?tr=q-60&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-light-desktop.png?tr=q-60&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-light-desktop.png?tr=q-60&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-interview-mobile.png?tr=q-60&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-interview-desktop.png?tr=q-60&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-interview-desktop.png?tr=q-60&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-interview-desktop.png?tr=q-60&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-interview-desktop.png?tr=q-60&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="" loading="lazy">
+  </picture>
+</div>
+
+<div class="fade-in-element flex flex-col bg-[#CC9644] mb-1.5">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-2500,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-400,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-800,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-1200,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-1600,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/1-twelve-days.png?tr=w-2500,f-auto 2500w" sizes="100vw" class="w-full block max-w-[1400px] mx-auto" alt="" loading="lazy">
   </div>
 
