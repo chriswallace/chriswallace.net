@@ -66,6 +66,13 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-thum
          loading="lazy">
   </picture>
   <picture>
+    <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-mission-control-mobile.png?tr=q-60&w-480,f-auto">
+    <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-mission-control-desktop.png?tr=q-60&w-800,f-auto 800w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-mission-control-desktop.png?tr=q-60&w-1280,f-auto 1280w,
+                    https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-mission-control-desktop.png?tr=q-60&w-2560,f-auto 2560w">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-mission-control-desktop.png?tr=q-60&w-1280,f-auto" class="w-full block mb-1.5 visible" alt="Plymouth Street mission control interface" loading="lazy">
+  </picture>
+  <picture>
     <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-documents-mobile.png?tr=q-60&w-480,f-auto">
     <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-documents-desktop.png?tr=q-60&w-800,f-auto 800w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-documents-desktop.png?tr=q-60&w-1280,f-auto 1280w,
