@@ -19,7 +19,7 @@ thumbnail: /assets/images/thumbs/resume.png
       <div class="resume__jobs" itemscope itemtype="http://schema.org/Organization">
         <div class="resume__item" itemprop="employee">
           <h3 class="resume__metadata fade-in-element">
-            <span class="resume__metadata-item--title" itemprop="roleName">Product Design</span>
+            <span class="resume__metadata-item--title" itemprop="roleName">Contract Product Designer</span>
             <span class="resume__metadata-item--place" itemprop="name">Roblox</span>
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Feb 2025 - Present</span>
           </h3>
@@ -39,7 +39,7 @@ thumbnail: /assets/images/thumbs/resume.png
         </div>
         <div class="resume__item" itemprop="employee">
           <h3 class="resume__metadata fade-in-element">
-            <span class="resume__metadata-item--title" itemprop="roleName">Chief Design Officer</span>
+            <span class="resume__metadata-item--title" itemprop="roleName">Founder &amp; Chief Design Officer</span>
             <span class="resume__metadata-item--place" itemprop="name">UltraDAO Studios</span>
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Apr 2021 - Mar 2024</span>
           </h3>
@@ -59,7 +59,7 @@ thumbnail: /assets/images/thumbs/resume.png
         </div>
         <div class="resume__item" itemprop="employee">
           <h3 class="resume__metadata fade-in-element">
-            <span class="resume__metadata-item--title" itemprop="roleName">Principal Creative Director</span>
+            <span class="resume__metadata-item--title" itemprop="roleName">Founder &amp; Design Director</span>
             <span class="resume__metadata-item--place" itemprop="name">Lift UX (acquired)</span>
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Dec 2009 - Aug 2017</span>
           </h3>
