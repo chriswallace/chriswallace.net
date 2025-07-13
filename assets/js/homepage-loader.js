@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-home-desktop.png?tr=w-800,q-60,f-auto", // Desktop
     "https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-mobile-desktop.png?tr=w-800,q-60,f-auto", // Mobile
     "https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-800,q-60,f-auto", // Desktop
-    "https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-features-mobile.png?tr=w-800,q-60,f-auto", // Mobile
+    "https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-mobile.png?tr=w-800,q-60,f-auto", // Mobile
     "https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-800,q-60,f-auto", // Desktop
     "https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-mobile.png?tr=w-800,q-60,f-auto", // Mobile
     "https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-comic-desktop.png?tr=w-800,q-60,f-auto", // Desktop
