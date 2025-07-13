@@ -8,7 +8,7 @@ thumbnail: /assets/images/thumbs/resume.png
 
 <div class="resume">
   <div itemscope itemtype="http://schema.org/Person">
-    <p itemprop="description" class="fade-in-element sub-heading !mt-4" data-scramble>I'm a 2x Emmy-nominated senior design leader with 20 years of experience crafting award-winning digital experiences and building world-class design teams. Currently at Roblox, I'm the ultimate a player-coach with an uncompromising level of craft.</p>
+    <p itemprop="description" class="fade-in-element sub-heading !mt-4" data-scramble>I'm a 2x Emmy-nominated senior design leader with 20 years of experience crafting award-winning digital experiences and building world-class design teams. Currently at Roblox, I'm the ultimate player-coach with an uncompromising level of craft.</p>
     
     <hr class="hr-separator fade-in-element">
 
