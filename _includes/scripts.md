@@ -14,5 +14,6 @@
 <script src="/assets/js/image-lazyloader.js?v={{ site.version }}" expires="31536000"></script>
 <script src="/assets/js/zoomable.js?v={{ site.version }}" expires="31536000"></script>
 <script src="/assets/js/ghost-canvas.js?v={{ site.version }}" expires="31536000"></script>
+<script src="/assets/js/homepage-loader.js?v={{ site.version }}" expires="31536000"></script>
 
 {% endif %}

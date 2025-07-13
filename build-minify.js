@@ -9,6 +9,7 @@ const filesToConcatAndMinify = [
   "./assets/js/image-lazyloader.js",
   "./assets/js/zoomable.js",
   "./assets/js/ghost-canvas.js",
+  "./assets/js/homepage-loader.js",
 ];
 
 const individualFilesToMinify = [

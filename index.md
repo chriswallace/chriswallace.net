@@ -1,17 +1,17 @@
 ---
-layout: home
+layout: home-reveal
 title: Chris Wallace - Senior Product Design Leader
 description: Senior product design leader with over 20 years experience building teams, mentoring designers, and creating high-craft digital experiences. Seeking a leadership role where I can grow design organizations and connect great people.
 ---
 
 <div class="content-container-wo mb-12">
-  <div class="fade-in-element mt-[240px] lg:mt-[15svh] mb-[1vh] max-w-[calc(100vw-40px)] mx-auto">
+  <div class="mt-[240px] lg:mt-[15svh] mb-[1vh] max-w-[calc(100vw-40px)] mx-auto">
     <h1 class="!mb-4">Chris Wallace Design</h1>
     <p>I am a product design leader with 20 years working with brands like Roblox, DC Comics, MLB, Meta, Microsoft, The Walking Dead, Breaking Bad, and more.</p>
     <p><a href="/bio/">About me</a></p>
     <p class="mt-20 !mb-4">Scroll for recent work &darr;</p>
   </div>
-  <picture class="fade-in-element">
+  <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-mobile-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
@@ -20,11 +20,11 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-mobile-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-mobile-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-mobile-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
-  <picture class="fade-in-element">
+  <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
@@ -33,11 +33,11 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
-  <picture class="fade-in-element">
+  <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-overlay-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
@@ -46,11 +46,11 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-overlay-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-overlay-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-overlay-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
-  <picture class="fade-in-element">
+  <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
@@ -59,11 +59,11 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
-  <picture class="fade-in-element">
+  <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-2-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
@@ -72,11 +72,11 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-2-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-2-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-2-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
-  <picture class="fade-in-element">
+  <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-icons-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
@@ -85,11 +85,11 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-icons-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-icons-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-icons-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
-  <picture class="fade-in-element">
+  <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-features-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
@@ -98,11 +98,11 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-features-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-features-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-features-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
-  <picture class="fade-in-element">
+  <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
@@ -111,11 +111,11 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
-  <picture class="fade-in-element">
+  <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
@@ -124,11 +124,11 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
-  <picture class="fade-in-element">
+  <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
@@ -137,11 +137,11 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
-  <picture class="fade-in-element">
+  <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-comic-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
@@ -150,7 +150,7 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-comic-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-comic-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-comic-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
@@ -163,19 +163,19 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element mb-1.5" 
+         class="mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="bg-black/30 fade-in-element w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/2.slide.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="bg-black/30 w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/3.slide.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="bg-black/30 w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/4.slide.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="bg-black/30 w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/5.slide.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="bg-black/30 w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/6.slide.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="bg-black/30 w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/7.slide.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="bg-black/30 w-full block mb-1.5" alt="" loading="lazy">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/8.slide.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="bg-black/30 w-full block mb-1.5" alt="" loading="lazy">
 
-  <div class="aspect-[16/9] md:mb-0.5 fade-in-element flex flex-col justify-center items-center bg-black/30 rounded-sm">
+  <div class="aspect-[16/9] md:mb-0.5 flex flex-col justify-center items-center bg-black/30 rounded-sm">
     <figure class="flex flex-col justify-center items-center gap-4">
       <div
       role="button"
@@ -231,7 +231,7 @@ description: Senior product design leader with over 20 years experience building
       <figcaption class="mb-0 text-gray-400 dark:text-gray-400">Custom legendary badge with CSS animation</figcaption>
     </figure>
   </div>
-  <picture class="fade-in-element">
+  <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-checkout-mobile.png?tr=w-800,q-60,f-auto">
     <source media="(min-width: 481px)" 
@@ -240,7 +240,7 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-checkout-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-checkout-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-checkout-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
@@ -253,13 +253,13 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-home-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-home-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-home-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element mb-1.5" 
+         class="mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
-<img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-<img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
-<img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="fade-in-element w-full block mb-1.5" alt="" loading="lazy">
+<img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="w-full block mb-1.5" alt="" loading="lazy">
+<img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-1.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="w-full block mb-1.5" alt="" loading="lazy">
+<img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-2500,q-60,f-auto" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-400,q-60,f-auto 400w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-800,q-60,f-auto 800w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-1200,q-60,f-auto 1200w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-1600,q-60,f-auto 1600w, https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-3.png?tr=w-2500,q-60,f-auto 2500w" sizes="100vw" class="w-full block mb-1.5" alt="" loading="lazy">
   <picture>
     <source media="(max-width: 480px)" 
             srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-mobile.png?tr=w-800,q-60,f-auto">
@@ -269,7 +269,7 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
@@ -282,7 +282,7 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-homepage-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-homepage-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-homepage-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
@@ -295,7 +295,7 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-rewards-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-rewards-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-rewards-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
@@ -308,7 +308,7 @@ description: Senior product design leader with over 20 years experience building
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-mobile-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                     https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-mobile-desktop.png?tr=w-2500,q-60,f-auto 2500w">
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-mobile-desktop.png?tr=w-2500,q-60,f-auto"
-         class="fade-in-element w-full block mb-1.5" 
+         class="w-full block mb-1.5" 
          alt="" 
          loading="lazy">
   </picture>
