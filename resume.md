@@ -8,7 +8,7 @@ thumbnail: /assets/images/thumbs/resume.png
 
 <div class="resume">
   <div itemscope itemtype="http://schema.org/Person">
-    <p itemprop="description" class="fade-in-element sub-heading !mt-4" data-scramble>I'm a senior product design leader with 20 years of experience building design teams and mentoring designers at companies like Roblox, 10up, Google, Microsoft, and DC Comics. I believe the best products come from the best teams, and I'm passionate about creating environments where exceptional craft thrives.</p>
+    <p itemprop="description" class="fade-in-element sub-heading !mt-4" data-scramble>I'm a 2x Emmy-nominated senior design leader with 20 years of experience crafting award-winning digital experiences and building world-class design teams. Currently at Roblox, I'm the ultimate a player-coach with an uncompromising level of craft.</p>
     
     <hr class="hr-separator fade-in-element">
 
@@ -24,7 +24,7 @@ thumbnail: /assets/images/thumbs/resume.png
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Feb 2025 - Present</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p class="mb-6" data-scramble>Designing tools for avatar creation and customization on the Avatars team. Leading Avatar Auto-Setup feature development while mentoring team members and collaborating across product, engineering, and design to improve the creator experience for millions of Roblox developers.</p>
+            <p class="mb-6" data-scramble>Designing features for Avatar Setup, leading user research to gain insights for new features, prototyping new features, and collaborating cross-functionally to drive key initiatives forward.</p>
           </div>
         </div>
         <div class="resume__item" itemprop="employee">
@@ -34,8 +34,7 @@ thumbnail: /assets/images/thumbs/resume.png
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Mar 2024 - Oct 2024</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p class="mb-6" data-scramble>Led product design initiatives across a complex ecosystem of digital collectible apps. Mentored junior designers while crafting user-centered solutions including an interactive comic reader for DC Comics. Built a comprehensive design system to improve team efficiency and product consistency.</p>
-            <p data-scramble>Key Partners: MLB, DC Comics, Netflix's Stranger Things, WWE, NASCAR</p>
+            <p class="mb-6" data-scramble>Designed new marketplace features, led the creation of a new design system, redesigned the Candy platform, and created prototypes of custom apps for partners like DC Comics and Major League Baseball.</p>
           </div>
         </div>
         <div class="resume__item" itemprop="employee">
@@ -45,8 +44,7 @@ thumbnail: /assets/images/thumbs/resume.png
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Apr 2021 - Mar 2024</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p class="mb-6" data-scramble>Founded and led UltraDAO Studios, building a creative team from scratch that generated $2.6M in revenue within six months. Fostered a collaborative culture focused on exceptional craft while launching Woodies digital avatars and leading environmental initiatives that planted over a million trees globally.</p>
-            <p data-scramble>Brands: Woodies, Legends of Wondermist, Twelve Days of CryptoArt, ULTRAPASS</p>
+            <p class="mb-6" data-scramble>Bootstrapped startup to $2.6M in revenue within six months through innovative, user-centered projects. Executive produced a critically acclaimed animated short and first large-scale 3D avatars for metaverse platforms.</p>
           </div>
         </div>
         <div class="resume__item" itemprop="employee">
@@ -56,8 +54,7 @@ thumbnail: /assets/images/thumbs/resume.png
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Aug 2017 - Sep 2021</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p class="mb-6" data-scramble>Grew and managed a design team from 8 to 25 people, creating processes and culture that enabled exceptional work for global brands. Mentored designers at all levels, implemented career development programs, and led digital transformation projects including the California DMV redesign.</p>
-            <p data-scramble>Key Clients: Microsoft, Google, Starbucks, Facebook, California DMV, Capital One, Credit Karma, The New York Times, The Nobel Prize, The Smithsonian, The White House</p>
+            <p class="mb-6" data-scramble>Successfully managed and grew design from 5->25 headcount across three continents. Contributed to an increase in revenue of 200% over a 4-year period. Company achieved a successful exit.</p>
           </div>
         </div>
         <div class="resume__item" itemprop="employee">
@@ -67,8 +64,7 @@ thumbnail: /assets/images/thumbs/resume.png
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Dec 2009 - Aug 2017</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p class="mb-6" data-scramble>Led design of Emmy-nominated and award-winning interactive experiences, including AMC Story Sync for The Walking Dead and Mad Men. Partnered with brands like Frito-Lay and GoDaddy to develop engaging digital products. Managed and scaled a successful WordPress theme product brand.</p>
-            <p data-scramble>Key Clients: The Walking Dead, Breaking Bad, Mad Men, WEtv, AMCtv, IFC, Sundance Channel, GoDaddy, Frito-Lay</p>
+            <p class="mb-6" data-scramble>Led design of 2x Emmy-nominated and award-winning interactive TV companion apps AMC Story Sync for The Walking Dead/Breaking Bad, and Mad Men: The Fan Cut. Company successfully acquired by 10up in 2017.</p>
           </div>
         </div>
         <div class="resume__item" itemprop="employee">
@@ -78,7 +74,7 @@ thumbnail: /assets/images/thumbs/resume.png
             <span class="resume__metadata-item--time-period" itemprop="worksFor">Aug 2007 - Dec 2009</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p data-scramble>Built website tools for booking rentals, ensured smooth design implementation, and maintained website functionality.</p>
+            <p data-scramble>Built website tools for booking rentals, fleet management, collaborated with UX and Visual Designers to build key user flows and UI elements.</p>
           </div>
         </div>
         <div class="resume__item" itemprop="employee">
@@ -96,18 +92,18 @@ thumbnail: /assets/images/thumbs/resume.png
       <h2 class="fade-in-element" data-scramble>Skills</h2>
 
       <dl class="fade-in-element skills" itemprop="knowsAbout">
-        <dt class="skills__term">Leadership & Strategy</dt>
-        <dd class="skills__description" data-scramble>Design Strategy, People Management, Team Planning & Budgeting, Cross-Functional Collaboration, Digital Transformation</dd>
-        <dt class="skills__term">Design Systems</dt>
-        <dd class="skills__description" data-scramble>Storybook, Figma, component libraries, native apps, typography</dd>
-        <dt class="skills__term">Development</dt>
-        <dd class="skills__description" data-scramble>Front-End Design, Full-Stack Engineering, JavaScript, TypeScript, HTML5, CSS3, SCSS</dd>
-        <dt class="skills__term">Libraries &amp; Frameworks</dt>
-        <dd class="skills__description" data-scramble>Svelte, SvelteKit, React, Next.js</dd>
-        <dt class="skills__term">Performance Tools</dt>
-        <dd class="skills__description" data-scramble>Vercel, ImageKit, Lighthouse</dd>
-        <dt class="skills__term">Additional</dt>
-        <dd class="skills__description" data-scramble>Web3, blockchain development, responsive design, accessibility best practices, writing</dd>
+        <dt class="skills__term">Product Design & Strategy</dt>
+        <dd class="skills__description" data-scramble>Product Design, Creative Direction, Strategy, User Testing & Research, Prototyping, Design Critique</dd>
+        <dt class="skills__term">Leadership & Management</dt>
+        <dd class="skills__description" data-scramble>Design Leadership, People Management, Team Planning & Budgeting, Cross-Functional Collaboration, Digital Transformation</dd>
+        <dt class="skills__term">Design Systems & Tools</dt>
+        <dd class="skills__description" data-scramble>Design Systems, Figma, Storybook, component libraries, iOS/Android Design, typography</dd>
+        <dt class="skills__term">Development & Technical</dt>
+        <dd class="skills__description" data-scramble>Front-End Design, JavaScript, TypeScript, HTML5, CSS3, SCSS, React, Next.js, Svelte</dd>
+        <dt class="skills__term">Design Specialties</dt>
+        <dd class="skills__description" data-scramble>Responsive Design, Accessibility, AI-assisted design, Web3, blockchain development</dd>
+        <dt class="skills__term">Performance & Tools</dt>
+        <dd class="skills__description" data-scramble>Vercel, ImageKit, Lighthouse, writing, documentation</dd>
       </dl>
 
       <h2 class="fade-in-element" data-scramble>Education</h2>
@@ -155,7 +151,7 @@ thumbnail: /assets/images/thumbs/resume.png
   <a href="/contact" class="contact-card fade-in-element">
     <img class="contact-card__image" src="/assets/images/profile-photo.png" />
     <div class="contact-card__content">
-      <span class="contact-card__text" data-scramble>Ready to work with me?</span>
+      <span class="contact-card__text" data-scramble>Want to connect with me?</span>
       <span class="contact-card__link">
         <span data-scramble>Reach out &rarr;</span>
       </span>
