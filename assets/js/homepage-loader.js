@@ -81,18 +81,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
           let scaleFactor;
           if (screenWidth >= 1600) {
-            scaleFactor = 1.0;
+            scaleFactor = 1.4;
           } else if (screenWidth >= 1200) {
-            scaleFactor = 0.8;
+            scaleFactor = 1.2;
           } else if (screenWidth >= 768) {
-            scaleFactor = 0.5;
+            scaleFactor = 1.1;
           } else {
-            scaleFactor = 0.3;
+            scaleFactor = 0.9;
           }
 
           // Add vertical spacing multiplier based on viewport aspect ratio
           // When viewport is taller (lower aspect ratio), increase vertical spread
-          let verticalSpacingMultiplier = 1.0;
+          let verticalSpacingMultiplier = 1.7;
           if (viewportAspectRatio < 1.0) {
             // Portrait orientation - increase vertical spacing significantly
             verticalSpacingMultiplier = 1.8;
@@ -105,32 +105,24 @@ document.addEventListener("DOMContentLoaded", function () {
           }
           // Wide landscape (>1.6) keeps default 1.0
 
-          // Progressive positioning - start tight, then spread out as more images load
           const baseOffsets = [
-            { x: -20, y: -15 }, // Start very close to center
-            { x: 25, y: -10 },
-            { x: -35, y: 5 },
-            { x: 30, y: 20 },
-            { x: -45, y: 35 },
-            { x: 50, y: 40 },
-            { x: -60, y: -30 },
-            { x: 70, y: -20 },
-            { x: -80, y: 60 },
-            { x: 90, y: -40 },
-            { x: -100, y: 80 },
-            { x: 110, y: 90 },
+            { x: -18, y: -22 }, // Start near center, slight up-left
+            { x: 32, y: 8 }, // Right, slight down
+            { x: -27, y: 27 }, // Left, down
+            { x: 14, y: -32 }, // Right, up
+            { x: -44, y: 12 }, // Far left, slight down
+            { x: 38, y: 36 }, // Far right, down
+            { x: -12, y: -38 }, // Left, up
+            { x: 48, y: -18 }, // Far right, up
+            { x: -36, y: 44 }, // Far left, far down
+            { x: 22, y: 52 }, // Right, far down
+            { x: -54, y: -8 }, // Far left, slight up
+            { x: 8, y: 58 }, // Center-right, far down
           ];
 
-          // Progressive expansion factor - each image spreads further from center
-          const expansionFactor = 1 + index * 0.05; // Each image expands by 0.05x more
-
           const baseOffset = baseOffsets[index] || { x: 0, y: 0 };
-          const offsetX = baseOffset.x * expansionFactor * scaleFactor;
-          const offsetY =
-            baseOffset.y *
-            expansionFactor *
-            scaleFactor *
-            verticalSpacingMultiplier;
+          const offsetX = baseOffset.x;
+          const offsetY = baseOffset.y;
 
           // Calculate scale based on aspect ratio - normalize by long edge
           const aspectRatio = img.naturalWidth / img.naturalHeight;
@@ -170,9 +162,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (loadedImages >= portfolioImages.length) {
         setTimeout(() => {
           startImageExitAnimation(imageElements);
-        }, 500);
+        }, 0);
       } else {
-        setTimeout(checkImagesLoaded, 100);
+        setTimeout(checkImagesLoaded, 200);
       }
     };
     checkImagesLoaded();

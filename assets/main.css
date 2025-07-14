@@ -2639,12 +2639,6 @@ figcaption {
   opacity: 1;
 }
 
-.shadow {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -2653,12 +2647,6 @@ figcaption {
 
 .outline {
   outline-style: solid;
-}
-
-.ring {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
 .blur {
@@ -5068,71 +5056,6 @@ a.portfolio-list__link:hover .portfolio-list__image {
 
   to {
     transform: translate(0.1025em, -235.4%) scale(0);
-  }
-}
-
-/* Ghost Canvas Styles */
-
-.home .ui-content {
-  position: relative;
-  z-index: 10;
-}
-
-.home .ui-frame {
-  position: relative;
-  z-index: 1;
-}
-
-/* Ensure ghost canvas doesn't interfere with interactions */
-
-canvas[style*="pointer-events: none"] {
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-
-/* Add subtle backdrop filter for enhanced effect on supported browsers */
-
-@supports ((-webkit-backdrop-filter: blur(0px)) or (backdrop-filter: blur(0px))) {
-  .home .ui-content {
-    -webkit-backdrop-filter: blur(0.1px);
-            backdrop-filter: blur(0.1px);
-  }
-}
-
-/* Dark mode adjustments */
-
-@media (prefers-color-scheme: dark) {
-  .home canvas[style*="z-index: -1"] {
-    opacity: 0.4 !important;
-    mix-blend-mode: screen;
-  }
-}
-
-/* Light mode adjustments */
-
-@media (prefers-color-scheme: light) {
-  .home canvas[style*="z-index: -1"] {
-    opacity: 0.3 !important;
-    mix-blend-mode: multiply;
-  }
-}
-
-/* Performance optimizations */
-
-.home canvas {
-  will-change: auto;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-/* Reduce motion for accessibility */
-
-@media (prefers-reduced-motion: reduce) {
-  .home canvas[style*="z-index: -1"] {
-    display: none;
   }
 }
 
