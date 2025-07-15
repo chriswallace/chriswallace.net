@@ -7,7 +7,7 @@ thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-thumbnail
 ---
 
 <div class="portfolio-group-heading">
-  <a class="back fade-in-element" href="/">/portfolio</a>
+  <a class="back fade-in-element" href="/portfolio/">/portfolio</a>
   <h1 class="fade-in-element mb-3">Palm Quest App Prototype</h1>
   <dl class="project-list fade-in-element">
     <div>

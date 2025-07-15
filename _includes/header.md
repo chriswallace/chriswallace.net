@@ -22,7 +22,8 @@
     </div>
     
     <ul class="menu__list">
-      <li class="menu__item"><a href="/" class="menu__link" aria-label="Portfolio">Portfolio</a></li>
+      <li class="menu__item"><a href="/" class="menu__link" aria-label="Home">Home</a></li>
+      <li class="menu__item"><a href="/portfolio" class="menu__link" aria-label="Portfolio">Portfolio</a></li>
       <li class="menu__item"><a href="/bio" class="menu__link" aria-label="Bio">Bio</a></li>
       <li class="menu__item"><a href="/design-services" class="menu__link" aria-label="Services">Services</a></li>
       <li class="menu__item"><a href="/resume" class="menu__link" aria-label="Resume">Resume / CV</a></li>

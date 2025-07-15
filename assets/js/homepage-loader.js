@@ -21,17 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // Get portfolio images - mix of mobile and desktop aspect ratios
   const portfolioImages = [
     "https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-mobile-mobile.png?tr=w-800,q-60,f-auto", // Mobile
-    "https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-desktop.png?tr=w-800,q-60,f-auto", // Desktop
+    "https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-thumbnail.png?tr=w-800,q-60,f-auto", // Desktop
     "https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-mobile.png?tr=w-800,q-60,f-auto", // Mobile
     "https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-desktop.png?tr=w-800,q-60,f-auto", // Desktop
-    "https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-checkout-mobile.png?tr=w-800,q-60,f-auto", // Mobile
-    "https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-home-desktop.png?tr=w-800,q-60,f-auto", // Desktop
-    "https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-mobile-desktop.png?tr=w-800,q-60,f-auto", // Mobile
-    "https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-800,q-60,f-auto", // Desktop
+    "https://ik.imagekit.io/UltraDAO/chriswallace.net/12d-artists-light-mobile.png?tr=w-800,q-60,f-auto", // Desktop
+    "https://ik.imagekit.io/UltraDAO/chriswallace.net/candy-league-mobile-mobile.png?tr=w-800,q-60,f-auto", // Mobile
+    "https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-overlay-mobile.png?tr=w-800,q-60,f-auto", // Desktop
     "https://ik.imagekit.io/UltraDAO/chriswallace.net/redacted-mlb-game-mobile.png?tr=w-800,q-60,f-auto", // Mobile
     "https://ik.imagekit.io/UltraDAO/chriswallace.net/palm-quest-2.png?tr=w-800,q-60,f-auto", // Desktop
     "https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-mobile.png?tr=w-800,q-60,f-auto", // Mobile
-    "https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-comic-desktop.png?tr=w-800,q-60,f-auto", // Desktop
+    "https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-comic-mobile.png?tr=w-800,q-60,f-auto", // Mobile
+    "https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-thumbnail.gif?tr=w-800,q-60,f-auto", // Mobile
   ];
 
   // Initialize: content hidden, revealer visible
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
     portfolioImages.forEach((src, index) => {
       setTimeout(() => {
         loadImage(src, index);
-      }, index * 400); // Original timing
+      }, index * 600); // Original timing
     });
 
     // Wait for all images to load, then start exit animation
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Start the reveal sequence immediately after images are loaded
     setTimeout(() => {
       startRevealSequence();
-    }, 200); // Very short pause before swipe begins
+    }, 1200); // Very short pause before swipe begins
   }
 
   function startRevealSequence() {
