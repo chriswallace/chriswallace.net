@@ -7,6 +7,8 @@ thumbnail: /assets/images/thumbs/portfolio.png
 ---
 
 <div class="portfolio-container">
+
+  <h1 class="fade-in-element">Portfolio</h1>
   
   <div class="portfolio-grid">
     <!-- Plymouth Street -->
@@ -22,14 +24,30 @@ thumbnail: /assets/images/thumbs/portfolio.png
     </a>
 
     <!-- Woodies -->
-    <a href="/portfolio/woodies/" class="portfolio-item group fade-in-element">
+    <a href="/portfolio/woodies/" class="portfolio-item group fade-in-element" style="--hover-overlay: none;">
       <div class="portfolio-item__image-wrapper">
-        <img
-          src="https://ik.imagekit.io/UltraDAO/chriswallace.net/woodies-thumbnail.png?tr=c-maintain_ratio,f-webp,q-70"
-          alt="Woodies project thumbnail"
+        <video
+          src="https://ik.imagekit.io/UltraDAO/chriswallace.net/Woodies%20Origin.mp4"
           class="portfolio-item__image"
-          loading="lazy"
-        />
+          autoplay
+          muted
+          loop
+          playsinline
+          disablePictureInPicture
+          controlslist="nodownload nofullscreen noremoteplayback"
+          style="object-fit: cover; width: 100%; height: 100%;"
+        >
+          Your browser does not support HTML5 video.
+        </video>
+        <style>
+          .portfolio-item:hover .portfolio-item__image-wrapper::before,
+          .portfolio-item:hover .portfolio-item__image-wrapper::after {
+            opacity: 0 !important;
+          }
+          .portfolio-item:hover video.portfolio-item__image {
+            opacity: 1 !important;
+          }
+        </style>
       </div>
     </a>
 
@@ -153,18 +171,5 @@ thumbnail: /assets/images/thumbs/portfolio.png
       </div>
     </a>
 
-  </div>
-
-  <!-- Contact Card -->
-  <div class="portfolio-contact fade-in-element">
-    <a href="/contact" class="contact-card">
-      <img class="contact-card__image" src="/assets/images/profile-photo.png" alt="Chris Wallace profile photo" />
-      <div class="contact-card__content">
-        <span class="contact-card__text" data-scramble>Want to connect with me?</span>
-        <span class="contact-card__link">
-          <span data-scramble>Reach out &rarr;</span>
-        </span>
-      </div>
-    </a>
   </div>
 </div>

@@ -1,6 +1,6 @@
 /* Portfolio Grid Styles */
 .portfolio-grid {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4 mb-24;
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-2 lg:gap-4 mb-24;
 }
 
 /* Portfolio Item Styles */
@@ -9,7 +9,7 @@
 }
 
 .portfolio-item__image-wrapper {
-  @apply relative overflow-hidden rounded-md aspect-[200/135] bg-gray-900;
+  @apply relative overflow-hidden md:rounded-md aspect-[200/135] bg-gray-900;
 }
 
 .portfolio-item__image {
@@ -21,50 +21,20 @@
   @apply max-w-2xl mx-auto mt-32 mb-16;
 }
 
-.contact-card {
-  @apply flex items-center gap-6 p-8 rounded-3xl bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 transition-all duration-500 hover:bg-gray-900/70 hover:border-gray-700/50 no-underline;
-}
-
-.contact-card__image {
-  @apply w-20 h-20 rounded-2xl object-cover flex-shrink-0;
-}
-
-.contact-card__content {
-  @apply flex flex-col gap-2;
-}
-
-.contact-card__text {
-  @apply text-foreground text-xl font-light;
-}
-
-.contact-card__link {
-  @apply text-gray-400 text-lg transition-colors duration-300;
-}
-
-.contact-card:hover .contact-card__link {
-  @apply text-gray-300;
-}
-
-/* Enhanced fade-in animation for portfolio items */
-.portfolio-item.fade-in-element {
-  @apply opacity-0 translate-y-8;
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.portfolio-item.fade-in-element.visible {
-  @apply opacity-100 translate-y-0;
-}
-
 /* Update container for new layout */
 .portfolio-container {
-  @apply mx-auto p-12 lg:p-24;
+  @apply mx-auto pt-48 md:p-12 lg:p-24;
+}
+
+.portfolio-container h1 {
+  @apply max-w-[calc(100%-2rem)] mx-auto text-center mb-12 pt-24;
 }
 
 .portfolio-container .sub-heading {
   @apply text-center mb-16 md:mb-24 text-gray-400 max-w-3xl mx-auto;
 }
 
-.portfolio-content-wrapper{
+.portfolio-content-wrapper {
   @apply content-container flex flex-col items-center mb-48;
 }
 
@@ -72,7 +42,7 @@
   @apply content-container !pt-0 2xl:mx-auto md:pb-6;
 }
 
-.portfolio-group-heading dd{
+.portfolio-group-heading dd {
   @apply text-white/70;
 }
 
