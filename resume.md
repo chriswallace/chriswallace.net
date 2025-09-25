@@ -8,7 +8,7 @@ thumbnail: /assets/images/thumbs/resume.png
 
 <div class="resume">
   <div itemscope itemtype="http://schema.org/Person">
-    <p itemprop="description" class="fade-in-element sub-heading !mt-4" data-scramble>I'm a 2x Emmy-nominated senior design leader with 20 years of experience crafting award-winning digital experiences and building world-class design teams. Currently at Roblox, I'm the ultimate player-coach with an uncompromising level of craft.</p>
+    <p itemprop="description" class="fade-in-element sub-heading !mt-4" data-scramble>I'm a 2x Emmy-nominated senior design leader with 20 years of experience crafting award-winning digital experiences and building world-class design teams. Currently at a stealth AI startup, I'm the ultimate player-coach with an uncompromising level of craft.</p>
     
     <hr class="hr-separator fade-in-element">
 
@@ -19,9 +19,19 @@ thumbnail: /assets/images/thumbs/resume.png
       <div class="resume__jobs" itemscope itemtype="http://schema.org/Organization">
         <div class="resume__item" itemprop="employee">
           <h3 class="resume__metadata fade-in-element">
+            <span class="resume__metadata-item--title" itemprop="roleName">Staff Product Designer</span>
+            <span class="resume__metadata-item--place" itemprop="name">Stealth AI Startup</span>
+            <span class="resume__metadata-item--time-period" itemprop="worksFor">July 2025 - Present</span>
+          </h3>
+          <div class="resume__description fade-in-element">
+            <p class="mb-6" data-scramble>Leading the design of a new consumer-focused app in the AI companion space. Working across web and desktop product surfaces to design a fun and engaging app. Designing a personalized onboarding experience, visual language, micro-animations, and gamification.</p>
+          </div>
+        </div>
+        <div class="resume__item" itemprop="employee">
+          <h3 class="resume__metadata fade-in-element">
             <span class="resume__metadata-item--title" itemprop="roleName">Contract Product Designer</span>
             <span class="resume__metadata-item--place" itemprop="name">Roblox</span>
-            <span class="resume__metadata-item--time-period" itemprop="worksFor">Feb 2025 - Present</span>
+            <span class="resume__metadata-item--time-period" itemprop="worksFor">Feb 2025 - July 2025</span>
           </h3>
           <div class="resume__description fade-in-element">
             <p class="mb-6" data-scramble>Designing features for Avatar Setup, leading user research to gain insights for new features, prototyping new features, and collaborating cross-functionally to drive key initiatives forward.</p>
