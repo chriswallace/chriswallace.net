@@ -2,13 +2,14 @@ const fs = require("fs");
 const terser = require("terser");
 
 const filesToConcatAndMinify = [
+  "./assets/js/navigation.js",
+  "./assets/js/homepage.js",
   "./assets/js/video-player.js",
   "./assets/js/animations.js",
   "./assets/js/card-flip.js",
   "./assets/js/card.js",
   "./assets/js/image-lazyloader.js",
   "./assets/js/zoomable.js",
-  "./assets/js/homepage-loader.js",
 ];
 
 const individualFilesToMinify = [

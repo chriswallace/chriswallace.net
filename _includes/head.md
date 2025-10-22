@@ -18,8 +18,14 @@
   <link rel="preconnect" href="https://api.fontshare.com">
   <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 
+  <!-- Preconnect to Adobe Fonts -->
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+
   <!-- Load Tabular font from Fontshare -->
   <link href="https://api.fontshare.com/v2/css?f[]=tabular@1&display=swap" rel="stylesheet">
+  
+  <!-- Load dharma-gothic-c and dharma-gothic-e from Adobe Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/eub1ezs.css">
 
   <!-- Font loading optimization -->
   <script>
@@ -30,7 +36,9 @@
       Promise.all([
         document.fonts.load('400 1em "Tabular"'),
         document.fonts.load('300 1em "Tabular"'),
-        document.fonts.load('700 1em "Tabular"')
+        document.fonts.load('700 1em "Tabular"'),
+        document.fonts.load('400 1em "dharma-gothic-c"'),
+        document.fonts.load('300 1em "dharma-gothic-e"')
       ]).then(() => {
         // Remove loading class and add loaded class when fonts are ready
         document.documentElement.classList.remove('fonts-loading');
@@ -48,7 +56,8 @@
   <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
   <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
   <link rel="stylesheet" href="/assets/main.css?v={{ site.version }}" expires="31536000">
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.3.3/dist/gsap.min.js" expires="31536000"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" expires="31536000"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" expires="31536000"></script>
   <script src="https://unpkg.com/splitting/dist/splitting.min.js" expires="31536000"></script>
   <script src="/assets/js/text-scrambler.min.js?v={{ site.version }}" expires="31536000"></script>
 

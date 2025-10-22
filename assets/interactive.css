@@ -1281,14 +1281,6 @@ i {
   margin-bottom: 3rem;
 }
 
-.\!mb-0 {
-  margin-bottom: 0px !important;
-}
-
-.\!mb-4 {
-  margin-bottom: 1rem !important;
-}
-
 .\!mt-4 {
   margin-top: 1rem !important;
 }
@@ -1341,10 +1333,6 @@ i {
   margin-bottom: 2rem;
 }
 
-.mb-\[1vh\] {
-  margin-bottom: 1vh;
-}
-
 .mb-\[2em\] {
   margin-bottom: 2em;
 }
@@ -1389,20 +1377,12 @@ i {
   margin-top: 0.5rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
-}
-
 .mt-6 {
   margin-top: 1.5rem;
 }
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-\[240px\] {
-  margin-top: 240px;
 }
 
 .block {
@@ -1431,10 +1411,6 @@ i {
 
 .hidden {
   display: none;
-}
-
-.aspect-\[16\/9\] {
-  aspect-ratio: 16/9;
 }
 
 .aspect-\[4\/3\] {
@@ -1485,6 +1461,10 @@ i {
   min-height: 480px;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-3 {
   width: 0.75rem;
 }
@@ -1513,6 +1493,14 @@ i {
   max-width: 64rem;
 }
 
+.max-w-6xl {
+  max-width: 72rem;
+}
+
+.max-w-\[1200px\] {
+  max-width: 1200px;
+}
+
 .max-w-\[1680px\] {
   max-width: 1680px;
 }
@@ -1537,8 +1525,8 @@ i {
   max-width: 740px;
 }
 
-.max-w-\[calc\(100vw-40px\)\] {
-  max-width: calc(100vw - 40px);
+.max-w-\[calc\(100\%-32px\)\] {
+  max-width: calc(100% - 32px);
 }
 
 .max-w-full {
@@ -1604,6 +1592,10 @@ i {
 
 .items-start {
   align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .items-center {
@@ -1778,10 +1770,6 @@ i {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-black\/30 {
-  background-color: rgb(0 0 0 / 0.3);
-}
-
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
@@ -1926,6 +1914,14 @@ i {
   text-align: center;
 }
 
+.font-heading-light {
+  font-family: "dharma-gothic-e", sans-serif;
+}
+
+.font-sans {
+  font-family: "Tabular", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+}
+
 .text-2xl {
   font-size: 1.1rem;
   line-height: 1.8rem;
@@ -1964,6 +1960,10 @@ i {
   font-weight: 700;
 }
 
+.font-light {
+  font-weight: 300;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -1976,8 +1976,8 @@ i {
   line-height: 0.75;
 }
 
-.leading-none {
-  line-height: 1;
+.leading-tight {
+  line-height: 1.25;
 }
 
 .tracking-wider {
@@ -2082,11 +2082,6 @@ i {
   outline-style: solid;
 }
 
-.blur {
-  --tw-blur: blur(8px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -2111,9 +2106,23 @@ i {
   transition-duration: 150ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.\~text-4xl\/7xl {
+  font-size: clamp(1.5rem,-1.45rem + 7.39vw,8rem)/* fluid type from 1.5rem at 40rem to 8rem at 128rem */;
+  line-height: clamp(3rem,1.32rem + 4.2vw,6.7rem)/* fluid from 3rem at 40rem to 6.7rem at 128rem */;
+}
+
 .\~text-base\/sm {
   font-size: clamp(0.825rem,1.007rem + -0.142vw,0.95rem)/* fluid type from 0.95rem at 40rem to 0.825rem at 128rem */;
   line-height: clamp(1.5rem,1.65rem + -0.11vw,1.6rem)/* fluid from 1.6rem at 40rem to 1.5rem at 128rem */;
+}
+
+.\~text-xl\/3xl {
+  font-size: clamp(1.05rem,0.96rem + 0.23vw,1.25rem)/* fluid type from 1.05rem at 40rem to 1.25rem at 128rem */;
+  line-height: clamp(1.7rem,1.34rem + 0.91vw,2.5rem)/* fluid from 1.7rem at 40rem to 2.5rem at 128rem */;
 }
 
 body.meetChris {
@@ -2175,6 +2184,11 @@ body.meetChris {
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(238 240 241 / var(--tw-bg-opacity));
+}
+
+.hover\:text-primary-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(213 82 46 / var(--tw-text-opacity));
 }
 
 @media (min-width: 40rem) {
@@ -2245,10 +2259,6 @@ body.meetChris {
 
   .md\:aspect-\[21\/9\] {
     aspect-ratio: 21/9;
-  }
-
-  .md\:aspect-video {
-    aspect-ratio: 16 / 9;
   }
 
   .md\:h-screen {
@@ -2343,6 +2353,10 @@ body.meetChris {
     grid-column: span 2 / span 2;
   }
 
+  .lg\:col-span-7 {
+    grid-column: span 7 / span 7;
+  }
+
   .lg\:mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -2354,10 +2368,6 @@ body.meetChris {
 
   .lg\:ml-0 {
     margin-left: 0px;
-  }
-
-  .lg\:mt-\[15svh\] {
-    margin-top: 15svh;
   }
 
   .lg\:max-w-\[22rem\] {

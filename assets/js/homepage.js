@@ -1,181 +1,276 @@
 document.addEventListener("DOMContentLoaded", () => {
-  Splitting();
+  // Register GSAP plugins
+  gsap.registerPlugin(ScrollTrigger);
 
-  const sections = document.querySelectorAll(".text-container");
-  const preloader = document.querySelector(".content-preloader");
-  const headlines = document.querySelectorAll(".animated-headline");
-  const aboutSection = document.querySelector("#aboutSection");
-  const workStatus = document.querySelector("#workStatus");
-  const woodiesSection = document.querySelector(
-    'media-card[href="/portfolio/woodies/"]'
-  );
-  const lazyLoadElements = document.querySelectorAll(
-    ".lazy-load:not(media-card[href='/portfolio/woodies/'])"
-  );
-
-  // Initial setup - hide all content
-  gsap.set([headlines, aboutSection, workStatus, woodiesSection], {
-    opacity: 0,
-    y: 30,
-  });
-
-  gsap.set(lazyLoadElements, {
-    opacity: 0,
-    y: 30,
-  });
-
-  // Handle text animations separately
-  sections.forEach((section) => {
-    const chars = section.querySelectorAll(
-      ".text-paragraph .word > .char, .whitespace"
-    );
-    if (chars.length) {
-      gsap.set(chars, { opacity: 0, y: 30 });
-    }
-  });
-
-  // Create main timeline for initial content
-  const mainTimeline = gsap.timeline();
-
-  // Wait for fonts and initial content
+  // Wait for fonts to load before starting animations
   Promise.all([
     document.fonts.ready,
-    new Promise((resolve) => setTimeout(resolve, 1000)),
+    new Promise((resolve) => setTimeout(resolve, 100)),
   ]).then(() => {
-    mainTimeline
-      .to(preloader, {
-        duration: 0.2,
-        opacity: 0,
-        onComplete: () => {
-          if (preloader) {
-            preloader.style.display = "none";
-          }
-        },
-      })
-      .to(headlines, {
-        duration: 0.2,
-        opacity: 1,
-        y: 0,
-        ease: "power2.out",
-      });
-
-    // Text animations
-    sections.forEach((section) => {
-      const chars = section.querySelectorAll(
-        ".text-paragraph .word > .char, .whitespace"
-      );
-      if (chars.length) {
-        mainTimeline.to(
-          chars,
-          {
-            duration: 0.6,
-            ease: "Power3.easeInOut",
-            y: "0",
-            stagger: 0.003,
-            opacity: 1,
-          },
-          "-=0.2"
-        );
-      }
-    });
-
-    // About section
-    if (aboutSection) {
-      mainTimeline.to(
-        aboutSection,
-        {
-          duration: 0.8,
-          opacity: 1,
-          y: 0,
-          ease: "power3.out",
-        },
-        "+=0.5"
-      );
-    }
-
-    // Work status
-    if (workStatus) {
-      mainTimeline.to(
-        workStatus,
-        {
-          duration: 0.8,
-          opacity: 1,
-          y: 0,
-          ease: "power3.out",
-        },
-        "-=0.6"
-      );
-
-      const animatedElements = Array.from(
-        workStatus.querySelectorAll(".animated")
-      );
-      if (animatedElements.length) {
-        mainTimeline.from(
-          animatedElements,
-          {
-            duration: 0.3,
-            opacity: 0,
-            y: 30,
-            stagger: 0.05,
-            ease: "power2.out",
-          },
-          "-=0.8"
-        );
-      }
-
-      // HR separator animation
-      const hrSeparator = document.querySelector(".hr-separator");
-      if (hrSeparator) {
-        mainTimeline.to(
-          hrSeparator,
-          {
-            duration: 0.4,
-            width: "100%",
-            ease: "power2.inOut",
-          },
-          "-=0.4"
-        );
-      }
-    }
-
-    // Animate Woodies section after top section
-    if (woodiesSection) {
-      mainTimeline.to(
-        woodiesSection,
-        {
-          duration: 0.6,
-          opacity: 1,
-          y: 0,
-          ease: "power3.out",
-          delay: 0.3, // Small delay after top section finishes
-        },
-        "-=0.6"
-      );
-    }
-
-    // Setup intersection observer for remaining lazy load elements
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            gsap.to(entry.target, {
-              duration: 0.8,
-              opacity: 1,
-              y: 0,
-              ease: "power3.out",
-            });
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "50px",
-      }
-    );
-
-    lazyLoadElements.forEach((element) => {
-      observer.observe(element);
-    });
+    initHomepageAnimations();
   });
 });
+
+function initHomepageAnimations() {
+  // ===================================
+  // SECTION 1: Hero Headline Animation
+  // ===================================
+
+  const headline = document.querySelector("h1[data-splitting]");
+  const heroInfo = document.querySelector(".hero-info");
+
+  if (headline) {
+    // Initialize Splitting.js to split text into words and characters
+    const result = Splitting({ target: headline });
+
+    const chars = headline.querySelectorAll(".char");
+
+    // Create main timeline for hero section
+    const heroTimeline = gsap.timeline();
+
+    // Animate headline characters with sliding door effect
+    heroTimeline.to(chars, {
+      duration: 0.5,
+      y: 0,
+      opacity: 1,
+      ease: "power3.out",
+      stagger: 0.01,
+    });
+
+    // Fade in hero info after headline animation starts
+    if (heroInfo) {
+      heroTimeline.to(
+        heroInfo,
+        {
+          duration: 0.4,
+          opacity: 1,
+          ease: "power2.out",
+        },
+        "-=0.4"
+      ); // Start before headline finishes
+    }
+  }
+
+  // =====================================================
+  // SECTION 2: Horizontal Scrolling Images with Alignment
+  // =====================================================
+
+  const horizontalScrollSection = document.querySelector(
+    ".horizontal-scroll-section"
+  );
+  const horizontalScrollContainer = document.querySelector(
+    ".horizontal-scroll-container"
+  );
+  const horizontalScrollTrack = document.querySelector(
+    ".horizontal-scroll-track"
+  );
+
+  if (
+    horizontalScrollSection &&
+    horizontalScrollContainer &&
+    horizontalScrollTrack
+  ) {
+    // Calculate exact scroll distance
+    const scrollImages =
+      horizontalScrollTrack.querySelectorAll(".scroll-image");
+
+    // Function to calculate total width
+    const calculateScrollDistance = () => {
+      let totalWidth = 0;
+
+      scrollImages.forEach((img, index) => {
+        totalWidth += img.offsetWidth;
+        // Add gap between images (32px = 2rem)
+        if (index < scrollImages.length - 1) {
+          totalWidth += 32;
+        }
+      });
+
+      // Calculate how much we need to scroll
+      // Start: first image at left edge (x: 0)
+      // End: last image's right edge at viewport's right edge
+      const viewportWidth = window.innerWidth;
+      const scrollDistance = totalWidth - viewportWidth;
+
+      return scrollDistance;
+    };
+
+    // Set initial position at left edge
+    gsap.set(horizontalScrollTrack, { x: 0 });
+
+    // Create the horizontal scroll animation
+    // Use container as trigger, start when bottom hits viewport bottom
+    gsap.to(horizontalScrollTrack, {
+      x: () => -calculateScrollDistance(),
+      ease: "none",
+      scrollTrigger: {
+        trigger: horizontalScrollContainer,
+        start: "bottom bottom", // Start when container bottom reaches viewport bottom (fully visible)
+        end: () =>
+          `+=${horizontalScrollSection.offsetHeight - window.innerHeight}`, // Scroll through remaining section height
+        scrub: 1,
+        invalidateOnRefresh: true,
+      },
+    });
+  }
+
+  // ==============================================
+  // BIO SECTION: Text and Image Animations
+  // ==============================================
+
+  const bioSection = document.querySelector(".bio-section");
+  const bioParagraph = document.querySelector(".bio-paragraph");
+  const bioText = document.querySelector(".bio-text");
+
+  // Initialize Splitting.js for the main bio text
+  if (bioText) {
+    Splitting({ target: bioText });
+  }
+
+  // Animate bio paragraph (initial reveal)
+  if (bioParagraph) {
+    gsap.to(bioParagraph, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: bioParagraph,
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+    });
+  }
+
+  // Progressive text reveal effect for the single paragraph
+  if (bioText) {
+    const chars = bioText.querySelectorAll(".char");
+
+    if (chars.length > 0) {
+      chars.forEach((char, index) => {
+        ScrollTrigger.create({
+          trigger: bioSection,
+          start: "top 50%",
+          end: "bottom 50%",
+          scrub: true,
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const charProgress = progress * chars.length - index;
+
+            if (charProgress > 0) {
+              char.classList.add("revealed");
+            } else {
+              char.classList.remove("revealed");
+            }
+          },
+        });
+      });
+    }
+  }
+
+  // ==============================================
+  // CONTACT SECTION: Fun Animated Contact
+  // ==============================================
+
+  const contactSection = document.querySelector(".contact-section");
+  const contactHeading = document.querySelector(".contact-heading");
+  const contactEmail = document.querySelector(".contact-email");
+
+  // Initialize Splitting.js for contact heading
+  if (contactHeading) {
+    Splitting({ target: contactHeading });
+  }
+
+  // Animate contact heading with fun character effects
+  if (contactHeading) {
+    const chars = contactHeading.querySelectorAll(".char");
+
+    gsap.to(contactHeading, {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: contactSection,
+        start: "top 70%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    if (chars.length > 0) {
+      gsap.to(chars, {
+        y: 0,
+        rotation: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "back.out(1.4)",
+        stagger: 0.08,
+        scrollTrigger: {
+          trigger: contactSection,
+          start: "top 70%",
+          toggleActions: "play none none none",
+        },
+        delay: 0.2,
+      });
+    }
+  }
+
+  // Animate email with bounce effect
+  if (contactEmail) {
+    gsap.to(contactEmail, {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      ease: "bounce.out",
+      scrollTrigger: {
+        trigger: contactSection,
+        start: "top 70%",
+        toggleActions: "play none none none",
+      },
+      delay: 0.8,
+    });
+  }
+
+  // ==============================================
+  // SECTION 3: Staggered Project Row Animations
+  // ==============================================
+
+  const projectSection = document.querySelector(".project-grid-section");
+  const projectHeading = projectSection?.querySelector("h3");
+  const projectRows = document.querySelectorAll(".project-row.animate-row");
+
+  // Animate the "Recent Clients" heading first
+  if (projectHeading) {
+    gsap.set(projectHeading, { opacity: 0, y: 30 });
+
+    gsap.to(projectHeading, {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: projectHeading,
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+    });
+  }
+
+  // Animate project rows with stagger
+  if (projectRows.length > 0) {
+    projectRows.forEach((row, index) => {
+      gsap.to(row, {
+        opacity: 1,
+        y: 0,
+        duration: 0.4,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: row,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+        delay: index * 0.05, // Stagger effect
+      });
+    });
+  }
+}

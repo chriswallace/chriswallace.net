@@ -24,7 +24,16 @@
     @apply text-foreground;
   }
 
+  font-light{
+    font-weight: 300;
+    font-variation-settings: 'wght' 300;
+  }
+
   /* Headings - All white */
+  .heading-base {
+    @apply font-heading font-normal text-foreground;
+  }
+
   h1,
   h2,
   h3,
@@ -36,7 +45,7 @@
 
   h1,
   .h1 {
-    @apply font-serif ~/3xl:~text-4xl/5xl font-normal mb-12;
+    @apply ~/3xl:~text-6xl/7xl font-normal mb-12 uppercase font-light;
   }
 
   h2,

@@ -2,10 +2,189 @@
   @apply mt-16 mb-6;
 }
 
+.home h1 .word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.home h1 .char {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.home .hero-info {
+  opacity: 0;
+}
+
 .home p{
   @apply text-sm mb-4 max-w-[40rem];
 
   &:last-of-type{
     @apply mb-24;
   }
+}
+
+/* Project Grid Section */
+.project-grid-section {
+  @apply w-full;
+}
+
+.project-grid {
+  @apply flex flex-col gap-0;
+}
+
+.project-row {
+  @apply py-4 border-b border-gray-600/30 transition-all duration-300 ease-out no-underline text-foreground;
+}
+
+.project-row.animate-row {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.project-row > div {
+  @apply flex items-center justify-between;
+}
+span.project-row{
+    @apply hover:bg-white/10 hover:backdrop-blur-sm hover:border-transparent cursor-not-allowed;
+}
+
+a.project-row{
+    @apply hover:bg-primary-500 hover:backdrop-blur-sm hover:border-transparent;
+}
+
+.project-row:last-child {
+  @apply border-b-0;
+}
+
+.project-number {
+  @apply text-2xl font-mono text-gray-600 min-w-[4rem] flex-shrink-0;
+}
+
+.project-name {
+  @apply ~text-5xl/6xl font-medium font-heading uppercase flex-1;
+}
+
+.project-year {
+  @apply text-lg font-mono text-gray-600 min-w-[8rem] text-right flex-shrink-0;
+}
+
+/* Hover effects */
+.project-row:hover .project-number,
+.project-row:hover .project-year {
+  @apply text-white;
+}
+
+.project-row:hover .project-name {
+  @apply text-white;
+}
+
+/* Horizontal Scrolling Images Section */
+.horizontal-scroll-section {
+  @apply relative w-full h-[300vh];
+}
+
+.horizontal-scroll-container {
+  @apply w-full h-[50vh] md:h-[80vh] flex items-center overflow-hidden sticky;
+  top: calc(100vh - 50vh);
+}
+
+@media (min-width: 768px) {
+  .horizontal-scroll-container {
+    top: calc(100vh - 80vh);
+  }
+}
+
+.horizontal-scroll-track {
+  @apply flex items-center h-[50vh] md:h-[80vh] gap-8 will-change-transform;
+}
+
+.scroll-image {
+  @apply flex-shrink-0 h-full;
+}
+
+.scroll-image img,
+.scroll-image picture img {
+  @apply h-full w-auto object-cover rounded-lg shadow-2xl;
+  filter: brightness(0.8) contrast(1.1);
+}
+
+.scroll-image picture {
+  @apply h-full flex items-center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-row {
+    @apply px-4 py-4;
+  }
+  
+  .project-number {
+    @apply text-xl min-w-[3rem];
+  }
+  
+  .project-year {
+    @apply text-base min-w-[6rem];
+  }
+
+  .horizontal-scroll-section {
+    @apply h-[200vh];
+  }
+
+  .horizontal-scroll-container {
+    @apply h-[45vh];
+    top: calc(100vh - 45vh);
+  }
+
+  .horizontal-scroll-track {
+    @apply gap-4 h-[45vh];
+  }
+}
+
+/* Bio Section */
+.bio-section {
+  @apply relative flex items-center justify-center;
+}
+
+.bio-content {
+  @apply text-left;
+}
+
+.bio-paragraph {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Progressive Text Reveal */
+.bio-text .char {
+  color: #505256; /* gray-500 */
+  transition: color 0.3s ease;
+}
+
+.bio-text .char.revealed {
+  color: white;
+}
+
+/* Contact Section */
+.contact-section {
+  @apply relative;
+}
+
+.contact-heading {
+  @apply text-6xl font-medium font-heading uppercase flex-1;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.contact-heading .char {
+  display: inline-block;
+  transform: translateY(40px) rotate(20deg);
+  opacity: 0;
+}
+
+.contact-email {
+  opacity: 0;
+  transform: translateY(30px);
 }

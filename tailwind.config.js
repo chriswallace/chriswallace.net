@@ -46,6 +46,8 @@ export default {
           "Arial",
           "sans-serif",
         ],
+        heading: ['"dharma-gothic-c"', "sans-serif"],
+        "heading-light": ['"dharma-gothic-e"', "sans-serif"],
         mono: [
           '"Tabular"',
           "ui-monospace",
@@ -94,21 +96,33 @@ export default {
           },
         ],
         "3xl": [
-          "1.15rem",
+          "1.25rem",
           {
-            lineHeight: "2rem",
+            lineHeight: "2.5rem",
           },
         ],
         "4xl": [
-          "1.2rem",
+          "1.5rem",
           {
-            lineHeight: "2rem",
+            lineHeight: "3rem",
           },
         ],
         "5xl": [
-          "1.25rem",
+          "2.5rem",
           {
-            lineHeight: "2rem",
+            lineHeight: "2.993rem",
+          },
+        ],
+        "6xl": [
+          "5rem",
+          {
+            lineHeight: "4.7rem",
+          },
+        ],
+        "7xl": [
+          "8rem",
+          {
+            lineHeight: "6.7rem",
           },
         ],
       },

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "jekyll:serve": "bundle exec jekyll serve --incremental --watch --ssl-key ssl/localhost.key --ssl-cert ssl/localhost.crt",
+    "jekyll:serve": "bundle exec jekyll serve --incremental --watch",
     "jekyll:build": "npm run js:minify && bundle exec jekyll build && npm run csso:minify",
     "css:build": "npx tailwindcss -i ./assets/css/main.css -o ./assets/main.css && npx tailwindcss -i ./assets/css/legendary.css -o ./assets/legendary.css && npx tailwindcss -i ./assets/css/interactive.css -o ./assets/interactive.css && npx tailwindcss -i ./assets/css/content-preloader.css -o ./assets/content-preloader.css",
     "csso:minify": "node build-csso.js",
