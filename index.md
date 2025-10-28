@@ -137,7 +137,7 @@ description: Senior product design leader with over 20 years experience building
 <div class="bio-section min-h-screen flex items-center relative overflow-hidden">
         <div class="content-container-wo py-24">
                 <div class="bio-content max-w-6xl mx-auto">
-                        <h2 class="bio-paragraph bio-text ~text-4xl/7xl font-heading-light font-light leading-tight" data-splitting>I'm a design leader with over 20 years of experience building teams, mentoring designers, and creating high-craft digital experiences. Most recently, I was Head of Design at a stealth AI startup where I built the design organization from the ground up. Before that, I spent time at Roblox working on creator tools and marketplace experiences that millions of users interact with daily. At Candy Digital, I led product design for their NFT marketplace and collectibles platform, working closely with major sports leagues like MLB and NFL. I'm passionate about bridging the gap between cutting-edge technology and human-centered design. When I'm not designing, you'll find me exploring generative art, tinkering with new technologies, or mentoring the next generation of designers. I believe great design happens when talented people collaborate with purpose and craft.</h2>
+                        <h2 class="bio-paragraph bio-text ~text-4xl/7xl font-heading-light font-light leading-tight" data-splitting>I'm a design leader and serial founder with 20 years pioneering digital products in entertainment, sports, publishing, and now AI. With $30 million+ in successful exits, I've founded, bought, and built companies of 2 to 250+ employees and driven tens of millions in revenue. After all these years in the industry, two things continue to drive me: helping people and building awesome products.</h2>
                 </div>
         </div>
 </div>
@@ -202,7 +202,7 @@ description: Senior product design leader with over 20 years experience building
 <!-- Contact Section -->
 <div class="contact-section min-h-screen flex items-center justify-center relative">
         <div class="contact-content text-center">
-                <h2 class="contact-heading ~text-8xl/12xl font-heading-light font-light mb-8" data-splitting>Contact</h2>
+                <h2 class="contact-heading ~text-8xl/12xl font-heading-light font-light mb-8" data-splitting>Let's talk</h2>
                 <a href="mailto:chris@chriswallace.net" class="contact-email ~text-xl/3xl font-sans hover:text-primary-500 transition-colors duration-300">chris@chriswallace.net</a>
         </div>
 </div>

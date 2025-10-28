@@ -106,7 +106,7 @@
 
   /* Button Components - Consolidated from buttons.css */
   .button {
-    @apply cursor-pointer rounded-lg px-3 py-2 bg-foreground text-primary-700 hover:bg-primary-500 hover:text-foreground transition-colors duration-150 ease-in-out;
+    @apply cursor-pointer rounded-lg px-3 py-2 bg-foreground text-primary-500 hover:bg-primary-500 hover:text-foreground transition-colors duration-150 ease-in-out;
   }
 
   .button svg {
@@ -114,7 +114,7 @@
   }
 
   .button-dark {
-    @apply button bg-primary-800 text-foreground hover:bg-primary-700;
+    @apply button bg-primary-800 text-foreground hover:bg-primary-500;
   }
 
   .back {

@@ -571,7 +571,7 @@ html,
 
 body {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 75 75 / var(--tw-bg-opacity));
+  background-color: rgb(22 22 28 / var(--tw-bg-opacity));
   font-size: 0.78em;
   --tw-text-opacity: 1;
   color: rgb(236 214 205 / var(--tw-text-opacity));
@@ -671,7 +671,7 @@ i {
   align-items: center;
   gap: 0.5rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 75 75 / var(--tw-bg-opacity));
+  background-color: rgb(174 156 123 / var(--tw-bg-opacity));
   padding: 1.5rem;
   font-size: 4.6rem;
 }
@@ -1634,6 +1634,10 @@ i {
   gap: 1rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .gap-8 {
   gap: 2rem;
 }
@@ -1722,12 +1726,12 @@ i {
 
 .border-primary-500 {
   --tw-border-opacity: 1;
-  border-color: rgb(213 82 46 / var(--tw-border-opacity));
+  border-color: rgb(174 156 123 / var(--tw-border-opacity));
 }
 
 .border-primary-800 {
   --tw-border-opacity: 1;
-  border-color: rgb(134 43 38 / var(--tw-border-opacity));
+  border-color: rgb(109 95 73 / var(--tw-border-opacity));
 }
 
 .bg-\[\#000000\] {
@@ -1760,6 +1764,11 @@ i {
   background-color: rgb(68 68 68 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#AE9C7B\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(174 156 123 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#B0A885\] {
   --tw-bg-opacity: 1;
   background-color: rgb(176 168 133 / var(--tw-bg-opacity));
@@ -1780,14 +1789,9 @@ i {
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
-.bg-orange-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
-}
-
 .bg-primary-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(213 82 46 / var(--tw-bg-opacity));
+  background-color: rgb(174 156 123 / var(--tw-bg-opacity));
 }
 
 .bg-purple-500 {
@@ -2023,14 +2027,9 @@ i {
   color: rgb(5 46 22 / var(--tw-text-opacity));
 }
 
-.text-orange-950 {
-  --tw-text-opacity: 1;
-  color: rgb(67 20 7 / var(--tw-text-opacity));
-}
-
 .text-primary-950 {
   --tw-text-opacity: 1;
-  color: rgb(58 17 16 / var(--tw-text-opacity));
+  color: rgb(47 42 32 / var(--tw-text-opacity));
 }
 
 .text-purple-950 {
@@ -2188,7 +2187,7 @@ body.meetChris {
 
 .hover\:text-primary-500:hover {
   --tw-text-opacity: 1;
-  color: rgb(213 82 46 / var(--tw-text-opacity));
+  color: rgb(174 156 123 / var(--tw-text-opacity));
 }
 
 @media (min-width: 40rem) {

@@ -18,7 +18,7 @@
   }
 
   body {
-    @apply text-[0.78em] md:text-[1em] text-[#ECD6CD] bg-[#FF4B4B];
+    @apply text-[0.78em] md:text-[1em] text-[#ECD6CD] bg-[#16161C];
   }
 
   body.no-scroll {
@@ -59,7 +59,7 @@
   }
 
   .section {
-    @apply w-full min-h-screen grid gap-2 lg:gap-4 p-6 md:p-6 lg:p-12 items-center content-center mx-auto text-[4.6rem] sm:text-[5.2rem] md:text-[6rem] lg:text-[7rem] bg-[#FF4B4B];
+    @apply w-full min-h-screen grid gap-2 lg:gap-4 p-6 md:p-6 lg:p-12 items-center content-center mx-auto text-[4.6rem] sm:text-[5.2rem] md:text-[6rem] lg:text-[7rem] bg-[#AE9C7B];
     scroll-snap-align: start;
   }
 

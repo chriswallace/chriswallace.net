@@ -302,7 +302,7 @@
   transform: scale(105%);
 }
 .lgnd:focus .lgnd__p, .lgnd:focus .lgnd__text, .lgnd:hover .lgnd__p, .lgnd:hover .lgnd__text {
-  background: #f46325;
+  background: #AE9C7B;
   box-shadow: none;
 }
 .lgnd:focus .lgnd__p, .lgnd:hover .lgnd__p {

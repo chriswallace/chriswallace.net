@@ -31,6 +31,10 @@
   @apply w-full;
 }
 
+.project-grid-section h3 {
+  @apply mx-3 md:mx-4;
+}
+
 .project-grid {
   @apply flex flex-col gap-0;
 }
@@ -88,17 +92,17 @@ a.project-row{
 
 .horizontal-scroll-container {
   @apply w-full h-[50vh] md:h-[80vh] flex items-center overflow-hidden sticky;
-  top: calc(100vh - 50vh);
+  top: 50vh;
 }
 
 @media (min-width: 768px) {
   .horizontal-scroll-container {
-    top: calc(100vh - 80vh);
+    top: 20vh;
   }
 }
 
 .horizontal-scroll-track {
-  @apply flex items-center h-[50vh] md:h-[80vh] gap-8 will-change-transform;
+  @apply flex items-center h-[50vh] md:h-[80vh] mx-[16px] md:mx-0 gap-8 will-change-transform;
 }
 
 .scroll-image {
@@ -134,12 +138,65 @@ a.project-row{
   }
 
   .horizontal-scroll-container {
-    @apply h-[45vh];
-    top: calc(100vh - 45vh);
+    @apply h-[60vh];
+    top: 40vh;
   }
 
   .horizontal-scroll-track {
-    @apply gap-4 h-[45vh];
+    @apply gap-6 h-[60vh];
+    /* Add 16px padding on the right to create the final gap */
+    padding-right: 16px;
+  }
+
+  /* Optimize image sizing for 400x439 aspect ratio on mobile */
+  .scroll-image {
+    @apply flex-shrink-0;
+    height: 60vh;
+    width: calc(60vh * 0.91); /* 400/439 aspect ratio */
+  }
+
+  .scroll-image img,
+  .scroll-image picture img {
+    @apply w-full h-full object-cover rounded-lg shadow-2xl;
+    filter: brightness(0.8) contrast(1.1);
+  }
+
+  /* Bio section tablet fixes */
+  .bio-section .content-container-wo {
+    @apply overflow-visible px-6;
+  }
+}
+
+/* Extra small screens - ensure minimum viable size */
+@media (max-width: 480px) {
+  .horizontal-scroll-section {
+    @apply h-[180vh];
+  }
+
+  .horizontal-scroll-container {
+    @apply h-[55vh];
+    top: 45vh;
+  }
+
+  .horizontal-scroll-track {
+    @apply gap-4 h-[55vh];
+    /* Add 16px padding on the right to create the final gap */
+    padding-right: 16px;
+  }
+
+  .scroll-image {
+    height: 55vh;
+    width: calc(55vh * 0.91); /* Maintain 400/439 aspect ratio */
+    min-width: 200px; /* Ensure minimum readable size */
+  }
+
+  /* Bio section mobile fixes */
+  .bio-section .content-container-wo {
+    @apply overflow-visible px-4;
+  }
+
+  .bio-content {
+    @apply max-w-none;
   }
 }
 
@@ -148,13 +205,17 @@ a.project-row{
   @apply relative flex items-center justify-center;
 }
 
+.bio-section .content-container-wo {
+  @apply overflow-visible;
+}
+
 .bio-content {
   @apply text-left;
 }
 
 .bio-paragraph {
-  opacity: 0;
-  transform: translateY(30px);
+  @apply text-6xl font-heading-light uppercase opacity-0 transform translate-x-[30px];
+  line-height: 0.92;
 }
 
 /* Progressive Text Reveal */

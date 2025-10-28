@@ -80,15 +80,24 @@ function initHomepageAnimations() {
 
       scrollImages.forEach((img, index) => {
         totalWidth += img.offsetWidth;
-        // Add gap between images (32px = 2rem)
+        // Add gap between images - responsive gaps matching CSS
         if (index < scrollImages.length - 1) {
-          totalWidth += 32;
+          if (window.innerWidth <= 480) {
+            totalWidth += 16; // gap-4 = 1rem = 16px
+          } else if (window.innerWidth <= 768) {
+            totalWidth += 24; // gap-6 = 1.5rem = 24px
+          } else {
+            totalWidth += 32; // gap-8 = 2rem = 32px
+          }
         }
       });
 
+      // Add the 16px right padding
+      totalWidth += 16;
+
       // Calculate how much we need to scroll
       // Start: first image at left edge (x: 0)
-      // End: last image's right edge at viewport's right edge
+      // End: last image's right edge + 16px padding at viewport's right edge
       const viewportWidth = window.innerWidth;
       const scrollDistance = totalWidth - viewportWidth;
 

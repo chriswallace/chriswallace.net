@@ -4,11 +4,11 @@
   }
 
   .text-gray {
-    @apply text-gray-400;
+    @apply text-primary-700;
   }
 
   .text-muted {
-    @apply text-gray-400;
+    @apply text-primary-500;
   }
 
   strong {

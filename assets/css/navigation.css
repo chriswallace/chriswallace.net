@@ -80,7 +80,7 @@
   }
 
   .menu {
-    @apply fixed top-3 left-3 bg-primary-700 rounded-lg shadow-xl opacity-0 pointer-events-none transition-all duration-300 ease-in-out transform scale-95 origin-top-left;
+    @apply fixed top-3 left-3 bg-primary-500 rounded-lg shadow-xl opacity-0 pointer-events-none transition-all duration-300 ease-in-out transform scale-95 origin-top-left;
     min-width: 200px;
   }
 
@@ -96,7 +96,7 @@
   }
 
   .menu__header {
-    @apply p-4 border-b border-primary-700 flex items-center justify-between;
+    @apply p-4 border-b border-primary-500 flex items-center justify-between;
   }
 
   /* Scale up menu header padding on smaller screens */
@@ -107,7 +107,7 @@
   }
 
   .menu__logo {
-    @apply text-foreground hover:text-gray-100;
+    @apply text-background;
   }
 
   .menu__logo svg {
@@ -116,7 +116,7 @@
 
 
   .menu__close {
-    @apply w-8 h-8 bg-primary-700 hover:bg-primary-600 rounded flex items-center justify-center transition-colors duration-200;
+    @apply w-8 h-8 bg-primary-500 hover:bg-primary-600 rounded flex items-center justify-center transition-colors duration-200;
   }
 
   /* Scale up menu close button on smaller screens */
@@ -139,7 +139,7 @@
 
   .menu__close i:before,
   .menu__close i:after {
-    @apply absolute w-3 h-0.5 bg-gray-100;
+    @apply absolute w-3 h-0.5 bg-primary-900;
     content: "";
   }
 
@@ -164,11 +164,11 @@
   }
 
   .menu__item {
-    @apply border-b border-primary-700 last:border-b-0;
+    @apply border-b border-primary-500 last:border-b-0;
   }
 
   .menu__link {
-    @apply block px-4 py-3 text-foreground hover:bg-primary-600 hover:text-foreground transition-colors duration-200 text-base font-normal capitalize no-underline;
+    @apply block px-4 py-3 text-background hover:bg-primary-600 transition-colors duration-200 text-base font-normal capitalize no-underline;
   }
 
   /* Scale up menu link padding and font size on smaller screens */
@@ -179,15 +179,15 @@
   }
 
   .menu__link:hover {
-    @apply bg-primary-500 text-foreground;
+    @apply bg-primary-700 text-foreground;
   }
 
   .menu__link.active {
-    @apply bg-primary-600 text-foreground;
+    @apply bg-white text-background;
   }
 
   .menu__social {
-    @apply p-4 border-t border-primary-700 flex gap-4;
+    @apply p-4 border-t border-primary-500 flex gap-4;
   }
 
   /* Scale up menu social section on smaller screens */
@@ -198,7 +198,7 @@
   }
 
   .menu__social a {
-    @apply text-foreground hover:text-gray-100 transition-colors duration-200;
+    @apply text-background hover:text-gray-100 transition-colors duration-200;
   }
 
   .menu__social svg {
@@ -240,7 +240,7 @@
 }
 
 .navigation .logo {
-  @apply block w-[42px] h-auto my-0 mx-auto md:p-0;
+  @apply block w-[42px] h-auto my-0 mx-auto md:p-0 text-background;
 }
 
 .open-menu .navigation .logo {

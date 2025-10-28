@@ -10,7 +10,7 @@ description: From hands-on design execution to strategic leadership - comprehens
     <div class="border border-gray-700 rounded-lg p-8 h-full hover:border-gray-400 transition-colors">
       <div class="flex items-start justify-between mb-6">
         <h2 class="mt-0 text-xl" data-scramble>Product Design</h2>
-        <span class="text-xs uppercase font-bold tracking-wider text-orange-950 bg-orange-500 px-2 py-1 rounded">hands-on craft</span>
+        <span class="text-xs uppercase font-bold tracking-wider text-white bg-[#AE9C7B] px-2 py-1 rounded">hands-on craft</span>
       </div>
       <div class="space-y-3 mb-6">
         <div>
