@@ -75,12 +75,11 @@
 
   /* Layout Components */
   .content-container {
-    @apply mx-auto max-w-[calc(100%-32px)] lg:max-w-[calc(100%-64px)] overflow-hidden;
-  }
-
-  .content-container,
-  .content-container-wo {
     @apply mx-auto 2xl:max-w-7xl sm:ml-[128px] sm:mr-[64px] 2xl:mx-auto overflow-hidden;
+  }
+  
+  .content-container-wo {
+    @apply mx-auto 2xl:max-w-7xl sm:ml-[128px] sm:mr-[64px] 2xl:mx-auto;
   }
 
   .sub-heading {

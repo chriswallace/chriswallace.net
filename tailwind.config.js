@@ -62,61 +62,61 @@ export default {
         xs: [
           "0.75rem",
           {
-            lineHeight: "1.4rem",
+            lineHeight: "1.1rem",
           },
         ],
         sm: [
           "0.825rem",
           {
-            lineHeight: "1.5rem",
+            lineHeight: "1.2rem",
           },
         ],
         base: [
           "0.95rem",
           {
-            lineHeight: "1.6rem",
+            lineHeight: "1.35rem",
           },
         ],
         lg: [
           "1rem",
           {
-            lineHeight: "1.5rem",
+            lineHeight: "1.35rem",
           },
         ],
         xl: [
           "1.05rem",
           {
-            lineHeight: "1.7rem",
+            lineHeight: "1.5rem",
           },
         ],
         "2xl": [
           "1.1rem",
           {
-            lineHeight: "1.8rem",
+            lineHeight: "1.5rem",
           },
         ],
         "3xl": [
           "1.25rem",
           {
-            lineHeight: "2.5rem",
+            lineHeight: "1.6rem",
           },
         ],
         "4xl": [
           "1.5rem",
           {
-            lineHeight: "3rem",
+            lineHeight: "1.8rem",
           },
         ],
         "5xl": [
-          "2.5rem",
+          "3.2rem",
           {
-            lineHeight: "2.993rem",
+            lineHeight: "3rem",
           },
         ],
         "6xl": [
-          "5rem",
+          "4.6rem",
           {
-            lineHeight: "4.7rem",
+            lineHeight: "4.2rem",
           },
         ],
         "7xl": [

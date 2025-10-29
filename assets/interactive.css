@@ -1928,7 +1928,7 @@ i {
 
 .text-2xl {
   font-size: 1.1rem;
-  line-height: 1.8rem;
+  line-height: 1.5rem;
 }
 
 .text-\[12em\] {
@@ -1937,27 +1937,27 @@ i {
 
 .text-base {
   font-size: 0.95rem;
-  line-height: 1.6rem;
+  line-height: 1.35rem;
 }
 
 .text-lg {
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.35rem;
 }
 
 .text-sm {
   font-size: 0.825rem;
-  line-height: 1.5rem;
+  line-height: 1.2rem;
 }
 
 .text-xl {
   font-size: 1.05rem;
-  line-height: 1.7rem;
+  line-height: 1.5rem;
 }
 
 .text-xs {
   font-size: 0.75rem;
-  line-height: 1.4rem;
+  line-height: 1.1rem;
 }
 
 .font-bold {
@@ -1978,10 +1978,6 @@ i {
 
 .leading-\[0\.75\] {
   line-height: 0.75;
-}
-
-.leading-tight {
-  line-height: 1.25;
 }
 
 .tracking-wider {
@@ -2109,19 +2105,14 @@ i {
   transition-duration: 300ms;
 }
 
-.\~text-4xl\/7xl {
-  font-size: clamp(1.5rem,-1.45rem + 7.39vw,8rem)/* fluid type from 1.5rem at 40rem to 8rem at 128rem */;
-  line-height: clamp(3rem,1.32rem + 4.2vw,6.7rem)/* fluid from 3rem at 40rem to 6.7rem at 128rem */;
-}
-
 .\~text-base\/sm {
   font-size: clamp(0.825rem,1.007rem + -0.142vw,0.95rem)/* fluid type from 0.95rem at 40rem to 0.825rem at 128rem */;
-  line-height: clamp(1.5rem,1.65rem + -0.11vw,1.6rem)/* fluid from 1.6rem at 40rem to 1.5rem at 128rem */;
+  line-height: clamp(1.2rem,1.42rem + -0.17vw,1.35rem)/* fluid from 1.35rem at 40rem to 1.2rem at 128rem */;
 }
 
 .\~text-xl\/3xl {
   font-size: clamp(1.05rem,0.96rem + 0.23vw,1.25rem)/* fluid type from 1.05rem at 40rem to 1.25rem at 128rem */;
-  line-height: clamp(1.7rem,1.34rem + 0.91vw,2.5rem)/* fluid from 1.7rem at 40rem to 2.5rem at 128rem */;
+  line-height: clamp(1.5rem,1.45rem + 0.11vw,1.6rem)/* fluid from 1.5rem at 40rem to 1.6rem at 128rem */;
 }
 
 body.meetChris {
@@ -2411,7 +2402,7 @@ body.meetChris {
 
   .lg\:text-lg {
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.35rem;
   }
 
   .lg\:shadow-xl {

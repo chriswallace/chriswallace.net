@@ -68,7 +68,7 @@ a.project-row{
 }
 
 .project-name {
-  @apply ~text-5xl/6xl font-medium font-heading uppercase flex-1;
+  @apply text-6xl font-medium font-heading uppercase flex-1;
 }
 
 .project-year {
@@ -165,6 +165,10 @@ a.project-row{
   .bio-section .content-container-wo {
     @apply overflow-visible px-6;
   }
+  
+  .bio-section .bio-content {
+    @apply px-0;
+  }
 }
 
 /* Extra small screens - ensure minimum viable size */
@@ -196,7 +200,11 @@ a.project-row{
   }
 
   .bio-content {
-    @apply max-w-none;
+    @apply max-w-none px-0;
+  }
+  
+  .bio-paragraph {
+    @apply px-0;
   }
 }
 
@@ -214,7 +222,7 @@ a.project-row{
 }
 
 .bio-paragraph {
-  @apply text-6xl font-heading-light uppercase opacity-0 transform translate-x-[30px];
+  @apply font-heading-light uppercase opacity-0 transform ~text-5xl/7xl font-light leading-tight;
   line-height: 0.92;
 }
 

@@ -10,7 +10,7 @@ description: Senior product design leader with over 20 years experience building
                         <span class="lg:col-span-2 text-muted">Chris Wallace</span>
                         <span class="lg:col-span-7 text-muted">prev. Roblox, Stealth AI, Candy Digital</span>
                 </div>
-                <h1 data-splitting>I'm Chris, a design leader crafting meaningful AI-powered digital products for startups and ambitious teams.</h1>
+                <h1 data-splitting>I'm Chris, a design leader who loves bringing people together and building strong communities.</h1>
         </div>
 </div>
 
@@ -137,7 +137,7 @@ description: Senior product design leader with over 20 years experience building
 <div class="bio-section min-h-screen flex items-center relative overflow-hidden">
         <div class="content-container-wo py-24">
                 <div class="bio-content max-w-6xl mx-auto">
-                        <h2 class="bio-paragraph bio-text ~text-4xl/7xl font-heading-light font-light leading-tight" data-splitting>I'm a design leader and serial founder with 20 years pioneering digital products in entertainment, sports, publishing, and now AI. With $30 million+ in successful exits, I've founded, bought, and built companies of 2 to 250+ employees and driven tens of millions in revenue. After all these years in the industry, two things continue to drive me: helping people and building awesome products.</h2>
+                        <h2 class="bio-paragraph bio-text" data-splitting>After 20 years pioneering digital products and leading teams, I've built companies of 2 and 250+ employees, driving tens of millions in revenue with over $30 million in successful exits. After all these years in the industry, two things continue to drive me: helping people and building awesome products.</h2>
                 </div>
         </div>
 </div>
