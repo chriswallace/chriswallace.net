@@ -117,7 +117,7 @@
   }
 
   .back {
-    @apply decoration-foreground mb-6 ml-[62px] sm:ml-0 mt-[28px] inline-block text-base text-gray-400;
+    @apply decoration-foreground mb-12 ml-[62px] mt-[28px] no-underline block text-base text-gray-400;
   }
 
   /* Card Components - Consolidated from cards.css */

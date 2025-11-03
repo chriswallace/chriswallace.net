@@ -30,52 +30,12 @@ description: Senior product design leader with over 20 years experience building
                         </div>
                         <div class="scroll-image">
                                 <picture>
-                                        <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-mobile.png?tr=w-800,q-60,f-auto" />
-                                        <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-desktop.png?tr=w-800,q-60,f-auto 800w,
-                                                        https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-desktop.png?tr=w-1200,q-60,f-auto 1200w,
-                                                        https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-desktop.png?tr=w-1600,q-60,f-auto 1600w,
-                                                        https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-desktop.png?tr=w-2500,q-60,f-auto 2500w" />
-                                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/plymouth-street-dashboard-desktop.png?tr=w-2500,q-60,f-auto" alt="Plymouth Street Dashboard" loading="lazy" />
-                                </picture>
-                        </div>
-                        <div class="scroll-image">
-                                <picture>
-                                        <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-mobile.png?tr=w-800,q-60,f-auto" />
-                                        <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-desktop.png?tr=w-800,q-60,f-auto 800w,
-                                                        https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-desktop.png?tr=w-1200,q-60,f-auto 1200w,
-                                                        https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-desktop.png?tr=w-1600,q-60,f-auto 1600w,
-                                                        https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-desktop.png?tr=w-2500,q-60,f-auto 2500w" />
-                                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/compendium-desktop.png?tr=w-2500,q-60,f-auto" alt="Compendium" loading="lazy" />
-                                </picture>
-                        </div>
-                        <div class="scroll-image">
-                                <picture>
                                         <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-mobile.png?tr=w-800,q-60,f-auto" />
                                         <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-desktop.png?tr=w-800,q-60,f-auto 800w,
                                                         https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-desktop.png?tr=w-1200,q-60,f-auto 1200w,
                                                         https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-desktop.png?tr=w-1600,q-60,f-auto 1600w,
                                                         https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-desktop.png?tr=w-2500,q-60,f-auto 2500w" />
                                         <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/dc3-reader-desktop.png?tr=w-2500,q-60,f-auto" alt="DC3 Reader" loading="lazy" />
-                                </picture>
-                        </div>
-                        <div class="scroll-image">
-                                <picture>
-                                        <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-mobile.png?tr=w-800,q-60,f-auto" />
-                                        <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-desktop.png?tr=w-800,q-60,f-auto 800w,
-                                                        https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-desktop.png?tr=w-1200,q-60,f-auto 1200w,
-                                                        https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-desktop.png?tr=w-1600,q-60,f-auto 1600w,
-                                                        https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-desktop.png?tr=w-2500,q-60,f-auto 2500w" />
-                                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-quests-desktop.png?tr=w-2500,q-60,f-auto" alt="Overdrive Quests" loading="lazy" />
-                                </picture>
-                        </div>
-                        <div class="scroll-image">
-                                <picture>
-                                        <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-mobile.png?tr=w-800,q-60,f-auto" />
-                                        <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-800,q-60,f-auto 800w,
-                                                        https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-1200,q-60,f-auto 1200w,
-                                                        https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-1600,q-60,f-auto 1600w,
-                                                        https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-2500,q-60,f-auto 2500w" />
-                                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/overdrive-market-desktop.png?tr=w-2500,q-60,f-auto" alt="Overdrive Market" loading="lazy" />
                                 </picture>
                         </div>
                         <div class="scroll-image">
@@ -121,13 +81,35 @@ description: Senior product design leader with over 20 years experience building
                                 </picture>
                         </div>
                         <div class="scroll-image">
-                                <picture>
-                                        <source media="(max-width: 480px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-ultrapass-mobile.png?tr=q-60&w-480,f-auto" />
-                                        <source media="(min-width: 481px)" srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-ultrapass-desktop.png?tr=q-60&w-800,f-auto 800w,
-                                                        https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-ultrapass-desktop.png?tr=q-60&w-1280,f-auto 1280w,
-                                                        https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-ultrapass-desktop.png?tr=q-60&w-2560,f-auto 2560w" />
-                                        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/ultradao-ultrapass-desktop.png?tr=q-60&w-1280,f-auto" alt="UltraDAO Ultrapass" loading="lazy" />
-                                </picture>
+                                <video id="twd-video" autoplay muted loop playsinline preload="auto" controls="false">
+                                        <source src="/assets/video/twd-story-sync.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                </video>
+                                <script>
+                                        document.addEventListener('DOMContentLoaded', function() {
+                                                const video = document.getElementById('twd-video');
+                                                if (video) {
+                                                        // Force play on load
+                                                        video.play().catch(e => console.log('Video autoplay failed:', e));
+                                                        
+                                                        // Ensure video keeps playing
+                                                        video.addEventListener('pause', function() {
+                                                                setTimeout(() => {
+                                                                        if (video.paused && !video.ended) {
+                                                                                video.play().catch(e => console.log('Video restart failed:', e));
+                                                                        }
+                                                                }, 100);
+                                                        });
+                                                        
+                                                        // Handle visibility changes
+                                                        document.addEventListener('visibilitychange', function() {
+                                                                if (!document.hidden && video.paused) {
+                                                                        video.play().catch(e => console.log('Video visibility restart failed:', e));
+                                                                }
+                                                        });
+                                                }
+                                        });
+                                </script>
                         </div>
                 </div>
         </div>

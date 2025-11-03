@@ -26,7 +26,7 @@
   @apply mx-auto pt-48 md:p-12 lg:p-24;
 }
 
-.portfolio-container h1 {
+.portfolio-container h1{
   @apply max-w-[calc(100%-2rem)] mx-auto text-center mb-12 pt-24;
 }
 
@@ -35,11 +35,11 @@
 }
 
 .portfolio-content-wrapper {
-  @apply content-container flex flex-col items-center mb-48;
+  @apply content-container flex flex-col items-center mb-48 max-w-[calc(100%-32px)] mx-auto;
 }
 
 .portfolio-group-heading {
-  @apply content-container !pt-0 2xl:mx-auto md:pb-6;
+  @apply content-container !pt-0 2xl:mx-auto md:pb-6  max-w-[calc(100%-32px)] mx-auto;
 }
 
 .portfolio-group-heading dd {
