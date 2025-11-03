@@ -832,20 +832,6 @@ i {
   font-style: normal;
 }
 
-#meetChris .branding {
-  width: auto;
-  place-self: start;
-  --tw-text-opacity: 1;
-  color: rgb(255 213 105 / var(--tw-text-opacity));
-}
-
-@media (min-width: 48rem) {
-  #meetChris .branding {
-    grid-column: span 3 / span 3;
-    grid-column-start: 1;
-  }
-}
-
 #meetChris .branding .lockup {
   display: flex;
   align-items: center;

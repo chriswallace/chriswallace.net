@@ -19,32 +19,22 @@ thumbnail: /assets/images/thumbs/resume.png
       <div class="resume__jobs" itemscope itemtype="http://schema.org/Organization">
         <div class="resume__item" itemprop="employee">
           <h3 class="resume__metadata fade-in-element">
-            <span class="resume__metadata-item--title" itemprop="roleName">Staff Product Designer</span>
-            <span class="resume__metadata-item--place" itemprop="name">Stealth AI Startup</span>
-            <span class="resume__metadata-item--time-period" itemprop="worksFor">July 2025 - Present</span>
+            <span class="resume__metadata-item--title" itemprop="roleName">Lead Product Designer</span>
+            <span class="resume__metadata-item--place" itemprop="name">Wallace Design</span>
+            <span class="resume__metadata-item--time-period" itemprop="worksFor">Mar 2024 - Present</span>
           </h3>
           <div class="resume__description fade-in-element">
-            <p class="mb-6" data-scramble>Leading the design of a new consumer-focused app in the AI companion space. Working across web and desktop product surfaces to design a fun and engaging app. Designing a personalized onboarding experience, visual language, micro-animations, and gamification.</p>
+            <p class="mb-6" data-scramble>Supporting startups and gaming product teams with feature design, user research, motion design, prototyping and more.</p>
           </div>
         </div>
         <div class="resume__item" itemprop="employee">
           <h3 class="resume__metadata fade-in-element">
-            <span class="resume__metadata-item--title" itemprop="roleName">Contract Product Designer</span>
+            <span class="resume__metadata-item--title" itemprop="roleName">Senior Product Designer</span>
             <span class="resume__metadata-item--place" itemprop="name">Roblox</span>
-            <span class="resume__metadata-item--time-period" itemprop="worksFor">Feb 2025 - July 2025</span>
+            <span class="resume__metadata-item--time-period" itemprop="worksFor">Feb 2025 - Jul 2025</span>
           </h3>
           <div class="resume__description fade-in-element">
             <p class="mb-6" data-scramble>Designing features for Avatar Setup, leading user research to gain insights for new features, prototyping new features, and collaborating cross-functionally to drive key initiatives forward.</p>
-          </div>
-        </div>
-        <div class="resume__item" itemprop="employee">
-          <h3 class="resume__metadata fade-in-element">
-            <span class="resume__metadata-item--title" itemprop="roleName">Lead Product Designer</span>
-            <span class="resume__metadata-item--place" itemprop="name">Candy Digital</span>
-            <span class="resume__metadata-item--time-period" itemprop="worksFor">Mar 2024 - Oct 2024</span>
-          </h3>
-          <div class="resume__description fade-in-element">
-            <p class="mb-6" data-scramble>Designed new marketplace features, led the creation of a new design system, redesigned the Candy platform, and created prototypes of custom apps for partners like DC Comics and Major League Baseball.</p>
           </div>
         </div>
         <div class="resume__item" itemprop="employee">
@@ -75,26 +65,6 @@ thumbnail: /assets/images/thumbs/resume.png
           </h3>
           <div class="resume__description fade-in-element">
             <p class="mb-6" data-scramble>Led design of 2x Emmy-nominated and award-winning interactive TV companion apps AMC Story Sync for The Walking Dead/Breaking Bad, and Mad Men: The Fan Cut. Company successfully acquired by 10up in 2017.</p>
-          </div>
-        </div>
-        <div class="resume__item" itemprop="employee">
-          <h3 class="resume__metadata fade-in-element">
-            <span class="resume__metadata-item--title" itemprop="roleName">Front-End Engineer</span>
-            <span class="resume__metadata-item--place" itemprop="name">Enterprise Rent-A-Car</span>
-            <span class="resume__metadata-item--time-period" itemprop="worksFor">Aug 2007 - Dec 2009</span>
-          </h3>
-          <div class="resume__description fade-in-element">
-            <p data-scramble>Built website tools for booking rentals, fleet management, collaborated with UX and Visual Designers to build key user flows and UI elements.</p>
-          </div>
-        </div>
-        <div class="resume__item" itemprop="employee">
-          <h3 class="resume__metadata fade-in-element">
-            <span class="resume__metadata-item--title" itemprop="roleName">Senior E-Commerce Web Designer</span>
-            <span class="resume__metadata-item--place" itemprop="name">Network Solutions</span>
-            <span class="resume__metadata-item--time-period" itemprop="worksFor">May 2006 - Aug 2007</span>
-          </h3>
-          <div class="resume__description fade-in-element">
-            <p data-scramble>Designed online shops for small businesses, collaborated on branding, and created store templates that matched client needs.</p>
           </div>
         </div>
       </div>
