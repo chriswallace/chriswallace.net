@@ -51,6 +51,9 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
 
 <!-- Hero Section -->
 <section class="hero-section" data-section="hero">
+  <video class="hero-video" autoplay muted loop playsinline disablePictureInPicture>
+    <source src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/social_chriswallace_a_close_up_shot_of_a_wall_of_emerald_crystals_as_b1f1c2c3-3e06-4c57-85a3-b3e57b1b7269_3.mp4" type="video/mp4">
+  </video>
   <div class="reveal">
     <span class="hero-label">Hire a Fractional Design Leader</span>
   </div>
@@ -101,7 +104,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <h2 class="work-title reveal">...orrr check out My work</h2>
   </div>
   <div class="work-grid stagger-children">
-    <a href="/portfolio/roblox/" class="work-item">
+    <span class="work-item">
       <img 
         src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/roblox.png?tr=w-544,q-80,f-auto" 
         srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/roblox.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/roblox.png?tr=w-1088,q-80,f-auto 2x" 
@@ -109,8 +112,8 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         class="work-image" 
         loading="lazy">
       <p class="work-description">Embedded for six months, I designed critical avatar auto-setup features for passionate creators in Roblox Studio.</p>
-    </a>
-    <a href="/portfolio/10up/" class="work-item">
+    </span>
+    <span class="work-item">
       <img 
         src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/california-dmv.png?tr=w-544,q-80,f-auto" 
         srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/california-dmv.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/california-dmv.png?tr=w-1088,q-80,f-auto 2x" 
@@ -118,8 +121,8 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         class="work-image" 
         loading="lazy">
       <p class="work-description">At 10up, I grew and developed a remote 25-person design team that redesigned the California DMV's website during covid, bringing key virtual services online.</p>
-    </a>
-    <a href="/portfolio/palm-quest/" class="work-item">
+    </span>
+    <span class="work-item">
       <img 
         src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/eye-appeal-inc.png?tr=w-544,q-80,f-auto" 
         srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/eye-appeal-inc.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/eye-appeal-inc.png?tr=w-1088,q-80,f-auto 2x" 
@@ -127,8 +130,8 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         class="work-image" 
         loading="lazy">
       <p class="work-description">Working with Eye Appeal Inc, I designed a killer brand and app. I even built a full app prototype to secure critical investment and save $100k in dev costs.</p>
-    </a>
-    <a href="/portfolio/candy-marketplace-redesign/" class="work-item">
+    </span>
+    <span class="work-item">
       <img 
         src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.png?tr=w-544,q-80,f-auto" 
         srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.png?tr=w-1088,q-80,f-auto 2x" 
@@ -136,7 +139,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         class="work-image" 
         loading="lazy">
       <p class="work-description">Over nine months, I led a major redesign to establish a world-class digital collectible marketplace with Candy Digital.</p>
-    </a>
+    </span>
     <a href="/portfolio/woodies/" class="work-item">
       <img 
         src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/woodies.png?tr=w-544,q-80,f-auto" 
@@ -146,7 +149,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         loading="lazy">
       <p class="work-description">I established a creative studio that launched a beloved entertainment IP in Woodies, achieving $2.6m revenue in just six months.</p>
     </a>
-    <a href="/portfolio/plymouth-street/" class="work-item">
+    <span class="work-item">
       <img 
         src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/plymouth-street.png?tr=w-544,q-80,f-auto" 
         srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/plymouth-street.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/plymouth-street.png?tr=w-1088,q-80,f-auto 2x" 
@@ -154,7 +157,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         class="work-image" 
         loading="lazy">
       <p class="work-description">Working with Plymouth Street, I helped redesign the process of applying for a high-tech work visa for immigrants seeking US-based jobs.</p>
-    </a>
+    </span>
   </div>
 </section>
 
@@ -172,46 +175,49 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         <p class="testimonial-text">I love working with Chris. He has the rare mix of design instincts and technical ability that makes him incredibly effective. We tackled several major redesigns together, and each time, I was impressed by how he could spot the core user flows and craft solutions that just made sense. He thinks deeply about user experience while actually knowing how to build what he designs. This combination is gold. <span class="testimonial-author">- Mike Chabot, Director of Engineering @ Candy Digital</span></p>
       </div>
     </div>
-    
+
     <!-- Testimonial 2 -->
     <div class="testimonial-card">
-      <div class="testimonial-avatar testimonial-avatar-placeholder">JR</div>
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/1699716169441.jpeg?tr=w-160,h-160,q-80,f-auto" alt="Eric Ginsburg" class="testimonial-avatar" loading="lazy">
       <div class="testimonial-content">
-        <p class="testimonial-text">Chris transformed how our entire product team thinks about design. He didn't just deliver beautiful mockups—he embedded himself in our process, asked the hard questions, and helped us build a design culture that will outlast any single project. The ROI on his engagement was clear within the first month. <span class="testimonial-author">- Jessica Rodriguez, CEO @ TechStart Ventures</span></p>
+        <p class="testimonial-text">Chris is an exceptionally talented and proactive team member, consistently pushing boundaries to deliver innovative, impactful solutions. His technical expertise, thoughtful approach to design, and keen user-centric mindset set him apart in the field.</p>
+        <p class="testimonial-text">His leadership was also instrumental in a complete overhaul of Candy's website and marketplace experience. Working closely with cross-functional stakeholders, Chris aligned technical objectives with our broader product vision, ensuring a seamless, intuitive user experience. The project’s success is a testament to his ability to drive measurable outcomes by marrying technical proficiency with strategic design thinking.</p>
+        <p class="testimonial-text">I highly recommend him and am confident that he will continue to achieve remarkable success in any role he undertakes. <span class="testimonial-author">- Eric Ginsburg, Director of Marketing @ Candy Digital</span></p>
       </div>
     </div>
-    
+
     <!-- Testimonial 3 -->
     <div class="testimonial-card">
-      <div class="testimonial-avatar testimonial-avatar-placeholder">DK</div>
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/1554398737700.jpeg?tr=w-160,h-160,q-80,f-auto" alt="Aaron Frebowitz" class="testimonial-avatar" loading="lazy">
       <div class="testimonial-content">
-        <p class="testimonial-text">We brought Chris in during a critical growth phase, and he immediately identified UX bottlenecks that were costing us conversions. His strategic approach to design helped us increase user engagement by 40% in just three months. He's not just a designer—he's a business partner who happens to think in pixels. <span class="testimonial-author">- David Kim, VP of Product @ ScaleUp Inc</span></p>
+        <p class="testimonial-text">Chris is the rare breed that possesses equal part creative force with technical artistry. He has been instrumental in alleviating many of our infrastructure's existing tech-debts while also proving to be an invaluable resource in suggesting newer, simpler ways of generating visual content. He has an incredibly sharp eye and is well versed in most any tool you’d look toward to solve a problem. And this all pales in comparison to how enjoyable he is to work with. His expertise made me a stronger designer and if your goal is to work with someone who inspires, motivates and brings it day in and day out then look no further! <span class="testimonial-author">- Aaron Frebowitz, Design Director @ Candy Digital</span></p>
       </div>
     </div>
-    
+
     <!-- Testimonial 4 -->
     <div class="testimonial-card">
-      <div class="testimonial-avatar testimonial-avatar-placeholder">SB</div>
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/1516262961412.jpeg?tr=w-160,h-160,q-80,f-auto" alt="Nathan Smith" class="testimonial-avatar" loading="lazy">
       <div class="testimonial-content">
-        <p class="testimonial-text">What sets Chris apart is his ability to mentor and elevate everyone around him. He worked closely with our junior designers, ran critique sessions that actually moved the needle, and left us with a design system that scales. Our team is fundamentally stronger because of his time with us. <span class="testimonial-author">- Sarah Bennett, Head of Design @ Innovate Labs</span></p>
+        <p class="testimonial-text">Chris is one of those rare individuals who is equal parts designer and businessman. He is driven, yet approachable; talented, and humble. He and his team at Lift UX produce quality work, and have a keen understanding of "second screen" user interaction.<span class="testimonial-author">- Nathan Smith, Principal Software Engineer @ Gierd</span></p>
       </div>
     </div>
-    
+
     <!-- Testimonial 5 -->
     <div class="testimonial-card">
-      <div class="testimonial-avatar testimonial-avatar-placeholder">MP</div>
+      <div class="testimonial-avatar testimonial-avatar-placeholder">CW</div>
       <div class="testimonial-content">
-        <p class="testimonial-text">Chris has this rare ability to translate complex technical constraints into elegant user experiences. He worked seamlessly with our engineering team, never compromising on quality while always being pragmatic about what we could ship. I'd hire him again in a heartbeat. <span class="testimonial-author">- Marcus Patel, CTO @ DataFlow Systems</span></p>
+        <p class="testimonial-text">Chris is one of those rare individuals who is equal parts designer and businessman. He is driven, yet approachable; talented, and humble. He and his team at Lift UX produce quality work, and have a keen understanding of "second screen" user interaction. <span class="testimonial-author">- Carolyn Wood, Owner @ pixelingo</span></p>
       </div>
     </div>
-    
+
     <!-- Testimonial 6 -->
     <div class="testimonial-card">
-      <div class="testimonial-avatar testimonial-avatar-placeholder">AL</div>
+      <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/1723669160206.jpeg?tr=w-160,h-160,q-80,f-auto" alt="Nathan Smith" class="testimonial-avatar" loading="lazy">
       <div class="testimonial-content">
-        <p class="testimonial-text">Hiring Chris was one of the best decisions we made last year. He took our scattered design efforts and turned them into a cohesive vision. His weekly syncs became the highlight of our product meetings—always insightful, always actionable, and always pushing us to think bigger. <span class="testimonial-author">- Amanda Liu, Founder @ Bright Path Digital</span></p>
+        <p class="testimonial-text">Chris has a unique ability to see the challenge and tackle it with what's needed to win the game. He's a rare breed of business minded designer with a real knack for getting things done right. <span class="testimonial-author">- Matthew Smith, Big Wimp @ Wimp Coffee</span></p>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -296,11 +302,11 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
       <a href="https://zcal.co/chriswallace" class="btn btn-white" target="_blank" rel="noopener">Schedule a Free Consult</a>
     </div>
     <div class="footer-bottom reveal reveal-delay-1">
-      <p class="footer-copyright">Copyright 2025 Chris Wallace. All rights reserved. Good artists copy. Great artists respect this footer.</p>
+      <p class="footer-copyright">Copyright 2025 $reg; Chris Wallace. All rights reserved. Good artists copy. Great artists respect this footer.</p>
       <div class="footer-links">
         <a href="https://twitter.com/chriswallace" class="footer-link" target="_blank" rel="noopener">Twitter</a>
-        <a href="https://linkedin.com/in/chriswallace" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://facebook.com/chriswallace" class="footer-link" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://linkedin.com/in/chriswallace2" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com/christopher.scott.wallace/" class="footer-link" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
   </div>
@@ -311,6 +317,18 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // Hero video fade-in on load
+  const heroVideo = document.querySelector('.hero-video');
+  if (heroVideo) {
+    if (heroVideo.readyState >= 3) {
+      heroVideo.classList.add('loaded');
+    } else {
+      heroVideo.addEventListener('canplaythrough', function() {
+        heroVideo.classList.add('loaded');
+      });
+    }
+  }
+
   // Scroll reveal animations
   const revealElements = document.querySelectorAll('.reveal, .stagger-children');
   

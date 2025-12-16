@@ -26,23 +26,34 @@
 
 .hero-section::before {
   content: "";
-  @apply absolute inset-0 z-0;
-  background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/hero-bg-desktop.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  @apply absolute inset-0 z-[5];
   opacity: 1;
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
-  .hero-section::before {
-    background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/hero-bg-mobile.svg");
-  }
-}
-
 .hero-section > * {
   @apply relative z-10;
+}
+
+/* Background Video */
+.hero-video {
+  @apply absolute inset-0 w-full h-full object-cover z-[6];
+  pointer-events: none;
+  opacity: 0;
+  mix-blend-mode: hard-light;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero-video.loaded {
+  opacity: 0.2;
+}
+
+.hero-video::-webkit-media-controls {
+  display: none !important;
+}
+
+.hero-video::-webkit-media-controls-enclosure {
+  display: none !important;
 }
 
 .hero-label {
@@ -228,7 +239,7 @@
    TESTIMONIALS SECTION
    ============================================ */
 .testimonials-section {
-  @apply py-24 lg:py-32 px-6 lg:px-32;
+  @apply py-32 px-6 lg:px-48 mt-0 pt-0;
   background: var(--section-testimonials);
 }
 
@@ -248,7 +259,7 @@
 }
 
 .testimonials-grid {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-20 max-w-6xl mx-auto;
 }
 
 .testimonial-card {
@@ -629,7 +640,7 @@
 }
 
 .footer-bottom {
-  @apply flex flex-col lg:flex-row lg:items-center justify-between gap-4 pt-12;
+  @apply flex flex-col lg:flex-row lg:items-center justify-between gap-4 pt-4;
   padding-bottom: 39px;
   border-top: 1px solid rgba(43, 72, 49, 0.4);
 }

@@ -25,9 +25,9 @@
 
 @layer base {
   body {
-    @apply text-foreground bg-background;
+    @apply text-foreground bg-gray-950;
   }
-  
+
   body.home {
     @apply bg-primary-600;
   }
@@ -82,7 +82,7 @@
   .content-container {
     @apply mx-auto 2xl:max-w-7xl sm:ml-[128px] sm:mr-[64px] 2xl:mx-auto overflow-hidden;
   }
-  
+
   .content-container-wo {
     @apply mx-auto 2xl:max-w-7xl sm:ml-[128px] sm:mr-[64px] 2xl:mx-auto;
   }
@@ -340,19 +340,30 @@
 
   /* Animation keyframes */
   @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   @keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 
   @keyframes wave {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
-
-
 }

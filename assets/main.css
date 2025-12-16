@@ -788,7 +788,7 @@ article {
 
 body {
   --tw-bg-opacity: 1;
-  background-color: rgb(48 128 79 / var(--tw-bg-opacity));
+  background-color: rgb(48 51 54 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -2464,7 +2464,8 @@ video::-webkit-media-controls {
 }
 
 @keyframes wave {
-  0%, 100% {
+  0%,
+    100% {
     transform: translateY(0px);
   }
 
@@ -3985,24 +3986,42 @@ a.portfolio-list__link:hover .portfolio-list__image {
   content: "";
   position: absolute;
   inset: 0px;
-  z-index: 0;
-  background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/hero-bg-desktop.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  z-index: 5;
   opacity: 1;
   pointer-events: none;
-}
-
-@media (max-width: 768px) {
-  .hero-section::before {
-    background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/hero-bg-mobile.svg");
-  }
 }
 
 .hero-section > * {
   position: relative;
   z-index: 10;
+}
+
+/* Background Video */
+
+.hero-video {
+  position: absolute;
+  inset: 0px;
+  z-index: 6;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+  opacity: 0;
+  mix-blend-mode: hard-light;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero-video.loaded {
+  opacity: 0.2;
+}
+
+.hero-video::-webkit-media-controls {
+  display: none !important;
+}
+
+.hero-video::-webkit-media-controls-enclosure {
+  display: none !important;
 }
 
 .hero-label {
@@ -4337,18 +4356,18 @@ a.portfolio-list__link:hover .portfolio-list__image {
    ============================================ */
 
 .testimonials-section {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  margin-top: 0px;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-top: 0px;
 }
 
 @media (min-width: 64rem) {
   .testimonials-section {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-    padding-left: 8rem;
-    padding-right: 8rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
   }
 }
 
@@ -4384,7 +4403,9 @@ a.portfolio-list__link:hover .portfolio-list__image {
   display: grid;
   max-width: 72rem;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 2.5rem;
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+  row-gap: 5rem;
 }
 
 @media (min-width: 48rem) {
@@ -4917,7 +4938,7 @@ a.portfolio-list__link:hover .portfolio-list__image {
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
 
 @media (min-width: 64rem) {
