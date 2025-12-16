@@ -1,3 +1,9 @@
+{% if page.layout == 'home' %}
+
+<!-- Homepage uses its own inline navigation -->
+
+{% else %}
+
 <div class="ui-navbar fade-in-element">
   <button id="menu-button" class="menu-button" aria-label="Open Navigation Menu" aria-expanded="false">
     <svg width="24" viewBox="0 0 38 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.48842 29L0 0H7.96031L13.4487 25.0072L17.7222 0H25.7244L32.3413 25.0072L34.9022 13.6594C35.7401 9.68228 34.6528 1.53286 28.913 0H38L32.0507 29H24.0904L17.9735 0.994285L13.4487 29H5.48842Z" fill="currentColor"/></svg>
@@ -36,3 +42,4 @@
     </div>
   </nav>
 </div>
+{% endif %}

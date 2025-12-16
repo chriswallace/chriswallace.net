@@ -13,273 +13,343 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initHomepageAnimations() {
   // ===================================
-  // SECTION 1: Hero Headline Animation
+  // HERO: Initial reveal + subtle parallax
   // ===================================
 
-  const headline = document.querySelector("h1[data-splitting]");
-  const heroInfo = document.querySelector(".hero-info");
+  const heroSection = document.querySelector(".hero-section");
+  const heroLabel = document.querySelector(".hero-label");
+  const heroTitle = document.querySelector(".hero-title");
+  const heroDescription = document.querySelector(".hero-description");
+  const heroButtons = document.querySelector(".hero-buttons");
 
-  if (headline) {
-    // Initialize Splitting.js to split text into words and characters
-    const result = Splitting({ target: headline });
-
-    const chars = headline.querySelectorAll(".char");
-
-    // Create main timeline for hero section
+  if (heroSection) {
+    // Initial reveal animation for hero elements
     const heroTimeline = gsap.timeline();
 
-    // Animate headline characters with sliding door effect
-    heroTimeline.to(chars, {
-      duration: 0.5,
-      y: 0,
-      opacity: 1,
-      ease: "power3.out",
-      stagger: 0.01,
+    // Set initial state - blur and opacity 0
+    gsap.set(heroSection.querySelectorAll(".reveal"), {
+      filter: "blur(10px)",
+      opacity: 0,
     });
 
-    // Fade in hero info after headline animation starts
-    if (heroInfo) {
-      heroTimeline.to(
-        heroInfo,
+    // Reveal hero elements on page load with stagger - blur in effect
+    heroTimeline
+      .to(heroLabel?.closest(".reveal") || heroLabel, {
+        filter: "blur(0px)",
+        opacity: 1,
+        duration: 0.5,
+        ease: "power2.out",
+      })
+      .to(
+        heroTitle,
         {
-          duration: 0.4,
+          filter: "blur(0px)",
           opacity: 1,
+          duration: 0.5,
           ease: "power2.out",
         },
-        "-=0.4"
-      ); // Start before headline finishes
-    }
-  }
-
-  // =====================================================
-  // SECTION 2: Horizontal Scrolling Images with Alignment
-  // =====================================================
-
-  const horizontalScrollSection = document.querySelector(
-    ".horizontal-scroll-section"
-  );
-  const horizontalScrollContainer = document.querySelector(
-    ".horizontal-scroll-container"
-  );
-  const horizontalScrollTrack = document.querySelector(
-    ".horizontal-scroll-track"
-  );
-
-  if (
-    horizontalScrollSection &&
-    horizontalScrollContainer &&
-    horizontalScrollTrack
-  ) {
-    // Calculate exact scroll distance
-    const scrollImages =
-      horizontalScrollTrack.querySelectorAll(".scroll-image");
-
-    // Function to calculate total width
-    const calculateScrollDistance = () => {
-      let totalWidth = 0;
-
-      scrollImages.forEach((img, index) => {
-        totalWidth += img.offsetWidth;
-        // Add gap between images - responsive gaps matching CSS
-        if (index < scrollImages.length - 1) {
-          if (window.innerWidth <= 480) {
-            totalWidth += 16; // gap-4 = 1rem = 16px
-          } else if (window.innerWidth <= 768) {
-            totalWidth += 24; // gap-6 = 1.5rem = 24px
-          } else {
-            totalWidth += 32; // gap-8 = 2rem = 32px
-          }
-        }
-      });
-
-      // Add the 16px right padding
-      totalWidth += 16;
-
-      // Calculate how much we need to scroll
-      // Start: first image at left edge (x: 0)
-      // End: last image's right edge + 16px padding at viewport's right edge
-      const viewportWidth = window.innerWidth;
-      const scrollDistance = totalWidth - viewportWidth;
-
-      return scrollDistance;
-    };
-
-    // Set initial position at left edge
-    gsap.set(horizontalScrollTrack, { x: 0 });
-
-    // Create the horizontal scroll animation
-    // Use container as trigger, start when bottom hits viewport bottom
-    gsap.to(horizontalScrollTrack, {
-      x: () => -calculateScrollDistance(),
-      ease: "none",
-      scrollTrigger: {
-        trigger: horizontalScrollContainer,
-        start: "bottom bottom", // Start when container bottom reaches viewport bottom (fully visible)
-        end: () =>
-          `+=${horizontalScrollSection.offsetHeight - window.innerHeight}`, // Scroll through remaining section height
-        scrub: 1,
-        invalidateOnRefresh: true,
-      },
-    });
-  }
-
-  // ==============================================
-  // BIO SECTION: Text and Image Animations
-  // ==============================================
-
-  const bioSection = document.querySelector(".bio-section");
-  const bioParagraph = document.querySelector(".bio-paragraph");
-  const bioText = document.querySelector(".bio-text");
-
-  // Initialize Splitting.js for the main bio text
-  if (bioText) {
-    Splitting({ target: bioText });
-  }
-
-  // Animate bio paragraph (initial reveal)
-  if (bioParagraph) {
-    gsap.to(bioParagraph, {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: bioParagraph,
-        start: "top 85%",
-        toggleActions: "play none none none",
-      },
-    });
-  }
-
-  // Progressive text reveal effect for the single paragraph
-  if (bioText) {
-    const chars = bioText.querySelectorAll(".char");
-
-    if (chars.length > 0) {
-      chars.forEach((char, index) => {
-        ScrollTrigger.create({
-          trigger: bioSection,
-          start: "top 50%",
-          end: "bottom 50%",
-          scrub: true,
-          onUpdate: (self) => {
-            const progress = self.progress;
-            const charProgress = progress * chars.length - index;
-
-            if (charProgress > 0) {
-              char.classList.add("revealed");
-            } else {
-              char.classList.remove("revealed");
-            }
-          },
-        });
-      });
-    }
-  }
-
-  // ==============================================
-  // CONTACT SECTION: Fun Animated Contact
-  // ==============================================
-
-  const contactSection = document.querySelector(".contact-section");
-  const contactHeading = document.querySelector(".contact-heading");
-  const contactEmail = document.querySelector(".contact-email");
-
-  // Initialize Splitting.js for contact heading
-  if (contactHeading) {
-    Splitting({ target: contactHeading });
-  }
-
-  // Animate contact heading with fun character effects
-  if (contactHeading) {
-    const chars = contactHeading.querySelectorAll(".char");
-
-    gsap.to(contactHeading, {
-      opacity: 1,
-      y: 0,
-      duration: 0.6,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: contactSection,
-        start: "top 70%",
-        toggleActions: "play none none none",
-      },
-    });
-
-    if (chars.length > 0) {
-      gsap.to(chars, {
-        y: 0,
-        rotation: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: "back.out(1.4)",
-        stagger: 0.08,
-        scrollTrigger: {
-          trigger: contactSection,
-          start: "top 70%",
-          toggleActions: "play none none none",
+        "-=0.3"
+      )
+      .to(
+        heroDescription,
+        {
+          filter: "blur(0px)",
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.out",
         },
-        delay: 0.2,
-      });
-    }
-  }
+        "-=0.3"
+      )
+      .to(
+        heroButtons,
+        {
+          filter: "blur(0px)",
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.out",
+        },
+        "-=0.3"
+      );
 
-  // Animate email with bounce effect
-  if (contactEmail) {
-    gsap.to(contactEmail, {
-      opacity: 1,
-      y: 0,
-      duration: 0.6,
-      ease: "bounce.out",
-      scrollTrigger: {
-        trigger: contactSection,
-        start: "top 70%",
-        toggleActions: "play none none none",
-      },
-      delay: 0.8,
+    // Add visible class to prevent CSS transitions from interfering
+    heroTimeline.eventCallback("onComplete", () => {
+      heroSection
+        .querySelectorAll(".reveal")
+        .forEach((el) => el.classList.add("visible"));
     });
   }
 
-  // ==============================================
-  // SECTION 3: Staggered Project Row Animations
-  // ==============================================
+  // ===================================
+  // PROFILE: Image reveal with scale
+  // ===================================
 
-  const projectSection = document.querySelector(".project-grid-section");
-  const projectHeading = projectSection?.querySelector("h3");
-  const projectRows = document.querySelectorAll(".project-row.animate-row");
+  // ===================================
+  // CTA BANNER: Fade up
+  // ===================================
 
-  // Animate the "Recent Clients" heading first
-  if (projectHeading) {
-    gsap.set(projectHeading, { opacity: 0, y: 30 });
+  const ctaBanner = document.querySelector(".cta-banner");
+  const ctaText = document.querySelector(".cta-text");
+  const ctaButton = document.querySelector(".cta-button");
+  const ctaWMark = document.querySelector(".cta-banner img");
 
-    gsap.to(projectHeading, {
-      opacity: 1,
-      y: 0,
-      duration: 0.6,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: projectHeading,
-        start: "top 85%",
-        toggleActions: "play none none none",
-      },
-    });
-  }
-
-  // Animate project rows with stagger
-  if (projectRows.length > 0) {
-    projectRows.forEach((row, index) => {
-      gsap.to(row, {
+  if (ctaBanner && ctaText) {
+    gsap.fromTo(
+      ctaText,
+      { filter: "blur(10px)", opacity: 0 },
+      {
+        filter: "blur(0px)",
         opacity: 1,
-        y: 0,
-        duration: 0.4,
-        ease: "power3.out",
+        duration: 0.6,
+        ease: "power2.out",
         scrollTrigger: {
-          trigger: row,
+          trigger: ctaBanner,
           start: "top 80%",
-          toggleActions: "play none none none",
+          toggleActions: "play none none reverse",
         },
-        delay: index * 0.05, // Stagger effect
-      });
+      }
+    );
+  }
+
+  if (ctaButton) {
+    gsap.fromTo(
+      ctaButton,
+      { filter: "blur(10px)", opacity: 0 },
+      {
+        filter: "blur(0px)",
+        opacity: 1,
+        duration: 0.6,
+        delay: 0.1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ctaBanner,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }
+
+  if (ctaWMark) {
+    gsap.fromTo(
+      ctaWMark,
+      { scale: 0.9, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 0.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ctaBanner,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }
+
+  // ===================================
+  // WORK GRID: Staggered fade up
+  // ===================================
+
+  const workItems = document.querySelectorAll(".work-item");
+
+  if (workItems.length > 0) {
+    workItems.forEach((item) => {
+      gsap.fromTo(
+        item,
+        {
+          filter: "blur(12px)",
+          opacity: 0,
+        },
+        {
+          filter: "blur(0px)",
+          opacity: 1,
+          duration: 0.6,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 88%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // Subtle hover scale on images
+      const img = item.querySelector(".work-image");
+      if (img) {
+        item.addEventListener("mouseenter", () => {
+          gsap.to(img, { scale: 1.02, duration: 0.4, ease: "power2.out" });
+        });
+        item.addEventListener("mouseleave", () => {
+          gsap.to(img, { scale: 1, duration: 0.4, ease: "power2.out" });
+        });
+      }
     });
   }
+
+  // ===================================
+  // TESTIMONIALS: Fade up
+  // ===================================
+
+  const testimonialsSection = document.querySelector(".testimonials-section");
+  const testimonialTitle = document.querySelector(".testimonials-title");
+
+  if (testimonialTitle) {
+    gsap.fromTo(
+      testimonialTitle,
+      { filter: "blur(10px)", opacity: 0 },
+      {
+        filter: "blur(0px)",
+        opacity: 1,
+        duration: 0.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: testimonialsSection,
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }
+
+  // ===================================
+  // APPROACH: Circular text + process cards
+  // ===================================
+
+  const approachSection = document.querySelector(".approach-section");
+  const processCards = document.querySelectorAll(".process-card");
+  const engagements = document.querySelector(".engagements");
+
+  if (processCards.length > 0) {
+    processCards.forEach((card, index) => {
+      gsap.fromTo(
+        card,
+        {
+          filter: "blur(10px)",
+          opacity: 0,
+        },
+        {
+          filter: "blur(0px)",
+          opacity: 1,
+          duration: 0.5,
+          delay: index * 0.08,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".approach-circle",
+            start: "top 70%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+  }
+
+  // Engagement columns stagger
+  const engagementColumns = document.querySelectorAll(".engagement-column");
+
+  if (engagementColumns.length > 0) {
+    engagementColumns.forEach((col, index) => {
+      gsap.fromTo(
+        col,
+        { filter: "blur(10px)", opacity: 0 },
+        {
+          filter: "blur(0px)",
+          opacity: 1,
+          duration: 0.5,
+          delay: index * 0.08,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: engagements,
+            start: "top 75%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+  }
+
+  // ===================================
+  // FOOTER: Fade up
+  // ===================================
+
+  const footerSection = document.querySelector(".footer-section");
+  const footerTop = document.querySelector(".footer-top");
+
+  if (footerTop) {
+    gsap.fromTo(
+      footerTop,
+      { filter: "blur(12px)", opacity: 0 },
+      {
+        filter: "blur(0px)",
+        opacity: 1,
+        duration: 0.6,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: footerSection,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }
+
+  // ===================================
+  // GLOBAL: Subtle scroll progress indicator
+  // ===================================
+
+  // Create a subtle progress bar at top of page
+  const progressBar = document.createElement("div");
+  progressBar.className = "scroll-progress";
+  progressBar.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: var(--color-green-accent);
+    transform-origin: left;
+    transform: scaleX(0);
+    z-index: 9999;
+    pointer-events: none;
+  `;
+  document.body.appendChild(progressBar);
+
+  gsap.to(progressBar, {
+    scaleX: 1,
+    ease: "none",
+    scrollTrigger: {
+      trigger: document.body,
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 0.3,
+    },
+  });
+
+  // ===================================
+  // SMOOTH REVEAL: Generic reveal class handler
+  // ===================================
+
+  // Handle .reveal elements that aren't caught by other animations
+  const revealElements = document.querySelectorAll(".reveal:not(.visible)");
+
+  revealElements.forEach((el) => {
+    if (!el.closest(".hero-section")) {
+      // Skip hero, it has custom handling
+      gsap.fromTo(
+        el,
+        { filter: "blur(8px)", opacity: 0 },
+        {
+          filter: "blur(0px)",
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 88%",
+            toggleActions: "play none none none",
+            onEnter: () => el.classList.add("visible"),
+          },
+        }
+      );
+    }
+  });
 }

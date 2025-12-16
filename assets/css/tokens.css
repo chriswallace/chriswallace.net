@@ -2,7 +2,33 @@
   --font-size-base: 16px;
   --navbar-width: 80px;
   
-  /* New color palette */
-  --color-background: #16161C;
-  --color-text: #151515;
+  /* Brand Color Palette */
+  --color-green-primary: #30804f;
+  --color-green-dark: #225d55;
+  --color-green-darker: #113034;
+  --color-green-light: #4f9d6e;
+  --color-green-accent: #83e36b;
+  --color-green-bright: #8fd570;
+  
+  --color-teal: #90b9b4;
+  --color-cream: #f2f6e5;
+  --color-white: #ffffff;
+  --color-dark: #21231f;
+  --color-dark-card: #101410;
+  
+  /* Semantic Colors */
+  --color-background: var(--color-green-primary);
+  --color-background-dark: var(--color-green-darker);
+  --color-text: var(--color-white);
+  --color-text-muted: rgba(33, 35, 31, 0.6);
+  --color-accent: var(--color-green-accent);
+  
+  /* Section Backgrounds */
+  --section-hero: var(--color-green-primary);
+  --section-profile: var(--color-white);
+  --section-cta: var(--color-teal);
+  --section-work: var(--color-white);
+  --section-testimonials: var(--color-cream);
+  --section-approach: var(--color-green-darker);
+  --section-footer: var(--color-green-bright);
 }

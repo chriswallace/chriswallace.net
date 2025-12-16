@@ -1,45 +1,132 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const menuButton = document.getElementById("menu-button");
-  const menuClose = document.getElementById("menu-close");
-  const navigationList = document.getElementById("navigation-items");
+  // Mobile menu elements
+  const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+  const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+  const navLinks = document.querySelectorAll(".nav-link");
 
-  // Toggle menu on hamburger button click
-  menuButton.addEventListener("click", () => {
-    document.body.classList.toggle("open-menu");
-    const isOpen = document.body.classList.contains("open-menu");
-    menuButton.setAttribute("aria-expanded", isOpen);
-  });
+  if (!mobileMenuToggle || !mobileMenu) return;
 
-  // Close menu on close button click
-  menuClose.addEventListener("click", () => {
-    document.body.classList.remove("open-menu");
-    menuButton.setAttribute("aria-expanded", "false");
-  });
+  // Toggle menu on tab click
+  mobileMenuToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = mobileMenu.classList.contains("open");
 
-  // Close menu when clicking outside
-  document.addEventListener("click", (event) => {
-    // Check if the clicked element is not the menu button, close button, or inside the navigation
-    if (
-      !menuButton.contains(event.target) &&
-      !navigationList.contains(event.target)
-    ) {
-      // Close the menu if it's open
-      if (document.body.classList.contains("open-menu")) {
-        document.body.classList.remove("open-menu");
-        menuButton.setAttribute("aria-expanded", "false");
-      }
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
     }
+  });
+
+  // Close menu when clicking overlay
+  if (mobileMenuOverlay) {
+    mobileMenuOverlay.addEventListener("click", () => {
+      closeMenu();
+    });
+  }
+
+  // Close menu when clicking a link
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMenu();
+    });
   });
 
   // Close menu when pressing Escape key
   document.addEventListener("keydown", (event) => {
-    if (
-      event.key === "Escape" &&
-      document.body.classList.contains("open-menu")
-    ) {
-      document.body.classList.remove("open-menu");
-      menuButton.setAttribute("aria-expanded", "false");
-      menuButton.focus(); // Return focus to menu button
+    if (event.key === "Escape" && mobileMenu.classList.contains("open")) {
+      closeMenu();
+      mobileMenuToggle.focus();
     }
   });
+
+  // Touch/swipe support for pull-down gesture on the toggle button
+  let touchStartY = 0;
+
+  mobileMenuToggle.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartY = e.touches[0].clientY;
+    },
+    { passive: true }
+  );
+
+  mobileMenuToggle.addEventListener(
+    "touchend",
+    (e) => {
+      const touchEndY = e.changedTouches[0].clientY;
+      const swipeDistance = touchEndY - touchStartY;
+      // If swiped down more than 20px, open menu
+      if (swipeDistance > 20 && !mobileMenu.classList.contains("open")) {
+        openMenu();
+      }
+    },
+    { passive: true }
+  );
+
+  // Swipe up on menu to close
+  mobileMenu.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartY = e.touches[0].clientY;
+    },
+    { passive: true }
+  );
+
+  mobileMenu.addEventListener(
+    "touchend",
+    (e) => {
+      const touchEndY = e.changedTouches[0].clientY;
+      const swipeDistance = touchStartY - touchEndY;
+      // If swiped up more than 40px, close menu
+      if (swipeDistance > 40 && mobileMenu.classList.contains("open")) {
+        closeMenu();
+      }
+    },
+    { passive: true }
+  );
+
+  const siteNavbar = document.getElementById("site-navbar");
+
+  function openMenu() {
+    mobileMenu.classList.add("open");
+    mobileMenuToggle.classList.add("open");
+    if (mobileMenuOverlay) mobileMenuOverlay.classList.add("open");
+    if (siteNavbar) siteNavbar.classList.add("menu-open");
+    mobileMenuToggle.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    mobileMenu.classList.remove("open");
+    mobileMenuToggle.classList.remove("open");
+    if (mobileMenuOverlay) mobileMenuOverlay.classList.remove("open");
+    if (siteNavbar) siteNavbar.classList.remove("menu-open");
+    mobileMenuToggle.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+
+  // Update active mobile menu link based on scroll position
+  function updateActiveMobileLink() {
+    const sections = document.querySelectorAll("section[id]");
+    let current = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 200;
+      if (window.pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    mobileMenuLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", updateActiveMobileLink);
 });

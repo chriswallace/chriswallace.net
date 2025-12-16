@@ -11,6 +11,7 @@
 @import "utilities.css";
 
 /* Remaining component imports - larger files that benefit from separation */
+@import "buttons.css";
 @import "navigation.css";
 @import "contact-grid.css";
 @import "resume.css";
@@ -25,6 +26,10 @@
 @layer base {
   body {
     @apply text-foreground bg-background;
+  }
+  
+  body.home {
+    @apply bg-primary-600;
   }
 
   /* Ensure all images stay within containers */

@@ -154,7 +154,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: "Tabular", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -243,7 +243,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: "Tabular", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-family: "Kode Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
@@ -1447,10 +1447,6 @@ i {
   min-height: 480px;
 }
 
-.min-h-screen {
-  min-height: 100vh;
-}
-
 .w-3 {
   width: 0.75rem;
 }
@@ -1479,14 +1475,6 @@ i {
   max-width: 64rem;
 }
 
-.max-w-6xl {
-  max-width: 72rem;
-}
-
-.max-w-\[1200px\] {
-  max-width: 1200px;
-}
-
 .max-w-\[1680px\] {
   max-width: 1680px;
 }
@@ -1509,10 +1497,6 @@ i {
 
 .max-w-\[740px\] {
   max-width: 740px;
-}
-
-.max-w-\[calc\(100\%-32px\)\] {
-  max-width: calc(100% - 32px);
 }
 
 .max-w-full {
@@ -1542,10 +1526,6 @@ i {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.resize {
-  resize: both;
 }
 
 .list-outside {
@@ -1584,10 +1564,6 @@ i {
   align-items: flex-start;
 }
 
-.items-end {
-  align-items: flex-end;
-}
-
 .items-center {
   align-items: center;
 }
@@ -1622,10 +1598,6 @@ i {
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
 }
 
 .gap-8 {
@@ -1716,12 +1688,12 @@ i {
 
 .border-primary-500 {
   --tw-border-opacity: 1;
-  border-color: rgb(174 156 123 / var(--tw-border-opacity));
+  border-color: rgb(79 157 110 / var(--tw-border-opacity));
 }
 
 .border-primary-800 {
   --tw-border-opacity: 1;
-  border-color: rgb(109 95 73 / var(--tw-border-opacity));
+  border-color: rgb(43 72 49 / var(--tw-border-opacity));
 }
 
 .bg-\[\#000000\] {
@@ -1781,7 +1753,7 @@ i {
 
 .bg-primary-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(174 156 123 / var(--tw-bg-opacity));
+  background-color: rgb(79 157 110 / var(--tw-bg-opacity));
 }
 
 .bg-purple-500 {
@@ -1908,14 +1880,6 @@ i {
   text-align: center;
 }
 
-.font-heading-light {
-  font-family: "dharma-gothic-e", sans-serif;
-}
-
-.font-sans {
-  font-family: "Tabular", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-}
-
 .text-2xl {
   font-size: 1.1rem;
   line-height: 1.5rem;
@@ -1954,10 +1918,6 @@ i {
   font-weight: 700;
 }
 
-.font-light {
-  font-weight: 300;
-}
-
 .font-medium {
   font-weight: 500;
 }
@@ -1989,8 +1949,7 @@ i {
 }
 
 .text-foreground-muted {
-  --tw-text-opacity: 1;
-  color: rgb(181 191 196 / var(--tw-text-opacity));
+  color: rgba(33, 35, 31, 0.6);
 }
 
 .text-gray-400 {
@@ -2015,7 +1974,7 @@ i {
 
 .text-primary-950 {
   --tw-text-opacity: 1;
-  color: rgb(47 42 32 / var(--tw-text-opacity));
+  color: rgb(16 20 16 / var(--tw-text-opacity));
 }
 
 .text-purple-950 {
@@ -2067,6 +2026,11 @@ i {
   outline-style: solid;
 }
 
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -2091,18 +2055,9 @@ i {
   transition-duration: 150ms;
 }
 
-.duration-300 {
-  transition-duration: 300ms;
-}
-
 .\~text-base\/sm {
   font-size: clamp(0.825rem,1.007rem + -0.142vw,0.95rem)/* fluid type from 0.95rem at 40rem to 0.825rem at 128rem */;
   line-height: clamp(1.2rem,1.42rem + -0.17vw,1.35rem)/* fluid from 1.35rem at 40rem to 1.2rem at 128rem */;
-}
-
-.\~text-xl\/3xl {
-  font-size: clamp(1.05rem,0.96rem + 0.23vw,1.25rem)/* fluid type from 1.05rem at 40rem to 1.25rem at 128rem */;
-  line-height: clamp(1.5rem,1.45rem + 0.11vw,1.6rem)/* fluid from 1.5rem at 40rem to 1.6rem at 128rem */;
 }
 
 body.meetChris {
@@ -2164,11 +2119,6 @@ body.meetChris {
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(238 240 241 / var(--tw-bg-opacity));
-}
-
-.hover\:text-primary-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(174 156 123 / var(--tw-text-opacity));
 }
 
 @media (min-width: 40rem) {
@@ -2331,10 +2281,6 @@ body.meetChris {
 
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;
-  }
-
-  .lg\:col-span-7 {
-    grid-column: span 7 / span 7;
   }
 
   .lg\:mx-auto {

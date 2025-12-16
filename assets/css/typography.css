@@ -17,14 +17,16 @@
 
   html,
   body {
-    @apply ~text-base/lg;
+    @apply ~text-base/lg font-sans;
   }
 
   body {
     @apply text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  font-light{
+  .font-light {
     font-weight: 300;
     font-variation-settings: 'wght' 300;
   }
@@ -45,17 +47,19 @@
 
   h1,
   .h1 {
-    @apply ~/3xl:~text-6xl/7xl font-normal mb-12 uppercase font-light;
+    @apply ~/3xl:~text-6xl/7xl font-normal mb-12 uppercase;
+    font-weight: 300;
+    font-variation-settings: 'wght' 300;
   }
 
   h2,
   .h2 {
-    @apply font-serif ~text-3xl/4xl font-normal mt-16 sm:mt-24;
+    @apply font-heading ~text-3xl/4xl font-normal mt-16 sm:mt-24;
   }
 
   h3,
   .h3 {
-    @apply font-serif ~text-2xl/3xl font-normal mb-6 mt-6 sm:mt-12;
+    @apply font-heading ~text-2xl/3xl font-normal mb-6 mt-6 sm:mt-12;
   }
 
   h4,

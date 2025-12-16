@@ -1,0 +1,52 @@
+/* ============================================
+   BUTTON STYLES
+   Three variants: bright, white, dark
+   Uses SVG backgrounds with sliding door technique
+   ============================================ */
+
+/* Button Base Styles */
+.btn {
+  @apply inline-flex items-center justify-center text-center font-sans font-bold no-underline relative;
+  font-size: 16px;
+  padding: 16px 24px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: auto auto;
+  transition: all 0.2s ease;
+  color: var(--color-green-accent);
+  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-dark.svg');
+}
+
+.btn:hover {
+  @apply no-underline;
+  transform: scale(1.04);
+}
+
+/* Small button variant */
+.btn-sm {
+  font-size: 16px;
+  padding: 17px 24px;
+}
+
+/* ============================================
+   BRIGHT BUTTON (Green accent background)
+   Use on: Hero section, Navbar
+   ============================================ */
+.btn-bright {
+  color: #2b4831;
+  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-bright.svg');
+}
+
+/* ============================================
+   WHITE BUTTON (White background)
+   Use on: CTA banner (teal section)
+   ============================================ */
+.btn-white {
+  color: #215c55;
+  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-white.svg');
+}
+
+.btn-white:hover {
+  color: #215c55;
+}

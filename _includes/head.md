@@ -14,39 +14,55 @@
   <meta http-equiv="Expires" content="86400">
   {% seo title=true %}
 
-  <!-- Preconnect to Fontshare -->
-  <link rel="preconnect" href="https://api.fontshare.com">
-  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Preconnect to Adobe Fonts -->
-  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
-
-  <!-- Load Tabular font from Fontshare -->
-  <link href="https://api.fontshare.com/v2/css?f[]=tabular@1&display=swap" rel="stylesheet">
+  <!-- Load fonts from Google - Kode Mono + fallback display fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Load dharma-gothic-c and dharma-gothic-e from Adobe Fonts -->
-  <link rel="stylesheet" href="https://use.typekit.net/eub1ezs.css">
+  <!-- Bandeins Variable Fonts - Self-hosted -->
+  <style>
+    @font-face {
+      font-family: 'Bandeins Sans';
+      src: url('/assets/fonts/BandeinsSansVariable.woff2') format('woff2-variations'),
+           url('/assets/fonts/BandeinsSansVariable.woff2') format('woff2');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    @font-face {
+      font-family: 'Bandeins Strange';
+      src: url('/assets/fonts/BandeinsStrangeVariable.woff2') format('woff2-variations'),
+           url('/assets/fonts/BandeinsStrangeVariable.woff2') format('woff2');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
 
   <!-- Font loading optimization -->
   <script>
     if ("fonts" in document) {
-      // Add a class to indicate fonts are not loaded yet
       document.documentElement.classList.add('fonts-loading');
       
       Promise.all([
-        document.fonts.load('400 1em "Tabular"'),
-        document.fonts.load('300 1em "Tabular"'),
-        document.fonts.load('700 1em "Tabular"'),
-        document.fonts.load('400 1em "dharma-gothic-c"'),
-        document.fonts.load('300 1em "dharma-gothic-e"')
+        document.fonts.load('400 1em "Bandeins Sans"'),
+        document.fonts.load('300 1em "Bandeins Sans"'),
+        document.fonts.load('600 1em "Bandeins Sans"'),
+        document.fonts.load('700 1em "Bandeins Sans"'),
+        document.fonts.load('300 1em "Bandeins Strange"'),
+        document.fonts.load('400 1em "Bandeins Strange"'),
+        document.fonts.load('600 1em "Bandeins Strange"'),
+        document.fonts.load('400 1em "Kode Mono"'),
+        document.fonts.load('400 1em "Space Grotesk"'),
+        document.fonts.load('400 1em "Syne"')
       ]).then(() => {
-        // Remove loading class and add loaded class when fonts are ready
         document.documentElement.classList.remove('fonts-loading');
         document.documentElement.classList.add('fonts-loaded');
-        // Dispatch an event that can be used by other scripts
         document.dispatchEvent(new Event('fontsLoaded'));
       }).catch(() => {
-        // In case of failure, remove loading class to ensure content is displayed
         document.documentElement.classList.remove('fonts-loading');
       });
     }
