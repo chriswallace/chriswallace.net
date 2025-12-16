@@ -5,6 +5,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
   const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
   const navLinks = document.querySelectorAll(".nav-link");
+  const siteNavbar = document.getElementById("site-navbar");
+
+  // Navbar scroll effect (works on all pages)
+  if (siteNavbar) {
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > 100) {
+        siteNavbar.classList.add("scrolled");
+      } else {
+        siteNavbar.classList.remove("scrolled");
+      }
+    });
+  }
 
   if (!mobileMenuToggle || !mobileMenu) return;
 
@@ -88,8 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
     { passive: true }
   );
 
-  const siteNavbar = document.getElementById("site-navbar");
-
   function openMenu() {
     mobileMenu.classList.add("open");
     mobileMenuToggle.classList.add("open");
@@ -107,6 +119,13 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileMenuToggle.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
   }
+
+  // Close menu when clicking a nav link (for internal pages)
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMenu();
+    });
+  });
 
   // Update active mobile menu link based on scroll position
   function updateActiveMobileLink() {

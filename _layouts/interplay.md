@@ -365,9 +365,7 @@ layout: compress
     </script>
   <body>
     <div class="ui-frame">
-      <div class="ui-navbar">
-        {% include header.md %}
-      </div>
+      {% include header.md %}
       <div class="ui-content">
         {{ content }}
       </div>

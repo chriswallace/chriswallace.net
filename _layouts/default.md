@@ -3,9 +3,7 @@
   {% include head.md %}
   <body class="{{ page.layout }}">
     <div class="ui-frame">
-      <div class="ui-navbar">
-        {% include header.md %}
-      </div>
+      {% include header.md %}
       <div class="ui-content">
         {{ content }}
         {% include footer.md %}

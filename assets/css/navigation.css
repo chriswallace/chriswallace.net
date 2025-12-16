@@ -44,7 +44,7 @@
   }
 
   .menu-button:hover i:before,
-  .menu-button:hover i:after{
+  .menu-button:hover i:after {
     @apply bg-gray-100;
   }
 
@@ -113,7 +113,6 @@
   .menu__logo svg {
     @apply w-8 h-8;
   }
-
 
   .menu__close {
     @apply w-8 h-8 bg-primary-500 hover:bg-primary-600 rounded flex items-center justify-center transition-colors duration-200;
@@ -269,4 +268,257 @@
 
 .navigation .social svg {
   @apply fill-current;
+}
+
+/* ============================================
+   SITE NAVBAR (Shared between homepage & internal pages)
+   ============================================ */
+.site-navbar {
+  @apply fixed top-0 left-0 right-0 z-50 flex flex-col lg:flex-row items-center justify-between px-6 py-6 lg:px-16;
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.site-navbar.scrolled {
+  background: rgba(30, 30, 30, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.site-navbar.scrolled .site-logo-img {
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.site-logo-link {
+  @apply no-underline;
+}
+
+.site-logo-text {
+  @apply text-white font-heading text-2xl font-semibold tracking-tight no-underline;
+  font-variation-settings: "wght" 600, "wdth" 125;
+}
+
+.site-logo-img {
+  @apply h-9 w-auto;
+  transition: filter 0.3s ease;
+}
+
+.nav-links {
+  @apply hidden lg:flex items-center gap-8;
+}
+
+.nav-link {
+  @apply text-white text-base font-sans no-underline relative pb-2;
+  font-weight: 300;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  @apply text-white no-underline;
+}
+
+.nav-link.active {
+  @apply font-bold;
+}
+
+.nav-link.active::after {
+  content: "";
+  @apply absolute bottom-0 left-0 right-0 h-[3px];
+  background: var(--color-green-accent);
+}
+
+.nav-cta {
+  @apply btn btn-bright btn-sm;
+}
+
+/* Mobile Menu Pull Tab - appears below logo */
+.mobile-menu-btn {
+  @apply lg:hidden flex items-center justify-center bg-transparent border-0 cursor-pointer;
+  padding: 4px 8px 2px;
+  margin-top: 8px;
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-handle {
+  @apply block rounded-full;
+  width: 26px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  transition: background 0.2s ease;
+}
+
+.mobile-menu-btn:hover .mobile-menu-handle,
+.mobile-menu-btn.open .mobile-menu-handle {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive navbar adjustments */
+@media (max-width: 1024px) {
+  .nav-links {
+    @apply hidden;
+  }
+
+  .nav-cta {
+    @apply hidden lg:inline-flex;
+  }
+}
+
+/* ============================================
+   INTERNAL PAGE NAVBAR VARIANT
+   Light background with dark text
+   ============================================ */
+body:not(.home) .site-navbar .nav-link {
+  @apply text-gray-700;
+}
+
+body:not(.home) .site-navbar .nav-link:hover {
+  @apply text-gray-900 no-underline;
+}
+
+body:not(.home) .site-navbar .mobile-menu-handle {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+body:not(.home) .site-navbar .mobile-menu-btn:hover .mobile-menu-handle,
+body:not(.home) .site-navbar .mobile-menu-btn.open .mobile-menu-handle {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* When scrolled on internal pages, keep white text */
+body:not(.home) .site-navbar.scrolled .nav-link {
+  @apply text-white;
+}
+
+body:not(.home) .site-navbar.scrolled .nav-link:hover {
+  @apply text-white no-underline;
+}
+
+body:not(.home) .site-navbar.scrolled .mobile-menu-handle {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+body:not(.home)
+  .site-navbar.scrolled
+  .mobile-menu-btn:hover
+  .mobile-menu-handle {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================
+   MOBILE MENU (Pull-down Sheet)
+   ============================================ */
+.mobile-menu {
+  @apply fixed left-0 right-0 z-[60] flex flex-col items-center lg:hidden;
+  top: 0;
+  background: #181818;
+  transform: translateY(-100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  padding: 40px 24px 20px;
+  border-radius: 0 0 16px 16px;
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+}
+
+/* CTA button at top of menu */
+.mobile-menu-cta {
+  @apply mb-8;
+}
+
+.mobile-menu-cta .btn {
+  font-size: 16px;
+  padding: 16px 24px;
+}
+
+/* Navigation links */
+.mobile-menu-links {
+  @apply flex flex-col items-center gap-0 w-full;
+}
+
+.mobile-menu-link {
+  @apply text-white font-heading no-underline py-3 text-center w-full;
+  font-size: 23px;
+  font-variation-settings: "wght" 300, "wdth" 125;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.mobile-menu-link.active {
+  font-variation-settings: "wght" 700, "wdth" 125;
+  position: relative;
+}
+
+.mobile-menu-link.active::after {
+  content: "";
+  @apply absolute left-1/2 -translate-x-1/2 h-[3px] rounded-full;
+  bottom: 6px;
+  width: 100%;
+  max-width: 114px;
+  background: var(--color-green-accent);
+}
+
+.mobile-menu.open .mobile-menu-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger the link animations */
+.mobile-menu.open .mobile-menu-link:nth-child(1) {
+  transition-delay: 0.08s;
+}
+.mobile-menu.open .mobile-menu-link:nth-child(2) {
+  transition-delay: 0.12s;
+}
+.mobile-menu.open .mobile-menu-link:nth-child(3) {
+  transition-delay: 0.16s;
+}
+.mobile-menu.open .mobile-menu-link:nth-child(4) {
+  transition-delay: 0.2s;
+}
+.mobile-menu.open .mobile-menu-link:nth-child(5) {
+  transition-delay: 0.24s;
+}
+.mobile-menu.open .mobile-menu-link:nth-child(6) {
+  transition-delay: 0.28s;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:active {
+  color: var(--color-green-accent);
+}
+
+/* Logo at bottom of menu */
+.mobile-menu-logo {
+  @apply mt-8;
+}
+
+.mobile-menu-logo img {
+  height: 36px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+/* Pull handle at bottom */
+.mobile-menu-handle-bottom {
+  @apply mt-6 rounded-full;
+  width: 26px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Overlay behind menu */
+.mobile-menu-overlay {
+  @apply fixed inset-0 bg-black/50 z-30 lg:hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
 }

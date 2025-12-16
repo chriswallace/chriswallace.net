@@ -7,9 +7,7 @@ layout: compress
   {% include head.md %}
   <body>
     <div class="ui-frame">
-      <div class="ui-navbar">
-        {% include header.md %}
-      </div>
+      {% include header.md %}
       <div class="ui-content relative">
         {{ content }}
       </div>

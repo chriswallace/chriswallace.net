@@ -169,7 +169,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <div class="testimonial-card">
       <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/testimonial-avatar-mike-chabot.png?tr=w-160,h-160,q-80,f-auto" alt="Mike Chabot" class="testimonial-avatar" loading="lazy">
       <div class="testimonial-content">
-        <p class="testimonial-text">I love working with Chris. He has the rare mix of design instincts and technical ability that makes him incredibly effective. We tackled several major redesigns together, and each time, I was impressed by how he could spot the core user flows and craft solutions that just made sense. He thinks deeply about user experience while actually knowing how to build what he designs. This combination is gold.  - Mike Chabot, Director of Engineering @ Candy Digital</p>
+        <p class="testimonial-text">I love working with Chris. He has the rare mix of design instincts and technical ability that makes him incredibly effective. We tackled several major redesigns together, and each time, I was impressed by how he could spot the core user flows and craft solutions that just made sense. He thinks deeply about user experience while actually knowing how to build what he designs. This combination is gold. <span class="testimonial-author">- Mike Chabot, Director of Engineering @ Candy Digital</span></p>
       </div>
     </div>
     
@@ -177,7 +177,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <div class="testimonial-card">
       <div class="testimonial-avatar testimonial-avatar-placeholder">JR</div>
       <div class="testimonial-content">
-        <p class="testimonial-text">Chris transformed how our entire product team thinks about design. He didn't just deliver beautiful mockups—he embedded himself in our process, asked the hard questions, and helped us build a design culture that will outlast any single project. The ROI on his engagement was clear within the first month.  - Jessica Rodriguez, CEO @ TechStart Ventures</p>
+        <p class="testimonial-text">Chris transformed how our entire product team thinks about design. He didn't just deliver beautiful mockups—he embedded himself in our process, asked the hard questions, and helped us build a design culture that will outlast any single project. The ROI on his engagement was clear within the first month. <span class="testimonial-author">- Jessica Rodriguez, CEO @ TechStart Ventures</span></p>
       </div>
     </div>
     
@@ -185,7 +185,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <div class="testimonial-card">
       <div class="testimonial-avatar testimonial-avatar-placeholder">DK</div>
       <div class="testimonial-content">
-        <p class="testimonial-text">We brought Chris in during a critical growth phase, and he immediately identified UX bottlenecks that were costing us conversions. His strategic approach to design helped us increase user engagement by 40% in just three months. He's not just a designer—he's a business partner who happens to think in pixels.  - David Kim, VP of Product @ ScaleUp Inc</p>
+        <p class="testimonial-text">We brought Chris in during a critical growth phase, and he immediately identified UX bottlenecks that were costing us conversions. His strategic approach to design helped us increase user engagement by 40% in just three months. He's not just a designer—he's a business partner who happens to think in pixels. <span class="testimonial-author">- David Kim, VP of Product @ ScaleUp Inc</span></p>
       </div>
     </div>
     
@@ -193,7 +193,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <div class="testimonial-card">
       <div class="testimonial-avatar testimonial-avatar-placeholder">SB</div>
       <div class="testimonial-content">
-        <p class="testimonial-text">What sets Chris apart is his ability to mentor and elevate everyone around him. He worked closely with our junior designers, ran critique sessions that actually moved the needle, and left us with a design system that scales. Our team is fundamentally stronger because of his time with us.  - Sarah Bennett, Head of Design @ Innovate Labs</p>
+        <p class="testimonial-text">What sets Chris apart is his ability to mentor and elevate everyone around him. He worked closely with our junior designers, ran critique sessions that actually moved the needle, and left us with a design system that scales. Our team is fundamentally stronger because of his time with us. <span class="testimonial-author">- Sarah Bennett, Head of Design @ Innovate Labs</span></p>
       </div>
     </div>
     
@@ -201,7 +201,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <div class="testimonial-card">
       <div class="testimonial-avatar testimonial-avatar-placeholder">MP</div>
       <div class="testimonial-content">
-        <p class="testimonial-text">Chris has this rare ability to translate complex technical constraints into elegant user experiences. He worked seamlessly with our engineering team, never compromising on quality while always being pragmatic about what we could ship. I'd hire him again in a heartbeat.  - Marcus Patel, CTO @ DataFlow Systems</p>
+        <p class="testimonial-text">Chris has this rare ability to translate complex technical constraints into elegant user experiences. He worked seamlessly with our engineering team, never compromising on quality while always being pragmatic about what we could ship. I'd hire him again in a heartbeat. <span class="testimonial-author">- Marcus Patel, CTO @ DataFlow Systems</span></p>
       </div>
     </div>
     
@@ -209,7 +209,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <div class="testimonial-card">
       <div class="testimonial-avatar testimonial-avatar-placeholder">AL</div>
       <div class="testimonial-content">
-        <p class="testimonial-text">Hiring Chris was one of the best decisions we made last year. He took our scattered design efforts and turned them into a cohesive vision. His weekly syncs became the highlight of our product meetings—always insightful, always actionable, and always pushing us to think bigger.  - Amanda Liu, Founder @ Bright Path Digital</p>
+        <p class="testimonial-text">Hiring Chris was one of the best decisions we made last year. He took our scattered design efforts and turned them into a cohesive vision. His weekly syncs became the highlight of our product meetings—always insightful, always actionable, and always pushing us to think bigger. <span class="testimonial-author">- Amanda Liu, Founder @ Bright Path Digital</span></p>
       </div>
     </div>
   </div>
@@ -222,13 +222,13 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
   <div class="approach-circle reveal reveal-delay-1">
     <img 
       src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/approach-text-path-large.svg" 
-      alt="Research→Design→Build→Learn→" 
+      alt="Research→Design→Build→Learn" 
       class="circular-text circular-text-desktop"
       loading="lazy"
     />
     <img 
       src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/approach-text-path-small.svg" 
-      alt="Research→Design→Build→Learn→" 
+      alt="Research→Design→Build→Learn" 
       class="circular-text circular-text-mobile"
       loading="lazy"
     />
@@ -254,7 +254,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
   </div>
   
   <div class="engagements reveal reveal-delay-2">
-    <h3 class="engagements-title">cUSTOMIZED ENGAGEMENTS OFTEN INCLUDE</h3>
+    <h3 class="engagements-title">Customized engagements often include</h3>
     <div class="engagements-grid">
       <div class="engagement-column">
         <h4>Design Strategy</h4>
