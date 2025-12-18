@@ -3,11 +3,11 @@
 }
 
 .notifications--notification-item {
-  @apply ~text-base/2xl no-underline text-highlight block;
+  @apply text-heading no-underline text-highlight block;
 }
 
 .notifications--notification-item .notifications--notification-overline {
-  @apply border-t-0 pt-2 font-sans pb-1 font-medium text-xs block text-gray-400 uppercase;
+  @apply border-t-0 pt-2 font-sans pb-1 font-medium text-body block text-gray-400 uppercase;
 }
 
 .notifications--notification-item:hover .notifications--notification-overline {

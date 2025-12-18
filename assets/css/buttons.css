@@ -6,16 +6,10 @@
 
 /* Button Base Styles */
 .btn {
-  @apply inline-flex items-center justify-center text-center font-sans font-bold no-underline relative;
-  font-size: 16px;
-  padding: 16px 24px;
-  background-color: transparent;
-  background-repeat: no-repeat;
+  @apply inline-flex items-center justify-center text-center font-sans font-bold no-underline relative text-body py-4 px-6 bg-transparent bg-no-repeat transition-all duration-200 text-accent;
+  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-dark.svg');
   background-position: top right;
   background-size: auto auto;
-  transition: all 0.2s ease;
-  color: var(--color-green-accent);
-  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-dark.svg');
 }
 
 .btn:hover {
@@ -25,8 +19,15 @@
 
 /* Small button variant */
 .btn-sm {
-  font-size: 16px;
-  padding: 17px 24px;
+  @apply text-body py-[17px] px-6;
+}
+
+/* Reduce button text size on large screens */
+@media (min-width: 1024px) {
+  .btn,
+  .btn-sm {
+    font-size: 0.9375rem; /* 15px */
+  }
 }
 
 /* ============================================
@@ -34,7 +35,7 @@
    Use on: Hero section, Navbar
    ============================================ */
 .btn-bright {
-  color: #2b4831;
+  @apply text-primary-800;
   background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-bright.svg');
 }
 
@@ -43,10 +44,10 @@
    Use on: CTA banner (teal section)
    ============================================ */
 .btn-white {
-  color: #215c55;
+  @apply text-secondary;
   background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-white.svg');
 }
 
 .btn-white:hover {
-  color: #215c55;
+  @apply text-secondary;
 }

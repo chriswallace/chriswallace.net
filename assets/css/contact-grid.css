@@ -12,11 +12,11 @@
   }
 
   .contact-grid__title {
-    @apply text-lg font-medium text-white mb-2 text-center;
+    @apply text-subheading font-medium text-white mb-2 text-center;
   }
 
   .contact-grid__description {
-    @apply text-gray-400 text-center text-sm;
+    @apply text-gray-400 text-center text-body;
   }
 
   .contact-grid__link {

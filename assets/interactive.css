@@ -1240,14 +1240,6 @@ i {
   position: relative;
 }
 
-.z-20 {
-  z-index: 20;
-}
-
-.z-30 {
-  z-index: 30;
-}
-
 .col-span-4 {
   grid-column: span 4 / span 4;
 }
@@ -1399,10 +1391,6 @@ i {
   display: none;
 }
 
-.aspect-\[4\/3\] {
-  aspect-ratio: 4/3;
-}
-
 .aspect-\[5\/2\.6\] {
   aspect-ratio: 5/2.6;
 }
@@ -1443,10 +1431,6 @@ i {
   max-height: 100%;
 }
 
-.min-h-\[480px\] {
-  min-height: 480px;
-}
-
 .w-3 {
   width: 0.75rem;
 }
@@ -1455,12 +1439,21 @@ i {
   width: 0.875rem;
 }
 
+.w-\[220px\] {
+  width: 220px;
+}
+
 .w-\[320px\] {
   width: 320px;
 }
 
 .w-auto {
   width: auto;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .w-full {
@@ -1477,10 +1470,6 @@ i {
 
 .max-w-\[1680px\] {
   max-width: 1680px;
-}
-
-.max-w-\[220px\] {
-  max-width: 220px;
 }
 
 .max-w-\[30rem\] {
@@ -1508,11 +1497,15 @@ i {
 }
 
 .max-w-prose {
-  max-width: 81.25ch;
+  max-width: 52ch;
 }
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 
 .grow {
@@ -1600,6 +1593,10 @@ i {
   gap: 1rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .gap-8 {
   gap: 2rem;
 }
@@ -1632,10 +1629,6 @@ i {
   overflow: hidden;
 }
 
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-
 .text-ellipsis {
   text-overflow: ellipsis;
 }
@@ -1650,10 +1643,6 @@ i {
 
 .rounded-lg {
   border-radius: 0.5rem;
-}
-
-.rounded-sm {
-  border-radius: 0.125rem;
 }
 
 .rounded-xl {
@@ -1699,11 +1688,6 @@ i {
 .bg-\[\#000000\] {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#020202\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(2 2 2 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#084C2B\] {
@@ -1786,14 +1770,6 @@ i {
   --tw-gradient-to: #0C1301 var(--tw-gradient-to-position);
 }
 
-.bg-cover {
-  background-size: cover;
-}
-
-.bg-\[center_center\] {
-  background-position: center center;
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1809,6 +1785,10 @@ i {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .p-8 {
@@ -1881,8 +1861,8 @@ i {
 }
 
 .text-2xl {
-  font-size: 1.1rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-\[12em\] {
@@ -1890,28 +1870,28 @@ i {
 }
 
 .text-base {
-  font-size: 0.95rem;
-  line-height: 1.35rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-lg {
-  font-size: 1rem;
-  line-height: 1.35rem;
+  font-size: clamp(1.5rem, 1.2rem + 0.75vw, 2.25rem);
+  line-height: 1.2;
 }
 
 .text-sm {
-  font-size: 0.825rem;
-  line-height: 1.2rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xl {
-  font-size: 1.05rem;
-  line-height: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-xs {
   font-size: 0.75rem;
-  line-height: 1.1rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -1934,11 +1914,6 @@ i {
   letter-spacing: 0.05em;
 }
 
-.\!text-white {
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
-}
-
 .text-black\/60 {
   color: rgb(0 0 0 / 0.6);
 }
@@ -1949,12 +1924,7 @@ i {
 }
 
 .text-foreground-muted {
-  color: rgba(33, 35, 31, 0.6);
-}
-
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(181 191 196 / var(--tw-text-opacity));
+  color: var(--color-muted);
 }
 
 .text-gray-600 {
@@ -1994,10 +1964,6 @@ i {
 
 .text-white\/60 {
   color: rgb(255 255 255 / 0.6);
-}
-
-.text-white\/70 {
-  color: rgb(255 255 255 / 0.7);
 }
 
 .underline {
@@ -2056,8 +2022,8 @@ i {
 }
 
 .\~text-base\/sm {
-  font-size: clamp(0.825rem,1.007rem + -0.142vw,0.95rem)/* fluid type from 0.95rem at 40rem to 0.825rem at 128rem */;
-  line-height: clamp(1.2rem,1.42rem + -0.17vw,1.35rem)/* fluid from 1.35rem at 40rem to 1.2rem at 128rem */;
+  font-size: clamp(0.875rem,1.057rem + -0.142vw,1rem)/* fluid type from 1rem at 40rem to 0.875rem at 128rem */;
+  line-height: clamp(1.25rem,1.61rem + -0.28vw,1.5rem)/* fluid from 1.5rem at 40rem to 1.25rem at 128rem */;
 }
 
 body.meetChris {
@@ -2068,48 +2034,6 @@ body.meetChris {
 /* Define layer order for this standalone stylesheet */
 
 @layer base, components, utilities;
-
-.before\:absolute::before {
-  content: var(--tw-content);
-  position: absolute;
-}
-
-.before\:inset-0::before {
-  content: var(--tw-content);
-  inset: 0px;
-}
-
-.before\:bg-gradient-to-b::before {
-  content: var(--tw-content);
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-}
-
-.before\:from-gray-950\/0::before {
-  content: var(--tw-content);
-  --tw-gradient-from: rgb(48 51 54 / 0) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(48 51 54 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.before\:from-50\%::before {
-  content: var(--tw-content);
-  --tw-gradient-from-position: 50%;
-}
-
-.before\:to-black::before {
-  content: var(--tw-content);
-  --tw-gradient-to: #000 var(--tw-gradient-to-position);
-}
-
-.before\:opacity-100::before {
-  content: var(--tw-content);
-  opacity: 1;
-}
-
-.before\:content-\[\'\'\]::before {
-  --tw-content: '';
-  content: var(--tw-content);
-}
 
 .hover\:border-gray-400:hover {
   --tw-border-opacity: 1;
@@ -2179,16 +2103,20 @@ body.meetChris {
     margin-bottom: 6rem;
   }
 
+  .md\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .md\:ml-0 {
     margin-left: 0px;
   }
 
-  .md\:mt-32 {
-    margin-top: 8rem;
+  .md\:ml-auto {
+    margin-left: auto;
   }
 
-  .md\:aspect-\[21\/9\] {
-    aspect-ratio: 21/9;
+  .md\:mt-32 {
+    margin-top: 8rem;
   }
 
   .md\:h-screen {
@@ -2201,6 +2129,14 @@ body.meetChris {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:items-center {
+    align-items: center;
   }
 
   .md\:gap-4 {
@@ -2240,16 +2176,16 @@ body.meetChris {
     padding-bottom: 0px;
   }
 
-  .md\:pb-8 {
-    padding-bottom: 2rem;
-  }
-
   .md\:pl-0 {
     padding-left: 0px;
   }
 
   .md\:pt-24 {
     padding-top: 6rem;
+  }
+
+  .md\:text-right {
+    text-align: right;
   }
 
   .md\:text-black\/60 {
@@ -2337,8 +2273,8 @@ body.meetChris {
   }
 
   .lg\:text-lg {
-    font-size: 1rem;
-    line-height: 1.35rem;
+    font-size: clamp(1.5rem, 1.2rem + 0.75vw, 2.25rem);
+    line-height: 1.2;
   }
 
   .lg\:shadow-xl {
@@ -2365,23 +2301,8 @@ body.meetChris {
     color: rgb(238 240 241 / var(--tw-text-opacity));
   }
 
-  .dark\:text-gray-400 {
-    --tw-text-opacity: 1;
-    color: rgb(181 191 196 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-
   .dark\:text-white\/70 {
     color: rgb(255 255 255 / 0.7);
-  }
-
-  .dark\:before\:to-gray-950::before {
-    content: var(--tw-content);
-    --tw-gradient-to: #303336 var(--tw-gradient-to-position);
   }
 
   .dark\:hover\:bg-gray-800:hover {

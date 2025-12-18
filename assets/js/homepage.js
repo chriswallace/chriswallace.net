@@ -154,6 +154,12 @@ function initHomepageAnimations() {
   const workItems = document.querySelectorAll(".work-item");
 
   if (workItems.length > 0) {
+    // Set initial state immediately to prevent flash
+    gsap.set(workItems, {
+      filter: "blur(12px)",
+      opacity: 0,
+    });
+
     workItems.forEach((item) => {
       gsap.fromTo(
         item,

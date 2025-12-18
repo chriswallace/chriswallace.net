@@ -19,7 +19,7 @@
 }
 
 .services__description {
-  @apply text-foreground mb-8 text-base font-medium capitalize;
+  @apply text-foreground mb-8 text-body font-medium capitalize;
 }
 
 .services__package svg {
@@ -27,15 +27,15 @@
 }
 
 .services__service-title {
-  @apply text-base font-medium flex gap-[12px] items-start text-highlight mb-0;
+  @apply text-body font-medium flex gap-[12px] items-start text-highlight mb-0;
 }
 
 .services__service-description {
-  @apply ml-[36px] text-base mb-8 lg:min-h-[54px] 2xl:min-h-[72px];
+  @apply ml-[36px] text-body mb-8 lg:min-h-[54px] 2xl:min-h-[72px];
 }
 
 .services__ideal {
-  @apply mt-8 italic text-muted text-sm;
+  @apply mt-8 italic text-muted text-body;
 }
 
 @layer components {
@@ -52,14 +52,14 @@
   }
 
   .services__service-title {
-    @apply text-white mb-0 flex items-start gap-3 text-base font-medium text-gray-400;
+    @apply text-white mb-0 flex items-start gap-3 text-body font-medium text-gray-400;
   }
 
   .services__service-description {
-    @apply ml-9 mb-8 text-base lg:min-h-[54px] 2xl:min-h-[72px] text-white;
+    @apply ml-9 mb-8 text-body lg:min-h-[54px] 2xl:min-h-[72px] text-white;
   }
 
   .services__ideal {
-    @apply text-gray-400 mt-8 text-sm italic;
+    @apply text-gray-400 mt-8 text-body italic;
   }
 }

@@ -24,12 +24,17 @@
 @import "legendary.css";
 
 @layer base {
+  html {
+    background-color: #eef2eb;
+  }
+
   body {
-    @apply text-foreground bg-gray-950;
+    @apply text-foreground;
+    background-color: #eef2eb;
   }
 
   body.home {
-    @apply bg-primary-600;
+    background-color: #eef2eb;
   }
 
   /* Ensure all images stay within containers */
@@ -105,7 +110,7 @@
   }
 
   figcaption {
-    @apply ~text-xs/sm text-gray-400 my-2 mx-4 sm:mt-2 sm:mb-8 block text-center;
+    @apply text-body text-muted my-2 mx-4 sm:mt-2 sm:mb-8 block text-center;
   }
 
   /* Button Components - Consolidated from buttons.css */
@@ -122,7 +127,7 @@
   }
 
   .back {
-    @apply decoration-foreground mb-12 ml-[62px] mt-[28px] no-underline block text-base text-gray-400;
+    @apply decoration-foreground mb-12 ml-[62px] mt-[28px] no-underline block text-body text-gray-400;
   }
 
   /* Card Components - Consolidated from cards.css */
@@ -167,7 +172,7 @@
   }
 
   .project-list {
-    @apply table md:block w-auto md:w-full ~text-xs/sm max-w-none mb-4 md:mb-0;
+    @apply table md:block w-auto md:w-full text-body max-w-none mb-4 md:mb-0;
   }
 
   .project-list div {
@@ -365,5 +370,16 @@
     50% {
       transform: translateY(-10px);
     }
+  }
+}
+
+@layer overrides {
+  html,
+  body {
+    background-color: #eef2eb;
+  }
+  
+  body.home {
+    background-color: #eef2eb;
   }
 }

@@ -23,11 +23,11 @@
 }
 
 .testimonial__text {
-  @apply max-w-none mb-3 font-serif ~text-lg/xl font-normal text-center text-foreground;
+  @apply max-w-none mb-3 font-serif text-heading font-normal text-center text-foreground;
 }
 
 .testimonial__author {
-  @apply mb-0 ~text-xs/sm text-center max-w-none !leading-normal;
+  @apply mb-0 text-body text-center max-w-none !leading-normal;
 }
 
 .testimonial__emphasis {

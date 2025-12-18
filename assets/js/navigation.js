@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Add portfolio class to body if on portfolio page
+  if (
+    window.location.pathname.startsWith("/portfolio/") ||
+    window.location.pathname === "/portfolio"
+  ) {
+    document.body.classList.add("portfolio-page");
+  }
+
   // Mobile menu elements
   const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");

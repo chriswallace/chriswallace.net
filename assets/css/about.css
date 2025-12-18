@@ -1,5 +1,5 @@
 .wave-hand {
-  @apply text-[2.5rem] md:text-[4rem] inline-block mb-8;
+  @apply text-heading inline-block mb-8;
   animation: wave 6s ease-in-out infinite;
   transform-origin: 70% 70%;
 }

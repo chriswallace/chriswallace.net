@@ -2,7 +2,16 @@
   --font-size-base: 16px;
   --navbar-width: 80px;
 
-  /* Brand Color Palette */
+  /* Semantic Color Tokens */
+  --color-text: #1D1D1D;
+  --color-primary: #30804f;
+  --color-secondary: #225d55;
+  --color-bg: #30804f;
+  --color-fg: #1D1D1D;
+  --color-muted: rgba(33, 35, 31, 0.6);
+  --color-accent: #83e36b;
+
+  /* Legacy Brand Colors (for backward compatibility) */
   --color-green-primary: #30804f;
   --color-green-dark: #225d55;
   --color-green-darker: #113034;
@@ -16,19 +25,17 @@
   --color-dark: #21231f;
   --color-dark-card: #101410;
 
-  /* Semantic Colors */
-  --color-background: var(--color-green-primary);
+  /* Legacy Semantic Colors (for backward compatibility) */
+  --color-background: var(--color-primary);
   --color-background-dark: var(--color-green-darker);
-  --color-text: var(--color-white);
-  --color-text-muted: rgba(33, 35, 31, 0.6);
-  --color-accent: var(--color-green-accent);
+  --color-text-muted: var(--color-muted);
 
-  /* Section Backgrounds */
-  --section-hero: var(--color-green-primary);
-  --section-profile: var(--color-white);
-  --section-cta: var(--color-teal);
-  --section-work: var(--color-white);
-  --section-testimonials: var(--color-cream);
-  --section-approach: var(--color-green-darker);
-  --section-footer: var(--color-green-bright);
+  /* Section Backgrounds (Monochromatic palette) */
+  --section-hero: #ffffff;
+  --section-profile: #f5f7f3;
+  --section-cta: #3d6b4f;
+  --section-work: #f5f7f3;
+  --section-testimonials: #e6ede4;
+  --section-approach: #1a2e22;
+  --section-footer: #4a7a5a;
 }

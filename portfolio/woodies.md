@@ -6,24 +6,28 @@ permalink: /portfolio/woodies/
 thumbnail: https://ik.imagekit.io/UltraDAO/chriswallace.net/web3-withdrawal-thumbnail.png
 ---
 
-<div style="background-image: url(https://ik.imagekit.io/UltraDAO/chriswallace.net/14.png?tr=q-70,w-1800);" class="relative min-h-[480px] bg-cover bg-[center_center] md:h-screen flex flex-col justify-between items-start fade-in-element md:pb-8 mb-12 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-50% before:from-gray-950/0 before:to-black dark:before:to-gray-950 before:opacity-100 z-20 overflow-x-hidden">
-  <div class="content-container w-full relative z-30">
-    <a class="back text-white dark:text-white" href="/">/portfolio</a>
+<div class="portfolio-hero woodies-page">
+  <div class="portfolio-hero-background">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/14.png?tr=q-70,w-1920,f-auto" 
+         alt="Woodies" 
+         class="portfolio-hero-image"
+         loading="eager">
+    <div class="portfolio-hero-overlay"></div>
   </div>
-  <div class="content-container w-full relative z-30">
-    <h1 class="mb-3 text-white">Woodies</h1>
-    <dl class="project-list">
+  <div class="portfolio-group-heading">
+    <h1 class="fade-in-element mb-3">Woodies</h1>
+    <dl class="project-list fade-in-element">
       <div>
-        <dt class="!text-white">Company</dt>
-        <dd class="text-white/70">UltraDAO Studios</dd>
+        <dt>Company</dt>
+        <dd>UltraDAO Studios</dd>
       </div>
       <div>
-        <dt class="!text-white">Role</dt>
-        <dd class="text-white/70">Product Lead, Designer, Executive Producer, Engineer, Artist</dd>
+        <dt>Role</dt>
+        <dd>Product Lead, Designer, Executive Producer, Engineer, Artist</dd>
       </div>
       <div>
-        <dt class="!text-white">Year</dt>
-        <dd class="text-white/70">2021</dd>
+        <dt>Year</dt>
+        <dd>2021</dd>
       </div>
     </dl>
   </div>

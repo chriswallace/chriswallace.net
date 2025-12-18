@@ -8,20 +8,25 @@
   }
 
   .text-muted {
-    @apply text-primary-500;
+    color: var(--color-muted);
   }
 
   strong {
-    @apply font-medium text-foreground;
+    @apply font-bold text-fg;
+  }
+
+  html {
+    background-color: #eef2eb;
   }
 
   html,
   body {
-    @apply ~text-base/lg font-sans;
+    @apply text-body font-sans;
+    background-color: #eef2eb;
   }
 
   body {
-    @apply text-foreground;
+    @apply text-fg;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -31,9 +36,10 @@
     font-variation-settings: 'wght' 300;
   }
 
-  /* Headings - All white */
+  /* Headings */
   .heading-base {
-    @apply font-heading font-normal text-foreground;
+    @apply font-heading font-normal;
+    color: var(--color-secondary);
   }
 
   h1,
@@ -47,31 +53,31 @@
 
   h1,
   .h1 {
-    @apply ~/3xl:~text-6xl/7xl font-normal mb-12 uppercase;
+    @apply text-display font-normal mb-12 uppercase;
     font-weight: 300;
-    font-variation-settings: 'wght' 300;
+    font-variation-settings: 'wght' 300, 'wdth' 400;
   }
 
   h2,
   .h2 {
-    @apply font-heading ~text-3xl/4xl font-normal mt-16 sm:mt-24;
+    @apply font-heading text-heading font-normal mt-16 sm:mt-24;
   }
 
   h3,
   .h3 {
-    @apply font-heading ~text-2xl/3xl font-normal mb-6 mt-6 sm:mt-12;
+    @apply font-heading text-heading-sm font-normal mb-6 mt-6 sm:mt-12;
   }
 
   h4,
   .h4 {
-    @apply ~text-lg/xl font-normal pb-2 mt-6 sm:mt-12 mb-6;
+    @apply text-subheading font-normal pb-2 mt-6 sm:mt-12 mb-6;
   }
 
   h5,
   .h5,
   h6,
   .h6 {
-    @apply text-lg pb-2 mt-6 sm:mt-12 mb-2;
+    @apply text-subheading pb-2 mt-6 sm:mt-12 mb-2;
   }
 
   /* Links in headings should use lighter contrasting color */
@@ -81,21 +87,57 @@
   h4 a,
   h5 a,
   h6 a {
-    @apply text-foreground no-underline hover:text-foreground;
+    @apply text-fg no-underline hover:text-fg;
   }
 
   /* Links */
   a {
-    @apply text-foreground underline underline-offset-4 decoration-2 decoration-foreground hover:decoration-foreground hover:text-foreground;
+    @apply text-fg underline underline-offset-4 decoration-2 decoration-fg hover:decoration-fg hover:text-fg;
     text-decoration-skip-ink: auto;
   }
 
   /* Content */
-  p,
+  p {
+    @apply font-sans text-body mb-6 text-fg max-w-prose;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  /* Clamp type sizes from xl (1280px) to 4xl (2560px) breakpoints */
+  @media (min-width: 1280px) {
+    p,
+    .startup-plight-description,
+    .profile-description,
+    .startup-plight-service-description,
+    .startup-plight-fractional-description,
+    .work-description,
+    .testimonial-text,
+    .hero-description,
+    .process-description {
+      font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
+    }
+    
+    h2, .h2 {
+      font-size: clamp(1.25rem, 1.25rem + 1.5vw, 2.25rem);
+    }
+    
+    h3, .h3 {
+      font-size: clamp(1rem, 1rem + 0.7vw, 1.5rem);
+    }
+    
+    h4, h5, h6, .h4, .h5, .h6 {
+      font-size: clamp(1rem, 1rem + 0.4vw, 1.25rem);
+    }
+    
+    h1, .h1 {
+      font-size: clamp(2.25rem, 2.25rem + 3.5vw, 6rem);
+    }
+  }
+
   ul,
   ol,
   dl {
-    @apply max-w-prose mb-12 text-foreground-muted;
+    @apply max-w-prose mb-12 text-muted;
   }
 
   p + ul,
@@ -105,22 +147,22 @@
   }
 
   dt {
-    @apply text-foreground-muted;
+    @apply text-muted;
   }
 
   dd {
-    @apply mb-8 ml-12 text-foreground;
+    @apply mb-8 ml-12 text-fg;
   }
 
   article {
     @apply pt-16 md:pt-0;
 
     ul {
-      @apply mb-12 list-disc ml-4 pl-2 text-foreground;
+      @apply mb-12 list-disc ml-4 pl-2 text-fg;
     }
 
     li {
-      @apply mb-2 text-foreground;
+      @apply mb-2 text-fg;
     }
   }
 }
