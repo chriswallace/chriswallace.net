@@ -333,6 +333,14 @@
 
 .site-logo-link {
   @apply no-underline;
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.site-logo-link.visible {
+  opacity: 1;
+  filter: blur(0px);
 }
 
 .site-logo-text {
@@ -394,7 +402,14 @@ body.portfolio-page .site-logo-img .design-text {
   @apply text-white font-sans no-underline relative pb-2;
   font-size: 0.875rem; /* 14px base */
   font-weight: 300;
-  transition: all 0.2s ease;
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1), all 0.2s ease;
+}
+
+.nav-link.visible {
+  opacity: 1;
+  filter: blur(0px);
 }
 
 /* Reduce nav link size on large screens */
@@ -429,6 +444,14 @@ body.portfolio-page .site-logo-img .design-text {
 
 .nav-cta {
   @apply btn btn-sm;
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-cta.visible {
+  opacity: 1;
+  filter: blur(0px);
 }
 
 /* Portfolio pages: ensure nav CTA is visible */

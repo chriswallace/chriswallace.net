@@ -2579,9 +2579,24 @@ video::-webkit-media-controls {
   background-size: auto auto;
 }
 
+/* Only apply hover effects on devices that support hover (not mobile) */
+
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    text-decoration-line: none;
+    transform: scale(1.04);
+  }
+}
+
+/* Ensure text color persists on hover for all button variants */
+
 .btn:hover {
-  text-decoration-line: none;
-  transform: scale(1.04);
+  color: var(--color-accent);
+}
+
+.btn-bright:hover {
+  --tw-text-opacity: 1;
+  color: rgb(43 72 49 / var(--tw-text-opacity));
 }
 
 /* Small button variant */
@@ -2626,8 +2641,12 @@ video::-webkit-media-controls {
   background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-white.svg');
 }
 
-.btn-white:hover {
-  color: var(--color-secondary);
+/* Only apply hover effects on devices that support hover (not mobile) */
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-white:hover {
+    color: var(--color-secondary);
+  }
 }
 
 .ui-navbar {
@@ -2820,6 +2839,14 @@ video::-webkit-media-controls {
 
 .site-logo-link {
   text-decoration-line: none;
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.site-logo-link.visible {
+  opacity: 1;
+  filter: blur(0px);
 }
 
 .site-logo-text {
@@ -2914,7 +2941,14 @@ body.portfolio-page .site-logo-img .design-text {
   font-size: 0.875rem;
   /* 14px base */
   font-weight: 300;
-  transition: all 0.2s ease;
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1), all 0.2s ease;
+}
+
+.nav-link.visible {
+  opacity: 1;
+  filter: blur(0px);
 }
 
 /* Reduce nav link size on large screens */
@@ -2989,9 +3023,15 @@ body.portfolio-page .site-logo-img .design-text {
   background-size: auto auto;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .nav-cta:hover {
+    text-decoration-line: none;
+    transform: scale(1.04);
+  }
+}
+
 .nav-cta:hover {
-  text-decoration-line: none;
-  transform: scale(1.04);
+  color: var(--color-accent);
 }
 
 .nav-cta {
@@ -3018,6 +3058,17 @@ body.portfolio-page .site-logo-img .design-text {
   padding-right: 1.5rem;
   font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
   line-height: 1.5;
+}
+
+.nav-cta {
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-cta.visible {
+  opacity: 1;
+  filter: blur(0px);
 }
 
 /* Portfolio pages: ensure nav CTA is visible */
@@ -4513,9 +4564,16 @@ body:has(.woodies-page) {
      object-fit: contain;
   -o-object-position: right center;
      object-position: right center;
-  opacity: 0.15;
+  opacity: 0;
+  filter: blur(10px);
   max-width: 30%;
   min-width: 200px;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-wallace-logo.visible {
+  opacity: 0.15;
+  filter: blur(0px);
 }
 
 /* Responsive sizing */
@@ -4524,6 +4582,9 @@ body:has(.woodies-page) {
   .hero-wallace-logo {
     max-width: 25%;
     min-width: 150px;
+  }
+
+  .hero-wallace-logo.visible {
     opacity: 0.1;
   }
 }
@@ -4532,6 +4593,9 @@ body:has(.woodies-page) {
   .hero-wallace-logo {
     max-width: 20%;
     min-width: 100px;
+  }
+
+  .hero-wallace-logo.visible {
     opacity: 0.08;
   }
 }
@@ -4544,7 +4608,7 @@ body:has(.woodies-page) {
   line-height: 1.4;
   text-transform: uppercase;
   --tw-text-opacity: 1;
-  color: rgb(34 93 85 / var(--tw-text-opacity));
+  color: rgb(79 157 110 / var(--tw-text-opacity));
   font-weight: 600;
   font-variation-settings: 'wght' 600;
   letter-spacing: 0.05em;
@@ -4557,10 +4621,10 @@ body:has(.woodies-page) {
   color: rgb(43 72 49 / var(--tw-text-opacity));
   font-weight: 300;
   font-variation-settings: 'wght' 300;
-  font-size: clamp(1.5rem, 1.5rem + 1.5vw, 3rem);
-  /* Further reduced: 24px to 48px */
+  font-size: clamp(2.5rem, 2.5rem + 3vw, 5.5rem);
+  /* Increased: 40px to 88px */
   line-height: 0.9;
-  max-width: 680px;
+  max-width: 1000px;
   font-variation-settings: "wght" 300, "wdth" 300;
 }
 
@@ -4713,6 +4777,8 @@ body:has(.woodies-page) {
   margin-bottom: 2rem;
   font-family: "Bandeins Strange", "Syne", sans-serif;
   text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(43 72 49 / var(--tw-text-opacity));
   font-weight: 400;
   font-variation-settings: 'wght' 400;
   font-size: clamp(1.18rem, 1.18rem + 1vw, 2rem);
@@ -4722,10 +4788,6 @@ body:has(.woodies-page) {
   max-width: 100%;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  background: linear-gradient(90deg, rgba(48, 128, 79, 0.7) 0%, var(--color-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 /* Responsive font width for profile title */
@@ -4911,6 +4973,13 @@ body:has(.woodies-page) {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  max-width: 48rem;
+}
+
+@media (min-width: 64rem) {
+  .cta-text {
+    max-width: 56rem;
+  }
 }
 
 /* Responsive font width for CTA text */
@@ -4979,16 +5048,14 @@ body:has(.woodies-page) {
   text-align: center;
   font-family: "Bandeins Strange", "Syne", sans-serif;
   text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(43 72 49 / var(--tw-text-opacity));
   font-weight: 400;
   font-variation-settings: 'wght' 400;
   font-size: clamp(0.875rem, 0.875rem + 0.75vw, 1.5rem);
   /* Further reduced: 14px to 24px */
   line-height: 0.95;
   font-variation-settings: "wght" 400, "wdth" 300;
-  background: linear-gradient(90deg, rgba(48, 128, 79, 0.7) 0%, var(--color-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 /* Responsive font width for work title */
@@ -5032,17 +5099,12 @@ body:has(.woodies-page) {
 
 .work-image {
   margin-bottom: 1rem;
-  aspect-ratio: 4/3;
+  aspect-ratio: 544/380;
   width: 100%;
   border-radius: 1.5rem;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
-}
-
-.work-item:hover .work-image {
-  transform: scale(1.03);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* ============================================
@@ -5080,16 +5142,14 @@ body:has(.woodies-page) {
   text-align: center;
   font-family: "Bandeins Strange", "Syne", sans-serif;
   text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(43 72 49 / var(--tw-text-opacity));
   font-weight: 400;
   font-variation-settings: 'wght' 400;
   font-size: clamp(0.875rem, 0.875rem + 0.75vw, 1.5rem);
   /* Further reduced: 14px to 24px */
   line-height: 0.95;
   font-variation-settings: "wght" 400, "wdth" 300;
-  background: linear-gradient(90deg, rgba(48, 128, 79, 0.7) 0%, var(--color-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 /* Responsive font width for testimonials title */
@@ -5186,7 +5246,7 @@ body:has(.woodies-page) {
 }
 
 .testimonial-author {
-  margin-top: 0px;
+  margin-top: 1.5rem;
   font-size: clamp(0.8125rem, 0.8125rem + 0.4vw, 1rem);
   line-height: 1.4;
   font-variation-settings: 'wght' 400;
@@ -5252,7 +5312,8 @@ body:has(.woodies-page) {
   font-family: "Bandeins Strange", "Syne", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-accent);
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
   font-weight: 400;
   font-variation-settings: 'wght' 400;
   font-size: clamp(0.875rem, 0.875rem + 0.75vw, 1.5rem);
@@ -5760,16 +5821,18 @@ body:has(.woodies-page) {
 }
 
 /* ============================================
-   SCROLL ANIMATIONS
+   SCROLL ANIMATIONS - Fast Blur-In Method
    ============================================ */
 
 .reveal {
   opacity: 0;
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: blur(10px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.visible {
   opacity: 1;
+  filter: blur(0px);
 }
 
 .reveal-delay-1 {
@@ -5788,50 +5851,73 @@ body:has(.woodies-page) {
   transition-delay: 0.4s;
 }
 
-/* Stagger children animations */
+.reveal-delay-5 {
+  transition-delay: 0.5s;
+}
+
+/* Stagger children animations - fast blur-in */
 
 .stagger-children > * {
   opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Work items are animated by GSAP, so don't apply stagger animation */
+/* Work items - fast blur-in */
 
-.work-grid.stagger-children > * {
-  /* GSAP handles the animation, so don't set opacity here */
+.work-item {
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+.work-item.visible {
+  opacity: 1;
+  filter: blur(0px);
+}
+
+/* When stagger container becomes visible, blur-in children with delay */
 
 .stagger-children.visible > *:nth-child(1) {
-  animation: fadeIn 0.6s ease forwards 0.1s;
+  opacity: 1;
+  filter: blur(0px);
+  transition-delay: 0.05s;
 }
 
 .stagger-children.visible > *:nth-child(2) {
-  animation: fadeIn 0.6s ease forwards 0.2s;
+  opacity: 1;
+  filter: blur(0px);
+  transition-delay: 0.1s;
 }
 
 .stagger-children.visible > *:nth-child(3) {
-  animation: fadeIn 0.6s ease forwards 0.3s;
+  opacity: 1;
+  filter: blur(0px);
+  transition-delay: 0.15s;
 }
 
 .stagger-children.visible > *:nth-child(4) {
-  animation: fadeIn 0.6s ease forwards 0.4s;
+  opacity: 1;
+  filter: blur(0px);
+  transition-delay: 0.2s;
 }
 
 .stagger-children.visible > *:nth-child(5) {
-  animation: fadeIn 0.6s ease forwards 0.5s;
+  opacity: 1;
+  filter: blur(0px);
+  transition-delay: 0.25s;
 }
 
 .stagger-children.visible > *:nth-child(6) {
-  animation: fadeIn 0.6s ease forwards 0.6s;
+  opacity: 1;
+  filter: blur(0px);
+  transition-delay: 0.3s;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+.stagger-children.visible > *:nth-child(n+7) {
+  opacity: 1;
+  filter: blur(0px);
+  transition-delay: 0.35s;
 }
 
 /* ============================================

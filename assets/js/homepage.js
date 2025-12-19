@@ -21,9 +21,10 @@ function initHomepageAnimations() {
   const heroTitle = document.querySelector(".hero-title");
   const heroDescription = document.querySelector(".hero-description");
   const heroButtons = document.querySelector(".hero-buttons");
+  const heroWallaceLogo = document.querySelector(".hero-wallace-logo");
 
   if (heroSection) {
-    // Initial reveal animation for hero elements
+    // Initial reveal animation for hero elements - unified fade-in
     const heroTimeline = gsap.timeline();
 
     // Set initial state - blur and opacity 0
@@ -32,12 +33,28 @@ function initHomepageAnimations() {
       opacity: 0,
     });
 
-    // Reveal hero elements on page load with stagger - blur in effect
+    // Animate Wallace logo
+    if (heroWallaceLogo) {
+      gsap.set(heroWallaceLogo, {
+        filter: "blur(10px)",
+        opacity: 0,
+      });
+
+      gsap.to(heroWallaceLogo, {
+        filter: "blur(0px)",
+        opacity: 0.15,
+        duration: 0.4,
+        ease: "power2.out",
+        onComplete: () => heroWallaceLogo.classList.add("visible"),
+      });
+    }
+
+    // Reveal hero elements on page load with stagger - fast blur-in effect
     heroTimeline
       .to(heroLabel?.closest(".reveal") || heroLabel, {
         filter: "blur(0px)",
         opacity: 1,
-        duration: 0.5,
+        duration: 0.4,
         ease: "power2.out",
       })
       .to(
@@ -45,30 +62,30 @@ function initHomepageAnimations() {
         {
           filter: "blur(0px)",
           opacity: 1,
-          duration: 0.5,
+          duration: 0.4,
           ease: "power2.out",
         },
-        "-=0.3"
+        "-=0.2"
       )
       .to(
         heroDescription,
         {
           filter: "blur(0px)",
           opacity: 1,
-          duration: 0.5,
+          duration: 0.4,
           ease: "power2.out",
         },
-        "-=0.3"
+        "-=0.2"
       )
       .to(
         heroButtons,
         {
           filter: "blur(0px)",
           opacity: 1,
-          duration: 0.5,
+          duration: 0.4,
           ease: "power2.out",
         },
-        "-=0.3"
+        "-=0.2"
       );
 
     // Add visible class to prevent CSS transitions from interfering
@@ -99,12 +116,13 @@ function initHomepageAnimations() {
       {
         filter: "blur(0px)",
         opacity: 1,
-        duration: 0.6,
+        duration: 0.4,
         ease: "power2.out",
         scrollTrigger: {
           trigger: ctaBanner,
           start: "top 80%",
           toggleActions: "play none none reverse",
+          onEnter: () => ctaText.classList.add("visible"),
         },
       }
     );
@@ -117,13 +135,14 @@ function initHomepageAnimations() {
       {
         filter: "blur(0px)",
         opacity: 1,
-        duration: 0.6,
-        delay: 0.1,
+        duration: 0.4,
+        delay: 0.05,
         ease: "power2.out",
         scrollTrigger: {
           trigger: ctaBanner,
           start: "top 80%",
           toggleActions: "play none none reverse",
+          onEnter: () => ctaButton.classList.add("visible"),
         },
       }
     );
@@ -132,11 +151,11 @@ function initHomepageAnimations() {
   if (ctaWMark) {
     gsap.fromTo(
       ctaWMark,
-      { scale: 0.9, opacity: 0 },
+      { filter: "blur(10px)", opacity: 0 },
       {
-        scale: 1,
+        filter: "blur(0px)",
         opacity: 1,
-        duration: 0.5,
+        duration: 0.4,
         ease: "power2.out",
         scrollTrigger: {
           trigger: ctaBanner,
@@ -156,40 +175,31 @@ function initHomepageAnimations() {
   if (workItems.length > 0) {
     // Set initial state immediately to prevent flash
     gsap.set(workItems, {
-      filter: "blur(12px)",
+      filter: "blur(10px)",
       opacity: 0,
     });
 
-    workItems.forEach((item) => {
+    workItems.forEach((item, index) => {
       gsap.fromTo(
         item,
         {
-          filter: "blur(12px)",
+          filter: "blur(10px)",
           opacity: 0,
         },
         {
           filter: "blur(0px)",
           opacity: 1,
-          duration: 0.6,
+          duration: 0.4,
           ease: "power2.out",
           scrollTrigger: {
             trigger: item,
             start: "top 88%",
             toggleActions: "play none none reverse",
+            onEnter: () => item.classList.add("visible"),
           },
         }
       );
 
-      // Subtle hover scale on images
-      const img = item.querySelector(".work-image");
-      if (img) {
-        item.addEventListener("mouseenter", () => {
-          gsap.to(img, { scale: 1.02, duration: 0.4, ease: "power2.out" });
-        });
-        item.addEventListener("mouseleave", () => {
-          gsap.to(img, { scale: 1, duration: 0.4, ease: "power2.out" });
-        });
-      }
     });
   }
 
@@ -207,12 +217,13 @@ function initHomepageAnimations() {
       {
         filter: "blur(0px)",
         opacity: 1,
-        duration: 0.5,
+        duration: 0.4,
         ease: "power2.out",
         scrollTrigger: {
           trigger: testimonialsSection,
           start: "top 75%",
           toggleActions: "play none none reverse",
+          onEnter: () => testimonialTitle.classList.add("visible"),
         },
       }
     );
@@ -237,8 +248,8 @@ function initHomepageAnimations() {
         {
           filter: "blur(0px)",
           opacity: 1,
-          duration: 0.5,
-          delay: index * 0.08,
+          duration: 0.4,
+          delay: index * 0.05,
           ease: "power2.out",
           scrollTrigger: {
             trigger: ".approach-circle",
@@ -261,8 +272,8 @@ function initHomepageAnimations() {
         {
           filter: "blur(0px)",
           opacity: 1,
-          duration: 0.5,
-          delay: index * 0.08,
+          duration: 0.4,
+          delay: index * 0.05,
           ease: "power2.out",
           scrollTrigger: {
             trigger: engagements,
@@ -284,16 +295,17 @@ function initHomepageAnimations() {
   if (footerTop) {
     gsap.fromTo(
       footerTop,
-      { filter: "blur(12px)", opacity: 0 },
+      { filter: "blur(10px)", opacity: 0 },
       {
         filter: "blur(0px)",
         opacity: 1,
-        duration: 0.6,
+        duration: 0.4,
         ease: "power2.out",
         scrollTrigger: {
           trigger: footerSection,
           start: "top 80%",
           toggleActions: "play none none reverse",
+          onEnter: () => footerTop.classList.add("visible"),
         },
       }
     );
@@ -342,11 +354,11 @@ function initHomepageAnimations() {
       // Skip hero, it has custom handling
       gsap.fromTo(
         el,
-        { filter: "blur(8px)", opacity: 0 },
+        { filter: "blur(10px)", opacity: 0 },
         {
           filter: "blur(0px)",
           opacity: 1,
-          duration: 0.5,
+          duration: 0.4,
           ease: "power2.out",
           scrollTrigger: {
             trigger: el,
@@ -358,4 +370,65 @@ function initHomepageAnimations() {
       );
     }
   });
+
+  // ===================================
+  // NAV ITEMS: Fast blur-in
+  // ===================================
+
+  const navLinks = document.querySelectorAll(".nav-link");
+  const siteLogoLink = document.querySelector(".site-logo-link");
+  const navCta = document.querySelector(".nav-cta");
+
+  // Logo animation
+  if (siteLogoLink) {
+    gsap.set(siteLogoLink, {
+      filter: "blur(10px)",
+      opacity: 0,
+    });
+
+    gsap.to(siteLogoLink, {
+      filter: "blur(0px)",
+      opacity: 1,
+      duration: 0.4,
+      ease: "power2.out",
+      onComplete: () => siteLogoLink.classList.add("visible"),
+    });
+  }
+
+  // Nav links animation
+  if (navLinks.length > 0) {
+    // Set initial state
+    gsap.set(navLinks, {
+      filter: "blur(10px)",
+      opacity: 0,
+    });
+
+    navLinks.forEach((link, index) => {
+      gsap.to(link, {
+        filter: "blur(0px)",
+        opacity: 1,
+        duration: 0.4,
+        delay: index * 0.05,
+        ease: "power2.out",
+        onComplete: () => link.classList.add("visible"),
+      });
+    });
+  }
+
+  // Nav CTA button animation
+  if (navCta) {
+    gsap.set(navCta, {
+      filter: "blur(10px)",
+      opacity: 0,
+    });
+
+    gsap.to(navCta, {
+      filter: "blur(0px)",
+      opacity: 1,
+      duration: 0.4,
+      delay: navLinks.length * 0.05,
+      ease: "power2.out",
+      onComplete: () => navCta.classList.add("visible"),
+    });
+  }
 }

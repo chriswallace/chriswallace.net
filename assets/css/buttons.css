@@ -12,9 +12,21 @@
   background-size: auto auto;
 }
 
+/* Only apply hover effects on devices that support hover (not mobile) */
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    @apply no-underline;
+    transform: scale(1.04);
+  }
+}
+
+/* Ensure text color persists on hover for all button variants */
 .btn:hover {
-  @apply no-underline;
-  transform: scale(1.04);
+  @apply text-accent;
+}
+
+.btn-bright:hover {
+  @apply text-primary-800;
 }
 
 /* Small button variant */
@@ -48,6 +60,9 @@
   background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-white.svg');
 }
 
-.btn-white:hover {
-  @apply text-secondary;
+/* Only apply hover effects on devices that support hover (not mobile) */
+@media (hover: hover) and (pointer: fine) {
+  .btn-white:hover {
+    @apply text-secondary;
+  }
 }

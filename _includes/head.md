@@ -14,6 +14,20 @@
   <meta http-equiv="Expires" content="86400">
   {% seo title=true %}
 
+  <!-- Prevent FOUC: Hide all reveal elements by default -->
+  <style>
+    .reveal,
+    .stagger-children > *,
+    .work-item,
+    .nav-link,
+    .site-logo-link,
+    .nav-cta,
+    .hero-wallace-logo {
+      opacity: 0;
+      filter: blur(10px);
+    }
+  </style>
+
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

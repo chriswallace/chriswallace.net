@@ -61,7 +61,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <span class="hero-label">Hire a Fractional Design Leader</span>
   </div>
   <h1 class="hero-title reveal reveal-delay-1">
-    Unbreak<br>Your Design Process.
+    Unbreak<br>Your Design Process
   </h1>
   <p class="hero-description reveal reveal-delay-2">
     Work with 20-year design industry veteran Chris Wallace to fix your product design woes with a proven and practical design approach.
@@ -120,7 +120,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         <h3 class="startup-plight-fractional-title">Why fractional leadership</h3>
         <p class="startup-plight-fractional-description">Most startups don't need a full-time design executive. They need experienced leadership when crossing a threshold: new scale, new markets, or new expectations.</p>
         <p class="startup-plight-fractional-description">I work with founders and product leaders to stabilize design, level up the org, and leave behind systems that continue working after my engagement ends. You get senior design thinking and strategic partnership without the overhead or long ramp of a full-time hire.</p>
-        <p class="startup-plight-closing">If you're building something ambitious and design should be doing more than just preparing for scale, we'll probably work well together.</p>
+        <p class="startup-plight-closing">If you're building something ambitious and design should be doing more than just preparing for scale, we'll work well together.</p>
       </div>
     </div>
 
@@ -131,9 +131,9 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
 <section class="cta-banner" data-section="cta">
   <div class="cta-content">
     <img class="cta-w-mark" src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/w-mark.svg" alt="" />
-    <p class="cta-text reveal">Let's "hop on a call" as they say.<br>Give me thirty minutes.</p>
+    <p class="cta-text reveal">Ready to get design on the right track?<br>Let's get started.</p>
     <div class="cta-button reveal reveal-delay-1">
-      <a href="https://zcal.co/chriswallace" class="btn" target="_blank" rel="noopener">Schedule a Free Consult</a>
+      <a href="https://zcal.co/chriswallace" class="btn btn-white" target="_blank" rel="noopener">Schedule a Free Consult</a>
     </div>
   </div>
 </section>
@@ -169,9 +169,9 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         alt="Eye Appeal Inc" 
         class="work-image" 
         loading="lazy">
-      <p class="work-description">Working with <strong>Eye Appeal Inc</strong>, I designed a killer brand and app. I even built a full app prototype to secure critical investment and save $100k in dev costs.</p>
+      <p class="work-description">Working with <strong>Eye Appeal Inc</strong>, I designed a killer brand and app. I even built a full app prototype to secure critical investment and save $100k in development costs.</p>
     </span>
-    <a href="/portfolio/candy-marketplace-redesign/" class="work-item">
+    <span class="work-item">
       <img 
         src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.png?tr=w-544,q-80,f-auto" 
         srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.png?tr=w-1088,q-80,f-auto 2x" 
@@ -179,8 +179,8 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         class="work-image" 
         loading="lazy">
       <p class="work-description">Over nine months, I led a major redesign to establish a world-class digital collectible marketplace with <strong>Candy Digital</strong>.</p>
-    </a>
-    <a href="/portfolio/woodies/" class="work-item">
+    </span>
+    <span class="work-item">
       <img 
         src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/woodies.png?tr=w-544,q-80,f-auto" 
         srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/woodies.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/woodies.png?tr=w-1088,q-80,f-auto 2x" 
@@ -188,8 +188,8 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         class="work-image" 
         loading="lazy">
       <p class="work-description">I established a creative studio that launched a beloved entertainment IP in <strong>Woodies</strong>, achieving $2.6m revenue in just six months.</p>
-    </a>
-    <a href="/portfolio/plymouth-street/" class="work-item">
+    </span>
+    <span class="work-item">
       <img 
         src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/plymouth-street.png?tr=w-544,q-80,f-auto" 
         srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/plymouth-street.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/plymouth-street.png?tr=w-1088,q-80,f-auto 2x" 
@@ -197,7 +197,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         class="work-image" 
         loading="lazy">
       <p class="work-description">Working with <strong>Plymouth Street</strong>, I helped redesign the process of applying for a high-tech work visa for immigrants seeking US-based jobs.</p>
-    </a>
+    </span>
   </div>
 </section>
 
@@ -339,43 +339,16 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Scroll reveal animations
-  const revealElements = document.querySelectorAll('.reveal');
-  const staggerContainers = document.querySelectorAll('.stagger-children');
+  // Unified fade-in method: Use IntersectionObserver as fallback for elements
+  // that GSAP doesn't handle. GSAP handles most animations, this is just a backup.
   
-  // Handle .reveal elements
-  const revealObserver = new IntersectionObserver((entries) => {
+  // Handle .stagger-children containers (fallback for non-GSAP elements)
+  const staggerContainers = document.querySelectorAll('.stagger-children:not(.work-grid)');
+  
+  const staggerObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        // Stop observing once visible to prevent re-triggering
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  });
-  
-  revealElements.forEach(el => {
-    revealObserver.observe(el);
-    
-    // Check if already in viewport on page load
-    const rect = el.getBoundingClientRect();
-    const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
-    if (isInViewport) {
-      el.classList.add('visible');
-      revealObserver.unobserve(el);
-    }
-  });
-  
-  // Handle .stagger-children containers separately
-  // Skip work-grid as it's handled by GSAP in homepage.js
-  const staggerObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !entry.target.classList.contains('work-grid')) {
-        entry.target.classList.add('visible');
-        // Stop observing once visible to prevent re-triggering
         staggerObserver.unobserve(entry.target);
       }
     });
@@ -385,17 +358,14 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   staggerContainers.forEach(el => {
-    // Skip work-grid - it's animated by GSAP
-    if (!el.classList.contains('work-grid')) {
-      staggerObserver.observe(el);
-      
-      // Check if already in viewport on page load
-      const rect = el.getBoundingClientRect();
-      const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
-      if (isInViewport) {
-        el.classList.add('visible');
-        staggerObserver.unobserve(el);
-      }
+    staggerObserver.observe(el);
+    
+    // Check if already in viewport on page load
+    const rect = el.getBoundingClientRect();
+    const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+    if (isInViewport) {
+      el.classList.add('visible');
+      staggerObserver.unobserve(el);
     }
   });
   
