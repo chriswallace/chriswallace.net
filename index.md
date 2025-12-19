@@ -67,7 +67,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     Work with 20-year design industry veteran Chris Wallace to fix your product design woes with a proven and practical design approach.
   </p>
   <div class="hero-buttons reveal reveal-delay-3">
-    <a href="#about" class="btn btn-bright">About Chris</a>
+    <a href="#about" class="btn btn-bright">Meet Chris</a>
     <a href="https://zcal.co/chriswallace" class="btn btn-outline" target="_blank" rel="noopener">Schedule a Free Consult</a>
   </div>
 </section>
