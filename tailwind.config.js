@@ -62,33 +62,33 @@ export default {
       fontSize: {
         // Four core type sizes with responsive clamps for effective type ramps
         body: [
-          "clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem)", // 14px to 17.6px
+          "clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem)",
           {
             lineHeight: "1.5",
           },
         ],
         heading: [
-          "clamp(1.25rem, 1.25rem + 1.5vw, 2.25rem)", // 20px to 36px
+          "clamp(1.35rem, 1.35rem + 1.5vw, 1.75rem)",
           {
-            lineHeight: ".95",
+            lineHeight: "1.25",
           },
         ],
         "heading-sm": [
-          "clamp(0.9375rem, 0.9375rem + 0.4vw, 1.1rem)", // 15px to 17.6px
+          "clamp(1.5rem, 1.5rem + 0.4vw, 1.8rem)",
           {
-            lineHeight: "1.2",
+            lineHeight: "1.25",
           },
         ],
         subheading: [
-          "clamp(0.8125rem, 0.8125rem + 0.4vw, 1rem)", // 13px to 16px
+          "clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem)",
           {
             lineHeight: "1.4",
           },
         ],
         display: [
-          "clamp(1.75rem, 1.75rem + 2.5vw, 6rem)", // 28px to 96px
+          "clamp(1.6rem, 1.6rem + 2.5vw, 3.4rem)",
           {
-            lineHeight: "0.9",
+            lineHeight: "0.95",
           },
         ],
         // Backward compatibility aliases
@@ -101,7 +101,7 @@ export default {
         lg: [
           "clamp(1.5rem, 1.2rem + 0.75vw, 2.25rem)",
           {
-            lineHeight: "1.2",
+            lineHeight: "1.25",
           },
         ],
       },

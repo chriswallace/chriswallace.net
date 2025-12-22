@@ -554,6 +554,10 @@ video {
   display: none;
 }
 
+.text-muted {
+  color: var(--color-muted);
+}
+
 strong {
   color: var(--color-fg);
   font-weight: 700;
@@ -597,8 +601,8 @@ h1,
 h1,
   .h1 {
   margin-bottom: 3rem;
-  font-size: clamp(1.75rem, 1.75rem + 2.5vw, 6rem);
-  line-height: 0.9;
+  font-size: clamp(1.6rem, 1.6rem + 2.5vw, 3.4rem);
+  line-height: 0.95;
   text-transform: uppercase;
   font-variation-settings: 'wght' 400;
   font-weight: 300;
@@ -609,8 +613,8 @@ h2,
   .h2 {
   margin-top: 4rem;
   font-family: "Bandeins Strange", "Syne", sans-serif;
-  font-size: clamp(1.25rem, 1.25rem + 1.5vw, 2.25rem);
-  line-height: .95;
+  font-size: clamp(1.35rem, 1.35rem + 1.5vw, 1.75rem);
+  line-height: 1.25;
   font-weight: 400;
   font-variation-settings: 'wght' 400;
 }
@@ -627,8 +631,8 @@ h3,
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
   font-family: "Bandeins Strange", "Syne", sans-serif;
-  font-size: clamp(0.9375rem, 0.9375rem + 0.4vw, 1.1rem);
-  line-height: 1.2;
+  font-size: clamp(1.5rem, 1.5rem + 0.4vw, 1.8rem);
+  line-height: 1.25;
   font-weight: 400;
   font-variation-settings: 'wght' 400;
 }
@@ -645,7 +649,7 @@ h4,
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  font-size: clamp(0.8125rem, 0.8125rem + 0.4vw, 1rem);
+  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
   line-height: 1.4;
   font-weight: 400;
   font-variation-settings: 'wght' 400;
@@ -665,7 +669,7 @@ h5,
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
-  font-size: clamp(0.8125rem, 0.8125rem + 0.4vw, 1rem);
+  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
   line-height: 1.4;
 }
 
@@ -769,7 +773,6 @@ ul,
   dl {
   margin-bottom: 3rem;
   max-width: 52ch;
-  color: var(--color-muted);
 }
 
 p + ul,
@@ -799,28 +802,23 @@ article {
   }
 }
 
-article {
-  ul {
-    margin-bottom: 3rem;
-  }
-  ul {
-    margin-left: 1rem;
-  }
-  ul {
-    list-style-type: disc;
-  }
-  ul {
-    padding-left: 0.5rem;
-  }
-  ul {
-    color: var(--color-fg);
-  }
-  li {
-    margin-bottom: 0.5rem;
-  }
-  li {
-    color: var(--color-fg);
-  }
+ul {
+  margin-bottom: 2rem;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+li {
+  position: relative;
+  margin-bottom: 0px;
+  padding-left: 1.5rem;
+}
+
+li::before {
+  content: "•";
+  position: absolute;
+  left: 0px;
+  color: var(--color-fg);
 }
 
 html {
@@ -1003,7 +1001,7 @@ picture img {
 .contact-grid__title {
   margin-bottom: 0.5rem;
   text-align: center;
-  font-size: clamp(0.8125rem, 0.8125rem + 0.4vw, 1rem);
+  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
   line-height: 1.4;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1473,6 +1471,10 @@ figcaption {
   position: relative;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
 .col-span-4 {
   grid-column: span 4 / span 4;
 }
@@ -1632,6 +1634,10 @@ figcaption {
   aspect-ratio: 1 / 1;
 }
 
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
 .h-3 {
   height: 0.75rem;
 }
@@ -1741,6 +1747,10 @@ figcaption {
   flex-shrink: 0;
 }
 
+.shrink {
+  flex-shrink: 1;
+}
+
 .grow {
   flex-grow: 1;
 }
@@ -1818,6 +1828,10 @@ figcaption {
   gap: 0.375rem;
 }
 
+.gap-12 {
+  gap: 3rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -1872,6 +1886,10 @@ figcaption {
 
 .rounded {
   border-radius: 0.25rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
 
 .rounded-lg {
@@ -2109,7 +2127,7 @@ figcaption {
 
 .text-lg {
   font-size: clamp(1.5rem, 1.2rem + 0.75vw, 2.25rem);
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .text-sm {
@@ -2175,6 +2193,10 @@ figcaption {
   color: rgb(5 46 22 / var(--tw-text-opacity));
 }
 
+.text-muted {
+  color: var(--color-muted);
+}
+
 .text-primary-950 {
   --tw-text-opacity: 1;
   color: rgb(16 20 16 / var(--tw-text-opacity));
@@ -2213,6 +2235,12 @@ figcaption {
 
 .opacity-100 {
   opacity: 1;
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-xl {
@@ -2292,16 +2320,19 @@ figcaption {
   background-color: rgb(181 191 196 / var(--tw-bg-opacity));
 }
 
-.sr-only {
-  position: absolute;
-  margin: -1px;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  white-space: nowrap;
-  border-width: 0px;
-  padding: 0px;
-  clip: rect(0, 0, 0, 0);
+.overline {
+  margin-bottom: 1.5rem;
+  display: block;
+  font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(79 157 110 / var(--tw-text-opacity));
+  font-weight: 600;
+  font-variation-settings: 'wght' 600;
+  text-decoration-line: none;
 }
 
 /* Interactive Elements */
@@ -2773,7 +2804,12 @@ video::-webkit-media-controls {
 
 .site-navbar {
   background: transparent;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transform: translateY(0);
+}
+
+.site-navbar.nav-hidden {
+  transform: translateY(-100%);
 }
 
 /* Portfolio navbar: logo only, centered */
@@ -3354,7 +3390,7 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
   padding-bottom: 0.75rem;
   text-align: center;
   font-family: "Bandeins Strange", "Syne", sans-serif;
-  font-size: clamp(0.8125rem, 0.8125rem + 0.4vw, 1rem);
+  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
   line-height: 1.4;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -3606,8 +3642,8 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
 }
 
 .resume__metadata {
-  font-size: clamp(1.25rem, 1.25rem + 1.5vw, 2.25rem);
-  line-height: .95;
+  font-size: clamp(1.35rem, 1.35rem + 1.5vw, 1.75rem);
+  line-height: 1.25;
   color: var(--color-fg);
 }
 
@@ -3753,8 +3789,8 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
 .wave-hand {
   margin-bottom: 2rem;
   display: inline-block;
-  font-size: clamp(1.25rem, 1.25rem + 1.5vw, 2.25rem);
-  line-height: .95;
+  font-size: clamp(1.35rem, 1.35rem + 1.5vw, 1.75rem);
+  line-height: 1.25;
   animation: wave 6s ease-in-out infinite;
   transform-origin: 70% 70%;
 }
@@ -3852,8 +3888,8 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
   max-width: none;
   text-align: center;
   font-family: "Bandeins Sans", "Space Grotesk", serif;
-  font-size: clamp(1.25rem, 1.25rem + 1.5vw, 2.25rem);
-  line-height: .95;
+  font-size: clamp(1.35rem, 1.35rem + 1.5vw, 1.75rem);
+  line-height: 1.25;
   color: var(--color-fg);
   font-weight: 400;
   font-variation-settings: 'wght' 400;
@@ -4250,7 +4286,7 @@ a.portfolio-list__link:hover .portfolio-list__image {
   margin-bottom: 1rem;
   margin-top: 0px;
   max-width: 52ch;
-  font-size: clamp(0.8125rem, 0.8125rem + 0.4vw, 1rem);
+  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
   line-height: 1.4;
   font-weight: 600;
   font-variation-settings: 'wght' 600;
@@ -4322,8 +4358,8 @@ body:has(.woodies-page) {
 .portfolio-other-callout h3 {
   margin-bottom: 1rem;
   max-width: 52ch;
-  font-size: clamp(1.25rem, 1.25rem + 1.5vw, 2.25rem);
-  line-height: .95;
+  font-size: clamp(1.35rem, 1.35rem + 1.5vw, 1.75rem);
+  line-height: 1.25;
   font-weight: 600;
   font-variation-settings: 'wght' 600;
 }
@@ -4510,6 +4546,13 @@ body:has(.woodies-page) {
   overflow-x: hidden;
 }
 
+/* Ensure all sections appear above ASCII background */
+
+.home section {
+  position: relative;
+  z-index: 1;
+}
+
 /* Scroll Progress Bar */
 
 .scroll-progress {
@@ -4530,17 +4573,28 @@ body:has(.woodies-page) {
 
 .hero-section {
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   min-height: 100vh;
+  width: calc(100% - 32px);
+  max-width: 100%;
   flex-direction: column;
   justify-content: center;
   padding-top: 6rem;
-  padding-bottom: 4rem;
-  padding-left: 32px;
-  padding-right: 32px;
-  width: calc(100% - 64px);
-  max-width: 100%;
-  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 48rem) {
+  .hero-section {
+    width: calc(100% - 48px);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.hero-section {
   /* Background inherits from body */
 }
 
@@ -4552,31 +4606,22 @@ body:has(.woodies-page) {
 /* Tall WALLACE decorative logo */
 
 .hero-wallace-logo {
+  pointer-events: none;
   position: absolute;
   right: 0px;
   top: 0px;
   bottom: 0px;
+  z-index: 1;
   height: 100%;
   width: auto;
-  z-index: 1;
-  pointer-events: none;
+  min-width: 200px;
+  max-width: 30%;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: right center;
-     object-position: right center;
+  -o-object-position: right;
+     object-position: right;
   opacity: 0;
-  filter: blur(10px);
-  max-width: 30%;
-  min-width: 200px;
-  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-.hero-wallace-logo.visible {
-  opacity: 0.15;
-  filter: blur(0px);
-}
-
-/* Responsive sizing */
 
 @media (max-width: 1024px) {
   .hero-wallace-logo {
@@ -4600,46 +4645,39 @@ body:has(.woodies-page) {
   }
 }
 
-.hero-label {
-  margin-bottom: 1.5rem;
-  display: block;
-  font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  font-size: clamp(0.8125rem, 0.8125rem + 0.4vw, 1rem);
-  line-height: 1.4;
-  text-transform: uppercase;
-  --tw-text-opacity: 1;
-  color: rgb(79 157 110 / var(--tw-text-opacity));
-  font-weight: 600;
-  font-variation-settings: 'wght' 600;
-  letter-spacing: 0.05em;
+.hero-wallace-logo.visible {
+  opacity: 0.15;
+  filter: blur(0px);
 }
 
 .hero-title {
   margin-bottom: 1rem;
-  font-family: "Bandeins Strange", "Syne", sans-serif;
+  font-size: clamp(1.6rem, 1.6rem + 2.5vw, 3.4rem);
   --tw-text-opacity: 1;
   color: rgb(43 72 49 / var(--tw-text-opacity));
-  font-weight: 300;
-  font-variation-settings: 'wght' 300;
-  font-size: clamp(2.5rem, 2.5rem + 3vw, 5.5rem);
-  /* Increased: 40px to 88px */
-  line-height: 0.9;
   max-width: 1000px;
-  font-variation-settings: "wght" 300, "wdth" 300;
+  font-variation-settings: "wght" 100, "wdth" 500;
+  line-height: 1.1;
+  /* Ensure consistent two-line layout */
+  display: block;
+  min-height: 2em;
+  /* Reserve space for two lines */
 }
 
-/* Responsive font width - clamp from 300 on small screens to 800 on large */
+/* Ensure Splitting.js character elements can be animated independently */
 
-@media (min-width: 640px) {
-  .hero-title {
-    font-variation-settings: "wght" 300, "wdth" 500;
-  }
+.hero-title .char {
+  display: inline-block;
+  font-variation-settings: inherit;
+  /* Prevent layout shift when characters shrink */
+  vertical-align: baseline;
 }
 
-@media (min-width: 1024px) {
-  .hero-title {
-    font-variation-settings: "wght" 300, "wdth" 800;
-  }
+/* Ensure words maintain their position */
+
+.hero-title .word {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .hero-description {
@@ -4653,6 +4691,147 @@ body:has(.woodies-page) {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .hero-buttons {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+/* ============================================
+   CREDIBILITY SECTION
+   ============================================ */
+
+.credibility-section {
+  background-color: rgb(255 255 255 / 0.4);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 64rem) {
+  .credibility-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.credibility-content {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  max-width: 80rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 48rem) {
+  .credibility-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+  }
+}
+
+.credibility-text-wrapper {
+  flex-shrink: 0;
+}
+
+.credibility-text {
+  margin-bottom: 0px;
+  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
+  line-height: 1.4;
+  --tw-text-opacity: 1;
+  color: rgb(120 127 138 / var(--tw-text-opacity));
+}
+
+@media (min-width: 48rem) {
+  .credibility-text {
+    text-align: left;
+    font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
+    line-height: 1.5;
+  }
+}
+
+.credibility-logos {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .credibility-logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .credibility-logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .credibility-logos {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px;
+  }
+}
+
+.credibility-logo-item {
+  display: flex;
+  aspect-ratio: 1 / 1;
+  min-height: 80px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 2rem;
+}
+
+@media (min-width: 48rem) {
+  .credibility-logo-item {
+    aspect-ratio: auto;
+    min-height: 0px;
+    flex-shrink: 0;
+    border-radius: 0px;
+    background-color: transparent;
+    padding: 0px;
+  }
+}
+
+.credibility-logo {
+  height: auto;
+  max-height: 10rem;
+  width: 100%;
+  max-width: 100px;
+}
+
+@media (min-width: 48rem) {
+  .credibility-logo {
+    max-height: 44px;
+    width: auto;
+  }
 }
 
 /* ============================================
@@ -4670,80 +4849,68 @@ body:has(.woodies-page) {
   .profile-startup-section {
     padding-top: 8rem;
     padding-bottom: 8rem;
-    padding-left: 8rem;
-    padding-right: 8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
-}
-
-.profile-startup-section {
-  background: #eef2eb;
 }
 
 .profile-startup-content {
   margin-left: auto;
   margin-right: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
+}
+
+@media (min-width: 48rem) {
+  .profile-startup-content {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: minmax(150px,220px) minmax(0,680px);
+    align-items: flex-start;
+    justify-content: center;
+    gap: clamp(2rem,4vw,4rem);
+  }
+}
+
+.profile-startup-content {
   max-width: -moz-fit-content;
   max-width: fit-content;
   justify-items: center;
 }
 
-/* Medium screens (768px+): 2 columns (image and text) */
-
-@media (min-width: 768px) {
-  .profile-startup-content {
-    grid-template-columns: minmax(150px, 220px) minmax(0, 680px);
-    gap: clamp(2rem, 4vw, 4rem);
-    align-items: start;
-    max-width: 100%;
-    justify-content: center;
-  }
-
-  /* Smaller image column on medium screens */
-
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .profile-startup-content {
-      grid-template-columns: minmax(120px, 180px) 1fr;
-      gap: clamp(1.5rem, 3vw, 3rem);
-    }
-  }
-
-  /* Image Column - Sticky only on two-column layout */
-
-  .profile-startup-image-wrapper {
-    position: sticky;
-    top: 120px;
-    align-self: start;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-}
-
-/* Image Column - Not sticky on single column */
+/* Image Column - Sticky only on two-column layout */
 
 .profile-startup-image-wrapper {
-  display: block;
-  align-self: start;
+  float: right;
   height: -moz-fit-content;
   height: fit-content;
+  align-self: flex-start;
   justify-self: start;
 }
 
-.profile-startup-image {
-  height: auto;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  max-height: 340px;
+@media (min-width: 48rem) {
+  .profile-startup-image-wrapper {
+    top: 120px;
+    float: none;
+    display: block;
+    height: -moz-fit-content;
+    height: fit-content;
+    align-self: flex-start;
+  }
 }
 
-/* Remove max-height on two-column layout */
+.profile-startup-image {
+  margin-left: 0.75rem;
+  height: auto;
+  max-height: 340px;
+  width: 110px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .profile-startup-image {
+    margin-left: 0px;
     max-height: none;
+    width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -4753,12 +4920,122 @@ body:has(.woodies-page) {
 
 .profile-startup-text-column {
   width: 100%;
+  min-width: 0px;
   max-width: 680px;
-  min-width: 0;
   /* Allows text to shrink below content size */
 }
 
-.profile-label {
+.profile-title {
+  margin-top: 0px;
+  margin-bottom: 2rem;
+  font-family: "Bandeins Strange", "Syne", sans-serif;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(43 72 49 / var(--tw-text-opacity));
+  font-weight: 400;
+  font-variation-settings: 'wght' 400;
+  font-variation-settings: "wght" 350, "wdth" 300;
+}
+
+@media (min-width: 768px) {
+  .profile-title {
+    font-variation-settings: "wght" 350, "wdth" 600;
+  }
+}
+
+/* ============================================
+   PROBLEM & SOLUTION GRID SECTION
+   ============================================ */
+
+.problem-solution-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 64rem) {
+  .problem-solution-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.problem-solution-content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.problem-solution-item {
+  margin-bottom: 0px;
+  display: block;
+}
+
+.problem-item {
+  padding-right: 0px;
+}
+
+@media (min-width: 64rem) {
+  .problem-item {
+    padding-right: 2rem;
+  }
+}
+
+.solution-item {
+  margin-bottom: 0px;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 2.5rem;
+}
+
+@media (min-width: 64rem) {
+  .solution-item {
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+}
+
+.practice {
+  margin-top: 0px;
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 248 248 / var(--tw-bg-opacity));
+  padding: 2.5rem;
+}
+
+@media (min-width: 64rem) {
+  .practice {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+  }
+}
+
+.practice-intro {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
+  line-height: 1.4;
+  --tw-text-opacity: 1;
+  color: rgb(34 93 85 / var(--tw-text-opacity));
+  font-weight: 600;
+  font-variation-settings: 'wght' 600;
+}
+
+.practice-list-container {
+  margin-bottom: 2rem;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.problem-solution-label {
   margin-bottom: 1rem;
   display: block;
   font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
@@ -4772,246 +5049,43 @@ body:has(.woodies-page) {
   letter-spacing: 0.05em;
 }
 
-.profile-title {
+.problem-solution-title {
   margin-top: 0px;
   margin-bottom: 2rem;
-  font-family: "Bandeins Strange", "Syne", sans-serif;
-  text-transform: uppercase;
+  font-size: clamp(1.5rem, 1.5rem + 0.4vw, 1.8rem);
+  line-height: 1.25;
   --tw-text-opacity: 1;
   color: rgb(43 72 49 / var(--tw-text-opacity));
   font-weight: 400;
   font-variation-settings: 'wght' 400;
-  font-size: clamp(1.18rem, 1.18rem + 1vw, 2rem);
-  /* Increased by 35%: 18.88px to 32px */
-  line-height: 0.95;
-  font-variation-settings: "wght" 400, "wdth" 300;
-  max-width: 100%;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
-/* Responsive font width for profile title */
-
-@media (min-width: 640px) {
-  .profile-title {
-    font-variation-settings: "wght" 400, "wdth" 500;
-  }
-}
-
-@media (min-width: 1024px) {
-  .profile-title {
-    font-variation-settings: "wght" 400, "wdth" 800;
-  }
-}
-
-.startup-plight-intro {
-  margin-bottom: 4rem;
-}
-
-.startup-plight-lead {
+.problem-solution-subtitle {
+  margin-top: 0px;
   margin-bottom: 1.5rem;
-  font-size: clamp(0.8125rem, 0.8125rem + 0.4vw, 1rem);
+  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
   line-height: 1.4;
-  color: var(--color-secondary);
+  --tw-text-opacity: 1;
+  color: rgb(34 93 85 / var(--tw-text-opacity));
   font-weight: 600;
   font-variation-settings: 'wght' 600;
 }
 
-.startup-plight-transition {
+.problem-solution-description p {
   margin-bottom: 1.5rem;
-  font-weight: 600;
-  font-variation-settings: 'wght' 600;
 }
 
-.startup-plight-belief {
+.problem-solution-description p:last-child {
+  margin-bottom: 0px;
+}
+
+.problem-solution-closing {
   margin-top: 2rem;
   margin-bottom: 0px;
+  --tw-text-opacity: 1;
+  color: rgb(43 72 49 / var(--tw-text-opacity));
   font-weight: 600;
   font-variation-settings: 'wght' 600;
-}
-
-.startup-plight-services {
-  margin-bottom: 4rem;
-}
-
-.startup-plight-services-title {
-  margin-top: 0px;
-  margin-bottom: 2rem;
-  font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  text-transform: uppercase;
-  color: var(--color-secondary);
-  font-weight: 700;
-  font-variation-settings: 'wght' 700;
-}
-
-.startup-plight-services-grid {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 2rem;
-}
-
-.startup-plight-service-heading {
-  margin-bottom: 0.5rem;
-  margin-top: 0px;
-  font-weight: 600;
-  font-variation-settings: 'wght' 600;
-}
-
-.startup-plight-service-description {
-  margin-bottom: 0px;
-  line-height: 1.625;
-}
-
-.startup-plight-fractional {
-  border-top-width: 1px;
-  padding-top: 0px;
-  border-color: rgba(34, 93, 85, 0.2);
-}
-
-.startup-plight-fractional-title {
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-  font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-variation-settings: 'wght' 700;
-}
-
-.startup-plight-fractional-description {
-  margin-bottom: 1.5rem;
-  line-height: 1.625;
-}
-
-.startup-plight-closing {
-  margin-top: 2rem;
-  margin-bottom: 0px;
-  font-weight: 600;
-  font-variation-settings: 'wght' 600;
-}
-
-/* ============================================
-   CTA BANNER
-   ============================================ */
-
-.cta-banner {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--color-secondary);
-  background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/cta-bg-large.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-@media (min-width: 64rem) {
-  .cta-banner {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-}
-
-@media (min-width: 80rem) {
-  .cta-banner {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .cta-banner {
-    background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/cta-bg-small.svg");
-  }
-}
-
-.cta-content {
-  position: relative;
-  z-index: 10;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  max-width: 1800px;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-@media (min-width: 64rem) {
-  .cta-content {
-    flex-direction: row;
-    align-items: center;
-    gap: 4rem;
-  }
-}
-
-.cta-w-mark {
-  max-width: 1.25rem;
-}
-
-@media (min-width: 64rem) {
-  .cta-w-mark {
-    max-width: 2rem;
-  }
-}
-
-.cta-text {
-  margin-bottom: 0px;
-  font-family: "Bandeins Strange", "Syne", sans-serif;
-  text-transform: uppercase;
-  line-height: 1.25;
-  font-weight: 400;
-  font-variation-settings: 'wght' 400;
-  font-size: clamp(1rem, 1rem + 0.5vw, 1.5rem);
-  /* 16px to 24px - increased minimum for heading */
-  font-variation-settings: "wght" 400, "wdth" 300;
-  background: linear-gradient(90deg, rgba(48, 128, 79, 0.7) 0%, var(--color-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  max-width: 48rem;
-}
-
-@media (min-width: 64rem) {
-  .cta-text {
-    max-width: 56rem;
-  }
-}
-
-/* Responsive font width for CTA text */
-
-@media (min-width: 640px) {
-  .cta-text {
-    font-variation-settings: "wght" 400, "wdth" 500;
-  }
-}
-
-@media (min-width: 1024px) {
-  .cta-text {
-    font-variation-settings: "wght" 400, "wdth" 800;
-  }
-}
-
-.cta-button {
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
-}
-
-.cta-button a {
-  display: block;
-  width: 100%;
-}
-
-@media (min-width: 64rem) {
-  .cta-button a {
-    display: inline;
-    width: auto;
-  }
 }
 
 /* ============================================
@@ -5058,8 +5132,6 @@ body:has(.woodies-page) {
   font-variation-settings: "wght" 400, "wdth" 300;
 }
 
-/* Responsive font width for work title */
-
 @media (min-width: 640px) {
   .work-title {
     font-variation-settings: "wght" 400, "wdth" 500;
@@ -5072,11 +5144,17 @@ body:has(.woodies-page) {
   }
 }
 
+.work-description {
+  margin-bottom: 1rem;
+}
+
 .work-grid {
   margin-left: auto;
   margin-right: auto;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+  row-gap: 4rem;
 }
 
 @media (min-width: 48rem) {
@@ -5086,7 +5164,6 @@ body:has(.woodies-page) {
 }
 
 .work-grid {
-  gap: 32px;
   max-width: 1120px;
   /* 544 * 2 + 32 */
 }
@@ -5097,6 +5174,10 @@ body:has(.woodies-page) {
   /* GSAP handles the initial opacity and animation */
 }
 
+.work-item-full-width {
+  grid-column: 1 / -1;
+}
+
 .work-image {
   margin-bottom: 1rem;
   aspect-ratio: 544/380;
@@ -5104,7 +5185,19 @@ body:has(.woodies-page) {
   border-radius: 1.5rem;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+  transition-property: transform,box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.work-results {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(153 153 153 / var(--tw-text-opacity));
+  font-variation-settings: "wght" 600, "wdth" 300;
 }
 
 /* ============================================
@@ -5152,8 +5245,6 @@ body:has(.woodies-page) {
   font-variation-settings: "wght" 400, "wdth" 300;
 }
 
-/* Responsive font width for testimonials title */
-
 @media (min-width: 640px) {
   .testimonials-title {
     font-variation-settings: "wght" 400, "wdth" 500;
@@ -5169,15 +5260,15 @@ body:has(.woodies-page) {
 .testimonials-grid {
   display: grid;
   width: 100%;
+  max-width: 100%;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 6rem;
-  max-width: 100%;
 }
 
 .testimonial-card {
   display: flex;
-  flex-direction: column;
   max-width: 600px;
+  flex-direction: column;
   /* Stagger animation handles opacity */
 }
 
@@ -5222,37 +5313,24 @@ body:has(.woodies-page) {
 .testimonial-text {
   margin-bottom: 0.5rem;
   font-family: "Bandeins Strange", "Syne", sans-serif;
+  line-height: 1.3;
+  --tw-text-opacity: 1;
+  color: rgb(29 29 29 / var(--tw-text-opacity));
   font-weight: 400;
   font-variation-settings: 'wght' 400;
   font-size: clamp(1rem, 1rem + 0.5vw, 1.5rem);
   /* Smaller size */
-  color: #1D1D1D;
   font-variation-settings: "wght" 400, "wdth" 250;
-  line-height: 1.3;
-}
-
-/* Responsive font width for testimonial text */
-
-@media (min-width: 640px) {
-  .testimonial-text {
-    font-variation-settings: "wght" 400, "wdth" 250;
-  }
-}
-
-@media (min-width: 1024px) {
-  .testimonial-text {
-    font-variation-settings: "wght" 400, "wdth" 250;
-  }
 }
 
 .testimonial-author {
   margin-top: 1.5rem;
-  font-size: clamp(0.8125rem, 0.8125rem + 0.4vw, 1rem);
+  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
   line-height: 1.4;
-  font-variation-settings: 'wght' 400;
-  color: rgba(29, 29, 29, 0.7);
-  /* De-emphasized dark gray */
+  color: rgba(29,29,29,0.7);
   font-weight: 400;
+  font-variation-settings: 'wght' 400;
+  /* De-emphasized dark gray */
 }
 
 /* ============================================
@@ -5284,15 +5362,15 @@ body:has(.woodies-page) {
 
 .approach-section::before {
   content: "";
+  pointer-events: none;
   position: absolute;
   inset: 0px;
   z-index: 0;
-  background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/approach-bg-large.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/approach-bg-large.svg");
   opacity: 1;
-  pointer-events: none;
 }
 
 @media (max-width: 768px) {
@@ -5309,6 +5387,7 @@ body:has(.woodies-page) {
 .approach-label {
   margin-bottom: 3rem;
   display: block;
+  text-align: left;
   font-family: "Bandeins Strange", "Syne", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -5316,15 +5395,21 @@ body:has(.woodies-page) {
   color: rgb(255 255 255 / var(--tw-text-opacity));
   font-weight: 400;
   font-variation-settings: 'wght' 400;
+}
+
+@media (min-width: 48rem) {
+  .approach-label {
+    text-align: center;
+  }
+}
+
+.approach-label {
   font-size: clamp(0.875rem, 0.875rem + 0.75vw, 1.5rem);
   /* Further reduced: 14px to 24px */
   line-height: 0.95;
   letter-spacing: 1px;
-  text-align: left;
   font-variation-settings: "wght" 400, "wdth" 300;
 }
-
-/* Responsive font width for approach label */
 
 @media (min-width: 640px) {
   .approach-label {
@@ -5338,12 +5423,6 @@ body:has(.woodies-page) {
   }
 }
 
-@media (max-width: 768px) {
-  .approach-label {
-    text-align: center;
-  }
-}
-
 .approach-circle {
   position: relative;
   margin-left: auto;
@@ -5351,9 +5430,9 @@ body:has(.woodies-page) {
   margin-bottom: 3rem;
   display: flex;
   width: 100%;
+  max-width: 1806px;
   align-items: center;
   justify-content: center;
-  max-width: 1806px;
   aspect-ratio: 0.7375;
 }
 
@@ -5368,24 +5447,28 @@ body:has(.woodies-page) {
 }
 
 .circular-text-desktop {
-  display: block;
-}
-
-.circular-text-mobile {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 48rem) {
   .circular-text-desktop {
-    display: none;
-  }
-
-  .circular-text-mobile {
     display: block;
-    width: 100%;
-    height: auto;
   }
+}
 
+.circular-text-mobile {
+  display: block;
+}
+
+@media (min-width: 48rem) {
+  .circular-text-mobile {
+    display: none;
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
   .approach-circle {
     display: flex;
     max-width: 100%;
@@ -5443,13 +5526,14 @@ body:has(.woodies-page) {
 .process-card {
   position: absolute;
   display: flex;
+  aspect-ratio: 3/4;
+  max-width: 240px;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 0.75rem;
-  background: #101410;
-  aspect-ratio: 3/4;
-  padding: 24px;
-  max-width: 240px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 20 16 / var(--tw-bg-opacity));
+  padding: 1.5rem;
 }
 
 /* Large screen adjustments for process cards */
@@ -5510,21 +5594,21 @@ body:has(.woodies-page) {
 }
 
 .process-number {
+  margin: 0px;
   display: block;
   font-family: "Kode Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
   line-height: 1.5;
   color: var(--color-accent);
-  margin: 0;
 }
 
 .process-description {
+  margin: 0px;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   font-weight: 500;
   font-variation-settings: 'wght' 500;
   letter-spacing: -0.54px;
-  margin: 0;
 }
 
 .engagements {
@@ -5538,7 +5622,7 @@ body:has(.woodies-page) {
   margin-bottom: 2rem;
   text-align: left;
   font-family: "Bandeins Strange", "Syne", sans-serif;
-  font-size: clamp(0.8125rem, 0.8125rem + 0.4vw, 1rem);
+  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
   line-height: 1.4;
   text-transform: uppercase;
   --tw-text-opacity: 1;
@@ -5557,12 +5641,6 @@ body:has(.woodies-page) {
 @media (min-width: 48rem) {
   .engagements-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 768px) {
-  .engagements-grid {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 
@@ -5595,16 +5673,16 @@ body:has(.woodies-page) {
 }
 
 .engagement-column li {
+  margin-bottom: 0px;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-  margin-bottom: 0;
 }
 
 .engagement-item-mobile-only {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 48rem) {
   .engagement-item-mobile-only {
     display: list-item;
   }
@@ -5653,51 +5731,6 @@ body:has(.woodies-page) {
   max-width: 72rem;
 }
 
-.footer-top {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-@media (min-width: 64rem) {
-  .footer-top {
-    flex-direction: row;
-  }
-}
-
-.footer-top {
-  margin-bottom: 65px;
-}
-
-.footer-text {
-  margin-bottom: 0px;
-  font-family: "Bandeins Strange", "Syne", sans-serif;
-  text-transform: uppercase;
-  line-height: 1.25;
-  color: var(--color-secondary);
-  font-weight: 400;
-  font-variation-settings: 'wght' 400;
-  font-size: clamp(0.875rem, 0.875rem + 0.75vw, 1.5rem);
-  /* Reduced from heading: 14px to 24px */
-  font-variation-settings: "wght" 400, "wdth" 300;
-}
-
-/* Responsive font width for footer text - reduced width for narrower appearance */
-
-@media (min-width: 640px) {
-  .footer-text {
-    font-variation-settings: "wght" 400, "wdth" 300;
-  }
-}
-
-@media (min-width: 1024px) {
-  .footer-text {
-    font-variation-settings: "wght" 400, "wdth" 300;
-  }
-}
-
 .footer-bottom {
   display: flex;
   flex-direction: column;
@@ -5743,8 +5776,6 @@ body:has(.woodies-page) {
   transition: opacity 0.2s ease;
 }
 
-/* Responsive font width for footer links */
-
 @media (min-width: 640px) {
   .footer-link {
     font-variation-settings: "wght" 500, "wdth" 500;
@@ -5762,61 +5793,12 @@ body:has(.woodies-page) {
   opacity: 0.7;
 }
 
-.footer-wallace-image {
-  margin-top: 2rem;
-  width: 100%;
-  margin-left: -24px;
-  margin-right: -24px;
-  width: calc(100% + 48px);
-}
-
-@media (min-width: 1024px) {
-  .footer-wallace-image {
-    margin-left: -103px;
-    margin-right: -103px;
-    width: calc(100% + 206px);
-  }
-}
-
-.footer-wallace-image img {
-  height: auto;
-  width: 100%;
-  display: block;
-  mix-blend-mode: difference;
-  opacity: 0.4;
-}
-
 /* Mobile footer adjustments */
 
 @media (max-width: 768px) {
   .footer-section {
     position: relative;
     padding: 48px 24px 0;
-  }
-
-  .footer-wallace-image {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    margin-top: 0px;
-    margin-left: 0;
-    margin-right: 0;
-    width: auto;
-    height: 100%;
-    pointer-events: none;
-    overflow: visible;
-  }
-
-  .footer-wallace-image img {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    height: auto;
-    width: 100vh;
-    max-width: none;
-    transform: rotate(-90deg) translateX(50%);
-    transform-origin: right center;
   }
 }
 
@@ -5925,19 +5907,6 @@ body:has(.woodies-page) {
    ============================================ */
 
 @media (max-width: 768px) {
-  .hero-section {
-    padding-left: 24px;
-    padding-right: 24px;
-    width: calc(100% - 48px);
-    padding-top: 6rem;
-    padding-bottom: 3rem;
-  }
-
-  .hero-buttons {
-    width: 100%;
-    flex-direction: column;
-  }
-
   .profile-startup-section,
   .work-section,
   .testimonials-section,
@@ -5949,20 +5918,9 @@ body:has(.woodies-page) {
     padding-bottom: 4rem;
   }
 
-  .cta-banner {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .cta-content {
-    flex-direction: column;
-  }
-
   .work-grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 2.5rem;
+    gap: 3rem;
   }
 
   .engagements-grid {
@@ -5988,8 +5946,8 @@ body:has(.woodies-page) {
 
 .notifications--notification-item {
   display: block;
-  font-size: clamp(1.25rem, 1.25rem + 1.5vw, 2.25rem);
-  line-height: .95;
+  font-size: clamp(1.35rem, 1.35rem + 1.5vw, 1.75rem);
+  line-height: 1.25;
   text-decoration-line: none;
   color: var(--color-fg);
 }
@@ -7205,6 +7163,10 @@ body:has(.woodies-page) {
     width: 100%;
   }
 
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -7310,6 +7272,10 @@ body:has(.woodies-page) {
     margin-left: 0px;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:max-w-\[22rem\] {
     max-width: 22rem;
   }
@@ -7318,12 +7284,24 @@ body:has(.woodies-page) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .lg\:grid-cols-\[1fr\2c 300px\] {
     grid-template-columns: 1fr 300px;
   }
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
+  .lg\:gap-4 {
+    gap: 1rem;
   }
 
   .lg\:gap-8 {
@@ -7352,7 +7330,7 @@ body:has(.woodies-page) {
 
   .lg\:text-lg {
     font-size: clamp(1.5rem, 1.2rem + 0.75vw, 2.25rem);
-    line-height: 1.2;
+    line-height: 1.25;
   }
 
   .lg\:shadow-xl {

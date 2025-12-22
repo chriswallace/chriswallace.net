@@ -137,7 +137,7 @@
   ul,
   ol,
   dl {
-    @apply max-w-prose mb-12 text-muted;
+    @apply max-w-prose mb-12;
   }
 
   p + ul,
@@ -156,13 +156,18 @@
 
   article {
     @apply pt-16 md:pt-0;
+  }
 
-    ul {
-      @apply mb-12 list-disc ml-4 pl-2 text-fg;
-    }
+  ul {
+    @apply list-none pl-0 mb-8;
+  }
 
-    li {
-      @apply mb-2 text-fg;
-    }
+  li {
+    @apply mb-0 pl-6 relative;
+  }
+
+  li::before {
+    content: "•";
+    @apply absolute left-0 text-fg;
   }
 }

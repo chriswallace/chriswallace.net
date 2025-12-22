@@ -16,14 +16,14 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
   </a>
   
   <div class="nav-links">
-    <a href="#about" class="nav-link active">Meet Chris</a>
+    <a href="#about" class="nav-link">Meet Chris</a>
+    <a href="#solution" class="nav-link">Force Multiplier</a>
     <a href="#work" class="nav-link">My Work</a>
-    <a href="#testimonials" class="nav-link">Testimonials</a>
     <a href="#approach" class="nav-link">Approach</a>
   </div>
   
   <a href="https://zcal.co/chriswallace" class="nav-cta" target="_blank" rel="noopener">
-    Schedule a Free Consult
+    Start a conversation
   </a>
   
   <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobile-menu-toggle">
@@ -37,12 +37,12 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
 <!-- Mobile Menu (Pull-down Sheet) -->
 <div class="mobile-menu" id="mobile-menu">
   <div class="mobile-menu-cta">
-    <a href="https://zcal.co/chriswallace" class="btn" target="_blank" rel="noopener">Schedule a Free Consult</a>
+    <a href="https://zcal.co/chriswallace" class="btn" target="_blank" rel="noopener">Start a conversation</a>
   </div>
   <div class="mobile-menu-links">
-    <a href="#about" class="mobile-menu-link active">Meet Chris</a>
+    <a href="#about" class="mobile-menu-link">Meet Chris</a>
+    <a href="#solution" class="mobile-menu-link">Force Multiplier</a>
     <a href="#work" class="mobile-menu-link">My Work</a>
-    <a href="#testimonials" class="mobile-menu-link">Testimonials</a>
     <a href="#approach" class="mobile-menu-link">Approach</a>
   </div>
   <div class="mobile-menu-logo">
@@ -58,83 +58,148 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
 <section class="hero-section" data-section="hero">
   <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/wallace-tall.svg" alt="" class="hero-wallace-logo" aria-hidden="true">
   <div class="reveal">
-    <span class="hero-label">Hire a Fractional Design Leader</span>
+    <span class="hero-label overline">Fractional Design Leadership</span>
   </div>
   <h1 class="hero-title reveal reveal-delay-1">
-    Unbreak<br>Your Design Process
+    Flexible approach.<br>Focused results.
   </h1>
   <p class="hero-description reveal reveal-delay-2">
-    Work with 20-year design industry veteran Chris Wallace to fix your product design woes with a proven and practical design approach.
+    I embed as a part-time Head of Design to bring clarity, craft, and momentum to product teams in their journey to success.
   </p>
   <div class="hero-buttons reveal reveal-delay-3">
-    <a href="#about" class="btn btn-bright">Meet Chris</a>
-    <a href="https://zcal.co/chriswallace" class="btn btn-outline" target="_blank" rel="noopener">Schedule a Free Consult</a>
+    <a href="https://zcal.co/chriswallace" class="btn btn-bright" target="_blank" rel="noopener">Start a conversation</a>
+    <a href="#about" class="btn btn-outline">Meet Chris</a>
   </div>
 </section>
 
-<!-- Profile & Startup Plight Section -->
+<!-- Social Proof / Credibility Strip -->
+<section class="credibility-section" data-section="credibility">
+  <div class="credibility-content reveal">
+    <div class="credibility-text-wrapper">
+      <p class="credibility-text">
+        Trusted by startups and<br>industry-defining companies
+      </p>
+    </div>
+    <div class="credibility-logos">
+      <div class="credibility-logo-item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/logo-facebook.svg" alt="Facebook" class="credibility-logo" loading="lazy">
+      </div>
+      <div class="credibility-logo-item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/logo-plymouth.svg" alt="Plymouth" class="credibility-logo" loading="lazy">
+      </div>
+      <div class="credibility-logo-item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/logo-roblox.svg" alt="Roblox" class="credibility-logo" loading="lazy">
+      </div>
+      <div class="credibility-logo-item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/logo-google.svg" alt="Google" class="credibility-logo" loading="lazy">
+      </div>
+      <div class="credibility-logo-item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/logo-candy.svg" alt="CANDY" class="credibility-logo" loading="lazy">
+      </div>
+      <div class="credibility-logo-item">
+        <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/logo-starbucks.svg" alt="Starbucks" class="credibility-logo" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Meet Chris Section -->
 <section class="profile-startup-section" id="about" data-section="profile">
   <div class="profile-startup-content">
     <!-- Column 1: Sticky Image -->
-    <div class="profile-startup-image-wrapper">
+    <div class="profile-startup-image-wrapper reveal">
       <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/meet-chris-profile.png?tr=w-500,q-85,f-auto" alt="Chris Wallace" class="profile-startup-image" loading="lazy">
     </div>
     
     <!-- Column 2: All Content -->
     <div class="profile-startup-text-column">
-      <span class="profile-label reveal">Meet Chris</span>
-      <h2 class="profile-title reveal reveal-delay-1">Fractional Design Leader for Startups</h2>
+      <span class="profile-label overline reveal">Meet Chris</span>
+      <h2 class="profile-title reveal reveal-delay-1">A design leader who has walked the path of a founder.</h2>
       
       <div class="profile-description reveal reveal-delay-2">
         <p>I'm a 2x Emmy-nominated design leader who's led major initiatives at Roblox, Google, and Facebook. I've bootstrapped products from 0→1 to millions in revenue, built design teams from 1→25, and helped achieve 2x exits totaling $30m+.</p>
         <p>Now I work as a fractional design leader with startups that need experienced leadership—without the overhead of a full-time executive. I deliver clear design direction, scalable systems, and high-performing teams that drive business results.</p>
       </div>
 
-      <div class="startup-plight-services reveal reveal-delay-4">
-        <h3 class="startup-plight-services-title">What I deliver</h3>
-
-        <div class="startup-plight-services-grid">
-          <div class="startup-plight-service-item">
-            <p class="startup-plight-service-heading">Clear design direction</p>
-            <p class="startup-plight-service-description">I cut through the noise to define a design strategy that aligns product vision, brand, and user experience. Practical guidance your team can use to make better decisions faster.</p>
-          </div>
-
-          <div class="startup-plight-service-item">
-            <p class="startup-plight-service-heading">Design systems that accelerate, not slow down</p>
-            <p class="startup-plight-service-description">I build systems that increase speed and consistency without creating bureaucracy. Design systems should make teams faster, not freeze progress.</p>
-          </div>
-
-          <div class="startup-plight-service-item">
-            <p class="startup-plight-service-heading">Teams that drive business outcomes</p>
-            <p class="startup-plight-service-description">I mentor designers, establish performance frameworks, and help design earn its seat at the table by tying work directly to growth, retention, and activation.</p>
-          </div>
-
-          <div class="startup-plight-service-item">
-            <p class="startup-plight-service-heading">Complex products made simple</p>
-            <p class="startup-plight-service-description">Whether the domain is technical, regulated, or unfamiliar to users, I make products feel understandable and confident without oversimplifying what makes them powerful.</p>
-        </div>
-      </div>
-    </div>
-
-      <div class="startup-plight-fractional reveal reveal-delay-5">
-        <h3 class="startup-plight-fractional-title">Why fractional leadership</h3>
-        <p class="startup-plight-fractional-description">Most startups don't need a full-time design executive. They need experienced leadership when crossing a threshold: new scale, new markets, or new expectations.</p>
-        <p class="startup-plight-fractional-description">I work with founders and product leaders to stabilize design, level up the org, and leave behind systems that continue working after my engagement ends. You get senior design thinking and strategic partnership without the overhead or long ramp of a full-time hire.</p>
-        <p class="startup-plight-closing">If you're building something ambitious and design should be doing more than just preparing for scale, we'll work well together.</p>
-      </div>
     </div>
 
   </div>
 </section>
 
-<!-- CTA Banner -->
-<section class="cta-banner" data-section="cta">
-  <div class="cta-content">
-    <img class="cta-w-mark" src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/w-mark.svg" alt="" />
-    <p class="cta-text reveal">Ready to get design on the right track?<br>Let's get started.</p>
-    <div class="cta-button reveal reveal-delay-1">
-      <a href="https://zcal.co/chriswallace" class="btn btn-white" target="_blank" rel="noopener">Schedule a Free Consult</a>
+<section class="problem-solution-section">
+  <div class="problem-solution-content">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-4">
+      <div class="problem-solution-item problem-item" id="problem">
+        <span class="problem-solution-label reveal">The Problem</span>
+        <h2 class="problem-solution-title reveal reveal-delay-1">Your design team is working hard but doesn't deliver strategically.</h2>
+
+        <div class="problem-solution-description reveal reveal-delay-2">
+          <h3 class="problem-solution-subtitle">What I usually see:</h3>
+
+          <ul class="problem-solution-list">
+            <li>Talented designers without a clear quality bar</li>
+            <li>Design systems that slow teams down instead of speeding them up</li>
+            <li>Product decisions made late, emotionally, or by committee</li>
+            <li>Design reacting to roadmaps instead of shaping them</li>
+          </ul>
+
+          <p class="problem-solution-closing">
+            Hiring a full-time Head of Design feels risky.<br>
+            Not hiring one quietly costs you more every quarter.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-span-2 grid md:grid-cols-2 gap-0 reveal">
+        <!-- Solution Column -->
+        <div class="problem-solution-item solution-item" id="solution">
+          <span class="problem-solution-label">The Solution</span>
+          <h2 class="problem-solution-title">Force Multiplier</h2>
+          <p class="problem-solution-subtitle">Senior design leadership. Fractional commitment. Compounding impact.</p>
+
+          <div class="problem-solution-description">
+            <p>Force Multiplier is a part-time Head of Design engagement for companies that want the impact of a real design leader without the overhead of a full-time role.</p>
+            <p class="text-muted">I don't advise from the sidelines.<br>I show up, take ownership, and help teams make better decisions faster.</p>
+          </div>
+        </div>
+        <div class="practice">
+          <div class="practice-intro">
+            <p>With Force Multiplier, I help teams:</p>
+          </div>
+
+          <ul class="practice-list-container">
+            <li class="practice-item practice-item-left">
+              Set a clear design vision and quality bar
+            </li>
+
+            <li class="practice-item practice-item-right">
+              Align design, product, and engineering around real priorities
+            </li>
+
+            <li class="practice-item practice-item-left">
+              Coach and level up designers individually
+            </li>
+
+            <li class="practice-item practice-item-right">
+              Improve systems, workflows, and decision-making
+            </li>
+
+            <li class="practice-item practice-item-left">
+              Reduce rework, churn, and late-stage surprises
+            </li>
+
+            <li class="practice-item practice-item-right">
+              Build confidence at the leadership table
+            </li>
+          </ul>
+
+          <div>
+            <p>The goal isn't more output.<br>It's more leverage from the team you already have.</p>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -151,7 +216,34 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         alt="Roblox Studio" 
         class="work-image" 
         loading="lazy">
-      <p class="work-description">Embedded for six months, I designed critical avatar auto-setup features for passionate creators in <strong>Roblox Studio</strong>.</p>
+      <p class="work-description">Embedded for six months, I designed animation, asset publishing, and auto-setup features for <strong>Roblox</strong>, leading key user research to uncover creator pain point and workflow behaviors.</p>
+      <p class="work-results">Results &middot;
+      Approved publishing feature specification</p>
+    </span>
+    <span class="work-item">
+      <img 
+        src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/walking-dead-large.png?tr=w-544,q-80,f-auto" 
+        srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/walking-dead-large.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/walking-dead-large.png?tr=w-1088,q-80,f-auto 2x" 
+        alt="The Walking Dead Story Sync" 
+        class="work-image" 
+        loading="lazy">
+      <p class="work-description">My team at Lift UX developed <strong>The Walking Dead Story Sync</strong>, an award-winning interactive second-screen app engaging millions of viewers with customized live content.</p>
+      <p class="work-results">Results &middot;
+      Most Outstanding Interactive Program (Emmy Awards Nominee, 2013), Best Second Screen App (Variety Awards, 2012), Best iPad or Tablet Social TV Application (Social TV Awards, 2012)</p>
+    </span>
+    <span class="work-item work-item-full-width">
+      <video-player 
+        id="candy-digital-video"
+        class="aspect-video rounded-3xl mb-4" 
+        video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.mp4"
+        video-poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.png?tr=w-1024,q-80,f-auto"
+        playsinline
+        loop
+        muted>
+      </video-player>
+      <p class="work-description">Over nine months, I led a major redesign to establish a world-class digital collectible marketplace with <strong>Candy Digital</strong>.</p>
+      <p class="work-results">Results &middot;
+      Improved customer acquisition, collector experience, net new features launched</p>
     </span>
     <span class="work-item">
       <img 
@@ -161,6 +253,8 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         class="work-image" 
         loading="lazy">
       <p class="work-description">At 10up, I grew and developed a remote 25-person design team that redesigned the <strong>California DMV</strong>'s website during covid, bringing key virtual services online.</p>
+      <p class="work-results">Results &middot;
+      +34M pageviews, +2M visitors, new virtual field office</p>
     </span>
     <span class="work-item">
       <img 
@@ -169,16 +263,9 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         alt="Eye Appeal Inc" 
         class="work-image" 
         loading="lazy">
-      <p class="work-description">Working with <strong>Eye Appeal Inc</strong>, I designed a killer brand and app. I even built a full app prototype to secure critical investment and save $100k in development costs.</p>
-    </span>
-    <span class="work-item">
-      <img 
-        src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.png?tr=w-544,q-80,f-auto" 
-        srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.png?tr=w-1088,q-80,f-auto 2x" 
-        alt="Candy Digital" 
-        class="work-image" 
-        loading="lazy">
-      <p class="work-description">Over nine months, I led a major redesign to establish a world-class digital collectible marketplace with <strong>Candy Digital</strong>.</p>
+      <p class="work-description">Working with <strong>Eye Appeal Inc</strong>, I designed a killer brand and app. I even built a full app prototype, establishing valuable proprietary technology and design patterns.</p>
+      <p class="work-results">Results &middot;
+      $100k saved in dev. cost, successful fundraising round</p>
     </span>
     <span class="work-item">
       <img 
@@ -187,7 +274,9 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         alt="Woodies" 
         class="work-image" 
         loading="lazy">
-      <p class="work-description">I established a creative studio that launched a beloved entertainment IP in <strong>Woodies</strong>, achieving $2.6m revenue in just six months.</p>
+      <p class="work-description">I established a creative studio that launched <strong>Woodies</strong>, a beloved entertainment IP.</p>
+      <p class="work-results">Results &middot;
+      $2.6m revenue in six months, 4,000 new customers</p>
     </span>
     <span class="work-item">
       <img 
@@ -197,6 +286,8 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         class="work-image" 
         loading="lazy">
       <p class="work-description">Working with <strong>Plymouth Street</strong>, I helped redesign the process of applying for a high-tech work visa for immigrants seeking US-based jobs.</p>
+      <p class="work-results">Results &middot;
+      Vastly increased task completion rate, reduced submission times</p>
     </span>
   </div>
 </section>
@@ -216,7 +307,6 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <div class="testimonial-card">
       <p class="testimonial-text">Chris is an exceptionally talented and proactive team member, consistently pushing boundaries to deliver innovative, impactful solutions. His technical expertise, thoughtful approach to design, and keen user-centric mindset set him apart in the field.</p>
       <p class="testimonial-text">His leadership was also instrumental in a complete overhaul of Candy's website and marketplace experience. Working closely with cross-functional stakeholders, Chris aligned technical objectives with our broader product vision, ensuring a seamless, intuitive user experience. The project's success is a testament to his ability to drive measurable outcomes by marrying technical proficiency with strategic design thinking.</p>
-      <p class="testimonial-text">I highly recommend him and am confident that he will continue to achieve remarkable success in any role he undertakes.</p>
       <div class="testimonial-author">Eric Ginsburg, Director of Marketing @ Candy Digital</div>
     </div>
 
@@ -319,21 +409,32 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
 <!-- Footer Section -->
 <footer class="footer-section" data-section="footer">
   <div class="footer-content">
-    <div class="footer-top reveal">
-      <p class="footer-text">Hey, you made it all the way here.<br>Ten points to Hufflepuff!</p>
-      <a href="https://zcal.co/chriswallace" class="btn" target="_blank" rel="noopener">Schedule a Free Consult</a>
+  <!-- Let's Talk Section -->
+    <div class="lets-talk-section" id="lets-talk" data-section="lets-talk">
+      <div class="lets-talk-content">
+        <div class="lg:flex lg:justify-between">
+          <div>
+            <h2 class="lets-talk-title mt-0 reveal">No pitch. No pressure. Just clarity.</h2>
+            
+            <div class="lets-talk-description mb-12 reveal reveal-delay-1">
+              <p>We'll start with a conversation. If you're feeling the drag but can't quite name it, that's usually the signal.</p>
+            </div>
+          </div>
+        
+          <div class="lets-talk-cta reveal reveal-delay-2">
+            <a href="https://zcal.co/chriswallace" class="btn btn-white" target="_blank" rel="noopener">Start a conversation →</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="footer-bottom reveal reveal-delay-1">
-      <p class="footer-copyright">Copyright 2025 Chris Wallace. All rights reserved. Good artists copy. Great artists respect this footer.</p>
+    <div class="footer-bottom reveal reveal-delay-3">
+      <p class="footer-copyright">Copyright 2025 Chris Wallace. All rights reserved.</p>
       <div class="footer-links">
         <a href="https://twitter.com/chriswallace" class="footer-link" target="_blank" rel="noopener">Twitter</a>
         <a href="https://linkedin.com/in/chriswallace2" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://www.facebook.com/christopher.scott.wallace/" class="footer-link" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
-  </div>
-  <div class="footer-wallace-image">
-    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/footer-wallace-logo.png?tr=w-1800,q-85,f-auto" alt="Wallace" loading="lazy">
   </div>
 </footer>
 
@@ -428,6 +529,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
+  // Autoplay Candy Digital video when it reaches 80% of viewport height
+  const candyVideo = document.getElementById('candy-digital-video');
+  if (candyVideo) {
+    // Wait for the video player's shadow DOM to be ready
+    const initVideoAutoplay = () => {
+      const videoElement = candyVideo.shadowRoot?.querySelector('video');
+      if (!videoElement) {
+        // Retry if shadow DOM not ready yet
+        setTimeout(initVideoAutoplay, 100);
+        return;
+      }
+
+      // Ensure video is muted for autoplay
+      videoElement.muted = true;
+      let hasAutoplayed = false;
+
+      // Create intersection observer that triggers at 80% viewport height
+      const viewportHeight = window.innerHeight;
+      const triggerPoint = viewportHeight * 0.8; // 80% of viewport height
+      
+      const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !hasAutoplayed) {
+            const rect = entry.boundingClientRect;
+            // Trigger when video top reaches 80% of viewport height (20% from top)
+            if (rect.top <= triggerPoint) {
+              hasAutoplayed = true;
+              videoElement.play().catch(err => {
+                console.log('Video autoplay failed:', err);
+              });
+            }
+          }
+        });
+      }, {
+        rootMargin: `0px 0px -${viewportHeight * 0.2}px 0px`,
+        threshold: 0
+      });
+
+      videoObserver.observe(candyVideo);
+    };
+
+    // Start initialization
+    initVideoAutoplay();
+  }
+
   // Note: GSAP animations are now handled in /assets/js/homepage.js
 });
 </script>

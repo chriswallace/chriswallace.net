@@ -1,113 +1,145 @@
 class VideoPlayer extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-        this.hasInteracted = false;
-        this.hideControlsTimeout = null;
-        this.isSeeking = false;
-        this.wasPlaying = false;
-        this.observer = null;
-        this.fadeoutTimeout = null;
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+    this.hasInteracted = false;
+    this.hideControlsTimeout = null;
+    this.isSeeking = false;
+    this.wasPlaying = false;
+    this.observer = null;
+    this.fadeoutTimeout = null;
+  }
+
+  connectedCallback() {
+    // Check for touch device before rendering
+    const isTouchDevice = "ontouchstart" in window;
+    this.render(isTouchDevice);
+
+    // First initialize all elements
+    this.video = this.shadowRoot.querySelector("video");
+    this.videoContainer = this;
+
+    // Only initialize custom controls for non-touch devices
+    if (!isTouchDevice) {
+      this.playButton = this.shadowRoot.querySelector("#playButton");
+      this.muteButton = this.shadowRoot.querySelector("#muteButton");
+      this.fullscreenButton =
+        this.shadowRoot.querySelector("#fullscreenButton");
+      this.videoOverlay = this.shadowRoot.querySelector(".video-overlay");
+      this.controls = this.shadowRoot.querySelector(".controls");
+      this.progressBar = this.shadowRoot.querySelector(".progress-bar");
+      this.progressBarFill =
+        this.shadowRoot.querySelector(".progress-bar-fill");
     }
 
-    connectedCallback() {
-        // Check for touch device before rendering
-        const isTouchDevice = 'ontouchstart' in window;
-        this.render(isTouchDevice);
-                
-        // First initialize all elements
-        this.video = this.shadowRoot.querySelector('video');
-        this.videoContainer = this;
+    // Add event listeners only after confirming video exists
+    if (this.video) {
+      if (!isTouchDevice) {
+        this.updateMuteButtonIcon(true);
 
-        // Only initialize custom controls for non-touch devices
-        if (!isTouchDevice) {
-            this.playButton = this.shadowRoot.querySelector('#playButton');
-            this.muteButton = this.shadowRoot.querySelector('#muteButton');
-            this.fullscreenButton = this.shadowRoot.querySelector('#fullscreenButton');
-            this.videoOverlay = this.shadowRoot.querySelector('.video-overlay');
-            this.controls = this.shadowRoot.querySelector('.controls');
-            this.progressBar = this.shadowRoot.querySelector('.progress-bar');
-            this.progressBarFill = this.shadowRoot.querySelector('.progress-bar-fill');
-        }
+        this.playButton?.addEventListener("click", () => this.togglePlay());
+        this.videoOverlay?.addEventListener("click", () => this.togglePlay());
+        this.muteButton?.addEventListener("click", () => this.toggleMute());
+        this.fullscreenButton?.addEventListener("click", () =>
+          this.toggleFullscreen()
+        );
 
-        // Add event listeners only after confirming video exists
-        if (this.video) {
-            if (!isTouchDevice) {
-                this.updateMuteButtonIcon(true);
+        // Progress bar event listeners
+        this.progressBar?.addEventListener("mousedown", (e) =>
+          this.startSeeking(e)
+        );
+        this.progressBar?.addEventListener("mousemove", (e) => this.seeking(e));
+        this.progressBar?.addEventListener("mouseup", () => this.endSeeking());
+        this.progressBar?.addEventListener("mouseleave", () =>
+          this.endSeeking()
+        );
 
-                this.playButton?.addEventListener('click', () => this.togglePlay());
-                this.videoOverlay?.addEventListener('click', () => this.togglePlay());
-                this.muteButton?.addEventListener('click', () => this.toggleMute());
-                this.fullscreenButton?.addEventListener('click', () => this.toggleFullscreen());
-                
-                // Progress bar event listeners
-                this.video.addEventListener('timeupdate', () => this.updateProgressBar());
-                this.progressBar?.addEventListener('mousedown', (e) => this.startSeeking(e));
-                this.progressBar?.addEventListener('mousemove', (e) => this.seeking(e));
-                this.progressBar?.addEventListener('mouseup', () => this.endSeeking());
-                this.progressBar?.addEventListener('mouseleave', () => this.endSeeking());
-                
-                this.addEventListener('mousemove', () => this.showControls());
-                this.addEventListener('mouseleave', () => this.hideControls());
-            }
+        this.addEventListener("mousemove", () => this.showControls());
+        this.addEventListener("mouseleave", () => this.hideControls());
+      }
 
-            // Keep visibility change handler for all devices
-            document.addEventListener('visibilitychange', () => this.handleVisibilityChange());
+      // Video play/pause event listeners to update button icon
+      this.video.addEventListener("play", () => {
+        this.classList.remove("paused");
+        this.updatePlayButtonIcon(false);
+        // Show controls briefly when autoplaying, then auto-hide
+        // This handles both autoplay attribute and programmatic autoplay
+        this.showControls(true);
+      });
 
-            // Initial state
-            this.video.muted = true;
-            
-            // Only autoplay if the attribute is present
-            if (this.hasAttribute('autoplay')) {
-                this.video.play().catch(() => {
-                    if (!isTouchDevice) {
-                        this.classList.add('paused');
-                    }
-                });
-                this.updatePlayButtonIcon(false);
-            } else {
-                this.classList.add('paused');
-                this.updatePlayButtonIcon(true);
-            }
+      this.video.addEventListener("pause", () => {
+        this.classList.add("paused");
+        this.updatePlayButtonIcon(true);
+      });
 
-            // Set loop based on attribute
-            this.video.loop = this.hasAttribute('loop');
-        } else {
-            console.error('Required video element not found');
-        }
+      // Progress bar event listeners
+      this.video.addEventListener("timeupdate", () => this.updateProgressBar());
 
-        this.setupIntersectionObserver();
+      // Keep visibility change handler for all devices
+      document.addEventListener("visibilitychange", () =>
+        this.handleVisibilityChange()
+      );
 
-        this.volumeBars = this.shadowRoot.querySelector('#volumeBars');
-        this.volumeBars?.addEventListener('click', (e) => this.handleVolumeBarClick(e));
-        this.updateVolumeBars(this.video.volume);
+      // Initial state
+      this.video.muted = true;
 
-        // Ensure controls are visible initially
-        this.showControls();
-
-        // Add this after other event listeners
-        document.addEventListener('fullscreenchange', () => this.handleFullscreenChange());
-
-        // Add after existing element initialization
-        this.setupAccessibilityFeatures();
-        
-        // Add to existing event listeners
-        this.video.addEventListener('loadedmetadata', () => {
-            this.setupCaptions();
+      // Only autoplay if the attribute is present
+      if (this.hasAttribute("autoplay")) {
+        this.video.play().catch(() => {
+          if (!isTouchDevice) {
+            this.classList.add("paused");
+          }
         });
+        this.updatePlayButtonIcon(false);
+      } else {
+        this.classList.add("paused");
+        this.updatePlayButtonIcon(true);
+      }
+
+      // Set loop based on attribute
+      this.video.loop = this.hasAttribute("loop");
+    } else {
+      console.error("Required video element not found");
     }
 
-    render(isTouchDevice = false) {
-        const videoUrl = this.getAttribute('video-url');
-        const posterUrl = this.getAttribute('video-poster');
-        const title = this.getAttribute('video-title');
-        const description = this.getAttribute('video-description');
-        const isMuted = this.hasAttribute('muted');
-        const playsInline = this.hasAttribute('playsinline');
-        const autoPlay = this.hasAttribute('autoplay');
-        const loop = this.hasAttribute('loop');
+    this.setupIntersectionObserver();
 
-        this.shadowRoot.innerHTML = `
+    this.volumeBars = this.shadowRoot.querySelector("#volumeBars");
+    this.volumeBars?.addEventListener("click", (e) =>
+      this.handleVolumeBarClick(e)
+    );
+    this.updateVolumeBars(this.video.volume);
+
+    // Show controls initially only if paused, otherwise they'll be shown/hidden by play event
+    if (this.video.paused) {
+      this.showControls();
+    }
+
+    // Add this after other event listeners
+    document.addEventListener("fullscreenchange", () =>
+      this.handleFullscreenChange()
+    );
+
+    // Add after existing element initialization
+    this.setupAccessibilityFeatures();
+
+    // Add to existing event listeners
+    this.video.addEventListener("loadedmetadata", () => {
+      this.setupCaptions();
+    });
+  }
+
+  render(isTouchDevice = false) {
+    const videoUrl = this.getAttribute("video-url");
+    const posterUrl = this.getAttribute("video-poster");
+    const title = this.getAttribute("video-title");
+    const description = this.getAttribute("video-description");
+    const isMuted = this.hasAttribute("muted");
+    const playsInline = this.hasAttribute("playsinline");
+    const autoPlay = this.hasAttribute("autoplay");
+    const loop = this.hasAttribute("loop");
+
+    this.shadowRoot.innerHTML = `
             <style>
                 :host {
                     display: flex;
@@ -126,7 +158,7 @@ class VideoPlayer extends HTMLElement {
                 }
 
                 .video {
-                    pointer-events: ${isTouchDevice ? 'auto' : 'none'};
+                    pointer-events: ${isTouchDevice ? "auto" : "none"};
                     z-index: 10;
                 }
                 .video-info {
@@ -163,7 +195,9 @@ class VideoPlayer extends HTMLElement {
                     opacity: 1;
                 }
 
-                ${!isTouchDevice ? `
+                ${
+                  !isTouchDevice
+                    ? `
                     .video-overlay {
                         position: absolute;
                         top: -1px;
@@ -503,32 +537,40 @@ class VideoPlayer extends HTMLElement {
                             background: CanvasText;
                         }
                     }
-                ` : ''}
+                `
+                    : ""
+                }
             </style>
-            ${!isTouchDevice ? `<div class="video-overlay"></div>` : ''}
+            ${!isTouchDevice ? `<div class="video-overlay"></div>` : ""}
             <video 
                 id="video" 
                 class="video" 
                 width="100%" 
-                ${isMuted ? 'muted' : ''} 
-                ${playsInline ? 'playsinline' : ''} 
-                ${isTouchDevice ? 'controls' : ''}
-                ${posterUrl ? `poster="${posterUrl}"` : ''}
-                ${autoPlay ? 'autoplay' : ''}
-                ${loop ? 'loop' : ''}
+                ${isMuted ? "muted" : ""} 
+                ${playsInline ? "playsinline" : ""} 
+                ${isTouchDevice ? "controls" : ""}
+                ${posterUrl ? `poster="${posterUrl}"` : ""}
+                ${autoPlay ? "autoplay" : ""}
+                ${loop ? "loop" : ""}
             >
                 <source src="${videoUrl}" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
-            ${!isTouchDevice ? `
+            ${
+              !isTouchDevice
+                ? `
                 <div class="controls">
                     <div class="controls-bottom">
-                        ${(title || description) ? `
+                        ${
+                          title || description
+                            ? `
                             <div class="video-info">
-                                ${title ? `<h2>${title}</h2>` : ''}
-                                ${description ? `<p>${description}</p>` : ''}
+                                ${title ? `<h2>${title}</h2>` : ""}
+                                ${description ? `<p>${description}</p>` : ""}
                             </div>
-                        ` : ''}
+                        `
+                            : ""
+                        }
                         <div class="progress-bar-container">
                             <div class="progress-bar">
                                 <div class="progress-bar-fill"></div>
@@ -570,73 +612,77 @@ class VideoPlayer extends HTMLElement {
                         </div>
                     </div>
                 </div>
-            ` : ''}
-        `;
-    }
-
-    togglePlay() {
-        if (this.video.paused) {
-            if (!this.hasAttribute('autoplay')) {
-                this.video.muted = false;
-                this.updateMuteButtonIcon(false);
+            `
+                : ""
             }
-            
-            this.video.play();
-            this.classList.remove('paused');
-            this.updatePlayButtonIcon(false);
-            // Mark as interacted and show controls with animation
-            this.hasInteracted = true;
-            this.setAttribute('data-has-interacted', '');
-            this.style.setProperty('--controls-opacity', '1');
-            
-            // Ensure controls are visible initially
-            const controls = this.shadowRoot.querySelector('.controls');
-            controls.style.opacity = '1';
-            controls.style.bottom = '0';
-            
-            // Start the hide timer
-            this.showControls(true);
-        } else {
-            this.video.pause();
-            this.classList.add('paused');
-            this.updatePlayButtonIcon(true);
-            clearTimeout(this.hideControlsTimeout);
-            this.showControls(true);
-        }
-    }
+        `;
+  }
 
-    updatePlayButtonIcon(isPaused) {
-        const playIcon = `
+  togglePlay() {
+    if (this.video.paused) {
+      if (!this.hasAttribute("autoplay")) {
+        this.video.muted = false;
+        this.updateMuteButtonIcon(false);
+      }
+
+      this.video.play();
+      this.classList.remove("paused");
+      this.updatePlayButtonIcon(false);
+      // Mark as interacted and show controls with animation
+      this.hasInteracted = true;
+      this.setAttribute("data-has-interacted", "");
+      this.style.setProperty("--controls-opacity", "1");
+
+      // Ensure controls are visible initially
+      const controls = this.shadowRoot.querySelector(".controls");
+      controls.style.opacity = "1";
+      controls.style.bottom = "0";
+
+      // Start the hide timer
+      this.showControls(true);
+    } else {
+      this.video.pause();
+      this.classList.add("paused");
+      this.updatePlayButtonIcon(true);
+      clearTimeout(this.hideControlsTimeout);
+      this.showControls(true);
+    }
+  }
+
+  updatePlayButtonIcon(isPaused) {
+    const playIcon = `
             <svg width="14" height="16" viewBox="0 0 14 16" fill="white" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.5 14.3507V1.64929C0.5 0.871991 1.34797 0.391878 2.0145 0.791793L12.599 7.14251C13.2464 7.53091 13.2464 8.46909 12.599 8.85749L2.0145 15.2082C1.34797 15.6081 0.5 15.128 0.5 14.3507Z"/>
             </svg>
         `;
-        const pauseIcon = `
+    const pauseIcon = `
             <svg width="14" height="16" viewBox="0 0 14 16" fill="white" xmlns="http://www.w3.org/2000/svg">
                 <rect x="2" y="0.5" width="3" height="15" rx="1"/>
                 <rect x="9" y="0.5" width="3" height="15" rx="1"/>
             </svg>
         `;
-        
-        const playButton = this.shadowRoot.querySelector('#playButton .play-button-inner');
-        if (playButton) {
-            playButton.innerHTML = isPaused ? playIcon : pauseIcon;
-        }
-    }
 
-    toggleMute() {
-        this.video.muted = !this.video.muted;
-        this.updateMuteButtonIcon(this.video.muted);
-        this.updateVolumeBars(this.video.muted ? 0 : this.video.volume);
-        this.hasInteracted = true;
-        this.setAttribute('data-has-interacted', '');
-        this.style.setProperty('--controls-opacity', '1');
-        this.hideControlsIfPlaying();
-        this.showControls(true);
+    const playButton = this.shadowRoot.querySelector(
+      "#playButton .play-button-inner"
+    );
+    if (playButton) {
+      playButton.innerHTML = isPaused ? playIcon : pauseIcon;
     }
+  }
 
-    updateMuteButtonIcon(isMuted) {
-        const unmuteIcon = `
+  toggleMute() {
+    this.video.muted = !this.video.muted;
+    this.updateMuteButtonIcon(this.video.muted);
+    this.updateVolumeBars(this.video.muted ? 0 : this.video.volume);
+    this.hasInteracted = true;
+    this.setAttribute("data-has-interacted", "");
+    this.style.setProperty("--controls-opacity", "1");
+    this.hideControlsIfPlaying();
+    this.showControls(true);
+  }
+
+  updateMuteButtonIcon(isMuted) {
+    const unmuteIcon = `
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-x icon">
                 <path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/>
                 <path d="m18 12 4-4"/>
@@ -644,7 +690,7 @@ class VideoPlayer extends HTMLElement {
             </svg>
             <span class="sr-only">Unmute</span>
         `;
-        const muteIcon = `
+    const muteIcon = `
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-2 icon">
                 <path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/>
                 <path d="M16 9a5 5 0 0 1 0 6"/>
@@ -652,232 +698,246 @@ class VideoPlayer extends HTMLElement {
             </svg>
             <span class="sr-only">Mute</span>
         `;
-        
-        this.muteButton.innerHTML = isMuted ? unmuteIcon : muteIcon;
-    }
 
-    toggleFullscreen() {
-        const maximizeIcon = `
+    this.muteButton.innerHTML = isMuted ? unmuteIcon : muteIcon;
+  }
+
+  toggleFullscreen() {
+    const maximizeIcon = `
             <svg class="icon" id="fullscreenIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/>
             </svg>
         `;
-        const minimizeIcon = `
+    const minimizeIcon = `
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minimize icon">
                 <path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/>
             </svg>
         `;
 
-        if (!document.fullscreenElement) {
-            this.videoContainer.requestFullscreen().catch(err => console.log("Fullscreen failed:", err));
-        } else {
-            document.exitFullscreen().catch(err => console.log("Exit fullscreen failed:", err));
-        }
+    if (!document.fullscreenElement) {
+      this.videoContainer
+        .requestFullscreen()
+        .catch((err) => console.log("Fullscreen failed:", err));
+    } else {
+      document
+        .exitFullscreen()
+        .catch((err) => console.log("Exit fullscreen failed:", err));
+    }
+  }
+
+  hideControlsIfPlaying() {
+    if (!this.video.paused && !this.video.muted) {
+      this.controls.classList.add("opacity-0");
+    }
+  }
+
+  showControls(forceShow = false) {
+    clearTimeout(this.hideControlsTimeout);
+    if (this.controls) {
+      this.controls.style.opacity = "1";
     }
 
-    hideControlsIfPlaying() {
-        if (!this.video.paused && !this.video.muted) {
-            this.controls.classList.add('opacity-0');
-        }
+    if (!this.video.paused || forceShow) {
+      this.hideControlsTimeout = setTimeout(() => {
+        this.hideControls();
+      }, 2000);
+    }
+  }
+
+  hideControls() {
+    // Clear any existing fadeout timeout
+    clearTimeout(this.fadeoutTimeout);
+
+    if (!this.video.paused && !this.isSeeking) {
+      this.controls.style.opacity = "0";
+    }
+  }
+
+  handleVisibilityChange() {
+    if (document.hidden) {
+      this.video.pause();
+    }
+  }
+
+  updateProgressBar() {
+    if (this.video.duration) {
+      const progress = (this.video.currentTime / this.video.duration) * 100;
+      this.progressBarFill.style.width = `${progress}%`;
+
+      // Update seek handle position
+      const seekHandle = this.shadowRoot.querySelector(".seek-handle");
+      if (seekHandle) {
+        seekHandle.style.left = `${progress}%`;
+      }
+
+      // Update time display
+      const timeDisplay = this.shadowRoot.querySelector(".time-display");
+      if (timeDisplay) {
+        timeDisplay.textContent = `${this.formatTime(
+          this.video.currentTime
+        )} / ${this.formatTime(this.video.duration)}`;
+      }
+    }
+  }
+
+  startSeeking(e) {
+    this.isSeeking = true;
+    this.seeking(e);
+    // Clear hide timeout while seeking
+    clearTimeout(this.hideControlsTimeout);
+  }
+
+  seeking(e) {
+    if (!this.isSeeking) return;
+
+    let clientX;
+    if (e.type.startsWith("touch")) {
+      clientX = e.touches[0].clientX;
+    } else {
+      clientX = e.clientX;
     }
 
-    showControls(forceShow = false) {
-        clearTimeout(this.hideControlsTimeout);
-        if (this.controls) {
-            this.controls.style.opacity = '1';
-        }
+    const rect = this.progressBar.getBoundingClientRect();
+    const position = (clientX - rect.left) / rect.width;
+    const seekTime = Math.max(0, Math.min(1, position)) * this.video.duration;
 
-        if (!this.video.paused || forceShow) {
-            this.hideControlsTimeout = setTimeout(() => {
-                this.hideControls();
-            }, 2000);
-        }
+    // Update progress bar immediately for smooth visual feedback
+    this.progressBarFill.style.width = `${position * 100}%`;
+
+    // Update seek handle position
+    const seekHandle = this.shadowRoot.querySelector(".seek-handle");
+    if (seekHandle) {
+      seekHandle.style.left = `${position * 100}%`;
     }
 
-    hideControls() {
-        // Clear any existing fadeout timeout
-        clearTimeout(this.fadeoutTimeout);
-        
-        if (!this.video.paused && !this.isSeeking) {
-            this.controls.style.opacity = '0';
-        }
-    }
+    // Only update video time on actual seek
+    this.video.currentTime = seekTime;
+  }
 
-    handleVisibilityChange() {
-        if (document.hidden) {
-            this.video.pause();
-        }
-    }
+  endSeeking() {
+    this.isSeeking = false;
+    // Restart the hide timeout after seeking ends
+    this.showControls();
+  }
 
-    updateProgressBar() {
-        if (this.video.duration) {
-            const progress = (this.video.currentTime / this.video.duration) * 100;
-            this.progressBarFill.style.width = `${progress}%`;
-            
-            // Update seek handle position
-            const seekHandle = this.shadowRoot.querySelector('.seek-handle');
-            if (seekHandle) {
-                seekHandle.style.left = `${progress}%`;
+  setupIntersectionObserver() {
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            // Store current playing state and pause if playing
+            this.wasPlaying = !this.video.paused;
+            if (!this.video.paused) {
+              this.video.pause();
             }
-
-            // Update time display
-            const timeDisplay = this.shadowRoot.querySelector('.time-display');
-            if (timeDisplay) {
-                timeDisplay.textContent = `${this.formatTime(this.video.currentTime)} / ${this.formatTime(this.video.duration)}`;
-            }
-        }
-    }
-
-    startSeeking(e) {
-        this.isSeeking = true;
-        this.seeking(e);
-        // Clear hide timeout while seeking
-        clearTimeout(this.hideControlsTimeout);
-    }
-
-    seeking(e) {
-        if (!this.isSeeking) return;
-        
-        let clientX;
-        if (e.type.startsWith('touch')) {
-            clientX = e.touches[0].clientX;
-        } else {
-            clientX = e.clientX;
-        }
-
-        const rect = this.progressBar.getBoundingClientRect();
-        const position = (clientX - rect.left) / rect.width;
-        const seekTime = Math.max(0, Math.min(1, position)) * this.video.duration;
-        
-        // Update progress bar immediately for smooth visual feedback
-        this.progressBarFill.style.width = `${position * 100}%`;
-        
-        // Update seek handle position
-        const seekHandle = this.shadowRoot.querySelector('.seek-handle');
-        if (seekHandle) {
-            seekHandle.style.left = `${position * 100}%`;
-        }
-
-        // Only update video time on actual seek
-        this.video.currentTime = seekTime;
-    }
-
-    endSeeking() {
-        this.isSeeking = false;
-        // Restart the hide timeout after seeking ends
-        this.showControls();
-    }
-
-    setupIntersectionObserver() {
-        this.observer =new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    // Store current playing state and pause if playing
-                    this.wasPlaying = !this.video.paused;
-                    if (!this.video.paused) {
-                        this.video.pause();
-                    }
-                } else if (this.wasPlaying) {
-                    // Resume if it was playing before
-                    this.video.play().catch(() => {
-                        console.log('Auto-resume failed');
-                    });
-                }
+          } else if (this.wasPlaying) {
+            // Resume if it was playing before
+            this.video.play().catch(() => {
+              console.log("Auto-resume failed");
             });
-        }, {
-            threshold: 0.2 // Trigger when 20% of the video is visible
+          }
         });
+      },
+      {
+        threshold: 0.2, // Trigger when 20% of the video is visible
+      }
+    );
 
-        this.observer.observe(this);
+    this.observer.observe(this);
+  }
+
+  disconnectedCallback() {
+    if (this.observer) {
+      this.observer.disconnect();
     }
+  }
 
-    disconnectedCallback() {
-        if (this.observer) {
-            this.observer.disconnect();
-        }
+  handleVolumeBarClick(e) {
+    if (e.target.classList.contains("volume-bar")) {
+      const volume = parseFloat(e.target.dataset.volume);
+      this.video.volume = volume;
+      this.video.muted = false;
+      this.updateMuteButtonIcon(false);
+      this.updateVolumeBars(volume);
     }
+  }
 
-    handleVolumeBarClick(e) {
-        if (e.target.classList.contains('volume-bar')) {
-            const volume = parseFloat(e.target.dataset.volume);
-            this.video.volume = volume;
-            this.video.muted = false;
-            this.updateMuteButtonIcon(false);
-            this.updateVolumeBars(volume);
-        }
-    }
+  updateVolumeBars(currentVolume) {
+    const bars = this.shadowRoot.querySelectorAll(".volume-bar");
+    bars.forEach((bar) => {
+      const barVolume = parseFloat(bar.dataset.volume);
+      if (barVolume <= currentVolume) {
+        bar.classList.add("active");
+      } else {
+        bar.classList.remove("active");
+      }
+    });
+  }
 
-    updateVolumeBars(currentVolume) {
-        const bars = this.shadowRoot.querySelectorAll('.volume-bar');
-        bars.forEach(bar => {
-            const barVolume = parseFloat(bar.dataset.volume);
-            if (barVolume <= currentVolume) {
-                bar.classList.add('active');
-            } else {
-                bar.classList.remove('active');
-            }
-        });
-    }
-
-    handleFullscreenChange() {
-        const maximizeIcon = `
+  handleFullscreenChange() {
+    const maximizeIcon = `
             <svg class="icon" id="fullscreenIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/>
             </svg>
         `;
-        const minimizeIcon = `
+    const minimizeIcon = `
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minimize icon">
                 <path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/>
             </svg>
         `;
-        
-        this.fullscreenButton.innerHTML = document.fullscreenElement ? minimizeIcon : maximizeIcon;
-        if (document.fullscreenElement) {
-            this.showControls(true);
-        }
+
+    this.fullscreenButton.innerHTML = document.fullscreenElement
+      ? minimizeIcon
+      : maximizeIcon;
+    if (document.fullscreenElement) {
+      this.showControls(true);
     }
+  }
 
-    formatTime(seconds) {
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = Math.floor(seconds % 60);
-        return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
-    }
+  formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${minutes}:${remainingSeconds.toString().padStart(2, "0")}`;
+  }
 
-    setupAccessibilityFeatures() {
-        // Set explicit tab order for controls
-        const tabOrder = [
-            this.playButton,
-            this.muteButton, 
-            this.volumeBars,
-            this.progressBar,
-            this.fullscreenButton
-        ];
-        
-        tabOrder.forEach((element, index) => {
-            if (element) {
-                element.setAttribute('tabindex', index + 1);
-            }
-        });
+  setupAccessibilityFeatures() {
+    // Set explicit tab order for controls
+    const tabOrder = [
+      this.playButton,
+      this.muteButton,
+      this.volumeBars,
+      this.progressBar,
+      this.fullscreenButton,
+    ];
 
-        // Add ARIA labels and roles
-        this.video.setAttribute('aria-label', this.getAttribute('video-title') || 'Video player');
-        this.progressBar?.setAttribute('role', 'slider');
-        this.progressBar?.setAttribute('aria-label', 'Progress');
-        this.progressBar?.setAttribute('aria-valuemin', '0');
-        this.progressBar?.setAttribute('aria-valuemax', '100');
-        this.progressBar?.setAttribute('aria-valuenow', '0');
+    tabOrder.forEach((element, index) => {
+      if (element) {
+        element.setAttribute("tabindex", index + 1);
+      }
+    });
 
-        // Add keyboard controls
-        this.setupKeyboardControls();
-    }
+    // Add ARIA labels and roles
+    this.video.setAttribute(
+      "aria-label",
+      this.getAttribute("video-title") || "Video player"
+    );
+    this.progressBar?.setAttribute("role", "slider");
+    this.progressBar?.setAttribute("aria-label", "Progress");
+    this.progressBar?.setAttribute("aria-valuemin", "0");
+    this.progressBar?.setAttribute("aria-valuemax", "100");
+    this.progressBar?.setAttribute("aria-valuenow", "0");
 
-    setupCaptions() {
-        // Check for caption tracks
-        const tracks = this.video.textTracks;
-        if (tracks.length > 0) {
-            // Add caption toggle button
-            const captionButton = document.createElement('button');
-            captionButton.innerHTML = `
+    // Add keyboard controls
+    this.setupKeyboardControls();
+  }
+
+  setupCaptions() {
+    // Check for caption tracks
+    const tracks = this.video.textTracks;
+    if (tracks.length > 0) {
+      // Add caption toggle button
+      const captionButton = document.createElement("button");
+      captionButton.innerHTML = `
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path d="M21 5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5z"/>
                     <path d="M7 8h3m-3 4h7m-7 4h3"/>
@@ -885,63 +945,66 @@ class VideoPlayer extends HTMLElement {
                 </svg>
                 <span class="sr-only">Toggle Captions</span>
             `;
-            captionButton.setAttribute('aria-label', 'Toggle closed captions');
-            
-            // Insert before fullscreen button
-            const rightControls = this.shadowRoot.querySelector('.right-controls');
-            rightControls?.insertBefore(captionButton, this.fullscreenButton);
+      captionButton.setAttribute("aria-label", "Toggle closed captions");
 
-            // Handle caption toggling
-            let captionsOn = false;
-            captionButton.addEventListener('click', () => {
-                captionsOn = !captionsOn;
-                Array.from(tracks).forEach(track => {
-                    if (track.kind === 'captions' || track.kind === 'subtitles') {
-                        track.mode = captionsOn ? 'showing' : 'hidden';
-                    }
-                });
-                captionButton.setAttribute('aria-pressed', captionsOn);
-            });
-        }
-    }
+      // Insert before fullscreen button
+      const rightControls = this.shadowRoot.querySelector(".right-controls");
+      rightControls?.insertBefore(captionButton, this.fullscreenButton);
 
-    setupKeyboardControls() {
-        this.addEventListener('keydown', (e) => {
-            switch(e.key) {
-                case ' ':
-                case 'k':
-                    e.preventDefault();
-                    this.togglePlay();
-                    break;
-                case 'm':
-                    e.preventDefault();
-                    this.toggleMute();
-                    break;
-                case 'f':
-                    e.preventDefault();
-                    this.toggleFullscreen();
-                    break;
-                case 'ArrowLeft':
-                    e.preventDefault();
-                    this.video.currentTime = Math.max(0, this.video.currentTime - 5);
-                    break;
-                case 'ArrowRight':
-                    e.preventDefault();
-                    this.video.currentTime = Math.min(this.video.duration, this.video.currentTime + 5);
-                    break;
-                case 'ArrowUp':
-                    e.preventDefault();
-                    this.video.volume = Math.min(1, this.video.volume + 0.1);
-                    this.updateVolumeBars(this.video.volume);
-                    break;
-                case 'ArrowDown':
-                    e.preventDefault();
-                    this.video.volume = Math.max(0, this.video.volume - 0.1);
-                    this.updateVolumeBars(this.video.volume);
-                    break;
-            }
+      // Handle caption toggling
+      let captionsOn = false;
+      captionButton.addEventListener("click", () => {
+        captionsOn = !captionsOn;
+        Array.from(tracks).forEach((track) => {
+          if (track.kind === "captions" || track.kind === "subtitles") {
+            track.mode = captionsOn ? "showing" : "hidden";
+          }
         });
+        captionButton.setAttribute("aria-pressed", captionsOn);
+      });
     }
+  }
+
+  setupKeyboardControls() {
+    this.addEventListener("keydown", (e) => {
+      switch (e.key) {
+        case " ":
+        case "k":
+          e.preventDefault();
+          this.togglePlay();
+          break;
+        case "m":
+          e.preventDefault();
+          this.toggleMute();
+          break;
+        case "f":
+          e.preventDefault();
+          this.toggleFullscreen();
+          break;
+        case "ArrowLeft":
+          e.preventDefault();
+          this.video.currentTime = Math.max(0, this.video.currentTime - 5);
+          break;
+        case "ArrowRight":
+          e.preventDefault();
+          this.video.currentTime = Math.min(
+            this.video.duration,
+            this.video.currentTime + 5
+          );
+          break;
+        case "ArrowUp":
+          e.preventDefault();
+          this.video.volume = Math.min(1, this.video.volume + 0.1);
+          this.updateVolumeBars(this.video.volume);
+          break;
+        case "ArrowDown":
+          e.preventDefault();
+          this.video.volume = Math.max(0, this.video.volume - 0.1);
+          this.updateVolumeBars(this.video.volume);
+          break;
+      }
+    });
+  }
 }
 
-customElements.define('video-player', VideoPlayer);
+customElements.define("video-player", VideoPlayer);

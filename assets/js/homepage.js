@@ -93,6 +93,63 @@ function initHomepageAnimations() {
       heroSection
         .querySelectorAll(".reveal")
         .forEach((el) => el.classList.add("visible"));
+
+      // Animate hero title font width variation using Splitting.js
+      if (heroTitle && typeof Splitting !== "undefined") {
+        // Split the title into characters
+        Splitting({ target: heroTitle, by: "chars" });
+
+        // Get all character elements (Splitting adds .char class)
+        const chars = Array.from(heroTitle.querySelectorAll(".char")).filter(
+          (char) => char.textContent.trim() !== "" // Filter out spaces
+        );
+
+        if (chars.length > 0) {
+          // Set initial state: widest width for all characters
+          gsap.set(chars, {
+            fontVariationSettings: '"wght" 100, "wdth" 500',
+          });
+
+          // Function to randomly animate a character
+          const animateRandomChar = () => {
+            // Pick a random character
+            const randomChar = chars[Math.floor(Math.random() * chars.length)];
+
+            // Randomly decide to shrink or expand
+            const shouldShrink = Math.random() > 0.5;
+            const targetWidth = shouldShrink ? 200 : 500;
+
+            // Animate the character
+            gsap.to(randomChar, {
+              fontVariationSettings: `"wght" 100, "wdth" ${targetWidth}`,
+              duration: 1.2 + Math.random() * 0.8, // Random duration between 1.2-2s
+              ease: "power2.inOut",
+            });
+          };
+
+          // Start the random animation loop after a short delay
+          setTimeout(() => {
+            // Initial random animations
+            const initialAnimations = 3 + Math.floor(Math.random() * 3); // 3-5 initial animations
+            for (let i = 0; i < initialAnimations; i++) {
+              setTimeout(() => {
+                animateRandomChar();
+              }, i * 100); // Faster initial stagger
+            }
+
+            // Continue with random intervals
+            const scheduleNext = () => {
+              const delay = 100 + Math.random() * 150; // Random delay between 0.1-0.25s
+              setTimeout(() => {
+                animateRandomChar();
+                scheduleNext(); // Schedule the next animation
+              }, delay);
+            };
+
+            scheduleNext();
+          }, 500); // Start after 500ms
+        }
+      }
     });
   }
 
@@ -199,7 +256,6 @@ function initHomepageAnimations() {
           },
         }
       );
-
     });
   }
 
@@ -291,6 +347,7 @@ function initHomepageAnimations() {
 
   const footerSection = document.querySelector(".footer-section");
   const footerTop = document.querySelector(".footer-top");
+  const footerBottom = document.querySelector(".footer-bottom");
 
   if (footerTop) {
     gsap.fromTo(
@@ -306,6 +363,26 @@ function initHomepageAnimations() {
           start: "top 80%",
           toggleActions: "play none none reverse",
           onEnter: () => footerTop.classList.add("visible"),
+        },
+      }
+    );
+  }
+
+  if (footerBottom) {
+    gsap.fromTo(
+      footerBottom,
+      { filter: "blur(10px)", opacity: 0 },
+      {
+        filter: "blur(0px)",
+        opacity: 1,
+        duration: 0.4,
+        delay: 0.15,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: footerBottom,
+          start: "top bottom",
+          toggleActions: "play none none reverse",
+          onEnter: () => footerBottom.classList.add("visible"),
         },
       }
     );
@@ -350,8 +427,8 @@ function initHomepageAnimations() {
   const revealElements = document.querySelectorAll(".reveal:not(.visible)");
 
   revealElements.forEach((el) => {
-    if (!el.closest(".hero-section")) {
-      // Skip hero, it has custom handling
+    if (!el.closest(".hero-section") && el !== footerBottom) {
+      // Skip hero and footer-bottom, they have custom handling
       gsap.fromTo(
         el,
         { filter: "blur(10px)", opacity: 0 },

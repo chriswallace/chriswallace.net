@@ -17,13 +17,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Navbar scroll effect (works on all pages)
   if (siteNavbar) {
-    window.addEventListener("scroll", () => {
-      const currentScroll = window.pageYOffset;
+    let lastScroll = 0;
+    let scrollThreshold = 50; // Minimum scroll distance before hiding
+    let ticking = false;
 
-      if (currentScroll > 100) {
-        siteNavbar.classList.add("scrolled");
-      } else {
-        siteNavbar.classList.remove("scrolled");
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScroll = window.pageYOffset;
+
+          // Add scrolled class for background effect
+          if (currentScroll > 100) {
+            siteNavbar.classList.add("scrolled");
+          } else {
+            siteNavbar.classList.remove("scrolled");
+            // Always show navbar at top of page
+            siteNavbar.classList.remove("nav-hidden");
+          }
+
+          // Hide/show navbar based on scroll direction
+          if (currentScroll > scrollThreshold) {
+            if (currentScroll > lastScroll) {
+              // Scrolling down - hide navbar
+              siteNavbar.classList.add("nav-hidden");
+            } else {
+              // Scrolling up - show navbar
+              siteNavbar.classList.remove("nav-hidden");
+            }
+          }
+
+          lastScroll = currentScroll;
+          ticking = false;
+        });
+
+        ticking = true;
       }
     });
   }

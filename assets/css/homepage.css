@@ -7,9 +7,15 @@
   @apply overflow-x-hidden;
 }
 
+/* Ensure all sections appear above ASCII background */
+.home section {
+  @apply relative;
+  z-index: 1;
+}
+
 /* Scroll Progress Bar */
 .scroll-progress {
-  width: 100%;
+  @apply w-full;
 }
 
 .home .ui-navbar {
@@ -20,15 +26,9 @@
    HERO SECTION
    ============================================ */
 .hero-section {
-  @apply min-h-screen flex flex-col justify-center pt-24 pb-16 relative;
-  padding-left: 32px;
-  padding-right: 32px;
-  width: calc(100% - 64px);
-  max-width: 100%;
-  margin: 0 auto;
+  @apply min-h-screen flex flex-col justify-center pt-24 pb-12 md:pb-16 relative md:px-8 w-[calc(100%-32px)] md:w-[calc(100%-48px)] max-w-full mx-auto;
   /* Background inherits from body */
 }
-
 
 .hero-section > * {
   @apply relative z-10;
@@ -36,24 +36,9 @@
 
 /* Tall WALLACE decorative logo */
 .hero-wallace-logo {
-  @apply absolute right-0 top-0 bottom-0 h-full w-auto;
-  z-index: 1;
-  pointer-events: none;
-  object-fit: contain;
-  object-position: right center;
-  opacity: 0;
-  filter: blur(10px);
-  max-width: 30%;
-  min-width: 200px;
-  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  @apply absolute right-0 top-0 bottom-0 h-full w-auto z-[1] pointer-events-none object-contain object-right opacity-0 max-w-[30%] min-w-[200px];
 }
 
-.hero-wallace-logo.visible {
-  opacity: 0.15;
-  filter: blur(0px);
-}
-
-/* Responsive sizing */
 @media (max-width: 1024px) {
   .hero-wallace-logo {
     max-width: 25%;
@@ -76,30 +61,33 @@
   }
 }
 
-.hero-label {
-  @apply font-sans font-semibold text-subheading tracking-wider mb-6 uppercase block text-primary-500;
-  letter-spacing: 0.05em;
+.hero-wallace-logo.visible {
+  opacity: 0.15;
+  filter: blur(0px);
 }
 
 .hero-title {
-  @apply text-primary-800 font-heading font-light mb-4;
-  font-size: clamp(2.5rem, 2.5rem + 3vw, 5.5rem); /* Increased: 40px to 88px */
-  line-height: 0.9;
+  @apply text-primary-800 text-display mb-4;
   max-width: 1000px;
-  font-variation-settings: "wght" 300, "wdth" 300;
+  font-variation-settings: "wght" 100, "wdth" 500;
+  line-height: 1.1;
+  /* Ensure consistent two-line layout */
+  display: block;
+  min-height: 2em; /* Reserve space for two lines */
 }
 
-/* Responsive font width - clamp from 300 on small screens to 800 on large */
-@media (min-width: 640px) {
-  .hero-title {
-    font-variation-settings: "wght" 300, "wdth" 500;
-  }
+/* Ensure Splitting.js character elements can be animated independently */
+.hero-title .char {
+  display: inline-block;
+  font-variation-settings: inherit;
+  /* Prevent layout shift when characters shrink */
+  vertical-align: baseline;
 }
 
-@media (min-width: 1024px) {
-  .hero-title {
-    font-variation-settings: "wght" 300, "wdth" 800;
-  }
+/* Ensure words maintain their position */
+.hero-title .word {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .hero-description {
@@ -107,215 +95,142 @@
 }
 
 .hero-buttons {
-  @apply flex flex-wrap gap-4;
+  @apply flex flex-wrap gap-4 md:flex-row;
+}
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    @apply flex-col w-full;
+  }
+}
+
+/* ============================================
+   CREDIBILITY SECTION
+   ============================================ */
+.credibility-section {
+  @apply py-12 lg:py-12 px-6 lg:px-4 bg-white/40;
+}
+
+.credibility-content {
+  @apply max-w-7xl mx-auto flex flex-col items-center gap-8 md:flex-row md:items-center md:justify-between md:gap-24;
+}
+
+.credibility-text-wrapper {
+  @apply shrink-0;
+}
+
+.credibility-text {
+  @apply text-subheading md:text-body md:text-left text-gray-700 mb-0;
+}
+
+.credibility-logos {
+  @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:flex lg:flex-nowrap lg:items-center lg:justify-between gap-4 sm:gap-4 md:gap-6 lg:gap-0 w-full;
+}
+
+.credibility-logo-item {
+  @apply flex items-center justify-center bg-white rounded-lg p-8 aspect-square min-h-[80px] md:bg-transparent md:rounded-none md:p-0 md:aspect-auto md:min-h-0 md:flex-shrink-0;
+}
+
+.credibility-logo {
+  @apply w-full md:w-auto h-auto max-h-40 md:max-h-[44px] max-w-[100px];
 }
 
 /* ============================================
    PROFILE & STARTUP PLIGHT SECTION (MERGED)
    ============================================ */
 .profile-startup-section {
-  @apply py-24 lg:py-32 px-6 lg:px-32;
-  background: #eef2eb;
+  @apply py-24 lg:py-32 px-6 lg:px-12;
 }
 
 .profile-startup-content {
-  @apply mx-auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
+  @apply mx-auto md:grid md:grid-cols-[minmax(150px,220px)_minmax(0,680px)] md:gap-[clamp(2rem,4vw,4rem)] md:items-start md:max-w-full md:justify-center;
   max-width: fit-content;
   justify-items: center;
 }
 
-/* Medium screens (768px+): 2 columns (image and text) */
-@media (min-width: 768px) {
-  .profile-startup-content {
-    grid-template-columns: minmax(150px, 220px) minmax(0, 680px);
-    gap: clamp(2rem, 4vw, 4rem);
-    align-items: start;
-    max-width: 100%;
-    justify-content: center;
-  }
-  
-  /* Smaller image column on medium screens */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .profile-startup-content {
-      grid-template-columns: minmax(120px, 180px) 1fr;
-      gap: clamp(1.5rem, 3vw, 3rem);
-    }
-  }
-
-  /* Image Column - Sticky only on two-column layout */
-  .profile-startup-image-wrapper {
-    position: sticky;
-    top: 120px;
-    align-self: start;
-    height: fit-content;
-  }
-}
-
-/* Image Column - Not sticky on single column */
+/* Image Column - Sticky only on two-column layout */
 .profile-startup-image-wrapper {
-  @apply block;
-  align-self: start;
-  height: fit-content;
-  justify-self: start;
+  @apply float-right md:float-none md:block self-start h-fit justify-self-start md:top-[120px] md:self-start md:h-fit;
 }
 
 .profile-startup-image {
-  @apply w-full h-auto;
-  object-fit: contain;
-  max-height: 340px;
-}
-
-/* Remove max-height on two-column layout */
-@media (min-width: 768px) {
-  .profile-startup-image {
-    max-height: none;
-    object-fit: cover;
-  }
+  @apply w-[110px] ml-3 md:ml-0 md:w-full h-auto object-contain max-h-[340px] md:max-h-none md:object-cover;
 }
 
 /* Text Column */
 .profile-startup-text-column {
-  @apply w-full max-w-[680px];
-  min-width: 0; /* Allows text to shrink below content size */
-}
-
-.profile-label {
-  @apply font-sans font-bold text-body tracking-wider mb-4 block uppercase text-primary-500;
-  letter-spacing: 0.05em;
+  @apply w-full max-w-[680px] min-w-0;
+  /* Allows text to shrink below content size */
 }
 
 .profile-title {
   @apply font-heading font-normal mt-0 mb-8 uppercase text-primary-800;
-  font-size: clamp(1.18rem, 1.18rem + 1vw, 2rem); /* Increased by 35%: 18.88px to 32px */
-  line-height: 0.95;
-  font-variation-settings: "wght" 400, "wdth" 300;
-  max-width: 100%;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  font-variation-settings: "wght" 350, "wdth" 300;
 }
 
-/* Responsive font width for profile title */
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .profile-title {
-    font-variation-settings: "wght" 400, "wdth" 500;
+    font-variation-settings: "wght" 350, "wdth" 600;
   }
-}
-
-@media (min-width: 1024px) {
-  .profile-title {
-    font-variation-settings: "wght" 400, "wdth" 800;
-  }
-}
-
-.startup-plight-intro {
-  @apply mb-16;
-}
-
-.startup-plight-lead {
-  @apply font-semibold text-subheading mb-6 text-secondary;
-}
-
-.startup-plight-transition {
-  @apply font-semibold mb-6;
-}
-
-.startup-plight-belief {
-  @apply font-semibold mt-8 mb-0;
-}
-
-.startup-plight-services {
-  @apply mb-16;
-}
-
-.startup-plight-services-title {
-  @apply font-sans font-bold mt-0 mb-8 uppercase text-secondary;
-}
-
-.startup-plight-services-grid {
-  @apply grid grid-cols-1 gap-8;
-}
-
-.startup-plight-service-heading {
-  @apply font-semibold mb-2 mt-0;
-}
-
-.startup-plight-service-description {
-  @apply leading-relaxed mb-0;
-}
-
-.startup-plight-fractional {
-  @apply border-t pt-0;
-  border-color: rgba(34, 93, 85, 0.2);
-}
-
-.startup-plight-fractional-title {
-  @apply font-sans font-bold mt-12 mb-6 uppercase;
-}
-
-.startup-plight-fractional-description {
-  @apply leading-relaxed mb-6;
-}
-
-.startup-plight-closing {
-  @apply font-semibold mt-8 mb-0;
 }
 
 /* ============================================
-   CTA BANNER
+   PROBLEM & SOLUTION GRID SECTION
    ============================================ */
-.cta-banner {
-  @apply relative overflow-hidden bg-secondary;
-  background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/cta-bg-large.svg");
-  @apply bg-cover bg-center bg-no-repeat py-8 px-6 lg:py-14 lg:px-24 xl:px-32;
+.problem-solution-section {
+  @apply py-24 lg:py-32 px-6 lg:px-16;
 }
 
-@media (max-width: 768px) {
-  .cta-banner {
-    background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/cta-bg-small.svg");
-  }
+.problem-solution-content {
+  @apply mx-auto;
 }
 
-.cta-content {
-  @apply relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-16 max-w-[1800px] mx-auto;
+.problem-solution-item {
+  @apply block mb-0;
 }
 
-.cta-w-mark {
-  @apply max-w-5 lg:max-w-8;
+.problem-item {
+  @apply pr-0 lg:pr-8;
 }
 
-.cta-text {
-  @apply font-heading font-normal leading-tight uppercase mb-0;
-  font-size: clamp(1rem, 1rem + 0.5vw, 1.5rem); /* 16px to 24px - increased minimum for heading */
-  font-variation-settings: "wght" 400, "wdth" 300;
-  background: linear-gradient(90deg, rgba(48, 128, 79, 0.7) 0%, var(--color-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  @apply max-w-3xl lg:max-w-4xl;
+.solution-item {
+  @apply p-10 mb-0 bg-white rounded-t-xl lg:rounded-l-xl lg:rounded-t-none;
 }
 
-/* Responsive font width for CTA text */
-@media (min-width: 640px) {
-  .cta-text {
-    font-variation-settings: "wght" 400, "wdth" 500;
-  }
+.practice {
+  @apply p-10 mt-0 bg-gray-50 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl;
+}
+.practice-intro {
+  @apply font-semibold text-subheading mb-6 text-primary-700;
 }
 
-@media (min-width: 1024px) {
-  .cta-text {
-    font-variation-settings: "wght" 400, "wdth" 800;
-  }
+.practice-list-container {
+  @apply list-none pl-0 mb-8;
 }
 
-.cta-button {
-  @apply flex-grow flex justify-end;
+.problem-solution-label {
+  @apply font-sans font-bold text-body tracking-wider mb-4 block uppercase text-primary-500;
+  letter-spacing: 0.05em;
 }
 
-.cta-button a {
-  @apply block w-full lg:inline lg:w-auto;
+.problem-solution-title {
+  @apply text-heading-sm font-normal mt-0 mb-8 text-primary-800;
+}
+
+.problem-solution-subtitle {
+  @apply font-semibold text-subheading mt-0 mb-6 text-primary-700;
+}
+
+.problem-solution-description p {
+  @apply mb-6;
+}
+
+.problem-solution-description p:last-child {
+  @apply mb-0;
+}
+
+.problem-solution-closing {
+  @apply font-semibold mt-8 mb-0 text-primary-800;
 }
 
 /* ============================================
@@ -337,7 +252,6 @@
   font-variation-settings: "wght" 400, "wdth" 300;
 }
 
-/* Responsive font width for work title */
 @media (min-width: 640px) {
   .work-title {
     font-variation-settings: "wght" 400, "wdth" 500;
@@ -350,9 +264,12 @@
   }
 }
 
+.work-description {
+  @apply mb-4;
+}
+
 .work-grid {
-  @apply grid grid-cols-1 md:grid-cols-2 mx-auto;
-  gap: 32px;
+  @apply grid grid-cols-1 md:grid-cols-2 mx-auto gap-4 gap-y-16;
   max-width: 1120px; /* 544 * 2 + 32 */
 }
 
@@ -361,11 +278,18 @@
   /* GSAP handles the initial opacity and animation */
 }
 
-.work-image {
-  @apply w-full aspect-[544/380] object-cover rounded-3xl mb-4;
-  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+.work-item-full-width {
+  @apply col-span-full;
 }
 
+.work-image {
+  @apply w-full aspect-[544/380] object-cover rounded-3xl mb-4 transition-[transform,box-shadow] duration-150 ease-out;
+}
+
+.work-results {
+  @apply mb-6 text-base text-[#999];
+  font-variation-settings: "wght" 600, "wdth" 300;
+}
 
 /* ============================================
    TESTIMONIALS SECTION
@@ -386,7 +310,6 @@
   font-variation-settings: "wght" 400, "wdth" 300;
 }
 
-/* Responsive font width for testimonials title */
 @media (min-width: 640px) {
   .testimonials-title {
     font-variation-settings: "wght" 400, "wdth" 500;
@@ -400,13 +323,11 @@
 }
 
 .testimonials-grid {
-  @apply grid grid-cols-1 gap-24 w-full;
-  max-width: 100%;
+  @apply grid grid-cols-1 gap-24 w-full max-w-full;
 }
 
 .testimonial-card {
-  @apply flex flex-col;
-  max-width: 600px;
+  @apply flex flex-col max-w-[600px];
   /* Stagger animation handles opacity */
 }
 
@@ -445,30 +366,14 @@
 }
 
 .testimonial-text {
-  @apply font-heading font-normal mb-2;
+  @apply font-heading font-normal mb-2 text-[#1D1D1D] leading-[1.3];
   font-size: clamp(1rem, 1rem + 0.5vw, 1.5rem); /* Smaller size */
-  color: #1D1D1D;
   font-variation-settings: "wght" 400, "wdth" 250;
-  line-height: 1.3;
-}
-
-/* Responsive font width for testimonial text */
-@media (min-width: 640px) {
-  .testimonial-text {
-    font-variation-settings: "wght" 400, "wdth" 250;
-  }
-}
-
-@media (min-width: 1024px) {
-  .testimonial-text {
-    font-variation-settings: "wght" 400, "wdth" 250;
-  }
 }
 
 .testimonial-author {
-  @apply text-subheading font-normal mt-6;
-  color: rgba(29, 29, 29, 0.7); /* De-emphasized dark gray */
-  font-weight: 400;
+  @apply text-subheading font-normal mt-6 text-[rgba(29,29,29,0.7)] font-normal;
+  /* De-emphasized dark gray */
 }
 
 /* ============================================
@@ -482,13 +387,9 @@
 
 .approach-section::before {
   content: "";
-  @apply absolute inset-0 z-0;
+  @apply absolute inset-0 z-0 bg-cover bg-center bg-no-repeat pointer-events-none;
   background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/approach-bg-large.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   opacity: 1;
-  pointer-events: none;
 }
 
 @media (max-width: 768px) {
@@ -502,15 +403,13 @@
 }
 
 .approach-label {
-  @apply font-heading font-normal tracking-wider mb-12 block uppercase text-white;
+  @apply font-heading font-normal tracking-wider mb-12 block uppercase text-white text-left md:text-center;
   font-size: clamp(0.875rem, 0.875rem + 0.75vw, 1.5rem); /* Further reduced: 14px to 24px */
   line-height: 0.95;
   letter-spacing: 1px;
-  text-align: left;
   font-variation-settings: "wght" 400, "wdth" 300;
 }
 
-/* Responsive font width for approach label */
 @media (min-width: 640px) {
   .approach-label {
     font-variation-settings: "wght" 400, "wdth" 500;
@@ -523,15 +422,8 @@
   }
 }
 
-@media (max-width: 768px) {
-  .approach-label {
-    text-align: center;
-  }
-}
-
 .approach-circle {
-  @apply relative w-full mx-auto flex items-center justify-center mb-12;
-  max-width: 1806px;
+  @apply relative w-full mx-auto flex items-center justify-center mb-12 max-w-[1806px];
   aspect-ratio: 0.7375;
 }
 
@@ -541,24 +433,14 @@
 }
 
 .circular-text-desktop {
-  display: block;
+  @apply hidden md:block;
 }
 
 .circular-text-mobile {
-  display: none;
+  @apply block md:hidden md:w-full md:h-auto;
 }
 
 @media (max-width: 768px) {
-  .circular-text-desktop {
-    display: none;
-  }
-
-  .circular-text-mobile {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
   .approach-circle {
     display: flex;
     max-width: 100%;
@@ -599,7 +481,6 @@
     transform: rotate(8deg) scale(0.8) !important;
   }
 
-
   .process-description {
     letter-spacing: -0.24px;
   }
@@ -610,11 +491,7 @@
 }
 
 .process-card {
-  @apply absolute rounded-xl flex flex-col justify-between;
-  background: #101410;
-  aspect-ratio: 3/4;
-  padding: 24px;
-  max-width: 240px;
+  @apply absolute rounded-xl flex flex-col justify-between bg-[#101410] aspect-[3/4] p-6 max-w-[240px];
 }
 
 /* Large screen adjustments for process cards */
@@ -672,14 +549,12 @@
 }
 
 .process-number {
-  @apply font-mono block text-accent text-body;
-  margin: 0;
+  @apply font-mono block text-accent text-body m-0;
 }
 
 .process-description {
-  @apply text-white font-medium;
+  @apply text-white font-medium m-0;
   letter-spacing: -0.54px;
-  margin: 0;
 }
 
 .engagements {
@@ -695,12 +570,6 @@
   @apply grid grid-cols-1 md:grid-cols-3 gap-8;
 }
 
-@media (max-width: 768px) {
-  .engagements-grid {
-    @apply grid-cols-1;
-  }
-}
-
 .engagement-column h4 {
   @apply text-white font-sans font-semibold text-body mb-4;
 }
@@ -710,18 +579,11 @@
 }
 
 .engagement-column li {
-  @apply text-white;
-  margin-bottom: 0;
+  @apply text-white mb-0;
 }
 
 .engagement-item-mobile-only {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .engagement-item-mobile-only {
-    display: list-item;
-  }
+  @apply hidden md:list-item;
 }
 
 /* ============================================
@@ -751,30 +613,6 @@
   @apply max-w-6xl mx-auto;
 }
 
-.footer-top {
-  @apply flex flex-col lg:flex-row items-start justify-between gap-8;
-  margin-bottom: 65px;
-}
-
-.footer-text {
-  @apply font-heading font-normal leading-tight mb-0 uppercase text-secondary;
-  font-size: clamp(0.875rem, 0.875rem + 0.75vw, 1.5rem); /* Reduced from heading: 14px to 24px */
-  font-variation-settings: "wght" 400, "wdth" 300;
-}
-
-/* Responsive font width for footer text - reduced width for narrower appearance */
-@media (min-width: 640px) {
-  .footer-text {
-    font-variation-settings: "wght" 400, "wdth" 300;
-  }
-}
-
-@media (min-width: 1024px) {
-  .footer-text {
-    font-variation-settings: "wght" 400, "wdth" 300;
-  }
-}
-
 .footer-bottom {
   @apply flex flex-col lg:flex-row lg:items-center justify-between gap-4 pt-4 pb-[39px];
   border-top: 1px solid rgba(43, 72, 49, 0.4);
@@ -797,7 +635,6 @@
   transition: opacity 0.2s ease;
 }
 
-/* Responsive font width for footer links */
 @media (min-width: 640px) {
   .footer-link {
     font-variation-settings: "wght" 500, "wdth" 500;
@@ -814,54 +651,11 @@
   @apply no-underline opacity-70;
 }
 
-.footer-wallace-image {
-  @apply w-full mt-8;
-  margin-left: -24px;
-  margin-right: -24px;
-  width: calc(100% + 48px);
-}
-
-@media (min-width: 1024px) {
-  .footer-wallace-image {
-    margin-left: -103px;
-    margin-right: -103px;
-    width: calc(100% + 206px);
-  }
-}
-
-.footer-wallace-image img {
-  @apply w-full h-auto;
-  display: block;
-  mix-blend-mode: difference;
-  opacity: 0.4;
-}
-
 /* Mobile footer adjustments */
 @media (max-width: 768px) {
   .footer-section {
     @apply relative;
     padding: 48px 24px 0;
-  }
-
-  .footer-wallace-image {
-    @apply absolute top-0 bottom-0 right-0 mt-0;
-    margin-left: 0;
-    margin-right: 0;
-    width: auto;
-    height: 100%;
-    pointer-events: none;
-    overflow: visible;
-  }
-
-  .footer-wallace-image img {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    height: auto;
-    width: 100vh;
-    max-width: none;
-    transform: rotate(-90deg) translateX(50%);
-    transform-origin: right center;
   }
 }
 
@@ -951,23 +745,11 @@
   transition-delay: 0.35s;
 }
 
-
 /* ============================================
    RESPONSIVE ADJUSTMENTS
    ============================================ */
 
 @media (max-width: 768px) {
-  .hero-section {
-    padding-left: 24px;
-    padding-right: 24px;
-    width: calc(100% - 48px);
-    @apply pt-24 pb-12;
-  }
-
-  .hero-buttons {
-    @apply flex-col w-full;
-  }
-
   .profile-startup-section,
   .work-section,
   .testimonials-section,
@@ -976,16 +758,8 @@
     @apply px-6 py-16;
   }
 
-  .cta-banner {
-    @apply py-12 px-6;
-  }
-
-  .cta-content {
-    @apply flex-col;
-  }
-
   .work-grid {
-    @apply grid-cols-1 gap-10;
+    @apply grid-cols-1 gap-12;
   }
 
   .engagements-grid {
