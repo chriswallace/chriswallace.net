@@ -214,6 +214,12 @@ class VideoPlayer extends HTMLElement {
                 ${
                   !isTouchDevice
                     ? `
+                    .video {
+                        pointer-events: none;
+                        z-index: 10;
+                        width: 100%;
+                        height: auto;
+                    }
                     .video-overlay {
                         position: absolute;
                         top: -1px;
@@ -224,19 +230,7 @@ class VideoPlayer extends HTMLElement {
                         opacity: 0;
                         background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 80%);
                         cursor: pointer;
-                        transition: opacity 200ms linear;
-                    }
-                    .video-overlay:hover{
-                        opacity: 0.4;
-                    }
-                    :host(.paused) .video-overlay{
-                        opacity: 1;
-                    }
-                    .video {
-                        pointer-events: none;
-                        z-index: 10;
-                        width: 100%;
-                        height: auto;
+                        transition: opacity 0.3s ease;
                     }
                     .controls {
                         position: absolute;
@@ -379,14 +373,29 @@ class VideoPlayer extends HTMLElement {
                     .controls {
                         opacity: 0;
                     }
+                    
+                    /* Hide overlay by default */
+                    .video-overlay {
+                        opacity: 0;
+                    }
 
                     /* Only show controls on hover if user has interacted */
                     :host([data-has-interacted]:hover) .controls{
                         opacity: 1;
                     }
+                    
+                    /* Only show overlay on hover if user has interacted */
+                    :host([data-has-interacted]:hover) .video-overlay {
+                        opacity: 0.4;
+                    }
 
                     /* Only show controls when paused if user has interacted */
                     :host(.paused[data-has-interacted]) .controls {
+                        opacity: 1;
+                    }
+                    
+                    /* Only show overlay when paused if user has interacted */
+                    :host(.paused[data-has-interacted]) .video-overlay {
                         opacity: 1;
                     }
 
@@ -394,10 +403,18 @@ class VideoPlayer extends HTMLElement {
                     :host(:hover) .controls {
                         opacity: 1;
                     }
+                    
+                    /* Show overlay on hover */
+                    :host(:hover) .video-overlay {
+                        opacity: 0.4;
+                    }
 
                     /* Show controls by default on touch devices */
                     @media (hover: none) {
                         .controls {
+                            opacity: var(--controls-opacity, 0);
+                        }
+                        .video-overlay {
                             opacity: var(--controls-opacity, 0);
                         }
                     }
@@ -406,9 +423,24 @@ class VideoPlayer extends HTMLElement {
                     :host(:hover) .controls {
                         opacity: var(--controls-opacity,0);
                     }
+                    
+                    /* Show overlay on hover for non-touch devices */
+                    :host(:hover) .video-overlay {
+                        opacity: calc(var(--controls-opacity, 0) * 0.4);
+                    }
 
                     /* Show controls when paused AND user has interacted */
                     :host(.paused[data-has-interacted]) .controls {
+                        opacity: 1;
+                    }
+                    
+                    /* Show overlay when paused AND user has interacted */
+                    :host(.paused[data-has-interacted]) .video-overlay {
+                        opacity: 1;
+                    }
+                    
+                    /* Show overlay when paused (initial state) */
+                    :host(.paused:not([data-has-interacted])) .video-overlay {
                         opacity: 1;
                     }
 
@@ -753,6 +785,9 @@ class VideoPlayer extends HTMLElement {
     if (this.controls) {
       this.controls.style.opacity = "1";
     }
+    if (this.videoOverlay) {
+      this.videoOverlay.style.opacity = "0.4";
+    }
 
     if (!this.video.paused || forceShow) {
       this.hideControlsTimeout = setTimeout(() => {
@@ -767,6 +802,9 @@ class VideoPlayer extends HTMLElement {
 
     if (!this.video.paused && !this.isSeeking) {
       this.controls.style.opacity = "0";
+      if (this.videoOverlay) {
+        this.videoOverlay.style.opacity = "0";
+      }
     }
   }
 
