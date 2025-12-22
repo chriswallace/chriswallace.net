@@ -26,17 +26,27 @@
    HERO SECTION
    ============================================ */
 .hero-section {
-  @apply min-h-screen flex flex-col justify-center pt-24 pb-12 md:pb-16 relative md:px-8 w-[calc(100%-32px)] md:w-[calc(100%-48px)] max-w-full mx-auto;
+  @apply min-h-screen flex flex-col gap-12 relative w-[calc(100%-32px)] md:w-[calc(100%-48px)] max-w-full mx-auto justify-between;
   /* Background inherits from body */
+}
+
+.hero-navbar-buffer {
+  @apply absolute top-0 left-0 right-0 h-20;
+  /* Buffer space for navbar */
+}
+
+.hero-content {
+  @apply relative z-10;
 }
 
 .hero-section > * {
   @apply relative z-10;
 }
 
-/* Tall WALLACE decorative logo */
+/* Tall WALLACE decorative logo - flows freely down the page behind all content */
 .hero-wallace-logo {
-  @apply absolute right-0 top-0 bottom-0 h-full w-auto z-[1] pointer-events-none object-contain object-right opacity-0 max-w-[30%] min-w-[200px];
+  @apply absolute right-0 top-0 w-auto z-0 pointer-events-none object-contain object-right opacity-0 max-w-[30%] min-w-[200px];
+  height: 125vh;
 }
 
 @media (max-width: 1024px) {
@@ -107,12 +117,10 @@
 /* ============================================
    CREDIBILITY SECTION
    ============================================ */
-.credibility-section {
-  @apply py-12 lg:py-12 px-6 lg:px-4 bg-white/40;
-}
 
 .credibility-content {
-  @apply max-w-7xl mx-auto flex flex-col items-center gap-8 md:flex-row md:items-center md:justify-between md:gap-24;
+  @apply w-full flex flex-col items-start 2xl:items-center gap-4 sm:gap-8 lg:gap-24 2xl:gap-48 md:flex-row md:items-center py-24 lg:py-8;
+  justify-content: space-between;
 }
 
 .credibility-text-wrapper {
@@ -120,11 +128,11 @@
 }
 
 .credibility-text {
-  @apply text-subheading md:text-body md:text-left text-gray-700 mb-0;
+  @apply text-body text-gray-700 mb-0;
 }
 
 .credibility-logos {
-  @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:flex lg:flex-nowrap lg:items-center lg:justify-between gap-4 sm:gap-4 md:gap-6 lg:gap-0 w-full;
+  @apply grid grid-cols-3 lg:flex lg:flex-nowrap lg:items-center lg:justify-between gap-1.5 sm:gap-2 md:gap-6 lg:gap-0 w-full max-w-5xl lg:mr-8;
 }
 
 .credibility-logo-item {
@@ -139,11 +147,11 @@
    PROFILE & STARTUP PLIGHT SECTION (MERGED)
    ============================================ */
 .profile-startup-section {
-  @apply py-24 lg:py-32 px-6 lg:px-12;
+  @apply min-h-[60svh] lg:min-h-screen flex flex-col justify-center items-start border-y border-[rgba(0,0,0,0.08)];
 }
 
 .profile-startup-content {
-  @apply mx-auto md:grid md:grid-cols-[minmax(150px,220px)_minmax(0,680px)] md:gap-[clamp(2rem,4vw,4rem)] md:items-start md:max-w-full md:justify-center;
+  @apply w-[calc(100%-32px)] md:w-[calc(100%-48px)] max-w-full mx-auto md:grid md:grid-cols-[minmax(150px,220px)_minmax(0,680px)] md:gap-[clamp(2rem,4vw,4rem)] md:items-start md:max-w-full md:justify-center;
   max-width: fit-content;
   justify-items: center;
 }
@@ -154,7 +162,7 @@
 }
 
 .profile-startup-image {
-  @apply w-[110px] ml-3 md:ml-0 md:w-full h-auto object-contain max-h-[340px] md:max-h-none md:object-cover;
+  @apply w-[140px] ml-3 md:ml-0 md:w-full h-auto object-contain max-h-[340px] md:max-h-none md:object-cover;
 }
 
 /* Text Column */
@@ -178,11 +186,15 @@
    PROBLEM & SOLUTION GRID SECTION
    ============================================ */
 .problem-solution-section {
-  @apply py-24 lg:py-32 px-6 lg:px-16;
+  @apply min-h-screen flex flex-col justify-center py-24 lg:py-32 px-6 lg:px-16 relative;
+  background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/hero-bg-desktop.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .problem-solution-content {
-  @apply mx-auto;
+  @apply mx-auto max-w-[88em];
 }
 
 .problem-solution-item {
@@ -194,43 +206,116 @@
 }
 
 .solution-item {
-  @apply p-10 mb-0 bg-white rounded-t-xl lg:rounded-l-xl lg:rounded-t-none;
+  @apply p-10 mb-0 bg-white rounded-t-xl md:rounded-r-none md:rounded-l-xl;
 }
 
 .practice {
-  @apply p-10 mt-0 bg-gray-50 rounded-b-xl lg:rounded-b-none lg:rounded-r-xl;
+  @apply p-10 mt-0 bg-gray-50 rounded-b-xl md:rounded-b-none md:rounded-r-xl;
 }
+
 .practice-intro {
   @apply font-semibold text-subheading mb-6 text-primary-700;
+}
+
+.practice-item {
+  @apply text-primary-800;
 }
 
 .practice-list-container {
   @apply list-none pl-0 mb-8;
 }
 
-.problem-solution-label {
+/* Text directly on dark background - inverted colors */
+.problem-item .problem-solution-label {
+  @apply font-sans font-bold text-body tracking-wider mb-4 block uppercase;
+  color: var(--color-green-bright);
+  letter-spacing: 0.05em;
+}
+
+.problem-item .problem-solution-title {
+  @apply text-heading-sm font-normal mt-0 mb-8 text-white;
+}
+
+.problem-item .problem-solution-subtitle {
+  @apply font-semibold text-subheading mt-0 mb-6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.problem-item .problem-solution-closing {
+  @apply font-semibold mt-8 mb-0 text-white;
+}
+
+.problem-item .problem-solution-description {
+  @apply text-white;
+}
+
+.problem-item .problem-solution-description p {
+  @apply mb-6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.problem-item .problem-solution-description p:last-child {
+  @apply mb-0;
+}
+
+.problem-item ul li {
+  @apply text-white;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.problem-item ul li::before {
+  @apply text-white;
+  color: white;
+}
+
+.problem-item .text-muted {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Text in cards - original dark colors */
+.solution-item .problem-solution-label,
+.practice .problem-solution-label {
   @apply font-sans font-bold text-body tracking-wider mb-4 block uppercase text-primary-500;
   letter-spacing: 0.05em;
 }
 
-.problem-solution-title {
+.solution-item .problem-solution-title,
+.practice .problem-solution-title {
   @apply text-heading-sm font-normal mt-0 mb-8 text-primary-800;
 }
 
-.problem-solution-subtitle {
+.solution-item .problem-solution-subtitle,
+.practice .problem-solution-subtitle {
   @apply font-semibold text-subheading mt-0 mb-6 text-primary-700;
 }
 
-.problem-solution-description p {
-  @apply mb-6;
+.solution-item .problem-solution-closing,
+.practice .problem-solution-closing {
+  @apply font-semibold mt-8 mb-0 text-primary-800;
 }
 
-.problem-solution-description p:last-child {
+.solution-item .problem-solution-description,
+.practice .problem-solution-description {
+  @apply text-primary-800;
+}
+
+.solution-item .problem-solution-description p,
+.practice .problem-solution-description p {
+  @apply mb-6 text-primary-800;
+}
+
+.solution-item .problem-solution-description p:last-child,
+.practice .problem-solution-description p:last-child {
   @apply mb-0;
 }
 
-.problem-solution-closing {
-  @apply font-semibold mt-8 mb-0 text-primary-800;
+.problem-solution-list {
+  @apply text-white border-b pb-12 border-[rgba(255,255,255,0.2)];
+}
+
+.problem-solution-list li {
+  @apply text-white;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* ============================================
@@ -247,8 +332,6 @@
 
 .work-title {
   @apply font-heading font-normal text-center uppercase mt-0 text-primary-800;
-  font-size: clamp(0.875rem, 0.875rem + 0.75vw, 1.5rem); /* Further reduced: 14px to 24px */
-  line-height: 0.95;
   font-variation-settings: "wght" 400, "wdth" 300;
 }
 
@@ -305,8 +388,6 @@
 
 .testimonials-title {
   @apply font-heading font-normal text-center uppercase flex-none flex-grow-0 mt-0 text-primary-800;
-  font-size: clamp(0.875rem, 0.875rem + 0.75vw, 1.5rem); /* Further reduced: 14px to 24px */
-  line-height: 0.95;
   font-variation-settings: "wght" 400, "wdth" 300;
 }
 
@@ -323,7 +404,7 @@
 }
 
 .testimonials-grid {
-  @apply grid grid-cols-1 gap-24 w-full max-w-full;
+  @apply grid grid-cols-1 gap-24 w-full max-w-7xl mx-auto;
 }
 
 .testimonial-card {
@@ -366,13 +447,12 @@
 }
 
 .testimonial-text {
-  @apply font-heading font-normal mb-2 text-[#1D1D1D] leading-[1.3];
-  font-size: clamp(1rem, 1rem + 0.5vw, 1.5rem); /* Smaller size */
+  @apply text-subheading font-heading font-normal mb-2 text-[#1D1D1D];
   font-variation-settings: "wght" 400, "wdth" 250;
 }
 
 .testimonial-author {
-  @apply text-subheading font-normal mt-6 text-[rgba(29,29,29,0.7)] font-normal;
+  @apply text-body font-normal mt-6 text-muted;
   /* De-emphasized dark gray */
 }
 
@@ -402,22 +482,19 @@
   @apply relative z-10;
 }
 
-.approach-label {
-  @apply font-heading font-normal tracking-wider mb-12 block uppercase text-white text-left md:text-center;
-  font-size: clamp(0.875rem, 0.875rem + 0.75vw, 1.5rem); /* Further reduced: 14px to 24px */
-  line-height: 0.95;
-  letter-spacing: 1px;
+.approach-title {
+  @apply font-heading font-normal text-heading tracking-wider mb-0 block uppercase text-white text-left;
   font-variation-settings: "wght" 400, "wdth" 300;
 }
 
 @media (min-width: 640px) {
-  .approach-label {
+  .approach-title {
     font-variation-settings: "wght" 400, "wdth" 500;
   }
 }
 
 @media (min-width: 1024px) {
-  .approach-label {
+  .approach-title {
     font-variation-settings: "wght" 400, "wdth" 800;
   }
 }
@@ -582,6 +659,10 @@
   @apply text-white mb-0;
 }
 
+.engagement-column li::before {
+  color: white;
+}
+
 .engagement-item-mobile-only {
   @apply hidden md:list-item;
 }
@@ -590,19 +671,22 @@
    FOOTER SECTION
    ============================================ */
 .footer-section {
-  @apply relative overflow-hidden bg-secondary-600 pt-[74px] px-[103px];
-}
-
-.footer-section::before {
-  content: "";
-  @apply absolute inset-0 z-0 bg-cover bg-center bg-no-repeat pointer-events-none;
+  @apply relative overflow-hidden bg-secondary-600 pt-[74px] bg-cover bg-center bg-no-repeat;
   background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/footer-bg-large.svg");
 }
 
 @media (max-width: 768px) {
-  .footer-section::before {
+  .footer-section {
     background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/footer-bg-small.svg");
   }
+}
+
+.logo-clip{
+  @apply md:overflow-hidden md:aspect-[1806/248];
+}
+
+.footer-wallace-logo {
+  @apply opacity-50 object-cover object-center h-full;
 }
 
 .footer-section > .footer-content {
@@ -610,12 +694,12 @@
 }
 
 .footer-content {
-  @apply max-w-6xl mx-auto;
+  @apply max-w-6xl w-[calc(100%-32px)] mx-auto;
 }
 
 .footer-bottom {
-  @apply flex flex-col lg:flex-row lg:items-center justify-between gap-4 pt-4 pb-[39px];
-  border-top: 1px solid rgba(43, 72, 49, 0.4);
+  @apply flex flex-col lg:flex-row lg:items-center justify-between gap-4 pt-4 pb-[39px] mt-6;
+  border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .footer-copyright {
@@ -629,7 +713,7 @@
 
 .footer-link {
   @apply font-heading font-medium no-underline text-secondary;
-  font-size: 0.8125rem; /* 13px - smaller for social links */
+  font-size: 1.3rem; /* 13px - smaller for social links */
   font-variation-settings: "wght" 500, "wdth" 300;
   letter-spacing: -0.015em;
   transition: opacity 0.2s ease;

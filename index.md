@@ -19,6 +19,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <a href="#about" class="nav-link">Meet Chris</a>
     <a href="#solution" class="nav-link">Force Multiplier</a>
     <a href="#work" class="nav-link">My Work</a>
+    <a href="#testimonials" class="nav-link">Testimonials</a>
     <a href="#approach" class="nav-link">Approach</a>
   </div>
   
@@ -43,6 +44,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <a href="#about" class="mobile-menu-link">Meet Chris</a>
     <a href="#solution" class="mobile-menu-link">Force Multiplier</a>
     <a href="#work" class="mobile-menu-link">My Work</a>
+    <a href="#testimonials" class="mobile-menu-link">Testimonials</a>
     <a href="#approach" class="mobile-menu-link">Approach</a>
   </div>
   <div class="mobile-menu-logo">
@@ -53,28 +55,26 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
   </div>
   <div class="mobile-menu-handle-bottom"></div>
 </div>
-
+<div><img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/wallace-tall.svg" alt="" class="hero-wallace-logo" aria-hidden="true"></div>
 <!-- Hero Section -->
 <section class="hero-section" data-section="hero">
-  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/wallace-tall.svg" alt="" class="hero-wallace-logo" aria-hidden="true">
-  <div class="reveal">
-    <span class="hero-label overline">Fractional Design Leadership</span>
+  <div class="hero-navbar-buffer"></div>
+  <div class="hero-content">
+    <div class="reveal">
+      <span class="hero-label overline">Fractional Design Leadership</span>
+    </div>
+    <h1 class="hero-title reveal reveal-delay-1">
+      Flexible approach.<br>Focused results.
+    </h1>
+    <p class="hero-description reveal reveal-delay-2">
+      I embed as a part-time Head of Design to bring clarity, craft, and momentum to product teams in their journey to success.
+    </p>
+    <div class="hero-buttons reveal reveal-delay-3">
+      <a href="https://zcal.co/chriswallace" class="btn btn-bright" target="_blank" rel="noopener">Start a conversation</a>
+      <a href="#about" class="btn btn-outline">Meet Chris</a>
+    </div>
   </div>
-  <h1 class="hero-title reveal reveal-delay-1">
-    Flexible approach.<br>Focused results.
-  </h1>
-  <p class="hero-description reveal reveal-delay-2">
-    I embed as a part-time Head of Design to bring clarity, craft, and momentum to product teams in their journey to success.
-  </p>
-  <div class="hero-buttons reveal reveal-delay-3">
-    <a href="https://zcal.co/chriswallace" class="btn btn-bright" target="_blank" rel="noopener">Start a conversation</a>
-    <a href="#about" class="btn btn-outline">Meet Chris</a>
-  </div>
-</section>
-
-<!-- Social Proof / Credibility Strip -->
-<section class="credibility-section" data-section="credibility">
-  <div class="credibility-content reveal">
+  <div class="credibility-content reveal reveal-delay-4">
     <div class="credibility-text-wrapper">
       <p class="credibility-text">
         Trusted by startups and<br>industry-defining companies
@@ -114,7 +114,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <!-- Column 2: All Content -->
     <div class="profile-startup-text-column">
       <span class="profile-label overline reveal">Meet Chris</span>
-      <h2 class="profile-title reveal reveal-delay-1">A design leader who has walked the path of a founder.</h2>
+      <h2 class="profile-title reveal reveal-delay-1">A design leader who gets being a founder.</h2>
       
       <div class="profile-description reveal reveal-delay-2">
         <p>I'm a 2x Emmy-nominated design leader who's led major initiatives at Roblox, Google, and Facebook. I've bootstrapped products from 0→1 to millions in revenue, built design teams from 1→25, and helped achieve 2x exits totaling $30m+.</p>
@@ -131,21 +131,22 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-4">
       <div class="problem-solution-item problem-item" id="problem">
         <span class="problem-solution-label reveal">The Problem</span>
-        <h2 class="problem-solution-title reveal reveal-delay-1">Your design team is working hard but doesn't deliver strategically.</h2>
+        <h2 class="problem-solution-title reveal reveal-delay-1">Your design team works hard but big wins just aren't happening.</h2>
 
         <div class="problem-solution-description reveal reveal-delay-2">
-          <h3 class="problem-solution-subtitle">What I usually see:</h3>
+          <h3 class="problem-solution-subtitle">What I often see:</h3>
 
           <ul class="problem-solution-list">
-            <li>Talented designers without a clear quality bar</li>
-            <li>Design systems that slow teams down instead of speeding them up</li>
-            <li>Product decisions made late, emotionally, or by committee</li>
-            <li>Design reacting to roadmaps instead of shaping them</li>
+            <li>Talented designers pushing pixels, not solving problems</li>
+            <li>Design systems creating tech debt, not speed</li>
+            <li>Product decisions made too late, pivoting too slowly</li>
+            <li>Design being handed roadmaps vs. informing them</li>
+            <li>Engineering teams not given the why behind the what</li>
           </ul>
 
           <p class="problem-solution-closing">
-            Hiring a full-time Head of Design feels risky.<br>
-            Not hiring one quietly costs you more every quarter.
+            Hiring a design leader often feels risky.<br>
+            Not hiring one quietly costs more every quarter.
           </p>
         </div>
       </div>
@@ -155,10 +156,10 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         <div class="problem-solution-item solution-item" id="solution">
           <span class="problem-solution-label">The Solution</span>
           <h2 class="problem-solution-title">Force Multiplier</h2>
-          <p class="problem-solution-subtitle">Senior design leadership. Fractional commitment. Compounding impact.</p>
+          <p class="problem-solution-subtitle">Senior design leadership. <br>Fractional commitment. <br>Compounding impact.</p>
 
           <div class="problem-solution-description">
-            <p>Force Multiplier is a part-time Head of Design engagement for companies that want the impact of a real design leader without the overhead of a full-time role.</p>
+            <p>Force Multiplier is a flexible Head of Design engagement for companies that want the impact of a real design leader without the overhead of a full-time role.</p>
             <p class="text-muted">I don't advise from the sidelines.<br>I show up, take ownership, and help teams make better decisions faster.</p>
           </div>
         </div>
@@ -194,7 +195,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
           </ul>
 
           <div>
-            <p>The goal isn't more output.<br>It's more leverage from the team you already have.</p>
+            <p>The goal isn't more output.<br><strong>It's more leverage from the team you already have</strong>.</p>
           </div>
         </div>
       </div>
@@ -335,7 +336,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
 
 <!-- Approach Section -->
 <section class="approach-section" id="approach" data-section="approach">
-  <span class="approach-label reveal">Follow my approach...</span>
+  <h2 class="approach-title reveal">My Approach</h2>
   
   <div class="approach-circle reveal reveal-delay-1">
     <img 
@@ -353,20 +354,20 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     
     <div class="process-cards">
       <div class="process-card">
-        <span class="process-number">01</span>
-        <p class="process-description">Learn about your product, users, business, and process</p>
+        <span class="process-number">Week 1</span>
+        <p class="process-description">Rapid assessment to identify quick wins and immediate leverage points</p>
       </div>
       <div class="process-card">
-        <span class="process-number">02</span>
-        <p class="process-description">Create a strategy to infuse design into your product approach</p>
+        <span class="process-number">Weeks 2-4</span>
+        <p class="process-description">Deliver first quick win—like establishing a design review process that reduces rework by 40%</p>
       </div>
       <div class="process-card">
-        <span class="process-number">03</span>
-        <p class="process-description">Implement the strategy and evangelize design across the organization</p>
+        <span class="process-number">Month 2-3</span>
+        <p class="process-description">Build momentum with systematic improvements—design systems, workflows, and decision frameworks</p>
       </div>
       <div class="process-card">
-        <span class="process-number">04</span>
-        <p class="process-description">Iterate on the new process, making changes as we grow</p>
+        <span class="process-number">Ongoing</span>
+        <p class="process-description">Scale what works, iterate on what doesn't, and maintain velocity without adding overhead</p>
       </div>
     </div>
   </div>
@@ -416,7 +417,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
           <div>
             <h2 class="lets-talk-title mt-0 reveal">No pitch. No pressure. Just clarity.</h2>
             
-            <div class="lets-talk-description mb-12 reveal reveal-delay-1">
+            <div class="lets-talk-description md:mb-12 reveal reveal-delay-1">
               <p>We'll start with a conversation. If you're feeling the drag but can't quite name it, that's usually the signal.</p>
             </div>
           </div>
@@ -435,6 +436,9 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
         <a href="https://www.facebook.com/christopher.scott.wallace/" class="footer-link" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
+  </div>
+  <div class="logo-clip">
+    <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/footer-wallace-logo.svg" alt="" class="footer-wallace-logo" aria-hidden="true">
   </div>
 </footer>
 

@@ -24,6 +24,7 @@ export default {
       ...screens,
       "2xl": "110rem",
       "3xl": "128rem",
+      "8xl": "140rem", // Slightly less than default large breakpoint
     },
     fontSize,
     extend: {
@@ -68,7 +69,7 @@ export default {
           },
         ],
         heading: [
-          "clamp(1.35rem, 1.35rem + 1.5vw, 1.75rem)",
+          "clamp(1.5rem, 1.5rem + 1.5vw, 1.75rem)",
           {
             lineHeight: "1.25",
           },

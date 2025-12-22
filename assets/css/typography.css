@@ -12,7 +12,7 @@
   }
 
   strong {
-    @apply font-bold text-fg;
+    font-variation-settings: 'wght' 600;
   }
 
   html {

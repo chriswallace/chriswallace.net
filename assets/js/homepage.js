@@ -22,16 +22,28 @@ function initHomepageAnimations() {
   const heroDescription = document.querySelector(".hero-description");
   const heroButtons = document.querySelector(".hero-buttons");
   const heroWallaceLogo = document.querySelector(".hero-wallace-logo");
+  const credibilityContent = document.querySelector(".credibility-content");
 
   if (heroSection) {
     // Initial reveal animation for hero elements - unified fade-in
     const heroTimeline = gsap.timeline();
 
-    // Set initial state - blur and opacity 0
-    gsap.set(heroSection.querySelectorAll(".reveal"), {
-      filter: "blur(10px)",
-      opacity: 0,
-    });
+    // Set initial state - blur and opacity 0 for hero content
+    const heroContent = heroSection.querySelector(".hero-content");
+    if (heroContent) {
+      gsap.set(heroContent.querySelectorAll(".reveal"), {
+        filter: "blur(10px)",
+        opacity: 0,
+      });
+    }
+
+    // Set initial state for credibility content (outside hero-content)
+    if (credibilityContent && heroSection.contains(credibilityContent)) {
+      gsap.set(credibilityContent, {
+        filter: "blur(10px)",
+        opacity: 0,
+      });
+    }
 
     // Animate Wallace logo
     if (heroWallaceLogo) {
@@ -88,11 +100,31 @@ function initHomepageAnimations() {
         "-=0.2"
       );
 
+    // Animate credibility content if it exists in hero section
+    if (credibilityContent && heroSection.contains(credibilityContent)) {
+      heroTimeline.to(
+        credibilityContent,
+        {
+          filter: "blur(0px)",
+          opacity: 1,
+          duration: 0.4,
+          ease: "power2.out",
+        },
+        "-=0.2"
+      );
+    }
+
     // Add visible class to prevent CSS transitions from interfering
     heroTimeline.eventCallback("onComplete", () => {
-      heroSection
-        .querySelectorAll(".reveal")
-        .forEach((el) => el.classList.add("visible"));
+      if (heroContent) {
+        heroContent
+          .querySelectorAll(".reveal")
+          .forEach((el) => el.classList.add("visible"));
+      }
+      // Add visible class to credibility content
+      if (credibilityContent && heroSection.contains(credibilityContent)) {
+        credibilityContent.classList.add("visible");
+      }
 
       // Animate hero title font width variation using Splitting.js
       if (heroTitle && typeof Splitting !== "undefined") {

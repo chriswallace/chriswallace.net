@@ -80,20 +80,34 @@ class VideoPlayer extends HTMLElement {
         this.handleVisibilityChange()
       );
 
-      // Initial state
+      // Initial state - always muted for autoplay compatibility
       this.video.muted = true;
 
-      // Only autoplay if the attribute is present
-      if (this.hasAttribute("autoplay")) {
-        this.video.play().catch(() => {
-          if (!isTouchDevice) {
-            this.classList.add("paused");
-          }
-        });
-        this.updatePlayButtonIcon(false);
+      // Disable picture-in-picture on mobile
+      if (isTouchDevice) {
+        this.video.disablePictureInPicture = true;
+        // Ensure playsinline is set for iOS
+        this.video.setAttribute("playsinline", "");
+        this.video.setAttribute("webkit-playsinline", "");
+
+        // On mobile, autoplay muted videos by default
+        if (isMuted) {
+          this.video.play().catch((err) => {
+            console.log("Mobile autoplay failed:", err);
+          });
+        }
       } else {
-        this.classList.add("paused");
-        this.updatePlayButtonIcon(true);
+        // Desktop: Only autoplay if the attribute is present
+        if (this.hasAttribute("autoplay")) {
+          this.video.play().catch((err) => {
+            console.log("Autoplay failed:", err);
+            this.classList.add("paused");
+          });
+          this.updatePlayButtonIcon(false);
+        } else {
+          this.classList.add("paused");
+          this.updatePlayButtonIcon(true);
+        }
       }
 
       // Set loop based on attribute
@@ -136,7 +150,9 @@ class VideoPlayer extends HTMLElement {
     const description = this.getAttribute("video-description");
     const isMuted = this.hasAttribute("muted");
     const playsInline = this.hasAttribute("playsinline");
-    const autoPlay = this.hasAttribute("autoplay");
+    // On mobile, autoplay by default if muted attribute is present
+    const autoPlay =
+      (isTouchDevice && isMuted) || this.hasAttribute("autoplay");
     const loop = this.hasAttribute("loop");
 
     this.shadowRoot.innerHTML = `
@@ -547,11 +563,12 @@ class VideoPlayer extends HTMLElement {
                 class="video" 
                 width="100%" 
                 ${isMuted ? "muted" : ""} 
-                ${playsInline ? "playsinline" : ""} 
-                ${isTouchDevice ? "controls" : ""}
+                ${playsInline || isTouchDevice ? "playsinline" : ""} 
+                ${isTouchDevice ? "controls webkit-playsinline" : ""}
                 ${posterUrl ? `poster="${posterUrl}"` : ""}
                 ${autoPlay ? "autoplay" : ""}
                 ${loop ? "loop" : ""}
+                ${isTouchDevice ? "disablePictureInPicture" : ""}
             >
                 <source src="${videoUrl}" type="video/mp4">
                 Your browser does not support HTML5 video.

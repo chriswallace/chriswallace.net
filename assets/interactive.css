@@ -654,6 +654,12 @@ i {
   }
 }
 
+@media (min-width: 140rem) {
+  .container {
+    max-width: 140rem;
+  }
+}
+
 #container {
   height: 100vh;
   width: 100%;
@@ -2052,8 +2058,8 @@ i {
 }
 
 .\~text-base\/sm {
-  font-size: clamp(0.875rem,1.057rem + -0.142vw,1rem)/* fluid type from 1rem at 40rem to 0.875rem at 128rem */;
-  line-height: clamp(1.25rem,1.61rem + -0.28vw,1.5rem)/* fluid from 1.5rem at 40rem to 1.25rem at 128rem */;
+  font-size: clamp(0.875rem,1.05rem + -0.125vw,1rem)/* fluid type from 1rem at 40rem to 0.875rem at 140rem */;
+  line-height: clamp(1.25rem,1.6rem + -0.25vw,1.5rem)/* fluid from 1.5rem at 40rem to 1.25rem at 140rem */;
 }
 
 body.meetChris {
