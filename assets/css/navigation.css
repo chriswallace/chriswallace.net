@@ -406,7 +406,7 @@ body.portfolio-page .site-logo-img .design-text {
 .nav-link {
   @apply text-white font-sans no-underline relative pb-2;
   font-size: 0.875rem; /* 14px base */
-  font-weight: 300;
+  font-weight: 600;
   opacity: 0;
   filter: blur(10px);
   transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1), all 0.2s ease;
@@ -420,7 +420,7 @@ body.portfolio-page .site-logo-img .design-text {
 /* Reduce nav link size on large screens */
 @media (min-width: 1024px) {
   .nav-link {
-    font-size: 0.875rem; /* 14px on large screens */
+    font-size: 0.925rem; /* 14px on large screens */
   }
 }
 

@@ -38,4 +38,14 @@
   --section-testimonials: #e6ede4;
   --section-approach: #1a2e22;
   --section-footer: #4a7a5a;
+
+  /* Text Colors - Light Background */
+  --color-text-heading-light: #000000;
+  --color-text-subheading-light: #666666;
+  --color-text-body-light: #000000;
+
+  /* Text Colors - Dark Background */
+  --color-text-heading-dark: #ffffff;
+  --color-text-subheading-dark: #cccccc;
+  --color-text-body-dark: #ffffff;
 }

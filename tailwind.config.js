@@ -63,9 +63,9 @@ export default {
       fontSize: {
         // Four core type sizes with responsive clamps for effective type ramps
         body: [
-          "clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem)",
+          "clamp(0.925rem, 0.925rem + 0.4vw, 1rem)",
           {
-            lineHeight: "1.5",
+            lineHeight: "1.35",
           },
         ],
         heading: [

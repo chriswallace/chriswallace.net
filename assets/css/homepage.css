@@ -11,6 +11,7 @@
 .home section {
   @apply relative;
   z-index: 1;
+  scroll-margin-top: 0;
 }
 
 /* Scroll Progress Bar */
@@ -101,7 +102,7 @@
 }
 
 .hero-description {
-  @apply text-primary-700 max-w-xl mb-12;
+  @apply text-muted max-w-xl mb-12;
 }
 
 .hero-buttons {
@@ -172,14 +173,7 @@
 }
 
 .profile-title {
-  @apply font-heading font-normal mt-0 mb-8 uppercase text-primary-800;
-  font-variation-settings: "wght" 350, "wdth" 300;
-}
-
-@media (min-width: 768px) {
-  .profile-title {
-    font-variation-settings: "wght" 350, "wdth" 600;
-  }
+  @apply font-heading text-heading mt-0 mb-8 text-primary-800;
 }
 
 /* ============================================
@@ -233,25 +227,27 @@
 }
 
 .problem-item .problem-solution-title {
-  @apply text-heading-sm font-normal mt-0 mb-8 text-white;
+  @apply text-heading-sm font-normal mt-0 mb-8;
+  color: var(--color-text-heading-dark);
 }
 
 .problem-item .problem-solution-subtitle {
   @apply font-semibold text-subheading mt-0 mb-6;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-subheading-dark);
 }
 
 .problem-item .problem-solution-closing {
-  @apply font-semibold mt-8 mb-0 text-white;
+  @apply font-semibold mt-8 mb-0;
+  color: var(--color-text-heading-dark);
 }
 
 .problem-item .problem-solution-description {
-  @apply text-white;
+  color: var(--color-text-body-dark);
 }
 
 .problem-item .problem-solution-description p {
   @apply mb-6;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-body-dark);
 }
 
 .problem-item .problem-solution-description p:last-child {
@@ -259,49 +255,52 @@
 }
 
 .problem-item ul li {
-  @apply text-white;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-body-dark);
 }
 
 .problem-item ul li::before {
-  @apply text-white;
-  color: white;
+  color: var(--color-text-body-dark);
 }
 
 .problem-item .text-muted {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-subheading-dark);
 }
 
-/* Text in cards - original dark colors */
+/* Text in cards - light background colors */
 .solution-item .problem-solution-label,
 .practice .problem-solution-label {
-  @apply font-sans font-bold text-body tracking-wider mb-4 block uppercase text-primary-500;
+  @apply font-sans font-bold text-body tracking-wider mb-4 block uppercase;
   letter-spacing: 0.05em;
+  color: var(--color-text-subheading-light);
 }
 
 .solution-item .problem-solution-title,
 .practice .problem-solution-title {
-  @apply text-heading-sm font-normal mt-0 mb-8 text-primary-800;
+  @apply text-heading-sm font-normal mt-0 mb-8;
+  color: var(--color-text-heading-light);
 }
 
 .solution-item .problem-solution-subtitle,
 .practice .problem-solution-subtitle {
-  @apply font-semibold text-subheading mt-0 mb-6 text-primary-700;
+  @apply font-semibold text-subheading mt-0 mb-6;
+  color: var(--color-text-subheading-light);
 }
 
 .solution-item .problem-solution-closing,
 .practice .problem-solution-closing {
-  @apply font-semibold mt-8 mb-0 text-primary-800;
+  @apply font-semibold mt-8 mb-0;
+  color: var(--color-text-heading-light);
 }
 
 .solution-item .problem-solution-description,
 .practice .problem-solution-description {
-  @apply text-primary-800;
+  color: var(--color-text-body-light);
 }
 
 .solution-item .problem-solution-description p,
 .practice .problem-solution-description p {
-  @apply mb-6 text-primary-800;
+  @apply mb-6;
+  color: var(--color-text-body-light);
 }
 
 .solution-item .problem-solution-description p:last-child,
@@ -310,12 +309,13 @@
 }
 
 .problem-solution-list {
-  @apply text-white border-b pb-12 border-[rgba(255,255,255,0.2)];
+  @apply border-b pb-12;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-text-body-dark);
 }
 
 .problem-solution-list li {
-  @apply text-white;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-body-dark);
 }
 
 /* ============================================
@@ -483,8 +483,9 @@
 }
 
 .approach-title {
-  @apply font-heading font-normal text-heading tracking-wider mb-0 block uppercase text-white text-left;
+  @apply font-heading font-normal text-heading tracking-wider mb-0 block uppercase text-left;
   font-variation-settings: "wght" 400, "wdth" 300;
+  color: var(--color-text-heading-dark);
 }
 
 @media (min-width: 640px) {
@@ -630,8 +631,9 @@
 }
 
 .process-description {
-  @apply text-white font-medium m-0;
+  @apply font-medium m-0;
   letter-spacing: -0.54px;
+  color: var(--color-text-body-dark);
 }
 
 .engagements {
@@ -639,8 +641,9 @@
 }
 
 .engagements-title {
-  @apply text-white font-heading font-bold mb-8 text-left uppercase text-subheading;
+  @apply font-heading font-bold mb-8 text-left uppercase text-subheading;
   font-variation-settings: "wght" 700, "wdth" 400;
+  color: var(--color-text-subheading-dark);
 }
 
 .engagements-grid {
@@ -648,19 +651,22 @@
 }
 
 .engagement-column h4 {
-  @apply text-white font-sans font-semibold text-body mb-4;
+  @apply font-sans font-semibold text-body mb-4;
+  color: var(--color-text-subheading-dark);
 }
 
 .engagement-column ul {
-  @apply text-white space-y-0 list-none p-0 m-0;
+  @apply space-y-0 list-none p-0 m-0;
+  color: var(--color-text-body-dark);
 }
 
 .engagement-column li {
-  @apply text-white mb-0;
+  @apply mb-0;
+  color: var(--color-text-body-dark);
 }
 
 .engagement-column li::before {
-  color: white;
+  color: var(--color-text-body-dark);
 }
 
 .engagement-item-mobile-only {

@@ -113,12 +113,12 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     
     <!-- Column 2: All Content -->
     <div class="profile-startup-text-column">
-      <span class="profile-label overline reveal">Meet Chris</span>
-      <h2 class="profile-title reveal reveal-delay-1">A design leader who gets being a founder.</h2>
+      <span class="profile-label overline reveal">Introduction</span>
+      <h2 class="profile-title reveal reveal-delay-1"><strong>Chris Wallace</strong> is a designer, founder, and technologist working with startups and genre-defining companies.</h2>
       
       <div class="profile-description reveal reveal-delay-2">
-        <p>I'm a 2x Emmy-nominated design leader who's led major initiatives at Roblox, Google, and Facebook. I've bootstrapped products from 0→1 to millions in revenue, built design teams from 1→25, and helped achieve 2x exits totaling $30m+.</p>
-        <p>Now I work as a fractional design leader with startups that need experienced leadership—without the overhead of a full-time executive. I deliver clear design direction, scalable systems, and high-performing teams that drive business results.</p>
+        <p>He's a 2x Emmy-nominated design leader who's led major initiatives at Roblox, Google, and Facebook. He's bootstrapped products from 0→1 to millions in revenue, built design teams from 1→25, and helped achieve 2x exits totaling $30m+.</p>
+        <p>Now he works as a fractional design leader with startups that need experienced leadership—without the overhead of a full-time executive. He delivers clear design direction, scalable systems, and high-performing teams that drive business results.</p>
       </div>
 
     </div>
@@ -126,12 +126,12 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
   </div>
 </section>
 
-<section class="problem-solution-section">
+<section class="problem-solution-section" id="solution">
   <div class="problem-solution-content">
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-4">
       <div class="problem-solution-item problem-item" id="problem">
         <span class="problem-solution-label reveal">The Problem</span>
-        <h2 class="problem-solution-title reveal reveal-delay-1">Your design team works hard but big wins just aren't happening.</h2>
+        <h2 class="problem-solution-title reveal reveal-delay-1">Your design team works hard but big wins are scarce.</h2>
 
         <div class="problem-solution-description reveal reveal-delay-2">
           <h3 class="problem-solution-subtitle">What I often see:</h3>
@@ -153,7 +153,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
 
       <div class="col-span-2 grid md:grid-cols-2 gap-0 reveal">
         <!-- Solution Column -->
-        <div class="problem-solution-item solution-item" id="solution">
+        <div class="problem-solution-item solution-item">
           <span class="problem-solution-label">The Solution</span>
           <h2 class="problem-solution-title">Force Multiplier</h2>
           <p class="problem-solution-subtitle">Senior design leadership. <br>Fractional commitment. <br>Compounding impact.</p>
@@ -423,7 +423,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
           </div>
         
           <div class="lets-talk-cta reveal reveal-delay-2">
-            <a href="https://zcal.co/chriswallace" class="btn btn-white" target="_blank" rel="noopener">Start a conversation →</a>
+            <a href="https://zcal.co/chriswallace" class="btn btn-white btn-lg" target="_blank" rel="noopener">Start a conversation →</a>
           </div>
         </div>
       </div>
@@ -490,18 +490,13 @@ document.addEventListener('DOMContentLoaded', function() {
     lastScroll = currentScroll;
   });
   
-  // Smooth scroll for anchor links with mobile offset
+  // Smooth scroll for anchor links - scroll to 0px from section top
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
-        const navbar = document.getElementById('site-navbar');
-        const navbarHeight = navbar ? navbar.offsetHeight : 0;
-        // Add minimal spacing on mobile vs desktop
-        const isMobile = window.innerWidth < 1024;
-        const offset = isMobile ? navbarHeight + 8 : navbarHeight + 5;
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
         
         window.scrollTo({
           top: targetPosition,

@@ -1,68 +1,117 @@
 /* ============================================
    BUTTON STYLES
-   Three variants: bright, white, dark
-   Uses SVG backgrounds with sliding door technique
+   Three variants: solid dark, outline, solid white
+   Monochromatic scheme with fully rounded corners
    ============================================ */
 
 /* Button Base Styles */
 .btn {
-  @apply inline-flex items-center justify-center text-center font-sans font-bold no-underline relative text-body py-4 px-6 bg-transparent bg-no-repeat transition-all duration-200 text-accent;
-  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-dark.svg');
-  background-position: top right;
-  background-size: auto auto;
+  @apply inline-flex items-center justify-center text-center font-sans font-bold no-underline relative transition-all duration-200;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.925rem;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-variation-settings: "wght" 700;
+  border-radius: 9999px;
+  border: 1px solid transparent;
 }
 
-/* Only apply hover effects on devices that support hover (not mobile) */
-@media (hover: hover) and (pointer: fine) {
-.btn:hover {
-  @apply no-underline;
-  transform: scale(1.04);
+/* Mobile: Increase vertical padding for better touch targets */
+@media (max-width: 1023px) {
+  .btn {
+    padding: 0.75rem 1.25rem;
   }
-}
-
-/* Ensure text color persists on hover for all button variants */
-.btn:hover {
-  @apply text-accent;
-}
-
-.btn-bright:hover {
-  @apply text-primary-800;
+  
+  .btn-sm {
+    padding: 0.625rem 1rem;
+  }
+  
+  .btn-lg {
+    padding: 1rem 2rem;
+  }
 }
 
 /* Small button variant */
 .btn-sm {
-  @apply text-body py-[17px] px-6;
+  padding: 0.375rem 1rem;
+  font-size: 0.8125rem;
 }
 
-/* Reduce button text size on large screens */
-@media (min-width: 1024px) {
-  .btn,
-  .btn-sm {
-    font-size: 0.9375rem; /* 15px */
-  }
-}
-
-/* ============================================
-   BRIGHT BUTTON (Green accent background)
-   Use on: Hero section, Navbar
-   ============================================ */
-.btn-bright {
-  @apply text-primary-800;
-  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-bright.svg');
+/* Large button variant */
+.btn-lg {
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* ============================================
-   WHITE BUTTON (White background)
-   Use on: CTA banner (teal section)
+   SOLID DARK BUTTON
+   Dark background with white text
    ============================================ */
-.btn-white {
-  @apply text-secondary;
-  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-white.svg');
+.btn,
+.btn-dark {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border-color: var(--color-dark);
 }
 
 /* Only apply hover effects on devices that support hover (not mobile) */
 @media (hover: hover) and (pointer: fine) {
-.btn-white:hover {
-  @apply text-secondary;
+  .btn:hover,
+  .btn-dark:hover {
+    background-color: var(--color-dark-card);
+    border-color: var(--color-dark-card);
+    transform: scale(1.02);
+  }
+}
+
+/* ============================================
+   OUTLINE BUTTON
+   Transparent background with dark border and text
+   ============================================ */
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-dark);
+  border-color: var(--color-dark);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-outline:hover {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    transform: scale(1.02);
+  }
+}
+
+/* ============================================
+   SOLID WHITE BUTTON
+   White background with dark text
+   ============================================ */
+.btn-white {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  border-color: var(--color-white);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-white:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.02);
+  }
+}
+
+/* Legacy support for btn-bright (map to solid dark) */
+.btn-bright {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border-color: var(--color-dark);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-bright:hover {
+    background-color: var(--color-dark-card);
+    border-color: var(--color-dark-card);
+    transform: scale(1.02);
   }
 }

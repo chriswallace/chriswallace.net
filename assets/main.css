@@ -564,23 +564,32 @@ strong {
 
 html {
   background-color: #eef2eb;
+  scroll-behavior: smooth;
 }
 
 html,
   body {
   font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   background-color: #eef2eb;
 }
 
-body {
-  color: var(--color-fg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Ensure all sections scroll to top (0px) */
+
+section[id] {
+  scroll-margin-top: 0;
 }
 
-/* Headings */
+body {
+  color: var(--color-text-body-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Headings - Light Background (Default) */
 
 h1,
   h2,
@@ -590,7 +599,6 @@ h1,
   h6 {
   font-family: "Bandeins Strange", "Syne", sans-serif;
   font-variation-settings: 'wght' 400;
-  color: var(--color-secondary);
   margin-bottom: 1.5rem;
   font-weight: 100;
   font-variation-settings: 'wght' 100;
@@ -599,20 +607,18 @@ h1,
 h1,
   .h1 {
   margin-bottom: 3rem;
-  font-size: clamp(1.6rem, 1.6rem + 2.5vw, 3.4rem);
-  line-height: 0.95;
   text-transform: uppercase;
   font-variation-settings: 'wght' 400;
+  font-size: 28px;
   font-weight: 300;
   font-variation-settings: 'wght' 300, 'wdth' 400;
+  color: var(--color-text-heading-light);
+  line-height: 1.2;
 }
 
 h2,
   .h2 {
   margin-top: 4rem;
-  font-family: "Bandeins Strange", "Syne", sans-serif;
-  font-size: clamp(1.5rem, 1.5rem + 1.5vw, 1.75rem);
-  line-height: 1.25;
   font-weight: 400;
   font-variation-settings: 'wght' 400;
 }
@@ -624,13 +630,17 @@ h2,
   }
 }
 
+h2,
+  .h2 {
+  font-size: 28px;
+  color: var(--color-text-heading-light);
+  line-height: 1.3;
+}
+
 h3,
   .h3 {
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
-  font-family: "Bandeins Strange", "Syne", sans-serif;
-  font-size: clamp(1.5rem, 1.5rem + 0.4vw, 1.8rem);
-  line-height: 1.25;
   font-weight: 400;
   font-variation-settings: 'wght' 400;
 }
@@ -642,13 +652,18 @@ h3,
   }
 }
 
+h3,
+  .h3 {
+  font-size: 22px;
+  color: var(--color-text-subheading-light);
+  line-height: 1.4;
+}
+
 h4,
   .h4 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
-  line-height: 1.4;
   font-weight: 400;
   font-variation-settings: 'wght' 400;
 }
@@ -660,6 +675,13 @@ h4,
   }
 }
 
+h4,
+  .h4 {
+  font-size: 22px;
+  color: var(--color-text-subheading-light);
+  line-height: 1.4;
+}
+
 h5,
   .h5,
   h6,
@@ -667,8 +689,6 @@ h5,
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
-  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
-  line-height: 1.4;
 }
 
 @media (min-width: 40rem) {
@@ -680,6 +700,15 @@ h5,
   }
 }
 
+h5,
+  .h5,
+  h6,
+  .h6 {
+  font-size: 22px;
+  color: var(--color-text-subheading-light);
+  line-height: 1.4;
+}
+
 /* Links in headings should use lighter contrasting color */
 
 h1 a,
@@ -688,7 +717,7 @@ h1 a,
   h4 a,
   h5 a,
   h6 a {
-  color: var(--color-fg);
+  color: inherit;
   text-decoration-line: none;
 }
 
@@ -698,22 +727,20 @@ h1 a:hover,
   h4 a:hover,
   h5 a:hover,
   h6 a:hover {
-  color: var(--color-fg);
+  text-decoration-line: underline;
 }
 
 /* Links */
 
 a {
-  color: var(--color-fg);
+  color: var(--color-text-body-light);
   text-decoration-line: underline;
-  text-decoration-color: var(--color-fg);
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
 
 a:hover {
-  color: var(--color-fg);
-  text-decoration-color: var(--color-fg);
+  text-decoration-thickness: 2px;
 }
 
 a {
@@ -727,42 +754,34 @@ p {
   margin-bottom: 1.5rem;
   max-width: 52ch;
   font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
-  color: var(--color-fg);
+  font-size: 16px;
   font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text-body-light);
   letter-spacing: -0.02em;
 }
 
-/* Clamp type sizes from xl (1280px) to 4xl (2560px) breakpoints */
+/* Responsive font sizes - maintain minimum sizes */
 
-@media (min-width: 1280px) {
-  p,
-    .startup-plight-description,
-    .profile-description,
-    .startup-plight-service-description,
-    .startup-plight-fractional-description,
-    .work-description,
-    .testimonial-text,
-    .hero-description,
-    .process-description {
-    font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
+@media (min-width: 768px) {
+  h1, .h1 {
+    font-size: clamp(28px, 28px + 2vw, 48px);
   }
 
   h2, .h2 {
-    font-size: clamp(1.25rem, 1.25rem + 1.5vw, 2.25rem);
+    font-size: clamp(28px, 28px + 1.5vw, 40px);
   }
 
   h3, .h3 {
-    font-size: clamp(1rem, 1rem + 0.7vw, 1.5rem);
+    font-size: clamp(22px, 22px + 0.5vw, 28px);
   }
 
   h4, h5, h6, .h4, .h5, .h6 {
-    font-size: clamp(1rem, 1rem + 0.4vw, 1.25rem);
+    font-size: clamp(22px, 22px + 0.3vw, 26px);
   }
 
-  h1, .h1 {
-    font-size: clamp(2.25rem, 2.25rem + 3.5vw, 6rem);
+  p {
+    font-size: clamp(16px, 16px + 0.3vw, 18px);
   }
 }
 
@@ -781,17 +800,13 @@ p + ul,
 }
 
 dt {
-  color: var(--color-muted);
-}
-
-.problem-item dt {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-subheading-light);
 }
 
 dd {
   margin-bottom: 2rem;
   margin-left: 3rem;
-  color: var(--color-fg);
+  color: var(--color-text-body-light);
 }
 
 article {
@@ -814,13 +829,131 @@ li {
   position: relative;
   margin-bottom: 0px;
   padding-left: 1.5rem;
+  color: var(--color-text-body-light);
 }
 
 li::before {
   content: "•";
   position: absolute;
   left: 0px;
-  color: var(--color-fg);
+  color: var(--color-text-body-light);
+}
+
+/* Dark Background Sections - Inverted Colors */
+
+[data-section="approach"],
+  .approach-section,
+  .section-dark,
+  .bg-dark {
+  color: var(--color-text-body-dark);
+}
+
+[data-section="approach"] h1,
+  [data-section="approach"] h2,
+  .approach-section h1,
+  .approach-section h2,
+  .section-dark h1,
+  .section-dark h2,
+  .bg-dark h1,
+  .bg-dark h2 {
+  color: var(--color-text-heading-dark);
+}
+
+[data-section="approach"] h3,
+  [data-section="approach"] h4,
+  [data-section="approach"] h5,
+  [data-section="approach"] h6,
+  .approach-section h3,
+  .approach-section h4,
+  .approach-section h5,
+  .approach-section h6,
+  .section-dark h3,
+  .section-dark h4,
+  .section-dark h5,
+  .section-dark h6,
+  .bg-dark h3,
+  .bg-dark h4,
+  .bg-dark h5,
+  .bg-dark h6 {
+  color: var(--color-text-subheading-dark);
+}
+
+[data-section="approach"] p,
+  [data-section="approach"] li,
+  [data-section="approach"] dd,
+  .approach-section p,
+  .approach-section li,
+  .approach-section dd,
+  .section-dark p,
+  .section-dark li,
+  .section-dark dd,
+  .bg-dark p,
+  .bg-dark li,
+  .bg-dark dd {
+  color: var(--color-text-body-dark);
+}
+
+[data-section="approach"] li::before,
+  .approach-section li::before,
+  .section-dark li::before,
+  .bg-dark li::before {
+  color: var(--color-text-body-dark);
+}
+
+[data-section="approach"] a,
+  .approach-section a,
+  .section-dark a,
+  .bg-dark a {
+  color: var(--color-text-body-dark);
+}
+
+[data-section="approach"] dt,
+  .approach-section dt,
+  .section-dark dt,
+  .bg-dark dt {
+  color: var(--color-text-subheading-dark);
+}
+
+/* Footer - Light Background (user specified) */
+
+.footer-section,
+  [data-section="footer"] {
+  color: var(--color-text-body-light);
+}
+
+.footer-section h1,
+  .footer-section h2,
+  .footer-section h3,
+  .footer-section h4,
+  .footer-section h5,
+  .footer-section h6,
+  [data-section="footer"] h1,
+  [data-section="footer"] h2,
+  [data-section="footer"] h3,
+  [data-section="footer"] h4,
+  [data-section="footer"] h5,
+  [data-section="footer"] h6 {
+  color: var(--color-text-heading-light);
+}
+
+.footer-section h3,
+  .footer-section h4,
+  .footer-section h5,
+  .footer-section h6,
+  [data-section="footer"] h3,
+  [data-section="footer"] h4,
+  [data-section="footer"] h5,
+  [data-section="footer"] h6 {
+  color: var(--color-text-subheading-light);
+}
+
+.footer-section p,
+  .footer-section li,
+  .footer-section a,
+  [data-section="footer"] p,
+  [data-section="footer"] li,
+  [data-section="footer"] a {
+  color: var(--color-text-body-light);
 }
 
 html {
@@ -1152,13 +1285,13 @@ figcaption {
   margin-right: 1rem;
   display: block;
   text-align: center;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   color: var(--color-muted);
 }
 
 .problem-item figcaption {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-subheading-dark);
 }
 
 @media (min-width: 40rem) {
@@ -1207,8 +1340,8 @@ figcaption {
   margin-left: 62px;
   margin-top: 28px;
   display: block;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   --tw-text-opacity: 1;
   color: rgb(181 191 196 / var(--tw-text-opacity));
   text-decoration-line: none;
@@ -1253,8 +1386,8 @@ figcaption {
   display: table;
   width: auto;
   max-width: none;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
 }
 
 @media (min-width: 48rem) {
@@ -2333,11 +2466,11 @@ figcaption {
 }
 
 .overline {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   display: block;
   font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   --tw-text-opacity: 1;
@@ -2557,6 +2690,14 @@ video::-webkit-media-controls {
   --section-testimonials: #e6ede4;
   --section-approach: #1a2e22;
   --section-footer: #4a7a5a;
+  /* Text Colors - Light Background */
+  --color-text-heading-light: #000000;
+  --color-text-subheading-light: #666666;
+  --color-text-body-light: #000000;
+  /* Text Colors - Dark Background */
+  --color-text-heading-dark: #ffffff;
+  --color-text-subheading-dark: #cccccc;
+  --color-text-body-dark: #ffffff;
 }
 
 .no-scroll {
@@ -2589,8 +2730,8 @@ video::-webkit-media-controls {
 
 /* ============================================
    BUTTON STYLES
-   Three variants: bright, white, dark
-   Uses SVG backgrounds with sliding door technique
+   Three variants: solid dark, outline, solid white
+   Monochromatic scheme with fully rounded corners
    ============================================ */
 
 /* Button Base Styles */
@@ -2600,95 +2741,128 @@ video::-webkit-media-controls {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
   text-align: center;
   font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
-  color: var(--color-accent);
   text-decoration-line: none;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
   font-weight: 700;
   font-variation-settings: 'wght' 700;
-  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-dark.svg');
-  background-position: top right;
-  background-size: auto auto;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.925rem;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-variation-settings: "wght" 700;
+  border-radius: 9999px;
+  border: 1px solid transparent;
 }
 
-/* Only apply hover effects on devices that support hover (not mobile) */
+/* Mobile: Increase vertical padding for better touch targets */
 
-@media (hover: hover) and (pointer: fine) {
-  .btn:hover {
-    text-decoration-line: none;
-    transform: scale(1.04);
+@media (max-width: 1023px) {
+  .btn {
+    padding: 0.75rem 1.25rem;
   }
-}
 
-/* Ensure text color persists on hover for all button variants */
+  .btn-sm {
+    padding: 0.625rem 1rem;
+  }
 
-.btn:hover {
-  color: var(--color-accent);
-}
-
-.btn-bright:hover {
-  --tw-text-opacity: 1;
-  color: rgb(43 72 49 / var(--tw-text-opacity));
+  .btn-lg {
+    padding: 1rem 2rem;
+  }
 }
 
 /* Small button variant */
 
 .btn-sm {
-  padding-top: 17px;
-  padding-bottom: 17px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
+  padding: 0.375rem 1rem;
+  font-size: 0.8125rem;
+}
+
+/* Large button variant */
+
+.btn-lg {
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
-/* Reduce button text size on large screens */
-
-@media (min-width: 1024px) {
-  .btn,
-  .btn-sm {
-    font-size: 0.9375rem;
-    /* 15px */
-  }
-}
-
 /* ============================================
-   BRIGHT BUTTON (Green accent background)
-   Use on: Hero section, Navbar
+   SOLID DARK BUTTON
+   Dark background with white text
    ============================================ */
 
-.btn-bright {
-  --tw-text-opacity: 1;
-  color: rgb(43 72 49 / var(--tw-text-opacity));
-  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-bright.svg');
-}
-
-/* ============================================
-   WHITE BUTTON (White background)
-   Use on: CTA banner (teal section)
-   ============================================ */
-
-.btn-white {
-  color: var(--color-secondary);
-  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-white.svg');
+.btn,
+.btn-dark {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border-color: var(--color-dark);
 }
 
 /* Only apply hover effects on devices that support hover (not mobile) */
 
 @media (hover: hover) and (pointer: fine) {
+  .btn:hover,
+  .btn-dark:hover {
+    background-color: var(--color-dark-card);
+    border-color: var(--color-dark-card);
+    transform: scale(1.02);
+  }
+}
+
+/* ============================================
+   OUTLINE BUTTON
+   Transparent background with dark border and text
+   ============================================ */
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-dark);
+  border-color: var(--color-dark);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-outline:hover {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    transform: scale(1.02);
+  }
+}
+
+/* ============================================
+   SOLID WHITE BUTTON
+   White background with dark text
+   ============================================ */
+
+.btn-white {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  border-color: var(--color-white);
+}
+
+@media (hover: hover) and (pointer: fine) {
   .btn-white:hover {
-    color: var(--color-secondary);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.02);
+  }
+}
+
+/* Legacy support for btn-bright (map to solid dark) */
+
+.btn-bright {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border-color: var(--color-dark);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-bright:hover {
+    background-color: var(--color-dark-card);
+    border-color: var(--color-dark-card);
+    transform: scale(1.02);
   }
 }
 
@@ -2764,20 +2938,20 @@ video::-webkit-media-controls {
   gap: 1rem;
   padding-left: 1rem;
   font-family: "Bandeins Sans", "Space Grotesk", serif;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
   line-height: 1.25;
 }
 
 .navigation .social p {
   margin-right: 1rem;
   font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
   line-height: 1.625;
   color: var(--color-muted);
 }
 
 .problem-item .navigation .social p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-subheading-dark);
 }
 
 .navigation .social a {
@@ -2992,7 +3166,7 @@ body.portfolio-page .site-logo-img .design-text {
   text-decoration-line: none;
   font-size: 0.875rem;
   /* 14px base */
-  font-weight: 300;
+  font-weight: 600;
   opacity: 0;
   filter: blur(10px);
   transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1), all 0.2s ease;
@@ -3007,7 +3181,7 @@ body.portfolio-page .site-logo-img .design-text {
 
 @media (min-width: 1024px) {
   .nav-link {
-    font-size: 0.875rem;
+    font-size: 0.925rem;
     /* 14px on large screens */
   }
 }
@@ -3053,53 +3227,43 @@ body.portfolio-page .site-logo-img .design-text {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
   text-align: center;
   font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
-  color: var(--color-accent);
   text-decoration-line: none;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
   font-weight: 700;
   font-variation-settings: 'wght' 700;
-  background-image: url('https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/button-dark.svg');
-  background-position: top right;
-  background-size: auto auto;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.925rem;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-variation-settings: "wght" 700;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+}
+
+@media (max-width: 1023px) {
+  .nav-cta {
+    padding: 0.75rem 1.25rem;
+    padding: 0.625rem 1rem;
+  }
+}
+
+.nav-cta {
+  padding: 0.375rem 1rem;
+  font-size: 0.8125rem;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border-color: var(--color-dark);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .nav-cta:hover {
-    text-decoration-line: none;
-    transform: scale(1.04);
-  }
-}
-
-.nav-cta:hover {
-  color: var(--color-accent);
-}
-
-.nav-cta {
-  padding-top: 17px;
-  padding-bottom: 17px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
-}
-
-@media (min-width: 1024px) {
-  .nav-cta {
-    /* 15px */
-    font-size: 0.9375rem;
-    /* 15px */
+    background-color: var(--color-dark-card);
+    border-color: var(--color-dark-card);
+    transform: scale(1.02);
   }
 }
 
@@ -3108,8 +3272,8 @@ body.portfolio-page .site-logo-img .design-text {
   padding-bottom: 1rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
 }
 
 .nav-cta {
@@ -3386,8 +3550,8 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
   padding-bottom: 1rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
 }
 
 /* Navigation links */
@@ -3732,8 +3896,8 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
 
 .resume__description {
   margin-bottom: 4rem;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
 }
 
 @media (min-width: 48rem) {
@@ -3781,8 +3945,8 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
   row-gap: 2rem;
   -moz-column-gap: 3rem;
        column-gap: 3rem;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
 }
 
 @media (min-width: 40rem) {
@@ -3915,7 +4079,7 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
   margin-bottom: 0px;
   max-width: none;
   text-align: center;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
   line-height: 1.5 !important;
 }
 
@@ -4261,8 +4425,8 @@ a.portfolio-list__link:hover .portfolio-list__image {
 .portfolio-list__description {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
 }
 
 @media (min-width: 48rem) {
@@ -4280,13 +4444,13 @@ a.portfolio-list__link:hover .portfolio-list__image {
 .portfolio-list__description {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   color: var(--color-muted);
 }
 
 .problem-item .portfolio-list__description {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-subheading-dark);
 }
 
 /* Case Study Callouts */
@@ -4387,8 +4551,8 @@ body:has(.woodies-page) {
 .portfolio-other-callout > p {
   margin-bottom: 2rem;
   max-width: 52ch;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
 }
 
 .portfolio-other-grid {
@@ -4430,8 +4594,8 @@ body:has(.woodies-page) {
 
 .portfolio-other-description {
   margin-bottom: 0px;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
 }
 
 .portfolio-other-item--view-all {
@@ -4503,8 +4667,8 @@ body:has(.woodies-page) {
 
 .services__description {
   margin-bottom: 2rem;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   text-transform: capitalize;
   color: var(--color-fg);
   font-weight: 500;
@@ -4522,8 +4686,8 @@ body:has(.woodies-page) {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   font-weight: 500;
   font-variation-settings: 'wght' 500;
   color: var(--color-fg);
@@ -4532,8 +4696,8 @@ body:has(.woodies-page) {
 .services__service-description {
   margin-left: 36px;
   margin-bottom: 2rem;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
 }
 
 @media (min-width: 64rem) {
@@ -4550,14 +4714,14 @@ body:has(.woodies-page) {
 
 .services__ideal {
   margin-top: 2rem;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   font-style: italic;
   color: var(--color-muted);
 }
 
 .problem-item .services__ideal {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-subheading-dark);
 }
 
 /* ============================================
@@ -4575,6 +4739,7 @@ body:has(.woodies-page) {
 .home section {
   position: relative;
   z-index: 1;
+  scroll-margin-top: 0;
 }
 
 /* Scroll Progress Bar */
@@ -4716,8 +4881,11 @@ body:has(.woodies-page) {
 .hero-description {
   margin-bottom: 3rem;
   max-width: 36rem;
-  --tw-text-opacity: 1;
-  color: rgb(34 93 85 / var(--tw-text-opacity));
+  color: var(--color-muted);
+}
+
+.problem-item .hero-description {
+  color: var(--color-text-subheading-dark);
 }
 
 .hero-buttons {
@@ -4791,8 +4959,8 @@ body:has(.woodies-page) {
 
 .credibility-text {
   margin-bottom: 0px;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   --tw-text-opacity: 1;
   color: rgb(120 127 138 / var(--tw-text-opacity));
 }
@@ -4964,18 +5132,10 @@ body:has(.woodies-page) {
   margin-top: 0px;
   margin-bottom: 2rem;
   font-family: "Bandeins Strange", "Syne", sans-serif;
-  text-transform: uppercase;
+  font-size: clamp(1.5rem, 1.5rem + 1.5vw, 1.75rem);
+  line-height: 1.25;
   --tw-text-opacity: 1;
   color: rgb(43 72 49 / var(--tw-text-opacity));
-  font-weight: 400;
-  font-variation-settings: 'wght' 400;
-  font-variation-settings: "wght" 350, "wdth" 300;
-}
-
-@media (min-width: 768px) {
-  .profile-title {
-    font-variation-settings: "wght" 350, "wdth" 600;
-  }
 }
 
 /* ============================================
@@ -5094,8 +5254,8 @@ body:has(.woodies-page) {
   margin-bottom: 1rem;
   display: block;
   font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   text-transform: uppercase;
   font-weight: 700;
   font-variation-settings: 'wght' 700;
@@ -5108,10 +5268,9 @@ body:has(.woodies-page) {
   margin-bottom: 2rem;
   font-size: clamp(1.5rem, 1.5rem + 0.4vw, 1.8rem);
   line-height: 1.25;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
   font-weight: 400;
   font-variation-settings: 'wght' 400;
+  color: var(--color-text-heading-dark);
 }
 
 .problem-item .problem-solution-subtitle {
@@ -5121,26 +5280,24 @@ body:has(.woodies-page) {
   line-height: 1.4;
   font-weight: 600;
   font-variation-settings: 'wght' 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-subheading-dark);
 }
 
 .problem-item .problem-solution-closing {
   margin-top: 2rem;
   margin-bottom: 0px;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
   font-weight: 600;
   font-variation-settings: 'wght' 600;
+  color: var(--color-text-heading-dark);
 }
 
 .problem-item .problem-solution-description {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: var(--color-text-body-dark);
 }
 
 .problem-item .problem-solution-description p {
   margin-bottom: 1.5rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-body-dark);
 }
 
 .problem-item .problem-solution-description p:last-child {
@@ -5148,36 +5305,31 @@ body:has(.woodies-page) {
 }
 
 .problem-item ul li {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-body-dark);
 }
 
 .problem-item ul li::before {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  color: white;
+  color: var(--color-text-body-dark);
 }
 
 .problem-item .text-muted {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-subheading-dark);
 }
 
-/* Text in cards - original dark colors */
+/* Text in cards - light background colors */
 
 .solution-item .problem-solution-label,
 .practice .problem-solution-label {
   margin-bottom: 1rem;
   display: block;
   font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   text-transform: uppercase;
-  --tw-text-opacity: 1;
-  color: rgb(79 157 110 / var(--tw-text-opacity));
   font-weight: 700;
   font-variation-settings: 'wght' 700;
   letter-spacing: 0.05em;
+  color: var(--color-text-subheading-light);
 }
 
 .solution-item .problem-solution-title,
@@ -5186,10 +5338,9 @@ body:has(.woodies-page) {
   margin-bottom: 2rem;
   font-size: clamp(1.5rem, 1.5rem + 0.4vw, 1.8rem);
   line-height: 1.25;
-  --tw-text-opacity: 1;
-  color: rgb(43 72 49 / var(--tw-text-opacity));
   font-weight: 400;
   font-variation-settings: 'wght' 400;
+  color: var(--color-text-heading-light);
 }
 
 .solution-item .problem-solution-subtitle,
@@ -5198,33 +5349,29 @@ body:has(.woodies-page) {
   margin-bottom: 1.5rem;
   font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
   line-height: 1.4;
-  --tw-text-opacity: 1;
-  color: rgb(34 93 85 / var(--tw-text-opacity));
   font-weight: 600;
   font-variation-settings: 'wght' 600;
+  color: var(--color-text-subheading-light);
 }
 
 .solution-item .problem-solution-closing,
 .practice .problem-solution-closing {
   margin-top: 2rem;
   margin-bottom: 0px;
-  --tw-text-opacity: 1;
-  color: rgb(43 72 49 / var(--tw-text-opacity));
   font-weight: 600;
   font-variation-settings: 'wght' 600;
+  color: var(--color-text-heading-light);
 }
 
 .solution-item .problem-solution-description,
 .practice .problem-solution-description {
-  --tw-text-opacity: 1;
-  color: rgb(43 72 49 / var(--tw-text-opacity));
+  color: var(--color-text-body-light);
 }
 
 .solution-item .problem-solution-description p,
 .practice .problem-solution-description p {
   margin-bottom: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(43 72 49 / var(--tw-text-opacity));
+  color: var(--color-text-body-light);
 }
 
 .solution-item .problem-solution-description p:last-child,
@@ -5234,16 +5381,13 @@ body:has(.woodies-page) {
 
 .problem-solution-list {
   border-bottom-width: 1px;
-  border-color: rgba(255,255,255,0.2);
   padding-bottom: 3rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-text-body-dark);
 }
 
 .problem-solution-list li {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-body-dark);
 }
 
 /* ============================================
@@ -5478,15 +5622,15 @@ body:has(.woodies-page) {
 
 .testimonial-author {
   margin-top: 1.5rem;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   color: var(--color-muted);
   font-weight: 400;
   font-variation-settings: 'wght' 400;
 }
 
 .problem-item .testimonial-author {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-subheading-dark);
 }
 
 .testimonial-author {
@@ -5553,11 +5697,10 @@ body:has(.woodies-page) {
   line-height: 1.25;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
   font-weight: 400;
   font-variation-settings: 'wght' 400;
   font-variation-settings: "wght" 400, "wdth" 300;
+  color: var(--color-text-heading-dark);
 }
 
 @media (min-width: 640px) {
@@ -5746,18 +5889,17 @@ body:has(.woodies-page) {
   margin: 0px;
   display: block;
   font-family: "Kode Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   color: var(--color-accent);
 }
 
 .process-description {
   margin: 0px;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
   font-weight: 500;
   font-variation-settings: 'wght' 500;
   letter-spacing: -0.54px;
+  color: var(--color-text-body-dark);
 }
 
 .engagements {
@@ -5774,11 +5916,10 @@ body:has(.woodies-page) {
   font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
   line-height: 1.4;
   text-transform: uppercase;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
   font-weight: 700;
   font-variation-settings: 'wght' 700;
   font-variation-settings: "wght" 700, "wdth" 400;
+  color: var(--color-text-subheading-dark);
 }
 
 .engagements-grid {
@@ -5796,12 +5937,11 @@ body:has(.woodies-page) {
 .engagement-column h4 {
   margin-bottom: 1rem;
   font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   font-weight: 600;
   font-variation-settings: 'wght' 600;
+  color: var(--color-text-subheading-dark);
 }
 
 .engagement-column ul {
@@ -5817,18 +5957,16 @@ body:has(.woodies-page) {
 
 .engagement-column ul {
   padding: 0px;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: var(--color-text-body-dark);
 }
 
 .engagement-column li {
   margin-bottom: 0px;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: var(--color-text-body-dark);
 }
 
 .engagement-column li::before {
-  color: white;
+  color: var(--color-text-body-dark);
 }
 
 .engagement-item-mobile-only {
@@ -5918,7 +6056,7 @@ body:has(.woodies-page) {
 }
 
 .problem-item .footer-copyright {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-subheading-dark);
 }
 
 .footer-copyright {
@@ -6126,8 +6264,8 @@ body:has(.woodies-page) {
   padding-top: 0.5rem;
   padding-bottom: 0.25rem;
   font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  font-size: clamp(0.875rem, 0.875rem + 0.4vw, 1.1rem);
-  line-height: 1.5;
+  font-size: clamp(0.925rem, 0.925rem + 0.4vw, 1rem);
+  line-height: 1.35;
   text-transform: uppercase;
   --tw-text-opacity: 1;
   color: rgb(181 191 196 / var(--tw-text-opacity));

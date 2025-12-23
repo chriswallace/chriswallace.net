@@ -76,7 +76,7 @@
   }
 
   .overline{
-    @apply font-sans font-semibold text-body tracking-wider mb-6 uppercase block text-primary-500;
+    @apply mb-4 text-body uppercase tracking-wider font-sans font-semibold block text-primary-500;
     text-decoration-line: none;
   }
 
