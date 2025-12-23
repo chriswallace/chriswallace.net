@@ -41,11 +41,11 @@
 
   /* Text Colors - Light Background */
   --color-text-heading-light: #000000;
-  --color-text-subheading-light: #666666;
+  --color-text-subheading-light: rgba(0, 0, 0, 0.8);
   --color-text-body-light: #000000;
 
   /* Text Colors - Dark Background */
   --color-text-heading-dark: #ffffff;
-  --color-text-subheading-dark: #cccccc;
+  --color-text-subheading-dark: rgba(255, 255, 255, 0.75);
   --color-text-body-dark: #ffffff;
 }

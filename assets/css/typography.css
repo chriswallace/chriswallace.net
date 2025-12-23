@@ -121,7 +121,7 @@
   }
 
   /* Content */
-  p {
+  p, ul, ol, dl {
     @apply font-sans mb-6 max-w-prose;
     font-size: 16px;
     font-weight: 400;
@@ -148,7 +148,7 @@
       font-size: clamp(22px, 22px + 0.3vw, 26px);
     }
     
-    p {
+    p, ul, ol, dl {
       font-size: clamp(16px, 16px + 0.3vw, 18px);
     }
   }

@@ -381,7 +381,7 @@ body.portfolio-page .site-logo-img path:first-child {
 }
 
 body.portfolio-page .site-logo-img .design-text {
-  fill: var(--color-accent) !important;
+  fill: var(--color-green-primary) !important;
 }
 
 .site-logo-img {
@@ -394,9 +394,9 @@ body.portfolio-page .site-logo-img .design-text {
   fill: #2b4831; /* primary-800 */
 }
 
-/* Keep "design" text green (accent color) on homepage */
+/* Keep "design" text green (darker green) on homepage */
 .home .site-logo-img .design-text {
-  fill: var(--color-accent) !important;
+  fill: var(--color-green-primary) !important;
 }
 
 .nav-links {
@@ -426,7 +426,7 @@ body.portfolio-page .site-logo-img .design-text {
 
 /* Homepage: dark text on light background */
 .home .nav-link {
-  @apply text-primary-800;
+  @apply text-fg;
 }
 
 .nav-link:hover {
@@ -435,7 +435,7 @@ body.portfolio-page .site-logo-img .design-text {
 
 /* Homepage: dark hover on light background */
 .home .nav-link:hover {
-  @apply text-primary-900 no-underline;
+  @apply text-fg underline;
 }
 
 .nav-link.active {
@@ -628,7 +628,7 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img path:first-child {
 
 body.portfolio-page .site-navbar .site-logo-img .design-text,
 body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
-  fill: var(--color-accent) !important;
+  fill: var(--color-green-primary) !important;
 }
 
 /* ============================================
@@ -723,7 +723,7 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
 }
 
 .mobile-menu-logo svg .design-text {
-  fill: var(--color-accent);
+  fill: var(--color-green-primary);
 }
 
 /* Pull handle at bottom */

@@ -101,6 +101,22 @@
   white-space: nowrap;
 }
 
+/* Mobile: Force each word on a single line */
+@media (max-width: 767px) {
+  .hero-title br {
+    display: none;
+  }
+  
+  .hero-title .word {
+    display: block;
+    white-space: normal;
+  }
+  
+  .hero-title .word + .word {
+    margin-top: 0.25em;
+  }
+}
+
 .hero-description {
   @apply text-muted max-w-xl mb-12;
 }
@@ -144,17 +160,16 @@
   @apply w-full md:w-auto h-auto max-h-40 md:max-h-[44px] max-w-[100px];
 }
 
-/* ============================================
-   PROFILE & STARTUP PLIGHT SECTION (MERGED)
-   ============================================ */
 .profile-startup-section {
   @apply min-h-[60svh] lg:min-h-screen flex flex-col justify-center items-start border-y border-[rgba(0,0,0,0.08)];
 }
 
 .profile-startup-content {
-  @apply w-[calc(100%-32px)] md:w-[calc(100%-48px)] max-w-full mx-auto md:grid md:grid-cols-[minmax(150px,220px)_minmax(0,680px)] md:gap-[clamp(2rem,4vw,4rem)] md:items-start md:max-w-full md:justify-center;
-  max-width: fit-content;
-  justify-items: center;
+  @apply w-[calc(100%-32px)] md:w-[calc(100%-48px)] max-w-full mx-auto md:grid md:grid-cols-[minmax(150px,220px)_minmax(0,680px)] md:gap-[clamp(2rem,4vw,4rem)] md:items-center md:max-w-full md:justify-center;
+}
+
+.profile-description p:last-child{
+  @apply mb-0;
 }
 
 /* Image Column - Sticky only on two-column layout */
@@ -173,7 +188,7 @@
 }
 
 .profile-title {
-  @apply font-heading text-heading mt-0 mb-8 text-primary-800;
+  @apply font-heading text-heading mt-0 mb-8;
 }
 
 /* ============================================
@@ -227,7 +242,7 @@
 }
 
 .problem-item .problem-solution-title {
-  @apply text-heading-sm font-normal mt-0 mb-8;
+  @apply text-heading font-normal mt-0 mb-8;
   color: var(--color-text-heading-dark);
 }
 
@@ -237,7 +252,7 @@
 }
 
 .problem-item .problem-solution-closing {
-  @apply font-semibold mt-8 mb-0;
+  @apply font-semibold;
   color: var(--color-text-heading-dark);
 }
 
@@ -271,12 +286,12 @@
 .practice .problem-solution-label {
   @apply font-sans font-bold text-body tracking-wider mb-4 block uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-text-subheading-light);
+  color: var(--color-green-primary);
 }
 
 .solution-item .problem-solution-title,
 .practice .problem-solution-title {
-  @apply text-heading-sm font-normal mt-0 mb-8;
+  @apply text-heading font-semibold mt-0 mb-8;
   color: var(--color-text-heading-light);
 }
 
@@ -288,7 +303,7 @@
 
 .solution-item .problem-solution-closing,
 .practice .problem-solution-closing {
-  @apply font-semibold mt-8 mb-0;
+  @apply font-semibold mt-0;
   color: var(--color-text-heading-light);
 }
 
@@ -309,7 +324,7 @@
 }
 
 .problem-solution-list {
-  @apply border-b pb-12;
+  @apply border-b pb-4 mb-4;
   border-color: rgba(255, 255, 255, 0.2);
   color: var(--color-text-body-dark);
 }

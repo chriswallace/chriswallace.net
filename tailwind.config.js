@@ -74,20 +74,14 @@ export default {
             lineHeight: "1.25",
           },
         ],
-        "heading-sm": [
-          "clamp(1.5rem, 1.5rem + 0.4vw, 1.8rem)",
-          {
-            lineHeight: "1.25",
-          },
-        ],
         subheading: [
-          "clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem)",
+          "clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem)",
           {
             lineHeight: "1.4",
           },
         ],
         display: [
-          "clamp(1.6rem, 1.6rem + 2.5vw, 3.4rem)",
+          "clamp(2rem, 2rem + 2.5vw, 3.4rem)",
           {
             lineHeight: "0.95",
           },

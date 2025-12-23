@@ -45,6 +45,14 @@ function initHomepageAnimations() {
       });
     }
 
+    // Initialize Splitting.js for hero title BEFORE fade-in animation
+    // Splitting is synchronous, so it completes immediately
+    if (heroTitle && typeof Splitting !== "undefined") {
+      Splitting({ target: heroTitle, by: "chars" });
+      // Force a reflow to ensure DOM is updated before animation starts
+      void heroTitle.offsetHeight;
+    }
+
     // Animate Wallace logo
     if (heroWallaceLogo) {
       gsap.set(heroWallaceLogo, {
@@ -127,10 +135,8 @@ function initHomepageAnimations() {
       }
 
       // Animate hero title font width variation using Splitting.js
+      // (Splitting was already initialized before the fade-in)
       if (heroTitle && typeof Splitting !== "undefined") {
-        // Split the title into characters
-        Splitting({ target: heroTitle, by: "chars" });
-
         // Get all character elements (Splitting adds .char class)
         const chars = Array.from(heroTitle.querySelectorAll(".char")).filter(
           (char) => char.textContent.trim() !== "" // Filter out spaces

@@ -750,7 +750,7 @@ a {
 
 /* Content */
 
-p {
+p, ul, ol, dl {
   margin-bottom: 1.5rem;
   max-width: 52ch;
   font-family: "Bandeins Sans", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
@@ -780,7 +780,7 @@ p {
     font-size: clamp(22px, 22px + 0.3vw, 26px);
   }
 
-  p {
+  p, ul, ol, dl {
     font-size: clamp(16px, 16px + 0.3vw, 18px);
   }
 }
@@ -1142,7 +1142,7 @@ picture img {
 .contact-grid__title {
   margin-bottom: 0.5rem;
   text-align: center;
-  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
+  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
   line-height: 1.4;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2692,11 +2692,11 @@ video::-webkit-media-controls {
   --section-footer: #4a7a5a;
   /* Text Colors - Light Background */
   --color-text-heading-light: #000000;
-  --color-text-subheading-light: #666666;
+  --color-text-subheading-light: rgba(0, 0, 0, 0.8);
   --color-text-body-light: #000000;
   /* Text Colors - Dark Background */
   --color-text-heading-dark: #ffffff;
-  --color-text-subheading-dark: #cccccc;
+  --color-text-subheading-dark: rgba(255, 255, 255, 0.75);
   --color-text-body-dark: #ffffff;
 }
 
@@ -3123,7 +3123,7 @@ body.portfolio-page .site-logo-img path:first-child {
 }
 
 body.portfolio-page .site-logo-img .design-text {
-  fill: var(--color-accent) !important;
+  fill: var(--color-green-primary) !important;
 }
 
 .site-logo-img {
@@ -3139,10 +3139,10 @@ body.portfolio-page .site-logo-img .design-text {
   /* primary-800 */
 }
 
-/* Keep "design" text green (accent color) on homepage */
+/* Keep "design" text green (darker green) on homepage */
 
 .home .site-logo-img .design-text {
-  fill: var(--color-accent) !important;
+  fill: var(--color-green-primary) !important;
 }
 
 .nav-links {
@@ -3189,8 +3189,7 @@ body.portfolio-page .site-logo-img .design-text {
 /* Homepage: dark text on light background */
 
 .home .nav-link {
-  --tw-text-opacity: 1;
-  color: rgb(43 72 49 / var(--tw-text-opacity));
+  color: var(--color-fg);
 }
 
 .nav-link:hover {
@@ -3202,9 +3201,8 @@ body.portfolio-page .site-logo-img .design-text {
 /* Homepage: dark hover on light background */
 
 .home .nav-link:hover {
-  --tw-text-opacity: 1;
-  color: rgb(17 48 52 / var(--tw-text-opacity));
-  text-decoration-line: none;
+  color: var(--color-fg);
+  text-decoration-line: underline;
 }
 
 .nav-link.active {
@@ -3497,7 +3495,7 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img path:first-child {
 
 body.portfolio-page .site-navbar .site-logo-img .design-text,
 body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
-  fill: var(--color-accent) !important;
+  fill: var(--color-green-primary) !important;
 }
 
 /* ============================================
@@ -3570,7 +3568,7 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
   padding-bottom: 0.75rem;
   text-align: center;
   font-family: "Bandeins Strange", "Syne", sans-serif;
-  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
+  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
   line-height: 1.4;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -3650,7 +3648,7 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
 }
 
 .mobile-menu-logo svg .design-text {
-  fill: var(--color-accent);
+  fill: var(--color-green-primary);
 }
 
 /* Pull handle at bottom */
@@ -4470,7 +4468,7 @@ a.portfolio-list__link:hover .portfolio-list__image {
   margin-bottom: 1rem;
   margin-top: 0px;
   max-width: 52ch;
-  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
+  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
   line-height: 1.4;
   font-weight: 600;
   font-variation-settings: 'wght' 600;
@@ -4850,7 +4848,7 @@ body:has(.woodies-page) {
 
 .hero-title {
   margin-bottom: 1rem;
-  font-size: clamp(1.6rem, 1.6rem + 2.5vw, 3.4rem);
+  font-size: clamp(2rem, 2rem + 2.5vw, 3.4rem);
   --tw-text-opacity: 1;
   color: rgb(43 72 49 / var(--tw-text-opacity));
   max-width: 1000px;
@@ -4876,6 +4874,23 @@ body:has(.woodies-page) {
 .hero-title .word {
   display: inline-block;
   white-space: nowrap;
+}
+
+/* Mobile: Force each word on a single line */
+
+@media (max-width: 767px) {
+  .hero-title br {
+    display: none;
+  }
+
+  .hero-title .word {
+    display: block;
+    white-space: normal;
+  }
+
+  .hero-title .word + .word {
+    margin-top: 0.25em;
+  }
 }
 
 .hero-description {
@@ -5033,10 +5048,6 @@ body:has(.woodies-page) {
   }
 }
 
-/* ============================================
-   PROFILE & STARTUP PLIGHT SECTION (MERGED)
-   ============================================ */
-
 .profile-startup-section {
   display: flex;
   min-height: 60svh;
@@ -5067,16 +5078,14 @@ body:has(.woodies-page) {
     width: calc(100% - 48px);
     max-width: 100%;
     grid-template-columns: minmax(150px,220px) minmax(0,680px);
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     gap: clamp(2rem,4vw,4rem);
   }
 }
 
-.profile-startup-content {
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  justify-items: center;
+.profile-description p:last-child {
+  margin-bottom: 0px;
 }
 
 /* Image Column - Sticky only on two-column layout */
@@ -5134,8 +5143,6 @@ body:has(.woodies-page) {
   font-family: "Bandeins Strange", "Syne", sans-serif;
   font-size: clamp(1.5rem, 1.5rem + 1.5vw, 1.75rem);
   line-height: 1.25;
-  --tw-text-opacity: 1;
-  color: rgb(43 72 49 / var(--tw-text-opacity));
 }
 
 /* ============================================
@@ -5229,7 +5236,7 @@ body:has(.woodies-page) {
 
 .practice-intro {
   margin-bottom: 1.5rem;
-  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
+  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
   line-height: 1.4;
   --tw-text-opacity: 1;
   color: rgb(34 93 85 / var(--tw-text-opacity));
@@ -5266,7 +5273,7 @@ body:has(.woodies-page) {
 .problem-item .problem-solution-title {
   margin-top: 0px;
   margin-bottom: 2rem;
-  font-size: clamp(1.5rem, 1.5rem + 0.4vw, 1.8rem);
+  font-size: clamp(1.5rem, 1.5rem + 1.5vw, 1.75rem);
   line-height: 1.25;
   font-weight: 400;
   font-variation-settings: 'wght' 400;
@@ -5276,7 +5283,7 @@ body:has(.woodies-page) {
 .problem-item .problem-solution-subtitle {
   margin-top: 0px;
   margin-bottom: 1.5rem;
-  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
+  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
   line-height: 1.4;
   font-weight: 600;
   font-variation-settings: 'wght' 600;
@@ -5284,8 +5291,6 @@ body:has(.woodies-page) {
 }
 
 .problem-item .problem-solution-closing {
-  margin-top: 2rem;
-  margin-bottom: 0px;
   font-weight: 600;
   font-variation-settings: 'wght' 600;
   color: var(--color-text-heading-dark);
@@ -5329,17 +5334,17 @@ body:has(.woodies-page) {
   font-weight: 700;
   font-variation-settings: 'wght' 700;
   letter-spacing: 0.05em;
-  color: var(--color-text-subheading-light);
+  color: var(--color-green-primary);
 }
 
 .solution-item .problem-solution-title,
 .practice .problem-solution-title {
   margin-top: 0px;
   margin-bottom: 2rem;
-  font-size: clamp(1.5rem, 1.5rem + 0.4vw, 1.8rem);
+  font-size: clamp(1.5rem, 1.5rem + 1.5vw, 1.75rem);
   line-height: 1.25;
-  font-weight: 400;
-  font-variation-settings: 'wght' 400;
+  font-weight: 600;
+  font-variation-settings: 'wght' 600;
   color: var(--color-text-heading-light);
 }
 
@@ -5347,7 +5352,7 @@ body:has(.woodies-page) {
 .practice .problem-solution-subtitle {
   margin-top: 0px;
   margin-bottom: 1.5rem;
-  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
+  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
   line-height: 1.4;
   font-weight: 600;
   font-variation-settings: 'wght' 600;
@@ -5356,8 +5361,7 @@ body:has(.woodies-page) {
 
 .solution-item .problem-solution-closing,
 .practice .problem-solution-closing {
-  margin-top: 2rem;
-  margin-bottom: 0px;
+  margin-top: 0px;
   font-weight: 600;
   font-variation-settings: 'wght' 600;
   color: var(--color-text-heading-light);
@@ -5380,8 +5384,9 @@ body:has(.woodies-page) {
 }
 
 .problem-solution-list {
+  margin-bottom: 1rem;
   border-bottom-width: 1px;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   border-color: rgba(255, 255, 255, 0.2);
   color: var(--color-text-body-dark);
 }
@@ -5611,7 +5616,7 @@ body:has(.woodies-page) {
 .testimonial-text {
   margin-bottom: 0.5rem;
   font-family: "Bandeins Strange", "Syne", sans-serif;
-  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
+  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
   line-height: 1.4;
   --tw-text-opacity: 1;
   color: rgb(29 29 29 / var(--tw-text-opacity));
@@ -5913,7 +5918,7 @@ body:has(.woodies-page) {
   margin-bottom: 2rem;
   text-align: left;
   font-family: "Bandeins Strange", "Syne", sans-serif;
-  font-size: clamp(1.1rem, 1.1rem + 0.4vw, 1.3rem);
+  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
   line-height: 1.4;
   text-transform: uppercase;
   font-weight: 700;
