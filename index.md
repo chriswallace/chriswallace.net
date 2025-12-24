@@ -235,7 +235,8 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
       <video-player 
         id="candy-digital-video"
         class="aspect-video rounded-3xl mb-4" 
-        video-url="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.mp4?tr=f-auto"
+        video-mp4="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.mp4?tr=f-mp4"
+        video-webm="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.mp4?tr=f-webm"
         video-poster="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/candy-digital.png?tr=w-1024,q-80,f-auto"
         playsinline
         loop
@@ -246,49 +247,50 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
       Improved customer acquisition, collector experience, net new features launched</p>
     </span>
     <span class="work-item">
-      <img 
-        src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/california-dmv.png?tr=w-544,q-80,f-auto" 
-        srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/california-dmv.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/california-dmv.png?tr=w-1088,q-80,f-auto 2x" 
-        alt="California DMV" 
-        class="work-image" 
+      <img
+        src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/california-dmv.png?tr=w-544,q-80,f-auto"
+        srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/california-dmv.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/california-dmv.png?tr=w-1088,q-80,f-auto 2x"
+        alt="California DMV"
+        class="work-image"
         loading="lazy">
       <p class="work-description">At 10up, I grew and developed a remote 25-person design team that redesigned the <strong>California DMV</strong>'s website during covid, bringing key virtual services online.</p>
       <p class="work-results">Results &middot;
       +34M pageviews, +2M visitors, new virtual field office</p>
     </span>
     <span class="work-item">
-      <img 
-        src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/eye-appeal-inc.png?tr=w-544,q-80,f-auto" 
-        srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/eye-appeal-inc.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/eye-appeal-inc.png?tr=w-1088,q-80,f-auto 2x" 
-        alt="Eye Appeal Inc" 
-        class="work-image" 
+      <img
+        src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/eye-appeal-inc.png?tr=w-544,q-80,f-auto"
+        srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/eye-appeal-inc.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/eye-appeal-inc.png?tr=w-1088,q-80,f-auto 2x"
+        alt="Eye Appeal Inc"
+        class="work-image"
         loading="lazy">
       <p class="work-description">Working with <strong>Eye Appeal Inc</strong>, I designed a killer brand and app. I even built a full app prototype, establishing valuable proprietary technology and design patterns.</p>
       <p class="work-results">Results &middot;
       $100k saved in dev. cost, successful fundraising round</p>
     </span>
     <span class="work-item">
-      <img 
-        src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/woodies.png?tr=w-544,q-80,f-auto" 
-        srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/woodies.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/woodies.png?tr=w-1088,q-80,f-auto 2x" 
-        alt="Woodies" 
-        class="work-image" 
+      <img
+        src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/woodies.png?tr=w-544,q-80,f-auto"
+        srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/woodies.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/woodies.png?tr=w-1088,q-80,f-auto 2x"
+        alt="Woodies"
+        class="work-image"
         loading="lazy">
       <p class="work-description">I established a creative studio that launched <strong>Woodies</strong>, a beloved entertainment IP.</p>
       <p class="work-results">Results &middot;
       $2.6m revenue in six months, 4,000 new customers</p>
     </span>
     <span class="work-item">
-      <img 
-        src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/plymouth-street.png?tr=w-544,q-80,f-auto" 
-        srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/plymouth-street.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/plymouth-street.png?tr=w-1088,q-80,f-auto 2x" 
-        alt="Plymouth Street" 
-        class="work-image" 
+      <img
+        src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/plymouth-street.png?tr=w-544,q-80,f-auto"
+        srcset="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/plymouth-street.png?tr=w-544,q-80,f-auto 1x, https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/plymouth-street.png?tr=w-1088,q-80,f-auto 2x"
+        alt="Plymouth Street"
+        class="work-image"
         loading="lazy">
       <p class="work-description">Working with <strong>Plymouth Street</strong>, I helped redesign the process of applying for a high-tech work visa for immigrants seeking US-based jobs.</p>
       <p class="work-results">Results &middot;
       Vastly increased task completion rate, reduced submission times</p>
     </span>
+
   </div>
 </section>
 

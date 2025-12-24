@@ -69,7 +69,7 @@ export default {
           },
         ],
         heading: [
-          "clamp(1.5rem, 1.5rem + 1.5vw, 1.75rem)",
+          "clamp(1.3rem, 1.201rem + 0.465vw, 1.75rem)",
           {
             lineHeight: "1.25",
           },

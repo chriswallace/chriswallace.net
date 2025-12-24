@@ -153,7 +153,10 @@ class VideoPlayer extends HTMLElement {
   }
 
   render(isTouchDevice = false) {
-    const videoUrl = this.getAttribute("video-url");
+    // Support both new mp4/webm attributes and legacy video-url
+    const videoMp4 = this.getAttribute("video-mp4");
+    const videoWebm = this.getAttribute("video-webm");
+    const videoUrl = this.getAttribute("video-url"); // Legacy support
     const posterUrl = this.getAttribute("video-poster");
     const title = this.getAttribute("video-title");
     const description = this.getAttribute("video-description");
@@ -164,6 +167,19 @@ class VideoPlayer extends HTMLElement {
     const autoPlay =
       (isTouchDevice && isMuted) || this.hasAttribute("autoplay");
     const loop = this.hasAttribute("loop");
+
+    // Build source elements - prefer webm first (better compression), then mp4 (better compatibility)
+    let sourceElements = "";
+    if (videoWebm) {
+      sourceElements += `<source src="${videoWebm}" type="video/webm">`;
+    }
+    if (videoMp4) {
+      sourceElements += `<source src="${videoMp4}" type="video/mp4">`;
+    }
+    // Fallback to legacy video-url if new attributes aren't provided
+    if (!videoMp4 && !videoWebm && videoUrl) {
+      sourceElements += `<source src="${videoUrl}" type="video/mp4">`;
+    }
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -467,14 +483,15 @@ class VideoPlayer extends HTMLElement {
         width="100%"
         preload="metadata"
         ${isMuted ? "muted" : ""} 
-        ${playsInline || isTouchDevice ? "playsinline" : ""} 
-        ${isTouchDevice ? "controls webkit-playsinline" : ""}
+        playsinline
+        webkit-playsinline
+        ${isTouchDevice ? "controls" : ""}
         ${posterUrl ? `poster="${posterUrl}"` : ""}
         ${autoPlay ? "autoplay" : ""}
         ${loop ? "loop" : ""}
         ${isTouchDevice ? "disablePictureInPicture" : ""}
       >
-        <source src="${videoUrl}" type="video/mp4">
+        ${sourceElements}
         Your browser does not support HTML5 video.
       </video>
 
