@@ -189,6 +189,7 @@
 
 .profile-title {
   @apply font-heading text-heading mt-0 mb-8;
+  font-size: clamp(1.3rem, 1.201rem + 0.465vw, 1.75rem);
 }
 
 /* ============================================
@@ -475,7 +476,7 @@
    APPROACH SECTION
    ============================================ */
 .approach-section {
-  @apply py-24 lg:py-32 px-6 lg:px-32 relative overflow-hidden;
+  @apply py-8 md:py-24 lg:py-32 px-6 lg:px-32 relative overflow-hidden;
   background: var(--section-approach);
   min-height: 100vh;
 }
@@ -498,7 +499,7 @@
 }
 
 .approach-title {
-  @apply font-heading font-normal text-heading tracking-wider mb-0 block uppercase text-left;
+  @apply font-heading font-normal text-heading tracking-wider mb-24 md:mb-0 block uppercase text-center md:text-left;
   font-variation-settings: "wght" 400, "wdth" 300;
   color: var(--color-text-heading-dark);
 }
@@ -704,6 +705,10 @@
 
 .logo-clip{
   @apply md:overflow-hidden md:aspect-[1806/248];
+}
+
+.footer-br{
+  @apply block md:hidden;
 }
 
 .footer-wallace-logo {

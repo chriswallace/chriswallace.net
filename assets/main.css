@@ -1142,7 +1142,7 @@ picture img {
 .contact-grid__title {
   margin-bottom: 0.5rem;
   text-align: center;
-  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
+  font-size: clamp(1.125rem, 1.026rem + 0.465vw, 1.375rem);
   line-height: 1.4;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -3568,7 +3568,7 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
   padding-bottom: 0.75rem;
   text-align: center;
   font-family: "Bandeins Strange", "Syne", sans-serif;
-  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
+  font-size: clamp(1.125rem, 1.026rem + 0.465vw, 1.375rem);
   line-height: 1.4;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -3820,7 +3820,7 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
 }
 
 .resume__metadata {
-  font-size: clamp(1.3rem, 1.201rem + 0.465vw, 1.75rem);
+  font-size: clamp(1.45rem, 1.321rem + 0.465vw, 1.75rem);
   line-height: 1.25;
   color: var(--color-fg);
 }
@@ -3967,7 +3967,7 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
 .wave-hand {
   margin-bottom: 2rem;
   display: inline-block;
-  font-size: clamp(1.3rem, 1.201rem + 0.465vw, 1.75rem);
+  font-size: clamp(1.45rem, 1.321rem + 0.465vw, 1.75rem);
   line-height: 1.25;
   animation: wave 6s ease-in-out infinite;
   transform-origin: 70% 70%;
@@ -4066,7 +4066,7 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
   max-width: none;
   text-align: center;
   font-family: "Bandeins Sans", "Space Grotesk", serif;
-  font-size: clamp(1.3rem, 1.201rem + 0.465vw, 1.75rem);
+  font-size: clamp(1.45rem, 1.321rem + 0.465vw, 1.75rem);
   line-height: 1.25;
   color: var(--color-fg);
   font-weight: 400;
@@ -4468,7 +4468,7 @@ a.portfolio-list__link:hover .portfolio-list__image {
   margin-bottom: 1rem;
   margin-top: 0px;
   max-width: 52ch;
-  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
+  font-size: clamp(1.125rem, 1.026rem + 0.465vw, 1.375rem);
   line-height: 1.4;
   font-weight: 600;
   font-variation-settings: 'wght' 600;
@@ -4540,7 +4540,7 @@ body:has(.woodies-page) {
 .portfolio-other-callout h3 {
   margin-bottom: 1rem;
   max-width: 52ch;
-  font-size: clamp(1.3rem, 1.201rem + 0.465vw, 1.75rem);
+  font-size: clamp(1.45rem, 1.321rem + 0.465vw, 1.75rem);
   line-height: 1.25;
   font-weight: 600;
   font-variation-settings: 'wght' 600;
@@ -5141,8 +5141,9 @@ body:has(.woodies-page) {
   margin-top: 0px;
   margin-bottom: 2rem;
   font-family: "Bandeins Strange", "Syne", sans-serif;
-  font-size: clamp(1.3rem, 1.201rem + 0.465vw, 1.75rem);
+  font-size: clamp(1.45rem, 1.321rem + 0.465vw, 1.75rem);
   line-height: 1.25;
+  font-size: clamp(1.3rem, 1.201rem + 0.465vw, 1.75rem);
 }
 
 /* ============================================
@@ -5236,7 +5237,7 @@ body:has(.woodies-page) {
 
 .practice-intro {
   margin-bottom: 1.5rem;
-  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
+  font-size: clamp(1.125rem, 1.026rem + 0.465vw, 1.375rem);
   line-height: 1.4;
   --tw-text-opacity: 1;
   color: rgb(34 93 85 / var(--tw-text-opacity));
@@ -5273,7 +5274,7 @@ body:has(.woodies-page) {
 .problem-item .problem-solution-title {
   margin-top: 0px;
   margin-bottom: 2rem;
-  font-size: clamp(1.3rem, 1.201rem + 0.465vw, 1.75rem);
+  font-size: clamp(1.45rem, 1.321rem + 0.465vw, 1.75rem);
   line-height: 1.25;
   font-weight: 400;
   font-variation-settings: 'wght' 400;
@@ -5283,7 +5284,7 @@ body:has(.woodies-page) {
 .problem-item .problem-solution-subtitle {
   margin-top: 0px;
   margin-bottom: 1.5rem;
-  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
+  font-size: clamp(1.125rem, 1.026rem + 0.465vw, 1.375rem);
   line-height: 1.4;
   font-weight: 600;
   font-variation-settings: 'wght' 600;
@@ -5341,7 +5342,7 @@ body:has(.woodies-page) {
 .practice .problem-solution-title {
   margin-top: 0px;
   margin-bottom: 2rem;
-  font-size: clamp(1.3rem, 1.201rem + 0.465vw, 1.75rem);
+  font-size: clamp(1.45rem, 1.321rem + 0.465vw, 1.75rem);
   line-height: 1.25;
   font-weight: 600;
   font-variation-settings: 'wght' 600;
@@ -5352,7 +5353,7 @@ body:has(.woodies-page) {
 .practice .problem-solution-subtitle {
   margin-top: 0px;
   margin-bottom: 1.5rem;
-  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
+  font-size: clamp(1.125rem, 1.026rem + 0.465vw, 1.375rem);
   line-height: 1.4;
   font-weight: 600;
   font-variation-settings: 'wght' 600;
@@ -5616,7 +5617,7 @@ body:has(.woodies-page) {
 .testimonial-text {
   margin-bottom: 0.5rem;
   font-family: "Bandeins Strange", "Syne", sans-serif;
-  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
+  font-size: clamp(1.125rem, 1.026rem + 0.465vw, 1.375rem);
   line-height: 1.4;
   --tw-text-opacity: 1;
   color: rgb(29 29 29 / var(--tw-text-opacity));
@@ -5649,10 +5650,17 @@ body:has(.woodies-page) {
 .approach-section {
   position: relative;
   overflow: hidden;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .approach-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
 @media (min-width: 64rem) {
@@ -5694,16 +5702,26 @@ body:has(.woodies-page) {
 }
 
 .approach-title {
-  margin-bottom: 0px;
+  margin-bottom: 6rem;
   display: block;
-  text-align: left;
+  text-align: center;
   font-family: "Bandeins Strange", "Syne", sans-serif;
-  font-size: clamp(1.3rem, 1.201rem + 0.465vw, 1.75rem);
+  font-size: clamp(1.45rem, 1.321rem + 0.465vw, 1.75rem);
   line-height: 1.25;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 400;
   font-variation-settings: 'wght' 400;
+}
+
+@media (min-width: 48rem) {
+  .approach-title {
+    margin-bottom: 0px;
+    text-align: left;
+  }
+}
+
+.approach-title {
   font-variation-settings: "wght" 400, "wdth" 300;
   color: var(--color-text-heading-dark);
 }
@@ -5918,7 +5936,7 @@ body:has(.woodies-page) {
   margin-bottom: 2rem;
   text-align: left;
   font-family: "Bandeins Strange", "Syne", sans-serif;
-  font-size: clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem);
+  font-size: clamp(1.125rem, 1.026rem + 0.465vw, 1.375rem);
   line-height: 1.4;
   text-transform: uppercase;
   font-weight: 700;
@@ -6010,6 +6028,16 @@ body:has(.woodies-page) {
   .logo-clip {
     aspect-ratio: 1806/248;
     overflow: hidden;
+  }
+}
+
+.footer-br {
+  display: block;
+}
+
+@media (min-width: 48rem) {
+  .footer-br {
+    display: none;
   }
 }
 
@@ -6257,7 +6285,7 @@ body:has(.woodies-page) {
 
 .notifications--notification-item {
   display: block;
-  font-size: clamp(1.3rem, 1.201rem + 0.465vw, 1.75rem);
+  font-size: clamp(1.45rem, 1.321rem + 0.465vw, 1.75rem);
   line-height: 1.25;
   text-decoration-line: none;
   color: var(--color-fg);

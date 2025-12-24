@@ -416,7 +416,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
       <div class="lets-talk-content">
         <div class="lg:flex lg:justify-between">
           <div>
-            <h2 class="lets-talk-title mt-0 reveal">No pitch. No pressure. Just clarity.</h2>
+            <h2 class="lets-talk-title mt-0 reveal">No pitch. No pressure. <br class="footer-br">Just clarity.</h2>
             
             <div class="lets-talk-description md:mb-12 reveal reveal-delay-1">
               <p>We'll start with a conversation. If you're feeling the drag but can't quite name it, that's usually the signal.</p>

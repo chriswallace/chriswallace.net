@@ -69,13 +69,13 @@ export default {
           },
         ],
         heading: [
-          "clamp(1.3rem, 1.201rem + 0.465vw, 1.75rem)",
+          "clamp(1.45rem, 1.321rem + 0.465vw, 1.75rem)",
           {
             lineHeight: "1.25",
           },
         ],
         subheading: [
-          "clamp(1.2rem, 1.2rem + 0.4vw, 1.35rem)",
+          "clamp(1.125rem, 1.026rem + 0.465vw, 1.375rem)",
           {
             lineHeight: "1.4",
           },
