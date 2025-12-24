@@ -1603,10 +1603,6 @@ i {
   gap: 0.375rem;
 }
 
-.gap-12 {
-  gap: 3rem;
-}
-
 .gap-2 {
   gap: 0.5rem;
 }
@@ -1621,6 +1617,10 @@ i {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-y-12 {
+  row-gap: 3rem;
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {

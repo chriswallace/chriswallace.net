@@ -196,7 +196,7 @@
    PROBLEM & SOLUTION GRID SECTION
    ============================================ */
 .problem-solution-section {
-  @apply min-h-screen flex flex-col justify-center py-24 lg:py-32 px-6 lg:px-16 relative;
+  @apply min-h-screen flex flex-col justify-center py-24 lg:py-32 px-4 lg:px-16 relative;
   background-image: url("https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/hero-bg-desktop.svg");
   background-size: cover;
   background-position: center;
@@ -216,7 +216,7 @@
 }
 
 .solution-item {
-  @apply p-10 mb-0 bg-white rounded-t-xl md:rounded-r-none md:rounded-l-xl;
+  @apply p-8 mb-0 bg-white rounded-t-xl md:rounded-r-none md:rounded-l-xl;
 }
 
 .practice {

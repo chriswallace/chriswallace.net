@@ -127,7 +127,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
 
 <section class="problem-solution-section" id="solution">
   <div class="problem-solution-content">
-    <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-4">
+    <div class="grid grid-cols-1 gap-y-12 lg:grid-cols-3 lg:gap-4">
       <div class="problem-solution-item problem-item" id="problem">
         <span class="problem-solution-label reveal">The Problem</span>
         <h2 class="problem-solution-title reveal reveal-delay-1">Your design team works hard but big wins are scarce.</h2>
