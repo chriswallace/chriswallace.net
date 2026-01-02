@@ -55,7 +55,7 @@
     max-width: 25%;
     min-width: 150px;
   }
-  
+
   .hero-wallace-logo.visible {
     opacity: 0.1;
   }
@@ -66,7 +66,7 @@
     max-width: 20%;
     min-width: 100px;
   }
-  
+
   .hero-wallace-logo.visible {
     opacity: 0.08;
   }
@@ -106,12 +106,12 @@
   .hero-title br {
     display: none;
   }
-  
+
   .hero-title .word {
     display: block;
     white-space: normal;
   }
-  
+
   .hero-title .word + .word {
     margin-top: 0.25em;
   }
@@ -168,7 +168,7 @@
   @apply w-[calc(100%-32px)] md:w-[calc(100%-48px)] max-w-full mx-auto md:grid md:grid-cols-[minmax(150px,220px)_minmax(0,680px)] md:gap-[clamp(2rem,4vw,4rem)] md:items-center md:max-w-full md:justify-center;
 }
 
-.profile-description p:last-child{
+.profile-description p:last-child {
   @apply mb-0;
 }
 
@@ -703,11 +703,11 @@
   }
 }
 
-.logo-clip{
+.logo-clip {
   @apply md:overflow-hidden md:aspect-[1806/248];
 }
 
-.footer-br{
+.footer-br {
   @apply block md:hidden;
 }
 
@@ -725,7 +725,7 @@
 
 .footer-bottom {
   @apply flex flex-col lg:flex-row lg:items-center justify-between gap-4 pt-4 pb-[39px] mt-6;
-  border-top: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .footer-copyright {
@@ -775,7 +775,8 @@
 .reveal {
   opacity: 0;
   filter: blur(10px);
-  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.visible {
@@ -803,14 +804,16 @@
 .stagger-children > * {
   opacity: 0;
   filter: blur(10px);
-  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Work items - fast blur-in */
 .work-item {
   opacity: 0;
   filter: blur(10px);
-  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .work-item.visible {
@@ -849,7 +852,7 @@
   filter: blur(0px);
   transition-delay: 0.3s;
 }
-.stagger-children.visible > *:nth-child(n+7) {
+.stagger-children.visible > *:nth-child(n + 7) {
   opacity: 1;
   filter: blur(0px);
   transition-delay: 0.35s;
@@ -882,5 +885,191 @@
 
   .footer-links {
     @apply gap-6;
+  }
+}
+
+/* ============================================
+   EXIT INTENT POPOVER
+   ============================================ */
+.exit-popover-overlay {
+  @apply fixed inset-0 z-[100];
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.exit-popover-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.exit-popover {
+  @apply fixed z-[101] w-full max-w-lg p-8 pt-16 rounded-2xl;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: linear-gradient(135deg, #1a3a2a 0%, #0d1f15 100%);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.exit-popover-avatar {
+  @apply absolute w-20 h-20 rounded-full object-cover;
+  left: 2rem;
+  top: 0;
+  transform: translateY(-50%);
+  border: 4px solid #3d6b52;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.exit-popover.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.exit-popover-close {
+  @apply absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-transparent border-0 cursor-pointer;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.exit-popover-close:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.exit-popover-title {
+  @apply font-heading text-white my-8;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-variation-settings: "wght" 300, "wdth" 100;
+  line-height: 1.2;
+}
+
+.exit-popover-subtitle {
+  color: var(--color-green-accent);
+}
+
+.exit-popover-form {
+  @apply flex flex-col gap-4;
+}
+
+.exit-popover-row {
+  @apply flex flex-col sm:flex-row gap-4;
+}
+
+/* Floating label field wrapper */
+.floating-field {
+  @apply relative w-full;
+}
+
+.exit-popover-input,
+.exit-popover-textarea {
+  @apply w-full px-4 pt-6 pb-2 rounded-lg border-0 font-sans;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exit-popover-input::placeholder,
+.exit-popover-textarea::placeholder {
+  color: transparent;
+}
+
+.exit-popover-input:focus,
+.exit-popover-textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 2px var(--color-green-accent);
+}
+
+.exit-popover-textarea {
+  resize: vertical;
+  min-height: 100px;
+  padding-top: 1.75rem;
+}
+
+/* Floating label */
+.floating-label {
+  @apply absolute left-4 font-sans pointer-events-none;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+/* Label for textarea - position at top */
+.exit-popover-textarea ~ .floating-label {
+  top: 1rem;
+  transform: translateY(0);
+}
+
+/* Floated state - when focused or has content */
+.exit-popover-input:focus ~ .floating-label,
+.exit-popover-input:not(:placeholder-shown) ~ .floating-label {
+  top: 0.5rem;
+  transform: translateY(0);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--color-green-accent);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.exit-popover-textarea:focus ~ .floating-label,
+.exit-popover-textarea:not(:placeholder-shown) ~ .floating-label {
+  top: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--color-green-accent);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.exit-popover-submit {
+  @apply w-full mt-2;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+}
+
+/* Success state */
+.exit-popover-form.success {
+  @apply text-center py-8;
+}
+
+.exit-popover-form.success::before {
+  content: "✓";
+  display: block;
+  font-size: 3rem;
+  color: var(--color-green-accent);
+  margin-bottom: 1rem;
+}
+
+.exit-popover-form.success::after {
+  content: "Thanks! I'll be in touch soon.";
+  display: block;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.exit-popover-form.success > * {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .exit-popover {
+    @apply mx-4 p-6;
+    width: calc(100% - 2rem);
+    max-width: none;
+  }
+
+  .exit-popover-title {
+    font-size: 1.5rem;
   }
 }

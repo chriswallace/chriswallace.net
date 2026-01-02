@@ -23,9 +23,9 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <a href="#approach" class="nav-link">Approach</a>
   </div>
   
-  <a href="https://zcal.co/chriswallace" class="nav-cta" target="_blank" rel="noopener">
-    Start a conversation →
-  </a>
+  <button class="nav-cta open-contact-popup" type="button">
+    Book a call →
+  </button>
   
   <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobile-menu-toggle">
     <span class="mobile-menu-handle"></span>
@@ -38,7 +38,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
 <!-- Mobile Menu (Pull-down Sheet) -->
 <div class="mobile-menu" id="mobile-menu">
   <div class="mobile-menu-cta">
-    <a href="https://zcal.co/chriswallace" class="btn" target="_blank" rel="noopener">Start a conversation →</a>
+    <button class="btn open-contact-popup" type="button">Book a call →</button>
   </div>
   <div class="mobile-menu-links">
     <a href="#about" class="mobile-menu-link">Meet Chris</a>
@@ -71,7 +71,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     </p>
     <div class="hero-buttons reveal reveal-delay-3">
       <a href="#about" class="btn btn-bright">Meet Chris</a>
-      <a href="https://zcal.co/chriswallace" class="btn btn-outline" target="_blank" rel="noopener">Start a conversation →</a>
+      <button class="btn btn-outline open-contact-popup" type="button">Book a call →</button>
     </div>
   </div>
   <div class="credibility-content reveal reveal-delay-4">
@@ -424,7 +424,7 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
           </div>
         
           <div class="lets-talk-cta reveal reveal-delay-2">
-            <a href="https://zcal.co/chriswallace" class="btn btn-white btn-lg" target="_blank" rel="noopener">Start a conversation →</a>
+            <button class="btn btn-white btn-lg open-contact-popup" type="button">Book a call →</button>
           </div>
         </div>
       </div>
@@ -442,6 +442,46 @@ description: Work with 20-year design industry veteran Chris Wallace to fix your
     <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/footer-wallace-logo.svg" alt="" class="footer-wallace-logo" aria-hidden="true">
   </div>
 </footer>
+
+<!-- Exit Intent Popover -->
+<div class="exit-popover-overlay" id="exit-popover-overlay"></div>
+<div class="exit-popover" id="exit-popover">
+  <img src="https://ik.imagekit.io/UltraDAO/chriswallace.net/homepage/meet-chris-profile.png?tr=w-200,h-200,fo-face,q-85,f-auto" alt="Chris Wallace" class="exit-popover-avatar">
+  <button class="exit-popover-close" id="exit-popover-close" aria-label="Close">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+  <h2 class="exit-popover-title">Ready for a quick conversation? <span class="exit-popover-subtitle">I'd love to hear what you're working on.</span></h2>
+  <form class="exit-popover-form" id="exit-popover-form" action="https://formspree.io/f/mlgdnply" method="POST">
+    <div class="exit-popover-row">
+      <div class="floating-field">
+        <input type="text" name="name" id="field-name" required class="exit-popover-input" placeholder=" ">
+        <label for="field-name" class="floating-label">Your Name</label>
+      </div>
+      <div class="floating-field">
+        <input type="email" name="email" id="field-email" required class="exit-popover-input" placeholder=" ">
+        <label for="field-email" class="floating-label">Email Address</label>
+      </div>
+    </div>
+    <div class="exit-popover-row">
+      <div class="floating-field">
+        <input type="text" name="position" id="field-position" class="exit-popover-input" placeholder=" ">
+        <label for="field-position" class="floating-label">Position</label>
+      </div>
+      <div class="floating-field">
+        <input type="text" name="company" id="field-company" class="exit-popover-input" placeholder=" ">
+        <label for="field-company" class="floating-label">Company</label>
+      </div>
+    </div>
+    <div class="floating-field">
+      <textarea name="message" id="field-message" rows="3" class="exit-popover-textarea" placeholder=" "></textarea>
+      <label for="field-message" class="floating-label">Tell me about your needs...</label>
+    </div>
+    <button type="submit" class="exit-popover-submit btn btn-white">Next: Find a time to chat</button>
+  </form>
+</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -575,5 +615,88 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Note: GSAP animations are now handled in /assets/js/homepage.js
+  
+  // Contact Popover
+  const exitPopover = document.getElementById('exit-popover');
+  const exitOverlay = document.getElementById('exit-popover-overlay');
+  const exitCloseBtn = document.getElementById('exit-popover-close');
+  const exitForm = document.getElementById('exit-popover-form');
+  let exitIntentTriggered = false;
+  
+  function showExitPopover() {
+    exitPopover.classList.add('active');
+    exitOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function hideExitPopover() {
+    exitPopover.classList.remove('active');
+    exitOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  
+  // Exit intent: trigger when mouse leaves viewport at top
+  document.addEventListener('mouseout', (e) => {
+    if (!exitIntentTriggered && !e.relatedTarget && e.clientY <= 0) {
+      exitIntentTriggered = true;
+      showExitPopover();
+    }
+  });
+  
+  // Handle "Book a call" buttons
+  document.querySelectorAll('.open-contact-popup').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Close mobile menu if open
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileOverlay = document.getElementById('mobile-menu-overlay');
+      if (mobileMenu && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      }
+      showExitPopover();
+    });
+  });
+  
+  // Close handlers
+  exitCloseBtn.addEventListener('click', hideExitPopover);
+  exitOverlay.addEventListener('click', hideExitPopover);
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && exitPopover.classList.contains('active')) {
+      hideExitPopover();
+    }
+  });
+  
+  // Form submission via Formspree
+  exitForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(exitForm);
+    
+    try {
+      const response = await fetch(exitForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        // Show success state
+        exitForm.classList.add('success');
+        
+        // Open scheduling link in new window
+        window.open('https://zcal.co/chriswallace', '_blank');
+      } else {
+        alert('There was an error submitting the form. Please try again.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an error submitting the form. Please try again.');
+    }
+  });
 });
 </script>
