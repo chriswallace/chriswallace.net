@@ -1,0 +1,8 @@
+node_modules
+_site
+.jekyll-metadata
+vendor
+.bundle
+.playwright-mcp
+.cursor
+.superpowers
