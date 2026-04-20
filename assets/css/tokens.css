@@ -20,24 +20,15 @@
   --color-green-bright: #8fd570;
 
   --color-teal: #90b9b4;
-  --color-cream: #f2f6e5;
+  --color-bg-page: #eef2eb;
   --color-white: #ffffff;
-  --color-dark: #21231f;
-  --color-dark-card: #101410;
+  --color-dark: #3a3c38;
+  --color-card-bg: var(--color-white);
 
   /* Legacy Semantic Colors (for backward compatibility) */
   --color-background: var(--color-primary);
   --color-background-dark: var(--color-green-darker);
   --color-text-muted: var(--color-muted);
-
-  /* Section Backgrounds (Monochromatic palette) */
-  --section-hero: #ffffff;
-  --section-profile: #f5f7f3;
-  --section-cta: #3d6b4f;
-  --section-work: #f5f7f3;
-  --section-testimonials: #e6ede4;
-  --section-approach: #1a2e22;
-  --section-footer: #4a7a5a;
 
   /* Text Colors - Light Background */
   --color-text-heading-light: #000000;

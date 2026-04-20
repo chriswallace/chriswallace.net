@@ -1,0 +1,98 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - heading "Fractional design leadership for AI‑powered product teams." [level=1] [ref=e7]
+      - button "See how I work" [ref=e8] [cursor=pointer]
+    - link [ref=e9] [cursor=pointer]:
+      - /url: /
+      - img [ref=e10]
+  - generic [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]: Specialization
+      - heading "Design for the AI era." [level=2] [ref=e17]:
+        - text: Design for
+        - text: the AI era.
+      - paragraph [ref=e18]: Products powered by AI assistants and agents demand a new kind of design thinking—one fluent in conversation, context, and trust, while grounded in solid strategy and close engineering collaboration. I've been building that practice.
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]: "01"
+        - heading "AI Assistant Design" [level=3] [ref=e22]
+        - paragraph [ref=e23]: Conversation flows, intent recognition, graceful failure, and the subtle art of calibrating expectations with AI-powered interfaces.
+      - generic [ref=e24]:
+        - generic [ref=e25]: "02"
+        - heading "Agent UX & Tool Interfaces" [level=3] [ref=e26]
+        - paragraph [ref=e27]: Designing for agentic systems—tool use, multi-step tasks, progress visibility, and keeping humans appropriately in the loop.
+      - generic [ref=e28]:
+        - generic [ref=e29]: "03"
+        - heading "Trust & Transparency" [level=3] [ref=e30]
+        - paragraph [ref=e31]: "Patterns that build user confidence: appropriate disclosure, uncertainty communication, and recoverable errors in AI systems."
+      - generic [ref=e32]:
+        - generic [ref=e33]: "04"
+        - heading "Design Systems" [level=3] [ref=e34]
+        - paragraph [ref=e35]: Component libraries and tokens that scale with the product—enabling consistent AI experiences across surfaces and teams.
+      - generic [ref=e36]:
+        - generic [ref=e37]: "05"
+        - heading "Research-Driven Decisions" [level=3] [ref=e38]
+        - paragraph [ref=e39]: Embedding user research into AI product cycles—understanding how people interact with AI, what they trust, and where they get lost.
+      - generic [ref=e40]:
+        - generic [ref=e41]: "06"
+        - heading "Strategic Leadership" [level=3] [ref=e42]
+        - paragraph [ref=e43]: Design vision, principles, and roadmaps that align cross-functional teams and position design as a competitive advantage.
+  - generic [ref=e47]:
+    - generic [ref=e49]:
+      - heading "AI products introduce new design failure modes." [level=2] [ref=e50]
+      - paragraph [ref=e51]: Without intentional leadership, AI features ship with unclear affordances, misaligned expectations, and eroded user trust. The gap between what AI can do and what users understand compounds with every release.
+      - paragraph [ref=e52]: Each unexamined decision—a missing loading state, an unexplained failure, an overconfident response—compounds into systemic distrust that's hard to undo and costly to fix.
+    - generic [ref=e53]:
+      - heading "The right leadership turns AI complexity into a competitive advantage." [level=2] [ref=e54]
+      - paragraph [ref=e55]: Deep expertise in both AI product patterns and design strategy enables the pivotal calls that separate products people trust from ones they abandon. It's not just knowing the patterns—it's knowing when to break them.
+      - paragraph [ref=e56]: With the right leadership, AI features ship with clarity, users build confidence, and the product improves with every interaction instead of frustrating with every one.
+  - generic [ref=e59]:
+    - generic [ref=e60]:
+      - generic [ref=e61]: The approach
+      - heading "Strategy to implementation, without losing either." [level=2] [ref=e62]:
+        - text: Strategy to implementation,
+        - text: without losing either.
+      - paragraph [ref=e63]: Most designers operate at one level. I work across both—setting the vision and getting into the details that make it real.
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - generic [ref=e66]: Strategic
+        - list [ref=e67]:
+          - listitem [ref=e68]: — Design vision & principles
+          - listitem [ref=e69]: — Product roadmap influence
+          - listitem [ref=e70]: — Design org structure & hiring
+          - listitem [ref=e71]: — Research strategy
+          - listitem [ref=e72]: — Cross-functional alignment
+          - listitem [ref=e73]: — Team development & mentorship
+      - generic [ref=e75]: +
+      - generic [ref=e76]:
+        - generic [ref=e77]: Technical
+        - list [ref=e78]:
+          - listitem [ref=e79]: — Design systems architecture
+          - listitem [ref=e80]: — Engineering collaboration
+          - listitem [ref=e81]: — Prototyping & validation
+          - listitem [ref=e82]: — AI interaction patterns
+          - listitem [ref=e83]: — Component quality standards
+          - listitem [ref=e84]: — Implementation oversight
+  - generic [ref=e86]:
+    - generic [ref=e87]:
+      - generic [ref=e88]: Working together
+      - heading "Senior design leadership, fractional commitment." [level=2] [ref=e89]:
+        - text: Senior design leadership,
+        - text: fractional commitment.
+      - paragraph [ref=e90]: Not every team needs a full-time design executive. Every team deserves experienced guidance when it matters.
+    - generic [ref=e91]:
+      - generic [ref=e92]:
+        - generic [ref=e93]: Advisory
+        - heading "Weekly strategic guidance" [level=3] [ref=e94]
+        - paragraph [ref=e95]: Regular sessions to review direction, unblock decisions, and keep design quality high. Ideal for teams with existing designers who need senior oversight.
+      - generic [ref=e96]:
+        - generic [ref=e97]: Embedded
+        - heading "Part-time design leadership" [level=3] [ref=e98]
+        - paragraph [ref=e99]: Active participation in your sprint cycles, product decisions, and design reviews. I work alongside your team as a part-time principal—deeply engaged, not just advising.
+      - generic [ref=e100]:
+        - generic [ref=e101]: Project
+        - heading "Focused delivery" [level=3] [ref=e102]
+        - paragraph [ref=e103]: "Intensive engagement around a specific challenge: launching an AI feature, establishing a design system, or building your team's AI design practice from the ground up."
+    - link "Let's talk about your team" [ref=e105] [cursor=pointer]:
+      - /url: /contact

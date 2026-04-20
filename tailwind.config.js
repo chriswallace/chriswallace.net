@@ -36,8 +36,6 @@ export default {
       },
       fontFamily: {
         sans: [
-          '"Bandeins Sans"',
-          '"Space Grotesk"',
           "system-ui",
           "-apple-system",
           "BlinkMacSystemFont",
@@ -47,11 +45,19 @@ export default {
           "Arial",
           "sans-serif",
         ],
-        serif: ['"Bandeins Sans"', '"Space Grotesk"', "serif"],
-        heading: ['"Bandeins Strange"', '"Syne"', "sans-serif"],
-        "heading-light": ['"Bandeins Strange"', '"Syne"', "sans-serif"],
+        serif: ["Georgia", "Times New Roman", "serif"],
+        heading: [
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
+        syne: ["Syne", "system-ui", "sans-serif"],
         mono: [
-          '"Kode Mono"',
           "ui-monospace",
           "SFMono-Regular",
           "Menlo",
@@ -69,34 +75,26 @@ export default {
           },
         ],
         heading: [
-          "clamp(1.45rem, 1.321rem + 0.465vw, 1.75rem)",
+          "clamp(1.6rem, 1.221rem + 0.465vw, 1.8rem)",
           {
             lineHeight: "1.25",
+            fontWeight: "500",
+            letterSpacing: "-0.02em",
           },
         ],
         subheading: [
-          "clamp(1.125rem, 1.026rem + 0.465vw, 1.375rem)",
+          "clamp(1.3rem, 1.186rem + 0.465vw, 1.45rem)",
           {
-            lineHeight: "1.4",
+            lineHeight: "1.45",
+            fontWeight: "500",
+            letterSpacing: "-0.02em",
           },
         ],
         display: [
-          "clamp(2rem, 2rem + 2.5vw, 3.4rem)",
+          "clamp(1.3rem, 1.3rem + 1vw, 2.2rem)",
           {
-            lineHeight: "0.95",
-          },
-        ],
-        // Backward compatibility aliases
-        base: [
-          "1rem",
-          {
-            lineHeight: "1.5rem",
-          },
-        ],
-        lg: [
-          "clamp(1.5rem, 1.2rem + 0.75vw, 2.25rem)",
-          {
-            lineHeight: "1.25",
+            lineHeight: "1.325",
+            letterSpacing: "-0.02em",
           },
         ],
       },

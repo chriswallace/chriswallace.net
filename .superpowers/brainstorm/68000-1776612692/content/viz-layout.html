@@ -1,0 +1,101 @@
+<h2>Visualization Section — Layout Direction</h2>
+<p class="subtitle">The blob canvas tells a 3-phase story (healthy → diseased → healed). Which layout best serves that narrative?</p>
+
+<style>
+  .mockup-body { font-size: 12px; }
+  .mock-canvas {
+    background: radial-gradient(circle at 50% 50%, #4f9d6e 0%, #225d55 60%, #113034 100%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.5); font-size: 11px; letter-spacing: 0.05em;
+  }
+  .mock-text-block { background: #eef2eb; border-radius: 6px; padding: 10px 12px; }
+  .mock-text-block h4 { margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #1d1d1d; }
+  .mock-text-block p { margin: 0; font-size: 11px; color: #666; line-height: 1.4; }
+  .mock-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #30804f; margin-bottom: 6px; }
+  .section-bg { background: #f5f7f3; border-radius: 8px; padding: 12px; }
+  .scroll-arrow { color: #999; font-size: 10px; text-align: center; margin: 4px 0; }
+</style>
+
+<div class="cards">
+
+  <!-- Option A: Split-screen sticky -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="section-bg" style="display:flex; gap:8px; height:200px;">
+        <!-- Left: large sticky canvas -->
+        <div style="flex:1.1; display:flex; flex-direction:column; gap:6px;">
+          <div class="mock-label">Sticky canvas</div>
+          <div class="mock-canvas" style="flex:1;">canvas</div>
+        </div>
+        <!-- Right: scrolling text -->
+        <div style="flex:0.9; display:flex; flex-direction:column; gap:6px; overflow:hidden;">
+          <div class="mock-label">Scrolling text</div>
+          <div class="mock-text-block">
+            <h4>Design debt accumulates silently.</h4>
+            <p>Without strong leadership, shortcuts become patterns…</p>
+          </div>
+          <div class="scroll-arrow">↓ scroll</div>
+          <div class="mock-text-block" style="opacity:0.4;">
+            <h4>Design leaders prevent this erosion.</h4>
+            <p>They establish principles and make the hard calls…</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Split-screen sticky</h3>
+      <p>Large canvas pinned to the left half of the viewport. Story text scrolls on the right. Canvas phases animate in sync with the text. <strong>Most control over visual storytelling.</strong></p>
+    </div>
+  </div>
+
+  <!-- Option B: Full-viewport canvas, floating text panels -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="section-bg" style="position:relative; height:200px; overflow:hidden;">
+        <!-- Full-bg canvas -->
+        <div class="mock-canvas" style="position:absolute; inset:0; border-radius:8px; opacity:0.85;">canvas fills viewport</div>
+        <!-- Floating text panel -->
+        <div style="position:absolute; bottom:12px; left:12px; right:50%;">
+          <div style="background:rgba(255,255,255,0.92); backdrop-filter:blur(8px); border-radius:6px; padding:10px 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.12);">
+            <div class="mock-label" style="color:#225d55;">Phase 2</div>
+            <div class="mock-text-block" style="background:transparent; padding:0;">
+              <h4>Design debt accumulates silently.</h4>
+              <p>Without strong leadership…</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Immersive full-viewport</h3>
+      <p>Canvas fills the full section background. Frosted-glass text panels appear at scroll positions. <strong>Most dramatic, most immersive.</strong> Higher implementation complexity.</p>
+    </div>
+  </div>
+
+  <!-- Option C: Stacked — large canvas hero, text below -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="section-bg" style="display:flex; flex-direction:column; gap:6px; height:200px;">
+        <!-- Canvas header -->
+        <div class="mock-canvas" style="height:110px; border-radius:6px; flex-shrink:0;">large canvas</div>
+        <!-- Text below -->
+        <div style="display:flex; gap:6px; flex:1; overflow:hidden;">
+          <div class="mock-text-block" style="flex:1;">
+            <h4>Design debt accumulates silently.</h4>
+            <p>Without strong leadership…</p>
+          </div>
+          <div class="mock-text-block" style="flex:1; opacity:0.5;">
+            <h4>Design leaders prevent this erosion.</h4>
+            <p>They establish principles…</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Canvas hero, text below</h3>
+      <p>Large canvas anchored at top (~65vh), text cards scroll below it in a grid or single column. Simpler layout, canvas phases trigger on viewport entry. <strong>Easiest to implement, less narrative tension.</strong></p>
+    </div>
+  </div>
+
+</div>

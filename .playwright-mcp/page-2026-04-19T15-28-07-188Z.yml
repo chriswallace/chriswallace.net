@@ -1,0 +1,52 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - heading "Fractional design leadership for digital product teams." [level=1] [ref=e7]
+      - button "Why Fractional?" [ref=e8] [cursor=pointer]
+    - link [ref=e9] [cursor=pointer]:
+      - /url: /
+      - img [ref=e10]
+  - generic [ref=e14]:
+    - heading "A healthy design practice solves important challenges and captures tremendous upside, but it has to be intentionally shaped." [level=2] [ref=e15]
+    - generic [ref=e16]:
+      - generic [ref=e18]:
+        - generic: Clear design principles
+      - generic [ref=e20]:
+        - generic: Design systems that unify
+      - generic [ref=e22]:
+        - generic: Research-driven decisions
+      - generic [ref=e24]:
+        - generic: Collaborative ideation
+      - generic [ref=e26]:
+        - generic: Outcomes over outputs
+      - generic [ref=e28]:
+        - generic: Culture of critique
+      - generic [ref=e30]:
+        - generic: Growth and mentorship
+      - generic [ref=e32]:
+        - generic: Strong design leadership
+  - generic [ref=e36]:
+    - generic [ref=e38]:
+      - heading "Design debt accumulates silently." [level=2] [ref=e39]
+      - paragraph [ref=e40]: Without strong leadership, shortcuts become patterns. Inconsistencies multiply. The gap between your product vision and reality grows wider with every sprint.
+      - paragraph [ref=e41]: Each compromised decision—a skipped research phase, an ignored accessibility requirement, a "temporary" workaround—compounds into systemic problems that slow teams down and frustrate users.
+    - generic [ref=e42]:
+      - heading "Design leaders prevent this erosion." [level=2] [ref=e43]
+      - paragraph [ref=e44]: They establish principles, create systems, and make the hard calls that keep products coherent. They turn design from a cost center into a competitive advantage.
+      - paragraph [ref=e45]: With the right leadership, good decisions reinforce each other. Quality compounds. Your product becomes more valuable over time, not less.
+  - generic [ref=e48]:
+    - generic [ref=e49]:
+      - heading "Fractional Design Leadership" [level=2] [ref=e50]
+      - paragraph [ref=e51]: Not every team needs—or can afford—a full-time design executive. But every team deserves experienced leadership to guide their product decisions.
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - heading "Strategic Guidance" [level=3] [ref=e54]
+        - paragraph [ref=e55]: Get executive-level design thinking without the executive-level commitment. I work with your team to establish vision, principles, and processes that scale.
+      - generic [ref=e56]:
+        - heading "Flexible Engagement" [level=3] [ref=e57]
+        - paragraph [ref=e58]: Whether you need a few hours a week or intensive project support, fractional leadership adapts to your needs and budget.
+      - generic [ref=e59]:
+        - heading "Immediate Impact" [level=3] [ref=e60]
+        - paragraph [ref=e61]: 20+ years of design leadership experience means I can identify problems quickly and implement solutions that work from day one.
+    - link "Let's talk about your team" [ref=e63] [cursor=pointer]:
+      - /url: /contact

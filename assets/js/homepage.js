@@ -1,549 +1,348 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Register GSAP plugins
-  gsap.registerPlugin(ScrollTrigger);
+const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
 
-  // Wait for fonts to load before starting animations
-  Promise.all([
-    document.fonts.ready,
-    new Promise((resolve) => setTimeout(resolve, 100)),
-  ]).then(() => {
-    initHomepageAnimations();
-  });
+function getScrollY() {
+  return window.lenis ? window.lenis.scroll : window.scrollY || window.pageYOffset;
+}
+
+function onScroll(callback) {
+  if (window.lenis) {
+    window.lenis.on("scroll", callback);
+    return;
+  }
+  let rafId = null;
+  window.addEventListener("scroll", () => {
+    if (rafId) return;
+    rafId = requestAnimationFrame(() => {
+      callback();
+      rafId = null;
+    });
+  }, { passive: true });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initSmoothScroll();
+
+  if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+  }
+
+  initHomepage();
 });
 
-function initHomepageAnimations() {
-  // ===================================
-  // HERO: Initial reveal + subtle parallax
-  // ===================================
+function initSmoothScroll() {
+  if (typeof Lenis === "undefined") return;
 
-  const heroSection = document.querySelector(".hero-section");
-  const heroLabel = document.querySelector(".hero-label");
-  const heroTitle = document.querySelector(".hero-title");
-  const heroDescription = document.querySelector(".hero-description");
-  const heroButtons = document.querySelector(".hero-buttons");
-  const heroWallaceLogo = document.querySelector(".hero-wallace-logo");
-  const credibilityContent = document.querySelector(".credibility-content");
-
-  if (heroSection) {
-    // Initial reveal animation for hero elements - unified fade-in
-    const heroTimeline = gsap.timeline();
-
-    // Set initial state - blur and opacity 0 for hero content
-    const heroContent = heroSection.querySelector(".hero-content");
-    if (heroContent) {
-      gsap.set(heroContent.querySelectorAll(".reveal"), {
-        filter: "blur(10px)",
-        opacity: 0,
-      });
-    }
-
-    // Set initial state for credibility content (outside hero-content)
-    if (credibilityContent && heroSection.contains(credibilityContent)) {
-      gsap.set(credibilityContent, {
-        filter: "blur(10px)",
-        opacity: 0,
-      });
-    }
-
-    // Initialize Splitting.js for hero title BEFORE fade-in animation
-    // Splitting is synchronous, so it completes immediately
-    if (heroTitle && typeof Splitting !== "undefined") {
-      Splitting({ target: heroTitle, by: "chars" });
-      // Force a reflow to ensure DOM is updated before animation starts
-      void heroTitle.offsetHeight;
-    }
-
-    // Animate Wallace logo
-    if (heroWallaceLogo) {
-      gsap.set(heroWallaceLogo, {
-        filter: "blur(10px)",
-        opacity: 0,
-      });
-
-      gsap.to(heroWallaceLogo, {
-        filter: "blur(0px)",
-        opacity: 0.15,
-        duration: 0.4,
-        ease: "power2.out",
-        onComplete: () => heroWallaceLogo.classList.add("visible"),
-      });
-    }
-
-    // Reveal hero elements on page load with stagger - fast blur-in effect
-    heroTimeline
-      .to(heroLabel?.closest(".reveal") || heroLabel, {
-        filter: "blur(0px)",
-        opacity: 1,
-        duration: 0.4,
-        ease: "power2.out",
-      })
-      .to(
-        heroTitle,
-        {
-          filter: "blur(0px)",
-          opacity: 1,
-          duration: 0.4,
-          ease: "power2.out",
-        },
-        "-=0.2"
-      )
-      .to(
-        heroDescription,
-        {
-          filter: "blur(0px)",
-          opacity: 1,
-          duration: 0.4,
-          ease: "power2.out",
-        },
-        "-=0.2"
-      )
-      .to(
-        heroButtons,
-        {
-          filter: "blur(0px)",
-          opacity: 1,
-          duration: 0.4,
-          ease: "power2.out",
-        },
-        "-=0.2"
-      );
-
-    // Animate credibility content if it exists in hero section
-    if (credibilityContent && heroSection.contains(credibilityContent)) {
-      heroTimeline.to(
-        credibilityContent,
-        {
-          filter: "blur(0px)",
-          opacity: 1,
-          duration: 0.4,
-          ease: "power2.out",
-        },
-        "-=0.2"
-      );
-    }
-
-    // Add visible class to prevent CSS transitions from interfering
-    heroTimeline.eventCallback("onComplete", () => {
-      if (heroContent) {
-        heroContent
-          .querySelectorAll(".reveal")
-          .forEach((el) => el.classList.add("visible"));
-      }
-      // Add visible class to credibility content
-      if (credibilityContent && heroSection.contains(credibilityContent)) {
-        credibilityContent.classList.add("visible");
-      }
-
-      // Animate hero title font width variation using Splitting.js
-      // (Splitting was already initialized before the fade-in)
-      if (heroTitle && typeof Splitting !== "undefined") {
-        // Get all character elements (Splitting adds .char class)
-        const chars = Array.from(heroTitle.querySelectorAll(".char")).filter(
-          (char) => char.textContent.trim() !== "" // Filter out spaces
-        );
-
-        if (chars.length > 0) {
-          // Set initial state: widest width for all characters
-          gsap.set(chars, {
-            fontVariationSettings: '"wght" 100, "wdth" 500',
-          });
-
-          // Function to randomly animate a character
-          const animateRandomChar = () => {
-            // Pick a random character
-            const randomChar = chars[Math.floor(Math.random() * chars.length)];
-
-            // Randomly decide to shrink or expand
-            const shouldShrink = Math.random() > 0.5;
-            const targetWidth = shouldShrink ? 200 : 500;
-
-            // Animate the character
-            gsap.to(randomChar, {
-              fontVariationSettings: `"wght" 100, "wdth" ${targetWidth}`,
-              duration: 1.2 + Math.random() * 0.8, // Random duration between 1.2-2s
-              ease: "power2.inOut",
-            });
-          };
-
-          // Start the random animation loop after a short delay
-          setTimeout(() => {
-            // Initial random animations
-            const initialAnimations = 3 + Math.floor(Math.random() * 3); // 3-5 initial animations
-            for (let i = 0; i < initialAnimations; i++) {
-              setTimeout(() => {
-                animateRandomChar();
-              }, i * 100); // Faster initial stagger
-            }
-
-            // Continue with random intervals
-            const scheduleNext = () => {
-              const delay = 100 + Math.random() * 150; // Random delay between 0.1-0.25s
-              setTimeout(() => {
-                animateRandomChar();
-                scheduleNext(); // Schedule the next animation
-              }, delay);
-            };
-
-            scheduleNext();
-          }, 500); // Start after 500ms
-        }
-      }
-    });
-  }
-
-  // ===================================
-  // PROFILE: Image reveal with scale
-  // ===================================
-
-  // ===================================
-  // CTA BANNER: Fade up
-  // ===================================
-
-  const ctaBanner = document.querySelector(".cta-banner");
-  const ctaText = document.querySelector(".cta-text");
-  const ctaButton = document.querySelector(".cta-button");
-  const ctaWMark = document.querySelector(".cta-banner img");
-
-  if (ctaBanner && ctaText) {
-    gsap.fromTo(
-      ctaText,
-      { filter: "blur(10px)", opacity: 0 },
-      {
-        filter: "blur(0px)",
-        opacity: 1,
-        duration: 0.4,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ctaBanner,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-          onEnter: () => ctaText.classList.add("visible"),
-        },
-      }
-    );
-  }
-
-  if (ctaButton) {
-    gsap.fromTo(
-      ctaButton,
-      { filter: "blur(10px)", opacity: 0 },
-      {
-        filter: "blur(0px)",
-        opacity: 1,
-        duration: 0.4,
-        delay: 0.05,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ctaBanner,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-          onEnter: () => ctaButton.classList.add("visible"),
-        },
-      }
-    );
-  }
-
-  if (ctaWMark) {
-    gsap.fromTo(
-      ctaWMark,
-      { filter: "blur(10px)", opacity: 0 },
-      {
-        filter: "blur(0px)",
-        opacity: 1,
-        duration: 0.4,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ctaBanner,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-  }
-
-  // ===================================
-  // WORK GRID: Staggered fade up
-  // ===================================
-
-  const workItems = document.querySelectorAll(".work-item");
-
-  if (workItems.length > 0) {
-    // Set initial state immediately to prevent flash
-    gsap.set(workItems, {
-      filter: "blur(10px)",
-      opacity: 0,
-    });
-
-    workItems.forEach((item, index) => {
-      gsap.fromTo(
-        item,
-        {
-          filter: "blur(10px)",
-          opacity: 0,
-        },
-        {
-          filter: "blur(0px)",
-          opacity: 1,
-          duration: 0.4,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: item,
-            start: "top 88%",
-            toggleActions: "play none none reverse",
-            onEnter: () => item.classList.add("visible"),
-          },
-        }
-      );
-    });
-  }
-
-  // ===================================
-  // TESTIMONIALS: Fade up
-  // ===================================
-
-  const testimonialsSection = document.querySelector(".testimonials-section");
-  const testimonialTitle = document.querySelector(".testimonials-title");
-
-  if (testimonialTitle) {
-    gsap.fromTo(
-      testimonialTitle,
-      { filter: "blur(10px)", opacity: 0 },
-      {
-        filter: "blur(0px)",
-        opacity: 1,
-        duration: 0.4,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: testimonialsSection,
-          start: "top 75%",
-          toggleActions: "play none none reverse",
-          onEnter: () => testimonialTitle.classList.add("visible"),
-        },
-      }
-    );
-  }
-
-  // ===================================
-  // APPROACH: Circular text + process cards
-  // ===================================
-
-  const approachSection = document.querySelector(".approach-section");
-  const processCards = document.querySelectorAll(".process-card");
-  const engagements = document.querySelector(".engagements");
-
-  if (processCards.length > 0) {
-    processCards.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        {
-          filter: "blur(10px)",
-          opacity: 0,
-        },
-        {
-          filter: "blur(0px)",
-          opacity: 1,
-          duration: 0.4,
-          delay: index * 0.05,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: ".approach-circle",
-            start: "top 70%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-  }
-
-  // Engagement columns stagger
-  const engagementColumns = document.querySelectorAll(".engagement-column");
-
-  if (engagementColumns.length > 0) {
-    engagementColumns.forEach((col, index) => {
-      gsap.fromTo(
-        col,
-        { filter: "blur(10px)", opacity: 0 },
-        {
-          filter: "blur(0px)",
-          opacity: 1,
-          duration: 0.4,
-          delay: index * 0.05,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: engagements,
-            start: "top 75%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-  }
-
-  // ===================================
-  // FOOTER: Fade up
-  // ===================================
-
-  const footerSection = document.querySelector(".footer-section");
-  const footerTop = document.querySelector(".footer-top");
-  const footerBottom = document.querySelector(".footer-bottom");
-
-  if (footerTop) {
-    gsap.fromTo(
-      footerTop,
-      { filter: "blur(10px)", opacity: 0 },
-      {
-        filter: "blur(0px)",
-        opacity: 1,
-        duration: 0.4,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: footerSection,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-          onEnter: () => footerTop.classList.add("visible"),
-        },
-      }
-    );
-  }
-
-  if (footerBottom) {
-    gsap.fromTo(
-      footerBottom,
-      { filter: "blur(10px)", opacity: 0 },
-      {
-        filter: "blur(0px)",
-        opacity: 1,
-        duration: 0.4,
-        delay: 0.15,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: footerBottom,
-          start: "top bottom",
-          toggleActions: "play none none reverse",
-          onEnter: () => footerBottom.classList.add("visible"),
-        },
-      }
-    );
-  }
-
-  // ===================================
-  // GLOBAL: Subtle scroll progress indicator
-  // ===================================
-
-  // Create a subtle progress bar at top of page
-  const progressBar = document.createElement("div");
-  progressBar.className = "scroll-progress";
-  progressBar.style.cssText = `
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 2px;
-    background: var(--color-green-accent);
-    transform-origin: left;
-    transform: scaleX(0);
-    z-index: 9999;
-    pointer-events: none;
-  `;
-  document.body.appendChild(progressBar);
-
-  gsap.to(progressBar, {
-    scaleX: 1,
-    ease: "none",
-    scrollTrigger: {
-      trigger: document.body,
-      start: "top top",
-      end: "bottom bottom",
-      scrub: 0.3,
-    },
+  const lenis = new Lenis({
+    lerp: 0.1,
+    duration: 1.2,
+    easing: easeOutCubic,
+    orientation: "vertical",
+    gestureOrientation: "vertical",
+    smoothWheel: true,
+    wheelMultiplier: 1.2,
+    smoothTouch: false,
+    touchMultiplier: 2,
+    infinite: false,
   });
 
-  // ===================================
-  // SMOOTH REVEAL: Generic reveal class handler
-  // ===================================
+  if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+    gsap.ticker.lagSmoothing(0);
+  } else {
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+  }
 
-  // Handle .reveal elements that aren't caught by other animations
-  const revealElements = document.querySelectorAll(".reveal:not(.visible)");
+  window.lenis = lenis;
 
-  revealElements.forEach((el) => {
-    if (!el.closest(".hero-section") && el !== footerBottom) {
-      // Skip hero and footer-bottom, they have custom handling
-      gsap.fromTo(
-        el,
-        { filter: "blur(10px)", opacity: 0 },
-        {
-          filter: "blur(0px)",
-          opacity: 1,
-          duration: 0.4,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 88%",
-            toggleActions: "play none none none",
-            onEnter: () => el.classList.add("visible"),
-          },
+  if (document.body.classList.contains("home")) {
+    const originalScrollIntoView = Element.prototype.scrollIntoView;
+    Element.prototype.scrollIntoView = function (options) {
+      if (options && options.behavior === "smooth") {
+        lenis.scrollTo(this, { offset: 0, duration: 1.0, easing: easeOutCubic });
+        return;
+      }
+      originalScrollIntoView.call(this, options);
+    };
+  }
+}
+
+function initHomepage() {
+  const scrollButton = document.getElementById("scroll-to-next");
+  const nextSection = document.getElementById("problem-section");
+
+  if (scrollButton && nextSection) {
+    scrollButton.addEventListener("click", () => {
+      nextSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  initHero3DEffect();
+  initHeroCanvas();
+  initAsciiTerminal();
+}
+
+function initHero3DEffect() {
+  const heroSection = document.getElementById("hero-section");
+  if (!heroSection) return;
+
+  const updateHeroTransform = () => {
+    const scrollY = getScrollY();
+    const viewportHeight = window.innerHeight;
+    const effectEnd = viewportHeight * 0.2;
+    const scrollProgress = Math.max(0, Math.min(1, scrollY / effectEnd));
+    const easedProgress = 1 - Math.pow(1 - scrollProgress, 3);
+
+    heroSection.style.setProperty("--hero-content-z", `${-easedProgress * 30}px`);
+    heroSection.style.setProperty("--hero-content-scale", 1 - easedProgress * 0.05);
+    heroSection.style.setProperty("--hero-content-opacity", 1 - easedProgress * 0.85);
+  };
+
+  const heroTop = heroSection.querySelector(".hero-top");
+  if (heroTop) {
+    heroTop.style.setProperty("transform", "none");
+    heroTop.style.setProperty("opacity", "1");
+  }
+
+  onScroll(updateHeroTransform);
+  heroSection.style.setProperty("--hero-content-z", "0px");
+  heroSection.style.setProperty("--hero-content-scale", "1");
+  heroSection.style.setProperty("--hero-content-opacity", "1");
+  updateHeroTransform();
+  window.addEventListener("resize", updateHeroTransform, { passive: true });
+}
+
+function initHeroCanvas() {
+  const canvas = document.getElementById("hero-canvas");
+  if (!canvas) return;
+
+  const ctx = canvas.getContext("2d");
+  let W, H, nodes, edges, signals, lastSpawn = 0, prevTs = 0;
+  const G = [131, 227, 107];
+
+  function rgba(r, g, b, a) { return `rgba(${r},${g},${b},${a})`; }
+
+  function buildGraph() {
+    const count = Math.round((W * H) / 28000) + 14;
+    nodes = Array.from({ length: count }, () => {
+      const cx = W * 0.06 + Math.random() * W * 0.88;
+      const cy = H * 0.06 + Math.random() * H * 0.88;
+      const rx = 18 + Math.random() * 52;
+      const ry = 12 + Math.random() * 36;
+      return {
+        cx, cy, rx, ry,
+        orbitAngle: Math.random() * Math.PI * 2,
+        orbitRotation: Math.random() * Math.PI * 2,
+        angularVel: (0.06 + Math.random() * 0.1) * (Math.random() < 0.5 ? 1 : -1),
+        x: 0, y: 0, prevX: 0, prevY: 0,
+        r: Math.random() < 0.22 ? 3.2 + Math.random() * 1.5 : 1.5 + Math.random() * 1.5,
+        phase: Math.random() * Math.PI * 2,
+      };
+    });
+
+    for (const n of nodes) updateNodePos(n, 0);
+
+    edges = [];
+    const maxD = Math.min(W, H) * 0.3;
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const d = Math.hypot(nodes[i].cx - nodes[j].cx, nodes[i].cy - nodes[j].cy);
+        if (d < maxD) {
+          const bend = (Math.random() - 0.5) * 80;
+          edges.push({ a: i, b: j, d, maxD, bend });
         }
-      );
+      }
     }
-  });
-
-  // ===================================
-  // NAV ITEMS: Fast blur-in
-  // ===================================
-
-  const navLinks = document.querySelectorAll(".nav-link");
-  const siteLogoLink = document.querySelector(".site-logo-link");
-  const navCta = document.querySelector(".nav-cta");
-
-  // Logo animation
-  if (siteLogoLink) {
-    gsap.set(siteLogoLink, {
-      filter: "blur(10px)",
-      opacity: 0,
-    });
-
-    gsap.to(siteLogoLink, {
-      filter: "blur(0px)",
-      opacity: 1,
-      duration: 0.4,
-      ease: "power2.out",
-      onComplete: () => siteLogoLink.classList.add("visible"),
-    });
+    signals = [];
   }
 
-  // Nav links animation
-  if (navLinks.length > 0) {
-    // Set initial state
-    gsap.set(navLinks, {
-      filter: "blur(10px)",
-      opacity: 0,
-    });
+  function updateNodePos(n, dt) {
+    n.prevX = n.x; n.prevY = n.y;
+    n.orbitAngle += n.angularVel * dt;
+    const cosR = Math.cos(n.orbitRotation), sinR = Math.sin(n.orbitRotation);
+    const lx = n.rx * Math.cos(n.orbitAngle);
+    const ly = n.ry * Math.sin(n.orbitAngle);
+    n.x = n.cx + lx * cosR - ly * sinR;
+    n.y = n.cy + lx * sinR + ly * cosR;
+  }
 
-    navLinks.forEach((link, index) => {
-      gsap.to(link, {
-        filter: "blur(0px)",
-        opacity: 1,
-        duration: 0.4,
-        delay: index * 0.05,
-        ease: "power2.out",
-        onComplete: () => link.classList.add("visible"),
+  function bezierPoint(ax, ay, bx, by, cx, cy, t) {
+    const mt = 1 - t;
+    return {
+      x: mt * mt * ax + 2 * mt * t * cx + t * t * bx,
+      y: mt * mt * ay + 2 * mt * t * cy + t * t * by,
+    };
+  }
+
+  function spawnSignal() {
+    if (!edges.length) return;
+    const e = edges[Math.floor(Math.random() * edges.length)];
+    const fwd = Math.random() < 0.5;
+    signals.push({ ai: fwd ? e.a : e.b, bi: fwd ? e.b : e.a, bend: e.bend, t: 0, spd: 0.003 + Math.random() * 0.004 });
+  }
+
+  function draw(ts) {
+    const dt = Math.min((ts - prevTs) / 1000, 0.05);
+    prevTs = ts;
+
+    ctx.clearRect(0, 0, W, H);
+    const t = ts * 0.001;
+
+    for (const n of nodes) updateNodePos(n, dt);
+
+    if (ts - lastSpawn > 450 + Math.random() * 300) {
+      spawnSignal();
+      if (Math.random() < 0.4) spawnSignal();
+      lastSpawn = ts;
+    }
+
+    for (const { a, b, d, maxD, bend } of edges) {
+      const na = nodes[a], nb = nodes[b];
+      const mx = (na.x + nb.x) / 2, my = (na.y + nb.y) / 2;
+      const len = Math.hypot(nb.x - na.x, nb.y - na.y) || 1;
+      const cpx = mx + (-(nb.y - na.y) / len) * bend;
+      const cpy = my + ((nb.x - na.x) / len) * bend;
+      const alpha = (1 - d / maxD) * 0.06;
+      ctx.beginPath();
+      ctx.moveTo(na.x, na.y);
+      ctx.quadraticCurveTo(cpx, cpy, nb.x, nb.y);
+      ctx.strokeStyle = rgba(...G, alpha);
+      ctx.lineWidth = 0.5;
+      ctx.stroke();
+    }
+
+    for (let i = signals.length - 1; i >= 0; i--) {
+      const s = signals[i];
+      s.t += s.spd;
+      if (s.t > 1) { signals.splice(i, 1); continue; }
+      const na = nodes[s.ai], nb = nodes[s.bi];
+      const mx = (na.x + nb.x) / 2, my = (na.y + nb.y) / 2;
+      const len = Math.hypot(nb.x - na.x, nb.y - na.y) || 1;
+      const cpx = mx + (-(nb.y - na.y) / len) * s.bend;
+      const cpy = my + ((nb.x - na.x) / len) * s.bend;
+      const pos = bezierPoint(na.x, na.y, nb.x, nb.y, cpx, cpy, s.t);
+      const fade = s.t < 0.1 ? s.t / 0.1 : s.t > 0.9 ? (1 - s.t) / 0.1 : 1;
+      const eased = 0.5 - 0.5 * Math.cos(Math.PI * s.t);
+      const radius = 8 + eased * 6;
+      const gr = ctx.createRadialGradient(pos.x, pos.y, 0, pos.x, pos.y, radius);
+      gr.addColorStop(0, rgba(...G, 0.5 * fade));
+      gr.addColorStop(1, rgba(...G, 0));
+      ctx.beginPath(); ctx.arc(pos.x, pos.y, radius, 0, Math.PI * 2);
+      ctx.fillStyle = gr; ctx.fill();
+      ctx.beginPath(); ctx.arc(pos.x, pos.y, 1.8, 0, Math.PI * 2);
+      ctx.fillStyle = rgba(...G, fade); ctx.fill();
+    }
+
+    for (const n of nodes) {
+      const pulse = 0.5 + 0.5 * Math.sin(t * 0.55 + n.phase);
+      ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = rgba(...G, 0.1 + pulse * 0.25); ctx.fill();
+      if (n.r > 3) {
+        ctx.beginPath(); ctx.arc(n.x, n.y, n.r + 5, 0, Math.PI * 2);
+        ctx.strokeStyle = rgba(...G, 0.03 + pulse * 0.07);
+        ctx.lineWidth = 0.75; ctx.stroke();
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  function resize() {
+    const rect = canvas.getBoundingClientRect();
+    W = canvas.width = rect.width;
+    H = canvas.height = rect.height;
+    buildGraph();
+  }
+
+  resize();
+  window.addEventListener("resize", resize, { passive: true });
+  requestAnimationFrame(draw);
+}
+
+function initAsciiTerminal() {
+  const output = document.getElementById("ascii-output");
+  const section = document.getElementById("ascii-section");
+  if (!output || !section) return;
+
+  const lines = [
+    { text: "$ run-design-audit --product ai-assistant --team startup", cls: "ascii-prompt", type: "char" },
+    { text: null },
+    { text: "Scanning 6 surface areas...", cls: "ascii-scanning", type: "pause", pause: 700 },
+    { text: null },
+    { text: "  SURFACE AREA             STATUS        SEVERITY", cls: "ascii-th" },
+    { text: "  " + "─".repeat(49), cls: "ascii-rule" },
+    { text: "  conversation flows       undefined   ·  HIGH", cls: "ascii-high" },
+    { text: "  agent visibility         missing     ·  HIGH", cls: "ascii-high" },
+    { text: "  error & recovery         broken      ·  CRITICAL", cls: "ascii-crit" },
+    { text: "  trust signals            absent      ·  HIGH", cls: "ascii-high" },
+    { text: "  design system            fragmented  ·  MEDIUM", cls: "ascii-med" },
+    { text: "  research cadence         inactive    ·  MEDIUM", cls: "ascii-med" },
+    { text: "  " + "─".repeat(49), cls: "ascii-rule" },
+    { text: "  6 issues  ·  1 critical  ·  3 high  ·  2 medium", cls: "ascii-summary", type: "pause", pause: 500 },
+    { text: null },
+    { text: "root cause:", cls: "ascii-label" },
+    { text: "  No design leadership dedicated to AI product surfaces.", cls: "ascii-body" },
+    { text: null },
+    { text: "recommendation:", cls: "ascii-label", type: "pause", pause: 200 },
+    { text: "  → fractional design principal  (2–3 days / week)", cls: "ascii-rec" },
+    { text: "  → immediate: conversation design + trust patterns", cls: "ascii-sub" },
+    { text: "  → 30 days:   design system alignment", cls: "ascii-sub" },
+    { text: "  → 90 days:   research pipeline + team development", cls: "ascii-sub" },
+    { text: null },
+    { text: "$ audit complete ─────────────────────────── ✓ done", cls: "ascii-done", type: "char" },
+  ];
+
+  let started = false;
+
+  async function appendLine(line) {
+    const el = document.createElement("div");
+    el.className = "ascii-line" + (line.cls ? " " + line.cls : "");
+
+    if (!line.text) {
+      el.innerHTML = "&nbsp;";
+      output.appendChild(el);
+      return;
+    }
+
+    output.appendChild(el);
+
+    if (line.type === "char") {
+      await new Promise((resolve) => {
+        let i = 0;
+        const type = () => {
+          if (i < line.text.length) {
+            el.textContent += line.text[i++];
+            setTimeout(type, 22 + Math.random() * 14);
+          } else {
+            resolve();
+          }
+        };
+        setTimeout(type, 30);
       });
-    });
+    } else {
+      el.textContent = line.text;
+    }
   }
 
-  // Nav CTA button animation
-  if (navCta) {
-    gsap.set(navCta, {
-      filter: "blur(10px)",
-      opacity: 0,
-    });
+  async function runTerminal() {
+    if (started) return;
+    started = true;
 
-    gsap.to(navCta, {
-      filter: "blur(0px)",
-      opacity: 1,
-      duration: 0.4,
-      delay: navLinks.length * 0.05,
-      ease: "power2.out",
-      onComplete: () => navCta.classList.add("visible"),
-    });
+    for (const line of lines) {
+      await appendLine(line);
+      const isDataRow = line.cls && ["ascii-high", "ascii-crit", "ascii-med"].includes(line.cls);
+      const pause = line.pause || (line.type === "char" ? 380 : isDataRow ? 45 : !line.text ? 55 : 110);
+      await new Promise((r) => setTimeout(r, pause));
+    }
   }
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      observer.disconnect();
+      runTerminal();
+    }
+  }, { threshold: 0.15 });
+
+  observer.observe(section);
 }

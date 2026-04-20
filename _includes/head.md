@@ -28,65 +28,18 @@
     }
   </style>
 
-  <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-  <!-- Load fonts from Google - Kode Mono + fallback display fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Bandeins Variable Fonts - Self-hosted -->
-  <style>
-    @font-face {
-      font-family: 'Bandeins Sans';
-      src: url('/assets/fonts/BandeinsSansVariable.woff2') format('woff2-variations'),
-           url('/assets/fonts/BandeinsSansVariable.woff2') format('woff2');
-      font-weight: 100 900;
-      font-style: normal;
-      font-display: swap;
-    }
-    
-    @font-face {
-      font-family: 'Bandeins Strange';
-      src: url('/assets/fonts/BandeinsStrangeVariable.woff2') format('woff2-variations'),
-           url('/assets/fonts/BandeinsStrangeVariable.woff2') format('woff2');
-      font-weight: 100 900;
-      font-style: normal;
-      font-display: swap;
-    }
-  </style>
-
-  <!-- Font loading optimization -->
-  <script>
-    if ("fonts" in document) {
-      document.documentElement.classList.add('fonts-loading');
-      
-      Promise.all([
-        document.fonts.load('400 1em "Bandeins Sans"'),
-        document.fonts.load('300 1em "Bandeins Sans"'),
-        document.fonts.load('600 1em "Bandeins Sans"'),
-        document.fonts.load('700 1em "Bandeins Sans"'),
-        document.fonts.load('300 1em "Bandeins Strange"'),
-        document.fonts.load('400 1em "Bandeins Strange"'),
-        document.fonts.load('600 1em "Bandeins Strange"'),
-        document.fonts.load('400 1em "Kode Mono"'),
-        document.fonts.load('400 1em "Space Grotesk"'),
-        document.fonts.load('400 1em "Syne"')
-      ]).then(() => {
-        document.documentElement.classList.remove('fonts-loading');
-        document.documentElement.classList.add('fonts-loaded');
-        document.dispatchEvent(new Event('fontsLoaded'));
-      }).catch(() => {
-        document.documentElement.classList.remove('fonts-loading');
-      });
-    }
-  </script>
   <link rel="stylesheet" href="/assets/content-preloader.css" />
   <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
   <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
   <link rel="stylesheet" href="/assets/main.css?v={{ site.version }}" expires="31536000">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" expires="31536000"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" expires="31536000"></script>
+  <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js" expires="31536000"></script>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css" expires="31536000">
   <script src="https://unpkg.com/splitting/dist/splitting.min.js" expires="31536000"></script>
   <script src="/assets/js/text-scrambler.min.js?v={{ site.version }}" expires="31536000"></script>
 

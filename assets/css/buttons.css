@@ -11,7 +11,7 @@
   font-size: 0.925rem;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  font-variation-settings: "wght" 700;
+  font-weight: 700;
   border-radius: 9999px;
   border: 1px solid transparent;
 }

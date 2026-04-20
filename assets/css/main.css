@@ -20,21 +20,19 @@
 @import "portfolio.css";
 @import "services.css";
 @import "homepage.css";
-@import "notifications.css";
-@import "legendary.css";
 
 @layer base {
   html {
-    background-color: #eef2eb;
+    background-color: var(--color-bg-page);
   }
 
   body {
     @apply text-foreground;
-    background-color: #eef2eb;
+    background-color: var(--color-bg-page);
   }
 
   body.home {
-    background-color: #eef2eb;
+    background-color: var(--color-bg-page);
   }
 
   /* Ensure all images stay within containers */
@@ -83,6 +81,12 @@
     }
   }
 
+  simple-card{
+    @apply font-normal;
+    line-height: 1.4;
+    font-size: clamp(1rem, 0.875rem + 0.4vw, 1.25rem);
+  }
+
   /* Layout Components */
   .content-container {
     @apply mx-auto 2xl:max-w-7xl sm:ml-[128px] sm:mr-[64px] 2xl:mx-auto overflow-hidden;
@@ -114,8 +118,14 @@
   }
 
   /* Button Components - Consolidated from buttons.css */
-  .button {
-    @apply cursor-pointer rounded-lg px-3 py-2 bg-foreground text-primary-500 hover:bg-primary-500 hover:text-foreground transition-colors duration-150 ease-in-out;
+  .button,
+  button {
+    @apply cursor-pointer font-bold rounded-full px-6 py-3 bg-foreground text-white hover:text-foreground transition-colors duration-150 ease-in-out;
+  }
+
+  .button:hover,
+  button:hover{
+    @apply scale-105 text-foreground bg-[var(--color-green-accent)] transition-all duration-150 ease-in-out;
   }
 
   .button svg {
@@ -376,10 +386,10 @@
 @layer overrides {
   html,
   body {
-    background-color: #eef2eb;
+    background-color: var(--color-bg-page);
   }
   
   body.home {
-    background-color: #eef2eb;
+    background-color: var(--color-bg-page);
   }
 }

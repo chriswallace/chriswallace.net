@@ -1,0 +1,206 @@
+- generic [ref=e2]:
+  - generic [ref=e3]: 🧠 Chris' Brain
+  - heading "Welcome to the Workshop" [level=1] [ref=e4]
+  - paragraph [ref=e5]: This is where ideas become systems, experiments become patterns, and scattered thoughts evolve into cohesive design. Explore the research, play with experiments, and see how design decisions unfold.
+  - img "Design System Showcase" [ref=e6]
+  - generic [ref=e7]:
+    - link "📊 Research & Analysis" [ref=e8] [cursor=pointer]:
+      - /url: "#research"
+    - link "🧪 Active Experiments" [ref=e9] [cursor=pointer]:
+      - /url: "#experiments"
+    - link "📋 Finalized Proposals" [ref=e10] [cursor=pointer]:
+      - /url: "#proposals"
+  - generic [ref=e11]:
+    - heading "Design System Research" [level=2] [ref=e12]
+    - paragraph [ref=e13]: Current implementation analysis across Web, iOS, and Android platforms. Verified metrics, component inventories, and token usage—no proposals, just facts.
+    - generic [ref=e14]:
+      - link "Cross-Platform Comparison Comprehensive analysis of Designbase implementation across all three platforms—components, tokens, and adoption metrics Multi-Platform" [ref=e15] [cursor=pointer]:
+        - /url: design-system-research/homebase-research/designbase-comparison.md
+        - generic [ref=e16]: Cross-Platform Comparison
+        - generic [ref=e17]: Comprehensive analysis of Designbase implementation across all three platforms—components, tokens, and adoption metrics
+        - generic [ref=e18]: Multi-Platform
+      - link "Android Implementation 110+ Jetpack Compose components with ~95% adoption—the most mature design system implementation Production Ready" [ref=e19] [cursor=pointer]:
+        - /url: design-system-research/homebase-research/android/android-design-system-analysis.md
+        - generic [ref=e20]: Android Implementation
+        - generic [ref=e21]: 110+ Jetpack Compose components with ~95% adoption—the most mature design system implementation
+        - generic [ref=e22]: Production Ready
+      - link "iOS Implementation 56 SwiftUI + 267 UIKit components—tracking the transition from legacy to modern Transitioning" [ref=e23] [cursor=pointer]:
+        - /url: design-system-research/homebase-research/ios/ios-design-system-analysis.md
+        - generic [ref=e24]: iOS Implementation
+        - generic [ref=e25]: 56 SwiftUI + 267 UIKit components—tracking the transition from legacy to modern
+        - generic [ref=e26]: Transitioning
+      - link "Web Component Inventory Complete catalog of 420+ legacy web components and 81 modern fe-design-base components Analysis" [ref=e27] [cursor=pointer]:
+        - /url: design-system-research/homebase-research/legacy-components/legacy-components-inventory.md
+        - generic [ref=e28]: Web Component Inventory
+        - generic [ref=e29]: Complete catalog of 420+ legacy web components and 81 modern fe-design-base components
+        - generic [ref=e30]: Analysis
+      - link "Design Token Analysis Real token usage across the Web platform—colors, spacing, typography, and more Data" [ref=e31] [cursor=pointer]:
+        - /url: design-system-research/homebase-research/design-tokens/token-usage-analysis.md
+        - generic [ref=e32]: Design Token Analysis
+        - generic [ref=e33]: Real token usage across the Web platform—colors, spacing, typography, and more
+        - generic [ref=e34]: Data
+  - generic [ref=e35]:
+    - heading "Active Experiments" [level=2] [ref=e36]
+    - paragraph [ref=e37]: The creative playground. Interactive prototypes testing new ideas—some will graduate to proposals, others teach us what doesn't work. All are valuable.
+    - generic [ref=e38]:
+      - link "Timecard Review Carousel Swipe-through card carousel for daily timecard review — approve, flag, or skip employee timecards with gesture-driven, physics-based interactions and a four-card depth stack. In Progress" [ref=e39] [cursor=pointer]:
+        - /url: design-experiments/2026-03-09-timecard-review-carousel/prototype.html
+        - img [ref=e41]
+        - generic [ref=e43]:
+          - generic [ref=e44]: Timecard Review Carousel
+          - generic [ref=e45]: Swipe-through card carousel for daily timecard review — approve, flag, or skip employee timecards with gesture-driven, physics-based interactions and a four-card depth stack.
+        - generic [ref=e47]: In Progress
+      - link "Homebase Assistant Insights Dashboard AI-powered owner dashboard surfacing operational intelligence — timecard review, coverage monitoring, labor targets, hiring signals, and weather context. In Progress" [ref=e48] [cursor=pointer]:
+        - /url: design-experiments/2026-03-06-insights-dashboard/index.html
+        - img [ref=e50]
+        - generic [ref=e55]:
+          - generic [ref=e56]: Homebase Assistant Insights Dashboard
+          - generic [ref=e57]: AI-powered owner dashboard surfacing operational intelligence — timecard review, coverage monitoring, labor targets, hiring signals, and weather context.
+        - generic [ref=e59]: In Progress
+      - link "HB Assistant User Testing V2 Refined second-round testing hub — shift fill agent V2, timecard auto-approval, staffing coverage risk, and revenue divergence detection with full week-long branching narrative. In Progress" [ref=e60] [cursor=pointer]:
+        - /url: design-experiments/hb-assistant-testing-v2/index.html
+        - img [ref=e62]
+        - generic [ref=e64]:
+          - generic [ref=e65]: HB Assistant User Testing V2
+          - generic [ref=e66]: Refined second-round testing hub — shift fill agent V2, timecard auto-approval, staffing coverage risk, and revenue divergence detection with full week-long branching narrative.
+        - generic [ref=e68]: In Progress
+      - link "HB Assistant User Testing V1 First-round curated testing hub — shift fill agent, timecard auto-approval, staffing coverage risk, and revenue divergence detection scenarios. Complete" [ref=e69] [cursor=pointer]:
+        - /url: design-experiments/hb-assistant-testing/index.html
+        - img [ref=e71]
+        - generic [ref=e73]:
+          - generic [ref=e74]: HB Assistant User Testing V1
+          - generic [ref=e75]: First-round curated testing hub — shift fill agent, timecard auto-approval, staffing coverage risk, and revenue divergence detection scenarios.
+        - generic [ref=e77]: Complete
+      - link "Time Clock Modal Top bar tab opens a picker to choose between personal clock-in/out and team kiosk mode. Kiosk mode locks the device for employee PIN-based punches. In Progress" [ref=e78] [cursor=pointer]:
+        - /url: design-experiments/2026-03-24-time-clock-modal/index.html
+        - img [ref=e80]
+        - generic [ref=e83]:
+          - generic [ref=e84]: Time Clock Modal
+          - generic [ref=e85]: Top bar tab opens a picker to choose between personal clock-in/out and team kiosk mode. Kiosk mode locks the device for employee PIN-based punches.
+        - generic [ref=e87]: In Progress
+      - link "Employee Left Nav Left nav redesign for the employee app — collapsible sidebar using hb-nav-rail, hb-nav-item, and hb-user-menu components with My Week page layout. In Progress" [ref=e88] [cursor=pointer]:
+        - /url: design-experiments/2026-03-24-employee-left-nav/index.html
+        - img [ref=e90]
+        - generic [ref=e92]:
+          - generic [ref=e93]: Employee Left Nav
+          - generic [ref=e94]: Left nav redesign for the employee app — collapsible sidebar using hb-nav-rail, hb-nav-item, and hb-user-menu components with My Week page layout.
+        - generic [ref=e96]: In Progress
+      - link "Timecard Review Flow Step-by-step timecard review flow for managers — presents timecards one at a time with approve, edit, and flag actions for end-of-day review. In Progress" [ref=e97] [cursor=pointer]:
+        - /url: design-experiments/2026-03-19-timecard-review-flow/index.html
+        - img [ref=e99]
+        - generic [ref=e102]:
+          - generic [ref=e103]: Timecard Review Flow
+          - generic [ref=e104]: Step-by-step timecard review flow for managers — presents timecards one at a time with approve, edit, and flag actions for end-of-day review.
+        - generic [ref=e106]: In Progress
+      - link "Daily Briefing — Focused Focused variant of the Homebase Assistant daily briefing — streamlined single-column layout emphasizing one priority at a time. In Progress" [ref=e107] [cursor=pointer]:
+        - /url: design-experiments/2026-03-16-daily-briefing-focused/index.html
+        - img [ref=e109]
+        - generic [ref=e115]:
+          - generic [ref=e116]: Daily Briefing — Focused
+          - generic [ref=e117]: Focused variant of the Homebase Assistant daily briefing — streamlined single-column layout emphasizing one priority at a time.
+        - generic [ref=e119]: In Progress
+      - link "Shift Fill Agent (V1) Original agentic UI for filling open shifts — Homebase Assistant autonomously identifies candidates, drafts outreach, and confirms coverage. Complete" [ref=e120] [cursor=pointer]:
+        - /url: design-experiments/hb-assistant-testing/shift-fill-agent/index.html
+        - img [ref=e122]
+        - generic [ref=e125]:
+          - generic [ref=e126]: Shift Fill Agent (V1)
+          - generic [ref=e127]: Original agentic UI for filling open shifts — Homebase Assistant autonomously identifies candidates, drafts outreach, and confirms coverage.
+        - generic [ref=e129]: Complete
+      - link "Assistant Top Bar Layout AI-assistant-first top navigation layout with Homebase Assistant chat input integrated into the app chrome. In Progress" [ref=e130] [cursor=pointer]:
+        - /url: design-experiments/2026-02-22-homebase-assistant-top-bar/prototype.html
+        - img [ref=e132]
+        - generic [ref=e136]:
+          - generic [ref=e137]: Assistant Top Bar Layout
+          - generic [ref=e138]: AI-assistant-first top navigation layout with Homebase Assistant chat input integrated into the app chrome.
+        - generic [ref=e140]: In Progress
+      - link "Cash Out Experiment Early wage access flow exploration — employees request a cash advance on earned wages before payday. In Progress" [ref=e141] [cursor=pointer]:
+        - /url: design-experiments/cash-out-experiment/index.html
+        - img [ref=e143]
+        - generic [ref=e146]:
+          - generic [ref=e147]: Cash Out Experiment
+          - generic [ref=e148]: Early wage access flow exploration — employees request a cash advance on earned wages before payday.
+        - generic [ref=e150]: In Progress
+      - link "AI Chat Thinking Animation Canvas-based thinking blob animation for iOS and Android AI chat interfaces communicating AI processing state. Complete" [ref=e151] [cursor=pointer]:
+        - /url: design-experiments/2026-02-19-ios-ai-chat-thinking-animation/prototype.html
+        - img [ref=e153]
+        - generic [ref=e155]:
+          - generic [ref=e156]: AI Chat Thinking Animation
+          - generic [ref=e157]: Canvas-based thinking blob animation for iOS and Android AI chat interfaces communicating AI processing state.
+        - generic [ref=e159]: Complete
+      - link "AI Schedule Coverage Assistant AI-powered solution for manager coverage anxiety — proactively surfaces gaps and automates shift-fill outreach. Complete" [ref=e160] [cursor=pointer]:
+        - /url: design-experiments/2026-02-16-oam-coverage-buffer-solution/authentic-schedule-ai.html
+        - img [ref=e162]
+        - generic [ref=e165]:
+          - generic [ref=e166]: AI Schedule Coverage Assistant
+          - generic [ref=e167]: AI-powered solution for manager coverage anxiety — proactively surfaces gaps and automates shift-fill outreach.
+        - generic [ref=e169]: Complete
+      - link "Left Navigation Exploration of left-side navigation patterns with collapsible sections, user profile integration, and responsive behavior. In Progress" [ref=e170] [cursor=pointer]:
+        - /url: design-experiments/left-nav/left-nav-dark.html
+        - img [ref=e172]
+        - generic [ref=e174]:
+          - generic [ref=e175]: Left Navigation
+          - generic [ref=e176]: Exploration of left-side navigation patterns with collapsible sections, user profile integration, and responsive behavior.
+        - generic [ref=e178]: In Progress
+  - generic [ref=e179]:
+    - heading "Proposals" [level=2] [ref=e180]
+    - paragraph [ref=e181]: Design proposals in various stages—from early drafts to ready-for-review. Each one represents a step toward a more cohesive, thoughtful design system.
+    - generic [ref=e182]:
+      - link "Left Navigation Exploration of left-side navigation patterns with collapsible sections, user profile integration, and responsive behavior. Includes light and dark versions. In Progress" [ref=e183] [cursor=pointer]:
+        - /url: design-experiments/left-nav/index.html
+        - img [ref=e185]
+        - generic [ref=e187]:
+          - generic [ref=e188]: Left Navigation
+          - generic [ref=e189]: Exploration of left-side navigation patterns with collapsible sections, user profile integration, and responsive behavior. Includes light and dark versions.
+        - generic [ref=e191]: In Progress
+      - link "Button System The foundation of interaction—primary, secondary, tertiary, and all the states in between Ready for Review" [ref=e192] [cursor=pointer]:
+        - /url: design-proposals/button-component/index.html
+        - img [ref=e194]
+        - generic [ref=e200]:
+          - generic [ref=e201]: Button System
+          - generic [ref=e202]: The foundation of interaction—primary, secondary, tertiary, and all the states in between
+        - generic [ref=e204]: Ready for Review
+      - link "Typography System Complete type scale with semantic tokens—from display headers to tiny captions, all perfectly balanced Ready for Review" [ref=e205] [cursor=pointer]:
+        - /url: design-proposals/typography-system/index.html
+        - img [ref=e207]
+        - generic [ref=e209]:
+          - generic [ref=e210]: Typography System
+          - generic [ref=e211]: Complete type scale with semantic tokens—from display headers to tiny captions, all perfectly balanced
+        - generic [ref=e213]: Ready for Review
+      - link "Color Palette Purple as the primary, complemented by semantic colors that meet WCAG AA accessibility standards In Feasibility" [ref=e214] [cursor=pointer]:
+        - /url: design-proposals/color-system/index.html
+        - img [ref=e216]
+        - generic [ref=e222]:
+          - generic [ref=e223]: Color Palette
+          - generic [ref=e224]: Purple as the primary, complemented by semantic colors that meet WCAG AA accessibility standards
+        - generic [ref=e226]: In Feasibility
+      - link "Spacing System The 8px grid that holds everything together—consistent spacing tokens for layouts that breathe Ready for Review" [ref=e227] [cursor=pointer]:
+        - /url: design-proposals/dimension-spacing/index.html
+        - img [ref=e229]
+        - generic [ref=e235]:
+          - generic [ref=e236]: Spacing System
+          - generic [ref=e237]: The 8px grid that holds everything together—consistent spacing tokens for layouts that breathe
+        - generic [ref=e239]: Ready for Review
+      - link "Icon Library Phosphor icons throughout—consistent sizing, semantic naming, and 500+ carefully mapped icons Ready for Review" [ref=e240] [cursor=pointer]:
+        - /url: design-proposals/icon-system/index.html
+        - img [ref=e242]
+        - generic [ref=e245]:
+          - generic [ref=e246]: Icon Library
+          - generic [ref=e247]: Phosphor icons throughout—consistent sizing, semantic naming, and 500+ carefully mapped icons
+        - generic [ref=e249]: Ready for Review
+      - link "Split-Screen Layout Responsive container pattern for side-by-side content—perfect for forms, comparisons, and workflows Draft" [ref=e250] [cursor=pointer]:
+        - /url: design-proposals/split-screen-container/index.html
+        - img [ref=e252]
+        - generic [ref=e254]:
+          - generic [ref=e255]: Split-Screen Layout
+          - generic [ref=e256]: Responsive container pattern for side-by-side content—perfect for forms, comparisons, and workflows
+        - generic [ref=e258]: Draft
+      - link "MUI v7 Migration Upgrade from Material-UI v5 to v7 for zero-runtime performance with Pigment CSS, 40-60% faster loads, and modern tooling Ready for Review" [ref=e259] [cursor=pointer]:
+        - /url: design-proposals/mui-v7-migration/index.html
+        - img [ref=e261]
+        - generic [ref=e263]:
+          - generic [ref=e264]: MUI v7 Migration
+          - generic [ref=e265]: Upgrade from Material-UI v5 to v7 for zero-runtime performance with Pigment CSS, 40-60% faster loads, and modern tooling
+        - generic [ref=e267]: Ready for Review
+  - contentinfo [ref=e268]:
+    - paragraph [ref=e269]: Crafted with care by Chris Wallace
+    - paragraph [ref=e270]: Design systems for Web, iOS, and Android • February 2026

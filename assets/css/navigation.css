@@ -351,7 +351,7 @@
 .site-logo-text {
   @apply text-white font-heading font-semibold tracking-tight no-underline;
   font-size: 1.5rem; /* 24px base */
-  font-variation-settings: "wght" 600, "wdth" 125;
+  font-weight: 600;
 }
 
 /* Reduce logo text size on large screens */
@@ -661,13 +661,13 @@ body.portfolio-page .site-navbar.scrolled .site-logo-img .design-text {
 
 .mobile-menu-link {
   @apply text-white font-heading no-underline py-3 text-center inline-block text-subheading;
-  font-variation-settings: "wght" 300, "wdth" 125;
+  font-weight: 300;
   opacity: 0;
   transition: opacity 0.2s ease, color 0.2s ease;
 }
 
 .mobile-menu-link.active {
-  font-variation-settings: "wght" 700, "wdth" 125;
+  font-weight: 700;
   position: relative;
 }
 
