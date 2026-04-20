@@ -535,8 +535,6 @@ button.problem-cta-link:hover,
 }
 
 .approach-quote-col {
-  position: sticky;
-  top: 5rem;
   align-self: start;
 }
 
