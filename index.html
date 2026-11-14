@@ -139,6 +139,7 @@ ol { padding: 0; list-style: none; }
   font-size: var(--data-size);
   font-weight: 500;
 }
+.top nav { display: flex; gap: var(--s6); }
 .top a { text-decoration-line: none; padding: var(--s3) 0; }
 @media (hover: hover) and (pointer: fine) {
   .top a:hover { text-decoration-line: underline; }
@@ -263,7 +264,10 @@ ol { padding: 0; list-style: none; }
   <section class="open">
     <header class="top">
       <span>Chris Wallace</span>
-      <a href="#next">Contact</a>
+      <nav>
+        <a href="/bio/">About</a>
+        <a href="#next">Contact</a>
+      </nav>
     </header>
     <h1 class="statement">I make things for screens that don’t have rules yet.</h1>
     <p class="lede">Every few years a new kind of screen arrives, and nobody knows how to design for it yet. That is where I have worked for fourteen years.</p>
