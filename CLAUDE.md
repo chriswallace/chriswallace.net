@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## About This Project
 
-Personal portfolio/business site for Chris Wallace (fractional design leadership) built with Jekyll 4.3, Tailwind CSS v3, and GSAP animations.
+Personal site for Chris Wallace (designer and founder, now building Homebase Assistant). The public site is a single standalone page, `index.html`, served through Jekyll 4.3. The Tailwind CSS v3 and GSAP pipeline described below belongs to the previous multi-page site and is no longer used by the page.
 
 ## Development Commands
 
