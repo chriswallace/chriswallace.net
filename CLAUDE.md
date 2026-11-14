@@ -50,7 +50,6 @@ In production (`jekyll.environment == 'production'`), `_includes/scripts.md` loa
 - `_layouts/`: `home.md`, `page.md`, `post.md`, `normal.md`, `full-width.md`, `greensock.md`, `interplay.md`, `naked.md`, `default.md`, `compress.html`
 - `_includes/`: `head.md` (meta, CSS, CDN scripts), `header.md`, `footer.md`, `scripts.md` (JS loading)
 - `index.html`: The whole public site. A standalone page (inline CSS, JS and font, no front matter), so Jekyll copies it as-is and the layouts, includes and asset pipeline below are not used by it. Each `.seg` section holds one statement in a fixed `.panel`; scroll position fades panels, lights the statement's words, and regroups the 25 dots drawn on the `#people` canvas. The script also slows the mouse wheel (`GEAR`, `WEIGHT`); touch, keyboard and reduced-motion users get native scrolling
-- `assets/fonts/wallace-display/`: Source and build script for Wallace Display, the statement font (a cut of Epilogue with custom ligatures). `index.html` embeds it and Epilogue as base64. Do not set `letter-spacing` on statements: it disables the ligatures
 - `404.html`: Standalone page that sends any unknown URL to the homepage
 - `vercel.json`: Permanent redirects from the old page URLs (`/bio`, `/portfolio/*`, `/articles/*`, `/art/*`, etc.) to `/`
 - `_site/`: Jekyll build output (do not edit directly)
