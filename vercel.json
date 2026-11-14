@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:section(bio|resume|contact|design-services|fractional-cdo|portfolio|articles|art|font-test.html):rest(/.*)?",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
