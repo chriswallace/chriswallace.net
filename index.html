@@ -26,6 +26,7 @@
   --ink: #ffffff;         /* text, people */
   --ink-soft: #c5ccff;    /* secondary text, tinted from the canvas */
   --rule: rgb(255 255 255 / 0.38); /* faint rules and links between people */
+  --night: #05060d;       /* the page during the film */
   --live: #ffe600;        /* the one live mark: Chris */
   --unlit: 0.26;          /* a word before the scroll reaches it */
 
@@ -168,6 +169,8 @@ ol { padding: 0; list-style: none; }
 }
 .panel--words .say { max-width: 26ch; font-size: var(--impact-size); }
 .panel--xl .say, .end .say { max-width: 16ch; font-size: var(--display-size); line-height: 1.06; }
+.say a { text-decoration-thickness: 0.06em; text-underline-offset: 0.14em; }
+.say.is-on a { pointer-events: auto; }   /* only the line on screen has live links */
 .lines { display: grid; gap: var(--s6); }
 .js .lines { gap: 0; }
 .js .lines > .say { grid-area: 1 / 1; align-self: start; opacity: 0; }
@@ -216,34 +219,68 @@ ol { padding: 0; list-style: none; }
 .panel--story .stage { margin-inline: calc(var(--gutter) * -1); }
 .panel--story .text { display: grid; align-content: start; }
 
-/* the work: a plain index. It and the close slide over the held panels. */
-.work, .end {
+/* the page goes dark for the film */
+#dark {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: var(--night);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* art: the lines sit above a strip of Interplay pieces that crosses the screen as you scroll */
+.panel--art {
+  grid-template-rows: auto minmax(0, 1fr);
+  align-content: stretch;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+.panel--art .lines { align-self: start; }
+.strip {
+  display: flex;
+  gap: var(--s6);
+  align-self: end;
+  width: max-content;
+  padding-bottom: var(--gutter);
+  will-change: transform;
+}
+.strip img {
+  display: block;
+  height: min(46svh, 34rem);
+  width: auto;
+  outline: 1px solid rgb(255 255 255 / 0.1);
+  outline-offset: -1px;
+}
+
+/* film: six short loops from Woodies: Origin, laid out off the grid */
+.reel { position: relative; }
+.clip {
+  position: absolute;
+  width: 46%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  opacity: 0;
+  outline: 1px solid rgb(255 255 255 / 0.1);
+  outline-offset: -1px;
+}
+.clip--1 { left: 2%;  top: 16%; width: 52%; }
+.clip--2 { left: 50%; top: 8%;  width: 44%; }
+.clip--3 { left: 30%; top: 40%; width: 58%; }
+.clip--4 { left: 0;   top: 62%; width: 40%; }
+.clip--5 { left: 56%; top: 66%; width: 42%; }
+.clip--6 { left: 16%; top: 30%; width: 34%; }
+
+@media (max-width: 899px) {
+  .panel--film { padding-top: var(--bar); }   /* keep the clips clear of the name and the contact link */
+}
+
+/* the close slides over the held panels */
+.end {
   position: relative;
   z-index: 2;
   background: var(--signal);
-}
-.work { padding: var(--s16) var(--gutter); }
-.work h2 { margin-bottom: var(--s8); font-size: var(--body-size); line-height: 1.4; }
-.work ol { border-top: 1px solid var(--rule); }
-.work li {
-  display: grid;
-  grid-template-columns: var(--when-col) minmax(0, 1fr);
-  column-gap: var(--s4);
-  row-gap: var(--s2);
-  padding-block: var(--s4);
-  border-bottom: 1px solid var(--rule);
-}
-.work h3 { font-size: var(--body-size); font-weight: 400; line-height: 1.4; }
-.when {
-  font-size: var(--body-size);
-  font-variant-numeric: tabular-nums;
-  line-height: 1.4;
-}
-.work .note {
-  line-height: 1.4;
-  grid-column: 2;
-  max-width: 56ch;
-  text-wrap: pretty;
 }
 
 /* the close */
@@ -286,8 +323,6 @@ ol { padding: 0; list-style: none; }
   .panel--story .stage { grid-column: 2; grid-row: 1; margin-inline: 0; }
   .panel--story .text { grid-column: 1; grid-row: 1; align-content: center; }
 
-  .work li { grid-template-columns: var(--when-col) minmax(0, 18rem) minmax(0, 1fr); }
-  .work .note { grid-column: 3; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -298,9 +333,10 @@ ol { padding: 0; list-style: none; }
 </head>
 <body>
 <script>document.documentElement.classList.add("js");</script>
+<div id="dark" aria-hidden="true"></div>
 <canvas id="frame" aria-hidden="true"></canvas>
 <p id="frame-label" aria-hidden="true"></p>
-<a class="skip" href="#work">Skip to the work</a>
+<a class="skip" href="#next">Skip to contact</a>
 
 <header class="top">
   <span>Chris Wallace</span>
@@ -350,14 +386,24 @@ ol { padding: 0; list-style: none; }
     </div>
   </section>
 
-  <section class="seg" data-state="art" style="--len: 148">
-    <div class="panel panel--story">
-      <div class="stage" aria-hidden="true"></div>
-      <div class="text lines">
+  <section class="seg" data-state="art" style="--len: 210">
+    <div class="panel panel--art">
+      <div class="lines">
         <h2 class="say">Art is where it starts for me.</h2>
-        <p class="say">I make art with code and with AI, and I collect it.</p>
+        <p class="say">These are from Interplay, a series I draw with code.</p>
+        <p class="say">I make art with code and with AI, and I <a href="https://wallacemuseum.com" target="_blank" rel="noopener">collect it</a>.</p>
         <p class="say">A good piece changes how I see things.</p>
         <p class="say">I want what I build to do some of that.</p>
+      </div>
+      <div class="strip">
+        <img src="assets/images/interplay/interplay-1.webp" alt="Interplay, seed ooUcBUDj" width="520" height="736" loading="lazy" decoding="async">
+        <img src="assets/images/interplay/interplay-2.webp" alt="Interplay, seed ootRWmXJ" width="520" height="736" loading="lazy" decoding="async">
+        <img src="assets/images/interplay/interplay-3.webp" alt="Interplay, seed ooHShs31" width="520" height="736" loading="lazy" decoding="async">
+        <img src="assets/images/interplay/interplay-4.webp" alt="Interplay, seed ooKwWQ25" width="520" height="736" loading="lazy" decoding="async">
+        <img src="assets/images/interplay/interplay-5.webp" alt="Interplay, seed ooyRfXTg" width="520" height="736" loading="lazy" decoding="async">
+        <img src="assets/images/interplay/interplay-6.webp" alt="Interplay, seed ooh484De" width="520" height="736" loading="lazy" decoding="async">
+        <img src="assets/images/interplay/interplay-7.webp" alt="Interplay, seed ootLP1nR" width="520" height="736" loading="lazy" decoding="async">
+        <img src="assets/images/interplay/interplay-8.webp" alt="Interplay, seed oooM8ZmF" width="520" height="736" loading="lazy" decoding="async">
       </div>
     </div>
   </section>
@@ -374,7 +420,7 @@ ol { padding: 0; list-style: none; }
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
-        <h2 class="say">At 10up, I grew a design team from 5 people to 25.</h2>
+        <h2 class="say">At <a href="https://10up.com" target="_blank" rel="noopener">10up</a>, I grew a design team from 5 people to 25.</h2>
         <p class="say">The projects were good.</p>
         <p class="say">The real success was watching designers grow, take the lead, and push each other.</p>
       </div>
@@ -392,11 +438,30 @@ ol { padding: 0; list-style: none; }
     </div>
   </section>
 
+  <section class="seg" data-state="film" style="--len: 178">
+    <div class="panel panel--story panel--film">
+      <div class="stage reel" aria-hidden="true">
+        <video class="clip clip--1" src="assets/video/woodies/clip-1.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
+        <video class="clip clip--2" src="assets/video/woodies/clip-2.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
+        <video class="clip clip--3" src="assets/video/woodies/clip-3.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
+        <video class="clip clip--4" src="assets/video/woodies/clip-4.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
+        <video class="clip clip--5" src="assets/video/woodies/clip-5.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
+        <video class="clip clip--6" src="assets/video/woodies/clip-6.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
+      </div>
+      <div class="text lines">
+        <h2 class="say">We made <a href="https://woodiesofficial.com" target="_blank" rel="noopener">Woodies</a>, characters that began on the blockchain.</h2>
+        <p class="say">Then they outgrew it.</p>
+        <p class="say"><a href="https://www.youtube.com/watch?v=encMCWoBc3o" target="_blank" rel="noopener">Woodies: Origin</a> put them in a short film.</p>
+        <p class="say">Official Selection, Aesthetica Short Film Festival 2023.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="seg" data-state="roblox" style="--len: 116">
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
-        <h2 class="say">At Roblox, I worked on avatars.</h2>
+        <h2 class="say">At <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox</a>, I worked on avatars.</h2>
         <p class="say">My job was to make creating one easier.</p>
         <p class="say">I cared just as much about how the team worked together.</p>
       </div>
@@ -415,7 +480,7 @@ ol { padding: 0; list-style: none; }
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
-        <h2 class="say">Now I’m building Homebase Assistant.</h2>
+        <h2 class="say">Now I’m building <a href="https://joinhomebase.com" target="_blank" rel="noopener">Homebase Assistant</a>.</h2>
         <p class="say">It does the desk work for hourly teams: schedules, timecards, shift cover, hiring.</p>
         <p class="say">The owner still makes the call.</p>
         <p class="say">It launched on October 20, 2026.</p>
@@ -431,47 +496,6 @@ ol { padding: 0; list-style: none; }
         <p class="say">Make the first version.</p>
       </div>
     </div>
-  </section>
-
-  <section class="work" id="work">
-    <h2>The work</h2>
-    <ol>
-      <li>
-        <p class="when"><time datetime="2012">2012</time></p>
-        <h3>Story Sync</h3>
-        <p class="note">A companion to live TV for AMC, designed by Lift UX, the studio I founded. Emmy nominations for The Walking Dead Story Sync and Mad Men: The Fan Cut.</p>
-      </li>
-      <li>
-        <p class="when"><time datetime="2017">2017</time></p>
-        <h3>10up</h3>
-        <p class="note">Four years leading experience design. WordPress projects for Microsoft, Google, Starbucks and the California DMV.</p>
-      </li>
-      <li>
-        <p class="when"><time datetime="2021">2021</time></p>
-        <h3>UltraDAO Studios and Woodies</h3>
-        <p class="note">A creative studio and its characters. NFT NYC 2022 award, Best Environmental Initiative from an NFT Project.</p>
-      </li>
-      <li>
-        <p class="when"><time datetime="2023">2023</time></p>
-        <h3>Woodies: Origin</h3>
-        <p class="note">A short film. I was executive producer. Official Selection, Aesthetica Short Film Festival 2023.</p>
-      </li>
-      <li>
-        <p class="when"><time datetime="2025">2025</time></p>
-        <h3>Roblox</h3>
-        <p class="note">The creator experience for avatars.</p>
-      </li>
-      <li>
-        <p class="when"><time datetime="2026">2026</time></p>
-        <h3>Homebase Assistant</h3>
-        <p class="note">Designed and built since January 2026. Launched on October 20, 2026.</p>
-      </li>
-      <li>
-        <p class="when">Ongoing</p>
-        <h3>Art and games</h3>
-        <p class="note">Art made with code and with AI. Games, including Lofty Ambitions.</p>
-      </li>
-    </ol>
   </section>
 
   <section class="end" id="next">
@@ -502,7 +526,7 @@ ol { padding: 0; list-style: none; }
 
   var topBar = document.querySelector(".top");
   var nameMark = document.querySelector(".top span");
-  var work = document.querySelector(".work");
+  var dark = document.getElementById("dark");
   var end = document.querySelector(".end");
   var endSay = document.querySelector(".end .say");
 
@@ -515,17 +539,26 @@ ol { padding: 0; list-style: none; }
 
   /* ---------- statements: split into words that light up ---------- */
 
-  function split(el) {
-    var words = el.textContent.trim().split(/\s+/);
-    el.textContent = "";
-    return words.map(function (word, i) {
-      var span = document.createElement("span");
-      span.className = "w";
-      span.textContent = word;
-      el.appendChild(span);
-      if (i < words.length - 1) el.appendChild(document.createTextNode(" "));
-      return span;
-    });
+  function split(el) {            // keeps links: the words inside a link stay inside it
+    var out = [];
+    (function walk(node) {
+      Array.prototype.slice.call(node.childNodes).forEach(function (child) {
+        if (child.nodeType === 1) { walk(child); return; }
+        if (child.nodeType !== 3) return;
+        var frag = document.createDocumentFragment();
+        child.textContent.split(/(\s+)/).forEach(function (part) {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(" ")); return; }
+          var span = document.createElement("span");
+          span.className = "w";
+          span.textContent = part;
+          frag.appendChild(span);
+          out.push(span);
+        });
+        node.replaceChild(frag, child);
+      });
+    })(el);
+    return out;
   }
   function light(words, amount) {       // amount 0..1 of the words are lit
     var count = Math.round(words.length * clamp(amount));
@@ -541,6 +574,8 @@ ol { padding: 0; list-style: none; }
       state: el.getAttribute("data-state"),
       panel: el.querySelector(".panel"),
       stage: el.querySelector(".stage"),
+      strip: el.querySelector(".strip"),
+      clips: Array.prototype.slice.call(el.querySelectorAll(".clip")),
       lines: Array.prototype.slice.call(el.querySelectorAll(".say")).map(function (say) { return { el: say, words: split(say) }; }),
       first: i === 0,
       last: i === all.length - 1
@@ -556,14 +591,14 @@ ol { padding: 0; list-style: none; }
   var STATES = {
     open:     { ratio: 0 },
     ask:      { ratio: 9 / 16,  label: "9:16",  draw: "second" },
-    make:     { ratio: 4 / 3,   label: "4:3",   draw: "game" },
-    art:      { ratio: 4 / 5,   label: "4:5",   draw: "canvas" },
+    make:     { ratio: 4 / 3,   label: "4:3. Click to jump.", draw: "game" },
+    art:      { ratio: 0, hidden: true },      // the art itself is on screen
     quiet:    { ratio: 0 },
     tenup:    { ratio: 16 / 10, label: "16:10", draw: "web" },
     ultra:    { ratio: 1,       label: "1:1",   draw: "chain" },
+    film:     { ratio: 0, hidden: true },      // the film itself is on screen
     roblox:   { ratio: 16 / 9,  label: "16:9",  draw: "avatar" },
     homebase: { ratio: 3 / 4,   label: "3:4",   draw: "assistant" },
-    work:     { ratio: 0, hidden: true },
     end:      { ratio: 0 }
   };
   var NAMES = Object.keys(STATES);
@@ -577,6 +612,7 @@ ol { padding: 0; list-style: none; }
   var rect = null;           // the frame as drawn now
   var shown = 1;             // how visible the frame is
   var raf = 0, last = 0;
+  var hop = 0;               // 1..0 while the player in the game drawing is in the air
 
   function resize() {
     vw = document.documentElement.clientWidth;
@@ -608,6 +644,7 @@ ol { padding: 0; list-style: none; }
       var n = s.lines.length;
       var slot = Math.min(n - 1, Math.floor(q * n)), t = q * n - slot;
       s.lines.forEach(function (line, j) {
+        line.el.classList.toggle("is-on", on && j === slot);
         if (!on || j !== slot) { line.el.style.opacity = 0; return; }
         var opening = s.first && j === 0, closing = s.last && j === n - 1;
         var fadeIn = opening ? 1 : ease(t / 0.12), fadeOut = closing ? 1 : 1 - ease((t - 0.88) / 0.12);
@@ -616,17 +653,36 @@ ol { padding: 0; list-style: none; }
       });
     });
 
-    var workTop = work.getBoundingClientRect().top;
+    // art: the strip of pieces crosses the screen once over the section
+    segs.forEach(function (s) {
+      if (!s.strip || s !== current) return;
+      var travel = Math.max(0, s.strip.scrollWidth - vw * 0.72);
+      s.strip.style.transform = "translate3d(" + Math.round(vw * 0.28 - travel * (still ? 0.3 : q)) + "px, 0, 0)";
+    });
+    // film: the page goes dark, and the clips come up one after another and play
+    var night = 0;
+    segs.forEach(function (s) {
+      if (!s.clips.length) return;
+      var on = s === current;
+      if (on) night = Math.min(ease(q / 0.12), 1 - ease((q - 0.9) / 0.1));
+      s.clips.forEach(function (clip, i) {
+        var up = on ? ease((q - 0.06 - i * 0.13) / 0.08) * (1 - ease((q - 0.9) / 0.08)) : 0;
+        clip.style.opacity = up;
+        if (up > 0.02 && clip.paused && !still) { var playing = clip.play(); if (playing && playing.catch) playing.catch(function () {}); }
+        if (up <= 0.02 && !clip.paused) clip.pause();
+      });
+    });
+    dark.style.opacity = night;
+
     var endBox = end.getBoundingClientRect();
     var sayTop = endSay.getBoundingClientRect().top;
     light(endWords, still ? 1 : ((vh - endBox.top) / endBox.height - 0.35) / 0.5);
-    var fade = 1 - clamp((vh * 0.5 - workTop) / (vh * 0.25));
+    var fade = 1 - clamp((vh * 0.5 - endBox.top) / (vh * 0.25));
     topBar.style.opacity = fade;
     topBar.style.pointerEvents = fade < 0.5 ? "none" : "";
 
     var name = current.state;
     if (endBox.top < vh * 0.55) name = "end";
-    else if (workTop < vh * 0.62) name = "work";
     active = name;
     progress = still ? 0.6 : q;
 
@@ -686,6 +742,7 @@ ol { padding: 0; list-style: none; }
     });
     var want = STATES[active].hidden ? 0 : 1;
     if (Math.abs(want - shown) > 0.01) { shown += (want - shown) * (snap ? 1 : 1 - Math.exp(-dt / 90)); moving = true; } else { shown = want; }
+    if (hop > 0) { hop = Math.max(0, hop - dt / 520); moving = true; }
     draw();
     if (moving) { raf = requestAnimationFrame(step); } else { last = 0; }
   }
@@ -933,6 +990,7 @@ ol { padding: 0; list-style: none; }
         ctx.fillRect(d[0] - 1, d[1] - 1, 2, 2);
       }
       var pos = at(p);
+      pos[1] -= Math.sin(hop * Math.PI) * r.h * 0.26;   // a click makes the player jump
       ctx.globalAlpha = k;
       ctx.fillStyle = LIVE;
       ctx.fillRect(pos[0] - s / 2, pos[1] - s / 2, s, s);
@@ -1009,6 +1067,9 @@ ol { padding: 0; list-style: none; }
     window.addEventListener(type, glideStop, { passive: true });
   });
 
+  window.addEventListener("pointerdown", function (e) {
+    if (active === "make" && hop === 0 && !(e.target.closest && e.target.closest("a"))) { hop = 1; kick(); }
+  });
   window.addEventListener("scroll", kick, { passive: true });
   window.addEventListener("resize", resize);
   if (reduce.addEventListener) reduce.addEventListener("change", kick);
