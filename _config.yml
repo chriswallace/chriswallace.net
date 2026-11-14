@@ -16,7 +16,7 @@ version: 4.3.5
 # in the templates via {{ site.myvariable }}.
 title: Chris Wallace
 email: chris@chriswallace.net
-description: Chris Wallace makes things for screens that don't have rules yet. Designer and founder, now building Homebase Assistant.
+description: Chris Wallace is a designer and founder who makes things that don't have rules yet. Now building Homebase Assistant.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://chriswallace.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: chriswallace
