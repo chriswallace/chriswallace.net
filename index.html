@@ -318,18 +318,18 @@ ol { padding: 0; list-style: none; }
         <h2>The game</h2>
         <p>I build games too. Lofty Ambitions is one of them. A screen, rules you invent, and a player who decides whether to stay.</p>
       </li>
-      <li class="chapter" data-state="voice">
+      <li class="chapter" data-state="next">
         <p class="when">Next</p>
-        <h2>No screen at all</h2>
-        <p>The next interfaces are ones you talk to. Voice and audio have no frame, no layout and almost no rules yet.</p>
-        <p class="role">That is where I’m headed.</p>
+        <h2>No fixed shape</h2>
+        <p>The next interface might not be a screen at all. It could take any form.</p>
+        <p class="role">Whatever arrives, that is where I’m headed.</p>
       </li>
     </ol>
   </div>
 
   <section class="end" id="next">
     <h2>What comes next doesn’t have rules yet.</h2>
-    <p class="lede">Screen or no screen, someone is building it now. If that’s you, write to me at chris@chriswallace.net.</p>
+    <p class="lede">Whatever it turns out to be, someone is building it now. If that’s you, write to me at chris@chriswallace.net.</p>
     <a class="write" href="mailto:chris@chriswallace.net">Let’s connect</a>
     <p class="colophon">The frame is drawn in code on a canvas. It ends as the shape of your screen, for now. Set in Archivo.</p>
   </section>
@@ -368,7 +368,7 @@ ol { padding: 0; list-style: none; }
     assistant: { ratio: 3 / 4,    label: "3:4" },
     canvas:    { ratio: 4 / 5,    label: "4:5" },
     game:      { ratio: 4 / 3,    label: "4:3" },
-    voice:     { ratio: 64,       label: "No screen" },
+    next:      { ratio: 1,        label: "No fixed shape" },
     end:       { ratio: 0,        label: "" }
   };
   var NAMES = Object.keys(STATES);
@@ -445,13 +445,12 @@ ol { padding: 0; list-style: none; }
       w = h * st.ratio;
       return { x: cx + h * 1.45 * 0.2 - w / 2, y: cy - h / 2, w: w, h: h };
     }
-    w = Math.min(bw, bh * st.ratio);
-    h = w / st.ratio;
+    var ratio = st.ratio;
+    if (active === "next") ratio = Math.exp(Math.log(9 / 16) + (Math.log(2.39) - Math.log(9 / 16)) * progress);
+    w = Math.min(bw, bh * ratio);
+    h = w / ratio;
     return { x: cx - w / 2, y: cy - h / 2, w: w, h: h };
   }
-
-  // How far the sound reaches above and below the closed frame.
-  function reach() { return Math.min(region.h * 0.22, 120); }
 
   function step(now) {
     raf = 0;
@@ -733,17 +732,20 @@ ol { padding: 0; list-style: none; }
     }
   };
 
-  // Next. The frame closes to a line, and sound passes through it. One bar is the moment being heard.
-  DRAW.voice = function (r, k, p) {
-    var N = 48, cy = r.y + r.h / 2, amp = reach();
-    var now = Math.min(N - 1, Math.floor(p * N));
-    for (var i = 0; i < N; i++) {
-      if (i >= k * N) break;
-      var x = r.x + r.w * (i + 0.5) / N;
-      var a = amp * (0.08 + 0.92 * Math.abs(Math.sin(i * 0.55 + p * 5) * Math.sin(i * 0.13 + 1.2 + p * 2)));
-      ctx.strokeStyle = i === now ? LIVE : INK;
-      ctx.globalAlpha = (i === now ? 1 : 0.75) * k;
-      seg(x, cy - a, x, cy + a);
+  // Next. The frame opens: only its corners stay, its shape keeps changing, and the marks leave it.
+  DRAW.next = function (r, k, p) {
+    var rnd = rand(23), cx = r.x + r.w / 2, cy = r.y + r.h / 2;
+    var spread = 0.55 + 0.75 * p, d = 5;
+    for (var i = 0; i < 26; i++) {
+      var px = cx + (rnd() - 0.5) * r.w * spread, py = cy + (rnd() - 0.5) * r.h * spread;
+      if (i >= 26 * k) continue;
+      if (i === 9) {
+        ctx.globalAlpha = k; ctx.fillStyle = LIVE;
+        ctx.fillRect(px - d, py - d, d * 2, d * 2);
+      } else {
+        ctx.globalAlpha = 0.8 * k; ctx.strokeStyle = INK;
+        ctx.strokeRect(px - d, py - d, d * 2, d * 2);
+      }
     }
   };
 
@@ -765,7 +767,20 @@ ol { padding: 0; list-style: none; }
     ctx.globalAlpha = 1;
     ctx.strokeStyle = INK;
     ctx.lineWidth = 2;
+    var open = presence.next;
+    ctx.globalAlpha = 1 - open;
     ctx.strokeRect(rect.x, rect.y, rect.w, rect.h);
+    if (open > 0.01) {
+      var c = Math.min(rect.w, rect.h) * 0.14;
+      var x1 = rect.x, y1 = rect.y, x2 = rect.x + rect.w, y2 = rect.y + rect.h;
+      ctx.globalAlpha = open;
+      ctx.beginPath();
+      ctx.moveTo(x1, y1 + c); ctx.lineTo(x1, y1); ctx.lineTo(x1 + c, y1);
+      ctx.moveTo(x2 - c, y1); ctx.lineTo(x2, y1); ctx.lineTo(x2, y1 + c);
+      ctx.moveTo(x2, y2 - c); ctx.lineTo(x2, y2); ctx.lineTo(x2 - c, y2);
+      ctx.moveTo(x1 + c, y2); ctx.lineTo(x1, y2); ctx.lineTo(x1, y2 - c);
+      ctx.stroke();
+    }
 
     // the label
     ctx.font = "500 15px Archivo, Helvetica Neue, Arial, sans-serif";
@@ -779,7 +794,7 @@ ol { padding: 0; list-style: none; }
       ctx.globalAlpha = k;
       if (st.ratio) {
         ctx.textAlign = "left";
-        ctx.fillText(text, rect.x, rect.y + rect.h + 22 + (n === "voice" ? reach() : 0));
+        ctx.fillText(text, rect.x, rect.y + rect.h + 22);
       } else {
         ctx.textAlign = "right";
         ctx.fillText(text, rect.x + rect.w - 16, rect.y + rect.h - 16);
