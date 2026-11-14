@@ -139,7 +139,6 @@ ol { padding: 0; list-style: none; }
   font-size: var(--data-size);
   font-weight: 500;
 }
-.top nav { display: flex; gap: var(--s6); }
 .top a { text-decoration-line: none; padding: var(--s3) 0; }
 @media (hover: hover) and (pointer: fine) {
   .top a:hover { text-decoration-line: underline; }
@@ -264,13 +263,10 @@ ol { padding: 0; list-style: none; }
   <section class="open">
     <header class="top">
       <span>Chris Wallace</span>
-      <nav>
-        <a href="/bio/">About</a>
-        <a href="#next">Contact</a>
-      </nav>
+      <a href="#next">Contact</a>
     </header>
     <h1 class="statement">I make things for screens that don’t have rules yet.</h1>
-    <p class="lede">Every few years a new kind of screen arrives, and nobody knows how to design for it yet. That is where I have worked for fourteen years.</p>
+    <p class="lede">Hi, I’m Chris. For over twenty years I’ve designed for new kinds of screens, and built design organizations where talented people can do their best work. I believe the best products come from the best teams.</p>
   </section>
 
   <div class="timeline" id="work">
@@ -285,20 +281,26 @@ ol { padding: 0; list-style: none; }
       <li class="chapter" data-state="web">
         <p class="when"><time datetime="2017">2017</time></p>
         <h2>The open web, at enterprise scale</h2>
-        <p>Then 10up acquired Lift UX, and the problem changed. The question was no longer what one screen could do. It was how to keep the craft on WordPress projects the size of the California DMV, Starbucks and Microsoft.</p>
-        <p class="role">VP, Experience Design, for four years. The team grew from 5 designers to 20, in 16 countries. I learned to design the team that designs the work.</p>
+        <p>Then 10up acquired Lift UX, and the problem changed from one screen to many people. As VP, Experience Design, I spent four years creating processes and culture that enabled us to deliver exceptional WordPress work for clients like Microsoft, Google, Starbucks and the California DMV.</p>
+        <p class="role">The team grew from 5 designers to 20, in 16 countries. The real success wasn’t just the projects—it was watching designers grow, take on leadership roles, and push each other to new levels of craft.</p>
       </li>
       <li class="chapter" data-state="chain">
         <p class="when"><time datetime="2021">2021</time></p>
         <h2>The chain</h2>
-        <p>Then a screen became something you could own. I founded UltraDAO Studios, a creative studio for entertainment IP and digital collectibles, and I founded Woodies, whose characters began on the blockchain.</p>
-        <p class="role">Founder and design director. NFT NYC 2022 award, Best Environmental Initiative from an NFT Project. I still collect and curate art on the chain.</p>
+        <p>Then a screen became something you could own. I founded UltraDAO Studios and built a creative team from scratch that generated $2.6M in six months while maintaining uncompromising quality standards. I also founded Woodies, whose characters began on the blockchain.</p>
+        <p class="role">What I’m most proud of is the collaborative environment we created—one where every team member felt empowered to contribute their best ideas. NFT NYC 2022 award, Best Environmental Initiative from an NFT Project.</p>
       </li>
       <li class="chapter" data-state="film">
         <p class="when"><time datetime="2023">2023</time></p>
         <h2>The cinema screen</h2>
         <p>The characters outgrew the grid. Woodies: Origin took them off the chain and put them in a short film, on the oldest screen there is.</p>
         <p class="role">Executive producer. Official Selection, Aesthetica Short Film Festival 2023.</p>
+      </li>
+      <li class="chapter" data-state="avatar">
+        <p class="when"><time datetime="2025">2025</time></p>
+        <h2>The avatar</h2>
+        <p>On Roblox, the screen is a world its players build. I worked with the Avatars team to remove friction from the creator experience, and I was equally focused on how we worked together as a team.</p>
+        <p class="role">Great products emerge from great collaboration, and great collaboration happens when people feel supported to take risks and push boundaries.</p>
       </li>
       <li class="chapter" data-state="assistant">
         <p class="when"><time datetime="2026">2026</time></p>
@@ -321,8 +323,8 @@ ol { padding: 0; list-style: none; }
 
   <section class="end" id="next">
     <h2>The next screen doesn’t have rules yet.</h2>
-    <p class="lede">Someone is building it now. If that is you, write to me at chris@chriswallace.net.</p>
-    <a class="write" href="mailto:chris@chriswallace.net">Email Chris</a>
+    <p class="lede">Someone is building it now. If you’re building it with a team where mentorship is valued, craft is non-negotiable, and building great designers is just as important as building great products, I’d love to talk. Write to me at chris@chriswallace.net.</p>
+    <a class="write" href="mailto:chris@chriswallace.net">Let’s connect</a>
     <p class="colophon">The frame is drawn in code on a canvas. Its last shape is the shape of your screen. Set in Archivo.</p>
   </section>
 </main>
@@ -356,6 +358,7 @@ ol { padding: 0; list-style: none; }
     web:       { ratio: 16 / 10,  label: "16:10" },
     chain:     { ratio: 1,        label: "1:1" },
     film:      { ratio: 2.39,     label: "2.39:1" },
+    avatar:    { ratio: 16 / 9,   label: "16:9" },
     assistant: { ratio: 3 / 4,    label: "3:4" },
     canvas:    { ratio: 4 / 5,    label: "4:5" },
     game:      { ratio: 4 / 3,    label: "4:3" },
@@ -605,6 +608,39 @@ ol { padding: 0; list-style: none; }
       ctx.globalAlpha = k;
       ctx.fillStyle = LIVE;
       ctx.beginPath(); ctx.arc(cx, cy, Math.max(3, r.h * 0.022), 0, Math.PI * 2); ctx.fill();
+    },
+
+    // 2025. A figure made of parts, and a shelf of parts to choose from. One part is being changed.
+    avatar: function (r, k, p) {
+      var u = r.h * 0.11, cx = r.x + r.w * 0.42, top = r.y + r.h * 0.14;
+      var parts = [
+        [cx - u * 0.6, top, u * 1.2, u * 1.2],
+        [cx - u, top + u * 1.4, u * 2, u * 2.4],
+        [cx - u * 2.1, top + u * 1.4, u * 0.9, u * 2.4],
+        [cx + u * 1.2, top + u * 1.4, u * 0.9, u * 2.4],
+        [cx - u, top + u * 4, u * 0.9, u * 2.4],
+        [cx + u * 0.1, top + u * 4, u * 0.9, u * 2.4]
+      ];
+      var gy = top + u * 6.4;
+      ctx.globalAlpha = FAINT * k;
+      seg(r.x + r.w * 0.12, gy, r.x + r.w * 0.12 + r.w * 0.6 * k, gy);
+      var sel = Math.min(parts.length - 1, Math.floor(p * parts.length));
+      parts.forEach(function (b, i) {
+        var a = Math.max(0, Math.min(1, k * parts.length - i));
+        if (a <= 0) return;
+        ctx.strokeStyle = i === sel ? LIVE : INK;
+        ctx.globalAlpha = (i === sel ? 1 : 0.8) * a;
+        ctx.strokeRect(b[0], b[1], b[2], b[3]);
+      });
+      // the shelf: the choice for the part in hand is marked
+      var sx = r.x + r.w * 0.8, sw = u * 1.1;
+      for (var j = 0; j < 4; j++) {
+        var sy = top + j * u * 1.6;
+        var pick = j === sel % 4;
+        ctx.strokeStyle = pick ? LIVE : INK;
+        ctx.globalAlpha = (pick ? 1 : FAINT) * k;
+        ctx.strokeRect(sx, sy, sw, sw);
+      }
     },
 
     // 2026. A conversation. The last message is the owner's decision.

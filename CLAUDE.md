@@ -49,10 +49,9 @@ In production (`jekyll.environment == 'production'`), `_includes/scripts.md` loa
 
 - `_layouts/`: `home.md`, `page.md`, `post.md`, `normal.md`, `full-width.md`, `greensock.md`, `interplay.md`, `naked.md`, `default.md`, `compress.html`
 - `_includes/`: `head.md` (meta, CSS, CDN scripts), `header.md`, `footer.md`, `scripts.md` (JS loading)
-- `bio/index.html`: The about page at `/bio/`. Standalone like the homepage, but loads the font from `assets/fonts/ArchivoVariable.woff2`
-- `index.html`: The homepage. A standalone page (inline CSS, JS and font, no front matter), so Jekyll copies it as-is and the layouts, includes and asset pipeline below are not used by it
+- `index.html`: The whole public site. A standalone page (inline CSS, JS and font, no front matter), so Jekyll copies it as-is and the layouts, includes and asset pipeline below are not used by it
 - `404.html`: Standalone page that sends any unknown URL to the homepage
-- `vercel.json`: Permanent redirects from the old page URLs (`/resume`, `/portfolio/*`, `/articles/*`, `/art/*`, etc.) to `/`
+- `vercel.json`: Permanent redirects from the old page URLs (`/bio`, `/portfolio/*`, `/articles/*`, `/art/*`, etc.) to `/`
 - `_site/`: Jekyll build output (do not edit directly)
 
 ### Cache Busting
