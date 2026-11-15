@@ -137,15 +137,14 @@ ol { padding: 0; list-style: none; }
   object-fit: cover;
   opacity: 0;
 }
-/* the brood: six Woodies that come out of the middle of the drawing area and settle around it */
+/* the brood: Woodies stickers that come out of the middle of the drawing area and settle around it */
 #brood { position: fixed; inset: 0; z-index: 2; pointer-events: none; }
 #brood img {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
-  outline: 1px solid rgb(255 255 255 / 0.14);
-  outline-offset: -1px;
+  object-fit: contain;
   will-change: transform, opacity;
 }
 #frame-label {
@@ -393,7 +392,13 @@ ol { padding: 0; list-style: none; }
   <video data-plate="assistant" src="assets/video/homebase/assistant.mp4" muted loop playsinline preload="none" width="560" height="604"></video>
   <video data-plate="lift" data-once src="assets/video/homebase/lift.mp4" muted playsinline preload="auto" width="848" height="558"></video>
 </div>
-<div id="brood" aria-hidden="true"><!-- six generative Woodies go here: assets/images/woodies/woodie-1.webp to woodie-6.webp --></div>
+<div id="brood" aria-hidden="true">
+  <img src="assets/images/woodies/sticker-1.webp" alt="" width="501" height="501" decoding="async">
+  <img src="assets/images/woodies/sticker-2.webp" alt="" width="483" height="520" decoding="async">
+  <img src="assets/images/woodies/sticker-3.webp" alt="" width="520" height="471" decoding="async">
+  <img src="assets/images/woodies/sticker-4.webp" alt="" width="503" height="520" decoding="async">
+  <img src="assets/images/woodies/sticker-5.webp" alt="" width="484" height="520" decoding="async">
+</div>
 <canvas id="frame" aria-hidden="true"></canvas>
 <p id="frame-label" aria-hidden="true"></p>
 <a class="skip" href="#next">Skip to contact</a>
@@ -429,7 +434,7 @@ ol { padding: 0; list-style: none; }
       <div class="text lines">
         <h2 class="say">Most of my work starts as a question.</h2>
         <p class="say" data-state="sync">How can fans deepen connection to their favorite IP?</p>
-        <p class="say" data-state="ultra">What if people could generate and own unique character IP?</p>
+        <p class="say" data-state="character">What if people could generate and own unique character IP?</p>
         <p class="say" data-state="lift">How might AI become the COO of your small business?</p>
       </div>
     </div>
@@ -583,7 +588,7 @@ ol { padding: 0; list-style: none; }
   var plate = document.getElementById("plate");
   var brood = Array.prototype.slice.call(document.querySelectorAll("#brood img"));
   // where each one settles, as fractions of the drawing area, with its size and tilt
-  var NEST = [[0.24, 0.26, 1.0, -5], [0.72, 0.2, 0.86, 4], [0.5, 0.52, 1.12, 2], [0.17, 0.74, 0.8, 6], [0.8, 0.66, 0.94, -4], [0.47, 0.88, 0.74, -3]];
+  var NEST = [[0.26, 0.24, 1.0, -6], [0.74, 0.2, 0.92, 5], [0.5, 0.52, 1.1, 2], [0.2, 0.78, 0.9, 7], [0.78, 0.76, 1.0, -5]];
   var plates = {};
   Array.prototype.slice.call(plate.querySelectorAll("img, video")).forEach(function (el) { plates[el.getAttribute("data-plate")] = el; });
   var ctx = canvas.getContext && canvas.getContext("2d");
@@ -1320,9 +1325,9 @@ ol { padding: 0; list-style: none; }
 
     // the brood: each one leaves the middle in turn and settles in its place
     var bp = active === "character" ? progress : 1;
-    var side = Math.min(region.w, region.h) * 0.3, mx = region.x + region.w / 2, my = region.y + region.h / 2;
+    var side = Math.min(region.w, region.h) * 0.4, mx = region.x + region.w / 2, my = region.y + region.h / 2;
     brood.forEach(function (img, i) {
-      var go = ease((bp - 0.06 - i * 0.08) / 0.3) * (presence.character > 0.01 ? 1 : 0);
+      var go = ease((bp - 0.06 - i * 0.09) / 0.3) * (presence.character > 0.01 ? 1 : 0);
       var spot = NEST[i], size = side * spot[2];
       var x = mx + (region.x + region.w * spot[0] - mx) * go, y = my + (region.y + region.h * spot[1] - my) * go;
       img.style.width = size + "px";
