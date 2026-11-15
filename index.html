@@ -426,8 +426,8 @@ ol { padding: 0; list-style: none; }
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
         <h2 class="say">My process is experimentation.</h2>
-        <p class="say">A companion app for TV series. An animated short film. An always-on AI assistant.</p>
-        <p class="say">An idea sparks a journey through all the challenges and ideation.</p>
+        <p class="say" data-state="answers">Those questions became a companion app for TV series, an animated short film, and an always-on AI assistant.</p>
+        <p class="say" data-state="journey">An idea sparks a journey through all the challenges and ideation.</p>
       </div>
     </div>
   </section>
@@ -466,9 +466,9 @@ ol { padding: 0; list-style: none; }
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
-        <h2 class="say">At <a href="https://10up.com" target="_blank" rel="noopener">10up</a>, I grew our design team from 5 people to 25.</h2>
+        <h2 class="say" data-state="team">At <a href="https://10up.com" target="_blank" rel="noopener">10up</a>, I grew our design team from 5 people to 25.</h2>
         <p class="say" data-state="dmv">I led design projects for Microsoft, Starbucks, the California DMV.</p>
-        <p class="say">My favorite moments were watching designers grow, take the lead, and push each other.</p>
+        <p class="say" data-state="lead">My favorite moments were watching designers grow, take the lead, and push each other.</p>
       </div>
     </div>
   </section>
@@ -477,9 +477,9 @@ ol { padding: 0; list-style: none; }
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
-        <h2 class="say" data-state="ultradao">At UltraDAO Studios, I built a creative studio from scratch.</h2>
+        <h2 class="say" data-state="ultradao">Next, at UltraDAO Studios, I built a creative studio from scratch.</h2>
         <p class="say">We earned $2.6M with our first release.</p>
-        <p class="say">I’m more proud of how we worked: everyone brought their best ideas forward.</p>
+        <p class="say" data-state="ring">I’m more proud of how we worked: everyone brought their best ideas forward.</p>
       </div>
     </div>
   </section>
@@ -507,39 +507,42 @@ ol { padding: 0; list-style: none; }
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
-        <h2 class="say">At <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox</a>, I designed avatar tools for 3D creators.</h2>
+        <h2 class="say">From characters to avatars: at <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox</a>, I designed avatar tools for 3D creators.</h2>
         <p class="say">I researched creator workflows and designed tools to meet their needs.</p>
         <p class="say">The work reflected my desire to reduce frustration while increasing creativity.</p>
       </div>
     </div>
   </section>
 
-  <section class="seg" data-state="quiet" style="--len: 52">
+  <section class="seg" data-state="quiet" style="--len: 84">
     <div class="panel panel--words">
       <div class="lines">
-        <h2 class="say">People do their best work when they go outside their lane.</h2>
+        <h2 class="say">Every one of those teams taught me the same thing.</h2>
+        <p class="say">People do their best work when they go outside their lane.</p>
       </div>
     </div>
   </section>
 
-  <section class="seg" data-state="homebase" style="--len: 148">
+  <section class="seg" data-state="homebase" style="--len: 180">
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
-        <h2 class="say">Now I’m leading design for <a href="https://joinhomebase.com" target="_blank" rel="noopener">Homebase Assistant</a>.</h2>
-        <p class="say">The vision is to be an operational partner for small business owners.</p>
-        <p class="say">Executing on it is extremely challenging but rewarding.</p>
-        <p class="say">Small businesses are near and dear to me.</p>
+        <h2 class="say">Which brings me back to that last question.</h2>
+        <p class="say">Now I’m leading design for <a href="https://joinhomebase.com" target="_blank" rel="noopener">Homebase Assistant</a>.</p>
+        <p class="say" data-state="week">The vision is to be an operational partner for small business owners.</p>
+        <p class="say" data-state="week">Executing on it is extremely challenging but rewarding.</p>
+        <p class="say" data-state="shop">Small businesses are near and dear to me.</p>
       </div>
     </div>
   </section>
 
-  <section class="seg" data-state="quiet" style="--len: 216">
+  <section class="seg" data-state="quiet" style="--len: 248">
     <div class="panel panel--words panel--xl">
       <div class="lines">
         <h2 class="say">Ask bigger questions.</h2>
         <p class="say">Create and test ideas constantly.</p>
         <p class="say">Just get to a first version, then iterate.</p>
+        <p class="say">And do it with friends.</p>
       </div>
     </div>
   </section>
@@ -661,22 +664,30 @@ ol { padding: 0; list-style: none; }
   var dpr = 1;
   var STATES = {
     open:     { ratio: 0, label: "Scroll" },
-    ask:      { ratio: 9 / 16,  label: "9:16",  draw: "second" },
-    make:     { ratio: 4 / 5,   label: "4:5. Tap or click to add a floor.", draw: "game" },
+    ask:      { ratio: 9 / 16,  label: "A phone beside a TV", draw: "second" },
+    make:     { ratio: 4 / 5,   label: "Tap or click to add a floor", draw: "game" },
     art:      { ratio: 0, hidden: true },      // the art itself is on screen
     quiet:    { ratio: 0 },
-    tenup:    { ratio: 16 / 10, label: "16:10", draw: "web" },
-    ultra:    { ratio: 1,       label: "1:1",   draw: "chain" },
+    tenup:    { ratio: 16 / 10, label: "A page of blocks", draw: "web" },
+    ultra:    { ratio: 1,       label: "A collection, one original", draw: "chain" },
     film:     { ratio: 0, hidden: true },      // the film itself is on screen
-    roblox:   { ratio: 16 / 9,  label: "16:9",  draw: "avatar" },
-    homebase: { ratio: 3 / 4,   label: "3:4",   draw: "assistant" },
+    roblox:   { ratio: 16 / 9,  label: "An avatar and its parts", draw: "avatar" },
+    homebase: { ratio: 3 / 4,   label: "The owner decides", draw: "assistant" },
     end:      { ratio: 0 },
     // lines that name a piece of work show it: the frame takes the picture's shape
     sync:      { ratio: 1000 / 657,  label: "The Walking Dead Story Sync", plate: "sync" },
     character: { ratio: 560 / 720,   label: "A Woodies character",         plate: "character" },
     dmv:       { ratio: 1000 / 459,  label: "California DMV",              plate: "dmv" },
     ultradao:  { ratio: 560 / 720,   label: "UltraDAO",                    plate: "ultradao" },
-    woodies:   { ratio: 1088 / 760,  label: "Woodies",                     plate: "woodies" }
+    woodies:   { ratio: 1088 / 760,  label: "Woodies",                     plate: "woodies" },
+    // drawings that state the fact in their line
+    team:    { ratio: 1,      label: "5 people, then 25",        draw: "team" },
+    lead:    { ratio: 1,      label: "Each takes the lead",      draw: "lead" },
+    answers: { ratio: 2,      label: "An app, a film, an assistant", draw: "answers" },
+    journey: { ratio: 16 / 10, label: "From an idea to a first version", draw: "journey" },
+    ring:    { ratio: 1,      label: "Every idea reaches everyone", draw: "ring" },
+    week:    { ratio: 4 / 3,  label: "A week of shifts, covered", draw: "week" },
+    shop:    { ratio: 4 / 3,  label: "Open",                     draw: "shop" }
   };
   var NAMES = Object.keys(STATES);
   var presence = {};
@@ -1107,6 +1118,134 @@ ol { padding: 0; list-style: none; }
     }
   };
 
+  function person(x, y, u, color, alpha) {   // a head and shoulders
+    ctx.globalAlpha = alpha;
+    ctx.fillStyle = color;
+    ctx.beginPath(); ctx.arc(x, y - u * 0.42, u * 0.3, 0, Math.PI * 2); ctx.fill();
+    ctx.fillRect(x - u * 0.42, y, u * 0.84, u * 0.5);
+  }
+  function grid25(r) {                       // the places of 25 people, from the middle out
+    var gap = r.w * 0.17, out = [];
+    for (var gy = -2; gy <= 2; gy++) for (var gx = -2; gx <= 2; gx++) out.push([gx, gy]);
+    out.sort(function (a, b) { return (a[0] * a[0] + a[1] * a[1]) - (b[0] * b[0] + b[1] * b[1]) || Math.atan2(a[1], a[0]) - Math.atan2(b[1], b[0]); });
+    return out.map(function (c) { return [r.x + r.w / 2 + c[0] * gap, r.y + r.h / 2 + c[1] * gap + gap * 0.12]; });
+  }
+
+  // 5 people become 25. The counts are the real ones.
+  DRAW.team = function (r, k, p) {
+    var spots = grid25(r), u = r.w * 0.07;
+    var n = Math.round((5 + 20 * ease((p - 0.06) / 0.2)) * k);
+    for (var i = 0; i < n; i++) person(spots[i][0], spots[i][1], u, i === 0 ? LIVE : INK, i === 0 ? k : 0.9 * k);
+  };
+
+  // The same 25. The live mark passes from one to the next: each takes the lead in turn.
+  DRAW.lead = function (r, k, p) {
+    var spots = grid25(r), u = r.w * 0.07;
+    var turn = Math.floor(p * 46) % 25;
+    for (var i = 0; i < 25; i++) {
+      var up = i === turn ? u * 0.35 : 0;
+      person(spots[i][0], spots[i][1] - up, u, i === turn ? LIVE : INK, (i === turn ? 1 : 0.75) * k);
+    }
+  };
+
+  // Three questions, three things made: a phone app, a wide film frame, a conversation.
+  DRAW.answers = function (r, k, p) {
+    var h = r.h * 0.62, cy = r.y + r.h / 2, on = Math.min(2, Math.floor(p * 9) % 3);
+    var items = [[0.15, h * 9 / 16], [0.5, h * 1.25], [0.85, h * 0.72]];
+    items.forEach(function (it, i) {
+      var a = Math.max(0, Math.min(1, k * 3 - i));
+      if (a <= 0) return;
+      var w = it[1], hh = i === 1 ? w / 2.39 : h, x = r.x + r.w * it[0] - w / 2, y = cy - hh / 2;
+      ctx.strokeStyle = i === on ? LIVE : INK;
+      ctx.globalAlpha = (i === on ? 1 : 0.8) * a;
+      ctx.strokeRect(x, y, w, hh);
+      ctx.strokeStyle = INK;
+      ctx.globalAlpha = FAINT * a;
+      if (i === 0) { for (var l = 0; l < 4; l++) seg(x + w * 0.18, y + hh * (0.2 + l * 0.14), x + w * (l % 2 ? 0.6 : 0.82), y + hh * (0.2 + l * 0.14)); }
+      if (i === 1) { ctx.beginPath(); ctx.arc(x + w * 0.36, y + hh * 0.56, hh * 0.22, 0, Math.PI * 2); ctx.stroke(); ctx.beginPath(); ctx.arc(x + w * 0.36, y + hh * 0.56, hh * 0.4, 0, Math.PI * 2); ctx.stroke(); }
+      if (i === 2) { ctx.strokeRect(x + w * 0.12, y + hh * 0.14, w * 0.52, hh * 0.18); ctx.strokeRect(x + w * 0.4, y + hh * 0.42, w * 0.48, hh * 0.18); ctx.strokeRect(x + w * 0.12, y + hh * 0.7, w * 0.4, hh * 0.16); }
+    });
+  };
+
+  // An idea on the left, a first version on the right, and a path between them that has to go round things.
+  DRAW.journey = function (r, k, p) {
+    var pts = [[0.1, 0.78], [0.24, 0.78], [0.24, 0.42], [0.42, 0.42], [0.42, 0.68], [0.62, 0.68], [0.62, 0.26], [0.8, 0.26], [0.8, 0.5], [0.9, 0.5]]
+      .map(function (q) { return [r.x + r.w * q[0], r.y + r.h * q[1]]; });
+    ctx.globalAlpha = FAINT * k;
+    [[0.3, 0.56, 0.08, 0.2], [0.5, 0.36, 0.07, 0.22], [0.68, 0.42, 0.07, 0.24]].forEach(function (b) {
+      ctx.strokeRect(r.x + r.w * b[0], r.y + r.h * b[1], r.w * b[2], r.h * b[3]);
+    });
+    // the path, as far as the scroll has gone
+    var lens = [], total = 0, i;
+    for (i = 1; i < pts.length; i++) { var d = Math.abs(pts[i][0] - pts[i - 1][0]) + Math.abs(pts[i][1] - pts[i - 1][1]); lens.push(d); total += d; }
+    var go = total * ease((p - 0.66) / 0.3) * k, x = pts[0][0], y = pts[0][1];
+    ctx.globalAlpha = 0.9 * k;
+    ctx.beginPath(); ctx.moveTo(x, y);
+    for (i = 1; i < pts.length && go > 0; i++) {
+      var f = Math.min(1, go / lens[i - 1]);
+      x = pts[i - 1][0] + (pts[i][0] - pts[i - 1][0]) * f; y = pts[i - 1][1] + (pts[i][1] - pts[i - 1][1]) * f;
+      ctx.lineTo(x, y); go -= lens[i - 1];
+    }
+    ctx.stroke();
+    // the goal, and where the idea is now
+    var end = pts[pts.length - 1], s2 = r.h * 0.05;
+    ctx.strokeRect(end[0] - s2, end[1] - s2, s2 * 2, s2 * 2);
+    ctx.globalAlpha = k; ctx.fillStyle = LIVE;
+    ctx.beginPath(); ctx.arc(x, y, r.h * 0.03, 0, Math.PI * 2); ctx.fill();
+  };
+
+  // Nine people in a ring, each linked to all the others. One idea travels the links.
+  DRAW.ring = function (r, k, p) {
+    var m = 9, rad = r.w * 0.36, cx = r.x + r.w / 2, cy = r.y + r.h / 2, pts = [], i, j;
+    for (i = 0; i < m; i++) { var a = -Math.PI / 2 + i * Math.PI * 2 / m; pts.push([cx + Math.cos(a) * rad, cy + Math.sin(a) * rad]); }
+    ctx.globalAlpha = FAINT * k;
+    for (i = 0; i < m; i++) for (j = i + 1; j < m; j++) if ((i * m + j) / (m * m) < k) seg(pts[i][0], pts[i][1], pts[j][0], pts[j][1]);
+    for (i = 0; i < m; i++) person(pts[i][0], pts[i][1] + r.w * 0.02, r.w * 0.06, INK, 0.95 * k);
+    var t = p * 18, from = Math.floor(t) * 4 % m, to = (Math.floor(t) + 1) * 4 % m, f2 = t - Math.floor(t);
+    ctx.globalAlpha = k; ctx.fillStyle = LIVE;
+    ctx.beginPath(); ctx.arc(pts[from][0] + (pts[to][0] - pts[from][0]) * f2, pts[from][1] + (pts[to][1] - pts[from][1]) * f2, r.w * 0.025, 0, Math.PI * 2); ctx.fill();
+  };
+
+  // A week on a rota: seven days, four rows of shifts. The gaps are filled one by one.
+  DRAW.week = function (r, k, p) {
+    var cols = 7, rows = 4, cw = r.w * 0.82 / cols, ch = r.h * 0.6 / rows, x0 = r.x + r.w * 0.09, y0 = r.y + r.h * 0.24;
+    var rnd = rand(17), gaps = [3, 9, 12, 19, 24], filled = Math.floor(ease((p - 0.4) / 0.5) * (gaps.length + 0.99));
+    ctx.globalAlpha = FAINT * k;
+    for (var c = 0; c < cols; c++) seg(x0 + cw * (c + 0.2), r.y + r.h * 0.15, x0 + cw * (c + 0.8), r.y + r.h * 0.15);
+    for (var i = 0; i < cols * rows; i++) {
+      var cx2 = x0 + (i % cols) * cw, cy2 = y0 + Math.floor(i / cols) * ch, len = 0.5 + rnd() * 0.36, g = gaps.indexOf(i);
+      if (i / (cols * rows) > k) break;
+      if (g === -1) { ctx.strokeStyle = INK; ctx.globalAlpha = 0.8 * k; ctx.strokeRect(cx2 + cw * 0.08, cy2 + ch * 0.18, cw * len, ch * 0.5); }
+      else if (g < filled) { ctx.fillStyle = LIVE; ctx.globalAlpha = k; ctx.fillRect(cx2 + cw * 0.08, cy2 + ch * 0.18, cw * 0.72, ch * 0.5); }
+      else { ctx.strokeStyle = INK; ctx.globalAlpha = FAINT * k; ctx.setLineDash([4, 4]); ctx.strokeRect(cx2 + cw * 0.08, cy2 + ch * 0.18, cw * 0.72, ch * 0.5); ctx.setLineDash([]); }
+    }
+    ctx.strokeStyle = INK;
+  };
+
+  // A small shop: an awning, a window, a door, and a sign that is on.
+  DRAW.shop = function (r, k, p) {
+    var x = r.x + r.w * 0.16, w = r.w * 0.68, top = r.y + r.h * 0.3, base = r.y + r.h * 0.84, i;
+    ctx.globalAlpha = 0.9 * k;
+    seg(r.x + r.w * 0.06, base, r.x + r.w * 0.06 + r.w * 0.88 * k, base);
+    ctx.strokeRect(x, top, w, base - top);
+    // the awning
+    var ay = top + (base - top) * 0.2;
+    seg(x - w * 0.04, ay, x + w * 1.04, ay);
+    ctx.globalAlpha = FAINT * k;
+    for (i = 1; i < 8; i++) seg(x + w * i / 8, top, x + w * i / 8 - w * 0.02, ay);
+    // the window and the door
+    ctx.globalAlpha = 0.8 * k;
+    ctx.strokeRect(x + w * 0.08, ay + (base - ay) * 0.18, w * 0.5, (base - ay) * 0.52);
+    ctx.strokeRect(x + w * 0.68, ay + (base - ay) * 0.18, w * 0.22, (base - ay) * 0.82);
+    // the sign, lit
+    var blink = Math.floor(p * 30) % 6 === 0 ? 0.55 : 1;
+    ctx.globalAlpha = k * blink; ctx.fillStyle = LIVE;
+    ctx.fillRect(x + w * 0.16, ay + (base - ay) * 0.3, w * 0.2, (base - ay) * 0.14);
+    // the name board
+    ctx.globalAlpha = 0.8 * k; ctx.strokeStyle = INK;
+    ctx.strokeRect(x + w * 0.3, r.y + r.h * 0.17, w * 0.4, r.h * 0.09);
+  };
+
   function draw() {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, vw, vh);
@@ -1172,7 +1311,14 @@ ol { padding: 0; list-style: none; }
       character: { eyes: "star",  mouth: "big",   watch: true },
       dmv:       { eyes: "open",  mouth: "smile", watch: true },
       ultradao:  { eyes: "open",  mouth: "big",   watch: true },
-      woodies:   { eyes: "star",  mouth: "big",   mark: "heart", watch: true }
+      woodies:   { eyes: "star",  mouth: "big",   mark: "heart", watch: true },
+      team:      { eyes: "open",  mouth: "big",   watch: true },
+      lead:      { eyes: "happy", mouth: "big",   watch: true },
+      answers:   { eyes: "open",  mouth: "smile", mark: "!", watch: true },
+      journey:   { eyes: "open",  mouth: "small", watch: true },
+      ring:      { eyes: "happy", mouth: "big",   watch: true },
+      week:      { eyes: "open",  mouth: "smile", watch: true },
+      shop:      { eyes: "happy", mouth: "big",   mark: "heart", blush: true, watch: true }
     };
     var MARKS = {
       "?":   ["###", "..#", ".#.", "...", ".#."],
