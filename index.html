@@ -4,7 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chris Wallace</title>
-<meta name="description" content="Chris Wallace is a designer and founder. He makes things to find out what happens, and he makes them with other people.">
+<meta name="description" content="Chris Wallace is a designer, technologist and founder who makes digital products that have never existed before.">
+<link rel="canonical" href="https://chriswallace.net/">
+<link rel="icon" type="image/png" href="/assets/images/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chriswallace.net/">
+<meta property="og:title" content="Chris Wallace">
+<meta property="og:description" content="I make digital products that have never existed before.">
+<meta property="og:image" content="https://chriswallace.net/assets/images/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0019ff">
 <style>
 /* One typeface: Redaction 50, a serif whose edges are broken into coarse pixels. One weight. */
@@ -32,7 +42,7 @@
 
   /* type: one family, one weight. Each section uses one size. */
   --font: "Redaction 50", Georgia, "Times New Roman", serif;
-  --display-size: clamp(2.5rem, 12.4vw, 5rem);     /* a short line with the screen to itself */
+  --display-size: clamp(2.25rem, 10vw, 4rem);     /* a short line with the screen to itself */
   --impact-size: clamp(1.875rem, 8.6vw, 3.5rem);   /* longer lines with the screen to themselves */
   --say-size: clamp(1.75rem, 7.6vw, 3rem);         /* lines under the drawing */
   --body-size: 1.25rem;                            /* the index, the button */
@@ -101,7 +111,7 @@ h1, h2, h3, p, ol { margin: 0; }
 h1, h2, h3 { font-weight: 400; }   /* one weight: headings are not bold */
 ol { padding: 0; list-style: none; }
 
-/* the frame: fixed, above the page, never takes a click. Drawn small and scaled up unsmoothed. */
+/* the frame: fixed, above the page, never takes a click */
 #frame {
   position: fixed;
   inset: 0;
@@ -109,7 +119,23 @@ ol { padding: 0; list-style: none; }
   height: 100%;
   z-index: 3;
   pointer-events: none;
-  image-rendering: pixelated;
+}
+/* the plate: a picture of the real work, held inside the frame for the lines that name it */
+#plate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+#plate img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
 }
 #frame-label {
   position: fixed;
@@ -146,13 +172,18 @@ ol { padding: 0; list-style: none; }
   z-index: 4;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: var(--s4);
   font-size: var(--data-size);
   font-weight: 400;
 }
 .js .top { position: fixed; }
 .top a { text-decoration-line: none; padding: var(--s3) 0; }
+/* the mascot: a small pixel face beside the name. It looks around and reacts to the section on screen. */
+.me { display: inline-flex; align-items: center; }
+/* the name stays for screen readers and search; the mascot stands in for it on screen */
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+#pal { width: 66px; height: 45px; image-rendering: pixelated; flex: none; margin-left: -3px; }
 @media (hover: hover) and (pointer: fine) {
   .top a:hover { text-decoration-line: underline; }
 }
@@ -168,7 +199,7 @@ ol { padding: 0; list-style: none; }
   padding-right: 0.75em;   /* room for the cursor */
 }
 .panel--words .say { max-width: 26ch; font-size: var(--impact-size); }
-.panel--xl .say, .end .say { max-width: 16ch; font-size: var(--display-size); line-height: 1.06; }
+.panel--xl .say, .end .say { max-width: 20ch; font-size: var(--display-size); line-height: 1.06; }
 .say a { text-decoration-thickness: 0.06em; text-underline-offset: 0.14em; }
 .say.is-on a { pointer-events: auto; }   /* only the line on screen has live links */
 .lines { display: grid; gap: var(--s6); }
@@ -200,7 +231,14 @@ ol { padding: 0; list-style: none; }
   gap: var(--s6);
   padding: var(--bar) var(--gutter) var(--gutter);
 }
-.js .seg { height: calc(var(--len) * 1svh); }
+.js .seg { position: relative; height: calc(var(--len) * 1svh); }
+/* one rest point per line: where the line is fully lit. Touch scrolling settles on these; the wheel does the same in script. */
+.rest { position: absolute; left: 0; width: 1px; height: 1px; pointer-events: none; }
+@media (hover: none) and (pointer: coarse) {
+  html { scroll-snap-type: y proximity; }
+  .rest { scroll-snap-align: start; }
+  .end { scroll-snap-align: end; }
+}
 .js .panel {
   position: fixed;
   top: 0;
@@ -310,7 +348,7 @@ ol { padding: 0; list-style: none; }
 
 @media (min-width: 900px) {
   :root {
-    --display-size: clamp(2.5rem, 0.9rem + 6.4vw, 6.5rem);
+    --display-size: clamp(2.5rem, 1rem + 4.2vw, 4.75rem);
     --impact-size: clamp(2rem, 1rem + 4.2vw, 5rem);
     --say-size: clamp(2rem, 1.2rem + 2.4vw, 3.5rem);
   }
@@ -334,12 +372,19 @@ ol { padding: 0; list-style: none; }
 <body>
 <script>document.documentElement.classList.add("js");</script>
 <div id="dark" aria-hidden="true"></div>
+<div id="plate" aria-hidden="true">
+  <img data-plate="sync" src="assets/images/work/story-sync.webp" alt="" width="1000" height="657" decoding="async">
+  <img data-plate="character" src="assets/images/work/woodies-character.webp" alt="" width="560" height="720" decoding="async">
+  <img data-plate="dmv" src="assets/images/work/california-dmv.webp" alt="" width="1000" height="459" decoding="async">
+  <img data-plate="ultradao" src="assets/images/work/ultradao.webp" alt="" width="560" height="720" decoding="async">
+  <img data-plate="woodies" src="assets/images/work/woodies.webp" alt="" width="1088" height="760" decoding="async">
+</div>
 <canvas id="frame" aria-hidden="true"></canvas>
 <p id="frame-label" aria-hidden="true"></p>
 <a class="skip" href="#next">Skip to contact</a>
 
 <header class="top">
-  <span>Chris Wallace</span>
+  <span class="me"><canvas id="pal" width="22" height="15" aria-hidden="true"></canvas><span class="sr">Chris Wallace</span></span>
   <a href="#next">Contact</a>
 </header>
 
@@ -368,9 +413,9 @@ ol { padding: 0; list-style: none; }
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
         <h2 class="say">Most of my work starts as a question.</h2>
-        <p class="say">How can fans deepen connection to their favorite IP?</p>
-        <p class="say">What if people could generate and own unique character IP?</p>
-        <p class="say">How might AI become the COO of your small business?</p>
+        <p class="say" data-state="sync">How can fans deepen connection to their favorite IP?</p>
+        <p class="say" data-state="character">What if people could generate and own unique character IP?</p>
+        <p class="say" data-state="homebase">How might AI become the COO of your small business?</p>
       </div>
     </div>
   </section>
@@ -380,7 +425,7 @@ ol { padding: 0; list-style: none; }
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
         <h2 class="say">My process is experimentation.</h2>
-        <p class="say">A comapnion app for TV series. An animated short film. An always-on AI assistant.</p>
+        <p class="say">A companion app for TV series. An animated short film. An always-on AI assistant.</p>
         <p class="say">An idea sparks a journey through all the challenges and ideation.</p>
       </div>
     </div>
@@ -411,7 +456,7 @@ ol { padding: 0; list-style: none; }
   <section class="seg" data-state="quiet" style="--len: 52">
     <div class="panel panel--words">
       <div class="lines">
-        <h2 class="say">My professional journey is a series of deep collaboration with friends.</h2>
+        <h2 class="say">My professional journey is a series of deep collaborations with friends.</h2>
       </div>
     </div>
   </section>
@@ -421,7 +466,7 @@ ol { padding: 0; list-style: none; }
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
         <h2 class="say">At <a href="https://10up.com" target="_blank" rel="noopener">10up</a>, I grew our design team from 5 people to 25.</h2>
-        <p class="say">I led design projects for Microsoft, Starbucks, the California DMV.</p>
+        <p class="say" data-state="dmv">I led design projects for Microsoft, Starbucks, the California DMV.</p>
         <p class="say">My favorite moments were watching designers grow, take the lead, and push each other.</p>
       </div>
     </div>
@@ -431,7 +476,7 @@ ol { padding: 0; list-style: none; }
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
-        <h2 class="say">At UltraDAO Studios, I built a creative studio from scratch.</h2>
+        <h2 class="say" data-state="ultradao">At UltraDAO Studios, I built a creative studio from scratch.</h2>
         <p class="say">We earned $2.6M with our first release.</p>
         <p class="say">I’m more proud of how we worked: everyone brought their best ideas forward.</p>
       </div>
@@ -449,7 +494,7 @@ ol { padding: 0; list-style: none; }
         <video class="clip clip--6" src="assets/video/woodies/clip-6.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
       </div>
       <div class="text lines">
-        <h2 class="say">We made <a href="https://woodiesofficial.com" target="_blank" rel="noopener">Woodies</a>, characters that began on the blockchain.</h2>
+        <h2 class="say" data-state="woodies">We made <a href="https://woodiesofficial.com" target="_blank" rel="noopener">Woodies</a>, characters that began on the blockchain.</h2>
         <p class="say">Then they outgrew it.</p>
         <p class="say"><a href="https://www.youtube.com/watch?v=encMCWoBc3o" target="_blank" rel="noopener">Woodies: Origin</a> put them in a short film.</p>
         <p class="say">We released them as 3D characters in the metaverse.</p>
@@ -463,7 +508,7 @@ ol { padding: 0; list-style: none; }
       <div class="text lines">
         <h2 class="say">At <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox</a>, I designed avatar tools for 3D creators.</h2>
         <p class="say">I researched creator workflows and designed tools to meet their needs.</p>
-        <p class="say">The work reflected my desire to reduce frustration while increasing creativity</p>
+        <p class="say">The work reflected my desire to reduce frustration while increasing creativity.</p>
       </div>
     </div>
   </section>
@@ -509,6 +554,9 @@ ol { padding: 0; list-style: none; }
   "use strict";
   var canvas = document.getElementById("frame");
   var tag = document.getElementById("frame-label");
+  var plate = document.getElementById("plate");
+  var plates = {};
+  Array.prototype.slice.call(plate.querySelectorAll("img")).forEach(function (img) { plates[img.getAttribute("data-plate")] = img; });
   var ctx = canvas.getContext && canvas.getContext("2d");
   if (!ctx) { document.documentElement.classList.remove("js"); return; }
 
@@ -576,22 +624,43 @@ ol { padding: 0; list-style: none; }
       stage: el.querySelector(".stage"),
       strip: el.querySelector(".strip"),
       clips: Array.prototype.slice.call(el.querySelectorAll(".clip")),
-      lines: Array.prototype.slice.call(el.querySelectorAll(".say")).map(function (say) { return { el: say, words: split(say) }; }),
+      lines: Array.prototype.slice.call(el.querySelectorAll(".say")).map(function (say) {
+        return { el: say, words: split(say), state: say.getAttribute("data-state") };   // a line may borrow another section's drawing
+      }),
       first: i === 0,
       last: i === all.length - 1
     };
   });
   var endWords = split(endSay);
 
+  // A rest point for each line, placed where the line is fully lit and holding.
+  var REST = 0.68;
+  segs.forEach(function (s) {
+    var n = s.lines.length;
+    s.rests = s.lines.map(function (line, j) {
+      var mark = document.createElement("div");
+      mark.className = "rest";
+      var part = s.first && j === 0 ? 0 : (j + REST) / n;
+      mark.style.top = s.last ? "calc((100% - 100svh) * " + part + ")" : (part * 100) + "%";
+      s.el.appendChild(mark);
+      return mark;
+    });
+  });
+  function restPoints() {
+    var y = window.scrollY, out = [];
+    segs.forEach(function (s) { s.rests.forEach(function (m) { out.push(m.getBoundingClientRect().top + y); }); });
+    out.push(document.documentElement.scrollHeight - window.innerHeight);
+    return out;
+  }
+
   /* ---------- the frame ---------- */
   // One outlined frame stays on screen and takes the shape of a screen for each statement.
-  // It is drawn small and scaled up without smoothing, so its lines are coarse, like an old display.
 
-  var PX = 3;                // one drawn pixel covers this many screen pixels
+  var dpr = 1;
   var STATES = {
-    open:     { ratio: 0 },
+    open:     { ratio: 0, label: "Scroll" },
     ask:      { ratio: 9 / 16,  label: "9:16",  draw: "second" },
-    make:     { ratio: 4 / 3,   label: "4:3. Click to jump.", draw: "game" },
+    make:     { ratio: 4 / 5,   label: "4:5. Tap or click to add a floor.", draw: "game" },
     art:      { ratio: 0, hidden: true },      // the art itself is on screen
     quiet:    { ratio: 0 },
     tenup:    { ratio: 16 / 10, label: "16:10", draw: "web" },
@@ -599,7 +668,13 @@ ol { padding: 0; list-style: none; }
     film:     { ratio: 0, hidden: true },      // the film itself is on screen
     roblox:   { ratio: 16 / 9,  label: "16:9",  draw: "avatar" },
     homebase: { ratio: 3 / 4,   label: "3:4",   draw: "assistant" },
-    end:      { ratio: 0 }
+    end:      { ratio: 0 },
+    // lines that name a piece of work show it: the frame takes the picture's shape
+    sync:      { ratio: 1000 / 657,  label: "The Walking Dead Story Sync", plate: "sync" },
+    character: { ratio: 560 / 720,   label: "A Woodies character",         plate: "character" },
+    dmv:       { ratio: 1000 / 459,  label: "California DMV",              plate: "dmv" },
+    ultradao:  { ratio: 560 / 720,   label: "UltraDAO",                    plate: "ultradao" },
+    woodies:   { ratio: 1088 / 760,  label: "Woodies",                     plate: "woodies" }
   };
   var NAMES = Object.keys(STATES);
   var presence = {};
@@ -612,13 +687,14 @@ ol { padding: 0; list-style: none; }
   var rect = null;           // the frame as drawn now
   var shown = 1;             // how visible the frame is
   var raf = 0, last = 0;
-  var hop = 0;               // 1..0 while the player in the game drawing is in the air
+  var built = 0;             // floors added to the tower by clicking
 
   function resize() {
     vw = document.documentElement.clientWidth;
     vh = window.innerHeight;
-    canvas.width = Math.ceil(vw / PX);
-    canvas.height = Math.ceil(vh / PX);
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(vw * dpr);
+    canvas.height = Math.round(vh * dpr);
     measure();
     if (!rect) rect = target();
     kick();
@@ -637,6 +713,7 @@ ol { padding: 0; list-style: none; }
         q = clamp(-b.top / (b.height - (s.last ? vh : 0)));
       }
     });
+    var borrowed = null;
     // One line of the section is on screen at a time. Each line fades in, lights up word by word, and gives way to the next.
     segs.forEach(function (s) {
       var on = s === current;
@@ -646,10 +723,11 @@ ol { padding: 0; list-style: none; }
       s.lines.forEach(function (line, j) {
         line.el.classList.toggle("is-on", on && j === slot);
         if (!on || j !== slot) { line.el.style.opacity = 0; return; }
+        borrowed = line.state;
         var opening = s.first && j === 0, closing = s.last && j === n - 1;
-        var fadeIn = opening ? 1 : ease(t / 0.12), fadeOut = closing ? 1 : 1 - ease((t - 0.88) / 0.12);
+        var fadeIn = opening ? 1 : ease(t / 0.1), fadeOut = closing ? 1 : 1 - ease((t - 0.9) / 0.1);
         line.el.style.opacity = still ? 1 : Math.min(fadeIn, fadeOut);
-        light(line.words, still || opening ? 1 : (t - 0.14) / 0.46);
+        light(line.words, still || opening ? 1 : (t - 0.12) / 0.33);   // fully lit by 0.45, then it holds until 0.9
       });
     });
 
@@ -666,7 +744,7 @@ ol { padding: 0; list-style: none; }
       var on = s === current;
       if (on) night = Math.min(ease(q / 0.12), 1 - ease((q - 0.9) / 0.1));
       s.clips.forEach(function (clip, i) {
-        var up = on ? ease((q - 0.06 - i * 0.13) / 0.08) * (1 - ease((q - 0.9) / 0.08)) : 0;
+        var up = on ? ease((q - 0.27 - i * 0.1) / 0.08) * (1 - ease((q - 0.9) / 0.08)) : 0;
         clip.style.opacity = up;
         if (up > 0.02 && clip.paused && !still) { var playing = clip.play(); if (playing && playing.catch) playing.catch(function () {}); }
         if (up <= 0.02 && !clip.paused) clip.pause();
@@ -681,9 +759,10 @@ ol { padding: 0; list-style: none; }
     topBar.style.opacity = fade;
     topBar.style.pointerEvents = fade < 0.5 ? "none" : "";
 
-    var name = current.state;
+    var name = borrowed || current.state;
     if (endBox.top < vh * 0.55) name = "end";
     active = name;
+    if (typeof pal !== "undefined" && pal) pal.set(name);
     progress = still ? 0.6 : q;
 
     if (current.stage) {
@@ -742,7 +821,6 @@ ol { padding: 0; list-style: none; }
     });
     var want = STATES[active].hidden ? 0 : 1;
     if (Math.abs(want - shown) > 0.01) { shown += (want - shown) * (snap ? 1 : 1 - Math.exp(-dt / 90)); moving = true; } else { shown = want; }
-    if (hop > 0) { hop = Math.max(0, hop - dt / 520); moving = true; }
     draw();
     if (moving) { raf = requestAnimationFrame(step); } else { last = 0; }
   }
@@ -973,34 +1051,64 @@ ol { padding: 0; list-style: none; }
       ctx.restore();
     },
 
-    // Ongoing. A ground, two ledges, one player.
+    // Ongoing. A tower seen from the side. It gains floors as you scroll, and one more with each click.
+    // The lift is the live mark.
     game: function (r, k, p) {
-      var gy = r.y + r.h * 0.8, s = r.h * 0.07;
+      var gy = r.y + r.h * 0.9;
+      var small = r.h < 260;                       // on a small frame, draw fewer, larger parts
+      var tw = r.w * (small ? 0.7 : 0.56), tx = r.x + (r.w - tw) / 2;
+      var fh = r.h * (small ? 0.09 : 0.082);
+      var floors = Math.min(9, 2 + Math.floor(p * 4.99) + built);
+      var shaft = tw * 0.16;                       // the lift shaft, on the left of each floor
+      var rnd = rand(5);
+
+      // the ground
       ctx.globalAlpha = 0.9 * k;
       seg(r.x, gy, r.x + r.w * k, gy);
-      seg(r.x + r.w * 0.3, r.y + r.h * 0.6, r.x + r.w * (0.3 + 0.18 * k), r.y + r.h * 0.6);
-      seg(r.x + r.w * 0.58, r.y + r.h * 0.45, r.x + r.w * (0.58 + 0.22 * k), r.y + r.h * 0.45);
-      function at(t) {
-        return [r.x + r.w * 0.08 + t * r.w * 0.8, gy - s / 2 - Math.abs(Math.sin(t * Math.PI * 3)) * r.h * 0.3];
+
+      for (var f = 0; f < floors; f++) {
+        var a = Math.max(0, Math.min(1, k * floors - f));
+        var fy = gy - (f + 1) * fh;
+        var cuts = [0.38 + rnd() * 0.14, 0.7 + rnd() * 0.1], lit = [rnd(), rnd(), rnd()];
+        if (a <= 0) continue;
+        // the floor
+        ctx.strokeStyle = INK;
+        ctx.globalAlpha = 0.9 * a;
+        ctx.strokeRect(tx, fy, tw, fh);
+        // the shaft and the rooms
+        ctx.globalAlpha = FAINT * a;
+        seg(tx + shaft, fy, tx + shaft, fy + fh);
+        if (small) continue;
+        for (var c = 0; c < cuts.length; c++) seg(tx + tw * cuts[c], fy, tx + tw * cuts[c], fy + fh);
+        // someone is in: a small mark in some rooms
+        ctx.fillStyle = INK;
+        var rooms = [(shaft / tw + cuts[0]) / 2, (cuts[0] + cuts[1]) / 2, (cuts[1] + 1) / 2];
+        for (var m = 0; m < 3; m++) {
+          if (lit[m] < 0.55) continue;
+          ctx.globalAlpha = 0.75 * a;
+          ctx.fillRect(tx + tw * rooms[m] - fh * 0.09, fy + fh * 0.52, fh * 0.18, fh * 0.48);
+        }
       }
+
+      // the mast on the roof
+      var top = gy - floors * fh;
+      ctx.strokeStyle = INK;
       ctx.globalAlpha = FAINT * k;
-      ctx.fillStyle = INK;
-      for (var t = 0; t < p; t += 0.018) {
-        var d = at(t);
-        ctx.fillRect(d[0] - 1, d[1] - 1, 2, 2);
-      }
-      var pos = at(p);
-      pos[1] -= Math.sin(hop * Math.PI) * r.h * 0.26;   // a click makes the player jump
+      seg(tx + tw * 0.78, top, tx + tw * 0.78, top - fh * 0.9 * k);
+
+      // the lift, riding up and down as you scroll
+      var ride = (Math.sin(p * Math.PI * 5 - Math.PI / 2) + 1) / 2;
+      var ly = gy - fh - ride * (floors - 1) * fh;
       ctx.globalAlpha = k;
       ctx.fillStyle = LIVE;
-      ctx.fillRect(pos[0] - s / 2, pos[1] - s / 2, s, s);
+      ctx.fillRect(tx + shaft * 0.2, ly + fh * 0.16, shaft * 0.6, fh * 0.84);
     }
   };
 
   function draw() {
-    ctx.setTransform(1 / PX, 0, 0, 1 / PX, 0, 0);
-    ctx.clearRect(0, 0, vw + PX, vh + PX);
-    ctx.lineWidth = PX;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, vw, vh);
+    ctx.lineWidth = 1.5;
     ctx.lineJoin = "miter";
 
     NAMES.forEach(function (n) {
@@ -1014,9 +1122,15 @@ ol { padding: 0; list-style: none; }
     // the frame
     ctx.globalAlpha = shown;
     ctx.strokeStyle = INK;
-    ctx.lineWidth = PX;
+    ctx.lineWidth = 2;
     ctx.strokeRect(rect.x, rect.y, rect.w, rect.h);
     ctx.globalAlpha = 1;
+
+    // the plate follows the frame, and shows the picture of the state on screen
+    plate.style.transform = "translate(" + rect.x + "px, " + rect.y + "px)";
+    plate.style.width = rect.w + "px";
+    plate.style.height = rect.h + "px";
+    NAMES.forEach(function (n) { if (STATES[n].plate) plates[STATES[n].plate].style.opacity = presence[n] * shown; });
 
     // the label is real text, so it stays sharp
     var st = STATES[active], k = presence[active];
@@ -1029,6 +1143,129 @@ ol { padding: 0; list-style: none; }
       tag.style.transform = "translate(" + Math.round(rect.x + rect.w - tag.offsetWidth - 16) + "px, " + Math.round(rect.y + rect.h - tag.offsetHeight - 12) + "px)";
     }
   }
+
+  /* ---------- the mascot ---------- */
+  // A face on a 22 x 15 grid, drawn one square per pixel and scaled up unsmoothed.
+  // The head is 16 wide; the 6 columns to its right are for a mark above the head (?, !, a heart).
+
+  var pal = (function () {
+    var el = document.getElementById("pal");
+    var g = el.getContext && el.getContext("2d");
+    if (!g) return { set: function () {}, jolt: function () {} };
+
+    // what the face does in each section: eyes, mouth, mark, and whether it watches the drawing
+    var MOODS = {
+      open:     { eyes: "open",  mouth: "smile" },
+      ask:      { eyes: "open",  mouth: "small", mark: "?", watch: true },
+      make:     { eyes: "open",  mouth: "smile", watch: true },
+      art:      { eyes: "star",  mouth: "big",   watch: true },
+      quiet:    { eyes: "open",  mouth: "smile", read: true },
+      tenup:    { eyes: "open",  mouth: "smile", watch: true },
+      ultra:    { eyes: "open",  mouth: "big",   watch: true },
+      film:     { eyes: "wide",  mouth: "o",     watch: true },
+      roblox:   { eyes: "open",  mouth: "smile", watch: true },
+      homebase: { eyes: "open",  mouth: "smile", watch: true },
+      end:      { eyes: "happy", mouth: "big",   mark: "heart", blush: true },
+      sync:      { eyes: "wide",  mouth: "smile", watch: true },
+      character: { eyes: "star",  mouth: "big",   watch: true },
+      dmv:       { eyes: "open",  mouth: "smile", watch: true },
+      ultradao:  { eyes: "open",  mouth: "big",   watch: true },
+      woodies:   { eyes: "star",  mouth: "big",   mark: "heart", watch: true }
+    };
+    var MARKS = {
+      "?":   ["###", "..#", ".#.", "...", ".#."],
+      "!":   [".#.", ".#.", ".#.", "...", ".#."],
+      heart: ["#.#", "###", "###", ".#."]
+    };
+    var mood = MOODS.open, name = "open";
+    var glance = null, blinking = false, joltUntil = 0, pointerAt = 0, pointerDir = [0, 0];
+
+    function px(x, y, w, h, color) { g.fillStyle = color; g.fillRect(x, y, w || 1, h || 1); }
+
+    function gaze() {
+      if (glance) return glance;
+      if (Date.now() - pointerAt < 1400) return pointerDir;
+      if (mood.watch) return wide.matches ? [1, 1] : [0, 1];   // the drawing is to the right on wide screens, below on narrow ones
+      if (mood.read) return [0, 1];
+      return [0, 0];
+    }
+
+    function draw() {
+      var surprised = Date.now() < joltUntil;
+      var eyes = surprised ? "wide" : blinking ? "shut" : mood.eyes;
+      var mouth = surprised ? "o" : mood.mouth;
+      var mark = surprised ? "!" : mood.mark;
+      var look = gaze(), dx = look[0], dy = look[1];
+      g.clearRect(0, 0, 22, 15);
+
+      // antenna, head, feet
+      px(8, 0, 1, 1, LIVE); px(8, 1, 1, 1, INK);
+      px(4, 2, 8, 1, INK); px(2, 3, 12, 1, INK); px(1, 4, 14, 8, INK); px(2, 12, 12, 1, INK);
+      px(3, 13, 3, 1, INK); px(10, 13, 3, 1, INK);
+
+      // eyes
+      [4, 10].forEach(function (ex) {
+        var x = ex + dx, y = 6 + dy;
+        if (eyes === "shut") { px(ex, 7, 2, 1, SIGNAL); }
+        else if (eyes === "happy") { px(ex - 1, 8, 1, 1, SIGNAL); px(ex, 7, 2, 1, SIGNAL); px(ex + 2, 8, 1, 1, SIGNAL); }
+        else if (eyes === "star") { px(x, y, 2, 3, LIVE); px(x - 1, y + 1, 4, 1, LIVE); px(x, y + 1, 2, 1, SIGNAL); }
+        else if (eyes === "wide") { px(x - 1, y, 4, 3, SIGNAL); px(x, y, 1, 1, INK); }
+        else { px(x, y, 2, 3, SIGNAL); px(x, y, 1, 1, INK); }
+      });
+
+      // mouth
+      if (mouth === "smile") { px(6, 10, 4, 1, SIGNAL); px(5, 9, 1, 1, SIGNAL); px(10, 9, 1, 1, SIGNAL); }
+      else if (mouth === "big") { px(5, 9, 6, 1, SIGNAL); px(6, 10, 4, 1, SIGNAL); px(7, 11, 2, 1, SIGNAL); }
+      else if (mouth === "o") { px(7, 9, 2, 3, SIGNAL); }
+      else { px(7, 10, 2, 1, SIGNAL); }
+      if (mood.blush && !surprised) { px(2, 9, 2, 1, LIVE); px(12, 9, 2, 1, LIVE); }
+
+      // the mark above the head
+      var rows = MARKS[mark];
+      if (rows) rows.forEach(function (row, r) {
+        for (var c = 0; c < row.length; c++) if (row[c] === "#") px(18 + c, 1 + r, 1, 1, LIVE);
+      });
+    }
+
+    // idle: blink, and now and then look somewhere else
+    function idle() {
+      if (reduce.matches) return;
+      var roll = Math.random();
+      if (roll < 0.55) {
+        blinking = true; draw();
+        setTimeout(function () { blinking = false; draw(); }, 130);
+      } else {
+        glance = [[-1, 0], [1, 0], [0, -1], [-1, 1], [1, -1]][Math.floor(Math.random() * 5)]; draw();
+        setTimeout(function () { glance = null; draw(); }, 700);
+      }
+      setTimeout(idle, 2200 + Math.random() * 2800);
+    }
+    setTimeout(idle, 1800);
+
+    // it follows the pointer for a moment after the pointer moves
+    window.addEventListener("pointermove", function (e) {
+      if (e.pointerType === "touch" || reduce.matches) return;
+      var b = el.getBoundingClientRect();
+      var vx = e.clientX - (b.left + b.width * 0.36), vy = e.clientY - (b.top + b.height / 2);
+      var dir = [Math.abs(vx) < 40 ? 0 : vx > 0 ? 1 : -1, Math.abs(vy) < 40 ? 0 : vy > 0 ? 1 : -1];
+      var was = Date.now() - pointerAt < 1400 ? pointerDir : null;
+      pointerAt = Date.now(); pointerDir = dir;
+      if (!was || was[0] !== dir[0] || was[1] !== dir[1]) draw();
+      clearTimeout(idle.back); idle.back = setTimeout(draw, 1450);
+    }, { passive: true });
+
+    draw();
+    return {
+      set: function (next) {              // called when the section on screen changes
+        if (next === name || !MOODS[next]) return;
+        name = next; mood = MOODS[next]; draw();
+      },
+      jolt: function () {                 // a short surprise, for a click on the tower
+        joltUntil = Date.now() + 650; draw();
+        setTimeout(draw, 680);
+      }
+    };
+  })();
 
   /* ---------- the wheel: slower and heavier, so a statement stays long enough to read ---------- */
   // Only the mouse wheel and trackpad are changed. Touch, keys, the scrollbar and links scroll as the browser does.
@@ -1049,6 +1286,7 @@ ol { padding: 0; list-style: none; }
     window.scrollTo(0, glide.at);
   }
   function glideStop() {
+    clearTimeout(settleTimer);
     if (glide.raf) cancelAnimationFrame(glide.raf);
     glide.raf = 0; glide.last = 0;
   }
@@ -1061,6 +1299,21 @@ ol { padding: 0; list-style: none; }
     var max = document.documentElement.scrollHeight - vh;
     glide.to = Math.max(0, Math.min(max, glide.to + e.deltaY * unit * GEAR));
     if (!glide.raf) glide.raf = requestAnimationFrame(glideStep);
+    clearTimeout(settleTimer);
+    settleTimer = setTimeout(settle, 170);
+  }
+  // When the wheel stops, drift on to the nearest line's rest point, so a line is never left half shown.
+  var settleTimer = 0;
+  function settle() {
+    var points = restPoints(), best = null, reach = vh * 0.2;
+    for (var i = 0; i < points.length; i++) {
+      var d = Math.abs(points[i] - glide.to);
+      if (d < reach && (best === null || d < Math.abs(best - glide.to))) best = points[i];
+    }
+    if (best === null || Math.abs(best - glide.to) < 2) return;
+    if (!glide.raf) glide.at = window.scrollY;
+    glide.to = best;
+    if (!glide.raf) glide.raf = requestAnimationFrame(glideStep);
   }
   window.addEventListener("wheel", onWheel, { passive: false });
   ["keydown", "mousedown", "touchstart"].forEach(function (type) {
@@ -1068,7 +1321,7 @@ ol { padding: 0; list-style: none; }
   });
 
   window.addEventListener("pointerdown", function (e) {
-    if (active === "make" && hop === 0 && !(e.target.closest && e.target.closest("a"))) { hop = 1; kick(); }
+    if (active === "make" && !(e.target.closest && e.target.closest("a"))) { built = built < 4 ? built + 1 : 0; pal.jolt(); kick(); }
   });
   window.addEventListener("scroll", kick, { passive: true });
   window.addEventListener("resize", resize);
