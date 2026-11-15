@@ -272,16 +272,6 @@ ol { padding: 0; list-style: none; }
 .panel--story .stage { margin-inline: calc(var(--gutter) * -1); }
 .panel--story .text { display: grid; align-content: start; }
 
-/* the flow: strands that never stop moving, behind the words. They take a new shape for each part of the story. */
-#flow {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-
 /* the page turns forest green behind the Woodies stickers */
 #grove {
   position: fixed;
@@ -409,7 +399,6 @@ ol { padding: 0; list-style: none; }
 <script>document.documentElement.classList.add("js");</script>
 <div id="dark" aria-hidden="true"></div>
 <div id="grove" aria-hidden="true"></div>
-<canvas id="flow" aria-hidden="true"></canvas>
 <div id="plate" aria-hidden="true">
   <img data-plate="sync" src="assets/images/work/story-sync.webp" alt="" width="1000" height="657" decoding="async">
   <img data-plate="dmv" src="assets/images/work/california-dmv.webp" alt="" width="1000" height="459" decoding="async">
@@ -459,7 +448,7 @@ ol { padding: 0; list-style: none; }
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
-        <h2 class="say" data-state="flow" data-flow="ask">Most of my work starts as a question.</h2>
+        <h2 class="say">Most of my work starts as a question.</h2>
         <p class="say" data-state="sync">How can fans deepen connection to their favorite IP?</p>
         <p class="say" data-state="character">What if people could generate and own unique character IP?</p>
         <p class="say" data-state="lift">How might AI become the COO of your small business?</p>
@@ -472,8 +461,8 @@ ol { padding: 0; list-style: none; }
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
         <h2 class="say">My process is experimentation.</h2>
-        <p class="say" data-state="flow" data-flow="make">Those questions became a companion app for TV series, an animated short film, and an always-on AI assistant.</p>
-        <p class="say" data-state="flow" data-flow="lead">An idea sparks a journey through all the challenges and ideation.</p>
+        <p class="say" data-state="answers">Those questions became a companion app for TV series, an animated short film, and an always-on AI assistant.</p>
+        <p class="say" data-state="journey">An idea sparks a journey through all the challenges and ideation.</p>
       </div>
     </div>
   </section>
@@ -503,7 +492,7 @@ ol { padding: 0; list-style: none; }
   <section class="seg" data-state="quiet" style="--len: 52">
     <div class="panel panel--words">
       <div class="lines">
-        <h2 class="say" data-flow="ring">My professional journey is a series of deep collaborations with friends.</h2>
+        <h2 class="say">My professional journey is a series of deep collaborations with friends.</h2>
       </div>
     </div>
   </section>
@@ -512,9 +501,9 @@ ol { padding: 0; list-style: none; }
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
-        <h2 class="say" data-state="flow" data-flow="team">At <a href="https://10up.com" target="_blank" rel="noopener">10up</a>, I grew our design team from 5 people to 25.</h2>
+        <h2 class="say" data-state="team">At <a href="https://10up.com" target="_blank" rel="noopener">10up</a>, I grew our design team from 5 people to 25.</h2>
         <p class="say" data-state="dmv">I led design projects for Microsoft, Starbucks, the California DMV.</p>
-        <p class="say" data-state="flow" data-flow="lead">My favorite moments were watching designers grow, take the lead, and push each other.</p>
+        <p class="say" data-state="lead">My favorite moments were watching designers grow, take the lead, and push each other.</p>
       </div>
     </div>
   </section>
@@ -524,8 +513,8 @@ ol { padding: 0; list-style: none; }
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
         <h2 class="say" data-state="ultradao">Next, at UltraDAO Studios, I built a creative studio from scratch.</h2>
-        <p class="say" data-state="flow" data-flow="ring">We earned $2.6M with our first release.</p>
-        <p class="say" data-state="flow" data-flow="ring">I’m more proud of how we worked: everyone brought their best ideas forward.</p>
+        <p class="say">We earned $2.6M with our first release.</p>
+        <p class="say" data-state="ring">I’m more proud of how we worked: everyone brought their best ideas forward.</p>
       </div>
     </div>
   </section>
@@ -553,9 +542,9 @@ ol { padding: 0; list-style: none; }
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
-        <h2 class="say" data-state="flow" data-flow="blocks">From characters to avatars: at <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox</a>, I designed avatar tools for 3D creators.</h2>
-        <p class="say" data-state="flow" data-flow="blocks">I researched creator workflows and designed tools to meet their needs.</p>
-        <p class="say" data-state="flow" data-flow="blocks">The work reflected my desire to reduce frustration while increasing creativity.</p>
+        <h2 class="say">From characters to avatars: at <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox</a>, I designed avatar tools for 3D creators.</h2>
+        <p class="say">I researched creator workflows and designed tools to meet their needs.</p>
+        <p class="say">The work reflected my desire to reduce frustration while increasing creativity.</p>
       </div>
     </div>
   </section>
@@ -563,8 +552,8 @@ ol { padding: 0; list-style: none; }
   <section class="seg" data-state="quiet" style="--len: 84">
     <div class="panel panel--words">
       <div class="lines">
-        <h2 class="say" data-flow="lanes">Every one of those teams taught me the same thing.</h2>
-        <p class="say" data-flow="lanes">People do their best work when they go outside their lane.</p>
+        <h2 class="say">Every one of those teams taught me the same thing.</h2>
+        <p class="say">People do their best work when they go outside their lane.</p>
       </div>
     </div>
   </section>
@@ -575,9 +564,9 @@ ol { padding: 0; list-style: none; }
       <div class="text lines">
         <h2 class="say" data-state="assistant">Which brings me back to that last question.</h2>
         <p class="say" data-state="assistant">Now I’m leading design for <a href="https://joinhomebase.com" target="_blank" rel="noopener">Homebase Assistant</a>.</p>
-        <p class="say" data-state="flow" data-flow="order">The vision is to be an operational partner for small business owners.</p>
-        <p class="say" data-state="flow" data-flow="order">Executing on it is extremely challenging but rewarding.</p>
-        <p class="say" data-state="flow" data-flow="gather">Small businesses are near and dear to me.</p>
+        <p class="say" data-state="week">The vision is to be an operational partner for small business owners.</p>
+        <p class="say" data-state="week">Executing on it is extremely challenging but rewarding.</p>
+        <p class="say" data-state="shop">Small businesses are near and dear to me.</p>
       </div>
     </div>
   </section>
@@ -585,7 +574,7 @@ ol { padding: 0; list-style: none; }
   <section class="seg" data-state="quiet" style="--len: 52">
     <div class="panel panel--words panel--xl panel--center">
       <div class="lines">
-        <h2 class="say" data-flow="rise">My design principles</h2>
+        <h2 class="say">My design principles</h2>
       </div>
     </div>
   </section>
@@ -593,10 +582,10 @@ ol { padding: 0; list-style: none; }
   <section class="seg" data-state="quiet" style="--len: 248">
     <div class="panel panel--words panel--xl">
       <div class="lines">
-        <h2 class="say" data-flow="rise">Ask bigger questions.</h2>
-        <p class="say" data-flow="rise">Create and test ideas constantly.</p>
-        <p class="say" data-flow="rise">Just get to a first version, then iterate.</p>
-        <p class="say" data-flow="rise">And do it with friends.</p>
+        <h2 class="say">Ask bigger questions.</h2>
+        <p class="say">Create and test ideas constantly.</p>
+        <p class="say">Just get to a first version, then iterate.</p>
+        <p class="say">And do it with friends.</p>
       </div>
     </div>
   </section>
@@ -688,7 +677,7 @@ ol { padding: 0; list-style: none; }
       strip: el.querySelector(".strip"),
       clips: Array.prototype.slice.call(el.querySelectorAll(".clip")),
       lines: Array.prototype.slice.call(el.querySelectorAll(".say")).map(function (say) {
-        return { el: say, words: split(say), state: say.getAttribute("data-state"), flow: say.getAttribute("data-flow") };   // a line may borrow another section's drawing
+        return { el: say, words: split(say), state: say.getAttribute("data-state") };   // a line may borrow another section's drawing
       }),
       first: i === 0,
       last: i === all.length - 1
@@ -741,7 +730,6 @@ ol { padding: 0; list-style: none; }
     poster:    { ratio: 720 / 1081,  label: "Official Selection, Aesthetica Short Film Festival 2023", plate: "poster" },
     assistant: { ratio: 560 / 604,   label: "Homebase Assistant, covering a shift", plate: "assistant" },
     lift:      { ratio: 848 / 558,   label: "Homebase Assistant",          plate: "lift" },
-    flow:    { ratio: 0, hidden: true },     // no frame: the strands carry this line
     // drawings that state the fact in their line
     team:    { ratio: 1,      label: "5 people, then 25",        draw: "team" },
     lead:    { ratio: 1,      label: "Each takes the lead",      draw: "lead" },
@@ -788,7 +776,7 @@ ol { padding: 0; list-style: none; }
         q = clamp(-b.top / (b.height - (s.last ? vh : 0)));
       }
     });
-    var borrowed = null, run = 0, mood = null, within = 0;
+    var borrowed = null, run = 0;
     // One line of the section is on screen at a time. Each line fades in, lights up word by word, and gives way to the next.
     segs.forEach(function (s) {
       var on = s === current;
@@ -799,8 +787,6 @@ ol { padding: 0; list-style: none; }
         line.el.classList.toggle("is-on", on && j === slot);
         if (!on || j !== slot) { line.el.style.opacity = 0; return; }
         borrowed = line.state;
-        mood = line.flow;
-        within = t;
         // how far through the run of neighbouring lines that share this drawing
         var a0 = j, b0 = j;
         while (a0 > 0 && s.lines[a0 - 1].state === line.state) a0--;
@@ -844,23 +830,6 @@ ol { padding: 0; list-style: none; }
     var name = borrowed || current.state;
     if (endBox.top < vh * 0.55) name = "end";
     active = name;
-    // the strands: which shape they take, where they gather, and how strongly they show
-    var quietStates = { open: 1, quiet: 1, end: 1, flow: 1 };
-    flow.mood = name === "end" ? "rise" : mood || (quietStates[name] ? "calm" : "hush");
-    flow.within = still ? 1 : within;
-    var wideNow = wide.matches;
-    flow.tk = 1;
-    if (!wideNow) {                 // small screens: the strands take the whole page and pass behind the words
-      flow.tx = vw * 0.5; flow.ty = vh * 0.5; flow.tr = vh * 0.4; flow.tk = (vw * 0.5) / (vh * 0.4); flow.ta = 0.62;
-    } else if (current.stage && name !== "end") {
-      var fs = current.stage.getBoundingClientRect();
-      flow.tx = fs.left + fs.width / 2; flow.ty = fs.top + fs.height / 2;
-      flow.tr = Math.min(fs.width, fs.height) * 0.5; flow.ta = 0.95;
-    } else {
-      flow.tx = wideNow ? vw * 0.7 : vw * 0.5; flow.ty = vh * (wideNow ? 0.5 : 0.52);
-      flow.tr = wideNow ? Math.min(vw * 0.27, vh * 0.42) : vw * 0.6; flow.ta = wideNow ? 0.6 : 0.34;
-    }
-    if (flow.wake) flow.wake();
     if (typeof pal !== "undefined" && pal) pal.set(name);
     progress = still ? 1 : clamp(run);
 
@@ -1400,161 +1369,6 @@ ol { padding: 0; list-style: none; }
     }
   }
 
-  /* ---------- the flow ---------- */
-  // 110 strands move through a field that never rests. Each part of the story has its own field (a "mood"),
-  // and the strands pass from one to the next without a cut. Strand 0 is the live mark.
-  // Positions are kept in units of the gathering radius, measured from its centre.
-
-  var flow = { mood: "calm", within: 0, tx: 0, ty: 0, tr: 100, ta: 0.6, tk: 1, x: 0, y: 0, r: 100, a: 0, k: 1 };
-  (function () {
-    var cv = document.getElementById("flow"), g = cv.getContext && cv.getContext("2d");
-    if (!g) return;
-    var COUNT = 110, TRAIL = 54;
-    // how many strands each mood uses
-    var CROWD = { calm: 22, ask: 54, make: 72, team: 96, lead: 58, ring: 66, blocks: 56, lanes: 56, order: 54, gather: 50, rise: 60, hush: 0 };
-    var weight = {};
-    Object.keys(CROWD).forEach(function (m) { weight[m] = m === "calm" ? 1 : 0; });
-    var seedOf = rand(41), strands = [];
-    for (var i = 0; i < COUNT; i++) strands.push({ x: (seedOf() - 0.5) * 2, y: (seedOf() - 0.5) * 2, s: seedOf(), a: 0, trail: [], age: seedOf() * 8 });
-    var fw = 0, fh = 0, fdpr = 1, clock = 0, energy = 0, lastY = window.scrollY, tick = 0, running = 0, lastT = 0;
-    var mouse = { x: -9999, y: -9999 };
-    var STREAMS = { team: 1, lead: 1, lanes: 1, order: 1 };
-
-    function size() {
-      fdpr = Math.min(window.devicePixelRatio || 1, 2);
-      fw = document.documentElement.clientWidth; fh = window.innerHeight;
-      cv.width = Math.round(fw * fdpr); cv.height = Math.round(fh * fdpr);
-    }
-
-    // the field of one mood at a point: which way a strand there should go
-    function field(m, s, t) {
-      var x = s.x, y = s.y, r = Math.sqrt(x * x + y * y) + 0.0001, nx = x / r, ny = y / r, q = s.s;
-      var A = Math.sin(1.7 * x + t * 0.6) + Math.cos(1.3 * y - t * 0.5) + Math.sin(1.1 * (x + y) + t * 0.3);
-      var hold = Math.max(0, r - 0.9) * 3, vx, vy, lane, aim, a;
-      if (m === "ask") {            // curling, searching
-        a = (Math.sin(1.9 * x + t * 0.5 + q * 9) + Math.cos(1.6 * y - t * 0.4 + q * 5)) * 2.6 + q * 6.283;
-        return [Math.cos(a) * 0.8 - x * hold, Math.sin(a) * 0.8 - y * hold];
-      }
-      if (m === "make") {           // bursting out and falling back, never the same twice
-        var push = Math.sin(t * 1.1 + q * 6.283) * 1.25, spin = Math.sin(q * 40) * 0.9;
-        return [nx * push - y * spin - x * hold, ny * push + x * spin - y * hold];
-      }
-      if (m === "team") {           // a few streams, then many, drawing together as they go
-        lane = (q * 2 - 1) * 0.9;
-        aim = lane * (1 - 0.72 * ease((x + 1.2) / 2.3)) + 0.07 * Math.sin(3 * x - t * 1.4 + q * 6);
-        return [0.85 + 0.3 * q, (aim - y) * 3.2];
-      }
-      if (m === "lead") {           // one moving line that the rest fall in behind
-        aim = 0.5 * Math.sin(2.3 * x - t * 1.2) + (q - 0.5) * 0.16 * (1.2 + Math.sin(t * 0.8 + q * 9));
-        return [0.95, (aim - y) * 3.6];
-      }
-      if (m === "ring") {           // out from one point, then round together
-        var out = 0.7 - r;
-        return [nx * out * 1.6 - y * (0.45 + 0.5 * r), ny * out * 1.6 + x * (0.45 + 0.5 * r)];
-      }
-      if (m === "blocks") {         // straight runs and square turns
-        var turn = Math.floor(t * (0.7 + q * 0.9) + q * 31);            // each strand turns on its own beat
-        a = Math.floor(Math.abs(Math.sin(turn * 12.9898 + q * 78.233) * 43758.5453) % 4) * (Math.PI / 2);
-        return [Math.cos(a) * 0.8 - x * hold * 1.4, Math.sin(a) * 0.8 - y * hold * 1.4];
-      }
-      if (m === "lanes") {          // lanes, and the ones that leave theirs
-        lane = (Math.floor(q * 7) - 3) / 3.7;
-        var rover = (q * 97) % 1 < 0.32;
-        aim = rover ? lane + 0.85 * Math.sin(t * 0.7 + q * 12 + x * 1.5) : lane;
-        return [0.75, (aim - y) * (rover ? 1.7 : 4)];
-      }
-      if (m === "order") {          // everything in step
-        lane = (Math.floor(q * 6) - 2.5) / 3.3 + ((q * 53) % 1 - 0.5) * 0.09;
-        aim = lane + 0.13 * Math.sin(2.2 * x - t * 0.9);
-        return [0.95, (aim - y) * 3];
-      }
-      if (m === "gather") {         // close and warm
-        var nest = 0.16 + 0.42 * q + 0.04 * Math.sin(t * 0.9 + q * 20);
-        return [-y * 1.1 / (0.3 + r) - x * (r - nest) * 2.6, x * 1.1 / (0.3 + r) - y * (r - nest) * 2.6];
-      }
-      if (m === "rise") {           // upward
-        return [0.3 * Math.sin(2.2 * y + t * 0.6 + q * 6), -0.5 - 0.3 * q];
-      }
-      // calm, and hush: a slow turn round a ring
-      vx = -y * 0.5 / (0.35 + r) + Math.cos(A) * 0.22 - x * (r - 0.7) * 0.9;
-      vy = x * 0.5 / (0.35 + r) + Math.sin(A) * 0.22 - y * (r - 0.7) * 0.9;
-      return [vx, vy];
-    }
-
-    function respawn(s) {
-      var m = flow.mood;
-      if (STREAMS[m]) { s.x = -1.35 - seedOf() * 0.2; s.y = (seedOf() * 2 - 1) * 0.9; }
-      else if (m === "ring" || m === "make") { var a = seedOf() * 6.283; s.x = Math.cos(a) * 0.05; s.y = Math.sin(a) * 0.05; }
-      else if (m === "rise") { s.x = (seedOf() * 2 - 1) * 1.2; s.y = 1.35; }
-      else { var b = seedOf() * 6.283, d = Math.sqrt(seedOf()); s.x = Math.cos(b) * d; s.y = Math.sin(b) * d; }
-      s.trail.length = 0; s.a = 0; s.age = 0;
-    }
-
-    function advance(dt) {
-      clock += dt;
-      var m, k = 1 - Math.exp(-dt / 0.35);
-      for (m in weight) weight[m] += ((m === flow.mood ? 1 : 0) - weight[m]) * k;
-      var c = 1 - Math.exp(-dt / 0.28);
-      flow.x += (flow.tx - flow.x) * c; flow.y += (flow.ty - flow.y) * c; flow.r += (flow.tr - flow.r) * c; flow.a += (flow.ta - flow.a) * c; flow.k += (flow.tk - flow.k) * c;
-      energy *= Math.exp(-dt / 0.5);
-      var crowd = CROWD[flow.mood];
-      if (flow.mood === "team") crowd = Math.round(14 + (crowd - 14) * ease(flow.within / 0.6));   // the streams multiply
-      var speed = 0.5 * (1 + Math.min(1.6, energy)), fade = 1 - Math.exp(-dt / 0.4);
-      tick++;
-      for (var i = 0; i < COUNT; i++) {
-        var s = strands[i], on = i < crowd, vx = 0, vy = 0;
-        s.a += ((on ? 1 : 0) - s.a) * fade;
-        if (s.a < 0.01 && !on) { s.trail.length = 0; continue; }
-        for (m in weight) { if (weight[m] < 0.02) continue; var v = field(m, s, clock); vx += v[0] * weight[m]; vy += v[1] * weight[m]; }
-        // the pointer parts them
-        var px = flow.x + s.x * flow.r * flow.k - mouse.x, py = flow.y + s.y * flow.r - mouse.y, pd = Math.sqrt(px * px + py * py);
-        if (pd < 150) { var f = (1 - pd / 150) * 2.2 / (pd + 1); vx += px * f; vy += py * f; }
-        s.x += vx * speed * dt; s.y += vy * speed * dt; s.age += dt;
-        if (Math.abs(s.x) > 1.5 || Math.abs(s.y) > 1.5 || s.age > 9 + s.s * 9) respawn(s);
-        if (tick % 2 === 0) { s.trail.push(flow.x + s.x * flow.r * flow.k, flow.y + s.y * flow.r); if (s.trail.length > TRAIL * 2) s.trail.splice(0, 2); }
-      }
-    }
-
-    function paint() {
-      g.setTransform(fdpr, 0, 0, fdpr, 0, 0);
-      g.clearRect(0, 0, fw, fh);
-      g.lineCap = "round"; g.lineJoin = "round";
-      for (var i = COUNT - 1; i >= 0; i--) {
-        var s = strands[i], tr = s.trail;
-        if (s.a < 0.02 || tr.length < 4) continue;
-        g.globalAlpha = s.a * flow.a * (i === 0 ? 1 : 0.62) * Math.min(1, s.age * 1.5);
-        g.strokeStyle = i === 0 ? LIVE : INK;
-        g.lineWidth = i === 0 ? 2.25 : 1.25;
-        g.beginPath(); g.moveTo(tr[0], tr[1]);
-        for (var j = 2; j < tr.length; j += 2) g.lineTo(tr[j], tr[j + 1]);
-        g.stroke();
-      }
-      g.globalAlpha = 1;
-    }
-
-    function frame(now) {
-      running = 0;
-      var dt = Math.min(0.05, (now - (lastT || now)) / 1000); lastT = now;
-      advance(dt); paint();
-      if (!document.hidden && !reduce.matches) running = requestAnimationFrame(frame); else lastT = 0;
-    }
-    flow.wake = function () {
-      if (reduce.matches) {            // no motion: settle the strands out of sight, then show one still frame
-        for (var n = 0; n < 90; n++) advance(1 / 30);
-        paint(); return;
-      }
-      if (!running) { lastT = 0; running = requestAnimationFrame(frame); }
-    };
-
-    window.addEventListener("scroll", function () { var y = window.scrollY; energy += Math.abs(y - lastY) / 260; lastY = y; }, { passive: true });
-    window.addEventListener("pointermove", function (e) { if (e.pointerType !== "touch") { mouse.x = e.clientX; mouse.y = e.clientY; } }, { passive: true });
-    window.addEventListener("pointerleave", function () { mouse.x = mouse.y = -9999; });
-    window.addEventListener("resize", size);
-    document.addEventListener("visibilitychange", function () { if (!document.hidden) flow.wake(); });
-    size();
-    flow.x = flow.tx = fw * 0.7; flow.y = flow.ty = fh * 0.5; flow.r = flow.tr = Math.min(fw, fh) * 0.3;
-  })();
-
   /* ---------- the mascot ---------- */
   // A face on a 22 x 15 grid, drawn one square per pixel and scaled up unsmoothed.
   // The head is 16 wide; the 6 columns to its right are for a mark above the head (?, !, a heart).
@@ -1577,7 +1391,6 @@ ol { padding: 0; list-style: none; }
       roblox:   { eyes: "open",  mouth: "smile", watch: true },
       homebase: { eyes: "open",  mouth: "smile", watch: true },
       end:      { eyes: "happy", mouth: "big",   mark: "heart", blush: true },
-      flow:      { eyes: "open",  mouth: "smile", watch: true },
       sync:      { eyes: "wide",  mouth: "smile", watch: true },
       character: { eyes: "star",  mouth: "big",   watch: true },
       dmv:       { eyes: "open",  mouth: "smile", watch: true },
