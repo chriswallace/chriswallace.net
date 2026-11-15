@@ -129,7 +129,7 @@ ol { padding: 0; list-style: none; }
   overflow: hidden;
   pointer-events: none;
 }
-#plate img {
+#plate img, #plate video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -390,6 +390,8 @@ ol { padding: 0; list-style: none; }
   <img data-plate="dmv" src="assets/images/work/california-dmv.webp" alt="" width="1000" height="459" decoding="async">
   <img data-plate="ultradao" src="assets/images/work/ultradao.webp" alt="" width="560" height="720" decoding="async">
   <img data-plate="woodies" src="assets/images/work/woodies.webp" alt="" width="1088" height="760" decoding="async">
+  <video data-plate="assistant" src="assets/video/homebase/assistant.mp4" muted loop playsinline preload="none" width="560" height="604"></video>
+  <video data-plate="lift" data-once src="assets/video/homebase/lift.mp4" muted playsinline preload="auto" width="848" height="558"></video>
 </div>
 <div id="brood" aria-hidden="true"><!-- six generative Woodies go here: assets/images/woodies/woodie-1.webp to woodie-6.webp --></div>
 <canvas id="frame" aria-hidden="true"></canvas>
@@ -428,7 +430,7 @@ ol { padding: 0; list-style: none; }
         <h2 class="say">Most of my work starts as a question.</h2>
         <p class="say" data-state="sync">How can fans deepen connection to their favorite IP?</p>
         <p class="say" data-state="ultra">What if people could generate and own unique character IP?</p>
-        <p class="say" data-state="homebase">How might AI become the COO of your small business?</p>
+        <p class="say" data-state="lift">How might AI become the COO of your small business?</p>
       </div>
     </div>
   </section>
@@ -539,8 +541,8 @@ ol { padding: 0; list-style: none; }
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
-        <h2 class="say">Which brings me back to that last question.</h2>
-        <p class="say">Now I’m leading design for <a href="https://joinhomebase.com" target="_blank" rel="noopener">Homebase Assistant</a>.</p>
+        <h2 class="say" data-state="assistant">Which brings me back to that last question.</h2>
+        <p class="say" data-state="assistant">Now I’m leading design for <a href="https://joinhomebase.com" target="_blank" rel="noopener">Homebase Assistant</a>.</p>
         <p class="say" data-state="week">The vision is to be an operational partner for small business owners.</p>
         <p class="say" data-state="week">Executing on it is extremely challenging but rewarding.</p>
         <p class="say" data-state="shop">Small businesses are near and dear to me.</p>
@@ -583,7 +585,7 @@ ol { padding: 0; list-style: none; }
   // where each one settles, as fractions of the drawing area, with its size and tilt
   var NEST = [[0.24, 0.26, 1.0, -5], [0.72, 0.2, 0.86, 4], [0.5, 0.52, 1.12, 2], [0.17, 0.74, 0.8, 6], [0.8, 0.66, 0.94, -4], [0.47, 0.88, 0.74, -3]];
   var plates = {};
-  Array.prototype.slice.call(plate.querySelectorAll("img")).forEach(function (img) { plates[img.getAttribute("data-plate")] = img; });
+  Array.prototype.slice.call(plate.querySelectorAll("img, video")).forEach(function (el) { plates[el.getAttribute("data-plate")] = el; });
   var ctx = canvas.getContext && canvas.getContext("2d");
   if (!ctx) { document.documentElement.classList.remove("js"); return; }
 
@@ -703,6 +705,8 @@ ol { padding: 0; list-style: none; }
     dmv:       { ratio: 1000 / 459,  label: "California DMV",              plate: "dmv" },
     ultradao:  { ratio: 560 / 720,   label: "UltraDAO",                    plate: "ultradao" },
     woodies:   { ratio: 1088 / 760,  label: "Arden, from Woodies: Origin", plate: "woodies" },
+    assistant: { ratio: 560 / 604,   label: "Homebase Assistant, covering a shift", plate: "assistant" },
+    lift:      { ratio: 848 / 558,   label: "Homebase Assistant",          plate: "lift" },
     // drawings that state the fact in their line
     team:    { ratio: 1,      label: "5 people, then 25",        draw: "team" },
     lead:    { ratio: 1,      label: "Each takes the lead",      draw: "lead" },
@@ -1299,7 +1303,20 @@ ol { padding: 0; list-style: none; }
     plate.style.transform = "translate(" + rect.x + "px, " + rect.y + "px)";
     plate.style.width = rect.w + "px";
     plate.style.height = rect.h + "px";
-    NAMES.forEach(function (n) { if (STATES[n].plate) plates[STATES[n].plate].style.opacity = presence[n] * shown; });
+    NAMES.forEach(function (n) {
+      if (!STATES[n].plate) return;
+      var el = plates[STATES[n].plate], on = presence[n] * shown;
+      el.style.opacity = on;
+      if (el.play) {                       // a film plays only while it is on screen
+        var once = el.hasAttribute("data-once");   // plays through one time and holds on its last frame
+        if (on > 0.05 && el.paused && !el.ended && !reduce.matches) { var pl = el.play(); if (pl && pl.catch) pl.catch(function () {}); }
+        if (on > 0.05 && once && reduce.matches && el.duration && el.currentTime < el.duration - 0.1) el.currentTime = el.duration;
+        if (on <= 0.05) {
+          if (!el.paused) el.pause();
+          if (once && el.currentTime > 0) el.currentTime = 0;   // ready to play again next time
+        }
+      }
+    });
 
     // the brood: each one leaves the middle in turn and settles in its place
     var bp = active === "character" ? progress : 1;
@@ -1353,6 +1370,8 @@ ol { padding: 0; list-style: none; }
       dmv:       { eyes: "open",  mouth: "smile", watch: true },
       ultradao:  { eyes: "open",  mouth: "big",   watch: true },
       woodies:   { eyes: "star",  mouth: "big",   mark: "heart", watch: true },
+      assistant: { eyes: "wide",  mouth: "smile", watch: true },
+      lift:      { eyes: "wide",  mouth: "big",   mark: "!", watch: true },
       team:      { eyes: "open",  mouth: "big",   watch: true },
       lead:      { eyes: "happy", mouth: "big",   watch: true },
       answers:   { eyes: "open",  mouth: "smile", mark: "!", watch: true },
