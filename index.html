@@ -711,15 +711,15 @@ ol { padding: 0; list-style: none; }
   var dpr = 1;
   var STATES = {
     open:     { ratio: 0, label: "Scroll" },
-    ask:      { ratio: 9 / 16,  label: "A phone beside a TV", draw: "second" },
+    ask:      { ratio: 9 / 16,  draw: "second" },
     make:     { ratio: 4 / 5,   label: "Tap or click to add a floor", draw: "game" },
     art:      { ratio: 0, hidden: true },      // the art itself is on screen
     quiet:    { ratio: 0 },
-    tenup:    { ratio: 16 / 10, label: "A page of blocks", draw: "web" },
-    ultra:    { ratio: 1,       label: "A collection, one original", draw: "chain" },
+    tenup:    { ratio: 16 / 10, draw: "web" },
+    ultra:    { ratio: 1,       draw: "chain" },
     film:     { ratio: 0, hidden: true },      // the film itself is on screen
-    roblox:   { ratio: 16 / 9,  label: "An avatar and its parts", draw: "avatar" },
-    homebase: { ratio: 3 / 4,   label: "The owner decides", draw: "assistant" },
+    roblox:   { ratio: 16 / 9,  draw: "avatar" },
+    homebase: { ratio: 3 / 4,   draw: "assistant" },
     end:      { ratio: 0 },
     // lines that name a piece of work show it: the frame takes the picture's shape
     sync:      { ratio: 1000 / 657,  label: "The Walking Dead Story Sync", plate: "sync" },
@@ -731,13 +731,13 @@ ol { padding: 0; list-style: none; }
     assistant: { ratio: 560 / 604,   label: "Homebase Assistant, covering a shift", plate: "assistant" },
     lift:      { ratio: 848 / 558,   label: "Homebase Assistant",          plate: "lift" },
     // drawings that state the fact in their line
-    team:    { ratio: 1,      label: "5 people, then 25",        draw: "team" },
-    lead:    { ratio: 1,      label: "Each takes the lead",      draw: "lead" },
-    answers: { ratio: 2,      label: "An app, a film, an assistant", draw: "answers" },
-    journey: { ratio: 16 / 10, label: "From an idea to a first version", draw: "journey" },
-    ring:    { ratio: 1,      label: "Every idea reaches everyone", draw: "ring" },
-    week:    { ratio: 4 / 3,  label: "A week of shifts, covered", draw: "week" },
-    shop:    { ratio: 4 / 3,  label: "Open",                     draw: "shop" }
+    team:    { ratio: 1,      draw: "team" },
+    lead:    { ratio: 1,      draw: "lead" },
+    answers: { ratio: 2,      draw: "answers" },
+    journey: { ratio: 16 / 10, draw: "journey" },
+    ring:    { ratio: 1,      draw: "ring" },
+    week:    { ratio: 4 / 3,  draw: "week" },
+    shop:    { ratio: 4 / 3,  draw: "shop" }
   };
   var NAMES = Object.keys(STATES);
   var presence = {};
@@ -1173,34 +1173,40 @@ ol { padding: 0; list-style: none; }
     }
   };
 
-  function person(x, y, u, color, alpha) {   // a head and shoulders
-    ctx.globalAlpha = alpha;
-    ctx.fillStyle = color;
-    ctx.beginPath(); ctx.arc(x, y - u * 0.42, u * 0.3, 0, Math.PI * 2); ctx.fill();
-    ctx.fillRect(x - u * 0.42, y, u * 0.84, u * 0.5);
+  function nest(r, i, turn) {                // one outlined square of the nest, turned a little more than the last
+    var half = r.w * (0.07 + i * 0.045);
+    ctx.save();
+    ctx.translate(r.x + r.w / 2, r.y + r.h / 2);
+    ctx.rotate(i * turn);
+    ctx.strokeRect(-half, -half, half * 2, half * 2);
+    ctx.restore();
   }
-  function grid25(r) {                       // the places of 25 people, from the middle out
-    var gap = r.w * 0.17, out = [];
-    for (var gy = -2; gy <= 2; gy++) for (var gx = -2; gx <= 2; gx++) out.push([gx, gy]);
-    out.sort(function (a, b) { return (a[0] * a[0] + a[1] * a[1]) - (b[0] * b[0] + b[1] * b[1]) || Math.atan2(a[1], a[0]) - Math.atan2(b[1], b[0]); });
-    return out.map(function (c) { return [r.x + r.w / 2 + c[0] * gap, r.y + r.h / 2 + c[1] * gap + gap * 0.12]; });
-  }
+  var NEST_RINGS = 7;
 
-  // 5 people become 25. The counts are the real ones.
+  // Growth: a small core, and squares that open out around it, each turned a little further.
   DRAW.team = function (r, k, p) {
-    var spots = grid25(r), u = r.w * 0.07;
-    var n = Math.round((5 + 20 * ease((p - 0.12) / 0.5)) * k);
-    for (var i = 0; i < n; i++) person(spots[i][0], spots[i][1], u, i === 0 ? LIVE : INK, i === 0 ? k : 0.9 * k);
+    var grown = (1.2 + (NEST_RINGS - 1.2) * ease((p - 0.12) / 0.55)) * k, turn = 0.1 + 0.05 * ease(p);
+    ctx.strokeStyle = INK;
+    for (var i = 0; i < NEST_RINGS; i++) {
+      var a = Math.max(0, Math.min(1, grown - i));
+      if (a <= 0) break;
+      ctx.globalAlpha = 0.9 * a * k;
+      nest(r, i, turn);
+    }
+    var c = r.w * 0.035;
+    ctx.globalAlpha = k; ctx.fillStyle = LIVE;
+    ctx.fillRect(r.x + r.w / 2 - c, r.y + r.h / 2 - c, c * 2, c * 2);
   };
 
-  // The same 25. The live mark passes from one to the next: each takes the lead in turn.
+  // The same nest. The live line passes outward from one square to the next: each takes the lead in turn.
   DRAW.lead = function (r, k, p) {
-    var spots = grid25(r), u = r.w * 0.07;
-    var turn = Math.min(24, Math.floor(ease(p / 0.85) * 24.99));   // once through the team
-    for (var i = 0; i < 25; i++) {
-      var up = i === turn ? u * 0.35 : 0;
-      person(spots[i][0], spots[i][1] - up, u, i === turn ? LIVE : INK, (i === turn ? 1 : 0.75) * k);
+    var at = Math.min(NEST_RINGS - 1, Math.floor(ease(p / 0.85) * (NEST_RINGS - 0.01))), turn = 0.15 + 0.07 * ease(p);
+    for (var i = 0; i < NEST_RINGS; i++) {
+      ctx.strokeStyle = i === at ? LIVE : INK;
+      ctx.globalAlpha = (i === at ? 1 : 0.6) * k;
+      nest(r, i, turn);
     }
+    ctx.strokeStyle = INK;
   };
 
   // Three questions, three things made: a phone app, a wide film frame, a conversation.
@@ -1249,14 +1255,16 @@ ol { padding: 0; list-style: none; }
     ctx.beginPath(); ctx.arc(x, y, r.h * 0.03, 0, Math.PI * 2); ctx.fill();
   };
 
-  // Nine people in a ring, each linked to all the others. One idea travels the links.
+  // Points on a circle, every one tied to the others. One idea travels the ties.
   DRAW.ring = function (r, k, p) {
-    var m = 9, rad = r.w * 0.36, cx = r.x + r.w / 2, cy = r.y + r.h / 2, pts = [], i, j;
+    var m = 12, rad = r.w * 0.4, cx = r.x + r.w / 2, cy = r.y + r.h / 2, pts = [], i, j;
     for (i = 0; i < m; i++) { var a = -Math.PI / 2 + i * Math.PI * 2 / m; pts.push([cx + Math.cos(a) * rad, cy + Math.sin(a) * rad]); }
+    ctx.strokeStyle = INK;
     ctx.globalAlpha = FAINT * k;
     for (i = 0; i < m; i++) for (j = i + 1; j < m; j++) if ((i * m + j) / (m * m) < k) seg(pts[i][0], pts[i][1], pts[j][0], pts[j][1]);
-    for (i = 0; i < m; i++) person(pts[i][0], pts[i][1] + r.w * 0.02, r.w * 0.06, INK, 0.95 * k);
-    var t = Math.min(7.999, ease(p / 0.8) * 8), from = Math.floor(t) * 4 % m, to = (Math.floor(t) + 1) * 4 % m, f2 = t - Math.floor(t);
+    ctx.globalAlpha = 0.9 * k;
+    ctx.beginPath(); ctx.arc(cx, cy, rad, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * k); ctx.stroke();
+    var t = Math.min(10.999, ease(p / 0.8) * 11), from = Math.floor(t) * 5 % m, to = (Math.floor(t) + 1) * 5 % m, f2 = t - Math.floor(t);
     ctx.globalAlpha = k; ctx.fillStyle = LIVE;
     ctx.beginPath(); ctx.arc(pts[from][0] + (pts[to][0] - pts[from][0]) * f2, pts[from][1] + (pts[to][1] - pts[from][1]) * f2, r.w * 0.025, 0, Math.PI * 2); ctx.fill();
   };
