@@ -4,7 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chris Wallace</title>
-<meta name="description" content="Chris Wallace is a designer and founder. He makes things to find out what happens, and he makes them with other people.">
+<meta name="description" content="Chris Wallace is a designer, technologist and founder who makes digital products that have never existed before.">
+<link rel="canonical" href="https://chriswallace.net/">
+<link rel="icon" type="image/png" href="/assets/images/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chriswallace.net/">
+<meta property="og:title" content="Chris Wallace">
+<meta property="og:description" content="I make digital products that have never existed before.">
+<meta property="og:image" content="https://chriswallace.net/assets/images/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0019ff">
 <style>
 /* One typeface: Redaction 50, a serif whose edges are broken into coarse pixels. One weight. */
@@ -369,8 +379,8 @@ ol { padding: 0; list-style: none; }
       <div class="text lines">
         <h2 class="say">Most of my work starts as a question.</h2>
         <p class="say">How can fans deepen connection to their favorite IP?</p>
-        <p class="say">What if people could generate and own unique character IP?</p>
-        <p class="say">How might AI become the COO of your small business?</p>
+        <p class="say" data-state="ultra">What if people could generate and own unique character IP?</p>
+        <p class="say" data-state="homebase">How might AI become the COO of your small business?</p>
       </div>
     </div>
   </section>
@@ -380,7 +390,7 @@ ol { padding: 0; list-style: none; }
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
         <h2 class="say">My process is experimentation.</h2>
-        <p class="say">A comapnion app for TV series. An animated short film. An always-on AI assistant.</p>
+        <p class="say">A companion app for TV series. An animated short film. An always-on AI assistant.</p>
         <p class="say">An idea sparks a journey through all the challenges and ideation.</p>
       </div>
     </div>
@@ -411,7 +421,7 @@ ol { padding: 0; list-style: none; }
   <section class="seg" data-state="quiet" style="--len: 52">
     <div class="panel panel--words">
       <div class="lines">
-        <h2 class="say">My professional journey is a series of deep collaboration with friends.</h2>
+        <h2 class="say">My professional journey is a series of deep collaborations with friends.</h2>
       </div>
     </div>
   </section>
@@ -463,7 +473,7 @@ ol { padding: 0; list-style: none; }
       <div class="text lines">
         <h2 class="say">At <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox</a>, I designed avatar tools for 3D creators.</h2>
         <p class="say">I researched creator workflows and designed tools to meet their needs.</p>
-        <p class="say">The work reflected my desire to reduce frustration while increasing creativity</p>
+        <p class="say">The work reflected my desire to reduce frustration while increasing creativity.</p>
       </div>
     </div>
   </section>
@@ -576,7 +586,9 @@ ol { padding: 0; list-style: none; }
       stage: el.querySelector(".stage"),
       strip: el.querySelector(".strip"),
       clips: Array.prototype.slice.call(el.querySelectorAll(".clip")),
-      lines: Array.prototype.slice.call(el.querySelectorAll(".say")).map(function (say) { return { el: say, words: split(say) }; }),
+      lines: Array.prototype.slice.call(el.querySelectorAll(".say")).map(function (say) {
+        return { el: say, words: split(say), state: say.getAttribute("data-state") };   // a line may borrow another section's drawing
+      }),
       first: i === 0,
       last: i === all.length - 1
     };
@@ -589,7 +601,7 @@ ol { padding: 0; list-style: none; }
 
   var PX = 3;                // one drawn pixel covers this many screen pixels
   var STATES = {
-    open:     { ratio: 0 },
+    open:     { ratio: 0, label: "Scroll" },
     ask:      { ratio: 9 / 16,  label: "9:16",  draw: "second" },
     make:     { ratio: 4 / 3,   label: "4:3. Click to jump.", draw: "game" },
     art:      { ratio: 0, hidden: true },      // the art itself is on screen
@@ -637,6 +649,7 @@ ol { padding: 0; list-style: none; }
         q = clamp(-b.top / (b.height - (s.last ? vh : 0)));
       }
     });
+    var borrowed = null;
     // One line of the section is on screen at a time. Each line fades in, lights up word by word, and gives way to the next.
     segs.forEach(function (s) {
       var on = s === current;
@@ -646,6 +659,7 @@ ol { padding: 0; list-style: none; }
       s.lines.forEach(function (line, j) {
         line.el.classList.toggle("is-on", on && j === slot);
         if (!on || j !== slot) { line.el.style.opacity = 0; return; }
+        borrowed = line.state;
         var opening = s.first && j === 0, closing = s.last && j === n - 1;
         var fadeIn = opening ? 1 : ease(t / 0.12), fadeOut = closing ? 1 : 1 - ease((t - 0.88) / 0.12);
         line.el.style.opacity = still ? 1 : Math.min(fadeIn, fadeOut);
@@ -681,7 +695,7 @@ ol { padding: 0; list-style: none; }
     topBar.style.opacity = fade;
     topBar.style.pointerEvents = fade < 0.5 ? "none" : "";
 
-    var name = current.state;
+    var name = borrowed || current.state;
     if (endBox.top < vh * 0.55) name = "end";
     active = name;
     progress = still ? 0.6 : q;
