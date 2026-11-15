@@ -180,7 +180,9 @@ ol { padding: 0; list-style: none; }
 .js .top { position: fixed; }
 .top a { text-decoration-line: none; padding: var(--s3) 0; }
 /* the mascot: a small pixel face beside the name. It looks around and reacts to the section on screen. */
-.me { display: inline-flex; align-items: center; gap: var(--s2); }
+.me { display: inline-flex; align-items: center; }
+/* the name stays for screen readers and search; the mascot stands in for it on screen */
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 #pal { width: 66px; height: 45px; image-rendering: pixelated; flex: none; margin-left: -3px; }
 @media (hover: hover) and (pointer: fine) {
   .top a:hover { text-decoration-line: underline; }
@@ -382,7 +384,7 @@ ol { padding: 0; list-style: none; }
 <a class="skip" href="#next">Skip to contact</a>
 
 <header class="top">
-  <span class="me"><canvas id="pal" width="22" height="15" aria-hidden="true"></canvas><span>Chris Wallace</span></span>
+  <span class="me"><canvas id="pal" width="22" height="15" aria-hidden="true"></canvas><span class="sr">Chris Wallace</span></span>
   <a href="#next">Contact</a>
 </header>
 
