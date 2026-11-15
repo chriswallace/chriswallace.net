@@ -111,7 +111,7 @@ h1, h2, h3, p, ol { margin: 0; }
 h1, h2, h3 { font-weight: 400; }   /* one weight: headings are not bold */
 ol { padding: 0; list-style: none; }
 
-/* the frame: fixed, above the page, never takes a click. Drawn small and scaled up unsmoothed. */
+/* the frame: fixed, above the page, never takes a click */
 #frame {
   position: fixed;
   inset: 0;
@@ -119,7 +119,6 @@ ol { padding: 0; list-style: none; }
   height: 100%;
   z-index: 3;
   pointer-events: none;
-  image-rendering: pixelated;
 }
 #frame-label {
   position: fixed;
@@ -210,7 +209,14 @@ ol { padding: 0; list-style: none; }
   gap: var(--s6);
   padding: var(--bar) var(--gutter) var(--gutter);
 }
-.js .seg { height: calc(var(--len) * 1svh); }
+.js .seg { position: relative; height: calc(var(--len) * 1svh); }
+/* one rest point per line: where the line is fully lit. Touch scrolling settles on these; the wheel does the same in script. */
+.rest { position: absolute; left: 0; width: 1px; height: 1px; pointer-events: none; }
+@media (hover: none) and (pointer: coarse) {
+  html { scroll-snap-type: y proximity; }
+  .rest { scroll-snap-align: start; }
+  .end { scroll-snap-align: end; }
+}
 .js .panel {
   position: fixed;
   top: 0;
@@ -595,11 +601,30 @@ ol { padding: 0; list-style: none; }
   });
   var endWords = split(endSay);
 
+  // A rest point for each line, placed where the line is fully lit and holding.
+  var REST = 0.68;
+  segs.forEach(function (s) {
+    var n = s.lines.length;
+    s.rests = s.lines.map(function (line, j) {
+      var mark = document.createElement("div");
+      mark.className = "rest";
+      var part = s.first && j === 0 ? 0 : (j + REST) / n;
+      mark.style.top = s.last ? "calc((100% - 100svh) * " + part + ")" : (part * 100) + "%";
+      s.el.appendChild(mark);
+      return mark;
+    });
+  });
+  function restPoints() {
+    var y = window.scrollY, out = [];
+    segs.forEach(function (s) { s.rests.forEach(function (m) { out.push(m.getBoundingClientRect().top + y); }); });
+    out.push(document.documentElement.scrollHeight - window.innerHeight);
+    return out;
+  }
+
   /* ---------- the frame ---------- */
   // One outlined frame stays on screen and takes the shape of a screen for each statement.
-  // It is drawn small and scaled up without smoothing, so its lines are coarse, like an old display.
 
-  var PX = 3;                // one drawn pixel covers this many screen pixels
+  var dpr = 1;
   var STATES = {
     open:     { ratio: 0, label: "Scroll" },
     ask:      { ratio: 9 / 16,  label: "9:16",  draw: "second" },
@@ -629,8 +654,9 @@ ol { padding: 0; list-style: none; }
   function resize() {
     vw = document.documentElement.clientWidth;
     vh = window.innerHeight;
-    canvas.width = Math.ceil(vw / PX);
-    canvas.height = Math.ceil(vh / PX);
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(vw * dpr);
+    canvas.height = Math.round(vh * dpr);
     measure();
     if (!rect) rect = target();
     kick();
@@ -661,9 +687,9 @@ ol { padding: 0; list-style: none; }
         if (!on || j !== slot) { line.el.style.opacity = 0; return; }
         borrowed = line.state;
         var opening = s.first && j === 0, closing = s.last && j === n - 1;
-        var fadeIn = opening ? 1 : ease(t / 0.12), fadeOut = closing ? 1 : 1 - ease((t - 0.88) / 0.12);
+        var fadeIn = opening ? 1 : ease(t / 0.1), fadeOut = closing ? 1 : 1 - ease((t - 0.9) / 0.1);
         line.el.style.opacity = still ? 1 : Math.min(fadeIn, fadeOut);
-        light(line.words, still || opening ? 1 : (t - 0.14) / 0.46);
+        light(line.words, still || opening ? 1 : (t - 0.12) / 0.33);   // fully lit by 0.45, then it holds until 0.9
       });
     });
 
@@ -1041,9 +1067,9 @@ ol { padding: 0; list-style: none; }
   };
 
   function draw() {
-    ctx.setTransform(1 / PX, 0, 0, 1 / PX, 0, 0);
-    ctx.clearRect(0, 0, vw + PX, vh + PX);
-    ctx.lineWidth = PX;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, vw, vh);
+    ctx.lineWidth = 1.5;
     ctx.lineJoin = "miter";
 
     NAMES.forEach(function (n) {
@@ -1057,7 +1083,7 @@ ol { padding: 0; list-style: none; }
     // the frame
     ctx.globalAlpha = shown;
     ctx.strokeStyle = INK;
-    ctx.lineWidth = PX;
+    ctx.lineWidth = 2;
     ctx.strokeRect(rect.x, rect.y, rect.w, rect.h);
     ctx.globalAlpha = 1;
 
@@ -1092,6 +1118,7 @@ ol { padding: 0; list-style: none; }
     window.scrollTo(0, glide.at);
   }
   function glideStop() {
+    clearTimeout(settleTimer);
     if (glide.raf) cancelAnimationFrame(glide.raf);
     glide.raf = 0; glide.last = 0;
   }
@@ -1103,6 +1130,21 @@ ol { padding: 0; list-style: none; }
     if (!glide.raf) glide.at = glide.to = window.scrollY;
     var max = document.documentElement.scrollHeight - vh;
     glide.to = Math.max(0, Math.min(max, glide.to + e.deltaY * unit * GEAR));
+    if (!glide.raf) glide.raf = requestAnimationFrame(glideStep);
+    clearTimeout(settleTimer);
+    settleTimer = setTimeout(settle, 170);
+  }
+  // When the wheel stops, drift on to the nearest line's rest point, so a line is never left half shown.
+  var settleTimer = 0;
+  function settle() {
+    var points = restPoints(), best = null, reach = vh * 0.2;
+    for (var i = 0; i < points.length; i++) {
+      var d = Math.abs(points[i] - glide.to);
+      if (d < reach && (best === null || d < Math.abs(best - glide.to))) best = points[i];
+    }
+    if (best === null || Math.abs(best - glide.to) < 2) return;
+    if (!glide.raf) glide.at = window.scrollY;
+    glide.to = best;
     if (!glide.raf) glide.raf = requestAnimationFrame(glideStep);
   }
   window.addEventListener("wheel", onWheel, { passive: false });
