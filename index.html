@@ -603,7 +603,7 @@ ol { padding: 0; list-style: none; }
   var STATES = {
     open:     { ratio: 0, label: "Scroll" },
     ask:      { ratio: 9 / 16,  label: "9:16",  draw: "second" },
-    make:     { ratio: 4 / 3,   label: "4:3. Click to jump.", draw: "game" },
+    make:     { ratio: 4 / 5,   label: "4:5. Tap or click to add a floor.", draw: "game" },
     art:      { ratio: 0, hidden: true },      // the art itself is on screen
     quiet:    { ratio: 0 },
     tenup:    { ratio: 16 / 10, label: "16:10", draw: "web" },
@@ -624,7 +624,7 @@ ol { padding: 0; list-style: none; }
   var rect = null;           // the frame as drawn now
   var shown = 1;             // how visible the frame is
   var raf = 0, last = 0;
-  var hop = 0;               // 1..0 while the player in the game drawing is in the air
+  var built = 0;             // floors added to the tower by clicking
 
   function resize() {
     vw = document.documentElement.clientWidth;
@@ -756,7 +756,6 @@ ol { padding: 0; list-style: none; }
     });
     var want = STATES[active].hidden ? 0 : 1;
     if (Math.abs(want - shown) > 0.01) { shown += (want - shown) * (snap ? 1 : 1 - Math.exp(-dt / 90)); moving = true; } else { shown = want; }
-    if (hop > 0) { hop = Math.max(0, hop - dt / 520); moving = true; }
     draw();
     if (moving) { raf = requestAnimationFrame(step); } else { last = 0; }
   }
@@ -987,27 +986,57 @@ ol { padding: 0; list-style: none; }
       ctx.restore();
     },
 
-    // Ongoing. A ground, two ledges, one player.
+    // Ongoing. A tower seen from the side. It gains floors as you scroll, and one more with each click.
+    // The lift is the live mark.
     game: function (r, k, p) {
-      var gy = r.y + r.h * 0.8, s = r.h * 0.07;
+      var gy = r.y + r.h * 0.9;
+      var small = r.h < 260;                       // on a small frame, draw fewer, larger parts
+      var tw = r.w * (small ? 0.7 : 0.56), tx = r.x + (r.w - tw) / 2;
+      var fh = r.h * (small ? 0.09 : 0.082);
+      var floors = Math.min(9, 2 + Math.floor(p * 4.99) + built);
+      var shaft = tw * 0.16;                       // the lift shaft, on the left of each floor
+      var rnd = rand(5);
+
+      // the ground
       ctx.globalAlpha = 0.9 * k;
       seg(r.x, gy, r.x + r.w * k, gy);
-      seg(r.x + r.w * 0.3, r.y + r.h * 0.6, r.x + r.w * (0.3 + 0.18 * k), r.y + r.h * 0.6);
-      seg(r.x + r.w * 0.58, r.y + r.h * 0.45, r.x + r.w * (0.58 + 0.22 * k), r.y + r.h * 0.45);
-      function at(t) {
-        return [r.x + r.w * 0.08 + t * r.w * 0.8, gy - s / 2 - Math.abs(Math.sin(t * Math.PI * 3)) * r.h * 0.3];
+
+      for (var f = 0; f < floors; f++) {
+        var a = Math.max(0, Math.min(1, k * floors - f));
+        var fy = gy - (f + 1) * fh;
+        var cuts = [0.38 + rnd() * 0.14, 0.7 + rnd() * 0.1], lit = [rnd(), rnd(), rnd()];
+        if (a <= 0) continue;
+        // the floor
+        ctx.strokeStyle = INK;
+        ctx.globalAlpha = 0.9 * a;
+        ctx.strokeRect(tx, fy, tw, fh);
+        // the shaft and the rooms
+        ctx.globalAlpha = FAINT * a;
+        seg(tx + shaft, fy, tx + shaft, fy + fh);
+        if (small) continue;
+        for (var c = 0; c < cuts.length; c++) seg(tx + tw * cuts[c], fy, tx + tw * cuts[c], fy + fh);
+        // someone is in: a small mark in some rooms
+        ctx.fillStyle = INK;
+        var rooms = [(shaft / tw + cuts[0]) / 2, (cuts[0] + cuts[1]) / 2, (cuts[1] + 1) / 2];
+        for (var m = 0; m < 3; m++) {
+          if (lit[m] < 0.55) continue;
+          ctx.globalAlpha = 0.75 * a;
+          ctx.fillRect(tx + tw * rooms[m] - fh * 0.09, fy + fh * 0.52, fh * 0.18, fh * 0.48);
+        }
       }
+
+      // the mast on the roof
+      var top = gy - floors * fh;
+      ctx.strokeStyle = INK;
       ctx.globalAlpha = FAINT * k;
-      ctx.fillStyle = INK;
-      for (var t = 0; t < p; t += 0.018) {
-        var d = at(t);
-        ctx.fillRect(d[0] - 1, d[1] - 1, 2, 2);
-      }
-      var pos = at(p);
-      pos[1] -= Math.sin(hop * Math.PI) * r.h * 0.26;   // a click makes the player jump
+      seg(tx + tw * 0.78, top, tx + tw * 0.78, top - fh * 0.9 * k);
+
+      // the lift, riding up and down as you scroll
+      var ride = (Math.sin(p * Math.PI * 5 - Math.PI / 2) + 1) / 2;
+      var ly = gy - fh - ride * (floors - 1) * fh;
       ctx.globalAlpha = k;
       ctx.fillStyle = LIVE;
-      ctx.fillRect(pos[0] - s / 2, pos[1] - s / 2, s, s);
+      ctx.fillRect(tx + shaft * 0.2, ly + fh * 0.16, shaft * 0.6, fh * 0.84);
     }
   };
 
@@ -1082,7 +1111,7 @@ ol { padding: 0; list-style: none; }
   });
 
   window.addEventListener("pointerdown", function (e) {
-    if (active === "make" && hop === 0 && !(e.target.closest && e.target.closest("a"))) { hop = 1; kick(); }
+    if (active === "make" && !(e.target.closest && e.target.closest("a"))) { built = built < 4 ? built + 1 : 0; kick(); }
   });
   window.addEventListener("scroll", kick, { passive: true });
   window.addEventListener("resize", resize);
