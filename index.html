@@ -137,6 +137,17 @@ ol { padding: 0; list-style: none; }
   object-fit: cover;
   opacity: 0;
 }
+/* the brood: six Woodies that come out of the middle of the drawing area and settle around it */
+#brood { position: fixed; inset: 0; z-index: 2; pointer-events: none; }
+#brood img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  outline: 1px solid rgb(255 255 255 / 0.14);
+  outline-offset: -1px;
+  will-change: transform, opacity;
+}
 #frame-label {
   position: fixed;
   top: 0;
@@ -202,6 +213,7 @@ ol { padding: 0; list-style: none; }
 .panel--xl .say, .end .say { max-width: 20ch; font-size: var(--display-size); line-height: 1.06; }
 .say a { text-decoration-thickness: 0.06em; text-underline-offset: 0.14em; }
 .say.is-on a { pointer-events: auto; }   /* only the line on screen has live links */
+.panel--center .say { justify-self: center; text-align: center; padding-right: 0; }
 .lines { display: grid; gap: var(--s6); }
 .js .lines { gap: 0; }
 .js .lines > .say { grid-area: 1 / 1; align-self: start; opacity: 0; }
@@ -375,11 +387,11 @@ ol { padding: 0; list-style: none; }
 <div id="dark" aria-hidden="true"></div>
 <div id="plate" aria-hidden="true">
   <img data-plate="sync" src="assets/images/work/story-sync.webp" alt="" width="1000" height="657" decoding="async">
-  <img data-plate="character" src="assets/images/work/woodies-character.webp" alt="" width="560" height="720" decoding="async">
   <img data-plate="dmv" src="assets/images/work/california-dmv.webp" alt="" width="1000" height="459" decoding="async">
   <img data-plate="ultradao" src="assets/images/work/ultradao.webp" alt="" width="560" height="720" decoding="async">
   <img data-plate="woodies" src="assets/images/work/woodies.webp" alt="" width="1088" height="760" decoding="async">
 </div>
+<div id="brood" aria-hidden="true"><!-- six generative Woodies go here: assets/images/woodies/woodie-1.webp to woodie-6.webp --></div>
 <canvas id="frame" aria-hidden="true"></canvas>
 <p id="frame-label" aria-hidden="true"></p>
 <a class="skip" href="#next">Skip to contact</a>
@@ -415,7 +427,7 @@ ol { padding: 0; list-style: none; }
       <div class="text lines">
         <h2 class="say">Most of my work starts as a question.</h2>
         <p class="say" data-state="sync">How can fans deepen connection to their favorite IP?</p>
-        <p class="say" data-state="character">What if people could generate and own unique character IP?</p>
+        <p class="say" data-state="ultra">What if people could generate and own unique character IP?</p>
         <p class="say" data-state="homebase">How might AI become the COO of your small business?</p>
       </div>
     </div>
@@ -536,6 +548,14 @@ ol { padding: 0; list-style: none; }
     </div>
   </section>
 
+  <section class="seg" data-state="quiet" style="--len: 52">
+    <div class="panel panel--words panel--xl panel--center">
+      <div class="lines">
+        <h2 class="say">My design principles</h2>
+      </div>
+    </div>
+  </section>
+
   <section class="seg" data-state="quiet" style="--len: 248">
     <div class="panel panel--words panel--xl">
       <div class="lines">
@@ -559,6 +579,9 @@ ol { padding: 0; list-style: none; }
   var canvas = document.getElementById("frame");
   var tag = document.getElementById("frame-label");
   var plate = document.getElementById("plate");
+  var brood = Array.prototype.slice.call(document.querySelectorAll("#brood img"));
+  // where each one settles, as fractions of the drawing area, with its size and tilt
+  var NEST = [[0.24, 0.26, 1.0, -5], [0.72, 0.2, 0.86, 4], [0.5, 0.52, 1.12, 2], [0.17, 0.74, 0.8, 6], [0.8, 0.66, 0.94, -4], [0.47, 0.88, 0.74, -3]];
   var plates = {};
   Array.prototype.slice.call(plate.querySelectorAll("img")).forEach(function (img) { plates[img.getAttribute("data-plate")] = img; });
   var ctx = canvas.getContext && canvas.getContext("2d");
@@ -676,10 +699,10 @@ ol { padding: 0; list-style: none; }
     end:      { ratio: 0 },
     // lines that name a piece of work show it: the frame takes the picture's shape
     sync:      { ratio: 1000 / 657,  label: "The Walking Dead Story Sync", plate: "sync" },
-    character: { ratio: 560 / 720,   label: "A Woodies character",         plate: "character" },
+    character: { ratio: 0, hidden: true, brood: true },   // six Woodies, in place of the frame
     dmv:       { ratio: 1000 / 459,  label: "California DMV",              plate: "dmv" },
     ultradao:  { ratio: 560 / 720,   label: "UltraDAO",                    plate: "ultradao" },
-    woodies:   { ratio: 1088 / 760,  label: "Woodies",                     plate: "woodies" },
+    woodies:   { ratio: 1088 / 760,  label: "Arden, from Woodies: Origin", plate: "woodies" },
     // drawings that state the fact in their line
     team:    { ratio: 1,      label: "5 people, then 25",        draw: "team" },
     lead:    { ratio: 1,      label: "Each takes the lead",      draw: "lead" },
@@ -695,7 +718,7 @@ ol { padding: 0; list-style: none; }
 
   var vw = 0, vh = 0;
   var active = "open";
-  var progress = 0;          // 0..1 through the active section
+  var progress = 0;          // 0..1 through the lines that share the drawing on screen
   var region = { x: 0, y: 0, w: 0, h: 0 };
   var rect = null;           // the frame as drawn now
   var shown = 1;             // how visible the frame is
@@ -726,7 +749,7 @@ ol { padding: 0; list-style: none; }
         q = clamp(-b.top / (b.height - (s.last ? vh : 0)));
       }
     });
-    var borrowed = null;
+    var borrowed = null, run = 0;
     // One line of the section is on screen at a time. Each line fades in, lights up word by word, and gives way to the next.
     segs.forEach(function (s) {
       var on = s === current;
@@ -737,6 +760,11 @@ ol { padding: 0; list-style: none; }
         line.el.classList.toggle("is-on", on && j === slot);
         if (!on || j !== slot) { line.el.style.opacity = 0; return; }
         borrowed = line.state;
+        // how far through the run of neighbouring lines that share this drawing
+        var a0 = j, b0 = j;
+        while (a0 > 0 && s.lines[a0 - 1].state === line.state) a0--;
+        while (b0 < n - 1 && s.lines[b0 + 1].state === line.state) b0++;
+        run = (j - a0 + t) / (b0 - a0 + 1);
         var opening = s.first && j === 0, closing = s.last && j === n - 1;
         var fadeIn = opening ? 1 : ease(t / 0.1), fadeOut = closing ? 1 : 1 - ease((t - 0.9) / 0.1);
         line.el.style.opacity = still ? 1 : Math.min(fadeIn, fadeOut);
@@ -776,7 +804,7 @@ ol { padding: 0; list-style: none; }
     if (endBox.top < vh * 0.55) name = "end";
     active = name;
     if (typeof pal !== "undefined" && pal) pal.set(name);
-    progress = still ? 0.6 : q;
+    progress = still ? 1 : clamp(run);
 
     if (current.stage) {
       var s = current.stage.getBoundingClientRect();
@@ -1071,7 +1099,7 @@ ol { padding: 0; list-style: none; }
       var small = r.h < 260;                       // on a small frame, draw fewer, larger parts
       var tw = r.w * (small ? 0.7 : 0.56), tx = r.x + (r.w - tw) / 2;
       var fh = r.h * (small ? 0.09 : 0.082);
-      var floors = Math.min(9, 2 + Math.floor(p * 4.99) + built);
+      var floors = Math.min(9, 2 + Math.floor(ease(p / 0.8) * 4.99) + built);
       var shaft = tw * 0.16;                       // the lift shaft, on the left of each floor
       var rnd = rand(5);
 
@@ -1110,7 +1138,7 @@ ol { padding: 0; list-style: none; }
       seg(tx + tw * 0.78, top, tx + tw * 0.78, top - fh * 0.9 * k);
 
       // the lift, riding up and down as you scroll
-      var ride = (Math.sin(p * Math.PI * 5 - Math.PI / 2) + 1) / 2;
+      var ride = ease((p - 0.1) / 0.7);              // one ride, ground floor to the top
       var ly = gy - fh - ride * (floors - 1) * fh;
       ctx.globalAlpha = k;
       ctx.fillStyle = LIVE;
@@ -1134,14 +1162,14 @@ ol { padding: 0; list-style: none; }
   // 5 people become 25. The counts are the real ones.
   DRAW.team = function (r, k, p) {
     var spots = grid25(r), u = r.w * 0.07;
-    var n = Math.round((5 + 20 * ease((p - 0.06) / 0.2)) * k);
+    var n = Math.round((5 + 20 * ease((p - 0.12) / 0.5)) * k);
     for (var i = 0; i < n; i++) person(spots[i][0], spots[i][1], u, i === 0 ? LIVE : INK, i === 0 ? k : 0.9 * k);
   };
 
   // The same 25. The live mark passes from one to the next: each takes the lead in turn.
   DRAW.lead = function (r, k, p) {
     var spots = grid25(r), u = r.w * 0.07;
-    var turn = Math.floor(p * 46) % 25;
+    var turn = Math.min(24, Math.floor(ease(p / 0.85) * 24.99));   // once through the team
     for (var i = 0; i < 25; i++) {
       var up = i === turn ? u * 0.35 : 0;
       person(spots[i][0], spots[i][1] - up, u, i === turn ? LIVE : INK, (i === turn ? 1 : 0.75) * k);
@@ -1150,7 +1178,7 @@ ol { padding: 0; list-style: none; }
 
   // Three questions, three things made: a phone app, a wide film frame, a conversation.
   DRAW.answers = function (r, k, p) {
-    var h = r.h * 0.62, cy = r.y + r.h / 2, on = Math.min(2, Math.floor(p * 9) % 3);
+    var h = r.h * 0.62, cy = r.y + r.h / 2, on = Math.min(2, Math.floor(p / 0.75 * 3));
     var items = [[0.15, h * 9 / 16], [0.5, h * 1.25], [0.85, h * 0.72]];
     items.forEach(function (it, i) {
       var a = Math.max(0, Math.min(1, k * 3 - i));
@@ -1178,7 +1206,7 @@ ol { padding: 0; list-style: none; }
     // the path, as far as the scroll has gone
     var lens = [], total = 0, i;
     for (i = 1; i < pts.length; i++) { var d = Math.abs(pts[i][0] - pts[i - 1][0]) + Math.abs(pts[i][1] - pts[i - 1][1]); lens.push(d); total += d; }
-    var go = total * ease((p - 0.66) / 0.3) * k, x = pts[0][0], y = pts[0][1];
+    var go = total * ease((p - 0.08) / 0.62) * k, x = pts[0][0], y = pts[0][1];
     ctx.globalAlpha = 0.9 * k;
     ctx.beginPath(); ctx.moveTo(x, y);
     for (i = 1; i < pts.length && go > 0; i++) {
@@ -1201,7 +1229,7 @@ ol { padding: 0; list-style: none; }
     ctx.globalAlpha = FAINT * k;
     for (i = 0; i < m; i++) for (j = i + 1; j < m; j++) if ((i * m + j) / (m * m) < k) seg(pts[i][0], pts[i][1], pts[j][0], pts[j][1]);
     for (i = 0; i < m; i++) person(pts[i][0], pts[i][1] + r.w * 0.02, r.w * 0.06, INK, 0.95 * k);
-    var t = p * 18, from = Math.floor(t) * 4 % m, to = (Math.floor(t) + 1) * 4 % m, f2 = t - Math.floor(t);
+    var t = Math.min(7.999, ease(p / 0.8) * 8), from = Math.floor(t) * 4 % m, to = (Math.floor(t) + 1) * 4 % m, f2 = t - Math.floor(t);
     ctx.globalAlpha = k; ctx.fillStyle = LIVE;
     ctx.beginPath(); ctx.arc(pts[from][0] + (pts[to][0] - pts[from][0]) * f2, pts[from][1] + (pts[to][1] - pts[from][1]) * f2, r.w * 0.025, 0, Math.PI * 2); ctx.fill();
   };
@@ -1209,7 +1237,7 @@ ol { padding: 0; list-style: none; }
   // A week on a rota: seven days, four rows of shifts. The gaps are filled one by one.
   DRAW.week = function (r, k, p) {
     var cols = 7, rows = 4, cw = r.w * 0.82 / cols, ch = r.h * 0.6 / rows, x0 = r.x + r.w * 0.09, y0 = r.y + r.h * 0.24;
-    var rnd = rand(17), gaps = [3, 9, 12, 19, 24], filled = Math.floor(ease((p - 0.4) / 0.5) * (gaps.length + 0.99));
+    var rnd = rand(17), gaps = [3, 9, 12, 19, 24], filled = Math.floor(ease((p - 0.1) / 0.7) * (gaps.length + 0.99));
     ctx.globalAlpha = FAINT * k;
     for (var c = 0; c < cols; c++) seg(x0 + cw * (c + 0.2), r.y + r.h * 0.15, x0 + cw * (c + 0.8), r.y + r.h * 0.15);
     for (var i = 0; i < cols * rows; i++) {
@@ -1238,7 +1266,7 @@ ol { padding: 0; list-style: none; }
     ctx.strokeRect(x + w * 0.08, ay + (base - ay) * 0.18, w * 0.5, (base - ay) * 0.52);
     ctx.strokeRect(x + w * 0.68, ay + (base - ay) * 0.18, w * 0.22, (base - ay) * 0.82);
     // the sign, lit
-    var blink = Math.floor(p * 30) % 6 === 0 ? 0.55 : 1;
+    var blink = p > 0.3 ? 1 : 0.25;                // the sign comes on once
     ctx.globalAlpha = k * blink; ctx.fillStyle = LIVE;
     ctx.fillRect(x + w * 0.16, ay + (base - ay) * 0.3, w * 0.2, (base - ay) * 0.14);
     // the name board
@@ -1272,6 +1300,19 @@ ol { padding: 0; list-style: none; }
     plate.style.width = rect.w + "px";
     plate.style.height = rect.h + "px";
     NAMES.forEach(function (n) { if (STATES[n].plate) plates[STATES[n].plate].style.opacity = presence[n] * shown; });
+
+    // the brood: each one leaves the middle in turn and settles in its place
+    var bp = active === "character" ? progress : 1;
+    var side = Math.min(region.w, region.h) * 0.3, mx = region.x + region.w / 2, my = region.y + region.h / 2;
+    brood.forEach(function (img, i) {
+      var go = ease((bp - 0.06 - i * 0.08) / 0.3) * (presence.character > 0.01 ? 1 : 0);
+      var spot = NEST[i], size = side * spot[2];
+      var x = mx + (region.x + region.w * spot[0] - mx) * go, y = my + (region.y + region.h * spot[1] - my) * go;
+      img.style.width = size + "px";
+      img.style.height = size + "px";
+      img.style.opacity = Math.min(1, go * 1.6) * presence.character;
+      img.style.transform = "translate(" + (x - size / 2) + "px, " + (y - size / 2) + "px) rotate(" + (spot[3] * go) + "deg) scale(" + (0.3 + 0.7 * go) + ")";
+    });
 
     // the label is real text, so it stays sharp
     var st = STATES[active], k = presence[active];
@@ -1446,17 +1487,20 @@ ol { padding: 0; list-style: none; }
     if (!glide.raf) glide.at = glide.to = window.scrollY;
     var max = document.documentElement.scrollHeight - vh;
     glide.to = Math.max(0, Math.min(max, glide.to + e.deltaY * unit * GEAR));
+    if (e.deltaY) wheelDir = e.deltaY > 0 ? 1 : -1;
     if (!glide.raf) glide.raf = requestAnimationFrame(glideStep);
     clearTimeout(settleTimer);
     settleTimer = setTimeout(settle, 170);
   }
   // When the wheel stops, drift on to the nearest line's rest point, so a line is never left half shown.
-  var settleTimer = 0;
+  var settleTimer = 0, wheelDir = 1;
   function settle() {
-    var points = restPoints(), best = null, reach = vh * 0.2;
+    // Only ever carry on the way the wheel was going: on to the next rest point if it is close,
+    // never back to one already passed.
+    var points = restPoints(), best = null, reach = vh * 0.3;
     for (var i = 0; i < points.length; i++) {
-      var d = Math.abs(points[i] - glide.to);
-      if (d < reach && (best === null || d < Math.abs(best - glide.to))) best = points[i];
+      var ahead = (points[i] - glide.to) * wheelDir;
+      if (ahead >= 0 && ahead < reach && (best === null || ahead < (best - glide.to) * wheelDir)) best = points[i];
     }
     if (best === null || Math.abs(best - glide.to) < 2) return;
     if (!glide.raf) glide.at = window.scrollY;
