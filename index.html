@@ -37,6 +37,7 @@
   --ink-soft: #c5ccff;    /* secondary text, tinted from the canvas */
   --rule: rgb(255 255 255 / 0.38); /* faint rules and links between people */
   --night: #05060d;       /* the page during the film */
+  --grove: #0d3b2c;       /* the page behind the Woodies stickers */
   --live: #ffe600;        /* the one live mark: Chris */
   --unlit: 0.26;          /* a word before the scroll reaches it */
 
@@ -160,6 +161,9 @@ ol { padding: 0; list-style: none; }
   pointer-events: none;
   opacity: 0;
 }
+@media (max-width: 899px) {
+  #frame-label { white-space: normal; max-width: calc(100vw - 3.5rem); }   /* a long label wraps on a narrow screen */
+}
 
 .skip {
   position: absolute;
@@ -267,6 +271,16 @@ ol { padding: 0; list-style: none; }
 }
 .panel--story .stage { margin-inline: calc(var(--gutter) * -1); }
 .panel--story .text { display: grid; align-content: start; }
+
+/* the page turns forest green behind the Woodies stickers */
+#grove {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: var(--grove);
+  opacity: 0;
+  pointer-events: none;
+}
 
 /* the page goes dark for the film */
 #dark {
@@ -384,6 +398,7 @@ ol { padding: 0; list-style: none; }
 <body>
 <script>document.documentElement.classList.add("js");</script>
 <div id="dark" aria-hidden="true"></div>
+<div id="grove" aria-hidden="true"></div>
 <div id="plate" aria-hidden="true">
   <img data-plate="sync" src="assets/images/work/story-sync.webp" alt="" width="1000" height="657" decoding="async">
   <img data-plate="dmv" src="assets/images/work/california-dmv.webp" alt="" width="1000" height="459" decoding="async">
@@ -611,6 +626,7 @@ ol { padding: 0; list-style: none; }
   var contact = document.querySelector(".top a");
   var nameMark = document.querySelector(".top span");
   var dark = document.getElementById("dark");
+  var grove = document.getElementById("grove");
   var end = document.querySelector(".end");
   var endSay = document.querySelector(".end .say");
 
@@ -1324,6 +1340,8 @@ ol { padding: 0; list-style: none; }
         }
       }
     });
+
+    grove.style.opacity = presence.character;
 
     // the brood: each one leaves the middle in turn and settles in its place
     var bp = active === "character" ? progress : 1;
