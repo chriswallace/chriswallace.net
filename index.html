@@ -389,6 +389,7 @@ ol { padding: 0; list-style: none; }
   <img data-plate="dmv" src="assets/images/work/california-dmv.webp" alt="" width="1000" height="459" decoding="async">
   <img data-plate="ultradao" src="assets/images/work/ultradao.webp" alt="" width="560" height="720" decoding="async">
   <img data-plate="woodies" src="assets/images/work/woodies.webp" alt="" width="1088" height="760" decoding="async">
+  <img data-plate="poster" src="assets/images/work/woodies-origin-poster.webp" alt="" width="720" height="1081" decoding="async">
   <video data-plate="assistant" src="assets/video/homebase/assistant.mp4" muted loop playsinline preload="none" width="560" height="604"></video>
   <video data-plate="lift" data-once src="assets/video/homebase/lift.mp4" muted playsinline preload="auto" width="848" height="558"></video>
 </div>
@@ -516,7 +517,7 @@ ol { padding: 0; list-style: none; }
       <div class="text lines">
         <h2 class="say" data-state="woodies">We made <a href="https://woodiesofficial.com" target="_blank" rel="noopener">Woodies</a>, characters that began on the blockchain.</h2>
         <p class="say">Then they outgrew it.</p>
-        <p class="say"><a href="https://www.youtube.com/watch?v=encMCWoBc3o" target="_blank" rel="noopener">Woodies: Origin</a> put them in a short film.</p>
+        <p class="say" data-state="poster"><a href="https://www.youtube.com/watch?v=encMCWoBc3o" target="_blank" rel="noopener">Woodies: Origin</a> put them in a short film.</p>
         <p class="say">We released them as 3D characters in the metaverse.</p>
       </div>
     </div>
@@ -710,6 +711,7 @@ ol { padding: 0; list-style: none; }
     dmv:       { ratio: 1000 / 459,  label: "California DMV",              plate: "dmv" },
     ultradao:  { ratio: 560 / 720,   label: "UltraDAO",                    plate: "ultradao" },
     woodies:   { ratio: 1088 / 760,  label: "Arden, from Woodies: Origin", plate: "woodies" },
+    poster:    { ratio: 720 / 1081,  label: "Official Selection, Aesthetica Short Film Festival 2023", plate: "poster" },
     assistant: { ratio: 560 / 604,   label: "Homebase Assistant, covering a shift", plate: "assistant" },
     lift:      { ratio: 848 / 558,   label: "Homebase Assistant",          plate: "lift" },
     // drawings that state the fact in their line
@@ -794,7 +796,7 @@ ol { padding: 0; list-style: none; }
       var on = s === current;
       if (on) night = Math.min(ease(q / 0.12), 1 - ease((q - 0.9) / 0.1));
       s.clips.forEach(function (clip, i) {
-        var up = on ? ease((q - 0.27 - i * 0.1) / 0.08) * (1 - ease((q - 0.9) / 0.08)) : 0;
+        var up = on ? ease((q - 0.76 - i * 0.025) / 0.05) * (1 - ease((q - 0.94) / 0.05)) : 0;
         clip.style.opacity = up;
         if (up > 0.02 && clip.paused && !still) { var playing = clip.play(); if (playing && playing.catch) playing.catch(function () {}); }
         if (up <= 0.02 && !clip.paused) clip.pause();
@@ -1342,7 +1344,8 @@ ol { padding: 0; list-style: none; }
     if (tag.textContent !== text) tag.textContent = text;
     tag.style.opacity = text ? k * shown : 0;
     if (st.ratio) {
-      tag.style.transform = "translate(" + Math.round(rect.x) + "px, " + Math.round(rect.y + rect.h + 8) + "px)";
+      // a long label is pulled left so it never runs off the screen
+      tag.style.transform = "translate(" + Math.round(Math.max(12, Math.min(rect.x, vw - tag.offsetWidth - 16))) + "px, " + Math.round(rect.y + rect.h + 8) + "px)";
     } else {
       tag.style.transform = "translate(" + Math.round(rect.x + rect.w - tag.offsetWidth - 16) + "px, " + Math.round(rect.y + rect.h - tag.offsetHeight - 12) + "px)";
     }
@@ -1375,6 +1378,7 @@ ol { padding: 0; list-style: none; }
       dmv:       { eyes: "open",  mouth: "smile", watch: true },
       ultradao:  { eyes: "open",  mouth: "big",   watch: true },
       woodies:   { eyes: "star",  mouth: "big",   mark: "heart", watch: true },
+      poster:    { eyes: "star",  mouth: "big",   watch: true },
       assistant: { eyes: "wide",  mouth: "smile", watch: true },
       lift:      { eyes: "wide",  mouth: "big",   mark: "!", watch: true },
       team:      { eyes: "open",  mouth: "big",   watch: true },
