@@ -1173,38 +1173,41 @@ ol { padding: 0; list-style: none; }
     }
   };
 
-  function nest(r, i, turn) {                // one outlined square of the nest, turned a little more than the last
-    var half = r.w * (0.07 + i * 0.045);
-    ctx.save();
-    ctx.translate(r.x + r.w / 2, r.y + r.h / 2);
-    ctx.rotate(i * turn);
-    ctx.strokeRect(-half, -half, half * 2, half * 2);
-    ctx.restore();
+  // One loose loop of the growth drawing: a hand-drawn contour, no two alike. `upto` draws part of the way round.
+  function contour(r, i, drift, upto) {
+    var cx = r.x + r.w / 2, cy = r.y + r.h / 2, base = r.w * (0.05 + 0.052 * i + 0.012 * Math.sin(i * 2.4));
+    var f1 = i * 1.7 + drift, f2 = i * 2.9 - drift * 0.7, f3 = i * 4.3 + drift * 1.3, start = i * 2.1, steps = 72;
+    ctx.beginPath();
+    for (var n = 0; n <= steps * upto; n++) {
+      var a = start + n / steps * Math.PI * 2;
+      var rad = base * (1 + 0.16 * Math.sin(2 * a + f1) + 0.1 * Math.sin(3 * a + f2) + 0.05 * Math.sin(5 * a + f3));
+      if (n === 0) ctx.moveTo(cx + Math.cos(a) * rad, cy + Math.sin(a) * rad); else ctx.lineTo(cx + Math.cos(a) * rad, cy + Math.sin(a) * rad);
+    }
+    ctx.stroke();
   }
-  var NEST_RINGS = 7;
+  var LOOPS = 7;
 
-  // Growth: a small core, and squares that open out around it, each turned a little further.
+  // Growth: a small core, and loose loops drawn out around it one after another.
   DRAW.team = function (r, k, p) {
-    var grown = (1.2 + (NEST_RINGS - 1.2) * ease((p - 0.12) / 0.55)) * k, turn = 0.1 + 0.05 * ease(p);
+    var grown = (1.2 + (LOOPS - 1.2) * ease((p - 0.12) / 0.55)) * k, drift = p * 0.8;
     ctx.strokeStyle = INK;
-    for (var i = 0; i < NEST_RINGS; i++) {
+    for (var i = 0; i < LOOPS; i++) {
       var a = Math.max(0, Math.min(1, grown - i));
       if (a <= 0) break;
-      ctx.globalAlpha = 0.9 * a * k;
-      nest(r, i, turn);
+      ctx.globalAlpha = 0.9 * k;
+      contour(r, i + 1, drift, a);
     }
-    var c = r.w * 0.035;
     ctx.globalAlpha = k; ctx.fillStyle = LIVE;
-    ctx.fillRect(r.x + r.w / 2 - c, r.y + r.h / 2 - c, c * 2, c * 2);
+    ctx.beginPath(); ctx.arc(r.x + r.w / 2, r.y + r.h / 2, r.w * 0.028, 0, Math.PI * 2); ctx.fill();
   };
 
-  // The same nest. The live line passes outward from one square to the next: each takes the lead in turn.
+  // The same loops. The live line passes outward from one to the next: each takes the lead in turn.
   DRAW.lead = function (r, k, p) {
-    var at = Math.min(NEST_RINGS - 1, Math.floor(ease(p / 0.85) * (NEST_RINGS - 0.01))), turn = 0.15 + 0.07 * ease(p);
-    for (var i = 0; i < NEST_RINGS; i++) {
+    var at = Math.min(LOOPS - 1, Math.floor(ease(p / 0.85) * (LOOPS - 0.01))), drift = 0.8 + p * 1.2;
+    for (var i = 0; i < LOOPS; i++) {
       ctx.strokeStyle = i === at ? LIVE : INK;
       ctx.globalAlpha = (i === at ? 1 : 0.6) * k;
-      nest(r, i, turn);
+      contour(r, i + 1, drift, 1);
     }
     ctx.strokeStyle = INK;
   };
@@ -1255,18 +1258,28 @@ ol { padding: 0; list-style: none; }
     ctx.beginPath(); ctx.arc(x, y, r.h * 0.03, 0, Math.PI * 2); ctx.fill();
   };
 
-  // Points on a circle, every one tied to the others. One idea travels the ties.
+  // A loose scatter of points, tied to each other by curved lines. One idea wanders along the ties.
   DRAW.ring = function (r, k, p) {
-    var m = 12, rad = r.w * 0.4, cx = r.x + r.w / 2, cy = r.y + r.h / 2, pts = [], i, j;
-    for (i = 0; i < m; i++) { var a = -Math.PI / 2 + i * Math.PI * 2 / m; pts.push([cx + Math.cos(a) * rad, cy + Math.sin(a) * rad]); }
+    var rnd = rand(29), m = 11, cx = r.x + r.w / 2, cy = r.y + r.h / 2, pts = [], ties = [], i, j;
+    for (i = 0; i < m; i++) { var a = i * 2.4 + rnd() * 0.9, d = r.w * (0.12 + 0.3 * Math.sqrt((i + 0.5) / m)); pts.push([cx + Math.cos(a) * d, cy + Math.sin(a) * d]); }
+    function bend(u, v, sway) {                 // the control point of the curve between two points
+      return [(u[0] + v[0]) / 2 - (v[1] - u[1]) * sway, (u[1] + v[1]) / 2 + (v[0] - u[0]) * sway];
+    }
+    for (i = 0; i < m; i++) for (j = i + 1; j < m; j++) { var sway = (rnd() - 0.5) * 0.7; if ((i + j) % 3 !== 1 || j === i + 1) ties.push([i, j, sway]); }
     ctx.strokeStyle = INK;
     ctx.globalAlpha = FAINT * k;
-    for (i = 0; i < m; i++) for (j = i + 1; j < m; j++) if ((i * m + j) / (m * m) < k) seg(pts[i][0], pts[i][1], pts[j][0], pts[j][1]);
-    ctx.globalAlpha = 0.9 * k;
-    ctx.beginPath(); ctx.arc(cx, cy, rad, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * k); ctx.stroke();
-    var t = Math.min(10.999, ease(p / 0.8) * 11), from = Math.floor(t) * 5 % m, to = (Math.floor(t) + 1) * 5 % m, f2 = t - Math.floor(t);
-    ctx.globalAlpha = k; ctx.fillStyle = LIVE;
-    ctx.beginPath(); ctx.arc(pts[from][0] + (pts[to][0] - pts[from][0]) * f2, pts[from][1] + (pts[to][1] - pts[from][1]) * f2, r.w * 0.025, 0, Math.PI * 2); ctx.fill();
+    for (i = 0; i < ties.length * k; i++) {
+      var u = pts[ties[i][0]], v = pts[ties[i][1]], c = bend(u, v, ties[i][2]);
+      ctx.beginPath(); ctx.moveTo(u[0], u[1]); ctx.quadraticCurveTo(c[0], c[1], v[0], v[1]); ctx.stroke();
+    }
+    ctx.globalAlpha = 0.9 * k; ctx.fillStyle = INK;
+    for (i = 0; i < m; i++) { ctx.beginPath(); ctx.arc(pts[i][0], pts[i][1], r.w * 0.009, 0, Math.PI * 2); ctx.fill(); }
+    // the idea: from each point on to the next, along a curve
+    var t = Math.min(m - 1.001, ease(p / 0.8) * (m - 1)), n = Math.floor(t), f = t - n, s0 = pts[n], s1 = pts[n + 1], sc = bend(s0, s1, n % 2 ? 0.3 : -0.3), g = 1 - f;
+    ctx.strokeStyle = LIVE; ctx.globalAlpha = k;
+    ctx.beginPath(); ctx.moveTo(s0[0], s0[1]); ctx.quadraticCurveTo(sc[0], sc[1], s1[0], s1[1]); ctx.stroke();
+    ctx.strokeStyle = INK; ctx.fillStyle = LIVE;
+    ctx.beginPath(); ctx.arc(g * g * s0[0] + 2 * g * f * sc[0] + f * f * s1[0], g * g * s0[1] + 2 * g * f * sc[1] + f * f * s1[1], r.w * 0.025, 0, Math.PI * 2); ctx.fill();
   };
 
   // A week on a rota: seven days, four rows of shifts. The gaps are filled one by one.
