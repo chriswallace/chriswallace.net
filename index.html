@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chris Wallace</title>
-<meta name="description" content="Chris Wallace is a designer, technologist and founder who makes digital products that have never existed before.">
+<meta name="description" content="Chris Wallace is a designer, technologist and founder who designs digital products that define new categories.">
 <link rel="canonical" href="https://chriswallace.net/">
 <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://chriswallace.net/">
 <meta property="og:title" content="Chris Wallace">
-<meta property="og:description" content="I make digital products that have never existed before.">
+<meta property="og:description" content="I design digital products that define new categories.">
 <meta property="og:image" content="https://chriswallace.net/assets/images/share.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -271,6 +271,10 @@ ol { padding: 0; list-style: none; }
 }
 .panel--story .stage { margin-inline: calc(var(--gutter) * -1); }
 .panel--story .text { display: grid; align-content: start; }
+@media (max-width: 899px) {
+  /* on a phone the drawing takes all the height the text does not need, and the text sits under it */
+  .js .panel--story { grid-template-rows: minmax(var(--stage-h), 1fr) auto; }
+}
 
 /* the page turns forest green behind the Woodies stickers */
 #grove {
@@ -400,9 +404,9 @@ ol { padding: 0; list-style: none; }
 <div id="dark" aria-hidden="true"></div>
 <div id="grove" aria-hidden="true"></div>
 <div id="plate" aria-hidden="true">
-  <img data-plate="sync" src="assets/images/work/story-sync.webp" alt="" width="1000" height="657" decoding="async">
-  <img data-plate="dmv" src="assets/images/work/california-dmv.webp" alt="" width="1000" height="459" decoding="async">
-  <img data-plate="ultradao" src="assets/images/work/ultradao.webp" alt="" width="560" height="720" decoding="async">
+  <img data-plate="sync" src="assets/images/work/story-sync.webp" alt="" width="1139" height="733" decoding="async">
+  <img data-plate="dmv" src="assets/images/work/california-dmv.webp" alt="" width="1200" height="810" decoding="async">
+  <img data-plate="ultradao" src="assets/images/work/ultradao.webp" alt="" width="800" height="800" decoding="async">
   <img data-plate="woodies" src="assets/images/work/woodies.webp" alt="" width="1088" height="760" decoding="async">
   <img data-plate="poster" src="assets/images/work/woodies-origin-poster.webp" alt="" width="720" height="1081" decoding="async">
   <video data-plate="assistant" src="assets/video/homebase/assistant.mp4" muted loop playsinline preload="none" width="560" height="604"></video>
@@ -428,7 +432,7 @@ ol { padding: 0; list-style: none; }
   <section class="seg" data-state="open" style="--len: 52">
     <div class="panel panel--words panel--xl">
       <div class="lines">
-        <h1 class="say">I make digital products that have never existed before.</h1>
+        <h1 class="say">I design digital products that define new categories.</h1>
       </div>
     </div>
   </section>
@@ -450,8 +454,8 @@ ol { padding: 0; list-style: none; }
       <div class="text lines">
         <h2 class="say">Most of my work starts as a question.</h2>
         <p class="say" data-state="sync">How can fans deepen connection to their favorite IP?</p>
-        <p class="say" data-state="character">What if people could generate and own unique character IP?</p>
-        <p class="say" data-state="lift">How might AI become the COO of your small business?</p>
+        <p class="say" data-state="character">What if they could own a piece of it?</p>
+        <p class="say" data-state="lift">What if every small business had the best COO in their pocket?</p>
       </div>
     </div>
   </section>
@@ -584,8 +588,8 @@ ol { padding: 0; list-style: none; }
       <div class="lines">
         <h2 class="say">Ask bigger questions.</h2>
         <p class="say">Create and test ideas constantly.</p>
-        <p class="say">Just get to a first version, then iterate.</p>
-        <p class="say">And do it with friends.</p>
+        <p class="say">Ship the strongest idea, then iterate.</p>
+        <p class="say">Build with people who make you better.</p>
       </div>
     </div>
   </section>
@@ -601,6 +605,7 @@ ol { padding: 0; list-style: none; }
   "use strict";
   var canvas = document.getElementById("frame");
   var tag = document.getElementById("frame-label");
+  var opener = document.querySelector('.seg[data-state="open"] .say');   // the first line: its "Scroll" label sits under it
   var plate = document.getElementById("plate");
   var brood = Array.prototype.slice.call(document.querySelectorAll("#brood img"));
   // where each one settles, as fractions of the drawing area, with its size and tilt
@@ -711,33 +716,34 @@ ol { padding: 0; list-style: none; }
   var dpr = 1;
   var STATES = {
     open:     { ratio: 0, label: "Scroll" },
-    ask:      { ratio: 9 / 16,  draw: "second" },
+    ask:      { ratio: 16 / 10, tall: 10 / 16, draw: "paths" },
     make:     { ratio: 4 / 5,   label: "Tap or click to add a floor", draw: "game" },
     art:      { ratio: 0, hidden: true },      // the art itself is on screen
     quiet:    { ratio: 0 },
     tenup:    { ratio: 16 / 10, draw: "web" },
     ultra:    { ratio: 1,       draw: "chain" },
     film:     { ratio: 0, hidden: true },      // the film itself is on screen
-    roblox:   { ratio: 16 / 9,  draw: "avatar" },
+    roblox:   { ratio: 16 / 9,  tall: 3 / 4, draw: "avatar" },
     homebase: { ratio: 3 / 4,   draw: "assistant" },
     end:      { ratio: 0 },
     // lines that name a piece of work show it: the frame takes the picture's shape
-    sync:      { ratio: 1000 / 657,  label: "The Walking Dead Story Sync", plate: "sync" },
+    sync:      { ratio: 1139 / 733,  label: "The Walking Dead Story Sync", plate: "sync" },
     character: { ratio: 0, hidden: true, brood: true },   // six Woodies, in place of the frame
-    dmv:       { ratio: 1000 / 459,  label: "California DMV",              plate: "dmv" },
-    ultradao:  { ratio: 560 / 720,   label: "UltraDAO",                    plate: "ultradao" },
+    dmv:       { ratio: 1200 / 810,  label: "California DMV",              plate: "dmv" },
+    ultradao:  { ratio: 1,           plate: "ultradao" },   // the art carries its own name
     woodies:   { ratio: 1088 / 760,  label: "Arden, from Woodies: Origin", plate: "woodies" },
     poster:    { ratio: 720 / 1081,  label: "Official Selection, Aesthetica Short Film Festival 2023", plate: "poster" },
     assistant: { ratio: 560 / 604,   label: "Homebase Assistant, covering a shift", plate: "assistant" },
     lift:      { ratio: 848 / 558,   label: "Homebase Assistant",          plate: "lift" },
     // drawings that state the fact in their line
+    // `tall` is the shape on a phone, where the drawing has more height than width to fill
     team:    { ratio: 1,      draw: "team" },
     lead:    { ratio: 1,      draw: "lead" },
-    answers: { ratio: 2,      draw: "answers" },
-    journey: { ratio: 16 / 10, draw: "journey" },
+    answers: { ratio: 2,      tall: 2 / 3,   draw: "answers" },
+    journey: { ratio: 16 / 10, tall: 10 / 16, draw: "journey" },
     ring:    { ratio: 1,      draw: "ring" },
-    week:    { ratio: 4 / 3,  draw: "week" },
-    shop:    { ratio: 4 / 3,  draw: "shop" }
+    week:    { ratio: 4 / 3,  tall: 3 / 4,   draw: "week" },
+    shop:    { ratio: 4 / 3,  tall: 4 / 5,   draw: "shop" }
   };
   var NAMES = Object.keys(STATES);
   var presence = {};
@@ -848,19 +854,14 @@ ol { padding: 0; list-style: none; }
     var padX = Math.max(20, region.w * 0.09);
     var padTop = Math.max(16, region.h * 0.09);
     var padBottom = padTop + 26;                 // room for the label
-    var bw = region.w - 2 * padX;
-    var bh = region.h - padTop - padBottom;
+    var bw = Math.max(0, region.w - 2 * padX);
+    var bh = Math.max(0, region.h - padTop - padBottom);   // a very short screen leaves no room, never less than none
     var cx = region.x + region.w / 2;
     var cy = region.y + padTop + bh / 2;
     var w, h;
-    if (st.draw === "second") {
-      // The phone stands in front of a wider TV outline, so it is kept smaller.
-      h = Math.min(bh, bw / 1.45);
-      w = h * st.ratio;
-      return { x: cx + h * 1.45 * 0.2 - w / 2, y: cy - h / 2, w: w, h: h };
-    }
-    w = Math.min(bw, bh * st.ratio);
-    h = w / st.ratio;
+    var ratio = !wide.matches && region.h > region.w && st.tall ? st.tall : st.ratio;   // on an upright phone some drawings take a taller shape
+    w = Math.min(bw, bh * ratio);
+    h = w / ratio;
     return { x: cx - w / 2, y: cy - h / 2, w: w, h: h };
   }
 
@@ -905,42 +906,6 @@ ol { padding: 0; list-style: none; }
   }
 
   var DRAW = {
-    // 2012. A phone beside a TV. The two marks keep the same time.
-    second: function (r, k, p) {
-      var tvW = r.h * 1.45, tvH = tvW * 9 / 16;
-      var tvX = r.x + r.w / 2 - r.h * 1.45 * 0.2 - tvW / 2;
-      var tvY = r.y + r.h * 0.1;
-      ctx.globalAlpha = FAINT * k;
-      ctx.strokeRect(tvX, tvY, tvW, tvH);
-      var bx1 = tvX + tvW * 0.06, bx2 = tvX + tvW * 0.94, by = tvY + tvH * 0.88;
-      seg(bx1, by, bx1 + (bx2 - bx1) * k, by);
-      ctx.globalAlpha = k;
-      ctx.strokeStyle = LIVE;
-      var bp = bx1 + (bx2 - bx1) * p;
-      seg(bp, by - tvH * 0.05, bp, by + tvH * 0.05);
-      // the phone covers the TV behind it
-      ctx.fillStyle = SIGNAL;
-      ctx.fillRect(r.x, r.y, r.w, r.h);
-      ctx.strokeStyle = INK;
-      var x1 = r.x + r.w * 0.12, x2 = r.x + r.w * 0.88, ty = r.y + r.h * 0.16;
-      ctx.globalAlpha = FAINT * k;
-      seg(x1, ty, x1 + (x2 - x1) * k, ty);
-      for (var i = 0; i <= 6; i++) {
-        var tx = x1 + (x2 - x1) * i / 6;
-        if ((tx - x1) <= (x2 - x1) * k) seg(tx, ty - r.h * 0.012, tx, ty + r.h * 0.012);
-      }
-      seg(x1, r.y + r.h * 0.3, x1 + (x2 - x1) * 0.7 * k, r.y + r.h * 0.3);
-      seg(x1, r.y + r.h * 0.335, x1 + (x2 - x1) * 0.45 * k, r.y + r.h * 0.335);
-      ctx.globalAlpha = 0.9 * k;
-      [0.82, 0.5, 0.28].forEach(function (f, j) {
-        ctx.strokeRect(x1, r.y + r.h * (0.42 + j * 0.11), (x2 - x1) * f * k, r.h * 0.06);
-      });
-      ctx.globalAlpha = k;
-      ctx.strokeStyle = LIVE;
-      var pp = x1 + (x2 - x1) * p;
-      seg(pp, ty - r.h * 0.045, pp, ty + r.h * 0.045);
-    },
-
     // 2017. A page made of blocks. One block is selected.
     web: function (r, k, p) {
       var hy = r.y + r.h * 0.11;
@@ -1030,8 +995,10 @@ ol { padding: 0; list-style: none; }
     },
 
     // 2025. A figure made of parts, and a shelf of parts to choose from. One part is being changed.
+    // In a tall frame the shelf is a row under the figure instead of a column beside it.
     avatar: function (r, k, p) {
-      var u = r.h * 0.11, cx = r.x + r.w * 0.42, top = r.y + r.h * 0.14;
+      var tall = r.h > r.w;
+      var u = tall ? r.w * 0.13 : r.h * 0.11, cx = r.x + r.w * (tall ? 0.5 : 0.42), top = r.y + r.h * (tall ? 0.09 : 0.14);
       var parts = [
         [cx - u * 0.6, top, u * 1.2, u * 1.2],
         [cx - u, top + u * 1.4, u * 2, u * 2.4],
@@ -1042,7 +1009,8 @@ ol { padding: 0; list-style: none; }
       ];
       var gy = top + u * 6.4;
       ctx.globalAlpha = FAINT * k;
-      seg(r.x + r.w * 0.12, gy, r.x + r.w * 0.12 + r.w * 0.6 * k, gy);
+      var gx = r.x + r.w * (tall ? 0.1 : 0.12), gl = r.w * (tall ? 0.8 : 0.6);
+      seg(gx, gy, gx + gl * k, gy);
       var sel = Math.min(parts.length - 1, Math.floor(p * parts.length));
       parts.forEach(function (b, i) {
         var a = Math.max(0, Math.min(1, k * parts.length - i));
@@ -1055,6 +1023,7 @@ ol { padding: 0; list-style: none; }
       var sx = r.x + r.w * 0.8, sw = u * 1.1;
       for (var j = 0; j < 4; j++) {
         var sy = top + j * u * 1.6;
+        if (tall) { sx = cx + (j - 1.5) * u * 1.6 - sw / 2; sy = gy + u * 0.9; }
         var pick = j === sel % 4;
         ctx.strokeStyle = pick ? LIVE : INK;
         ctx.globalAlpha = (pick ? 1 : FAINT) * k;
@@ -1213,13 +1182,17 @@ ol { padding: 0; list-style: none; }
   };
 
   // Three questions, three things made: a phone app, a wide film frame, a conversation.
+  // In a tall frame the three stand in a column instead of a row.
   DRAW.answers = function (r, k, p) {
-    var h = r.h * 0.62, cy = r.y + r.h / 2, on = Math.min(2, Math.floor(p / 0.75 * 3));
-    var items = [[0.15, h * 9 / 16], [0.5, h * 1.25], [0.85, h * 0.72]];
+    var tall = r.h > r.w, on = Math.min(2, Math.floor(p / 0.75 * 3));
+    var h = tall ? r.h * 0.24 : r.h * 0.62;
+    var items = [[0.15, h * 9 / 16], [0.5, tall ? r.w * 0.72 : h * 1.25], [0.85, h * 0.72]];
     items.forEach(function (it, i) {
       var a = Math.max(0, Math.min(1, k * 3 - i));
       if (a <= 0) return;
-      var w = it[1], hh = i === 1 ? w / 2.39 : h, x = r.x + r.w * it[0] - w / 2, y = cy - hh / 2;
+      var w = it[1], hh = i === 1 ? w / 2.39 : h;
+      var x = tall ? r.x + r.w / 2 - w / 2 : r.x + r.w * it[0] - w / 2;
+      var y = (tall ? r.y + r.h * (0.17 + i * 0.33) : r.y + r.h / 2) - hh / 2;
       ctx.strokeStyle = i === on ? LIVE : INK;
       ctx.globalAlpha = (i === on ? 1 : 0.8) * a;
       ctx.strokeRect(x, y, w, hh);
@@ -1232,12 +1205,15 @@ ol { padding: 0; list-style: none; }
   };
 
   // An idea on the left, a first version on the right, and a path between them that has to go round things.
+  // In a tall frame the same drawing is turned on its side: the path climbs from the bottom to the goal at the top.
   DRAW.journey = function (r, k, p) {
-    var pts = [[0.1, 0.78], [0.24, 0.78], [0.24, 0.42], [0.42, 0.42], [0.42, 0.68], [0.62, 0.68], [0.62, 0.26], [0.8, 0.26], [0.8, 0.5], [0.9, 0.5]]
-      .map(function (q) { return [r.x + r.w * q[0], r.y + r.h * q[1]]; });
+    var tall = r.h > r.w, unit = Math.min(r.w, r.h);
+    function at(q) { return tall ? [r.x + r.w * (1 - q[1]), r.y + r.h * (1 - q[0])] : [r.x + r.w * q[0], r.y + r.h * q[1]]; }
+    var pts = [[0.1, 0.78], [0.24, 0.78], [0.24, 0.42], [0.42, 0.42], [0.42, 0.68], [0.62, 0.68], [0.62, 0.26], [0.8, 0.26], [0.8, 0.5], [0.9, 0.5]].map(at);
     ctx.globalAlpha = FAINT * k;
     [[0.3, 0.56, 0.08, 0.2], [0.5, 0.36, 0.07, 0.22], [0.68, 0.42, 0.07, 0.24]].forEach(function (b) {
-      ctx.strokeRect(r.x + r.w * b[0], r.y + r.h * b[1], r.w * b[2], r.h * b[3]);
+      var a = at([b[0], b[1]]), c = at([b[0] + b[2], b[1] + b[3]]);
+      ctx.strokeRect(Math.min(a[0], c[0]), Math.min(a[1], c[1]), Math.abs(c[0] - a[0]), Math.abs(c[1] - a[1]));
     });
     // the path, as far as the scroll has gone
     var lens = [], total = 0, i;
@@ -1252,10 +1228,48 @@ ol { padding: 0; list-style: none; }
     }
     ctx.stroke();
     // the goal, and where the idea is now
-    var end = pts[pts.length - 1], s2 = r.h * 0.05;
+    var end = pts[pts.length - 1], s2 = unit * 0.05;
     ctx.strokeRect(end[0] - s2, end[1] - s2, s2 * 2, s2 * 2);
     ctx.globalAlpha = k; ctx.fillStyle = LIVE;
-    ctx.beginPath(); ctx.arc(x, y, r.h * 0.03, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(x, y, unit * 0.03, 0, Math.PI * 2); ctx.fill();
+  };
+
+  // One point, the question. A line leaves it and splits into three paths that end open: nothing is made yet.
+  // In a wide frame the paths run to the right; in a tall frame they climb.
+  DRAW.paths = function (r, k, p) {
+    var tall = r.h > r.w, unit = Math.min(r.w, r.h);
+    function at(q) { return tall ? [r.x + r.w * q[1], r.y + r.h * (1 - q[0])] : [r.x + r.w * q[0], r.y + r.h * q[1]]; }
+    function curve(a, c, b, t) {               // a quadratic curve from a to b, drawn as far as t
+      if (t <= 0) return;
+      var c1 = [a[0] + (c[0] - a[0]) * t, a[1] + (c[1] - a[1]) * t], u = 1 - t;
+      var e = [u * u * a[0] + 2 * u * t * c[0] + t * t * b[0], u * u * a[1] + 2 * u * t * c[1] + t * t * b[1]];
+      ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.quadraticCurveTo(c1[0], c1[1], e[0], e[1]); ctx.stroke();
+    }
+    var root = at([0.1, 0.52]), fork = at([0.4, 0.5]);
+    var stem = ease(p / 0.15) * k;               // all of it is drawn by 0.45, where the line is fully lit and rests
+    // each path: its bend and its end
+    var ways = [[[0.52, 0.2], [0.86, 0.16]], [[0.66, 0.56], [0.9, 0.48]], [[0.56, 0.84], [0.84, 0.82]]];
+    ctx.strokeStyle = INK; ctx.lineCap = "round";
+    ctx.globalAlpha = 0.9 * k;
+    curve(root, at([0.26, 0.47]), fork, stem);
+    ways.forEach(function (w, i) {
+      var grow = ease((p - 0.1 - i * 0.04) / 0.22) * k;
+      if (grow <= 0) return;
+      var c = at(w[0]), end = at(w[1]);
+      ctx.globalAlpha = 0.9 * k;
+      curve(fork, c, end, grow);
+      // past the end the path goes on, faint and broken: where it leads is still open
+      if (grow >= 1) {
+        var on = ease((p - 0.28 - i * 0.03) / 0.1);
+        var dx = end[0] - c[0], dy = end[1] - c[1], len = Math.sqrt(dx * dx + dy * dy) || 1, reach = unit * 0.14 * on;
+        ctx.globalAlpha = FAINT * k;
+        ctx.setLineDash([3, 5]);
+        seg(end[0], end[1], end[0] + dx / len * reach, end[1] + dy / len * reach);
+        ctx.setLineDash([]);
+      }
+    });
+    ctx.globalAlpha = k; ctx.fillStyle = LIVE;
+    ctx.beginPath(); ctx.arc(root[0], root[1], unit * 0.035, 0, Math.PI * 2); ctx.fill();
   };
 
   // A loose scatter of points, tied to each other by curved lines. One idea wanders along the ties.
@@ -1283,11 +1297,16 @@ ol { padding: 0; list-style: none; }
   };
 
   // A week on a rota: seven days, four rows of shifts. The gaps are filled one by one.
+  // In a tall frame the days run down the side and the shifts run across.
   DRAW.week = function (r, k, p) {
-    var cols = 7, rows = 4, cw = r.w * 0.82 / cols, ch = r.h * 0.6 / rows, x0 = r.x + r.w * 0.09, y0 = r.y + r.h * 0.24;
+    var tall = r.h > r.w;
+    var cols = tall ? 4 : 7, rows = tall ? 7 : 4;
+    var x0 = r.x + r.w * (tall ? 0.24 : 0.09), y0 = r.y + r.h * (tall ? 0.1 : 0.24);
+    var cw = r.w * (tall ? 0.68 : 0.82) / cols, ch = r.h * (tall ? 0.8 : 0.6) / rows;
     var rnd = rand(17), gaps = [3, 9, 12, 19, 24], filled = Math.floor(ease((p - 0.1) / 0.7) * (gaps.length + 0.99));
     ctx.globalAlpha = FAINT * k;
-    for (var c = 0; c < cols; c++) seg(x0 + cw * (c + 0.2), r.y + r.h * 0.15, x0 + cw * (c + 0.8), r.y + r.h * 0.15);
+    if (tall) { for (var d = 0; d < 7; d++) seg(r.x + r.w * 0.08, y0 + ch * (d + 0.43), r.x + r.w * 0.17, y0 + ch * (d + 0.43)); }
+    else { for (var c = 0; c < cols; c++) seg(x0 + cw * (c + 0.2), r.y + r.h * 0.15, x0 + cw * (c + 0.8), r.y + r.h * 0.15); }
     for (var i = 0; i < cols * rows; i++) {
       var cx2 = x0 + (i % cols) * cw, cy2 = y0 + Math.floor(i / cols) * ch, len = 0.5 + rnd() * 0.36, g = gaps.indexOf(i);
       if (i / (cols * rows) > k) break;
@@ -1325,7 +1344,8 @@ ol { padding: 0; list-style: none; }
 
   // A small shop, drawn by hand. A heart is drawn in its window, fills, and lifts out over the roof.
   DRAW.shop = function (r, k, p) {
-    var x = r.x + r.w * 0.2, w = r.w * 0.6, top = r.y + r.h * 0.4, base = r.y + r.h * 0.86, h = base - top, i;
+    // the shop keeps its shape; a taller frame only gives the heart more sky to rise into
+    var x = r.x + r.w * 0.2, w = r.w * 0.6, base = r.y + r.h * 0.86, h = Math.min(r.h * 0.46, r.w * 0.345), top = base - h, i;
     var build = ease(p / 0.3) * k, trace = ease((p - 0.18) / 0.22), lift = ease((p - 0.38) / 0.27);
     function P(u, v) { return [x + w * u, top + h * v]; }
     ctx.strokeStyle = INK; ctx.lineJoin = "round"; ctx.lineCap = "round";
@@ -1431,6 +1451,10 @@ ol { padding: 0; list-style: none; }
     if (st.ratio) {
       // a long label is pulled left so it never runs off the screen
       tag.style.transform = "translate(" + Math.round(Math.max(12, Math.min(rect.x, vw - tag.offsetWidth - 16))) + "px, " + Math.round(rect.y + rect.h + 8) + "px)";
+    } else if (active === "open" && opener) {
+      // the first label sits under the first line, lined up with its left edge
+      var ob = opener.getBoundingClientRect();
+      tag.style.transform = "translate(" + Math.round(ob.left) + "px, " + Math.round(ob.bottom + 44) + "px)";
     } else {
       tag.style.transform = "translate(" + Math.round(rect.x + rect.w - tag.offsetWidth - 16) + "px, " + Math.round(rect.y + rect.h - tag.offsetHeight - 12) + "px)";
     }
