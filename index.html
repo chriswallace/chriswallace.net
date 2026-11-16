@@ -265,6 +265,10 @@ ol { padding: 0; list-style: none; }
   pointer-events: none;
 }
 .panel--words { align-content: center; }
+/* the principles: one drawing runs through all four. On an upright phone the words sit low and the drawing takes the top of the screen. */
+@media (max-width: 899px) and (orientation: portrait) {
+  .panel--finale { align-content: end; padding-bottom: calc(var(--gutter) + var(--s12)); }
+}
 .panel--story {
   grid-template-rows: var(--stage-h) minmax(0, 1fr);
   padding-top: 0;
@@ -406,7 +410,13 @@ ol { padding: 0; list-style: none; }
 <div id="plate" aria-hidden="true">
   <img data-plate="sync" src="assets/images/work/story-sync.webp" alt="" width="1139" height="733" decoding="async">
   <img data-plate="dmv" src="assets/images/work/california-dmv.webp" alt="" width="1200" height="810" decoding="async">
-  <img data-plate="ultradao" src="assets/images/work/ultradao.webp" alt="" width="800" height="800" decoding="async">
+  <!-- ULTRAPASS at each of its six staking levels: it grows as the two UltraDAO lines go by -->
+  <img data-plate="ultradao-1" src="assets/images/work/ultradao-1.webp" alt="" width="800" height="800" decoding="async">
+  <img data-plate="ultradao-2" src="assets/images/work/ultradao-2.webp" alt="" width="800" height="800" decoding="async">
+  <img data-plate="ultradao-3" src="assets/images/work/ultradao-3.webp" alt="" width="800" height="800" decoding="async">
+  <img data-plate="ultradao-4" src="assets/images/work/ultradao-4.webp" alt="" width="800" height="800" decoding="async">
+  <img data-plate="ultradao-5" src="assets/images/work/ultradao-5.webp" alt="" width="800" height="800" decoding="async">
+  <img data-plate="ultradao-6" src="assets/images/work/ultradao-6.webp" alt="" width="800" height="800" decoding="async">
   <img data-plate="woodies" src="assets/images/work/woodies.webp" alt="" width="1088" height="760" decoding="async">
   <img data-plate="poster" src="assets/images/work/woodies-origin-poster.webp" alt="" width="720" height="1081" decoding="async">
   <video data-plate="assistant" src="assets/video/homebase/assistant.mp4" muted loop playsinline preload="none" width="560" height="604"></video>
@@ -517,7 +527,7 @@ ol { padding: 0; list-style: none; }
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
         <h2 class="say" data-state="ultradao">Next, at UltraDAO Studios, I built a creative studio from scratch.</h2>
-        <p class="say">We earned $2.6M with our first release.</p>
+        <p class="say" data-state="ultradao">We earned $2.6M with our first release.</p>
         <p class="say" data-state="ring">I’m more proud of how we worked: everyone brought their best ideas forward.</p>
       </div>
     </div>
@@ -583,8 +593,8 @@ ol { padding: 0; list-style: none; }
     </div>
   </section>
 
-  <section class="seg" data-state="quiet" style="--len: 248">
-    <div class="panel panel--words panel--xl">
+  <section class="seg" data-state="principles" style="--len: 248">
+    <div class="panel panel--words panel--xl panel--finale">
       <div class="lines">
         <h2 class="say">Ask bigger questions.</h2>
         <p class="say">Create and test ideas constantly.</p>
@@ -595,8 +605,8 @@ ol { padding: 0; list-style: none; }
   </section>
 
   <section class="end" id="next">
-    <h2 class="say">Make the world you want to exist in.</h2>
-    <a class="write" href="mailto:chris@chriswallace.net">Email Chris</a>
+    <h2 class="say">What’s your bigger question?</h2>
+    <a class="write" href="mailto:chris@chriswallace.net" aria-label="Ask me by email">Ask me</a>
   </section>
 </main>
 
@@ -689,6 +699,7 @@ ol { padding: 0; list-style: none; }
     };
   });
   var endWords = split(endSay);
+  var finale = (function () { var el = document.querySelector(".panel--finale"); return el ? Array.prototype.slice.call(el.querySelectorAll(".say")) : null; })();
 
   // A rest point for each line, placed where the line is fully lit and holding.
   var REST = 0.68;
@@ -725,12 +736,13 @@ ol { padding: 0; list-style: none; }
     film:     { ratio: 0, hidden: true },      // the film itself is on screen
     roblox:   { ratio: 16 / 9,  tall: 3 / 4, draw: "avatar" },
     homebase: { ratio: 3 / 4,   draw: "assistant" },
-    end:      { ratio: 0 },
+    principles: { ratio: 0, draw: "finale" },   // one drawing across the four principles, beside the words
+    end:      { ratio: 0, draw: "after" },      // what the finale leaves behind, and a new question
     // lines that name a piece of work show it: the frame takes the picture's shape
     sync:      { ratio: 1139 / 733,  label: "The Walking Dead Story Sync", plate: "sync" },
     character: { ratio: 0, hidden: true, brood: true },   // six Woodies, in place of the frame
     dmv:       { ratio: 1200 / 810,  label: "California DMV",              plate: "dmv" },
-    ultradao:  { ratio: 1,           plate: "ultradao" },   // the art carries its own name
+    ultradao:  { ratio: 1,           plate: "ultradao", stages: ["ultradao-1", "ultradao-2", "ultradao-3", "ultradao-4", "ultradao-5", "ultradao-6"] },   // the art carries its own name
     woodies:   { ratio: 1088 / 760,  label: "Arden, from Woodies: Origin", plate: "woodies" },
     poster:    { ratio: 720 / 1081,  label: "Official Selection, Aesthetica Short Film Festival 2023", plate: "poster" },
     assistant: { ratio: 560 / 604,   label: "Homebase Assistant, covering a shift", plate: "assistant" },
@@ -753,6 +765,7 @@ ol { padding: 0; list-style: none; }
   var active = "open";
   var progress = 0;          // 0..1 through the lines that share the drawing on screen
   var region = { x: 0, y: 0, w: 0, h: 0 };
+  var free = { x: 0, y: 0, w: 0, h: 0 };   // the part of the screen the principles leave free, for the finale
   var rect = null;           // the frame as drawn now
   var shown = 1;             // how visible the frame is
   var raf = 0, last = 0;
@@ -838,6 +851,18 @@ ol { padding: 0; list-style: none; }
     active = name;
     if (typeof pal !== "undefined" && pal) pal.set(name);
     progress = still ? 1 : clamp(run);
+
+    // the finale draws in whatever the principles leave free: beside them on a wide screen, above them on an upright one
+    if (finale) {
+      var t0 = Infinity, b0 = -Infinity, l0 = Infinity, r0 = -Infinity;
+      finale.forEach(function (say) {   // the words themselves, not the boxes they sit in
+        Array.prototype.forEach.call(say.querySelectorAll(".w"), function (w) { var b = w.getBoundingClientRect(); t0 = Math.min(t0, b.top); b0 = Math.max(b0, b.bottom); l0 = Math.min(l0, b.left); r0 = Math.max(r0, b.right); });
+      });
+      var g = inset() * 2, top = topBar.getBoundingClientRect().bottom + g * 0.5;
+      free = vw > vh * 1.1
+        ? { x: r0 + g, y: top, w: Math.max(0, vw - r0 - g * 2), h: Math.max(0, vh - top - g * 1.5) }
+        : { x: g, y: top, w: Math.max(0, vw - g * 2), h: Math.max(0, t0 - top - g * 0.5) };
+    }
 
     if (current.stage) {
       var s = current.stage.getBoundingClientRect();
@@ -1388,6 +1413,124 @@ ol { padding: 0; list-style: none; }
     ctx.strokeStyle = INK;
   };
 
+  /* ---------- the finale ---------- */
+  // One drawing across the four principles, in the part of the screen they leave free.
+  // A question is asked and grows past the screen. Ideas are sketched round it and tested; most are struck out.
+  // The strongest is made, then made again. People come in from the edges of the screen and gather round it.
+
+  function loop(cx, cy, rad, upto, seed) {           // a loose circle, drawn by hand
+    var pts = [], n = 28, a0 = seed * 1.3;
+    for (var i = 0; i <= n; i++) { var a = a0 + i / n * Math.PI * 2; pts.push([cx + Math.cos(a) * rad, cy + Math.sin(a) * rad]); }
+    hand(pts, upto, seed);
+  }
+  function sketch(type, cx, cy, s, upto, seed) {     // a small idea: a box, a circle, a triangle or a squiggle
+    if (type === 0) hand([[cx - s, cy - s], [cx + s, cy - s], [cx + s, cy + s], [cx - s, cy + s], [cx - s, cy - s]], upto, seed);
+    else if (type === 1) loop(cx, cy, s, upto, seed);
+    else if (type === 2) hand([[cx, cy - s], [cx + s, cy + s * 0.8], [cx - s, cy + s * 0.8], [cx, cy - s]], upto, seed);
+    else hand([[cx - s, cy + s * 0.3], [cx - s * 0.4, cy - s * 0.5], [cx + s * 0.1, cy + s * 0.4], [cx + s * 0.6, cy - s * 0.4], [cx + s, cy + s * 0.2]], upto, seed);
+  }
+  var IDEAS = 9, CHOSEN = 4, DROPPED = [1, 3, 6, 7];
+  var DOCKS = [[-1, -1], [1, -0.35], [0.3, 1], [-1, 0.5]];   // where each person joins the made thing, on its outline
+  function arrival(p, i) { return ease((p - 0.75 - i * 0.012) / 0.06); }
+  function finaleLayout(r) {
+    var B = free.w > 60 && free.h > 60 ? free : r, unit = Math.min(B.w, B.h), cx = B.x + B.w / 2, cy = B.y + B.h / 2, s = unit * 0.05, ideas = [];
+    var sx = Math.min(1.6, B.w / unit), sy = Math.min(1.6, B.h / unit);   // a long free area spreads the ideas along it
+    for (var i = 0; i < IDEAS; i++) {
+      var a = i * 2.4 + 0.5, d = unit * (0.17 + 0.27 * Math.sqrt((i + 0.5) / IDEAS));
+      ideas.push([Math.max(B.x + s * 1.5, Math.min(B.x + B.w - s * 1.5, cx + Math.cos(a) * d * sx)), Math.max(B.y + s * 1.5, Math.min(B.y + B.h - s * 1.5, cy + Math.sin(a) * d * sy))]);
+    }
+    return { B: B, unit: unit, cx: cx, cy: cy, s: s, ideas: ideas };
+  }
+
+  // Each principle's part is drawn by the time its line is fully lit: at 0.11, 0.36, 0.61 and 0.86 of the run.
+  DRAW.finale = function (r, k, p) {
+    var L = finaleLayout(r), u = L.unit, cx = L.cx, cy = L.cy, B = L.B, i;
+    ctx.strokeStyle = INK; ctx.lineCap = "round"; ctx.lineJoin = "round";
+
+    // 1. Ask bigger questions: rings go out from the question; the outer two are faint, broken, and run off the edges
+    var clear = 1 - ease((p - 0.75) / 0.08);              // the people need a clean space: earlier layers go as they arrive
+    var calm = (1 - 0.65 * ease((p - 0.25) / 0.08)) * clear, wider = 1 - ease((p - 0.25) / 0.06);
+    for (i = 0; i < 5; i++) {
+      var outer = i >= 3, a = outer ? FAINT * wider : (0.9 - i * 0.2) * calm;
+      if (a <= 0.01) continue;
+      ctx.globalAlpha = a * k;
+      if (outer) ctx.setLineDash([3, 6]);
+      loop(cx, cy, u * (0.1 + i * 0.12 + (outer ? (i - 2) * 0.05 : 0)), ease((p - 0.005 - i * 0.017) / 0.05), 3 + i);
+      ctx.setLineDash([]);
+    }
+
+    // 2. Create and test ideas: small sketches round the question, and most of them are struck out
+    var leave = ease((p - 0.5) / 0.05);                 // they go when the strongest is shipped
+    L.ideas.forEach(function (at, i) {
+      if (i === CHOSEN) return;
+      var drawn = ease((p - 0.24 - i * 0.007) / 0.05);
+      if (drawn <= 0) return;
+      var d = DROPPED.indexOf(i), a = k * (d !== -1 ? 1 - leave : (1 - 0.6 * leave) * (1 - ease((p - 0.75) / 0.08)));   // the rest go quiet, then clear the way for the people
+      if (a <= 0.01) return;
+      ctx.globalAlpha = 0.85 * a;
+      sketch(i % 4, at[0], at[1], L.s, drawn, 20 + i);
+      if (d !== -1) {
+        var x = ease((p - 0.3 - d * 0.008) / 0.035), e = L.s * 1.3;
+        hand([[at[0] - e, at[1] - e], [at[0] + e, at[1] + e]], x * 2, 40 + i);
+        hand([[at[0] + e, at[1] - e], [at[0] - e, at[1] + e]], x * 2 - 1, 50 + i);
+      }
+    });
+
+    // 3. Ship the strongest idea, then iterate: it moves to the middle and grows, then it is made again, a little larger each time
+    var at = L.ideas[CHOSEN], drawn = ease((p - 0.24 - CHOSEN * 0.007) / 0.05), go = ease((p - 0.5) / 0.07);
+    var better = 0;                                    // 4. each person who joins makes it better: it grows a step
+    DOCKS.forEach(function (d, i) { better += arrival(p, i); });
+    var size = L.s + (u * 0.15 - L.s) * go + u * 0.018 * better;
+    var x0 = at[0] + (cx - at[0]) * go, y0 = at[1] + (cy - at[1]) * go;
+    if (drawn > 0) {
+      ctx.strokeStyle = INK;
+      for (i = 0; i < 3; i++) {
+        var v = ease((p - 0.55 - i * 0.012) / 0.03);
+        if (v <= 0) break;
+        ctx.globalAlpha = (0.3 + 0.2 * i) * k * clear;
+        if (clear > 0.01) sketch(0, x0, y0, size * (1.16 + i * 0.14), v, 60 + i);
+      }
+      ctx.strokeStyle = go > 0 ? LIVE : INK; ctx.globalAlpha = (go > 0 ? 1 : 0.85) * k;
+      sketch(0, x0, y0, size, drawn, 20 + CHOSEN);
+    }
+
+    // 4. Build with people: four come in from the edges of the screen, one after another, and each joins the made thing on its outline
+    var side = vw > vh * 1.1, dot = Math.max(4, u * 0.02);
+    DOCKS.forEach(function (d, i) {
+      var g = arrival(p, i);
+      if (g <= 0) return;
+      var end = [x0 + d[0] * size, y0 + d[1] * size], dx = end[0] - cx, dy = end[1] - cy, len = Math.sqrt(dx * dx + dy * dy) || 1;
+      dx /= len; dy /= len;
+      // where it starts: the edge of the screen in its direction, but never through the words
+      var far = Math.max(vw, vh) * 2;
+      var t = Math.min(dx > 0 ? (vw + 30 - cx) / (dx * far) : dx < 0 ? (-30 - cx) / (dx * far) : 1, dy > 0 ? (vh + 30 - cy) / (dy * far) : dy < 0 ? (-30 - cy) / (dy * far) : 1);
+      var st = [cx + dx * far * t, cy + dy * far * t];
+      if (side && st[0] < B.x) st = [B.x + B.w * 0.2, dy > 0 ? vh + 30 : -30];
+      if (!side && st[1] > B.y + B.h) st = [dx > 0 ? vw + 30 : -30, B.y + B.h * 0.75];
+      var px = st[0] + (end[0] - st[0]) * g, py = st[1] + (end[1] - st[1]) * g;
+      var trail = 1 - ease((g - 0.5) / 0.5);           // a faint trail behind it, gone once it has arrived
+      if (trail > 0) { ctx.globalAlpha = FAINT * k * trail; ctx.strokeStyle = INK; seg(st[0], st[1], px, py); }
+      ctx.globalAlpha = k; ctx.fillStyle = INK;
+      ctx.beginPath(); ctx.arc(px, py, dot, 0, Math.PI * 2); ctx.fill();
+    });
+
+    // the question stays at the heart of it all
+    ctx.globalAlpha = k; ctx.fillStyle = LIVE;
+    ctx.beginPath(); ctx.arc(cx, cy, Math.max(4, u * 0.026), 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = INK;
+  };
+
+  // The close: what the finale made stays, quieter, and a new point starts to one side of it: the reader's question.
+  DRAW.after = function (r, k, p) {
+    DRAW.finale(r, k * 0.4, 1);
+    var L = finaleLayout(r), B = L.B, qx = B.x + B.w * 0.14, qy = B.y + B.h * 0.16, u = L.unit;
+    ctx.strokeStyle = INK; ctx.globalAlpha = 0.8 * k;
+    loop(qx, qy, u * 0.07, ease((k - 0.35) / 0.65), 5);
+    ctx.globalAlpha = k; ctx.fillStyle = LIVE;
+    ctx.beginPath(); ctx.arc(qx, qy, Math.max(4, u * 0.022), 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = INK;
+  };
+
   function draw() {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, vw, vh);
@@ -1414,8 +1557,16 @@ ol { padding: 0; list-style: none; }
     plate.style.width = rect.w + "px";
     plate.style.height = rect.h + "px";
     NAMES.forEach(function (n) {
-      if (!STATES[n].plate) return;
-      var el = plates[STATES[n].plate], on = presence[n] * shown;
+      var st = STATES[n];
+      if (!st.plate) return;
+      if (st.stages) {
+        // a piece that grows: each stage comes up over the one before as the lines go by, and it never goes back on its own
+        if (n === active) st.at = clamp((progress - 0.1) / 0.62) * (st.stages.length - 1);
+        var f = st.at || 0, show = presence[n] * shown;
+        st.stages.forEach(function (name, i) { plates[name].style.opacity = show * (i <= f ? 1 : clamp(f - i + 1)); });
+        return;
+      }
+      var el = plates[st.plate], on = presence[n] * shown;
       el.style.opacity = on;
       if (el.play) {                       // a film plays only while it is on screen
         var once = el.hasAttribute("data-once");   // plays through one time and holds on its last frame
@@ -1496,7 +1647,8 @@ ol { padding: 0; list-style: none; }
       journey:   { eyes: "open",  mouth: "small", watch: true },
       ring:      { eyes: "happy", mouth: "big",   watch: true },
       week:      { eyes: "open",  mouth: "smile", watch: true },
-      shop:      { eyes: "happy", mouth: "big",   mark: "heart", blush: true, watch: true }
+      shop:      { eyes: "happy", mouth: "big",   mark: "heart", blush: true, watch: true },
+      principles: { eyes: "open", mouth: "smile", mark: "?", watch: true }
     };
     var MARKS = {
       "?":   ["###", "..#", ".#.", "...", ".#."],
