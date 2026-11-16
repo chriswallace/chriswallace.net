@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chris Wallace</title>
-<meta name="description" content="Chris Wallace is a designer, technologist and founder who makes digital products that have never existed before.">
+<meta name="description" content="Chris Wallace is a designer, technologist and founder who designs digital products that define new categories.">
 <link rel="canonical" href="https://chriswallace.net/">
 <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://chriswallace.net/">
 <meta property="og:title" content="Chris Wallace">
-<meta property="og:description" content="I make digital products that have never existed before.">
+<meta property="og:description" content="I design digital products that define new categories.">
 <meta property="og:image" content="https://chriswallace.net/assets/images/share.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -428,7 +428,7 @@ ol { padding: 0; list-style: none; }
   <section class="seg" data-state="open" style="--len: 52">
     <div class="panel panel--words panel--xl">
       <div class="lines">
-        <h1 class="say">I make digital products that have never existed before.</h1>
+        <h1 class="say">I design digital products that define new categories.</h1>
       </div>
     </div>
   </section>
@@ -601,6 +601,7 @@ ol { padding: 0; list-style: none; }
   "use strict";
   var canvas = document.getElementById("frame");
   var tag = document.getElementById("frame-label");
+  var opener = document.querySelector('.seg[data-state="open"] .say');   // the first line: its "Scroll" label sits under it
   var plate = document.getElementById("plate");
   var brood = Array.prototype.slice.call(document.querySelectorAll("#brood img"));
   // where each one settles, as fractions of the drawing area, with its size and tilt
@@ -1431,6 +1432,10 @@ ol { padding: 0; list-style: none; }
     if (st.ratio) {
       // a long label is pulled left so it never runs off the screen
       tag.style.transform = "translate(" + Math.round(Math.max(12, Math.min(rect.x, vw - tag.offsetWidth - 16))) + "px, " + Math.round(rect.y + rect.h + 8) + "px)";
+    } else if (active === "open" && opener) {
+      // the first label sits under the first line, lined up with its left edge
+      var ob = opener.getBoundingClientRect();
+      tag.style.transform = "translate(" + Math.round(ob.left) + "px, " + Math.round(ob.bottom + 20) + "px)";
     } else {
       tag.style.transform = "translate(" + Math.round(rect.x + rect.w - tag.offsetWidth - 16) + "px, " + Math.round(rect.y + rect.h - tag.offsetHeight - 12) + "px)";
     }
