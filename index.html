@@ -1379,10 +1379,27 @@ ol { padding: 0; list-style: none; }
     ctx.strokeStyle = INK;
   };
 
+  // The grain: everything drawn on the frame canvas is printed through a fixed speckle, so lines and
+  // fills come out stippled with rough edges, like ink on coarse paper. Cells are one CSS pixel, hard-edged.
+  var grain = null, grainFor = 0;
+  function grainPattern() {
+    if (grain && grainFor === dpr) return grain;
+    var cell = Math.max(1, Math.round(dpr)), n = 160, tile = document.createElement("canvas"), tc = tile.getContext("2d"), rnd = rand(97);
+    tile.width = tile.height = n * cell;
+    for (var y = 0; y < n; y++) for (var x = 0; x < n; x++) {
+      // holes come in small clumps: a hole is likelier beside another hole
+      var v = rnd(), near = Math.sin(x * 0.9 + y * 1.7) * Math.sin(x * 0.37 - y * 0.53);
+      if (v < 0.3 + near * 0.14) tc.fillRect(x * cell, y * cell, cell, cell);
+    }
+    grainFor = dpr;
+    grain = ctx.createPattern(tile, "repeat");
+    return grain;
+  }
+
   function draw() {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, vw, vh);
-    ctx.lineWidth = 1.5;
+    ctx.lineWidth = 2.25;
     ctx.lineJoin = "miter";
 
     NAMES.forEach(function (n) {
@@ -1396,9 +1413,17 @@ ol { padding: 0; list-style: none; }
     // the frame
     ctx.globalAlpha = shown;
     ctx.strokeStyle = INK;
-    ctx.lineWidth = 2;
+    ctx.lineWidth = 2.5;
     ctx.strokeRect(rect.x, rect.y, rect.w, rect.h);
     ctx.globalAlpha = 1;
+
+    // print it through the grain
+    ctx.save();
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.globalCompositeOperation = "destination-out";
+    ctx.fillStyle = grainPattern();
+    ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    ctx.restore();
 
     // the plate follows the frame, and shows the picture of the state on screen
     plate.style.transform = "translate(" + rect.x + "px, " + rect.y + "px)";
