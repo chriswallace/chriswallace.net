@@ -16,6 +16,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0019ff">
+<script type="importmap">{ "imports": { "three": "./assets/js/three/three.module.min.js" } }</script>
 <style>
 /* One typeface: Redaction 50, a serif whose edges are broken into coarse pixels. One weight. */
 @font-face {
@@ -38,6 +39,7 @@
   --rule: rgb(255 255 255 / 0.38); /* faint rules and links between people */
   --night: #05060d;       /* the page during the film */
   --grove: #0d3b2c;       /* the page behind the Woodies stickers */
+  --slate: #17181b;       /* the page behind the avatar, dark like a 3D editor */
   --live: #ffe600;        /* the one live mark: Chris */
   --unlit: 0.26;          /* a word before the scroll reaches it */
 
@@ -60,6 +62,7 @@
   --gutter: clamp(1.75rem, 5vw, 4.5rem);
   --bar: calc(var(--gutter) + var(--s12)); /* room for the name and the contact link */
   --when-col: 6.5rem;     /* the date column */
+  --tick-row: 22px;       /* the spacing of the chapter ticks */
   --stage-h: 36svh;       /* height of the drawing's stage on narrow screens */
 
   /* shape */
@@ -138,6 +141,19 @@ ol { padding: 0; list-style: none; }
   object-fit: cover;
   opacity: 0;
 }
+/* the model: a real 3D Woodie, drawn on a canvas inside the frame. A sideways drag turns it; an up or down swipe still scrolls the page. */
+#plate canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  touch-action: pan-y;
+  cursor: grab;
+}
+#plate canvas.is-live { pointer-events: auto; }
+#plate canvas.is-live:active { cursor: grabbing; }
+#plate canvas.is-failed { background: url(assets/images/work/woodie-3d.webp) center / cover no-repeat; cursor: default; }   /* a still render, where 3D cannot run */
 /* the brood: Woodies stickers that come out of the middle of the drawing area and settle around it */
 #brood { position: fixed; inset: 0; z-index: 2; pointer-events: none; }
 #brood img {
@@ -200,6 +216,65 @@ ol { padding: 0; list-style: none; }
 #pal { width: 66px; height: 45px; image-rendering: pixelated; flex: none; margin-left: -3px; }
 @media (hover: hover) and (pointer: fine) {
   .top a:hover { text-decoration-line: underline; }
+}
+/* the chapter ticks: one tick per chapter down the right edge, just inside the frame.
+   The current chapter's tick is longer. A click on a tick, or a press and drag along them, jumps between chapters,
+   and a label names the chapter under the pointer. They need the script, so they are hidden without it. */
+.ticks { display: none; }
+.js .ticks {
+  display: block;
+  position: fixed;
+  top: 50%;
+  right: calc(max(12px, 3vmin) + var(--s2));   /* the frame's inset, and a little more */
+  z-index: 4;
+  transform: translateY(-50%);
+  font-size: var(--data-size);
+  user-select: none;
+  -webkit-user-select: none;
+}
+.ticks-track {
+  touch-action: none;   /* a drag along the ticks moves between chapters, not the page */
+  cursor: ns-resize;
+}
+.tick {
+  position: relative;
+  display: block;
+  width: 44px;
+  height: var(--tick-row);
+  margin-left: auto;
+  text-decoration-line: none;
+}
+.tick::before {                    /* the mark itself */
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 12px;
+  height: var(--line);
+  background: var(--rule);
+  transform: translateY(-50%);
+  transition: width var(--dur-base) var(--ease-out), background-color var(--dur-base) var(--ease-out);
+}
+.tick[aria-current="true"]::before { width: 24px; background: var(--ink); }
+.tick-name {
+  position: absolute;
+  right: 34px;
+  top: 50%;
+  padding: 2px var(--s2);
+  background: var(--signal);
+  white-space: nowrap;
+  line-height: 1.3;
+  opacity: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+.tick:focus-visible { outline: none; }
+.tick:focus-visible::before { background: var(--ink); width: 24px; }
+.tick:focus-visible .tick-name, .tick.is-named .tick-name { opacity: 1; }
+@media (hover: hover) and (pointer: fine) {
+  .ticks:not(.is-scrubbing) .tick:hover::before { background: var(--ink); }
+  .ticks:not(.is-scrubbing) .tick:hover .tick-name { opacity: 1; }
 }
 
 /* statements */
@@ -280,6 +355,58 @@ ol { padding: 0; list-style: none; }
   .js .panel--story { grid-template-rows: minmax(var(--stage-h), 1fr) auto; }
 }
 
+/* the projects: one line, and under it a grid of entries, one for each thing being built now.
+   Each entry is a name with a chip beside it that gives its state, and a line on what it is, under a thin rule.
+   An entry with a link is the link. */
+.panel--grid { gap: var(--s8); }
+.panel--grid .say { font-size: var(--say-size); max-width: 26ch; }
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s6) var(--s12);
+  max-width: 62rem;
+  font-size: var(--data-size);
+  line-height: 1.4;
+}
+.project > * {
+  display: grid;
+  gap: var(--s2);
+  align-content: start;
+  height: 100%;
+  padding: var(--s4) 0 0;
+  border-top: 1px solid var(--rule);
+  text-decoration-line: none;
+  transition: border-color var(--dur-base) var(--ease-out);
+}
+.project-head { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s3); }
+.project-name { font-size: clamp(1.5rem, 1rem + 1.2vw, 2rem); line-height: 1.1; }
+.project-state {                   /* the chip */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.1em 0.55em;
+  border: 1px solid var(--rule);
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.project-state::before { content: ""; width: 0.5em; height: 0.5em; border: 1px solid var(--ink-soft); }
+.project-state.is-live { color: var(--ink); }
+.project-state.is-live::before { border-color: var(--live); background: var(--live); }   /* live, in the page's one live colour */
+.project-what { max-width: 36ch; color: var(--ink-soft); }
+@media (hover: hover) and (pointer: fine) {
+  .project a:hover { border-top-color: var(--ink); }
+  .project a:hover .project-name { text-decoration-line: underline; text-decoration-thickness: 0.06em; text-underline-offset: 0.14em; }
+}
+.js .project { opacity: 0; will-change: opacity, transform; }
+.js .projects.is-on { pointer-events: auto; }
+@media (max-width: 899px) {
+  /* a phone: one column, clear of the chapter ticks on the right */
+  .panel--grid { gap: var(--s6); padding-right: calc(var(--gutter) + var(--s8)); }
+  .projects { grid-template-columns: minmax(0, 1fr); gap: var(--s4); }
+  .project > * { gap: var(--s2); padding-top: var(--s3); }
+  .project-name { font-size: 1.5rem; }
+}
 /* the page turns forest green behind the Woodies stickers */
 #grove {
   position: fixed;
@@ -290,14 +417,94 @@ ol { padding: 0; list-style: none; }
   pointer-events: none;
 }
 
+/* the pulse: one live dot over the close, the reader's own question. It swells and a ring goes out from it, again and again. */
+#pulse {
+  position: fixed;
+  left: 63%;        /* off centre on purpose: up and to the right */
+  top: 31%;
+  z-index: 3;
+  width: clamp(14px, 1.6vw, 22px);
+  aspect-ratio: 1;
+  margin: calc(clamp(14px, 1.6vw, 22px) / -2) 0 0 calc(clamp(14px, 1.6vw, 22px) / -2);
+  border-radius: 50%;
+  background: var(--live);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+#pulse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: var(--line) solid var(--live);
+  opacity: 0;
+}
+#pulse.is-on { visibility: visible; animation: pulse-dot 2.4s var(--ease-out) infinite; }
+#pulse.is-on::after { animation: pulse-ring 2.4s var(--ease-out) infinite; }
+@keyframes pulse-dot { 0%, 100% { transform: scale(1); } 18% { transform: scale(1.3); } 45% { transform: scale(1); } }
+@keyframes pulse-ring { 0% { transform: scale(1); opacity: 0.9; } 80%, 100% { transform: scale(5); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  #pulse.is-on, #pulse.is-on::after { animation: none; }
+}
+/* the page turns slate behind the avatar */
+#slate {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: var(--slate);
+  opacity: 0;
+  pointer-events: none;
+}
 /* the page goes dark for the film */
 #dark {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: var(--night);
+  background: var(--night) center / cover no-repeat;
   opacity: 0;
   pointer-events: none;
+}
+/* the night forest from Woodies: Origin, dimmed, behind the Woodies chapter. It loads when the reader gets near. */
+.woodies-near #dark {
+  background-image: linear-gradient(rgb(5 6 13 / 0.68), rgb(5 6 13 / 0.68)), url(assets/images/woodies/forest-night.webp);
+}
+/* the sheet: a wall of real Woodies behind the lines about them, edge to edge, seen straight on and leaning back.
+   It runs past every edge of the screen, so it has no visible end, and it moves from the bottom to the top.
+   It is one tiled picture on one layer, and only its transform changes with the scroll, so it stays cheap to move. */
+#sheet {
+  --cell: clamp(120px, 15vw, 220px);   /* one Woodie; the script uses the same sum */
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  perspective: 1100px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+#sheet .plane {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 260vmax;
+  height: 260vmax;
+  margin: -130vmax 0 0 -130vmax;
+  background-repeat: repeat;
+  background-position: 50% 50%;      /* a column of Woodies runs down the middle of the screen, so the two sides match */
+  background-size: calc(var(--cell) * 10) calc(var(--cell) * 10);   /* the picture is ten Woodies wide and ten high, all different */
+  will-change: transform;
+}
+.woodies-near #sheet .plane { background-image: url(assets/images/woodies/sheet.webp); }
+#sheet::after {                      /* the page colour, laid over the sheet where the words are and where it meets the top */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(5 6 13 / 0.88) 0%, rgb(5 6 13 / 0.66) 42%, rgb(5 6 13 / 0.4) 100%);
+}
+@media (max-width: 899px) and (orientation: portrait) {
+  #sheet::after { background: linear-gradient(0deg, rgb(5 6 13 / 0.92) 0%, rgb(5 6 13 / 0.7) 40%, rgb(5 6 13 / 0.4) 100%); }
 }
 
 /* art: the lines sit above a strip of Interplay pieces that crosses the screen as you scroll */
@@ -379,16 +586,20 @@ ol { padding: 0; list-style: none; }
 @media (hover: hover) and (pointer: fine) {
   .write:hover { background: var(--ink); color: var(--signal); }
 }
+/* With script the close is taller than the screen and its words sit at the bottom: the blue comes up first with only
+   the pulsing dot on it, and the words slide up and fade in after. */
+.js .end { min-height: 170svh; }
+.js .end .say, .js .end .write { opacity: var(--in, 1); }
 
 @media (min-width: 900px) {
   :root {
     --display-size: clamp(2.5rem, 1rem + 4.2vw, 4.75rem);
     --impact-size: clamp(2rem, 1rem + 4.2vw, 5rem);
-    --say-size: clamp(2rem, 1.2rem + 2.4vw, 3.5rem);
+    --say-size: clamp(1.75rem, 0.4rem + 3vw, 3.5rem);
   }
-  .panel--story {
+  .panel--story {   /* the words and the drawing share the screen half and half */
     grid-template-rows: none;
-    grid-template-columns: minmax(0, 40rem) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     column-gap: var(--gutter);
     padding-top: var(--bar);
   }
@@ -406,9 +617,13 @@ ol { padding: 0; list-style: none; }
 <body>
 <script>document.documentElement.classList.add("js");</script>
 <div id="dark" aria-hidden="true"></div>
+<div id="sheet" aria-hidden="true"><div class="plane"></div></div>
 <div id="grove" aria-hidden="true"></div>
+<div id="slate" aria-hidden="true"></div>
 <div id="plate" aria-hidden="true">
   <img data-plate="sync" src="assets/images/work/story-sync.webp" alt="" width="1139" height="733" decoding="async">
+  <video data-plate="storysync" src="assets/video/story-sync.mp4" muted loop playsinline preload="none" width="640" height="360"></video>
+  <img data-plate="madmen" src="assets/images/work/mad-men-fan-cut.webp" alt="" width="1200" height="810" decoding="async">
   <img data-plate="dmv" src="assets/images/work/california-dmv.webp" alt="" width="1200" height="810" decoding="async">
   <!-- ULTRAPASS at each of its six staking levels: it grows as the two UltraDAO lines go by -->
   <img data-plate="ultradao-1" src="assets/images/work/ultradao-1.webp" alt="" width="800" height="800" decoding="async">
@@ -417,7 +632,7 @@ ol { padding: 0; list-style: none; }
   <img data-plate="ultradao-4" src="assets/images/work/ultradao-4.webp" alt="" width="800" height="800" decoding="async">
   <img data-plate="ultradao-5" src="assets/images/work/ultradao-5.webp" alt="" width="800" height="800" decoding="async">
   <img data-plate="ultradao-6" src="assets/images/work/ultradao-6.webp" alt="" width="800" height="800" decoding="async">
-  <img data-plate="woodies" src="assets/images/work/woodies.webp" alt="" width="1088" height="760" decoding="async">
+  <canvas data-plate="threed"></canvas>
   <img data-plate="poster" src="assets/images/work/woodies-origin-poster.webp" alt="" width="720" height="1081" decoding="async">
   <video data-plate="assistant" src="assets/video/homebase/assistant.mp4" muted loop playsinline preload="none" width="560" height="604"></video>
   <video data-plate="lift" data-once src="assets/video/homebase/lift.mp4" muted playsinline preload="auto" width="848" height="558"></video>
@@ -429,17 +644,35 @@ ol { padding: 0; list-style: none; }
   <img src="assets/images/woodies/sticker-4.webp" alt="" width="503" height="520" decoding="async">
   <img src="assets/images/woodies/sticker-5.webp" alt="" width="484" height="520" decoding="async">
 </div>
+<div id="pulse" aria-hidden="true"></div>
 <canvas id="frame" aria-hidden="true"></canvas>
 <p id="frame-label" aria-hidden="true"></p>
 <a class="skip" href="#next">Skip to contact</a>
 
 <header class="top">
   <span class="me"><canvas id="pal" width="22" height="15" aria-hidden="true"></canvas><span class="sr">Chris Wallace</span></span>
-  <a href="#next">Contact</a>
+  <a class="contact" href="#next">Contact</a>
 </header>
 
+<nav class="ticks" aria-label="Chapters">
+  <ol class="ticks-track">
+    <li><a class="tick" href="#intro"><span class="tick-name">Intro</span></a></li>
+    <li><a class="tick" href="#questions"><span class="tick-name">Questions</span></a></li>
+    <li><a class="tick" href="#process"><span class="tick-name">Process</span></a></li>
+    <li><a class="tick" href="#art"><span class="tick-name">Art</span></a></li>
+    <li><a class="tick" href="#liftux"><span class="tick-name">Lift UX</span></a></li>
+    <li><a class="tick" href="#tenup"><span class="tick-name">10up</span></a></li>
+    <li><a class="tick" href="#ultradao"><span class="tick-name">UltraDAO</span></a></li>
+    <li><a class="tick" href="#woodies"><span class="tick-name">Woodies</span></a></li>
+    <li><a class="tick" href="#roblox"><span class="tick-name">Roblox</span></a></li>
+    <li><a class="tick" href="#homebase"><span class="tick-name">Homebase</span></a></li>
+    <li><a class="tick" href="#projects"><span class="tick-name">Projects</span></a></li>
+    <li><a class="tick" href="#principles"><span class="tick-name">Principles</span></a></li>
+  </ol>
+</nav>
+
 <main id="top">
-  <section class="seg" data-state="open" style="--len: 52">
+  <section class="seg" id="intro" data-state="open">
     <div class="panel panel--words panel--xl">
       <div class="lines">
         <h1 class="say">I design digital products that define new categories.</h1>
@@ -447,18 +680,17 @@ ol { padding: 0; list-style: none; }
     </div>
   </section>
 
-  <section class="seg" data-state="quiet" style="--len: 148">
+  <section class="seg" data-state="quiet">
     <div class="panel panel--words">
       <div class="lines">
         <h2 class="say">Hi, I’m Chris.</h2>
         <p class="say">I’ve been a designer, technologist, and founder for 20+ years.</p>
-        <p class="say">I’m curious.</p>
-        <p class="say">I learn through the process of creation.</p>
+        <p class="say">I learn by making things.</p>
       </div>
     </div>
   </section>
 
-  <section class="seg" data-state="ask" style="--len: 148">
+  <section class="seg" id="questions" data-state="ask">
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
@@ -470,22 +702,21 @@ ol { padding: 0; list-style: none; }
     </div>
   </section>
 
-  <section class="seg" data-state="make" style="--len: 116">
+  <section class="seg" id="process" data-state="make">
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
         <h2 class="say">My process is experimentation.</h2>
         <p class="say" data-state="answers">Those questions became a companion app for TV series, an animated short film, and an always-on AI assistant.</p>
-        <p class="say" data-state="journey">An idea sparks a journey through all the challenges and ideation.</p>
+        <p class="say" data-state="journey">Each idea goes through many rounds of sketches and tests.</p>
       </div>
     </div>
   </section>
 
-  <section class="seg" data-state="art" style="--len: 210">
+  <section class="seg" id="art" data-state="art">
     <div class="panel panel--art">
       <div class="lines">
-        <h2 class="say">Art makes the journey worth it.</h2>
-        <p class="say">In 2022, I started co-creating art with AI.</p>
+        <h2 class="say">In 2022, I started co-creating art with AI.</h2>
         <p class="say">This series, Interplay, is the result.</p>
         <p class="say">Is AI a collaborator? A tool? AGI?</p>
         <p class="say">To me, art expresses humanity.</p>
@@ -503,7 +734,7 @@ ol { padding: 0; list-style: none; }
     </div>
   </section>
 
-  <section class="seg" data-state="quiet" style="--len: 52">
+  <section class="seg" data-state="quiet">
     <div class="panel panel--words">
       <div class="lines">
         <h2 class="say">My professional journey is a series of deep collaborations with friends.</h2>
@@ -511,7 +742,19 @@ ol { padding: 0; list-style: none; }
     </div>
   </section>
 
-  <section class="seg" data-state="tenup" style="--len: 116">
+  <section class="seg" id="liftux" data-state="liftux">
+    <div class="panel panel--story">
+      <div class="stage" aria-hidden="true"></div>
+      <div class="text lines">
+        <h2 class="say" data-state="storysync">In 2009, I founded Lift UX, a product design agency.</h2>
+        <p class="say" data-state="storysync">Our Story Sync apps for The Walking Dead and Breaking Bad earned an Emmy nomination.</p>
+        <p class="say" data-state="madmen">Mad Men: The Fan Cut earned another. Fans remade the first episode, scene by scene.</p>
+        <p class="say">In 2017, 10up acquired Lift UX.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seg" id="tenup" data-state="tenup">
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
@@ -522,7 +765,7 @@ ol { padding: 0; list-style: none; }
     </div>
   </section>
 
-  <section class="seg" data-state="ultra" style="--len: 116">
+  <section class="seg" id="ultradao" data-state="ultra">
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
@@ -533,7 +776,7 @@ ol { padding: 0; list-style: none; }
     </div>
   </section>
 
-  <section class="seg" data-state="film" style="--len: 178">
+  <section class="seg" id="woodies" data-state="film">
     <div class="panel panel--story panel--film">
       <div class="stage reel" aria-hidden="true">
         <video class="clip clip--1" src="assets/video/woodies/clip-1.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
@@ -544,48 +787,83 @@ ol { padding: 0; list-style: none; }
         <video class="clip clip--6" src="assets/video/woodies/clip-6.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
       </div>
       <div class="text lines">
-        <h2 class="say" data-state="woodies">We made <a href="https://woodiesofficial.com" target="_blank" rel="noopener">Woodies</a>, characters that began on the blockchain.</h2>
-        <p class="say">Then they outgrew it.</p>
+        <h2 class="say" data-state="sheet">We made <a href="https://woodiesofficial.com" target="_blank" rel="noopener">Woodies</a>, characters that began on the blockchain.</h2>
+        <p class="say" data-state="sheet">Then they outgrew it.</p>
         <p class="say" data-state="poster"><a href="https://www.youtube.com/watch?v=encMCWoBc3o" target="_blank" rel="noopener">Woodies: Origin</a> put them in a short film.</p>
-        <p class="say">We released them as 3D characters in the metaverse.</p>
+        <p class="say" data-state="reel">It was an official selection at the Aesthetica Short Film Festival in 2023.</p>
+        <p class="say" data-state="threed">We released them as 3D characters in the metaverse.</p>
       </div>
     </div>
   </section>
 
-  <section class="seg" data-state="roblox" style="--len: 116">
+  <section class="seg" id="roblox" data-state="roblox">
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
         <h2 class="say">From characters to avatars: at <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox</a>, I designed avatar tools for 3D creators.</h2>
         <p class="say">I researched creator workflows and designed tools to meet their needs.</p>
-        <p class="say">The work reflected my desire to reduce frustration while increasing creativity.</p>
+        <p class="say">My goal: less frustration, more creativity.</p>
       </div>
     </div>
   </section>
 
-  <section class="seg" data-state="quiet" style="--len: 84">
+  <section class="seg" data-state="quiet">
     <div class="panel panel--words">
       <div class="lines">
-        <h2 class="say">Every one of those teams taught me the same thing.</h2>
-        <p class="say">People do their best work when they go outside their lane.</p>
+        <h2 class="say">Working with incredible teams taught me this single truth.</h2>
+        <p class="say">Breakthrough products are made by people who leave their comfort zone.</p>
       </div>
     </div>
   </section>
 
-  <section class="seg" data-state="homebase" style="--len: 180">
+  <section class="seg" id="homebase" data-state="homebase">
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
         <h2 class="say" data-state="assistant">Which brings me back to that last question.</h2>
         <p class="say" data-state="assistant">Now I’m leading design for <a href="https://joinhomebase.com" target="_blank" rel="noopener">Homebase Assistant</a>.</p>
         <p class="say" data-state="week">The vision is to be an operational partner for small business owners.</p>
-        <p class="say" data-state="week">Executing on it is extremely challenging but rewarding.</p>
+        <p class="say" data-state="week">It’s the hardest work I’ve done, and the best.</p>
         <p class="say" data-state="shop">Small businesses are near and dear to me.</p>
       </div>
     </div>
   </section>
 
-  <section class="seg" data-state="quiet" style="--len: 52">
+  <section class="seg" id="projects" data-state="projects" data-min="120">
+    <div class="panel panel--words panel--grid">
+      <div class="lines">
+        <h2 class="say">Here’s what I’m building now.</h2>
+      </div>
+      <ol class="projects">
+        <li class="project">
+          <a href="https://hollerback.dev" target="_blank" rel="noopener">
+            <span class="project-head"><span class="project-name">Hollerback</span> <span class="project-state is-live">Live</span></span>
+            <span class="project-what">Lets an AI agent call and text people.</span>
+          </a>
+        </li>
+        <li class="project">
+          <a href="https://emeri.org" target="_blank" rel="noopener">
+            <span class="project-head"><span class="project-name">Emeri</span> <span class="project-state is-live">Live</span></span>
+            <span class="project-what">A check and a certification of how well you work with AI.</span>
+          </a>
+        </li>
+        <li class="project">
+          <a href="https://woodiesofficial.com" target="_blank" rel="noopener">
+            <span class="project-head"><span class="project-name">Woodies</span> <span class="project-state is-live">Live</span></span>
+            <span class="project-what">The home of the Woodies world: its films, its lore and its 9,739 characters.</span>
+          </a>
+        </li>
+        <li class="project">
+          <div>
+            <span class="project-head"><span class="project-name">Lofty Ambitions</span> <span class="project-state">Coming soon</span></span>
+            <span class="project-what">A tower management game in Tokyo-inspired pixel art, for Mac and Windows.</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="seg" id="principles" data-state="quiet">
     <div class="panel panel--words panel--xl panel--center">
       <div class="lines">
         <h2 class="say">My design principles</h2>
@@ -593,7 +871,7 @@ ol { padding: 0; list-style: none; }
     </div>
   </section>
 
-  <section class="seg" data-state="principles" style="--len: 248">
+  <section class="seg" data-state="principles" data-min="130">
     <div class="panel panel--words panel--xl panel--finale">
       <div class="lines">
         <h2 class="say">Ask bigger questions.</h2>
@@ -604,8 +882,8 @@ ol { padding: 0; list-style: none; }
     </div>
   </section>
 
-  <section class="end" id="next">
-    <h2 class="say">What’s your bigger question?</h2>
+  <section class="end">
+    <h2 class="say" id="next">What’s your bigger question?</h2>
     <a class="write" href="mailto:chris@chriswallace.net" aria-label="Ask me by email">Ask me</a>
   </section>
 </main>
@@ -621,7 +899,7 @@ ol { padding: 0; list-style: none; }
   // where each one settles, as fractions of the drawing area, with its size and tilt
   var NEST = [[0.26, 0.24, 1.0, -6], [0.74, 0.2, 0.92, 5], [0.5, 0.52, 1.1, 2], [0.2, 0.78, 0.9, 7], [0.78, 0.76, 1.0, -5]];
   var plates = {};
-  Array.prototype.slice.call(plate.querySelectorAll("img, video")).forEach(function (el) { plates[el.getAttribute("data-plate")] = el; });
+  Array.prototype.slice.call(plate.querySelectorAll("img, video, canvas")).forEach(function (el) { plates[el.getAttribute("data-plate")] = el; });
   var ctx = canvas.getContext && canvas.getContext("2d");
   if (!ctx) { document.documentElement.classList.remove("js"); return; }
 
@@ -630,6 +908,7 @@ ol { padding: 0; list-style: none; }
   var INK = css.getPropertyValue("--ink").trim();
   var SOFT = css.getPropertyValue("--ink-soft").trim();
   var LIVE = css.getPropertyValue("--live").trim();
+  var FONT = css.getPropertyValue("--font").trim();
   var FAINT = 0.38;
   var UNLIT = parseFloat(css.getPropertyValue("--unlit")) || 0.26;
 
@@ -638,10 +917,14 @@ ol { padding: 0; list-style: none; }
   var mouse = window.matchMedia("(hover: hover) and (pointer: fine)");
 
   var topBar = document.querySelector(".top");
-  var contact = document.querySelector(".top a");
+  var contact = document.querySelector(".top .contact");
   var nameMark = document.querySelector(".top span");
   var dark = document.getElementById("dark");
   var grove = document.getElementById("grove");
+  var slate = document.getElementById("slate");
+  var pulse = document.getElementById("pulse");
+  var sheet = document.getElementById("sheet"), plane = sheet.querySelector(".plane"), sheetAt = 0, woodiesNear = false;
+  var SLATE = css.getPropertyValue("--slate").trim();
   var end = document.querySelector(".end");
   var endSay = document.querySelector(".end .say");
 
@@ -691,6 +974,8 @@ ol { padding: 0; list-style: none; }
       stage: el.querySelector(".stage"),
       strip: el.querySelector(".strip"),
       clips: Array.prototype.slice.call(el.querySelectorAll(".clip")),
+      grid: el.querySelector(".projects"),
+      cards: Array.prototype.slice.call(el.querySelectorAll(".project")),
       lines: Array.prototype.slice.call(el.querySelectorAll(".say")).map(function (say) {
         return { el: say, words: split(say), state: say.getAttribute("data-state") };   // a line may borrow another section's drawing
       }),
@@ -701,14 +986,27 @@ ol { padding: 0; list-style: none; }
   var endWords = split(endSay);
   var finale = (function () { var el = document.querySelector(".panel--finale"); return el ? Array.prototype.slice.call(el.querySelectorAll(".say")) : null; })();
 
+  // Each line takes scroll in proportion to its length: a base, and more for each word.
+  // A section is as long as its lines, or its data-min (in svh) where a drawing or the film needs more time,
+  // and never shorter than SHORTEST, so a one-line section has time to come in, light and leave.
+  var PER_LINE = 14, PER_WORD = 2.2, SHORTEST = 40;
+  segs.forEach(function (s) {
+    var sizes = s.lines.map(function (line) { return PER_LINE + PER_WORD * line.words.length; });
+    var total = sizes.reduce(function (a, b) { return a + b; }, 0);
+    s.starts = [0];                // where each line begins, as a fraction of the section
+    sizes.forEach(function (v, j) { s.starts.push(s.starts[j] + v / total); });
+    s.starts[sizes.length] = 1;
+    var len = Math.max(total, parseFloat(s.el.getAttribute("data-min")) || 0, SHORTEST);
+    s.el.style.setProperty("--len", Math.round(len + (s.last ? 100 : 0)));   // the last section also holds while the close slides over it
+  });
+
   // A rest point for each line, placed where the line is fully lit and holding.
   var REST = 0.68;
   segs.forEach(function (s) {
-    var n = s.lines.length;
     s.rests = s.lines.map(function (line, j) {
       var mark = document.createElement("div");
       mark.className = "rest";
-      var part = s.first && j === 0 ? 0 : (j + REST) / n;
+      var part = s.first && j === 0 ? 0 : s.starts[j] + REST * (s.starts[j + 1] - s.starts[j]);
       mark.style.top = s.last ? "calc((100% - 100svh) * " + part + ")" : (part * 100) + "%";
       s.el.appendChild(mark);
       return mark;
@@ -721,39 +1019,156 @@ ol { padding: 0; list-style: none; }
     return out;
   }
 
+  /* ---------- the chapter ticks ---------- */
+  // Each tick links to the section a chapter starts at. The chapter on screen has the long tick, and its name
+  // shows for a moment when you reach it. A click jumps to the chapter's first line. A press and drag along the
+  // ticks jumps to each chapter the pointer passes, and names it.
+
+  var ticks = document.querySelector(".ticks");
+  var track = ticks.querySelector(".ticks-track");
+  var chapters = Array.prototype.slice.call(ticks.querySelectorAll(".tick")).map(function (a) {
+    var el = document.getElementById(a.getAttribute("href").slice(1));
+    var at = 0;
+    segs.forEach(function (s, i) { if (s.el === el) at = i; });
+    return { a: a, at: at };
+  });
+  var chapterOn = null, nameTimer = 0, scrubbing = false, scrubbed = false;
+  function nameOnly(c) {             // show one chapter's name, or none
+    chapters.forEach(function (d) { d.a.classList.toggle("is-named", d === c); });
+  }
+  function showChapter(index) {
+    var on = chapters[0];
+    chapters.forEach(function (c) { if (c.at <= index) on = c; });
+    if (on === chapterOn) return;
+    var first = chapterOn === null;
+    chapterOn = on;
+    chapters.forEach(function (c) {
+      if (c === on) c.a.setAttribute("aria-current", "true"); else c.a.removeAttribute("aria-current");
+    });
+    if (first || scrubbing) return;
+    nameOnly(on);                    // name the chapter you just reached, then let it go
+    clearTimeout(nameTimer);
+    nameTimer = setTimeout(function () { if (!scrubbing) nameOnly(null); }, 1400);
+  }
+  function jump(c) {
+    glideStop();
+    var s = segs[c.at];
+    window.scrollTo(0, s.first ? 0 : s.rests[0].getBoundingClientRect().top + window.scrollY);
+  }
+  function tickAt(y) {               // the chapter whose tick is nearest a point on the screen
+    var b = track.getBoundingClientRect();
+    var i = Math.floor((y - b.top) / (b.height / chapters.length));
+    return chapters[Math.max(0, Math.min(chapters.length - 1, i))];
+  }
+  var under = null;
+  function scrubTo(y) {
+    var c = tickAt(y);
+    if (c === under) return;
+    under = c;
+    nameOnly(c);
+    jump(c);
+    if (navigator.vibrate) navigator.vibrate(4);
+  }
+  track.addEventListener("pointerdown", function (e) {
+    if (e.button) return;
+    e.preventDefault();              // no text selection, and the page does not scroll under a touch
+    track.setPointerCapture(e.pointerId);
+    scrubbing = true; scrubbed = false; under = chapterOn;
+    ticks.classList.add("is-scrubbing");
+    clearTimeout(nameTimer);
+    scrubTo(e.clientY);
+  });
+  track.addEventListener("pointermove", function (e) {
+    if (!scrubbing) return;
+    if (tickAt(e.clientY) !== under) scrubbed = true;
+    scrubTo(e.clientY);
+  });
+  function scrubEnd() {
+    if (!scrubbing) return;
+    scrubbing = false;
+    ticks.classList.remove("is-scrubbing");
+    clearTimeout(nameTimer);
+    nameTimer = setTimeout(function () { nameOnly(null); }, 900);
+  }
+  track.addEventListener("pointerup", scrubEnd);
+  track.addEventListener("pointercancel", scrubEnd);
+  chapters.forEach(function (c) {
+    c.a.addEventListener("click", function (e) {   // a click, a tap, or Enter on a focused tick
+      e.preventDefault();
+      if (scrubbed) { scrubbed = false; return; }   // the drag has already moved the page
+      jump(c);
+    });
+  });
+
+  /* ---------- the 3D Woodie ---------- */
+  // The model, three.js and the viewer are fetched once, when the reader nears the Woodies chapter.
+  // If any of it cannot load or run, the canvas shows a still render instead.
+
+  var model = plates.threed, viewer = null, viewerAsked = false, modelAt = 0, grab = null;
+  function askViewer() {
+    if (viewerAsked) return;
+    viewerAsked = true;
+    var made = null;
+    try {
+      // written this way so a browser too old to know import() can still read the rest of this script
+      new Function("u", "return import(u)")("./assets/js/woodie-viewer.js").then(function (m) {
+        made = m.mount(model, { model: "assets/models/woodie-1188.glb", idle: "assets/models/woodie-idle.glb" });
+        return made.ready;
+      }).then(function () { viewer = made; kick(); }).catch(function () { model.classList.add("is-failed"); });
+    } catch (e) { model.classList.add("is-failed"); }
+  }
+  model.addEventListener("pointerdown", function (e) {
+    if (!viewer || e.button) return;
+    grab = e.clientX;
+    model.setPointerCapture(e.pointerId);
+  });
+  model.addEventListener("pointermove", function (e) {
+    if (grab === null || !viewer) return;
+    viewer.drag((e.clientX - grab) * Math.PI / 360);
+    grab = e.clientX;
+    viewer.once();
+  });
+  ["pointerup", "pointercancel"].forEach(function (type) { model.addEventListener(type, function () { grab = null; }); });
+
   /* ---------- the frame ---------- */
   // One outlined frame stays on screen and takes the shape of a screen for each statement.
 
   var dpr = 1;
   var STATES = {
     open:     { ratio: 0, label: "Scroll" },
-    ask:      { ratio: 16 / 10, tall: 10 / 16, draw: "paths" },
+    ask:      { ratio: 0, draw: "questions" },      // question marks, all over the page
     make:     { ratio: 4 / 5,   label: "Tap or click to add a floor", draw: "game" },
     art:      { ratio: 0, hidden: true },      // the art itself is on screen
     quiet:    { ratio: 0 },
+    liftux:   { ratio: 16 / 10, tall: 10 / 16, draw: "merge" },
     tenup:    { ratio: 16 / 10, draw: "web" },
     ultra:    { ratio: 1,       draw: "chain" },
     film:     { ratio: 0, hidden: true },      // the film itself is on screen
-    roblox:   { ratio: 16 / 9,  tall: 3 / 4, draw: "avatar" },
+    roblox:   { ratio: 4 / 3,   tall: 3 / 4, draw: "avatar" },
     homebase: { ratio: 3 / 4,   draw: "assistant" },
+    projects: { ratio: 0 },                     // a grid of cards, which are elements of their own
     principles: { ratio: 0, draw: "finale" },   // one drawing across the four principles, beside the words
-    end:      { ratio: 0, draw: "after" },      // what the finale leaves behind, and a new question
+    end:      { ratio: 0 },                     // the close: one pulsing dot, which is an element of its own (#pulse)
     // lines that name a piece of work show it: the frame takes the picture's shape
     sync:      { ratio: 1139 / 733,  label: "The Walking Dead Story Sync", plate: "sync" },
     character: { ratio: 0, hidden: true, brood: true },   // six Woodies, in place of the frame
+    storysync: { ratio: 640 / 360,   label: "The Walking Dead Story Sync, AMC", plate: "storysync" },
+    madmen:    { ratio: 1200 / 810,  label: "Mad Men: The Fan Cut, AMC",   plate: "madmen" },
     dmv:       { ratio: 1200 / 810,  label: "California DMV",              plate: "dmv" },
     ultradao:  { ratio: 1,           plate: "ultradao", stages: ["ultradao-1", "ultradao-2", "ultradao-3", "ultradao-4", "ultradao-5", "ultradao-6"] },   // the art carries its own name
-    woodies:   { ratio: 1088 / 760,  label: "Arden, from Woodies: Origin", plate: "woodies" },
-    poster:    { ratio: 720 / 1081,  label: "Official Selection, Aesthetica Short Film Festival 2023", plate: "poster" },
+    sheet:     { ratio: 0, hidden: true },                // a sheet of real Woodies fills the page, in place of the frame
+    poster:    { ratio: 720 / 1081,  label: "Woodies: Origin",             plate: "poster" },
+    reel:      { ratio: 0, hidden: true },                // the film's loops are on screen
+    threed:    { ratio: 4 / 5,       label: "Woodie #1188. Drag to turn it.", plate: "threed" },   // a real 3D model, on a canvas
     assistant: { ratio: 560 / 604,   label: "Homebase Assistant, covering a shift", plate: "assistant" },
     lift:      { ratio: 848 / 558,   label: "Homebase Assistant",          plate: "lift" },
     // drawings that state the fact in their line
     // `tall` is the shape on a phone, where the drawing has more height than width to fill
-    team:    { ratio: 1,      draw: "team" },
-    lead:    { ratio: 1,      draw: "lead" },
+    team:    { ratio: 0,      draw: "team" },      // loops that grow past any frame
+    lead:    { ratio: 4 / 3,  tall: 1, draw: "lead" },
     answers: { ratio: 2,      tall: 2 / 3,   draw: "answers" },
     journey: { ratio: 16 / 10, tall: 10 / 16, draw: "journey" },
-    ring:    { ratio: 1,      draw: "ring" },
+    ring:    { ratio: 4 / 3,  tall: 1, draw: "ring" },
     week:    { ratio: 4 / 3,  tall: 3 / 4,   draw: "week" },
     shop:    { ratio: 4 / 3,  tall: 4 / 5,   draw: "shop" }
   };
@@ -766,9 +1181,11 @@ ol { padding: 0; list-style: none; }
   var progress = 0;          // 0..1 through the lines that share the drawing on screen
   var region = { x: 0, y: 0, w: 0, h: 0 };
   var free = { x: 0, y: 0, w: 0, h: 0 };   // the part of the screen the principles leave free, for the finale
+  var avoid = [];            // what a drawing that runs over the whole page must keep off: the words, the name, the contact link, the ticks
   var rect = null;           // the frame as drawn now
   var shown = 1;             // how visible the frame is
   var raf = 0, last = 0;
+  var over = null;           // something a drawing asks to have drawn after the frame, so it stands in front of the border
   var built = 0;             // floors added to the tower by clicking
 
   function resize() {
@@ -795,13 +1212,15 @@ ol { padding: 0; list-style: none; }
         q = clamp(-b.top / (b.height - (s.last ? vh : 0)));
       }
     });
-    var borrowed = null, run = 0;
+    var borrowed = null, run = 0, sharing = [];
     // One line of the section is on screen at a time. Each line fades in, lights up word by word, and gives way to the next.
     segs.forEach(function (s) {
       var on = s === current;
       s.panel.style.opacity = on ? 1 : 0;
       var n = s.lines.length;
-      var slot = Math.min(n - 1, Math.floor(q * n)), t = q * n - slot;
+      var slot = 0;
+      while (slot < n - 1 && q >= s.starts[slot + 1]) slot++;
+      var t = clamp((q - s.starts[slot]) / (s.starts[slot + 1] - s.starts[slot]));
       s.lines.forEach(function (line, j) {
         line.el.classList.toggle("is-on", on && j === slot);
         if (!on || j !== slot) { line.el.style.opacity = 0; return; }
@@ -810,12 +1229,25 @@ ol { padding: 0; list-style: none; }
         var a0 = j, b0 = j;
         while (a0 > 0 && s.lines[a0 - 1].state === line.state) a0--;
         while (b0 < n - 1 && s.lines[b0 + 1].state === line.state) b0++;
-        run = (j - a0 + t) / (b0 - a0 + 1);
+        run = (q - s.starts[a0]) / (s.starts[b0 + 1] - s.starts[a0]);
+        sharing = s.lines.slice(a0, b0 + 1);
         var opening = s.first && j === 0, closing = s.last && j === n - 1;
         var fadeIn = opening ? 1 : ease(t / 0.1), fadeOut = closing ? 1 : 1 - ease((t - 0.9) / 0.1);
         line.el.style.opacity = still ? 1 : Math.min(fadeIn, fadeOut);
         light(line.words, still || opening ? 1 : (t - 0.12) / 0.33);   // fully lit by 0.45, then it holds until 0.9
       });
+    });
+
+    // projects: the cards come up one after another once the line is lit, hold, and go with the line
+    segs.forEach(function (s) {
+      if (!s.grid) return;
+      var on = s === current, leave = 1 - ease((q - 0.9) / 0.1);
+      s.cards.forEach(function (card, i) {
+        var a = !on ? 0 : still ? 1 : ease((q - 0.14 - i * 0.045) / 0.1) * leave;
+        card.style.opacity = a;
+        card.style.transform = "translate3d(0," + ((1 - a) * 18).toFixed(1) + "px,0)";
+      });
+      s.grid.classList.toggle("is-on", on && (still || (q > 0.2 && q < 0.93)));
     });
 
     // art: the strip of pieces crosses the screen once over the section
@@ -829,9 +1261,15 @@ ol { padding: 0; list-style: none; }
     segs.forEach(function (s) {
       if (!s.clips.length) return;
       var on = s === current;
-      if (on) night = Math.min(ease(q / 0.12), 1 - ease((q - 0.9) / 0.1));
+      if (on) night = Math.min(ease(q / 0.08), 1 - ease((q - 0.95) / 0.05));
+      // the Woodies pictures load once the reader is within two sections of them
+      if (!woodiesNear && segs.indexOf(current) >= segs.indexOf(s) - 2) { woodiesNear = true; document.documentElement.classList.add("woodies-near"); askViewer(); }
+      // the clips belong to the line marked "reel": they come up through it and go as it leaves
+      var reel = -1, t = -1;
+      s.lines.forEach(function (line, j) { if (line.state === "reel") reel = j; });
+      if (on && reel >= 0 && q >= s.starts[reel] && q < s.starts[reel + 1]) t = (q - s.starts[reel]) / (s.starts[reel + 1] - s.starts[reel]);
       s.clips.forEach(function (clip, i) {
-        var up = on ? ease((q - 0.76 - i * 0.025) / 0.05) * (1 - ease((q - 0.94) / 0.05)) : 0;
+        var up = t < 0 ? 0 : ease((t - 0.08 - i * 0.05) / 0.1) * (1 - ease((t - 0.9) / 0.1));
         clip.style.opacity = up;
         if (up > 0.02 && clip.paused && !still) { var playing = clip.play(); if (playing && playing.catch) playing.catch(function () {}); }
         if (up <= 0.02 && !clip.paused) clip.pause();
@@ -841,13 +1279,16 @@ ol { padding: 0; list-style: none; }
 
     var endBox = end.getBoundingClientRect();
     var sayTop = endSay.getBoundingClientRect().top;
-    light(endWords, still ? 1 : ((vh - endBox.top) / endBox.height - 0.35) / 0.5);
+    light(endWords, still ? 1 : (vh * 0.94 - sayTop) / (vh * 0.22));          // the words light as they come up
+    end.style.setProperty("--in", still ? 1 : clamp((vh - sayTop) / (vh * 0.16)).toFixed(3));
     var fade = 1 - clamp((vh * 0.5 - endBox.top) / (vh * 0.25));
     contact.style.opacity = fade;
     contact.style.pointerEvents = fade < 0.5 ? "none" : "";
 
+    showChapter(segs.indexOf(current));
+
     var name = borrowed || current.state;
-    if (endBox.top < vh * 0.55) name = "end";
+    if (endBox.top < vh * 0.35) name = "end";     // once the close has covered the last line
     active = name;
     if (typeof pal !== "undefined" && pal) pal.set(name);
     progress = still ? 1 : clamp(run);
@@ -863,6 +1304,16 @@ ol { padding: 0; list-style: none; }
         ? { x: r0 + g, y: top, w: Math.max(0, vw - r0 - g * 2), h: Math.max(0, vh - top - g * 1.5) }
         : { x: g, y: top, w: Math.max(0, vw - g * 2), h: Math.max(0, t0 - top - g * 0.5) };
     }
+    // what a drawing that runs over the whole page keeps off: the words of the lines that share it (first in the list),
+    // then the name, the contact link and the ticks
+    var wt = Infinity, wb = -Infinity, wl = Infinity, wr = -Infinity;
+    sharing.forEach(function (line) {
+      line.words.forEach(function (w) { var b = w.getBoundingClientRect(); wt = Math.min(wt, b.top); wb = Math.max(wb, b.bottom); wl = Math.min(wl, b.left); wr = Math.max(wr, b.right); });
+    });
+    avoid = [wr > wl ? { x: wl, y: wt, w: wr - wl, h: wb - wt } : { x: 0, y: 0, w: 0, h: 0 }].concat([nameMark, contact, ticks].map(function (el) {
+      var b = el.getBoundingClientRect();
+      return { x: b.left, y: b.top, w: b.width, h: b.height };
+    }));
 
     if (current.stage) {
       var s = current.stage.getBoundingClientRect();
@@ -928,6 +1379,84 @@ ol { padding: 0; list-style: none; }
 
   function seg(x1, y1, x2, y2) {
     ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+  }
+
+  // Drawings that run over the whole page share two helpers.
+  function hash(a, b) { var v = Math.sin(a * 127.1 + b * 311.7) * 43758.5453; return v - Math.floor(v); }   // a fixed random number for a grid cell
+  // Limit drawing to the page less everything in `avoid`, so a long line passes behind the words. End with ctx.restore().
+  function keepOff(pad) {
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(0, 0, vw, vh);
+    avoid.forEach(function (b) { if (b.w) ctx.rect(b.x - pad, b.y - pad, b.w + pad * 2, b.h + pad * 2); });
+    ctx.clip("evenodd");
+  }
+
+  // A solid figure made of six boxes, turned, lit from the upper left and drawn in perspective.
+  // `pose` sets its size, how far it has turned, how high the arm waves, the swing of its walk, and its body colour.
+  function hexRgb(h) {
+    h = h.replace("#", "");
+    if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+    return [parseInt(h.substr(0, 2), 16), parseInt(h.substr(2, 2), 16), parseInt(h.substr(4, 2), 16)];
+  }
+  var TONES = { ink: hexRgb(INK), signal: hexRgb(SIGNAL), live: hexRgb(LIVE), soft: hexRgb(SOFT) };
+  var SWATCH = ["signal", "live", "soft", "ink"];
+  var FACES = [[0, 1, 2, 3], [5, 4, 7, 6], [4, 0, 3, 7], [1, 5, 6, 2], [4, 5, 1, 0], [3, 2, 6, 7]];
+  function figure(ox, oy, u, pose, alpha) {
+    var D = 10, mid = 3.2;             // a near camera, so the turn and the swing of the limbs show their depth
+    // each box: left, top, width, height, depth, colour, and a joint it turns about (rx: forward and back, rz: out to the side)
+    var boxes = [
+      { b: [-0.6, 0, 1.2, 1.2, 1.2], tone: "ink", head: true },
+      { b: [-1, 1.4, 2, 2.4, 1], tone: pose.torso },
+      { b: [-2.1, 1.4, 0.9, 2.4, 0.9], tone: "ink", rx: pose.swing, rz: 0, px: -1.2, py: 1.4 },
+      { b: [1.2, 1.4, 0.9, 2.4, 0.9], tone: "ink", rx: -pose.swing, rz: -pose.wave, px: 1.2, py: 1.4 },
+      { b: [-1, 4, 0.9, 2.4, 0.9], tone: "soft", rx: -pose.swing, rz: 0, px: -0.55, py: 4 },
+      { b: [0.1, 4, 0.9, 2.4, 0.9], tone: "soft", rx: pose.swing, rz: 0, px: 0.55, py: 4 }
+    ];
+    var cy = Math.cos(pose.yaw), sy = Math.sin(pose.yaw), cp = Math.cos(0.1), sp = Math.sin(0.1);
+    function place(box, x, y, z) {               // a point of a box, to where it stands in space
+      var c, s, dx, dy, dz;
+      if (box.rz) { c = Math.cos(box.rz); s = Math.sin(box.rz); dx = x - box.px; dy = y - box.py; x = box.px + dx * c - dy * s; y = box.py + dx * s + dy * c; }
+      if (box.rx) { c = Math.cos(box.rx); s = Math.sin(box.rx); dy = y - box.py; dz = z; y = box.py + dy * c - dz * s; z = dy * s + dz * c; }
+      y = y - mid + pose.hop;
+      dx = x * cy + z * sy; dz = -x * sy + z * cy; x = dx; z = dz;       // turn
+      dy = y * cp - z * sp; dz = y * sp + z * cp;                        // lean back a touch, so the top shows
+      return [x * pose.scale, dy * pose.scale, dz * pose.scale];
+    }
+    function flat(q) { var f = D / (D + q[2]); return [ox + q[0] * u * f, oy + q[1] * u * f]; }
+    var faces = [], eyes = null;
+    boxes.forEach(function (box) {
+      var b = box.b, x0 = b[0], x1 = b[0] + b[2], y0 = b[1], y1 = b[1] + b[3], z0 = -b[4] / 2, z1 = b[4] / 2;
+      var pts = [[x0, y0, z0], [x1, y0, z0], [x1, y1, z0], [x0, y1, z0], [x0, y0, z1], [x1, y0, z1], [x1, y1, z1], [x0, y1, z1]].map(function (q) { return place(box, q[0], q[1], q[2]); });
+      var bc = [0, 0, 0];
+      pts.forEach(function (q) { bc[0] += q[0] / 8; bc[1] += q[1] / 8; bc[2] += q[2] / 8; });
+      FACES.forEach(function (f, n) {
+        var fc = [0, 0, 0];
+        f.forEach(function (i) { fc[0] += pts[i][0] / 4; fc[1] += pts[i][1] / 4; fc[2] += pts[i][2] / 4; });
+        var nx = fc[0] - bc[0], ny = fc[1] - bc[1], nz = fc[2] - bc[2], len = Math.sqrt(nx * nx + ny * ny + nz * nz) || 1;
+        nx /= len; ny /= len; nz /= len;
+        if (nx * -fc[0] + ny * -fc[1] + nz * (-D - fc[2]) <= 0) return;    // faces away
+        var lit = 0.5 + 0.5 * Math.max(0, nx * -0.45 + ny * -0.7 + nz * -0.56);
+        faces.push({ z: fc[2], pts: f.map(function (i) { return flat(pts[i]); }), tone: TONES[box.tone], lit: lit });
+        if (box.head && n === 0) {               // the face, on the front of the head
+          eyes = [[-0.32, 0.42, -0.14, 0.7], [0.14, 0.42, 0.32, 0.7], [-0.3, 0.86, 0.3, 0.94]].map(function (e) {
+            return [[e[0], e[1]], [e[2], e[1]], [e[2], e[3]], [e[0], e[3]]].map(function (q) { return flat(place(box, q[0], q[1], z0 - 0.01)); });
+          });
+        }
+      });
+    });
+    faces.sort(function (a, b) { return b.z - a.z; });
+    ctx.lineJoin = "round"; ctx.lineWidth = 1;
+    ctx.globalAlpha = alpha;
+    function fill(pts) { ctx.beginPath(); pts.forEach(function (q, i) { if (i) ctx.lineTo(q[0], q[1]); else ctx.moveTo(q[0], q[1]); }); ctx.closePath(); ctx.fill(); }
+    faces.forEach(function (f) {
+      ctx.fillStyle = "rgb(" + Math.round(f.tone[0] * f.lit) + "," + Math.round(f.tone[1] * f.lit) + "," + Math.round(f.tone[2] * f.lit) + ")";
+      fill(f.pts);
+      ctx.strokeStyle = SLATE; ctx.stroke();
+    });
+    if (eyes) { ctx.fillStyle = SLATE; eyes.forEach(fill); }
+    ctx.lineWidth = 1.5; ctx.lineJoin = "miter";
+    ctx.strokeStyle = INK; ctx.fillStyle = INK;
   }
 
   var DRAW = {
@@ -1021,9 +1550,12 @@ ol { padding: 0; list-style: none; }
 
     // 2025. A figure made of parts, and a shelf of parts to choose from. One part is being changed.
     // In a tall frame the shelf is a row under the figure instead of a column beside it.
+    // An outlined block figure, the shape a character is fitted to. Through the first half of the section its
+    // parts are picked out one after another. Halfway through, a solid figure pops forward out of it, then turns,
+    // waves and walks. The shelf holds colours for its body, and the one picked is the one it wears.
     avatar: function (r, k, p) {
       var tall = r.h > r.w;
-      var u = tall ? r.w * 0.13 : r.h * 0.11, cx = r.x + r.w * (tall ? 0.5 : 0.42), top = r.y + r.h * (tall ? 0.09 : 0.14);
+      var u = tall ? r.w * 0.13 : r.h * 0.11, cx = r.x + r.w * (tall ? 0.5 : 0.38), top = r.y + r.h * (tall ? 0.09 : 0.14);
       var parts = [
         [cx - u * 0.6, top, u * 1.2, u * 1.2],
         [cx - u, top + u * 1.4, u * 2, u * 2.4],
@@ -1032,31 +1564,55 @@ ol { padding: 0; list-style: none; }
         [cx - u, top + u * 4, u * 0.9, u * 2.4],
         [cx + u * 0.1, top + u * 4, u * 0.9, u * 2.4]
       ];
+      var pop = clamp((p - 0.46) / 0.12), m = pop - 1, out = pop <= 0 ? 0 : 1 + 2.4 * m * m * m + 1.4 * m * m;   // comes out a little past its size, then settles
       var gy = top + u * 6.4;
+      ctx.strokeStyle = INK;
       ctx.globalAlpha = FAINT * k;
-      var gx = r.x + r.w * (tall ? 0.1 : 0.12), gl = r.w * (tall ? 0.8 : 0.6);
+      var gx = r.x + r.w * (tall ? 0.1 : 0.08), gl = r.w * (tall ? 0.8 : 0.6);
       seg(gx, gy, gx + gl * k, gy);
-      var sel = Math.min(parts.length - 1, Math.floor(p * parts.length));
-      parts.forEach(function (b, i) {
+      var sel = pop > 0 ? -1 : Math.min(parts.length - 1, Math.floor(p / 0.46 * parts.length));   // the part in hand, before the figure is out
+      parts.forEach(function (b, i) {             // the outline stays behind, fainter, once the figure is out
         var a = Math.max(0, Math.min(1, k * parts.length - i));
         if (a <= 0) return;
         ctx.strokeStyle = i === sel ? LIVE : INK;
-        ctx.globalAlpha = (i === sel ? 1 : 0.8) * a;
+        ctx.globalAlpha = (i === sel ? 1 : 0.8 - (0.8 - FAINT) * pop) * a;
         ctx.strokeRect(b[0], b[1], b[2], b[3]);
       });
-      // the shelf: the choice for the part in hand is marked
-      var sx = r.x + r.w * 0.8, sw = u * 1.1;
+      // the shelf: four colours, and a mark round the one picked
+      var pick = pop > 0 ? Math.floor(clamp((p - 0.58) / 0.42) * 6) % 4 : sel % 4;
+      var sx = r.x + r.w * 0.84, sw = u * 1.1;
       for (var j = 0; j < 4; j++) {
         var sy = top + j * u * 1.6;
         if (tall) { sx = cx + (j - 1.5) * u * 1.6 - sw / 2; sy = gy + u * 0.9; }
-        var pick = j === sel % 4;
-        ctx.strokeStyle = pick ? LIVE : INK;
-        ctx.globalAlpha = (pick ? 1 : FAINT) * k;
+        var tone = TONES[SWATCH[j]];
+        ctx.globalAlpha = pop * k;
+        ctx.fillStyle = "rgb(" + tone[0] + "," + tone[1] + "," + tone[2] + ")";
+        ctx.fillRect(sx, sy, sw, sw);
+        ctx.strokeStyle = INK;
+        ctx.globalAlpha = (FAINT + (0.9 - FAINT) * (j === pick ? pop : 0)) * k;
         ctx.strokeRect(sx, sy, sw, sw);
+        if (j === pick) { ctx.strokeStyle = LIVE; ctx.globalAlpha = k; ctx.strokeRect(sx - 4 * pop, sy - 4 * pop, sw + 8 * pop, sw + 8 * pop); }
       }
+      ctx.strokeStyle = INK; ctx.fillStyle = INK;
+      if (pop <= 0) return;
+      var turn = ease((p - 0.56) / 0.06), raise = ease((p - 0.62) / 0.06) * (1 - ease((p - 0.78) / 0.06)), walk = ease((p - 0.82) / 0.06);
+      // It is drawn after the frame, so it stands in front of the border. It grows from its feet, which stay on the
+      // ground line, so its head and its raised arm come out past the top of the frame.
+      var scale = 0.92 + 0.42 * out, seen = Math.min(1, pop * 3) * k;
+      var pose = {
+        scale: scale,
+        yaw: 0.75 * Math.sin((p - 0.56) * 12) * turn,
+        wave: raise * (2 + 0.3 * Math.sin(p * 46)),
+        swing: 0.6 * Math.sin(p * 30) * walk,
+        hop: -Math.abs(Math.sin(p * 30)) * 0.25 * walk,
+        torso: SWATCH[pick]
+      };
+      over = function () {
+        ctx.globalAlpha = 0.5 * seen; ctx.fillStyle = "#000";                 // its shadow on the ground
+        ctx.beginPath(); ctx.ellipse(cx + u * 0.25, gy, u * 1.9 * scale, u * 0.34 * scale, 0, 0, Math.PI * 2); ctx.fill();
+        figure(cx, gy - u * 3.2 * scale, u, pose, seen);
+      };
     },
-
-    // 2026. A conversation. The last message is the owner's decision.
     assistant: function (r, k, p) {
       var rows = [[0, 0.62, 2], [1, 0.34, 1], [0, 0.7, 3], [0, 0.46, 1], [1, 0.3, 0]];
       var y = r.y + r.h * 0.07, padX = r.w * 0.09;
@@ -1168,9 +1724,8 @@ ol { padding: 0; list-style: none; }
   };
 
   // One loose loop of the growth drawing: a hand-drawn contour, no two alike. `upto` draws part of the way round.
-  function contour(r, i, drift, upto) {
-    var cx = r.x + r.w / 2, cy = r.y + r.h / 2, base = r.w * (0.05 + 0.052 * i + 0.012 * Math.sin(i * 2.4));
-    var f1 = i * 1.7 + drift, f2 = i * 2.9 - drift * 0.7, f3 = i * 4.3 + drift * 1.3, start = i * 2.1, steps = 72;
+  function contourAt(cx, cy, base, i, drift, upto) {
+    var f1 = i * 1.7 + drift, f2 = i * 2.9 - drift * 0.7, f3 = i * 4.3 + drift * 1.3, start = i * 2.1, steps = Math.max(72, Math.round(base / 4));
     ctx.beginPath();
     for (var n = 0; n <= steps * upto; n++) {
       var a = start + n / steps * Math.PI * 2;
@@ -1179,31 +1734,57 @@ ol { padding: 0; list-style: none; }
     }
     ctx.stroke();
   }
-  var LOOPS = 7;
+  var SPREAD = 18;
 
-  // Growth: a small core, and loose loops drawn out around it one after another.
+  // Growth: a small core in the middle of the drawing area, and loose loops drawn out around it one after another.
+  // They do not stop at a frame: they widen until they run off the page, and pass behind the words.
   DRAW.team = function (r, k, p) {
-    var grown = (1.2 + (LOOPS - 1.2) * ease((p - 0.12) / 0.55)) * k, drift = p * 0.8;
+    var cx = region.x + region.w / 2, cy = region.y + region.h / 2, u = Math.min(region.w, region.h);
+    var grown = (1.2 + (SPREAD - 1.2) * ease((p - 0.1) / 0.5)) * k, drift = p * 0.8;
+    keepOff(inset());
     ctx.strokeStyle = INK;
-    for (var i = 0; i < LOOPS; i++) {
-      var a = Math.max(0, Math.min(1, grown - i));
+    for (var i = 0; i < SPREAD; i++) {
+      var a = Math.max(0, Math.min(1, grown - i)), n = i + 1;
       if (a <= 0) break;
-      ctx.globalAlpha = 0.9 * k;
-      contour(r, i + 1, drift, a);
+      ctx.globalAlpha = Math.max(0.3, 0.9 - Math.max(0, i - 4) * 0.055) * k;      // the far loops are fainter
+      contourAt(cx, cy, u * (0.05 + 0.052 * n + 0.0042 * n * n + 0.012 * Math.sin(n * 2.4)), n, drift, a);
     }
+    ctx.restore();
     ctx.globalAlpha = k; ctx.fillStyle = LIVE;
-    ctx.beginPath(); ctx.arc(r.x + r.w / 2, r.y + r.h / 2, r.w * 0.028, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(cx, cy, Math.max(5, u * 0.028), 0, Math.PI * 2); ctx.fill();
   };
 
-  // The same loops. The live line passes outward from one to the next: each takes the lead in turn.
+  // Four lines climb from the lower left, each at its own pace. They cross again and again, and whichever is
+  // highest at the moment carries the live mark: each takes the lead in turn, and all of them end higher.
+  var CLIMB = [[0.62, 0.17, 6.0, 0.4], [0.58, 0.19, 5.2, 2.6], [0.60, 0.16, 7.1, 4.4], [0.55, 0.20, 4.6, 1.3]];   // slope, sway, how often it sways, where the sway starts
+  function climbAt(c, x) { return 0.1 + c[0] * x + c[1] * Math.sin(c[2] * x + c[3]) * (0.35 + 0.65 * x); }
   DRAW.lead = function (r, k, p) {
-    var at = Math.min(LOOPS - 1, Math.floor(ease(p / 0.85) * (LOOPS - 0.01))), drift = 0.8 + p * 1.2;
-    for (var i = 0; i < LOOPS; i++) {
-      ctx.strokeStyle = i === at ? LIVE : INK;
-      ctx.globalAlpha = (i === at ? 1 : 0.6) * k;
-      contour(r, i + 1, drift, 1);
+    var reach = Math.max(0.02, ease(p / 0.8)), u = Math.min(r.w, r.h), first = 0, top = -1;
+    function px(x) { return r.x + r.w * (0.1 + 0.8 * x); }
+    function py(y) { return r.y + r.h * (0.9 - 0.8 * y); }
+    function trace(c, from, to) {
+      ctx.beginPath();
+      for (var x = from; x < to; x += 0.01) { if (x === from) ctx.moveTo(px(x), py(climbAt(c, x))); else ctx.lineTo(px(x), py(climbAt(c, x))); }
+      ctx.lineTo(px(to), py(climbAt(c, to)));
+      ctx.stroke();
     }
-    ctx.strokeStyle = INK;
+    ctx.lineCap = "round"; ctx.lineJoin = "round";
+    CLIMB.forEach(function (c, i) {
+      var y = climbAt(c, reach);
+      if (y > top) { top = y; first = i; }
+      ctx.strokeStyle = INK; ctx.globalAlpha = 0.75 * k;
+      trace(c, 0, reach);
+    });
+    // the one in front: the last stretch of its line is live, and so is the mark at its head
+    ctx.strokeStyle = LIVE; ctx.globalAlpha = k; ctx.lineWidth = 2.5;
+    trace(CLIMB[first], Math.max(0, reach - 0.14), reach);
+    ctx.lineWidth = 1.5;
+    CLIMB.forEach(function (c, i) {
+      ctx.fillStyle = i === first ? LIVE : INK;
+      ctx.globalAlpha = (i === first ? 1 : 0.9) * k;
+      ctx.beginPath(); ctx.arc(px(reach), py(climbAt(c, reach)), u * (i === first ? 0.03 : 0.016), 0, Math.PI * 2); ctx.fill();
+    });
+    ctx.strokeStyle = INK; ctx.fillStyle = INK;
   };
 
   // Three questions, three things made: a phone app, a wide film frame, a conversation.
@@ -1259,66 +1840,131 @@ ol { padding: 0; list-style: none; }
     ctx.beginPath(); ctx.arc(x, y, unit * 0.03, 0, Math.PI * 2); ctx.fill();
   };
 
-  // One point, the question. A line leaves it and splits into three paths that end open: nothing is made yet.
-  // In a wide frame the paths run to the right; in a tall frame they climb.
-  DRAW.paths = function (r, k, p) {
-    var tall = r.h > r.w, unit = Math.min(r.w, r.h);
-    function at(q) { return tall ? [r.x + r.w * q[1], r.y + r.h * (1 - q[0])] : [r.x + r.w * q[0], r.y + r.h * q[1]]; }
-    function curve(a, c, b, t) {               // a quadratic curve from a to b, drawn as far as t
-      if (t <= 0) return;
-      var c1 = [a[0] + (c[0] - a[0]) * t, a[1] + (c[1] - a[1]) * t], u = 1 - t;
-      var e = [u * u * a[0] + 2 * u * t * c[0] + t * t * b[0], u * u * a[1] + 2 * u * t * c[1] + t * t * b[1]];
-      ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.quadraticCurveTo(c1[0], c1[1], e[0], e[1]); ctx.stroke();
+  // Questions: question marks all over the page, each inside a loose, wobbly outline of its own. They come in one at a
+  // time in a scattered order as the line goes by, and keep off the words. The one nearest the words comes first and
+  // is the live one. All are in place by the line's rest point.
+  function blob(cx, cy, base, q, drift, upto) {   // a closed, wobbly outline, drawn as far as `upto`
+    var steps = 80;
+    ctx.beginPath();
+    for (var n = 0; n <= steps * upto; n++) {
+      var a = q.f + n / steps * Math.PI * 2;
+      var rad = base * (1 + q.wob * Math.sin(q.lobes * a + drift) + 0.05 * Math.sin((q.lobes + 3) * a - drift * 1.3));
+      if (n === 0) ctx.moveTo(cx + Math.cos(a) * rad, cy + Math.sin(a) * rad); else ctx.lineTo(cx + Math.cos(a) * rad, cy + Math.sin(a) * rad);
     }
-    var root = at([0.1, 0.52]), fork = at([0.4, 0.5]);
-    var stem = ease(p / 0.15) * k;               // all of it is drawn by 0.45, where the line is fully lit and rests
-    // each path: its bend and its end
-    var ways = [[[0.52, 0.2], [0.86, 0.16]], [[0.66, 0.56], [0.9, 0.48]], [[0.56, 0.84], [0.84, 0.82]]];
-    ctx.strokeStyle = INK; ctx.lineCap = "round";
-    ctx.globalAlpha = 0.9 * k;
-    curve(root, at([0.26, 0.47]), fork, stem);
-    ways.forEach(function (w, i) {
-      var grow = ease((p - 0.1 - i * 0.04) / 0.22) * k;
-      if (grow <= 0) return;
-      var c = at(w[0]), end = at(w[1]);
-      ctx.globalAlpha = 0.9 * k;
-      curve(fork, c, end, grow);
-      // past the end the path goes on, faint and broken: where it leads is still open
-      if (grow >= 1) {
-        var on = ease((p - 0.28 - i * 0.03) / 0.1);
-        var dx = end[0] - c[0], dy = end[1] - c[1], len = Math.sqrt(dx * dx + dy * dy) || 1, reach = unit * 0.14 * on;
-        ctx.globalAlpha = FAINT * k;
-        ctx.setLineDash([3, 5]);
-        seg(end[0], end[1], end[0] + dx / len * reach, end[1] + dy / len * reach);
-        ctx.setLineDash([]);
+    ctx.stroke();
+  }
+  // Where the question marks sit: a few large ones are placed first, then smaller and smaller ones fill the room
+  // that is left, each at a fixed random spot that keeps clear of the others, the words, the name, the contact
+  // link and the ticks. No rows, no columns. The layout is worked out once for a screen size and kept.
+  var packed = { key: "", spots: [] };
+  function pack() {
+    var words = avoid[0], key = [vw, vh, Math.round(words.x), Math.round(words.y), Math.round(words.w), Math.round(words.h)].join("|");
+    if (packed.key === key) return packed.spots;
+    var rnd = rand(97), base = Math.sqrt(vw * vh) / 100, edge = inset(), spots = [];
+    [[9, 3], [6.6, 6], [4.8, 9], [3.5, 12]].forEach(function (size) {      // radius in hundredths of the screen, and how many
+      var rad = size[0] * base, tries = 0, made = 0;
+      while (made < size[1] && tries++ < 260) {
+        var x = edge + rad * 1.25 + rnd() * (vw - 2 * (edge + rad * 1.25)), y = edge + rad * 1.25 + rnd() * (vh - 2 * (edge + rad * 1.25)), ok = true, n;
+        for (n = 0; ok && n < avoid.length; n++) {
+          var b = avoid[n], pad = rad * 1.2 + base * (n === 0 ? 3 : 1.5);
+          if (b.w && x > b.x - pad && x < b.x + b.w + pad && y > b.y - pad && y < b.y + b.h + pad) ok = false;
+        }
+        for (n = 0; ok && n < spots.length; n++) {
+          var dx = x - spots[n].x, dy = y - spots[n].y, gap = (rad + spots[n].rad) * 1.22 + base * 1.6;
+          if (dx * dx + dy * dy < gap * gap) ok = false;
+        }
+        if (!ok) continue;
+        spots.push({ x: x, y: y, rad: rad, h1: rnd(), h2: rnd(), h3: rnd(), h4: rnd() });
+        made++;
       }
     });
-    ctx.globalAlpha = k; ctx.fillStyle = LIVE;
-    ctx.beginPath(); ctx.arc(root[0], root[1], unit * 0.035, 0, Math.PI * 2); ctx.fill();
+    packed = { key: key, spots: spots };
+    return spots;
+  }
+  DRAW.questions = function (r, k, p) {
+    var words = avoid[0], spots = pack(), unit = Math.sqrt(vw * vh) / 100;
+    var first = null, near = Infinity;
+    spots.forEach(function (q) {
+      var dx = q.x - (words.x + words.w), dy = q.y - (words.y + words.h / 2), d = dx * dx + dy * dy;
+      if (d < near) { near = d; first = q; }
+    });
+    ctx.lineCap = "round"; ctx.lineJoin = "round";
+    ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    spots.forEach(function (q, i) {
+      var live = q === first, when = live ? 0.03 : 0.07 + q.h4 * 0.42;
+      var ring = ease((p - when) / 0.1) * k, mark = clamp((p - when - 0.04) / 0.08);
+      if (ring <= 0) return;
+      var shape = { f: q.h1 * 6.28, lobes: 2 + Math.floor(q.h2 * 5), wob: 0.08 + q.h3 * 0.14 };
+      var base = q.rad, bob = Math.sin(p * 7 + i * 1.9) * unit * 0.5;       // a little drift as the scroll goes on
+      var cx = q.x, cy = q.y + bob, col = live ? LIVE : INK;
+      ctx.strokeStyle = col;
+      ctx.globalAlpha = (live ? 1 : 0.9) * k;
+      blob(cx, cy, base, shape, p * 2.2 + i, ring);
+      if (mark <= 0) return;
+      // the mark pops in a little past its size and settles
+      var m = mark - 1, pop = 1 + 2.2 * m * m * m + 1.2 * m * m;
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate((q.h2 - 0.5) * 0.7 + (1 - mark) * 0.4);
+      ctx.scale(pop, pop);
+      ctx.globalAlpha = Math.min(1, mark * 2) * k;
+      ctx.fillStyle = col;
+      ctx.font = Math.round(base * 1.25) + "px " + FONT;
+      ctx.fillText("?", 0, base * 0.06);
+      ctx.restore();
+    });
   };
 
-  // A loose scatter of points, tied to each other by curved lines. One idea wanders along the ties.
-  DRAW.ring = function (r, k, p) {
-    var rnd = rand(29), m = 11, cx = r.x + r.w / 2, cy = r.y + r.h / 2, pts = [], ties = [], i, j;
-    for (i = 0; i < m; i++) { var a = i * 2.4 + rnd() * 0.9, d = r.w * (0.12 + 0.3 * Math.sqrt((i + 0.5) / m)); pts.push([cx + Math.cos(a) * d, cy + Math.sin(a) * d]); }
-    function bend(u, v, sway) {                 // the control point of the curve between two points
-      return [(u[0] + v[0]) / 2 - (v[1] - u[1]) * sway, (u[1] + v[1]) / 2 + (v[0] - u[0]) * sway];
-    }
-    for (i = 0; i < m; i++) for (j = i + 1; j < m; j++) { var sway = (rnd() - 0.5) * 0.7; if ((i + j) % 3 !== 1 || j === i + 1) ties.push([i, j, sway]); }
-    ctx.strokeStyle = INK;
-    ctx.globalAlpha = FAINT * k;
-    for (i = 0; i < ties.length * k; i++) {
-      var u = pts[ties[i][0]], v = pts[ties[i][1]], c = bend(u, v, ties[i][2]);
-      ctx.beginPath(); ctx.moveTo(u[0], u[1]); ctx.quadraticCurveTo(c[0], c[1], v[0], v[1]); ctx.stroke();
-    }
-    ctx.globalAlpha = 0.9 * k; ctx.fillStyle = INK;
-    for (i = 0; i < m; i++) { ctx.beginPath(); ctx.arc(pts[i][0], pts[i][1], r.w * 0.009, 0, Math.PI * 2); ctx.fill(); }
-    // the idea: from each point on to the next, along a curve
-    var t = Math.min(m - 1.001, ease(p / 0.8) * (m - 1)), n = Math.floor(t), f = t - n, s0 = pts[n], s1 = pts[n + 1], sc = bend(s0, s1, n % 2 ? 0.3 : -0.3), g = 1 - f;
+  // Two loose outlines: a large one, and a small live one that comes in from the side and settles inside it.
+  // In a tall frame the small one comes up from below.
+  var MERGE = [{ f: 0.6, lobes: 3, wob: 0.09 }, { f: 2.1, lobes: 4, wob: 0.14 }];
+  DRAW.merge = function (r, k, p) {
+    var tall = r.h > r.w, unit = Math.min(r.w, r.h);
+    function at(u, v) { return tall ? [r.x + r.w * v, r.y + r.h * u] : [r.x + r.w * u, r.y + r.h * v]; }
+    var draw = ease(p / 0.14) * k, move = ease((p - 0.1) / 0.32), settle = ease((p - 0.38) / 0.1);
+    var big = at(0.64, 0.5), from = at(0.16, 0.5), to = at(0.6, 0.54);
+    var sx = from[0] + (to[0] - from[0]) * move, sy = from[1] + (to[1] - from[1]) * move;
+    ctx.lineCap = "round"; ctx.lineJoin = "round";
+    ctx.strokeStyle = INK; ctx.globalAlpha = 0.9 * k;
+    blob(big[0], big[1], unit * 0.36, MERGE[0], p * 1.5, draw);
     ctx.strokeStyle = LIVE; ctx.globalAlpha = k;
-    ctx.beginPath(); ctx.moveTo(s0[0], s0[1]); ctx.quadraticCurveTo(sc[0], sc[1], s1[0], s1[1]); ctx.stroke();
-    ctx.strokeStyle = INK; ctx.fillStyle = LIVE;
-    ctx.beginPath(); ctx.arc(g * g * s0[0] + 2 * g * f * sc[0] + f * f * s1[0], g * g * s0[1] + 2 * g * f * sc[1] + f * f * s1[1], r.w * 0.025, 0, Math.PI * 2); ctx.fill();
+    blob(sx, sy, unit * (0.16 - 0.03 * move), MERGE[1], p * 2.4, draw);
+    if (settle > 0) {
+      ctx.globalAlpha = settle * k; ctx.fillStyle = LIVE;
+      ctx.beginPath(); ctx.arc(sx, sy, unit * 0.03, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.strokeStyle = INK;
+  };
+
+  // Six ideas, each a different shape, wait small and faint in a row at the back. One at a time, in no set order,
+  // each comes forward: it grows, turns solid, and takes its place in a wider row at the front. The one on its way
+  // is live. When all six are forward, one live line is drawn round the row: the work of the whole group.
+  var FORWARD = [2, 4, 0, 5, 1, 3];              // the turn each idea takes
+  DRAW.ring = function (r, k, p) {
+    var u = Math.min(r.w, r.h), n = FORWARD.length, i;
+    function X(v) { return r.x + r.w * v; }
+    function Y(v) { return r.y + r.h * v; }
+    ctx.lineCap = "round"; ctx.lineJoin = "round";
+    for (i = 0; i < n; i++) {
+      var go = ease((p - 0.04 - FORWARD[i] * 0.07) / 0.12), moving = go > 0 && go < 1;
+      var bx = X(0.25 + i * 0.1), by = Y(0.2), fx = X(0.1 + i * 0.16), fy = Y(0.6 + 0.07 * Math.sin(Math.PI * i / (n - 1)));
+      var x = bx + (fx - bx) * go, y = by + (fy - by) * go, size = u * (0.028 + 0.034 * go);
+      if (go > 0) {                                // the way it came, faint
+        ctx.strokeStyle = INK; ctx.globalAlpha = FAINT * 0.8 * k;
+        ctx.setLineDash([2, 6]); seg(bx, by, x, y); ctx.setLineDash([]);
+      }
+      ctx.strokeStyle = moving ? LIVE : INK;
+      ctx.globalAlpha = (moving ? 1 : FAINT + (0.9 - FAINT) * go) * k;
+      sketch(i, x, y, size, k, 70 + i);
+    }
+    var round = ease((p - 0.52) / 0.12);          // the line round all of them
+    if (round > 0) {
+      var pts = [], steps = 40;
+      for (i = 0; i <= steps; i++) { var a = -Math.PI / 2 + i / steps * Math.PI * 2; pts.push([X(0.5) + Math.cos(a) * r.w * 0.47, Y(0.635) + Math.sin(a) * u * 0.16]); }
+      ctx.strokeStyle = LIVE; ctx.globalAlpha = k;
+      hand(pts, round, 91);
+    }
+    ctx.strokeStyle = INK;
   };
 
   // A week on a rota: seven days, four rows of shifts. The gaps are filled one by one.
@@ -1423,11 +2069,17 @@ ol { padding: 0; list-style: none; }
     for (var i = 0; i <= n; i++) { var a = a0 + i / n * Math.PI * 2; pts.push([cx + Math.cos(a) * rad, cy + Math.sin(a) * rad]); }
     hand(pts, upto, seed);
   }
-  function sketch(type, cx, cy, s, upto, seed) {     // a small idea: a box, a circle, a triangle or a squiggle
+  function sketch(type, cx, cy, s, upto, seed) {     // a small idea: a box, a circle, a triangle, a squiggle, a diamond or a star
     if (type === 0) hand([[cx - s, cy - s], [cx + s, cy - s], [cx + s, cy + s], [cx - s, cy + s], [cx - s, cy - s]], upto, seed);
     else if (type === 1) loop(cx, cy, s, upto, seed);
     else if (type === 2) hand([[cx, cy - s], [cx + s, cy + s * 0.8], [cx - s, cy + s * 0.8], [cx, cy - s]], upto, seed);
-    else hand([[cx - s, cy + s * 0.3], [cx - s * 0.4, cy - s * 0.5], [cx + s * 0.1, cy + s * 0.4], [cx + s * 0.6, cy - s * 0.4], [cx + s, cy + s * 0.2]], upto, seed);
+    else if (type === 3) hand([[cx - s, cy + s * 0.3], [cx - s * 0.4, cy - s * 0.5], [cx + s * 0.1, cy + s * 0.4], [cx + s * 0.6, cy - s * 0.4], [cx + s, cy + s * 0.2]], upto, seed);
+    else if (type === 4) hand([[cx, cy - s * 1.15], [cx + s * 1.15, cy], [cx, cy + s * 1.15], [cx - s * 1.15, cy], [cx, cy - s * 1.15]], upto, seed);   // a diamond
+    else {                                         // a star
+      var star = [];
+      for (var n = 0; n <= 10; n++) { var a = -Math.PI / 2 + n * Math.PI / 5, rad = n % 2 ? s * 0.5 : s * 1.2; star.push([cx + Math.cos(a) * rad, cy + Math.sin(a) * rad]); }
+      hand(star, upto, seed);
+    }
   }
   var IDEAS = 9, CHOSEN = 4, DROPPED = [1, 3, 6, 7];
   var DOCKS = [[-1, -1], [1, -0.35], [0.3, 1], [-1, 0.5]];   // where each person joins the made thing, on its outline
@@ -1439,7 +2091,23 @@ ol { padding: 0; list-style: none; }
       var a = i * 2.4 + 0.5, d = unit * (0.17 + 0.27 * Math.sqrt((i + 0.5) / IDEAS));
       ideas.push([Math.max(B.x + s * 1.5, Math.min(B.x + B.w - s * 1.5, cx + Math.cos(a) * d * sx)), Math.max(B.y + s * 1.5, Math.min(B.y + B.h - s * 1.5, cy + Math.sin(a) * d * sy))]);
     }
-    return { B: B, unit: unit, cx: cx, cy: cy, s: s, ideas: ideas };
+    // More ideas, all over the page: one to a cell of a loose grid. A cell is left empty where its idea would touch
+    // the words, the name, the contact link, the ticks, or the ideas already round the question.
+    var page = [], cell = Math.max(76, Math.min(vw, vh) * 0.135), edge = inset() + s * 2.2;
+    var cols = Math.floor((vw - edge * 2) / cell), rows = Math.floor((vh - edge * 2) / cell), gx = (vw - cols * cell) / 2, gy = (vh - rows * cell) / 2;
+    for (var row = 0; row < rows; row++) {
+      for (var col = 0; col < cols; col++) {
+        var h1 = hash(col, row), h2 = hash(row + 7, col + 3), h3 = hash(col + 13, row + 29);
+        var x = gx + (col + 0.5 + (h1 - 0.5) * 0.7) * cell, y = gy + (row + 0.5 + (h2 - 0.5) * 0.7) * cell, size = Math.min(cell * 0.2, s * (0.55 + h3 * 0.5)), pad = size * 1.8;
+        var ex = (x - cx) / (unit * 0.52 * sx), ey = (y - cy) / (unit * 0.52 * sy);
+        if (ex * ex + ey * ey < 1) continue;
+        var hit = false;
+        for (var n = 0; n < avoid.length; n++) { var b = avoid[n]; if (x > b.x - pad && x < b.x + b.w + pad && y > b.y - pad && y < b.y + b.h + pad) hit = true; }
+        if (hit) continue;
+        page.push({ x: x, y: y, size: size, type: (col * 3 + row + Math.floor(h3 * 4)) % 4, when: hash(col + 41, row + 5), struck: hash(row + 17, col + 23) < 0.5, seed: 100 + row * 20 + col });
+      }
+    }
+    return { B: B, unit: unit, cx: cx, cy: cy, s: s, ideas: ideas, page: page };
   }
 
   // Each principle's part is drawn by the time its line is fully lit: at 0.11, 0.36, 0.61 and 0.86 of the run.
@@ -1473,6 +2141,20 @@ ol { padding: 0; list-style: none; }
         var x = ease((p - 0.3 - d * 0.008) / 0.035), e = L.s * 1.3;
         hand([[at[0] - e, at[1] - e], [at[0] + e, at[1] + e]], x * 2, 40 + i);
         hand([[at[0] + e, at[1] - e], [at[0] - e, at[1] + e]], x * 2 - 1, 50 + i);
+      }
+    });
+
+    // ... and more of them all over the page, in a scattered order. They all go when the strongest is shipped.
+    if (leave < 1) L.page.forEach(function (q) {
+      var drawn = ease((p - 0.235 - q.when * 0.05) / 0.05);
+      if (drawn <= 0) return;
+      ctx.strokeStyle = INK;
+      ctx.globalAlpha = 0.7 * k * (1 - leave);
+      sketch(q.type, q.x, q.y, q.size, drawn, q.seed);
+      if (q.struck) {
+        var x = ease((p - 0.29 - q.when * 0.04) / 0.035), e = q.size * 1.3;
+        hand([[q.x - e, q.y - e], [q.x + e, q.y + e]], x * 2, q.seed + 300);
+        hand([[q.x + e, q.y - e], [q.x - e, q.y + e]], x * 2 - 1, q.seed + 600);
       }
     });
 
@@ -1520,17 +2202,6 @@ ol { padding: 0; list-style: none; }
     ctx.strokeStyle = INK;
   };
 
-  // The close: what the finale made stays, quieter, and a new point starts to one side of it: the reader's question.
-  DRAW.after = function (r, k, p) {
-    DRAW.finale(r, k * 0.4, 1);
-    var L = finaleLayout(r), B = L.B, qx = B.x + B.w * 0.14, qy = B.y + B.h * 0.16, u = L.unit;
-    ctx.strokeStyle = INK; ctx.globalAlpha = 0.8 * k;
-    loop(qx, qy, u * 0.07, ease((k - 0.35) / 0.65), 5);
-    ctx.globalAlpha = k; ctx.fillStyle = LIVE;
-    ctx.beginPath(); ctx.arc(qx, qy, Math.max(4, u * 0.022), 0, Math.PI * 2); ctx.fill();
-    ctx.strokeStyle = INK;
-  };
-
   function draw() {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, vw, vh);
@@ -1551,6 +2222,7 @@ ol { padding: 0; list-style: none; }
     ctx.lineWidth = 2;
     ctx.strokeRect(rect.x, rect.y, rect.w, rect.h);
     ctx.globalAlpha = 1;
+    if (over) { over(); over = null; ctx.globalAlpha = 1; }
 
     // the plate follows the frame, and shows the picture of the state on screen
     plate.style.transform = "translate(" + rect.x + "px, " + rect.y + "px)";
@@ -1580,6 +2252,28 @@ ol { padding: 0; list-style: none; }
     });
 
     grove.style.opacity = presence.character;
+    slate.style.opacity = presence.roblox;
+    pulse.style.opacity = presence.end;
+    pulse.classList.toggle("is-on", presence.end > 0.01);
+
+    // the 3D Woodie: it turns a little with the scroll, and its idle animation runs only while it is on screen
+    model.classList.toggle("is-live", active === "threed" && !!viewer);
+    if (viewer) {
+      if (active === "threed") modelAt = progress;
+      viewer.turn(-0.6 + modelAt * 1.2);
+      if (presence.threed * shown > 0.05) { if (reduce.matches) { viewer.stop(); viewer.once(); } else viewer.start(); }
+      else viewer.stop();
+    }
+
+    // the sheet of Woodies: seen straight on, leaning back, and moving from the bottom to the top as the scroll goes on. Only its transform changes.
+    var sp = presence.sheet;
+    if (active === "sheet") sheetAt = progress;
+    sheet.style.visibility = sp > 0.01 ? "visible" : "hidden";
+    if (sp > 0.01) {
+      var one = Math.max(120, Math.min(220, vw * 0.15));     // one Woodie, as in the CSS
+      sheet.style.opacity = sp;
+      plane.style.transform = "rotateX(" + (34 - 8 * sheetAt).toFixed(2) + "deg) translate3d(0," + Math.round(-sheetAt * one * 3) + "px,0)";
+    }
 
     // the brood: each one leaves the middle in turn and settles in its place
     var bp = active === "character" ? progress : 1;
@@ -1627,17 +2321,23 @@ ol { padding: 0; list-style: none; }
       make:     { eyes: "open",  mouth: "smile", watch: true },
       art:      { eyes: "star",  mouth: "big",   watch: true },
       quiet:    { eyes: "open",  mouth: "smile", read: true },
+      liftux:   { eyes: "happy", mouth: "big",   watch: true },
       tenup:    { eyes: "open",  mouth: "smile", watch: true },
       ultra:    { eyes: "open",  mouth: "big",   watch: true },
       film:     { eyes: "wide",  mouth: "o",     watch: true },
       roblox:   { eyes: "open",  mouth: "smile", watch: true },
       homebase: { eyes: "open",  mouth: "smile", watch: true },
+      projects: { eyes: "star",  mouth: "big",   watch: true },
       end:      { eyes: "happy", mouth: "big",   mark: "heart", blush: true },
       sync:      { eyes: "wide",  mouth: "smile", watch: true },
       character: { eyes: "star",  mouth: "big",   watch: true },
+      storysync: { eyes: "wide",  mouth: "o",     watch: true },
+      madmen:    { eyes: "open",  mouth: "big",   watch: true },
       dmv:       { eyes: "open",  mouth: "smile", watch: true },
       ultradao:  { eyes: "open",  mouth: "big",   watch: true },
-      woodies:   { eyes: "star",  mouth: "big",   mark: "heart", watch: true },
+      sheet:     { eyes: "star",  mouth: "big",   mark: "heart", watch: true },
+      reel:      { eyes: "wide",  mouth: "o",     watch: true },
+      threed:    { eyes: "star",  mouth: "big",   watch: true },
       poster:    { eyes: "star",  mouth: "big",   watch: true },
       assistant: { eyes: "wide",  mouth: "smile", watch: true },
       lift:      { eyes: "wide",  mouth: "big",   mark: "!", watch: true },
@@ -1745,10 +2445,10 @@ ol { padding: 0; list-style: none; }
     };
   })();
 
-  /* ---------- the wheel: slower and heavier, so a statement stays long enough to read ---------- */
+  /* ---------- the wheel: smoothed, and settling on a line's rest point ---------- */
   // Only the mouse wheel and trackpad are changed. Touch, keys, the scrollbar and links scroll as the browser does.
 
-  var GEAR = 0.7;            // how much of each wheel step is used
+  var GEAR = 1;              // how much of each wheel step is used
   var WEIGHT = 190;          // ms. Higher is heavier.
   var glide = { at: 0, to: 0, raf: 0, last: 0 };
 
@@ -1802,7 +2502,7 @@ ol { padding: 0; list-style: none; }
   });
 
   window.addEventListener("pointerdown", function (e) {
-    if (active === "make" && !(e.target.closest && e.target.closest("a"))) { built = built < 4 ? built + 1 : 0; pal.jolt(); kick(); }
+    if (active === "make" && !(e.target.closest && e.target.closest("a, .top, .ticks"))) { built = built < 4 ? built + 1 : 0; pal.jolt(); kick(); }
   });
   window.addEventListener("scroll", kick, { passive: true });
   window.addEventListener("resize", resize);
