@@ -40,6 +40,7 @@
   --night: #05060d;       /* the page during the film */
   --grove: #0d3b2c;       /* the page behind the Woodies stickers */
   --slate: #17181b;       /* the page behind the avatar, dark like a 3D editor */
+  --paper: #161631;       /* the page behind the Interplay piece: the piece's own paper (#171732, #14142f once its grain is on) */
   --live: #ffe600;        /* the one live mark: Chris */
   --unlit: 0.26;          /* a word before the scroll reaches it */
 
@@ -507,29 +508,50 @@ ol { padding: 0; list-style: none; }
   #sheet::after { background: linear-gradient(0deg, rgb(5 6 13 / 0.92) 0%, rgb(5 6 13 / 0.7) 40%, rgb(5 6 13 / 0.4) 100%); }
 }
 
-/* art: the lines sit above a strip of Interplay pieces that crosses the screen as you scroll */
-.panel--art {
-  padding-top: calc(var(--bar) + var(--s12));   /* clear of the mascot */
-  grid-template-rows: auto minmax(0, 1fr);
-  align-content: stretch;
-  padding-bottom: 0;
-  overflow: hidden;
+/* art: the page turns the paper of one Interplay piece, and the real renderer draws the piece on it.
+   The first line sits in the middle of the empty field. Its words fall away and the shapes start to land.
+   Then the piece moves to its half of the screen, and the pen pass starts with the line about the second hand. */
+#paper {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: var(--paper);
+  opacity: 0;
+  pointer-events: none;
 }
-.panel--art .lines { align-self: start; }
-.strip {
-  display: flex;
-  gap: var(--s6);
-  align-self: end;
-  width: max-content;
-  padding-bottom: var(--gutter);
-  will-change: transform;
-}
-.strip img {
+.panel--art .stage { position: relative; }
+.piece {
+  position: absolute;
   display: block;
-  height: min(46svh, 34rem);
-  width: auto;
-  outline: 1px solid rgb(255 255 255 / 0.1);
-  outline-offset: -1px;
+  transform-origin: 50% 50%;
+  transition: opacity 600ms var(--ease-out);
+}
+.js .piece { will-change: transform; }
+html:not(.js) .piece { position: static; width: min(100%, 26rem); height: auto; margin-inline: auto; }
+html:not(.js) canvas.piece { display: none; }
+.js img.piece { visibility: hidden; }
+.js .piece-failed img.piece { visibility: visible; }
+.js .piece-failed canvas.piece { display: none; }
+.js .panel--art .say--over {        /* the first line, centred over the empty field */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: min(20ch, calc(100vw - var(--gutter) * 2));
+  max-width: none;
+  transform: translate(-50%, -50%);
+  padding-right: 0;
+  text-align: center;
+  font-size: var(--display-size);
+  line-height: 1.06;
+}
+.js .say.is-dropped { visibility: hidden; }
+#fall { position: fixed; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
+#fall span {
+  position: absolute;
+  font-family: var(--font);
+  color: var(--ink);
+  white-space: pre;
+  will-change: transform, opacity;
 }
 
 /* film: six short loops from Woodies: Origin, laid out off the grid */
@@ -620,6 +642,8 @@ ol { padding: 0; list-style: none; }
 <div id="sheet" aria-hidden="true"><div class="plane"></div></div>
 <div id="grove" aria-hidden="true"></div>
 <div id="slate" aria-hidden="true"></div>
+<div id="paper" aria-hidden="true"></div>
+<div id="fall" aria-hidden="true"></div>
 <div id="plate" aria-hidden="true">
   <img data-plate="sync" src="assets/images/work/story-sync.webp" alt="" width="1139" height="733" decoding="async">
   <video data-plate="storysync" src="assets/video/story-sync.mp4" muted loop playsinline preload="none" width="640" height="360"></video>
@@ -714,22 +738,17 @@ ol { padding: 0; list-style: none; }
   </section>
 
   <section class="seg" id="art" data-state="art">
-    <div class="panel panel--art">
-      <div class="lines">
-        <h2 class="say">In 2022, I started co-creating art with AI.</h2>
+    <div class="panel panel--story panel--art">
+      <div class="stage">
+        <canvas class="piece" role="img" aria-label="Interplay, Austin palette, seed chris-3384, drawn live by its generator: orange, teal, yellow and cream shapes bloom in the middle of a navy field. Then a second hand's pen loops sweep across them."></canvas>
+        <img class="piece" src="assets/images/interplay/interplay-3384.webp" alt="Interplay, Austin palette, seed chris-3384: orange, teal, yellow and cream shapes bloom in the middle of a navy field, and a second hand's pen loops sweep across them." width="720" height="1018" loading="lazy" decoding="async">
+      </div>
+      <div class="text lines">
+        <h2 class="say say--over">In 2022, I started co-creating art with AI.</h2>
         <p class="say">This series, Interplay, is the result.</p>
+        <p class="say">The code lays down shapes. Then a second hand draws over them.</p>
         <p class="say">Is AI a collaborator? A tool? AGI?</p>
         <p class="say">To me, art expresses humanity.</p>
-      </div>
-      <div class="strip">
-        <img src="assets/images/interplay/interplay-1.webp" alt="Interplay, Austin palette, seed oonBYKsJ" width="520" height="736" loading="lazy" decoding="async">
-        <img src="assets/images/interplay/interplay-2.webp" alt="Interplay, Omentejovum palette, seed ooT2SbMM" width="520" height="736" loading="lazy" decoding="async">
-        <img src="assets/images/interplay/interplay-3.webp" alt="Interplay, Golid palette, seed ooYkGqsE" width="520" height="736" loading="lazy" decoding="async">
-        <img src="assets/images/interplay/interplay-4.webp" alt="Interplay, Austin palette, seed ooGMm2na" width="520" height="736" loading="lazy" decoding="async">
-        <img src="assets/images/interplay/interplay-5.webp" alt="Interplay, Yorktown palette, seed ooPmHHcP" width="520" height="736" loading="lazy" decoding="async">
-        <img src="assets/images/interplay/interplay-6.webp" alt="Interplay, Dubai palette, seed ooeH8R5q" width="520" height="736" loading="lazy" decoding="async">
-        <img src="assets/images/interplay/interplay-7.webp" alt="Interplay, Omentejovum palette, seed oopparAc" width="520" height="736" loading="lazy" decoding="async">
-        <img src="assets/images/interplay/interplay-8.webp" alt="Interplay, Austin palette, seed ooyx9A4M" width="520" height="736" loading="lazy" decoding="async">
       </div>
     </div>
   </section>
@@ -922,6 +941,7 @@ ol { padding: 0; list-style: none; }
   var dark = document.getElementById("dark");
   var grove = document.getElementById("grove");
   var slate = document.getElementById("slate");
+  var paperLayer = document.getElementById("paper");
   var pulse = document.getElementById("pulse");
   var sheet = document.getElementById("sheet"), plane = sheet.querySelector(".plane"), sheetAt = 0, woodiesNear = false;
   var SLATE = css.getPropertyValue("--slate").trim();
@@ -972,7 +992,6 @@ ol { padding: 0; list-style: none; }
       state: el.getAttribute("data-state"),
       panel: el.querySelector(".panel"),
       stage: el.querySelector(".stage"),
-      strip: el.querySelector(".strip"),
       clips: Array.prototype.slice.call(el.querySelectorAll(".clip")),
       grid: el.querySelector(".projects"),
       cards: Array.prototype.slice.call(el.querySelectorAll(".project")),
@@ -1130,6 +1149,219 @@ ol { padding: 0; list-style: none; }
   });
   ["pointerup", "pointercancel"].forEach(function (type) { model.addEventListener(type, function () { grab = null; }); });
 
+  /* ---------- the Interplay piece ---------- */
+  // The real Interplay renderer (assets/js/interplay.js) draws one fixed piece on the art section's canvas, a step at a time.
+  // The renderer loads once the reader is within two sections. The first line sits over the empty printed field.
+  // Once it is lit and has held a moment, or the reader scrolls on, its words fall away and act one starts: the shapes land.
+  // Act two, the second hand's pen lines, waits for the line that names it. The drawing plays once and stays drawn.
+  // At the end the exact finished piece settles over the drawing. Where the renderer cannot run, a still of the piece shows.
+
+  var PIECE = { seed: "chris-3384", partner: "hand-398" };   // the partner's forms come back as the second hand's pen lines
+  var PIECE_RATIO = 1714 / 1212;              // the renderer's A-series page
+  var ACT_ONE = 3600, ACT_TWO = 4800, SETTLE = 500;   // in ms
+  var fallLayer = document.getElementById("fall");
+  var art = (function () {
+    var s = null;
+    segs.forEach(function (x) { if (x.state === "art") s = x; });
+    if (!s || !s.stage) return null;
+    return {
+      seg: s,
+      stage: s.stage,
+      canvas: s.stage.querySelector("canvas.piece"),
+      over: s.lines[0],     // the line over the empty field
+      hand: 2,              // the line that starts the second hand
+      asked: false, ready: false, want: false,
+      steps: null, counts: null, finished: null,
+      phase: 0,             // 0 waiting, 1 act one, 2 waiting for the hand, 3 act two, 4 settling, 5 drawn
+      handOk: false, dropped: false, hold: 0, t0: 0, done: 0, raf: 0,
+      slot: -1, t: 0, size: ""
+    };
+  })();
+
+  function askPiece() {
+    if (art.asked) return;
+    art.asked = true;
+    var tag = document.createElement("script");
+    tag.src = "assets/js/interplay.js";
+    tag.onload = function () {           // the first render takes about 100 ms, so it waits for a quiet moment
+      (window.requestIdleCallback || setTimeout)(function () { try { pieceReady(); } catch (e) { pieceFailed(); } }, { timeout: 1500 });
+    };
+    tag.onerror = pieceFailed;
+    document.head.appendChild(tag);
+  }
+  function pieceFailed() {
+    art.stage.classList.add("piece-failed");
+    art.phase = 5;
+  }
+  function pieceReady() {
+    var P = window.Interplay;
+    if (!P || !P.renderSteps || !art.canvas.getContext) throw new Error("no renderer");
+    // one size for the life of the page, enough for the piece centred on the screen
+    var scale = Math.min(window.devicePixelRatio || 1, 2);
+    var px = Math.round(Math.max(600, Math.min(1600, Math.min(vw, vh / PIECE_RATIO) * scale)));
+    art.canvas.width = px;
+    art.canvas.height = Math.round(px * PIECE_RATIO);
+    // the exact finished piece, for the end of the drawing and for readers who prefer less motion
+    art.finished = document.createElement("canvas");
+    art.finished.width = art.canvas.width;
+    art.finished.height = art.canvas.height;
+    P.render(art.finished, PIECE);
+    // how many steps each act takes: the same at any size, so count them on a small canvas
+    var small = document.createElement("canvas");
+    small.width = 60;
+    small.height = 85;
+    var count = P.renderSteps(small, PIECE), n = [0, 0], act = 0, r;
+    while (!(r = count.next()).done) {
+      if (r.value === "hand") act = 1;
+      else if (r.value !== "paper") n[act]++;
+    }
+    art.counts = n;
+    art.steps = P.renderSteps(art.canvas, PIECE);
+    art.steps.next();                         // the paper and the empty printed field
+    art.ready = true;
+    if (art.want) startPiece();
+    kick();
+  }
+  function showFinished() {
+    art.canvas.width = art.canvas.width;      // clears the canvas and any state the stopped drawing left on it
+    art.canvas.getContext("2d").drawImage(art.finished, 0, 0);
+    art.steps = null;
+    art.phase = 5;
+  }
+  function startPiece() {
+    if (!art.ready) { art.want = true; return; }
+    if (art.phase !== 0) return;
+    if (reduce.matches) { showFinished(); return; }
+    art.phase = 1;
+    art.t0 = 0;
+    art.done = 0;
+    pieceLoop();
+  }
+  function allowHand() {
+    if (art.handOk) return;
+    art.handOk = true;
+    if (art.phase === 2) { art.phase = 3; art.t0 = 0; art.done = 0; pieceLoop(); }
+  }
+  function pieceLoop() { if (!art.raf) art.raf = requestAnimationFrame(pieceFrame); }
+  function pieceFrame(now) {
+    art.raf = 0;
+    if (art.phase === 2 || art.phase === 5) return;
+    if (!art.t0) art.t0 = now;
+    var e = now - art.t0;
+    if (art.phase === 4) {                    // the exact piece, with its paper grain, settles over the drawing
+      var c = art.canvas.getContext("2d");
+      c.globalAlpha = e >= SETTLE ? 1 : 0.14;
+      c.drawImage(art.finished, 0, 0);
+      c.globalAlpha = 1;
+      if (e >= SETTLE) { art.phase = 5; art.steps = null; return; }
+      pieceLoop();
+      return;
+    }
+    // act one starts slow, so the largest shapes land one at a time, then the rest rush in.
+    // act two, the pen, runs evenly and eases out.
+    var one = art.phase === 1, n = art.counts[one ? 0 : 1];
+    var x = clamp(e / (one ? ACT_ONE : ACT_TWO));
+    var f = one ? Math.pow(x, 1.6) : 1 - Math.pow(1 - x, 1.8);
+    var want = x >= 1 ? Infinity : Math.floor(n * f);
+    var stop = performance.now() + 9;         // never more than 9 ms of drawing in a frame
+    while (art.done < want && performance.now() < stop) {
+      var r = art.steps.next();
+      if (r.done) { art.phase = 4; art.t0 = 0; break; }
+      if (r.value === "hand") { art.phase = art.handOk ? 3 : 2; art.t0 = 0; art.done = 0; break; }
+      art.done++;
+    }
+    if (art.phase !== 2) pieceLoop();
+  }
+
+  // The first line's words fall away: each hops a little, turns and drops off the bottom of the screen.
+  // They are copies in their own layer, so they keep falling whatever the scroll does to the line.
+  function drop(still) {
+    if (art.dropped) return;
+    art.dropped = true;
+    clearTimeout(art.hold);
+    art.hold = 0;
+    var line = art.over;
+    if (!still && fallLayer.animate) {
+      var cs = getComputedStyle(line.el), R = rand(20220);
+      line.words.forEach(function (w, i) {
+        var b = w.getBoundingClientRect();
+        var copy = document.createElement("span");
+        copy.textContent = w.textContent;
+        copy.style.left = b.left + "px";
+        copy.style.top = b.top + "px";
+        copy.style.fontSize = cs.fontSize;
+        copy.style.letterSpacing = cs.letterSpacing;
+        copy.style.lineHeight = b.height + "px";
+        fallLayer.appendChild(copy);
+        var spin = (R() - 0.5) * 56, drift = (R() - 0.5) * vw * 0.1, down = vh - b.top + b.height;
+        var time = 1150 + R() * 300, wait = i * 60;
+        copy.animate([
+          { transform: "translate(0, 0) rotate(0deg)", easing: "cubic-bezier(0.2, 0.7, 0.35, 1)" },
+          { transform: "translate(" + (drift * 0.1).toFixed(1) + "px, " + (-b.height * 0.24).toFixed(1) + "px) rotate(" + (spin * 0.1).toFixed(1) + "deg)", offset: 0.16, easing: "cubic-bezier(0.55, 0, 0.9, 0.5)" },
+          { transform: "translate(" + drift.toFixed(1) + "px, " + down.toFixed(1) + "px) rotate(" + spin.toFixed(1) + "deg)" }
+        ], { duration: time, delay: wait, fill: "both" });
+        copy.animate([{ opacity: 1 }, { opacity: 0 }], { duration: time * 0.3, delay: wait + time * 0.7, fill: "both" }).onfinish = function () { copy.remove(); };
+      });
+    }
+    line.el.classList.add("is-dropped");
+    startPiece();
+  }
+
+  // Called from measure() on every scroll: drops the first line, starts the acts, and places the piece.
+  function artScroll(current, q, still) {
+    var s = art.seg;
+    if (segs.indexOf(current) >= segs.indexOf(s) - 2) askPiece();
+    if (current !== s) return;
+    var n = s.lines.length, slot = 0;
+    while (slot < n - 1 && q >= s.starts[slot + 1]) slot++;
+    var t = clamp((q - s.starts[slot]) / (s.starts[slot + 1] - s.starts[slot]));
+    art.slot = slot;
+    art.t = t;
+    if (slot === 0) {
+      if (art.dropped && t < 0.4) { art.dropped = false; art.over.el.classList.remove("is-dropped"); }   // back for another look
+      if (!art.dropped) {
+        if (t >= 0.86) drop(still);
+        else if (t >= 0.45 && !still) {     // fully lit: hold a moment, then drop. Without motion, the line stays until the reader moves on.
+          if (!art.hold) art.hold = setTimeout(function () {
+            art.hold = 0;
+            if (art.slot === 0 && art.t >= 0.45) drop(false);
+          }, 900);
+        } else if (art.hold) { clearTimeout(art.hold); art.hold = 0; }
+      }
+    } else {
+      if (!art.dropped) { art.dropped = true; art.over.el.classList.add("is-dropped"); }
+      startPiece();
+      if (slot > art.hand || (slot === art.hand && t >= 0.12)) allowHand();
+    }
+    // the piece: centred on the screen for the first line, then it moves to its half while the second line comes in
+    var pose = slot === 0 ? 1 : slot === 1 ? 1 - ease(t / 0.3) : 0;
+    if (still) pose = slot === 0 ? 1 : 0;
+    var st = art.stage.getBoundingClientRect();
+    var barB = topBar.getBoundingClientRect().bottom;
+    var tk = ticks.getBoundingClientRect();
+    var top = wide.matches ? 0 : barB + 8 - st.top;
+    var pad = Math.max(16, Math.min(st.width, st.height) * 0.06);
+    var w = Math.max(0, Math.min(st.width - pad * 2, (st.height - Math.max(top, pad) - pad) / PIECE_RATIO));
+    var h = w * PIECE_RATIO;
+    var x = (st.width - w) / 2, y = Math.max(top, pad) + (st.height - Math.max(top, pad) - pad - h) / 2;
+    var size = Math.round(x) + "," + Math.round(y) + "," + Math.round(w);
+    if (size !== art.size) {
+      art.size = size;
+      art.canvas.style.left = x + "px";
+      art.canvas.style.top = y + "px";
+      art.canvas.style.width = w + "px";
+      art.canvas.style.height = h + "px";
+    }
+    // centred: clear of the name and contact link above, and on a wide screen clear of the ticks at the side
+    var mx = wide.matches ? Math.max(vw - tk.left + 8, inset() * 2) : inset() * 2, my = barB + inset();
+    var wc = Math.min(vw - mx * 2, (vh - my * 2) / PIECE_RATIO);
+    var k = w ? wc / w : 1;
+    var dx = vw / 2 - (st.left + x + w / 2), dy = vh / 2 - (st.top + y + h / 2);
+    art.canvas.style.transform = "translate3d(" + (dx * pose).toFixed(1) + "px, " + (dy * pose).toFixed(1) + "px, 0) scale(" + (1 + (k - 1) * pose).toFixed(4) + ")";
+    // the line comes back over a drawn piece only dimmed behind it
+    art.canvas.style.opacity = slot === 0 && !art.dropped && art.phase > 0 ? 0.2 : 1;
+  }
+
   /* ---------- the frame ---------- */
   // One outlined frame stays on screen and takes the shape of a screen for each statement.
 
@@ -1250,12 +1482,8 @@ ol { padding: 0; list-style: none; }
       s.grid.classList.toggle("is-on", on && (still || (q > 0.2 && q < 0.93)));
     });
 
-    // art: the strip of pieces crosses the screen once over the section
-    segs.forEach(function (s) {
-      if (!s.strip || s !== current) return;
-      var travel = Math.max(0, s.strip.scrollWidth - vw * 0.72);
-      s.strip.style.transform = "translate3d(" + Math.round(vw * 0.28 - travel * (still ? 0.3 : q)) + "px, 0, 0)";
-    });
+    // art: the first line drops away and starts the drawing, then the piece moves to its half of the screen
+    if (art) artScroll(current, q, still);
     // film: the page goes dark, and the clips come up one after another and play
     var night = 0;
     segs.forEach(function (s) {
@@ -2253,6 +2481,7 @@ ol { padding: 0; list-style: none; }
 
     grove.style.opacity = presence.character;
     slate.style.opacity = presence.roblox;
+    paperLayer.style.opacity = presence.art;
     pulse.style.opacity = presence.end;
     pulse.classList.toggle("is-on", presence.end > 0.01);
 
