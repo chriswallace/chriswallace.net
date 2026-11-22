@@ -175,16 +175,17 @@ ol { padding: 0; list-style: none; }
    (`.deck-compact`), and keeps the one that shows the film largest. Two lengths drive the drawing: --u, a hundredth
    of the player's width, for the body and the screen, and --k for the controls, which follows --u on a large
    player and stops shrinking on a small one, so a key is never too small for a thumb. The controls sit in a grid,
-   so the small screen and the groove take whatever width is left. The controls follow the film too: a player with
-   several films marks them along the groove (`.deck-many`), a film too short to skip through has no skip keys
-   (`.deck-solo`), and the plastic takes a colour that suits the film (`data-tone`). */
+   so the small screen and the groove take whatever width is left. The controls follow the film too: one with sound has a key
+   to turn it off (`.deck-sound`), a long one skips ten seconds at a time, and the plastic takes a colour that suits
+   the film (`data-tone`). Only a film that plays on its own has a player: one that the scroll drives (the six Woodies
+   scenes, the clip that plays once as its line arrives) is shown plain. */
 #plate {
   --u: 6px; --k: 5px; --slack: 0px;
   --print: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;   /* what is printed on the machine. The page's serif is for the page: on the player it looked wrong */
   --t: calc(var(--k) * 27); --p: calc(var(--k) * 18.5); --dh: calc(var(--k) * 27); --col: calc(var(--k) * 27);          /* the turret, the play button, the height under the screen, the width of a side column */
   --p1: #000d85; --p2: var(--signal); --p3: #5268ff; --glow: 110 150 255; --lcd: #cfe0ff;   /* the plastic, and the light of the small screen */
 }
-#plate.deck-compact { --t: calc(var(--k) * 23); --p: calc(var(--k) * 15.5); --dh: calc(var(--k) * 23); --col: calc(var(--k) * 24); }
+#plate.deck-compact { --t: calc(var(--k) * 23); --p: calc(var(--k) * 15.5); --dh: calc(var(--k) * 23); --col: calc(var(--k) * 25); }
 #plate[data-tone="lime"] { --p1: #053a1a; --p2: #129a45; --p3: #6fe394; --glow: 90 255 150; --lcd: #d6ffe2; }     /* the forest */
 #plate[data-tone="grape"] { --p1: #2a0a63; --p2: #7a3fe0; --p3: #b596ff; --glow: 185 135 255; --lcd: #ecdcff; }   /* Homebase's purple */
 .deck-shell, .deck-glass, .deck { position: absolute; inset: 0; opacity: var(--deck, 0); visibility: hidden; }
@@ -226,7 +227,7 @@ ol { padding: 0; list-style: none; }
 }
 #plate.is-playing .deck-led { background: radial-gradient(circle at 35% 30%, #fff, var(--live) 45%, #b98a00); box-shadow: 0 0 calc(var(--u) * 1.4) var(--live), 0 1px 0 rgb(255 255 255 / 0.8); }
 /* the screen: the film, the dark surround it is set into, and the glass over it. Under it is the height of the controls. */
-#plate video, .deck-glass, .deck-well {
+#plate video[data-film], .deck-glass, .deck-well {
   inset: auto; left: calc(var(--k) * 3 + var(--u) * 4.5); top: calc(var(--u) * 7);
   width: calc(100% - var(--k) * 3 - var(--u) * 9); height: calc(100% - var(--u) * 10 - var(--dh));
   border-radius: calc(var(--u) * 1.5);
@@ -301,25 +302,23 @@ ol { padding: 0; list-style: none; }
   width: calc((100% - var(--k) * 3.4) * var(--at, 0) + var(--k) * 1.3);
   background: linear-gradient(90deg, #ffb400, var(--live)); box-shadow: 0 0 calc(var(--k) * 0.9) rgb(255 230 0 / 0.8);
 }
-.deck-marks {                       /* several films: a notch in the groove where each one starts */
-  display: none; position: absolute; left: calc(var(--k) * 1.7); right: calc(var(--k) * 1.7); top: 50%; height: calc(var(--k) * 3.6); margin-top: calc(var(--k) * -1.8); pointer-events: none;
-  background: repeating-linear-gradient(90deg, transparent 0 calc(100% / var(--n, 1) - 2px), rgb(255 255 255 / 0.85) calc(100% / var(--n, 1) - 2px) calc(100% / var(--n, 1)));
-  -webkit-mask: linear-gradient(90deg, #000 calc(100% - 3px), transparent calc(100% - 3px)); mask: linear-gradient(90deg, #000 calc(100% - 3px), transparent calc(100% - 3px));
-}
-#plate.deck-many .deck-marks { display: block; }
 .deck-thumb {
   position: absolute; top: 0; left: calc((100% - var(--k) * 3.4) * var(--at, 0)); width: calc(var(--k) * 3.4); height: 100%; border-radius: calc(var(--k) * 1.2);
   background: linear-gradient(90deg, #7c8393 0%, #f4f5f9 30%, #fff 48%, #b9bfcb 70%, #6d7484 100%);
 }
 .deck-rate { grid-area: rate; width: calc(var(--k) * 10.5); height: calc(var(--k) * 5); border-radius: calc(var(--k) * 2.5); font: 700 calc(var(--k) * 2.6)/1 var(--print); background: linear-gradient(180deg, #fff 0%, #dfe2ea 30%, #a9afbc 70%, #8a91a0 100%); }   /* the speed */
+.deck-mute { display: none; grid-area: mute; width: calc(var(--k) * 5.6); height: calc(var(--k) * 5.6); margin-right: calc(var(--k) * 0.6); }   /* sound on and off: only on a player whose film has sound */
+.deck-mute svg { width: 56%; height: 56%; }
+.deck-mute .i-off, #plate.is-muted .deck-mute .i-on { display: none; }
+#plate.is-muted .deck-mute .i-off { display: block; }
+#plate.deck-sound .deck-mute { display: block; }
+#plate.deck-sound .deck-panel { grid-template-columns: auto minmax(0, 1fr) auto auto; grid-template-areas: "keys lcd lcd lcd" "keys seek mute rate"; }
 .deck :focus-visible { outline: var(--line) solid var(--live); outline-offset: 3px; }
-/* a film too short to skip through: no skip keys, and the small screen takes their room */
-#plate.deck-solo .deck-keys { display: none; }
-#plate.deck-solo .deck-panel { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "lcd lcd" "seek rate"; }
 /* a small player: one line on the small screen, no pill, smaller keys */
 #plate.deck-compact .deck-panel { grid-template-areas: "keys lcd" "keys seek"; grid-template-columns: auto minmax(0, 1fr); padding: calc(var(--k) * 1.8) calc(var(--k) * 2) calc(var(--k) * 1.8) calc(var(--k) * 4.2); row-gap: calc(var(--k) * 1.4); border-radius: calc(var(--k) * 8) calc(var(--k) * 5) calc(var(--k) * 3) calc(var(--k) * 8); }
-#plate.deck-compact.deck-solo .deck-panel { grid-template-areas: "lcd" "seek"; grid-template-columns: minmax(0, 1fr); }
 #plate.deck-compact .deck-rate { display: none; }
+#plate.deck-compact .deck-mute { width: calc(var(--k) * 5); height: calc(var(--k) * 5); margin-right: 0; }
+#plate.deck-compact.deck-sound .deck-panel { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "keys lcd lcd" "keys seek mute"; }
 #plate.deck-compact .deck-seek { height: calc(var(--k) * 5.2); }
 #plate.deck-compact .deck-keys { gap: calc(var(--k) * 2); }
 #plate.deck-compact .deck-key--back { width: calc(var(--k) * 8); height: calc(var(--k) * 8); }
@@ -328,7 +327,7 @@ ol { padding: 0; list-style: none; }
    Where the column is taller than the film, the film sits in the middle of the height (--slack). */
 #plate.deck-side .deck-body { left: 0; right: calc(var(--k) * 3); border-radius: calc(var(--u) * 5) calc(var(--u) * 9) calc(var(--k) * 4) calc(var(--u) * 5) / calc(var(--u) * 5) calc(var(--u) * 7) calc(var(--k) * 4) calc(var(--u) * 5); }
 #plate.deck-side .deck-turret { left: auto; right: 0; }
-#plate.deck-side video, #plate.deck-side .deck-glass, #plate.deck-side .deck-well {
+#plate.deck-side video[data-film], #plate.deck-side .deck-glass, #plate.deck-side .deck-well {
   left: calc(var(--u) * 4.5); top: calc(var(--u) * 7 + var(--slack) / 2);
   width: calc(100% - var(--k) * 3 - var(--u) * 12 - var(--col)); height: calc(100% - var(--u) * 11 - var(--k) * 4 - var(--slack));
 }
@@ -345,6 +344,8 @@ ol { padding: 0; list-style: none; }
 #plate.deck-side .deck-lcd { height: calc(var(--k) * 9.4); align-self: auto; }
 #plate.deck-side .deck-keys { justify-content: center; height: calc(var(--k) * 14); }
 #plate.deck-side .deck-rate { justify-self: end; }
+#plate.deck-side.deck-sound .deck-panel { grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "lcd lcd" "seek seek" ". ." "keys keys" "mute rate"; }
+#plate.deck-side.deck-compact.deck-sound .deck-panel { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "lcd lcd" "seek mute" ". ." "keys keys"; }
 #plate.deck-side.deck-compact .deck-panel { row-gap: calc(var(--k) * 1.5); padding: calc(var(--k) * 1.6); grid-template-rows: auto auto minmax(0, 1fr) auto; grid-template-areas: "lcd" "seek" "." "keys"; }
 #plate.deck-side.deck-compact .deck-lcd { height: calc(var(--k) * 6.2); }
 #plate.deck-side.deck-compact .deck-keys { height: calc(var(--k) * 12.5); }
@@ -831,9 +832,37 @@ html:not(.js) canvas.piece { display: none; }
   will-change: transform, opacity;
 }
 
-@media (max-width: 899px) {
-  .panel--film { padding-top: calc(var(--bar) + var(--s6)); }   /* keep the clips clear of the name and the contact link */
+/* film: six short loops from Woodies: Origin, scattered over the whole page behind the words. They are placed
+   against the panel, which is the size of the screen, not against the stage, and some run off its edges. The
+   words float over them, with a soft shade of the night behind each letter so they stay readable. */
+.js .reel { position: static; }
+.clip {
+  position: absolute;
+  width: 46%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  opacity: 0;
+  outline: 1px solid rgb(255 255 255 / 0.1);
+  outline-offset: -1px;
 }
+html:not(.js) .reel { position: relative; }
+.clip--1 { left: 3%;   top: 13%; width: 25%; }
+.clip--2 { left: 35%;  top: 5%;  width: 21%; }
+.clip--3 { left: 63%;  top: 14%; width: 31%; }
+.clip--4 { left: 9%;   top: 60%; width: 23%; }
+.clip--5 { left: 40%;  top: 49%; width: 28%; }
+.clip--6 { left: 75%;  top: 66%; width: 22%; }
+@media (orientation: portrait) {       /* an upright screen: two loose columns down the page */
+  .clip--1 { left: -7%;  top: 9%;  width: 58%; }
+  .clip--2 { left: 55%;  top: 15%; width: 56%; }
+  .clip--3 { left: 8%;   top: 30%; width: 66%; }
+  .clip--4 { left: 44%;  top: 49%; width: 62%; }
+  .clip--5 { left: -9%;  top: 60%; width: 50%; }
+  .clip--6 { left: 28%;  top: 77%; width: 60%; }
+}
+.js .panel--film .text { position: relative; z-index: 1; }
+.js .panel--film .say { text-shadow: 0 0 0.5em rgb(5 6 13 / 0.85), 0 0 0.16em rgb(5 6 13 / 0.9); }
 
 /* the close slides over the held panels */
 .end {
@@ -912,7 +941,7 @@ html:not(.js) canvas.piece { display: none; }
   <!-- the player's body, behind the film -->
   <div class="deck-shell" aria-hidden="true"><i class="deck-body"></i><i class="deck-grip"></i><span class="deck-mark">CW·2000 VIDEO</span><i class="deck-led"></i><i class="deck-well"></i><i class="deck-turret"></i></div>
   <img aria-hidden="true" data-plate="sync" data-src="assets/images/work/story-sync.webp" alt="" width="1139" height="733" decoding="async">
-  <video aria-hidden="true" data-plate="storysync" src="assets/video/story-sync.mp4" muted loop playsinline preload="none" width="640" height="360"></video>
+  <video aria-hidden="true" data-film data-plate="storysync" src="assets/video/story-sync.mp4" muted loop playsinline preload="none" width="640" height="360"></video>
   <img aria-hidden="true" data-plate="madmen" data-src="assets/images/work/mad-men-fan-cut.webp" alt="" width="1200" height="810" decoding="async">
   <img aria-hidden="true" data-plate="dmv" data-src="assets/images/work/california-dmv.webp" alt="" width="1200" height="810" decoding="async">
   <!-- ULTRAPASS at each of its six staking levels: it grows as the two UltraDAO lines go by -->
@@ -923,16 +952,10 @@ html:not(.js) canvas.piece { display: none; }
   <img aria-hidden="true" data-plate="ultradao-5" data-src="assets/images/work/ultradao-5.webp" alt="" width="800" height="800" decoding="async">
   <img aria-hidden="true" data-plate="ultradao-6" data-src="assets/images/work/ultradao-6.webp" alt="" width="800" height="800" decoding="async">
   <canvas aria-hidden="true" data-plate="threed"></canvas>
-  <img aria-hidden="true" data-plate="poster" data-src="assets/images/work/woodies-origin-poster.webp" alt="" width="720" height="1081" decoding="async">
-  <video aria-hidden="true" data-plate="assistant" src="assets/video/homebase/assistant.mp4" muted loop playsinline preload="none" width="560" height="604"></video>
+  <!-- Woodies: Origin, the whole film, with its sound. It is fetched only when the reader presses play; until then the player shows a still from it. -->
+  <video aria-hidden="true" data-film data-plate="origin" src="assets/video/woodies-origin.mp4" data-poster="assets/video/woodies-origin-still.webp" playsinline preload="none" width="1280" height="720"></video>
+  <video aria-hidden="true" data-film data-plate="assistant" src="assets/video/homebase/assistant.mp4" muted loop playsinline preload="none" width="560" height="604"></video>
   <video aria-hidden="true" data-plate="lift" data-once src="assets/video/homebase/lift.mp4" muted playsinline preload="none" width="848" height="558"></video>
-  <!-- six scenes from Woodies: Origin, which the player shows one after another -->
-  <video aria-hidden="true" data-plate="clip-1" src="assets/video/woodies/clip-1.mp4" muted playsinline preload="none" width="480" height="270"></video>
-  <video aria-hidden="true" data-plate="clip-2" src="assets/video/woodies/clip-2.mp4" muted playsinline preload="none" width="480" height="270"></video>
-  <video aria-hidden="true" data-plate="clip-3" src="assets/video/woodies/clip-3.mp4" muted playsinline preload="none" width="480" height="270"></video>
-  <video aria-hidden="true" data-plate="clip-4" src="assets/video/woodies/clip-4.mp4" muted playsinline preload="none" width="480" height="270"></video>
-  <video aria-hidden="true" data-plate="clip-5" src="assets/video/woodies/clip-5.mp4" muted playsinline preload="none" width="480" height="270"></video>
-  <video aria-hidden="true" data-plate="clip-6" src="assets/video/woodies/clip-6.mp4" muted playsinline preload="none" width="480" height="270"></video>
   <i class="deck-glass" aria-hidden="true"></i>
   <!-- the player's controls, over the film -->
   <div class="deck" role="group" aria-label="Video player">
@@ -940,7 +963,8 @@ html:not(.js) canvas.piece { display: none; }
     <div class="deck-panel">
       <div class="deck-keys"><button type="button" class="deck-key deck-key--back" aria-label="Back two seconds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16L1 12zM23 4v16L12 12z"/></svg></button><button type="button" class="deck-key deck-key--next" aria-label="Forward two seconds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 4v16l11-8zM12 4v16l11-8z"/></svg></button></div>
       <div class="deck-lcd" aria-hidden="true"><canvas></canvas></div>
-      <div class="deck-seek" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i class="deck-marks"></i><i class="deck-fill"></i><i class="deck-thumb"></i></div>
+      <div class="deck-seek" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i class="deck-fill"></i><i class="deck-thumb"></i></div>
+      <button type="button" class="deck-key deck-mute" aria-label="Sound off" aria-pressed="false"><svg class="i-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l6 5V4L7 9zM16 8.5v7a4 4 0 0 0 0-7zM16 4.2v2.1a6 6 0 0 1 0 11.4v2.1a8 8 0 0 0 0-15.6z"/></svg><svg class="i-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l6 5V4L7 9zM15.3 9.3l1.4-1.4 2.3 2.3 2.3-2.3 1.4 1.4-2.3 2.3 2.3 2.3-1.4 1.4-2.3-2.3-2.3 2.3-1.4-1.4 2.3-2.3z"/></svg></button>
       <button type="button" class="deck-rate" aria-label="Speed: 1×">1×</button>
     </div>
   </div>
@@ -1084,11 +1108,18 @@ html:not(.js) canvas.piece { display: none; }
 
   <section class="seg" id="woodies" data-state="film">
     <div class="panel panel--story panel--film">
-      <div class="stage" aria-hidden="true"></div>
+      <div class="stage reel" aria-hidden="true">
+        <video class="clip clip--1" src="assets/video/woodies/clip-1.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
+        <video class="clip clip--2" src="assets/video/woodies/clip-2.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
+        <video class="clip clip--3" src="assets/video/woodies/clip-3.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
+        <video class="clip clip--4" src="assets/video/woodies/clip-4.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
+        <video class="clip clip--5" src="assets/video/woodies/clip-5.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
+        <video class="clip clip--6" src="assets/video/woodies/clip-6.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
+      </div>
       <div class="text lines">
         <h2 class="say" data-state="sheet">We made <a href="https://woodiesofficial.com" target="_blank" rel="noopener">Woodies</a>, characters that began on the blockchain.</h2>
         <p class="say" data-state="sheet">Then they outgrew it.</p>
-        <p class="say" data-state="poster"><a href="https://www.youtube.com/watch?v=encMCWoBc3o" target="_blank" rel="noopener">Woodies: Origin</a> put them in a short film.</p>
+        <p class="say" data-state="origin"><a href="https://www.youtube.com/watch?v=encMCWoBc3o" target="_blank" rel="noopener">Woodies: Origin</a> put them in a short film.</p>
         <p class="say" data-state="reel">It was an official selection at the Aesthetica Short Film Festival in 2023.</p>
         <p class="say" data-state="threed">We released them as 3D characters in the metaverse.</p>
       </div>
@@ -1518,6 +1549,7 @@ html:not(.js) canvas.piece { display: none; }
       panel: el.querySelector(".panel"),
       stage: el.querySelector(".stage"),
       film: !!el.querySelector(".panel--film"),
+      clips: Array.prototype.slice.call(el.querySelectorAll(".clip")),
       shows: [el.getAttribute("data-state")].concat(Array.prototype.map.call(el.querySelectorAll(".say[data-state]"), function (say) { return say.getAttribute("data-state"); })),   // the states its lines use
       grid: el.querySelector(".projects"),
       cards: Array.prototype.slice.call(el.querySelectorAll(".project")),
@@ -1722,13 +1754,12 @@ html:not(.js) canvas.piece { display: none; }
   // If any of it cannot load or run, the canvas shows a still render instead.
 
   /* ---------- the player ---------- */
-  // The controls of the player the films sit in. `use` is told which film's state is on screen and how visible it is;
-  // the keys act on that film. In a state with several films (`reel`), back and forward change the film, and each
-  // one hands over to the next when it ends.
+  // The controls of the player. `use` is told which film's state is on screen and how visible it is, and the keys
+  // act on that film.
   var deck = (function () {
     var ui = plate.querySelector(".deck"), play = ui.querySelector(".deck-key--play"), back = ui.querySelector(".deck-key--back"), next = ui.querySelector(".deck-key--next");
-    var seek = ui.querySelector(".deck-seek"), lcd = ui.querySelector(".deck-lcd"), dots = lcd.querySelector("canvas"), rateKey = ui.querySelector(".deck-rate");
-    var films = Array.prototype.slice.call(plate.querySelectorAll("video"));
+    var seek = ui.querySelector(".deck-seek"), lcd = ui.querySelector(".deck-lcd"), dots = lcd.querySelector("canvas"), rateKey = ui.querySelector(".deck-rate"), muteKey = ui.querySelector(".deck-mute");
+    var films = Array.prototype.slice.call(plate.querySelectorAll("video[data-film]"));
     var RATES = [1, 1.5, 2, 0.5], rate = 0, ticking = 0, dragging = false, laid = null;
     var api = { name: null, own: false, use: use, fit: fit };
 
@@ -1740,15 +1771,15 @@ html:not(.js) canvas.piece { display: none; }
     function fit(st, bw, bh) {
       var key = Math.round(bw) + "x" + Math.round(bh) + (touch.matches ? "t" : "m");
       if (st.lay && st.lay.key === key) return st.lay;
-      var film = st.ratio, solo = !!st.solo, best = null, wanted = touch.matches ? 4.2 : 3.6;
+      var film = st.ratio, sound = st.sound ? 1 : 0, best = null, wanted = touch.matches ? 4.2 : 3.6;
       // The controls are tried at the size a thumb (or a mouse) wants, then smaller, then, as a last resort, simply in
       // proportion to the player. Smaller controls cost a share of the score, so they win only where they buy much more film.
       [wanted, wanted * 0.86, wanted * 0.74, wanted * 0.63, 0].forEach(function (least) {
         if (!least && best) return;
         [0, 1, 2, 3].forEach(function (c) {
           var side = c > 1, compact = c % 2 === 1;
-          var dh = compact ? 23 : 27, col = compact ? 24 : 27, column = compact ? 55.2 : 72;   // in k: under the screen; a side column's width and its height with the turret
-          var narrowest = compact ? (solo ? 46 : 67) : (solo ? 63 : 88);                     // in k: the least width the controls fit under the screen
+          var dh = compact ? 23 : 27, col = compact ? 25 : 27, column = compact ? 55.2 : 72;   // in k: under the screen; a side column's width and its height with the turret
+          var narrowest = (compact ? 67 : 88) + sound * (compact ? 4 : 2);                    // in k: the least width the controls fit under the screen; a sound key asks a little more
           function shape(w) {
             var u = w / 100, k = Math.max(least, Math.min(5.2, u * 0.86)), fw, h, slack = 0;
             if (side) {
@@ -1780,28 +1811,23 @@ html:not(.js) canvas.piece { display: none; }
     }
 
     function state() { return api.name ? STATES[api.name] : null; }
-    function film() { var st = state(); return !st ? null : st.reel ? plates[st.reel[st.track || 0]] : plates[st.plate]; }
-    // the time, to the second, or to the tenth for a film only a few seconds long
-    function clock(t, fine) {
-      t = Math.max(0, t || 0);
-      var whole = Math.floor(t + (fine ? 0.0001 : 0));
-      return Math.floor(whole / 60) + ":" + (whole % 60 < 10 ? "0" : "") + (whole % 60) + (fine ? "." + Math.floor((t - whole) * 10 + 0.001) : "");
-    }
-    // how far along the groove: through the film, or through all the films of a player with several
-    function along(v, st) {
-      var d = isFinite(v.duration) ? v.duration : 0, part = d ? clamp(v.currentTime / d) : 0;
-      return st.reel ? ((st.track || 0) + part) / st.reel.length : part;
-    }
+    function film() { var st = state(); return st ? plates[st.plate] : null; }
+    function clock(t) { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + (t % 60 < 10 ? "0" : "") + (t % 60); }
+    // a film's length: what the file says, or, before it has been fetched, what its state says
+    function span(v, st) { return isFinite(v.duration) && v.duration ? v.duration : (st && st.length) || 0; }
+    function along(v, st) { var d = span(v, st); return d ? clamp(v.currentTime / d) : 0; }
     function start(v) { var pl = v.play(); if (pl && pl.catch) pl.catch(function () {}); }
 
     // the small screen, the play key and the groove say what the film is doing
     function show() {
       var v = film(), st = state();
       if (!v) return;
-      var d = isFinite(v.duration) ? v.duration : 0, going = !v.paused && !v.ended;
-      // what kind of film it is, then what it is doing
-      lines[1] = (st.reel ? "SCENE " + ((st.track || 0) + 1) + "/" + st.reel.length : v.loop ? "LOOP" : "ONCE") + " · " + (going ? "PLAY" : v.ended ? "END" : v.currentTime > 0 ? "PAUSE" : "READY");
+      var d = span(v, st), going = !v.paused && !v.ended;
+      // what the film is doing, and that it will start again where it does
+      lines[1] = (going ? "PLAY" : v.ended ? "END" : v.currentTime > 0 ? "PAUSE" : "READY") + (v.loop ? " · LOOP" : "");
       lcd.setAttribute("data-note", lines[1]);
+      plate.classList.toggle("is-muted", v.muted);
+      muteKey.setAttribute("aria-pressed", v.muted ? "true" : "false");
       tell(v, d);
       plate.classList.toggle("is-playing", going);
       play.setAttribute("aria-label", going ? "Pause" : "Play");
@@ -1831,7 +1857,7 @@ html:not(.js) canvas.piece { display: none; }
       var W = Math.round(w * real), H = Math.round(h * real), pen = dots.getContext("2d");
       if (dots.width !== W || dots.height !== H) { dots.width = W; dots.height = H; }
       pen.clearRect(0, 0, W, H);
-      var lit = getComputedStyle(plate).getPropertyValue("--lcd").trim() || "#cfe0ff", pad = Math.round(H * 0.16);
+      var lit = getComputedStyle(plate).getPropertyValue("--lcd").trim() || "#cfe0ff", pad = Math.round(Math.max(H * 0.3, W * 0.045));   // clear of the screen's rounded corners
       // one line: its text, the top of its band and the band's height
       function line(text, top, tall) {
         var cells = 0, i, c;
@@ -1853,8 +1879,7 @@ html:not(.js) canvas.piece { display: none; }
     }
     // the time: a small player has room for the time so far, a larger one for the length as well
     function tell(v, d) {
-      var fine = d > 0 && d < 10;
-      lines[0] = clock(v.currentTime, fine) + (laid && laid.compact ? "" : " / " + clock(d, fine));
+      lines[0] = clock(v.currentTime) + (laid && laid.compact ? "" : " / " + clock(d));
       lcd.setAttribute("data-time", lines[0]);
       paint();
     }
@@ -1890,35 +1915,18 @@ html:not(.js) canvas.piece { display: none; }
       if (name === api.name || !name) { if (!name && on <= 0.01) { api.name = null; api.own = false; } return; }
       api.name = name;
       api.own = false;
-      var st = state(), many = !!st.reel;
-      plate.classList.toggle("deck-many", many);
-      plate.classList.toggle("deck-solo", !!st.solo);
+      var st = state(), far = st.length > 60 ? "ten" : "two";
+      plate.classList.toggle("deck-sound", !!st.sound);
       if (st.tone) plate.setAttribute("data-tone", st.tone); else plate.removeAttribute("data-tone");
       drawn = "";
-      seek.style.setProperty("--n", many ? st.reel.length : 1);
-      back.setAttribute("aria-label", many ? "Previous scene" : "Back two seconds");
-      next.setAttribute("aria-label", many ? "Next scene" : "Forward two seconds");
+      ui.setAttribute("aria-label", "Video player: " + st.label);
+      back.setAttribute("aria-label", "Back " + far + " seconds");
+      next.setAttribute("aria-label", "Forward " + far + " seconds");
       show();
-    }
-
-    // several films: move to another one, and carry on playing if this one was
-    function turn(by, going, part) {
-      var st = state(), was = film();
-      if (!was.paused) was.pause();
-      st.track = ((st.track || 0) + by + st.reel.length) % st.reel.length;
-      var v = film();
-      try { v.currentTime = part && v.duration ? part * v.duration : 0; } catch (e) {}
-      if (going) start(v);
-      show();
-      kick();
     }
 
     films.forEach(function (v) {
-      ["play", "pause", "timeupdate", "loadedmetadata", "seeked"].forEach(function (type) { v.addEventListener(type, function () { if (v === film()) show(); }); });
-      v.addEventListener("ended", function () {
-        if (v !== film()) return;
-        if (state().reel) turn(1, true); else show();
-      });
+      ["play", "pause", "ended", "timeupdate", "loadedmetadata", "seeked", "volumechange"].forEach(function (type) { v.addEventListener(type, function () { if (v === film()) show(); }); });
     });
 
     play.addEventListener("click", function () {
@@ -1934,13 +1942,13 @@ html:not(.js) canvas.piece { display: none; }
       var v = film(), st = state();
       if (!v) return;
       api.own = true;
-      if (st.reel) { turn(by, !v.paused && !v.ended); return; }
       if (!v.duration) return;
-      var to = v.currentTime + by * 2;
+      var to = v.currentTime + by * (st.length > 60 ? 10 : 2);   // a long film moves in longer steps
       v.currentTime = v.loop ? (to + v.duration) % v.duration : Math.max(0, Math.min(v.duration - 0.05, to));
     }
     back.addEventListener("click", function () { skip(-1); });
     next.addEventListener("click", function () { skip(1); });
+    muteKey.addEventListener("click", function () { var v = film(); if (v) v.muted = !v.muted; });
     rateKey.addEventListener("click", function () {
       rate = (rate + 1) % RATES.length;
       var r = RATES[rate], text = (r === 0.5 ? "½" : r) + "×";
@@ -1953,14 +1961,9 @@ html:not(.js) canvas.piece { display: none; }
     function scrub(e) {
       var v = film(), st = state(), b = seek.getBoundingClientRect(), thumb = b.height * 0.6;
       if (!v) return;
-      var at = clamp((e.clientX - b.left - thumb / 2) / (b.width - thumb)), part = at;
-      if (st.reel) {                       // the groove runs through every film: find the one under the thumb
-        var n = st.reel.length, i = Math.min(n - 1, Math.floor(at * n));
-        part = at * n - i;
-        if (i !== (st.track || 0)) { turn(i - (st.track || 0), !v.paused && !v.ended, part); mark(at); return; }
-      }
-      if (!v.duration) return;
-      v.currentTime = Math.min(v.duration - 0.05, part * v.duration);
+      var at = clamp((e.clientX - b.left - thumb / 2) / (b.width - thumb)), d = span(v, st);
+      if (!d) return;
+      v.currentTime = Math.min(d - 0.05, at * d);   // on a film not yet fetched this sets where it will start
       mark(at);
     }
     seek.addEventListener("pointerdown", function (e) {
@@ -2255,18 +2258,19 @@ html:not(.js) canvas.piece { display: none; }
     // lines that name a piece of work show it: the frame takes the picture's shape
     sync:      { ratio: 1139 / 733,  label: "The Walking Dead Story Sync", plate: "sync" },
     character: { ratio: 0, hidden: true, brood: true },   // six Woodies, in place of the frame
-    // a film plays in the player (`deck`), which works out its own shape from the film's (`ratio`) and the room it has.
-    // `tone` is the colour of its plastic; `solo` is a film too short to skip through
+    // a film that plays on its own has the player (`deck`), which works out its shape from the film's (`ratio`) and
+    // the room it has. `tone` is the colour of its plastic
     storysync: { ratio: 640 / 360, label: "The Walking Dead Story Sync, AMC", plate: "storysync", deck: true },
     madmen:    { ratio: 1200 / 810,  label: "Mad Men: The Fan Cut, AMC",   plate: "madmen" },
     dmv:       { ratio: 1200 / 810,  label: "California DMV",              plate: "dmv" },
     ultradao:  { ratio: 1,           plate: "ultradao", stages: ["ultradao-1", "ultradao-2", "ultradao-3", "ultradao-4", "ultradao-5", "ultradao-6"] },   // the art carries its own name
     sheet:     { ratio: 0, hidden: true },                // a sheet of real Woodies fills the page, in place of the frame
-    poster:    { ratio: 720 / 1081,  label: "Woodies: Origin",             plate: "poster" },
-    reel:      { ratio: 480 / 270, tone: "lime", label: "Six scenes from Woodies: Origin", reel: ["clip-1", "clip-2", "clip-3", "clip-4", "clip-5", "clip-6"], deck: true },   // the player shows them one after another
+    // the whole film, with sound: it waits for a press of play (`manual`) and is not fetched before (`length`, in seconds, stands in for what the file would say)
+    origin:    { ratio: 1280 / 720, tone: "lime", label: "Woodies: Origin, the short film", plate: "origin", deck: true, manual: true, sound: true, length: 219 },
+    reel:      { ratio: 0, hidden: true },                // the film's loops are on screen
     threed:    { ratio: 4 / 5,       label: "Woodie #1188. Drag to turn it.", plate: "threed" },   // a real 3D model, on a canvas
     assistant: { ratio: 560 / 604, tone: "grape", label: "Homebase Assistant, covering a shift", plate: "assistant", deck: true },
-    lift:      { ratio: 848 / 558, tone: "grape", solo: true, label: "Homebase Assistant", plate: "lift", deck: true },
+    lift:      { ratio: 848 / 558,   label: "Homebase Assistant",          plate: "lift" },   // plays once as its line arrives, so it has no player
     // drawings that state the fact in their line
     // `tall` is the shape on a phone, where the drawing has more height than width to fill
     team:    { ratio: 0,      draw: "team" },      // loops that grow past any frame
@@ -2358,7 +2362,7 @@ html:not(.js) canvas.piece { display: none; }
 
     // art: the first line drops away and starts the drawing, then the piece moves to its half of the screen
     if (art) artScroll(current, q, still);
-    // film: the page goes dark
+    // film: the page goes dark, and the clips come up one after another and play
     var night = 0;
     segs.forEach(function (s) {
       if (!s.film) return;
@@ -2366,6 +2370,16 @@ html:not(.js) canvas.piece { display: none; }
       if (on) night = Math.min(ease(q / 0.08), 1 - ease((q - 0.95) / 0.05));
       // the Woodies pictures load once the reader is within two sections of them
       if (!woodiesNear && segs.indexOf(current) >= segs.indexOf(s) - 2) { woodiesNear = true; document.documentElement.classList.add("woodies-near"); askViewer(); }
+      // the clips belong to the line marked "reel": they come up through it and go as it leaves
+      var reel = -1, t = -1;
+      s.lines.forEach(function (line, j) { if (line.state === "reel") reel = j; });
+      if (on && reel >= 0 && q >= s.starts[reel] && q < s.starts[reel + 1]) t = (q - s.starts[reel]) / (s.starts[reel + 1] - s.starts[reel]);
+      s.clips.forEach(function (clip, i) {
+        var up = t < 0 ? 0 : ease((t - 0.08 - i * 0.05) / 0.1) * (1 - ease((t - 0.9) / 0.1));
+        clip.style.opacity = up;
+        if (up > 0.02 && clip.paused && !still) { var playing = clip.play(); if (playing && playing.catch) playing.catch(function () {}); }
+        if (up <= 0.02 && !clip.paused) clip.pause();
+      });
     });
     dark.style.opacity = night;
 
@@ -3379,10 +3393,11 @@ html:not(.js) canvas.piece { display: none; }
     var st = STATES[name], level = films ? 2 : 1;
     if (!st || (fetched[name] || 0) >= level) return;
     fetched[name] = level;
-    (st.stages || st.reel || (st.plate ? [st.plate] : [])).forEach(function (plateName) {
+    (st.stages || (st.plate ? [st.plate] : [])).forEach(function (plateName) {
       var el = plates[plateName];
       if (!el) return;
       if (el.tagName === "IMG") { if (!el.getAttribute("src") && el.getAttribute("data-src")) el.src = el.getAttribute("data-src"); }
+      else if (el.tagName === "VIDEO" && st.manual) { if (!el.getAttribute("poster")) el.poster = el.getAttribute("data-poster"); }   // a film the reader starts: only its still
       else if (films && el.tagName === "VIDEO" && el.preload !== "auto") { el.preload = "auto"; if (el.readyState === 0 && el.paused) el.load(); }
     });
     if (st.brood) brood.forEach(function (img) { if (!img.getAttribute("src")) img.src = img.getAttribute("data-src"); });
@@ -3398,13 +3413,13 @@ html:not(.js) canvas.piece { display: none; }
   function run(el, on, name) {
     var once = el.hasAttribute("data-once");   // plays through one time and holds on its last frame
     var theirs = deck.own && deck.name === name;
-    if (on > 0.05 && !theirs) {
+    if (on > 0.05 && !theirs && !STATES[name].manual) {
       if (el.paused && !el.ended && !reduce.matches) { var pl = el.play(); if (pl && pl.catch) pl.catch(function () {}); }
       if (once && reduce.matches && el.duration && el.currentTime < el.duration - 0.1) el.currentTime = el.duration;
     }
     if (on <= 0.05) {
       if (!el.paused) el.pause();
-      if ((once || STATES[name].reel) && el.currentTime > 0) el.currentTime = 0;   // ready to play again next time
+      if (once && el.currentTime > 0) el.currentTime = 0;   // ready to play again next time
     }
   }
 
@@ -3453,11 +3468,6 @@ html:not(.js) canvas.piece { display: none; }
     deck.use(deckName, deckOn, lay, moved);
     NAMES.forEach(function (n) {
       var st = STATES[n];
-      if (st.reel) {                       // several films in one player: the one whose turn it is shows and plays
-        var up = presence[n] * shown, turn = st.track || 0;
-        st.reel.forEach(function (name, i) { var f = plates[name]; f.style.opacity = i === turn ? up : 0; run(f, i === turn ? up : 0, n); });
-        return;
-      }
       if (!st.plate) return;
       if (st.stages) {
         // a piece that grows: each stage comes up over the one before as the lines go by, and it never goes back on its own
@@ -3561,7 +3571,7 @@ html:not(.js) canvas.piece { display: none; }
       sheet:     { eyes: "star",  mouth: "big",   mark: "heart", watch: true },
       reel:      { eyes: "wide",  mouth: "o",     watch: true },
       threed:    { eyes: "star",  mouth: "big",   watch: true },
-      poster:    { eyes: "star",  mouth: "big",   watch: true },
+      origin:    { eyes: "star",  mouth: "big",   watch: true },
       assistant: { eyes: "wide",  mouth: "smile", watch: true },
       lift:      { eyes: "wide",  mouth: "big",   mark: "!", watch: true },
       team:      { eyes: "open",  mouth: "big",   watch: true },
