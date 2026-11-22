@@ -6,7 +6,9 @@
 <title>Chris Wallace</title>
 <meta name="description" content="Chris Wallace is a designer, technologist and founder who designs digital products that define new categories.">
 <link rel="canonical" href="https://chriswallace.net/">
-<link rel="icon" type="image/png" href="/assets/images/favicon.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://chriswallace.net/">
 <meta property="og:title" content="Chris Wallace">
@@ -40,14 +42,16 @@
   --night: #05060d;       /* the page during the film */
   --grove: #0d3b2c;       /* the page behind the Woodies stickers */
   --slate: #17181b;       /* the page behind the avatar, dark like a 3D editor */
+  --paper: #161631;       /* the page behind the Interplay piece: the piece's own paper (#171732, #14142f once its grain is on) */
   --live: #ffe600;        /* the one live mark: Chris */
   --unlit: 0.26;          /* a word before the scroll reaches it */
 
   /* type: one family, one weight. Each section uses one size. */
   --font: "Redaction 50", Georgia, "Times New Roman", serif;
-  --display-size: clamp(2.25rem, 10vw, 4rem);     /* a short line with the screen to itself */
-  --impact-size: clamp(1.875rem, 8.6vw, 3.5rem);   /* longer lines with the screen to themselves */
-  --say-size: clamp(1.75rem, 7.6vw, 3rem);         /* lines under the drawing */
+  /* each size grows steadily with the screen and meets the wide-screen size at 900px, so a tablet is never larger than a laptop */
+  --display-size: clamp(2.25rem, 1.7rem + 2.75vw, 3.25rem);     /* a short line with the screen to itself */
+  --impact-size: clamp(1.875rem, 1.4rem + 2.6vw, 2.875rem);     /* longer lines with the screen to themselves */
+  --say-size: clamp(1.75rem, 1.45rem + 1.45vw, 2.25rem);        /* lines under the drawing */
   --body-size: 1.25rem;                            /* the index, the button */
   --data-size: 1rem;                               /* the name, the contact link, the frame's label */
 
@@ -59,7 +63,10 @@
   --s8: 2rem;
   --s12: 3rem;
   --s16: 4rem;
-  --gutter: clamp(1.75rem, 5vw, 4.5rem);
+  /* the grid: a side margin, and on a wide screen twelve columns inside it.
+     Words start at column 1. Every drawing, plate and piece of work starts at column 7. */
+  --gutter: clamp(1.75rem, 10vw - 1.75rem, 5.5rem);   /* 28px on a phone, wider from 560px, 88px from about 1160px */
+  --col-gap: clamp(1rem, 0.25rem + 1.6vw, 2rem);
   --bar: calc(var(--gutter) + var(--s12)); /* room for the name and the contact link */
   --when-col: 6.5rem;     /* the date column */
   --tick-row: 22px;       /* the spacing of the chapter ticks */
@@ -150,6 +157,11 @@ ol { padding: 0; list-style: none; }
   opacity: 0;
   touch-action: pan-y;
   cursor: grab;
+}
+#plate canvas[data-plate="threed"] {   /* a studio backdrop in the forest's green, so the model stands in its own space and not on the trees */
+  background:
+    radial-gradient(ellipse 62% 46% at 50% 44%, rgb(232 255 240 / 0.14), transparent 72%),
+    linear-gradient(180deg, #2b4440 0%, #39574f 64%, #45665c 100%);
 }
 #plate canvas.is-live { pointer-events: auto; }
 #plate canvas.is-live:active { cursor: grabbing; }
@@ -276,6 +288,67 @@ ol { padding: 0; list-style: none; }
   .ticks:not(.is-scrubbing) .tick:hover::before { background: var(--ink); }
   .ticks:not(.is-scrubbing) .tick:hover .tick-name { opacity: 1; }
 }
+/* On a touch screen the ticks wait folded into one short line under the contact link, with a mark for where you are.
+   A tap on the line opens the ticks in their place. A press on the line and a drag down into them moves between chapters. */
+.ticks-handle { display: none; }
+@media (hover: none) and (pointer: coarse) {
+  .js .ticks-handle {
+    --h: 56px;                        /* the line, plus room above and below it for a thumb */
+    display: block;
+    position: fixed;
+    top: var(--bar);
+    right: calc(max(12px, 3vmin) + var(--s2) - 14px);   /* the line sits where the ticks end */
+    z-index: 4;
+    width: 44px;
+    height: var(--h);
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--ink);
+    font: inherit;
+    font-size: var(--data-size);
+    touch-action: none;               /* a drag from the line moves between chapters, not the page */
+    -webkit-tap-highlight-color: transparent;
+    transition: opacity var(--dur-base) var(--ease-out);
+  }
+  .ticks-handle::before {             /* the line */
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 10px;
+    bottom: 10px;
+    width: var(--line);
+    background: var(--rule);
+  }
+  .ticks-at {                         /* where you are in the story */
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--ink);
+    transform: translateY(calc(var(--at, 0) * (var(--h) - 26px)));
+    transition: transform 400ms var(--ease-out);
+  }
+  .ticks-handle .tick-name { right: 30px; top: calc(10px + var(--at, 0) * (var(--h) - 26px) + 3px); }
+  .ticks-handle.is-named .tick-name { opacity: 1; }
+  .ticks-handle:focus-visible { outline: none; }
+  .ticks-handle:focus-visible::before { background: var(--ink); }
+  .js .ticks-track {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px);
+    transition: opacity var(--dur-base) var(--ease-out), transform 320ms var(--ease-out), visibility 0s linear var(--dur-base);
+  }
+  .js .ticks.is-open .ticks-track {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: opacity var(--dur-base) var(--ease-out), transform 320ms var(--ease-out), visibility 0s;
+  }
+  .js .ticks.is-open + .ticks-handle { opacity: 0.4; }
+}
 
 /* statements */
 /* statements: one treatment per section. The lines of a section share one place and replace each other. */
@@ -299,6 +372,8 @@ ol { padding: 0; list-style: none; }
 /* words wait unlit until the scroll reaches them */
 .js .say .w { opacity: var(--unlit); transition: opacity var(--dur-base) var(--ease-out); }
 .js .say .w.on { opacity: 1; }
+.js .say .gap { opacity: var(--unlit); transition: opacity var(--dur-base) var(--ease-out); }   /* a space inside a link, under its underline */
+.js .say .gap.on { opacity: 1; }
 
 /* a block cursor sits after the last word the scroll has lit */
 .js .say .w { position: relative; }
@@ -363,8 +438,7 @@ ol { padding: 0; list-style: none; }
 .projects {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--s6) var(--s12);
-  max-width: 62rem;
+  gap: var(--s8) var(--col-gap);   /* with the grid's column gap, the second column starts at column 7, where the drawings start */
   font-size: var(--data-size);
   line-height: 1.4;
 }
@@ -507,29 +581,50 @@ ol { padding: 0; list-style: none; }
   #sheet::after { background: linear-gradient(0deg, rgb(5 6 13 / 0.92) 0%, rgb(5 6 13 / 0.7) 40%, rgb(5 6 13 / 0.4) 100%); }
 }
 
-/* art: the lines sit above a strip of Interplay pieces that crosses the screen as you scroll */
-.panel--art {
-  padding-top: calc(var(--bar) + var(--s12));   /* clear of the mascot */
-  grid-template-rows: auto minmax(0, 1fr);
-  align-content: stretch;
-  padding-bottom: 0;
-  overflow: hidden;
+/* art: the page turns the paper of one Interplay piece, and the real renderer draws the piece on it.
+   The first line sits in the middle of the empty field. Its words fall away and the shapes start to land.
+   Then the piece moves to its half of the screen, and the pen pass starts with the line about the second hand. */
+#paper {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: var(--paper);
+  opacity: 0;
+  pointer-events: none;
 }
-.panel--art .lines { align-self: start; }
-.strip {
-  display: flex;
-  gap: var(--s6);
-  align-self: end;
-  width: max-content;
-  padding-bottom: var(--gutter);
-  will-change: transform;
-}
-.strip img {
+.panel--art .stage { position: relative; }
+.piece {
+  position: absolute;
   display: block;
-  height: min(46svh, 34rem);
-  width: auto;
-  outline: 1px solid rgb(255 255 255 / 0.1);
-  outline-offset: -1px;
+  transform-origin: 50% 50%;
+  transition: opacity 600ms var(--ease-out);
+}
+.js .piece { will-change: transform; }
+html:not(.js) .piece { position: static; width: min(100%, 26rem); height: auto; margin-inline: auto; }
+html:not(.js) canvas.piece { display: none; }
+.js img.piece { visibility: hidden; }
+.js .piece-failed img.piece { visibility: visible; }
+.js .piece-failed canvas.piece { display: none; }
+.js .panel--art .say--over {        /* the first line, centred over the empty field */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: min(20ch, calc(100vw - var(--gutter) * 2));
+  max-width: none;
+  transform: translate(-50%, -50%);
+  padding-right: 0;
+  text-align: center;
+  font-size: var(--display-size);
+  line-height: 1.06;
+}
+.js .say.is-dropped { visibility: hidden; }
+#fall { position: fixed; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
+#fall span {
+  position: absolute;
+  font-family: var(--font);
+  color: var(--ink);
+  white-space: pre;
+  will-change: transform, opacity;
 }
 
 /* film: six short loops from Woodies: Origin, laid out off the grid */
@@ -593,19 +688,23 @@ ol { padding: 0; list-style: none; }
 
 @media (min-width: 900px) {
   :root {
-    --display-size: clamp(2.5rem, 1rem + 4.2vw, 4.75rem);
-    --impact-size: clamp(2rem, 1rem + 4.2vw, 5rem);
-    --say-size: clamp(1.75rem, 0.4rem + 3vw, 3.5rem);
+    --display-size: clamp(2.5rem, 1.9rem + 2.4vw, 4.75rem);   /* laptops sit lower on the scale; the full size comes at about 1920px */
+    --impact-size: clamp(2rem, 1.25rem + 3.1vw, 5rem);
+    --say-size: clamp(1.75rem, 0.675rem + 2.35vw, 3.5rem);
   }
-  .panel--story {   /* the words and the drawing share the screen half and half */
+  .panel--story {   /* the words take columns 1 to 6, the drawing 7 to 12 */
     grid-template-rows: none;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    column-gap: var(--gutter);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--col-gap);
     padding-top: var(--bar);
   }
-  .panel--story .stage { grid-column: 2; grid-row: 1; margin-inline: 0; }
-  .panel--story .text { grid-column: 1; grid-row: 1; align-content: center; }
+  .panel--story .stage { grid-column: 7 / -1; grid-row: 1; margin-inline: 0; }
+  .panel--story .text { grid-column: 1 / 7; grid-row: 1; align-content: center; padding-right: var(--col-gap); }
 
+}
+
+@media (min-width: 1280px) {
+  .panel--story .text { grid-column: 1 / 6; padding-right: 0; }   /* with room to spare, the words keep column 6 empty, as air before the drawing */
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -620,6 +719,8 @@ ol { padding: 0; list-style: none; }
 <div id="sheet" aria-hidden="true"><div class="plane"></div></div>
 <div id="grove" aria-hidden="true"></div>
 <div id="slate" aria-hidden="true"></div>
+<div id="paper" aria-hidden="true"></div>
+<div id="fall" aria-hidden="true"></div>
 <div id="plate" aria-hidden="true">
   <img data-plate="sync" src="assets/images/work/story-sync.webp" alt="" width="1139" height="733" decoding="async">
   <video data-plate="storysync" src="assets/video/story-sync.mp4" muted loop playsinline preload="none" width="640" height="360"></video>
@@ -655,7 +756,7 @@ ol { padding: 0; list-style: none; }
 </header>
 
 <nav class="ticks" aria-label="Chapters">
-  <ol class="ticks-track">
+  <ol class="ticks-track" id="chapter-ticks">
     <li><a class="tick" href="#intro"><span class="tick-name">Intro</span></a></li>
     <li><a class="tick" href="#questions"><span class="tick-name">Questions</span></a></li>
     <li><a class="tick" href="#process"><span class="tick-name">Process</span></a></li>
@@ -670,6 +771,7 @@ ol { padding: 0; list-style: none; }
     <li><a class="tick" href="#principles"><span class="tick-name">Principles</span></a></li>
   </ol>
 </nav>
+<button class="ticks-handle" type="button" aria-label="Chapters" aria-expanded="false" aria-controls="chapter-ticks"><span class="ticks-at"></span><span class="tick-name" aria-hidden="true"></span></button>
 
 <main id="top">
   <section class="seg" id="intro" data-state="open">
@@ -697,7 +799,7 @@ ol { padding: 0; list-style: none; }
         <h2 class="say">Most of my work starts as a question.</h2>
         <p class="say" data-state="sync">How can fans deepen connection to their favorite IP?</p>
         <p class="say" data-state="character">What if they could own a piece of it?</p>
-        <p class="say" data-state="lift">What if every small business had the best COO in their pocket?</p>
+        <p class="say" data-state="lift">What if every small business had a COO in their pocket?</p>
       </div>
     </div>
   </section>
@@ -706,7 +808,7 @@ ol { padding: 0; list-style: none; }
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
-        <h2 class="say">My process is experimentation.</h2>
+        <h2 class="say">My process is to experiment and iterate on new ideas.</h2>
         <p class="say" data-state="answers">Those questions became a companion app for TV series, an animated short film, and an always-on AI assistant.</p>
         <p class="say" data-state="journey">Each idea goes through many rounds of sketches and tests.</p>
       </div>
@@ -714,22 +816,18 @@ ol { padding: 0; list-style: none; }
   </section>
 
   <section class="seg" id="art" data-state="art">
-    <div class="panel panel--art">
-      <div class="lines">
-        <h2 class="say">In 2022, I started co-creating art with AI.</h2>
-        <p class="say">This series, Interplay, is the result.</p>
-        <p class="say">Is AI a collaborator? A tool? AGI?</p>
-        <p class="say">To me, art expresses humanity.</p>
+    <div class="panel panel--story panel--art">
+      <div class="stage">
+        <canvas class="piece" role="img" aria-label="Interplay, Austin palette, seed chris-3384, drawn live by its generator: orange, teal, yellow and cream shapes bloom in the middle of a navy field. Then a second hand's pen loops sweep across them."></canvas>
+        <img class="piece" src="assets/images/interplay/interplay-3384.webp" alt="Interplay, Austin palette, seed chris-3384: orange, teal, yellow and cream shapes bloom in the middle of a navy field, and a second hand's pen loops sweep across them." width="720" height="1018" loading="lazy" decoding="async">
       </div>
-      <div class="strip">
-        <img src="assets/images/interplay/interplay-1.webp" alt="Interplay, Austin palette, seed oonBYKsJ" width="520" height="736" loading="lazy" decoding="async">
-        <img src="assets/images/interplay/interplay-2.webp" alt="Interplay, Omentejovum palette, seed ooT2SbMM" width="520" height="736" loading="lazy" decoding="async">
-        <img src="assets/images/interplay/interplay-3.webp" alt="Interplay, Golid palette, seed ooYkGqsE" width="520" height="736" loading="lazy" decoding="async">
-        <img src="assets/images/interplay/interplay-4.webp" alt="Interplay, Austin palette, seed ooGMm2na" width="520" height="736" loading="lazy" decoding="async">
-        <img src="assets/images/interplay/interplay-5.webp" alt="Interplay, Yorktown palette, seed ooPmHHcP" width="520" height="736" loading="lazy" decoding="async">
-        <img src="assets/images/interplay/interplay-6.webp" alt="Interplay, Dubai palette, seed ooeH8R5q" width="520" height="736" loading="lazy" decoding="async">
-        <img src="assets/images/interplay/interplay-7.webp" alt="Interplay, Omentejovum palette, seed oopparAc" width="520" height="736" loading="lazy" decoding="async">
-        <img src="assets/images/interplay/interplay-8.webp" alt="Interplay, Austin palette, seed ooyx9A4M" width="520" height="736" loading="lazy" decoding="async">
+      <div class="text lines">
+        <h2 class="say say--over">In 2023, I started co-creating art with AI.</h2>
+        <p class="say">In Interplay, I set the rules and GPT-4 helped write the code.</p>
+        <p class="say">The code draws each piece by itself, one shape at a time.</p>
+        <p class="say">Then a second hand traces another piece’s shapes over it in pen.</p>
+        <p class="say">Was AI a collaborator or a tool? It felt like both.</p>
+        <p class="say">But art still needs a person who means something by it.</p>
       </div>
     </div>
   </section>
@@ -737,7 +835,7 @@ ol { padding: 0; list-style: none; }
   <section class="seg" data-state="quiet">
     <div class="panel panel--words">
       <div class="lines">
-        <h2 class="say">My professional journey is a series of deep collaborations with friends.</h2>
+        <h2 class="say">My professional journey is paved with curiosity and collaboration.</h2>
       </div>
     </div>
   </section>
@@ -820,7 +918,7 @@ ol { padding: 0; list-style: none; }
     <div class="panel panel--story">
       <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
-        <h2 class="say" data-state="assistant">Which brings me back to that last question.</h2>
+        <h2 class="say" data-state="assistant">Which brings me back to that question about helping small business owners.</h2>
         <p class="say" data-state="assistant">Now I’m leading design for <a href="https://joinhomebase.com" target="_blank" rel="noopener">Homebase Assistant</a>.</p>
         <p class="say" data-state="week">The vision is to be an operational partner for small business owners.</p>
         <p class="say" data-state="week">It’s the hardest work I’ve done, and the best.</p>
@@ -854,10 +952,10 @@ ol { padding: 0; list-style: none; }
           </a>
         </li>
         <li class="project">
-          <div>
-            <span class="project-head"><span class="project-name">Lofty Ambitions</span> <span class="project-state">Coming soon</span></span>
+          <a href="https://pendium.co/lofty-ambitions/" target="_blank" rel="noopener">
+            <span class="project-head"><span class="project-name">Lofty Ambitions</span> <span class="project-state is-live">Live</span></span>
             <span class="project-what">A tower management game in Tokyo-inspired pixel art, for Mac and Windows.</span>
-          </div>
+          </a>
         </li>
       </ol>
     </div>
@@ -922,6 +1020,7 @@ ol { padding: 0; list-style: none; }
   var dark = document.getElementById("dark");
   var grove = document.getElementById("grove");
   var slate = document.getElementById("slate");
+  var paperLayer = document.getElementById("paper");
   var pulse = document.getElementById("pulse");
   var sheet = document.getElementById("sheet"), plane = sheet.querySelector(".plane"), sheetAt = 0, woodiesNear = false;
   var SLATE = css.getPropertyValue("--slate").trim();
@@ -939,17 +1038,23 @@ ol { padding: 0; list-style: none; }
 
   function split(el) {            // keeps links: the words inside a link stay inside it
     var out = [];
-    (function walk(node) {
+    (function walk(node, inLink) {
       Array.prototype.slice.call(node.childNodes).forEach(function (child) {
-        if (child.nodeType === 1) { walk(child); return; }
+        if (child.nodeType === 1) { walk(child, inLink || child.nodeName === "A"); return; }
         if (child.nodeType !== 3) return;
-        var frag = document.createDocumentFragment();
+        var frag = document.createDocumentFragment(), gap = null;
         child.textContent.split(/(\s+)/).forEach(function (part) {
           if (!part) return;
-          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(" ")); return; }
+          if (/^\s+$/.test(part)) {
+            // a space inside a link carries the underline, so it waits unlit too, and lights with the word after it
+            if (inLink) { gap = document.createElement("span"); gap.className = "gap"; gap.textContent = " "; frag.appendChild(gap); }
+            else frag.appendChild(document.createTextNode(" "));
+            return;
+          }
           var span = document.createElement("span");
           span.className = "w";
           span.textContent = part;
+          if (gap) { span.gap = gap; gap = null; }
           frag.appendChild(span);
           out.push(span);
         });
@@ -963,6 +1068,7 @@ ol { padding: 0; list-style: none; }
     for (var i = 0; i < words.length; i++) {
       words[i].classList.toggle("on", i < count);
       words[i].classList.toggle("cur", i === count - 1);
+      if (words[i].gap) words[i].gap.classList.toggle("on", i < count);
     }
   }
 
@@ -972,7 +1078,6 @@ ol { padding: 0; list-style: none; }
       state: el.getAttribute("data-state"),
       panel: el.querySelector(".panel"),
       stage: el.querySelector(".stage"),
-      strip: el.querySelector(".strip"),
       clips: Array.prototype.slice.call(el.querySelectorAll(".clip")),
       grid: el.querySelector(".projects"),
       cards: Array.prototype.slice.call(el.querySelectorAll(".project")),
@@ -1033,6 +1138,25 @@ ol { padding: 0; list-style: none; }
     return { a: a, at: at };
   });
   var chapterOn = null, nameTimer = 0, scrubbing = false, scrubbed = false;
+  // On a touch screen the ticks wait folded into one line (the handle) and open on a tap or a drag from it.
+  var handle = document.querySelector(".ticks-handle");
+  var handleName = handle.querySelector(".tick-name");
+  var touch = window.matchMedia("(hover: none) and (pointer: coarse)");
+  var openTimer = 0, handleTimer = 0;
+  function isOpen() { return ticks.classList.contains("is-open"); }
+  function setOpen(on) {
+    ticks.classList.toggle("is-open", on);
+    handle.setAttribute("aria-expanded", on ? "true" : "false");
+    clearTimeout(openTimer);
+    clearTimeout(nameTimer);
+    nameOnly(on ? chapterOn : null);    // open, the ticks name the chapter you are in
+    handle.classList.remove("is-named");
+    if (on) closeSoon(4000);
+  }
+  function closeSoon(ms) {           // the ticks fold away once they have not been used for a while
+    clearTimeout(openTimer);
+    openTimer = setTimeout(function () { if (!scrubbing) setOpen(false); }, ms);
+  }
   function nameOnly(c) {             // show one chapter's name, or none
     chapters.forEach(function (d) { d.a.classList.toggle("is-named", d === c); });
   }
@@ -1045,7 +1169,15 @@ ol { padding: 0; list-style: none; }
     chapters.forEach(function (c) {
       if (c === on) c.a.setAttribute("aria-current", "true"); else c.a.removeAttribute("aria-current");
     });
+    handle.style.setProperty("--at", (chapters.indexOf(on) / (chapters.length - 1)).toFixed(3));
     if (first || scrubbing) return;
+    if (touch.matches && !isOpen()) {  // folded: the name shows beside the handle instead
+      handleName.textContent = on.a.textContent;
+      handle.classList.add("is-named");
+      clearTimeout(handleTimer);
+      handleTimer = setTimeout(function () { handle.classList.remove("is-named"); }, 1400);
+      return;
+    }
     nameOnly(on);                    // name the chapter you just reached, then let it go
     clearTimeout(nameTimer);
     nameTimer = setTimeout(function () { if (!scrubbing) nameOnly(null); }, 1400);
@@ -1089,6 +1221,7 @@ ol { padding: 0; list-style: none; }
     ticks.classList.remove("is-scrubbing");
     clearTimeout(nameTimer);
     nameTimer = setTimeout(function () { nameOnly(null); }, 900);
+    if (touch.matches) closeSoon(1200);
   }
   track.addEventListener("pointerup", scrubEnd);
   track.addEventListener("pointercancel", scrubEnd);
@@ -1097,7 +1230,51 @@ ol { padding: 0; list-style: none; }
       e.preventDefault();
       if (scrubbed) { scrubbed = false; return; }   // the drag has already moved the page
       jump(c);
+      if (touch.matches) closeSoon(900);
     });
+  });
+
+  // The handle: a tap opens the ticks, or folds them if they are open. A press and a drag down opens them,
+  // and once the finger reaches them it moves between chapters, as a drag along the ticks does.
+  var press = null;
+  handle.addEventListener("pointerdown", function (e) {
+    if (e.button) return;
+    e.preventDefault();
+    handle.setPointerCapture(e.pointerId);
+    press = { y: e.clientY, was: isOpen(), moved: false };
+    setOpen(true);
+  });
+  handle.addEventListener("pointermove", function (e) {
+    if (!press) return;
+    if (!press.moved && Math.abs(e.clientY - press.y) > 8) press.moved = true;
+    if (!press.moved) return;
+    var b = track.getBoundingClientRect();
+    if (!scrubbing && e.clientY >= b.top) {   // the finger has reached the ticks
+      scrubbing = true; scrubbed = true; under = chapterOn;
+      ticks.classList.add("is-scrubbing");
+      clearTimeout(nameTimer);
+      clearTimeout(openTimer);
+    }
+    if (scrubbing) scrubTo(e.clientY);
+  });
+  function pressEnd() {
+    if (!press) return;
+    var p = press;
+    press = null;
+    if (scrubbing) { scrubEnd(); return; }
+    if (!p.moved && p.was) setOpen(false);   // a tap on the handle of open ticks folds them
+  }
+  handle.addEventListener("pointerup", pressEnd);
+  handle.addEventListener("pointercancel", pressEnd);
+  handle.addEventListener("click", function (e) {   // Enter or Space on a focused handle
+    if (e.detail) return;                    // a tap, already handled above
+    setOpen(!isOpen());
+  });
+  document.addEventListener("pointerdown", function (e) {   // a tap anywhere else folds them
+    if (isOpen() && !ticks.contains(e.target) && !handle.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && isOpen()) { setOpen(false); handle.focus(); }
   });
 
   /* ---------- the 3D Woodie ---------- */
@@ -1129,6 +1306,223 @@ ol { padding: 0; list-style: none; }
     viewer.once();
   });
   ["pointerup", "pointercancel"].forEach(function (type) { model.addEventListener(type, function () { grab = null; }); });
+
+  /* ---------- the Interplay piece ---------- */
+  // The real Interplay renderer (assets/js/interplay.js) draws one fixed piece on the art section's canvas, a step at a time.
+  // The renderer loads once the reader is within two sections. The first line sits over the empty printed field.
+  // Once it is lit and has held a moment, or the reader scrolls on, its words fall away and act one starts: the shapes land.
+  // Act two, the second hand's pen lines, waits for the line that names it. The drawing plays once and stays drawn.
+  // At the end the exact finished piece settles over the drawing. Where the renderer cannot run, a still of the piece shows.
+
+  var PIECE = { seed: "chris-3384", partner: "hand-398" };   // the partner's forms come back as the second hand's pen lines
+  var PIECE_RATIO = 1714 / 1212;              // the renderer's A-series page
+  var ACT_ONE = 3600, ACT_TWO = 4800, SETTLE = 500;   // in ms
+  var fallLayer = document.getElementById("fall");
+  var art = (function () {
+    var s = null;
+    segs.forEach(function (x) { if (x.state === "art") s = x; });
+    if (!s || !s.stage) return null;
+    return {
+      seg: s,
+      stage: s.stage,
+      canvas: s.stage.querySelector("canvas.piece"),
+      over: s.lines[0],     // the line over the empty field
+      hand: 3,              // the line that starts the second hand
+      asked: false, ready: false, want: false,
+      steps: null, counts: null, finished: null,
+      phase: 0,             // 0 waiting, 1 act one, 2 waiting for the hand, 3 act two, 4 settling, 5 drawn
+      handOk: false, dropped: false, hold: 0, t0: 0, done: 0, raf: 0,
+      slot: -1, t: 0, size: ""
+    };
+  })();
+
+  function askPiece() {
+    if (art.asked) return;
+    art.asked = true;
+    var tag = document.createElement("script");
+    tag.src = "assets/js/interplay.js";
+    tag.onload = function () {           // the first render takes about 100 ms, so it waits for a quiet moment
+      (window.requestIdleCallback || setTimeout)(function () { try { pieceReady(); } catch (e) { pieceFailed(); } }, { timeout: 1500 });
+    };
+    tag.onerror = pieceFailed;
+    document.head.appendChild(tag);
+  }
+  function pieceFailed() {
+    art.stage.classList.add("piece-failed");
+    art.phase = 5;
+  }
+  function pieceReady() {
+    var P = window.Interplay;
+    if (!P || !P.renderSteps || !art.canvas.getContext) throw new Error("no renderer");
+    // one size for the life of the page, enough for the piece centred on the screen
+    var scale = Math.min(window.devicePixelRatio || 1, 2);
+    var px = Math.round(Math.max(600, Math.min(1600, Math.min(vw, vh / PIECE_RATIO) * scale)));
+    art.canvas.width = px;
+    art.canvas.height = Math.round(px * PIECE_RATIO);
+    // the exact finished piece, for the end of the drawing and for readers who prefer less motion
+    art.finished = document.createElement("canvas");
+    art.finished.width = art.canvas.width;
+    art.finished.height = art.canvas.height;
+    P.render(art.finished, PIECE);
+    // how many steps each act takes: the same at any size, so count them on a small canvas
+    var small = document.createElement("canvas");
+    small.width = 60;
+    small.height = 85;
+    var count = P.renderSteps(small, PIECE), n = [0, 0], act = 0, r;
+    while (!(r = count.next()).done) {
+      if (r.value === "hand") act = 1;
+      else if (r.value !== "paper") n[act]++;
+    }
+    art.counts = n;
+    art.steps = P.renderSteps(art.canvas, PIECE);
+    art.steps.next();                         // the paper and the empty printed field
+    art.ready = true;
+    if (art.want) startPiece();
+    kick();
+  }
+  function showFinished() {
+    art.canvas.width = art.canvas.width;      // clears the canvas and any state the stopped drawing left on it
+    art.canvas.getContext("2d").drawImage(art.finished, 0, 0);
+    art.steps = null;
+    art.phase = 5;
+  }
+  function startPiece() {
+    if (!art.ready) { art.want = true; return; }
+    if (art.phase !== 0) return;
+    if (reduce.matches) { showFinished(); return; }
+    art.phase = 1;
+    art.t0 = 0;
+    art.done = 0;
+    pieceLoop();
+  }
+  function allowHand() {
+    if (art.handOk) return;
+    art.handOk = true;
+    if (art.phase === 2) { art.phase = 3; art.t0 = 0; art.done = 0; pieceLoop(); }
+  }
+  function pieceLoop() { if (!art.raf) art.raf = requestAnimationFrame(pieceFrame); }
+  function pieceFrame(now) {
+    art.raf = 0;
+    if (art.phase === 2 || art.phase === 5) return;
+    if (!art.t0) art.t0 = now;
+    var e = now - art.t0;
+    if (art.phase === 4) {                    // the exact piece, with its paper grain, settles over the drawing
+      var c = art.canvas.getContext("2d");
+      c.globalAlpha = e >= SETTLE ? 1 : 0.14;
+      c.drawImage(art.finished, 0, 0);
+      c.globalAlpha = 1;
+      if (e >= SETTLE) { art.phase = 5; art.steps = null; return; }
+      pieceLoop();
+      return;
+    }
+    // act one starts slow, so the largest shapes land one at a time, then the rest rush in.
+    // act two, the pen, runs evenly and eases out.
+    var one = art.phase === 1, n = art.counts[one ? 0 : 1];
+    var x = clamp(e / (one ? ACT_ONE : ACT_TWO));
+    var f = one ? Math.pow(x, 1.6) : 1 - Math.pow(1 - x, 1.8);
+    var want = x >= 1 ? Infinity : Math.floor(n * f);
+    var stop = performance.now() + 9;         // never more than 9 ms of drawing in a frame
+    while (art.done < want && performance.now() < stop) {
+      var r = art.steps.next();
+      if (r.done) { art.phase = 4; art.t0 = 0; break; }
+      if (r.value === "hand") { art.phase = art.handOk ? 3 : 2; art.t0 = 0; art.done = 0; break; }
+      art.done++;
+    }
+    if (art.phase !== 2) pieceLoop();
+  }
+
+  // The first line's words fall away: each hops a little, turns and drops off the bottom of the screen.
+  // They are copies in their own layer, so they keep falling whatever the scroll does to the line.
+  function drop(still) {
+    if (art.dropped) return;
+    art.dropped = true;
+    clearTimeout(art.hold);
+    art.hold = 0;
+    var line = art.over;
+    if (!still && fallLayer.animate) {
+      var cs = getComputedStyle(line.el), R = rand(20230);
+      line.words.forEach(function (w, i) {
+        var b = w.getBoundingClientRect();
+        var copy = document.createElement("span");
+        copy.textContent = w.textContent;
+        copy.style.left = b.left + "px";
+        copy.style.top = b.top + "px";
+        copy.style.fontSize = cs.fontSize;
+        copy.style.letterSpacing = cs.letterSpacing;
+        copy.style.lineHeight = b.height + "px";
+        fallLayer.appendChild(copy);
+        var spin = (R() - 0.5) * 56, drift = (R() - 0.5) * vw * 0.1, down = vh - b.top + b.height;
+        var time = 1150 + R() * 300, wait = i * 60;
+        copy.animate([
+          { transform: "translate(0, 0) rotate(0deg)", easing: "cubic-bezier(0.2, 0.7, 0.35, 1)" },
+          { transform: "translate(" + (drift * 0.1).toFixed(1) + "px, " + (-b.height * 0.24).toFixed(1) + "px) rotate(" + (spin * 0.1).toFixed(1) + "deg)", offset: 0.16, easing: "cubic-bezier(0.55, 0, 0.9, 0.5)" },
+          { transform: "translate(" + drift.toFixed(1) + "px, " + down.toFixed(1) + "px) rotate(" + spin.toFixed(1) + "deg)" }
+        ], { duration: time, delay: wait, fill: "both" });
+        copy.animate([{ opacity: 1 }, { opacity: 0 }], { duration: time * 0.3, delay: wait + time * 0.7, fill: "both" }).onfinish = function () { copy.remove(); };
+      });
+    }
+    line.el.classList.add("is-dropped");
+    startPiece();
+  }
+
+  // Called from measure() on every scroll: drops the first line, starts the acts, and places the piece.
+  function artScroll(current, q, still) {
+    var s = art.seg;
+    if (segs.indexOf(current) >= segs.indexOf(s) - 2) askPiece();
+    if (current !== s) return;
+    var n = s.lines.length, slot = 0;
+    while (slot < n - 1 && q >= s.starts[slot + 1]) slot++;
+    var t = clamp((q - s.starts[slot]) / (s.starts[slot + 1] - s.starts[slot]));
+    art.slot = slot;
+    art.t = t;
+    if (slot === 0) {
+      if (art.dropped && t < 0.4) { art.dropped = false; art.over.el.classList.remove("is-dropped"); }   // back for another look
+      if (!art.dropped) {
+        if (t >= 0.86) drop(still);
+        else if (t >= 0.45 && !still) {     // fully lit: hold a moment, then drop. Without motion, the line stays until the reader moves on.
+          if (!art.hold) art.hold = setTimeout(function () {
+            art.hold = 0;
+            if (art.slot === 0 && art.t >= 0.45) drop(false);
+          }, 900);
+        } else if (art.hold) { clearTimeout(art.hold); art.hold = 0; }
+      }
+    } else {
+      if (!art.dropped) { art.dropped = true; art.over.el.classList.add("is-dropped"); }
+      startPiece();
+      if (slot > art.hand || (slot === art.hand && t >= 0.12)) allowHand();
+    }
+    // the piece: centred on the screen for the first line, then it moves to its half while the second line comes in
+    var pose = slot === 0 ? 1 : slot === 1 ? 1 - ease(t / 0.3) : 0;
+    if (still) pose = slot === 0 ? 1 : 0;
+    var st = art.stage.getBoundingClientRect();
+    var barB = topBar.getBoundingClientRect().bottom;
+    // on the grid, like the frames: the piece starts at the stage's left edge on a wide screen, and at the side margin on a narrow one
+    var margin = topBar.getBoundingClientRect().left;
+    var x = wide.matches ? 0 : margin - st.left;
+    var nav = navRoom(st.left + x, wide.matches ? st.width : vw - margin * 2, wide.matches ? st.top : barB + 8);   // clear of the chapter navigation
+    var top = nav.y0 - st.top;
+    var room = Math.max(0, st.height - top - (wide.matches ? 0 : 8));
+    var w = Math.max(0, Math.min(nav.bw, room / PIECE_RATIO));
+    var h = w * PIECE_RATIO;
+    var y = top + (room - h) / 2;
+    var size = Math.round(x) + "," + Math.round(y) + "," + Math.round(w);
+    if (size !== art.size) {
+      art.size = size;
+      art.canvas.style.left = x + "px";
+      art.canvas.style.top = y + "px";
+      art.canvas.style.width = w + "px";
+      art.canvas.style.height = h + "px";
+    }
+    // centred: clear of the name and contact link above, and of the chapter navigation
+    var mid = navRoom(inset() * 2, vw - inset() * 4, barB + inset());
+    var mx = Math.max(inset() * 2, vw - (inset() * 2 + mid.bw)), my = mid.y0;
+    var wc = Math.min(vw - mx * 2, (vh - my * 2) / PIECE_RATIO);
+    var k = w ? wc / w : 1;
+    var dx = vw / 2 - (st.left + x + w / 2), dy = vh / 2 - (st.top + y + h / 2);
+    art.canvas.style.transform = "translate3d(" + (dx * pose).toFixed(1) + "px, " + (dy * pose).toFixed(1) + "px, 0) scale(" + (1 + (k - 1) * pose).toFixed(4) + ")";
+    // the line comes back over a drawn piece only dimmed behind it
+    art.canvas.style.opacity = slot === 0 && !art.dropped && art.phase > 0 ? 0.2 : 1;
+  }
 
   /* ---------- the frame ---------- */
   // One outlined frame stays on screen and takes the shape of a screen for each statement.
@@ -1250,12 +1644,8 @@ ol { padding: 0; list-style: none; }
       s.grid.classList.toggle("is-on", on && (still || (q > 0.2 && q < 0.93)));
     });
 
-    // art: the strip of pieces crosses the screen once over the section
-    segs.forEach(function (s) {
-      if (!s.strip || s !== current) return;
-      var travel = Math.max(0, s.strip.scrollWidth - vw * 0.72);
-      s.strip.style.transform = "translate3d(" + Math.round(vw * 0.28 - travel * (still ? 0.3 : q)) + "px, 0, 0)";
-    });
+    // art: the first line drops away and starts the drawing, then the piece moves to its half of the screen
+    if (art) artScroll(current, q, still);
     // film: the page goes dark, and the clips come up one after another and play
     var night = 0;
     segs.forEach(function (s) {
@@ -1310,7 +1700,7 @@ ol { padding: 0; list-style: none; }
     sharing.forEach(function (line) {
       line.words.forEach(function (w) { var b = w.getBoundingClientRect(); wt = Math.min(wt, b.top); wb = Math.max(wb, b.bottom); wl = Math.min(wl, b.left); wr = Math.max(wr, b.right); });
     });
-    avoid = [wr > wl ? { x: wl, y: wt, w: wr - wl, h: wb - wt } : { x: 0, y: 0, w: 0, h: 0 }].concat([nameMark, contact, ticks].map(function (el) {
+    avoid = [wr > wl ? { x: wl, y: wt, w: wr - wl, h: wb - wt } : { x: 0, y: 0, w: 0, h: 0 }].concat([nameMark, contact, touch.matches && !isOpen() ? handle : ticks].map(function (el) {
       var b = el.getBoundingClientRect();
       return { x: b.left, y: b.top, w: b.width, h: b.height };
     }));
@@ -1323,22 +1713,39 @@ ol { padding: 0; list-style: none; }
   }
 
   // The frame's target rectangle for the active state.
+  // The room a frame or the Interplay piece leaves for the chapter navigation. Given a left edge, a width and a top,
+  // it gives back the width and top to use. The ticks run down the right edge, so a frame ends a little before
+  // their marks. On a touch screen the ticks are folded into a short line under the contact link, so a frame that
+  // would reach that line starts below it.
+  var NAV_GAP = 12;
+  function navRoom(x0, bw, y0) {
+    if (touch.matches) {
+      var hb = handle.getBoundingClientRect();
+      if (x0 + bw > hb.right - 20 - NAV_GAP) y0 = Math.max(y0, hb.bottom - 10 + NAV_GAP);   // the line ends 10px above the handle's foot
+    } else {
+      bw = Math.min(bw, track.getBoundingClientRect().right - 24 - NAV_GAP - x0);            // the longest mark is 24px
+    }
+    return { bw: Math.max(0, bw), y0: y0 };
+  }
+
   function target() {
     var m = inset();
     var st = STATES[active];
     if (!st.ratio) return { x: m, y: m, w: vw - 2 * m, h: vh - 2 * m };
-    var padX = Math.max(20, region.w * 0.09);
-    var padTop = Math.max(16, region.h * 0.09);
-    var padBottom = padTop + 26;                 // room for the label
-    var bw = Math.max(0, region.w - 2 * padX);
-    var bh = Math.max(0, region.h - padTop - padBottom);   // a very short screen leaves no room, never less than none
-    var cx = region.x + region.w / 2;
-    var cy = region.y + padTop + bh / 2;
+    // The frame sits on the grid. Its left edge is the stage's left edge: column 7 on a wide screen, the side margin
+    // on a narrow one, where the words start too. It is as wide as the stage if its height allows, so a wide frame
+    // ends at the right margin, under the contact link, or a little before the ticks where they sit inside that margin. The frame and its label are centred in the height they have.
+    var LABEL = 34;                              // room for the label under the frame
+    var margin = topBar.getBoundingClientRect().left;   // the side margin
+    var x0 = wide.matches ? region.x : margin;
+    var room = navRoom(x0, wide.matches ? region.w : vw - 2 * margin, region.y + (wide.matches ? 0 : 8));   // clear of the chapter navigation
+    var bw = room.bw, y0 = room.y0;
+    var bh = Math.max(0, region.y + region.h - y0 - LABEL);   // a very short screen leaves no room, never less than none
     var w, h;
     var ratio = !wide.matches && region.h > region.w && st.tall ? st.tall : st.ratio;   // on an upright phone some drawings take a taller shape
     w = Math.min(bw, bh * ratio);
     h = w / ratio;
-    return { x: cx - w / 2, y: cy - h / 2, w: w, h: h };
+    return { x: x0, y: y0 + (bh - h) / 2, w: w, h: h };
   }
 
   function step(now) {
@@ -1967,23 +2374,54 @@ ol { padding: 0; list-style: none; }
     ctx.strokeStyle = INK;
   };
 
-  // A week on a rota: seven days, four rows of shifts. The gaps are filled one by one.
-  // In a tall frame the days run down the side and the shifts run across.
+  // A week on a rota that fills the frame: seven days with faint rules between them, and rows of shifts of
+  // different lengths, with a few cells left free. Some shifts are open: dashed outlines with nobody on them.
+  // One live line moves through the week. Behind it the shifts are done and filled in, and each open shift
+  // it passes is covered, in the live colour. In a tall frame the days run down the side and the line moves down.
   DRAW.week = function (r, k, p) {
     var tall = r.h > r.w;
-    var cols = tall ? 4 : 7, rows = tall ? 7 : 4;
-    var x0 = r.x + r.w * (tall ? 0.24 : 0.09), y0 = r.y + r.h * (tall ? 0.1 : 0.24);
-    var cw = r.w * (tall ? 0.68 : 0.82) / cols, ch = r.h * (tall ? 0.8 : 0.6) / rows;
-    var rnd = rand(17), gaps = [3, 9, 12, 19, 24], filled = Math.floor(ease((p - 0.1) / 0.7) * (gaps.length + 0.99));
-    ctx.globalAlpha = FAINT * k;
-    if (tall) { for (var d = 0; d < 7; d++) seg(r.x + r.w * 0.08, y0 + ch * (d + 0.43), r.x + r.w * 0.17, y0 + ch * (d + 0.43)); }
-    else { for (var c = 0; c < cols; c++) seg(x0 + cw * (c + 0.2), r.y + r.h * 0.15, x0 + cw * (c + 0.8), r.y + r.h * 0.15); }
-    for (var i = 0; i < cols * rows; i++) {
-      var cx2 = x0 + (i % cols) * cw, cy2 = y0 + Math.floor(i / cols) * ch, len = 0.5 + rnd() * 0.36, g = gaps.indexOf(i);
-      if (i / (cols * rows) > k) break;
-      if (g === -1) { ctx.strokeStyle = INK; ctx.globalAlpha = 0.8 * k; ctx.strokeRect(cx2 + cw * 0.08, cy2 + ch * 0.18, cw * len, ch * 0.5); }
-      else if (g < filled) { ctx.fillStyle = LIVE; ctx.globalAlpha = k; ctx.fillRect(cx2 + cw * 0.08, cy2 + ch * 0.18, cw * 0.72, ch * 0.5); }
-      else { ctx.strokeStyle = INK; ctx.globalAlpha = FAINT * k; ctx.setLineDash([4, 4]); ctx.strokeRect(cx2 + cw * 0.08, cy2 + ch * 0.18, cw * 0.72, ch * 0.5); ctx.setLineDash([]); }
+    var cols = tall ? 4 : 7, rows = tall ? 7 : 5;
+    var m = Math.min(r.w, r.h) * 0.08, head = m * 0.9;            // the margin, and room for the day marks
+    var gx = r.x + m + (tall ? head : 0), gy = r.y + m + (tall ? 0 : head);
+    var gw = r.x + r.w - m - gx, gh = r.y + r.h - m - gy;
+    var cw = gw / cols, ch = gh / rows;
+    var open = tall ? [6, 8, 15, 17, 22, 24] : [8, 23, 3, 18, 33, 13];   // the cells with nobody on them, one in each of six days
+    var sweep = ease((p - 0.08) / 0.8);
+    var at = tall ? gy + gh * sweep : gx + gw * sweep;            // where the live line is, along the days
+    var today = Math.min(6, Math.floor(sweep * 7));
+    var rnd = rand(17), d, i;
+    ctx.lineWidth = 1.5;
+    // the days: a rule between each, and a mark for each, with today's lit
+    for (d = 0; d <= 7; d++) {
+      ctx.strokeStyle = INK; ctx.globalAlpha = FAINT * 0.5 * k;
+      if (tall) seg(gx, gy + gh * d / 7, gx + gw, gy + gh * d / 7); else seg(gx + gw * d / 7, gy, gx + gw * d / 7, gy + gh);
+      if (d === 7) break;
+      ctx.globalAlpha = (d === today && sweep > 0 ? 1 : FAINT) * k;
+      if (tall) seg(r.x + m, gy + ch * (d + 0.5), r.x + m + head * 0.55, gy + ch * (d + 0.5));
+      else seg(gx + cw * (d + 0.28), r.y + m + head * 0.3, gx + cw * (d + 0.72), r.y + m + head * 0.3);
+    }
+    // the shifts
+    for (i = 0; i < cols * rows; i++) {
+      var cx2 = gx + (i % cols) * cw, cy2 = gy + Math.floor(i / cols) * ch;
+      var len = 0.42 + rnd() * 0.4, off = rnd() * (0.84 - len), free = rnd() < 0.14, isOpen = open.indexOf(i) !== -1;
+      var bx = cx2 + cw * (0.08 + (isOpen ? 0.04 : off)), bw = cw * (isOpen ? 0.76 : len), by = cy2 + ch * 0.24, bh2 = ch * 0.52;
+      var done = tall ? cy2 + ch * 0.5 < at : bx + bw * 0.5 < at;
+      if (isOpen) {
+        if (done) { ctx.fillStyle = LIVE; ctx.globalAlpha = k; ctx.fillRect(bx, by, bw, bh2); }
+        else { ctx.strokeStyle = INK; ctx.globalAlpha = 0.7 * k; ctx.setLineDash([5, 5]); ctx.strokeRect(bx, by, bw, bh2); ctx.setLineDash([]); }
+        continue;
+      }
+      if (free) continue;
+      if (done) { ctx.fillStyle = INK; ctx.globalAlpha = 0.2 * k; ctx.fillRect(bx, by, bw, bh2); }
+      ctx.strokeStyle = INK; ctx.globalAlpha = 0.9 * k; ctx.strokeRect(bx, by, bw, bh2);
+    }
+    // the live line, with a square head in the margin
+    if (sweep > 0) {
+      ctx.strokeStyle = LIVE; ctx.fillStyle = LIVE; ctx.globalAlpha = k; ctx.lineWidth = 2;
+      var cap = Math.max(6, head * 0.34);
+      if (tall) { seg(gx - head * 0.25, at, gx + gw, at); ctx.fillRect(gx - head * 0.25 - cap, at - cap / 2, cap, cap); }
+      else { seg(at, gy - head * 0.25, at, gy + gh); ctx.fillRect(at - cap / 2, gy - head * 0.25 - cap, cap, cap); }
+      ctx.lineWidth = 1.5;
     }
     ctx.strokeStyle = INK;
   };
@@ -2253,6 +2691,7 @@ ol { padding: 0; list-style: none; }
 
     grove.style.opacity = presence.character;
     slate.style.opacity = presence.roblox;
+    paperLayer.style.opacity = presence.art;
     pulse.style.opacity = presence.end;
     pulse.classList.toggle("is-on", presence.end > 0.01);
 
@@ -2502,7 +2941,7 @@ ol { padding: 0; list-style: none; }
   });
 
   window.addEventListener("pointerdown", function (e) {
-    if (active === "make" && !(e.target.closest && e.target.closest("a, .top, .ticks"))) { built = built < 4 ? built + 1 : 0; pal.jolt(); kick(); }
+    if (active === "make" && !(e.target.closest && e.target.closest("a, .top, .ticks, .ticks-handle"))) { built = built < 4 ? built + 1 : 0; pal.jolt(); kick(); }
   });
   window.addEventListener("scroll", kick, { passive: true });
   window.addEventListener("resize", resize);
