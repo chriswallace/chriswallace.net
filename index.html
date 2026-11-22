@@ -521,6 +521,26 @@ ol { padding: 0; list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   #pulse.is-on, #pulse.is-on::after { animation: none; }
 }
+/* the sky: the page's blue with slow clouds in it, in tones of the same blue. It is drawn small, one pixel for each
+   square cell, and scaled up without smoothing, so each cell is a whole number of screen pixels. It sits under the
+   other page colours (slate, night, forest, paper), which cover it when they come up. Without WebGL the page stays flat blue. */
+#sky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100lvh;                    /* the tallest the screen gets, so a phone's address bar never uncovers its end */
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1200ms var(--ease-out);
+}
+#sky.is-on { opacity: 1; }
+#sky canvas { position: absolute; top: 0; left: 0; display: block; image-rendering: pixelated; }
+/* the close has no colour of its own while the sky is on: the script cuts the last panel off at its top edge instead */
+.sky-on .end { background: none; }
 /* the page turns slate behind the avatar */
 #slate {
   position: fixed;
@@ -715,6 +735,7 @@ html:not(.js) canvas.piece { display: none; }
 </head>
 <body>
 <script>document.documentElement.classList.add("js");</script>
+<div id="sky" aria-hidden="true"><canvas></canvas></div>
 <div id="dark" aria-hidden="true"></div>
 <div id="sheet" aria-hidden="true"><div class="plane"></div></div>
 <div id="grove" aria-hidden="true"></div>
@@ -1026,8 +1047,227 @@ html:not(.js) canvas.piece { display: none; }
   var SLATE = css.getPropertyValue("--slate").trim();
   var end = document.querySelector(".end");
   var endSay = document.querySelector(".end .say");
+  var endWrite = document.querySelector(".end .write");
 
   function clamp(v) { return Math.max(0, Math.min(1, v)); }
+
+  /* ---------- the sky ---------- */
+  // The page's blue, with clouds. A fragment shader works out one tone for each square cell of a coarse grid: two decks
+  // of drifting cloud, lit from above, placed on a ladder of six blues that runs from a deeper blue through the page's
+  // own to the soft ink, with a 4×4 ordered dither between neighbouring tones. The clouds drift on their own and
+  // move up a little with the scroll, the near deck faster than the far one. They thin behind whatever is being read
+  // (`set` takes up to five rectangles), so the words, the frame and the navigation keep the plain blue behind them.
+  // It stops drawing while another page colour covers it or the tab is hidden. Reduced motion holds the clouds still.
+  var sky = (function () {
+    var box = document.getElementById("sky"), cv = box.querySelector("canvas"), gl = null;
+    // The picture is kept between draws: the clouds are drawn less often than the screen is, and it must still be there in the frames between.
+    // The canvas is not marked opaque, though every cell is: an opaque one left a gap in the page above a film plate that had just moved.
+    var want = { alpha: true, antialias: false, depth: false, stencil: false, preserveDrawingBuffer: true, powerPreference: "low-power" };
+    try { gl = cv.getContext("webgl", want) || cv.getContext("experimental-webgl", want); } catch (e) {}
+    if (!gl) return null;
+    var fine = gl.getShaderPrecisionFormat(gl.FRAGMENT_SHADER, gl.HIGH_FLOAT);
+    if (!fine || !fine.precision) return null;   // the cloud pattern needs full precision
+
+    var SLOTS = 5, FPS = 24, FEATHER = 170;   // FPS is a ceiling: on a 60 Hz screen every third frame is drawn
+    var VERT = "attribute vec2 a; void main() { gl_Position = vec4(a, 0.0, 1.0); }";
+    var FRAG = [
+      "precision highp float;",
+      "uniform vec2 uRes;",          // the canvas, in cells
+      "uniform float uCell;",        // one cell, in CSS px
+      "uniform float uUnit;",        // CSS px to one unit of cloud
+      "uniform float uTime;",        // seconds
+      "uniform float uScroll;",      // CSS px
+      "uniform float uFeather;",     // how far past a rectangle the thinning fades out, in CSS px
+      "uniform float uCalm;",        // 0..1: how far the clouds are held down
+      "uniform vec4 uDim[" + SLOTS + "];",     // x, y, w, h in CSS px from the top left
+      "uniform float uDimK[" + SLOTS + "];",   // how much each one thins the clouds, 0..1
+      "uniform vec3 uTone[6];",
+      "float hash(vec2 p) { vec3 q = fract(vec3(p.xyx) * 0.1031); q += dot(q, q.yzx + 33.33); return fract((q.x + q.y) * q.z); }",
+      "float noise(vec2 p) {",
+      "  vec2 i = floor(p), f = fract(p);",
+      "  f = f * f * (3.0 - 2.0 * f);",
+      "  return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x), mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);",
+      "}",
+      "float fbm(vec2 p) {",
+      "  float v = 0.0, a = 0.5;",
+      "  for (int i = 0; i < 5; i++) { v += a * noise(p); p = p * 2.03 + vec2(17.1, 9.2); a *= 0.55; }",
+      "  return v;",
+      "}",
+      // a cloud deck: noise pushed about by slower noise, so the shapes billow and change as they drift
+      "float deck(vec2 p, float t) {",
+      "  vec2 w = vec2(fbm(p * 0.5 + vec2(t * 0.6, 3.7)), fbm(p * 0.5 + vec2(8.3, -t * 0.45)));",
+      "  return fbm(p + (w - 0.5) * 0.9 + vec2(t, 0.0));",
+      "}",
+      "float b2(vec2 a) { a = floor(a); return fract(a.x / 2.0 + a.y * a.y * 0.75); }",
+      "float bayer(vec2 a) { return b2(0.5 * a) * 0.25 + b2(a); }",   // the 4×4 ordered dither, 0..15/16
+      "void main() {",
+      "  vec2 cell = floor(gl_FragCoord.xy);",
+      "  cell.y = uRes.y - 1.0 - cell.y;",
+      "  vec2 px = (cell + 0.5) * uCell;",
+      "  float y = px.y / (uRes.y * uCell);",                          // 0 at the top of the screen, 1 at the bottom
+      "  vec2 p = px / uUnit;",
+      "  p.x *= 0.6;",                                                 // clouds lie long
+      "  float t = uTime * 0.012;",
+      "  vec2 near = p + vec2(0.0, uScroll * 0.16 / uUnit);",
+      "  vec2 far = p * 0.42 + vec2(40.0, 7.0 + uScroll * 0.022 / uUnit);",
+      "  float c = deck(near, t);",
+      "  float above = deck(near - vec2(0.0, 0.08), t);",
+      "  float haze = fbm(far + vec2(t * 0.35, 0.0));",
+      // how much is being read here: all of it inside a rectangle and a little way out, then fading. How far the fade
+      // reaches changes from place to place, so a clearing has a loose edge and never shows as a box
+      "  float reach = uFeather * mix(0.45, 1.5, noise(p * 2.3 + 3.1) * 0.6 + noise(p * 5.1 + 9.4) * 0.4);",
+      "  float m = 0.0;",
+      "  for (int i = 0; i < " + SLOTS + "; i++) {",
+      "    vec4 r = uDim[i];",
+      "    vec2 d = max(r.xy - px, px - (r.xy + r.zw));",
+      "    float away = max(length(max(d, 0.0)) - 24.0, 0.0);",
+      "    m = max(m, uDimK[i] * (1.0 - smoothstep(0.0, reach, away)));",
+      "  }",
+      "  float low = mix(-0.05, 0.06, y) - m * 0.17;",                 // more cloud low on the screen, less at the top, and less where words are: the clouds draw back along their own edges
+      "  float body = smoothstep(0.5, 0.68, c + low);",
+      "  float lit = clamp((c - above) * 10.0, -1.0, 1.0);",           // bright crowns, deeper undersides
+      "  float v = 1.0",                                               // tone 1 is the page's blue
+      "    + body * (2.3 + lit * 1.5)",
+      "    + smoothstep(0.49, 0.7, haze + low * 0.6) * 0.9 * (1.0 - m)",
+      "    - smoothstep(0.47, 0.33, haze) * (1.0 - body) * (1.0 - m) * 0.9;",   // open sky deepens between the clouds
+      "  v = mix(v, 1.0 + (v - 1.0) * 0.35, smoothstep(0.55, 1.0, m));",   // what is left right behind the words stays close to the plain blue
+      "  v = 1.0 + (v - 1.0) * (v > 1.0 ? 1.0 - 0.5 * uCalm : 1.0);",      // under a drawing that runs over the whole page the clouds stay low on the ladder, so its lines read
+      "  v = clamp(v, 0.0, 5.0);",
+      "  float lo = floor(v);",
+      "  float f = smoothstep(0.18, 0.82, v - lo);",                   // each tone holds as a flat plate, with the dither in the bands between
+      "  float idx = lo + step(bayer(cell) + 0.03125, f);",
+      "  vec3 col = uTone[0];",
+      "  for (int i = 1; i < 6; i++) { if (idx > float(i) - 0.5) col = uTone[i]; }",
+      "  gl_FragColor = vec4(col, 1.0);",
+      "}"
+    ].join("\n");
+
+    // the ladder: a deeper blue, the page's blue, then four steps toward the soft ink
+    function rgb(hex) { var n = parseInt(hex.replace("#", ""), 16); return [(n >> 16 & 255) / 255, (n >> 8 & 255) / 255, (n & 255) / 255]; }
+    var base = rgb(SIGNAL), top = rgb(SOFT), tones = [];
+    [-0.2, 0, 0.18, 0.38, 0.62, 0.9].forEach(function (k) {
+      for (var i = 0; i < 3; i++) tones.push(k < 0 ? base[i] * (1 + k) : base[i] + (top[i] - base[i]) * k);
+    });
+
+    var loc = null, cols = 0, rows = 0, cell = 3, unit = 600;
+    var dim = new Float32Array(SLOTS * 4), dimK = new Float32Array(SLOTS), goal = [];
+    var clock = 0, lastT = 0, lastY = -1, raf = 0, lost = false, dirty = true, first = true, calm = 0, calmTo = 0;
+
+    function compile(type, src) {
+      var s = gl.createShader(type);
+      gl.shaderSource(s, src);
+      gl.compileShader(s);
+      return gl.getShaderParameter(s, gl.COMPILE_STATUS) ? s : null;
+    }
+    function build() {
+      var vs = compile(gl.VERTEX_SHADER, VERT), fs = compile(gl.FRAGMENT_SHADER, FRAG);
+      if (!vs || !fs) return false;
+      var prog = gl.createProgram();
+      gl.attachShader(prog, vs);
+      gl.attachShader(prog, fs);
+      gl.linkProgram(prog);
+      if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) return false;
+      gl.useProgram(prog);
+      gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);   // one triangle over the whole canvas
+      var at = gl.getAttribLocation(prog, "a");
+      gl.enableVertexAttribArray(at);
+      gl.vertexAttribPointer(at, 2, gl.FLOAT, false, 0, 0);
+      loc = {};
+      ["uRes", "uCell", "uUnit", "uTime", "uScroll", "uFeather", "uCalm", "uDim", "uDimK", "uTone"].forEach(function (n) { loc[n] = gl.getUniformLocation(prog, n); });
+      gl.uniform3fv(loc.uTone, new Float32Array(tones));
+      gl.uniform1f(loc.uFeather, FEATHER);
+      return true;
+    }
+    if (!build()) return null;
+
+    // One cell is about 3 CSS px (2.5 on a phone) and a whole number of screen pixels.
+    function size() {
+      var real = window.devicePixelRatio || 1, w = box.clientWidth, h = box.clientHeight;
+      var dev = Math.max(1, Math.round((w < 700 ? 2.5 : 3) * real));
+      var c = Math.max(1, Math.ceil(w * real / dev)), r = Math.max(1, Math.ceil(h * real / dev));
+      cell = dev / real;
+      unit = Math.max(380, Math.min(860, w * 0.52));
+      if (c !== cols || r !== rows) {
+        cols = c; rows = r;
+        cv.width = c; cv.height = r;
+        cv.style.width = (c * cell) + "px";
+        cv.style.height = (r * cell) + "px";
+      }
+      gl.viewport(0, 0, cols, rows);
+      dirty = true;
+      wake();
+    }
+
+    // What the clouds thin behind: a list of up to five { x, y, w, h, k } in CSS px, or null for an empty place.
+    // A rectangle that is new fades in where it is; one that moves is followed. `hold` (0 or 1) keeps all the clouds low.
+    function set(list, hold) {
+      if (hold !== calmTo) { calmTo = hold; dirty = true; }
+      for (var i = 0; i < SLOTS; i++) {
+        var g = list[i] && list[i].w > 0 && list[i].h > 0 ? list[i] : null, was = goal[i];
+        if (g && was && g.x === was.x && g.y === was.y && g.w === was.w && g.h === was.h && g.k === was.k) continue;
+        if (!g && !was) continue;
+        goal[i] = g;
+        dirty = true;
+      }
+    }
+
+    function render(now) {
+      var still = reduce.matches;
+      var dt = lastT ? Math.min(100, now - lastT) : 0;
+      lastT = now;
+      if (!still) clock += dt / 1000;
+      var a = still || first ? 1 : 1 - Math.exp(-dt / 240), settling = false;
+      for (var i = 0; i < SLOTS; i++) {
+        var g = goal[i], k = g ? g.k : 0;
+        if (g) {
+          var r = [g.x, g.y, g.w, g.h], jump = dimK[i] < 0.02;
+          for (var j = 0; j < 4; j++) {
+            var d = r[j] - dim[i * 4 + j];
+            if (jump || Math.abs(d) < 0.5) dim[i * 4 + j] = r[j]; else { dim[i * 4 + j] += d * a; settling = true; }
+          }
+        }
+        var dk = k - dimK[i];
+        if (Math.abs(dk) < 0.01) dimK[i] = k; else { dimK[i] += dk * a; settling = true; }
+      }
+      var dc = calmTo - calm;
+      if (Math.abs(dc) < 0.01) calm = calmTo; else { calm += dc * a; settling = true; }
+      lastY = window.scrollY;
+      gl.uniform1f(loc.uCalm, calm);
+      gl.uniform2f(loc.uRes, cols, rows);
+      gl.uniform1f(loc.uCell, cell);
+      gl.uniform1f(loc.uUnit, unit);
+      gl.uniform1f(loc.uTime, clock);
+      gl.uniform1f(loc.uScroll, still ? 0 : lastY);
+      gl.uniform4fv(loc.uDim, dim);
+      gl.uniform1fv(loc.uDimK, dimK);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+      if (first) { first = false; box.classList.add("is-on"); }
+      return settling;
+    }
+
+    // The clouds are drawn about 20 times a second, and on every frame while the page scrolls or a rectangle is moving.
+    var settling = false;
+    function frame(now) {
+      raf = 0;
+      if (lost || document.hidden || api.cover > 0.985) { lastT = 0; return; }
+      var still = reduce.matches;
+      if (dirty || settling || (!still && (window.scrollY !== lastY || now - lastT >= 1000 / FPS - 3))) {
+        dirty = false;
+        settling = render(now);
+      }
+      if (!still || settling) raf = requestAnimationFrame(frame);
+    }
+    function wake() { if (!raf) raf = requestAnimationFrame(frame); }
+
+    cv.addEventListener("webglcontextlost", function (e) { e.preventDefault(); lost = true; });
+    cv.addEventListener("webglcontextrestored", function () { lost = !build(); if (!lost) size(); });
+    document.addEventListener("visibilitychange", wake);
+
+    var api = { cover: 0, set: set, size: size, wake: wake };
+    document.documentElement.classList.add("sky-on");
+    return api;
+  })();
   function ease(v) { v = clamp(v); return v * v * (3 - 2 * v); }
   function rand(seed) {      // small fixed random source, so the drawing is the same each time
     var s = seed;
@@ -1588,6 +1828,7 @@ html:not(.js) canvas.piece { display: none; }
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     canvas.width = Math.round(vw * dpr);
     canvas.height = Math.round(vh * dpr);
+    if (sky) sky.size();
     measure();
     if (!rect) rect = target();
     kick();
@@ -1710,6 +1951,28 @@ html:not(.js) canvas.piece { display: none; }
       var bar = wide.matches ? 0 : nameMark.getBoundingClientRect().bottom + 8;
       region = { x: s.left, y: s.top + bar, w: s.width, h: s.height - bar };
     }
+
+    if (sky) {
+      // The close has no colour of its own over the sky, so it covers the last line by cutting that panel off at its top edge.
+      var lastPanel = segs[segs.length - 1].panel, cut = lastPanel.offsetHeight - endBox.top;
+      lastPanel.style.clipPath = cut > 0 ? "inset(0 0 " + cut.toFixed(1) + "px 0)" : "";
+      // The clouds thin behind what is read: the words, the frame, the cards or the close, the ticks, the name and the contact link.
+      var st = STATES[active], fr = st.ratio && !st.hidden ? target() : null, also = null;
+      if (current.grid) { var gb = current.grid.getBoundingClientRect(); also = { x: gb.left, y: gb.top, w: gb.width, h: gb.height, k: 1 }; }
+      if (endBox.top < vh) {
+        var eb = endSay.getBoundingClientRect(), wb2 = endWrite.getBoundingClientRect();
+        var ex = Math.min(eb.left, wb2.left), ey = Math.min(eb.top, wb2.top);
+        also = { x: ex, y: ey, w: Math.max(eb.right, wb2.right) - ex, h: Math.max(eb.bottom, wb2.bottom) - ey, k: 1 };
+      }
+      var tb = topBar.getBoundingClientRect();
+      sky.set([
+        { x: avoid[0].x, y: avoid[0].y, w: avoid[0].w, h: Math.min(avoid[0].h, endBox.top - avoid[0].y), k: 1 },   // less whatever the close has covered
+        fr && { x: fr.x, y: fr.y, w: fr.w, h: fr.h, k: 0.85 },
+        also,
+        { x: avoid[3].x, y: avoid[3].y, w: avoid[3].w, h: avoid[3].h, k: 0.8 },
+        { x: tb.left, y: tb.top, w: tb.width, h: tb.height, k: 0.8 }
+      ], !st.ratio && st.draw ? 1 : 0);
+    }
   }
 
   // The frame's target rectangle for the active state.
@@ -1779,6 +2042,7 @@ html:not(.js) canvas.piece { display: none; }
 
   function kick() {
     measure();
+    if (sky) sky.wake();
     if (!raf) raf = requestAnimationFrame(step);
   }
 
@@ -2694,6 +2958,8 @@ html:not(.js) canvas.piece { display: none; }
     paperLayer.style.opacity = presence.art;
     pulse.style.opacity = presence.end;
     pulse.classList.toggle("is-on", presence.end > 0.01);
+    // the sky rests while another page colour covers it
+    if (sky) { sky.cover = Math.max(+dark.style.opacity || 0, presence.character, presence.roblox, presence.art); sky.wake(); }
 
     // the 3D Woodie: it turns a little with the scroll, and its idle animation runs only while it is on screen
     model.classList.toggle("is-live", active === "threed" && !!viewer);
