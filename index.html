@@ -137,7 +137,6 @@ ol { padding: 0; list-style: none; }
   top: 0;
   left: 0;
   z-index: 2;
-  overflow: hidden;
   pointer-events: none;
 }
 #plate img, #plate video {
@@ -166,6 +165,189 @@ ol { padding: 0; list-style: none; }
 #plate canvas.is-live { pointer-events: auto; }
 #plate canvas.is-live:active { cursor: grabbing; }
 #plate canvas.is-failed { background: url(assets/images/work/woodie-3d.webp) center / cover no-repeat; cursor: default; }   /* a still render, where 3D cannot run */
+/* the player: every film on the page plays inside one, a chunky machine from about the year 2000. It is brushed
+   metal with a slab of coloured plastic let into it, chrome keys that sit off line with each other, and one yellow
+   play button far too big for the rest, in a round turret that sticks out past the corner of the body. A small
+   screen gives the time, a groove is for scrubbing, and a pill sets the speed. It is drawn in CSS alone.
+
+   There is one arrangement: the screen, with the controls along its foot. Each player takes the largest size at
+   which that fits the room it has (`deck.fit`), and a player too narrow for every control drops the least needed
+   (`.deck-compact`: no speed pill, one line on the small screen). Two lengths drive the drawing: --u, a hundredth
+   of the player's width, for the body and the screen, and --k for the controls, which follows --u on a large
+   player and stops shrinking on a small one, so a key is never too small for a thumb. The controls sit in a grid,
+   so the small screen and the groove take whatever width is left. The controls follow the film too: one with sound has a key
+   to turn it off (`.deck-sound`), a long one skips ten seconds at a time, and the plastic takes a colour that suits
+   the film (`data-tone`). Only a film that plays on its own has a player: one that the scroll drives (the six Woodies
+   scenes, the clip that plays once as its line arrives) is shown plain. */
+#plate {
+  --u: 6px; --k: 5px;
+  --print: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;   /* what is printed on the machine. The page's serif is for the page: on the player it looked wrong */
+  --t: calc(var(--k) * 27); --p: calc(var(--k) * 18.5); --dh: calc(var(--k) * 27);          /* the turret, the play button, the height under the screen */
+  --p1: #000d85; --p2: var(--signal); --p3: #5268ff; --glow: 110 150 255; --lcd: #cfe0ff;   /* the plastic, and the light of the small screen */
+}
+#plate.deck-compact { --t: calc(var(--k) * 23); --p: calc(var(--k) * 15.5); --dh: calc(var(--k) * 23); }
+#plate[data-tone="lime"] { --p1: #053a1a; --p2: #129a45; --p3: #6fe394; --glow: 90 255 150; --lcd: #d6ffe2; }     /* the forest */
+#plate[data-tone="grape"] { --p1: #2a0a63; --p2: #7a3fe0; --p3: #b596ff; --glow: 185 135 255; --lcd: #ecdcff; }   /* Homebase's purple */
+.deck-shell, .deck-glass, .deck { position: absolute; inset: 0; opacity: var(--deck, 0); visibility: hidden; }
+#plate.has-deck .deck-shell, #plate.has-deck .deck-glass, #plate.has-deck .deck { visibility: visible; }
+.deck-shell i, .deck-shell span { position: absolute; display: block; }
+.deck-body, .deck-turret {          /* brushed metal, lit from the top left */
+  background:
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 0.08) 0 1px, rgb(0 0 0 / 0.035) 1px 2px, transparent 2px 4px),
+    linear-gradient(172deg, #fbfcfe 0%, #d7dbe4 9%, #aab0bd 34%, #cbcfd9 58%, #8d94a3 86%, #6e7584 100%);
+  box-shadow:
+    inset 0 calc(var(--k) * 0.5) 0 rgb(255 255 255 / 0.9),
+    inset 0 calc(var(--k) * -0.9) calc(var(--k) * 1.2) rgb(20 24 60 / 0.45),
+    inset calc(var(--k) * 0.5) 0 calc(var(--k) * 0.6) rgb(255 255 255 / 0.5),
+    inset calc(var(--k) * -0.5) 0 calc(var(--k) * 0.8) rgb(20 24 60 / 0.3),
+    0 0 0 1px rgb(10 14 60 / 0.55),
+    0 calc(var(--k) * 1.6) calc(var(--k) * 3.5) rgb(0 4 60 / 0.45),
+    0 calc(var(--k) * 0.3) calc(var(--k) * 0.6) rgb(0 4 60 / 0.5);
+}
+.deck-body { left: calc(var(--k) * 3); right: 0; top: 0; bottom: calc(var(--k) * 4); border-radius: calc(var(--u) * 8) calc(var(--u) * 3.5) calc(var(--k) * 5) calc(var(--k) * 4) / calc(var(--u) * 6.5) calc(var(--u) * 3.5) calc(var(--k) * 5) calc(var(--k) * 4); }
+.deck-turret { position: absolute; z-index: 1; display: block; left: 0; bottom: 0; width: var(--t); height: var(--t); border-radius: 50%; }   /* the round housing of the play button: it stands out past the body's corner, and over the end of the panel, which runs in behind it */
+.deck-turret::after {               /* plastic round the button */
+  content: ""; position: absolute; inset: calc(var(--k) * 1.9); border-radius: 50%;
+  background: linear-gradient(180deg, var(--p1) 0%, var(--p2) 48%, var(--p3) 100%);
+  box-shadow: inset 0 calc(var(--k) * 0.7) calc(var(--k) * 1.1) rgb(0 0 40 / 0.75), inset 0 calc(var(--k) * -0.3) calc(var(--k) * 0.5) rgb(255 255 255 / 0.4), 0 calc(var(--k) * 0.25) 0 rgb(255 255 255 / 0.75);
+}
+.deck-grip {                        /* grooves to hold it by */
+  left: calc(var(--k) * 3 + var(--u) * 8); top: calc(var(--u) * 2.5); width: calc(var(--u) * 15); height: calc(var(--u) * 2.2);
+  background: repeating-linear-gradient(180deg, rgb(40 46 70 / 0.55) 0 1px, rgb(255 255 255 / 0.8) 1px 2px, transparent 2px calc(var(--u) * 0.74));
+}
+.deck-mark {                        /* the maker's mark, pressed into the metal */
+  right: calc(var(--u) * 9.5); top: calc(var(--u) * 2.1); font: 700 calc(var(--u) * 2.1)/1.3 var(--print); letter-spacing: 0.2em; white-space: nowrap;
+  color: rgb(52 58 80 / 0.8); text-shadow: 0 1px 0 rgb(255 255 255 / 0.75);
+}
+#plate.deck-compact .deck-mark { display: none; }   /* too small to read on a small player */
+.deck-led {                         /* lit while the film plays */
+  right: calc(var(--u) * 5); top: calc(var(--u) * 2.5); width: calc(var(--u) * 2); height: calc(var(--u) * 2); border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #8d93a3, #3a3f50);
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 0.6), 0 1px 0 rgb(255 255 255 / 0.8);
+}
+#plate.is-playing .deck-led { background: radial-gradient(circle at 35% 30%, #fff, var(--live) 45%, #b98a00); box-shadow: 0 0 calc(var(--u) * 1.4) var(--live), 0 1px 0 rgb(255 255 255 / 0.8); }
+/* the screen: the film, the dark surround it is set into, and the glass over it. Under it is the height of the controls. */
+#plate video[data-film], .deck-glass, .deck-well {
+  inset: auto; left: calc(var(--k) * 3 + var(--u) * 4.5); top: calc(var(--u) * 7);
+  width: calc(100% - var(--k) * 3 - var(--u) * 9); height: calc(100% - var(--u) * 10 - var(--dh));
+  border-radius: calc(var(--u) * 1.5);
+}
+.deck-shell .deck-well {
+  margin: calc(var(--u) * -1.2); padding: calc(var(--u) * 1.2); box-sizing: content-box; border-radius: calc(var(--u) * 2.6);
+  background: linear-gradient(180deg, #05060f, #171a2c);
+  box-shadow: inset 0 calc(var(--u) * 0.4) calc(var(--u) * 0.8) #000, 0 calc(var(--u) * 0.3) 0 rgb(255 255 255 / 0.8), 0 calc(var(--u) * -0.2) 0 rgb(0 0 0 / 0.35);
+}
+.deck-glass {                       /* a sheen across one corner, and shade round the edge */
+  background: linear-gradient(118deg, rgb(255 255 255 / 0.16) 0%, rgb(255 255 255 / 0.04) 30%, transparent 30.3%);
+  box-shadow: inset 0 0 calc(var(--u) * 1.6) rgb(0 0 0 / 0.65);
+  pointer-events: none;
+}
+.deck { pointer-events: none; }
+#plate.deck-live .deck-key, #plate.deck-live .deck-seek, #plate.deck-live .deck-rate { pointer-events: auto; }   /* the close key is a .deck-key too */
+.deck-key, .deck-rate {
+  position: relative; flex: none; margin: 0; padding: 0; border: 0; cursor: pointer;
+  -webkit-tap-highlight-color: transparent; -webkit-appearance: none; appearance: none;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.deck-key, .deck-rate, .deck-thumb {   /* chrome: a bright dome in a dark collar */
+  color: #1c2140;
+  background: radial-gradient(circle at 34% 26%, #fff 0%, #eef0f5 18%, #b9bfcb 56%, #7c8393 100%);
+  box-shadow:
+    0 0 0 calc(var(--k) * 0.45) #4d5466, 0 0 0 calc(var(--k) * 0.85) rgb(255 255 255 / 0.5),
+    0 calc(var(--k) * 1) calc(var(--k) * 1.3) rgb(0 0 40 / 0.6),
+    inset 0 calc(var(--k) * -0.5) calc(var(--k) * 0.8) rgb(0 0 40 / 0.35), inset 0 calc(var(--k) * 0.4) calc(var(--k) * 0.5) #fff;
+}
+.deck-key { border-radius: 50%; }
+.deck-key::after, .deck-rate::after { content: ""; position: absolute; inset: -6px; border-radius: inherit; }   /* more room for a thumb */
+.deck-key svg { display: block; width: 44%; height: 44%; margin: auto; fill: currentColor; filter: drop-shadow(0 1px 0 rgb(255 255 255 / 0.55)); }
+.deck-key:active, .deck-rate:active { transform: translateY(calc(var(--k) * 0.3)) scale(0.97); box-shadow: 0 0 0 calc(var(--k) * 0.45) #4d5466, 0 0 0 calc(var(--k) * 0.85) rgb(255 255 255 / 0.5), 0 calc(var(--k) * 0.3) calc(var(--k) * 0.5) rgb(0 0 40 / 0.6), inset 0 calc(var(--k) * 0.6) calc(var(--k) * 0.9) rgb(0 0 40 / 0.45); }
+.deck-key--play {                   /* the big one: yellow, like a sweet, in the middle of the turret */
+  position: absolute; z-index: 2; left: calc((var(--t) - var(--p)) / 2); bottom: calc((var(--t) - var(--p)) / 2); width: var(--p); height: var(--p);
+  color: #3d2c00;
+  background: radial-gradient(circle at 34% 24%, #fffde0 0%, #fff27a 14%, var(--live) 42%, #e2a900 80%, #a36c00 100%);
+}
+.deck-key--play .i-pause, #plate.is-playing .deck-key--play .i-play { display: none; }
+#plate.is-playing .deck-key--play .i-pause { display: block; }
+.deck-key--play .i-play { transform: translateX(6%); }
+/* the panel: coloured plastic let into the metal, holding the rest of the controls in a grid. Under the screen it
+   starts behind the turret and runs to the right edge: the skip keys, then the small screen over the groove and the pill. */
+.deck-panel {
+  position: absolute; z-index: 0; left: calc(var(--t) - var(--k) * 7); right: calc(var(--k) * 4); bottom: calc(var(--k) * 6); height: calc(var(--dh) - var(--k) * 7);
+  display: grid; align-items: center; column-gap: calc(var(--k) * 2); row-gap: calc(var(--k) * 1.8);
+  grid-template-columns: auto minmax(0, 1fr) auto; grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-areas: "keys lcd lcd" "keys seek rate";
+  padding: calc(var(--k) * 2) calc(var(--k) * 2.4) calc(var(--k) * 2) calc(var(--k) * 9.5);   /* on the left, clear of the turret that covers its end */
+  border-radius: calc(var(--k) * 10) calc(var(--k) * 6) calc(var(--k) * 3) calc(var(--k) * 10);
+  background: linear-gradient(180deg, var(--p1) 0%, var(--p2) 48%, var(--p3) 100%);
+  box-shadow: inset 0 calc(var(--k) * 0.7) calc(var(--k) * 1.1) rgb(0 0 40 / 0.75), inset 0 calc(var(--k) * -0.3) calc(var(--k) * 0.5) rgb(255 255 255 / 0.4), 0 calc(var(--k) * 0.25) 0 rgb(255 255 255 / 0.75);
+}
+.deck-keys { grid-area: keys; align-self: stretch; display: flex; gap: calc(var(--k) * 2.2); }   /* as tall as the panel allows: the two keys sit at its top and its foot */
+.deck-key--back { width: calc(var(--k) * 8.5); height: calc(var(--k) * 8.5); align-self: flex-end; }      /* small and low */
+.deck-key--next { width: calc(var(--k) * 11.6); height: calc(var(--k) * 11.6); align-self: flex-start; }   /* larger and high */
+.deck-lcd {                         /* the small screen: the time, and what the player is doing, in lit dots (the script draws them) */
+  grid-area: lcd; align-self: stretch; position: relative; min-width: 0; overflow: hidden;
+  border-radius: calc(var(--k) * 1.5) calc(var(--k) * 4.5) calc(var(--k) * 1.5) calc(var(--k) * 4.5);
+  background: linear-gradient(180deg, #03051a, #0b1548);
+  box-shadow: inset 0 calc(var(--k) * 0.5) calc(var(--k) * 0.9) #000, 0 calc(var(--k) * 0.25) 0 rgb(255 255 255 / 0.6);
+}
+#plate .deck-lcd canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; opacity: 1; cursor: inherit; filter: drop-shadow(0 0 calc(var(--k) * 0.7) rgb(var(--glow) / 0.9)); }
+.deck-seek { grid-area: seek; position: relative; height: calc(var(--k) * 5.6); min-width: 0; cursor: pointer; touch-action: none; }
+.deck-seek::before {                /* the groove */
+  content: ""; position: absolute; left: 0; right: 0; top: 50%; height: calc(var(--k) * 2); margin-top: calc(var(--k) * -1); border-radius: calc(var(--k) * 1);
+  background: #080b1e; box-shadow: inset 0 calc(var(--k) * 0.3) calc(var(--k) * 0.5) #000, 0 calc(var(--k) * 0.2) 0 rgb(255 255 255 / 0.6);
+}
+.deck-seek::after { content: ""; position: absolute; inset: -8px 0; }
+.deck-fill {
+  position: absolute; left: calc(var(--k) * 0.4); top: 50%; height: calc(var(--k) * 1.2); margin-top: calc(var(--k) * -0.6); border-radius: calc(var(--k) * 0.6);
+  width: calc((100% - var(--k) * 3.4) * var(--at, 0) + var(--k) * 1.3);
+  background: linear-gradient(90deg, #ffb400, var(--live)); box-shadow: 0 0 calc(var(--k) * 0.9) rgb(255 230 0 / 0.8);
+}
+.deck-thumb {
+  position: absolute; top: 0; left: calc((100% - var(--k) * 3.4) * var(--at, 0)); width: calc(var(--k) * 3.4); height: 100%; border-radius: calc(var(--k) * 1.2);
+  background: linear-gradient(90deg, #7c8393 0%, #f4f5f9 30%, #fff 48%, #b9bfcb 70%, #6d7484 100%);
+}
+.deck-rate { grid-area: rate; width: calc(var(--k) * 10.5); height: calc(var(--k) * 5); border-radius: calc(var(--k) * 2.5); font: 700 calc(var(--k) * 2.6)/1 var(--print); background: linear-gradient(180deg, #fff 0%, #dfe2ea 30%, #a9afbc 70%, #8a91a0 100%); }   /* the speed */
+.deck-mute { display: none; grid-area: mute; width: calc(var(--k) * 5.6); height: calc(var(--k) * 5.6); margin-right: calc(var(--k) * 0.6); }   /* sound on and off: only on a player whose film has sound */
+.deck-mute svg { width: 56%; height: 56%; }
+.deck-mute .i-off, #plate.is-muted .deck-mute .i-on { display: none; }
+#plate.is-muted .deck-mute .i-off { display: block; }
+#plate.deck-sound .deck-mute { display: block; }
+#plate.deck-sound .deck-panel { grid-template-columns: auto minmax(0, 1fr) auto auto; grid-template-areas: "keys lcd lcd lcd" "keys seek mute rate"; }
+.deck :focus-visible { outline: var(--line) solid var(--live); outline-offset: 3px; }
+/* a small player: one line on the small screen, no pill, smaller keys */
+#plate.deck-compact .deck-panel { grid-template-areas: "keys lcd" "keys seek"; grid-template-columns: auto minmax(0, 1fr); padding: calc(var(--k) * 1.8) calc(var(--k) * 2) calc(var(--k) * 1.8) calc(var(--k) * 9.2); row-gap: calc(var(--k) * 1.4); border-radius: calc(var(--k) * 8) calc(var(--k) * 5) calc(var(--k) * 3) calc(var(--k) * 8); }
+#plate.deck-compact .deck-rate { display: none; }
+#plate.deck-compact .deck-mute { width: calc(var(--k) * 5); height: calc(var(--k) * 5); margin-right: 0; }
+#plate.deck-compact.deck-sound .deck-panel { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "keys lcd lcd" "keys seek mute"; }
+#plate.deck-compact .deck-seek { height: calc(var(--k) * 5.2); }
+#plate.deck-compact .deck-keys { gap: calc(var(--k) * 2); }
+#plate.deck-compact .deck-key--back { width: calc(var(--k) * 8); height: calc(var(--k) * 8); }
+#plate.deck-compact .deck-key--next { width: calc(var(--k) * 10); height: calc(var(--k) * 10); }
+/* Woodies: Origin, the whole film. The page shows its poster, with a play button on it; a press opens the player over
+   the page. The frame grows from the poster to the middle of the screen as it becomes the player, the page behind
+   goes dark under #cinema, and a round chrome key at the player's corner (or a press outside it, or Escape) closes it. */
+.poster-play {
+  position: absolute; inset: 0; margin: 0; padding: 0; border: 0; background: none; cursor: pointer;
+  opacity: 0; visibility: hidden; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; appearance: none;
+}
+.poster-play.is-on { visibility: visible; pointer-events: auto; }
+.poster-play i {                    /* the same yellow button as the player's, set on the poster's corner */
+  position: absolute; left: 7%; bottom: 5%; width: clamp(52px, 26%, 96px); aspect-ratio: 1; border-radius: 50%;
+  display: grid; place-items: center; color: #3d2c00;
+  background: radial-gradient(circle at 34% 24%, #fffde0 0%, #fff27a 14%, var(--live) 42%, #e2a900 80%, #a36c00 100%);
+  box-shadow: 0 0 0 3px #4d5466, 0 0 0 6px rgb(255 255 255 / 0.55), 0 6px 12px rgb(0 0 20 / 0.6), inset 0 -3px 5px rgb(0 0 40 / 0.35), inset 0 2px 3px #fff;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.poster-play svg { display: block; width: 42%; height: 42%; fill: currentColor; transform: translateX(6%); }
+.poster-play:active i { transform: scale(var(--press-scale)); }
+@media (hover: hover) and (pointer: fine) { .poster-play:hover i { transform: scale(1.06); } }
+.poster-play:focus-visible { outline-offset: -6px; }
+#cinema { position: fixed; inset: 0; z-index: 19; background: rgb(5 6 13 / 0.9); opacity: 0; visibility: hidden; touch-action: none; }
+.cinema #cinema { visibility: visible; }
+.cinema #plate { z-index: 20; }
+.deck-close { display: none; position: absolute; z-index: 2; right: calc(var(--k) * -2.5); top: calc(var(--k) * -2.5); width: calc(var(--k) * 8); height: calc(var(--k) * 8); }   /* out past the corner, as the turret is */
+.deck-close svg { width: 40%; height: 40%; }
+.cinema .deck-close { display: block; }
 /* the brood: Woodies stickers that come out of the middle of the drawing area and settle around it */
 #brood { position: fixed; inset: 0; z-index: 2; pointer-events: none; }
 #brood img {
@@ -649,8 +831,10 @@ html:not(.js) canvas.piece { display: none; }
   will-change: transform, opacity;
 }
 
-/* film: six short loops from Woodies: Origin, laid out off the grid */
-.reel { position: relative; }
+/* film: six short loops from Woodies: Origin, scattered over the whole page behind the words. They are placed
+   against the panel, which is the size of the screen, not against the stage, and some run off its edges. The
+   words float over them, with a soft shade of the night behind each letter so they stay readable. */
+.js .reel { position: static; }
 .clip {
   position: absolute;
   width: 46%;
@@ -661,16 +845,23 @@ html:not(.js) canvas.piece { display: none; }
   outline: 1px solid rgb(255 255 255 / 0.1);
   outline-offset: -1px;
 }
-.clip--1 { left: 2%;  top: 16%; width: 52%; }
-.clip--2 { left: 50%; top: 8%;  width: 44%; }
-.clip--3 { left: 30%; top: 40%; width: 58%; }
-.clip--4 { left: 0;   top: 62%; width: 40%; }
-.clip--5 { left: 56%; top: 66%; width: 42%; }
-.clip--6 { left: 16%; top: 30%; width: 34%; }
-
-@media (max-width: 899px) {
-  .panel--film { padding-top: calc(var(--bar) + var(--s6)); }   /* keep the clips clear of the name and the contact link */
+html:not(.js) .reel { position: relative; }
+.clip--1 { left: 3%;   top: 13%; width: 25%; }
+.clip--2 { left: 35%;  top: 5%;  width: 21%; }
+.clip--3 { left: 63%;  top: 14%; width: 31%; }
+.clip--4 { left: 9%;   top: 60%; width: 23%; }
+.clip--5 { left: 40%;  top: 49%; width: 28%; }
+.clip--6 { left: 75%;  top: 66%; width: 22%; }
+@media (orientation: portrait) {       /* an upright screen: two loose columns down the page */
+  .clip--1 { left: -7%;  top: 9%;  width: 58%; }
+  .clip--2 { left: 55%;  top: 15%; width: 56%; }
+  .clip--3 { left: 8%;   top: 30%; width: 66%; }
+  .clip--4 { left: 44%;  top: 49%; width: 62%; }
+  .clip--5 { left: -9%;  top: 60%; width: 50%; }
+  .clip--6 { left: 28%;  top: 77%; width: 60%; }
 }
+.js .panel--film .text { position: relative; z-index: 1; }
+.js .panel--film .say { text-shadow: 0 0 0.5em rgb(5 6 13 / 0.85), 0 0 0.16em rgb(5 6 13 / 0.9); }
 
 /* the close slides over the held panels */
 .end {
@@ -744,29 +935,50 @@ html:not(.js) canvas.piece { display: none; }
 <div id="slate" aria-hidden="true"></div>
 <div id="paper" aria-hidden="true"></div>
 <div id="fall" aria-hidden="true"></div>
-<div id="plate" aria-hidden="true">
-  <img data-plate="sync" src="assets/images/work/story-sync.webp" alt="" width="1139" height="733" decoding="async">
-  <video data-plate="storysync" src="assets/video/story-sync.mp4" muted loop playsinline preload="none" width="640" height="360"></video>
-  <img data-plate="madmen" src="assets/images/work/mad-men-fan-cut.webp" alt="" width="1200" height="810" decoding="async">
-  <img data-plate="dmv" src="assets/images/work/california-dmv.webp" alt="" width="1200" height="810" decoding="async">
+<div id="cinema" aria-hidden="true"></div>
+<!-- Pictures here have `data-src` and films are not preloaded: the script fetches each one as the reader nears the section that shows it. -->
+<div id="plate">
+  <!-- the player's body, behind the film -->
+  <div class="deck-shell" aria-hidden="true"><i class="deck-body"></i><i class="deck-grip"></i><span class="deck-mark">CW·2000 VIDEO</span><i class="deck-led"></i><i class="deck-well"></i></div>
+  <img aria-hidden="true" data-plate="sync" data-src="assets/images/work/story-sync.webp" alt="" width="1139" height="733" decoding="async">
+  <video aria-hidden="true" data-film data-plate="storysync" src="assets/video/story-sync.mp4" muted loop playsinline preload="none" width="640" height="360"></video>
+  <img aria-hidden="true" data-plate="madmen" data-src="assets/images/work/mad-men-fan-cut.webp" alt="" width="1200" height="810" decoding="async">
+  <img aria-hidden="true" data-plate="dmv" data-src="assets/images/work/california-dmv.webp" alt="" width="1200" height="810" decoding="async">
   <!-- ULTRAPASS at each of its six staking levels: it grows as the two UltraDAO lines go by -->
-  <img data-plate="ultradao-1" src="assets/images/work/ultradao-1.webp" alt="" width="800" height="800" decoding="async">
-  <img data-plate="ultradao-2" src="assets/images/work/ultradao-2.webp" alt="" width="800" height="800" decoding="async">
-  <img data-plate="ultradao-3" src="assets/images/work/ultradao-3.webp" alt="" width="800" height="800" decoding="async">
-  <img data-plate="ultradao-4" src="assets/images/work/ultradao-4.webp" alt="" width="800" height="800" decoding="async">
-  <img data-plate="ultradao-5" src="assets/images/work/ultradao-5.webp" alt="" width="800" height="800" decoding="async">
-  <img data-plate="ultradao-6" src="assets/images/work/ultradao-6.webp" alt="" width="800" height="800" decoding="async">
-  <canvas data-plate="threed"></canvas>
-  <img data-plate="poster" src="assets/images/work/woodies-origin-poster.webp" alt="" width="720" height="1081" decoding="async">
-  <video data-plate="assistant" src="assets/video/homebase/assistant.mp4" muted loop playsinline preload="none" width="560" height="604"></video>
-  <video data-plate="lift" data-once src="assets/video/homebase/lift.mp4" muted playsinline preload="auto" width="848" height="558"></video>
+  <img aria-hidden="true" data-plate="ultradao-1" data-src="assets/images/work/ultradao-1.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-2" data-src="assets/images/work/ultradao-2.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-3" data-src="assets/images/work/ultradao-3.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-4" data-src="assets/images/work/ultradao-4.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-5" data-src="assets/images/work/ultradao-5.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-6" data-src="assets/images/work/ultradao-6.webp" alt="" width="800" height="800" decoding="async">
+  <canvas aria-hidden="true" data-plate="threed"></canvas>
+  <img aria-hidden="true" data-plate="poster" data-src="assets/images/work/woodies-origin-poster.webp" alt="" width="720" height="1081" decoding="async">
+  <!-- Woodies: Origin, the whole film, with its sound. A press on the poster opens it in the player, over the page, and only then is it fetched. -->
+  <video aria-hidden="true" data-film data-plate="origin" src="assets/video/woodies-origin.mp4" data-poster="assets/video/woodies-origin-still.webp" playsinline preload="none" width="1280" height="720"></video>
+  <video aria-hidden="true" data-film data-plate="assistant" src="assets/video/homebase/assistant.mp4" muted loop playsinline preload="none" width="560" height="604"></video>
+  <video aria-hidden="true" data-plate="lift" data-once src="assets/video/homebase/lift.mp4" muted playsinline preload="none" width="848" height="558"></video>
+  <button type="button" class="poster-play" aria-label="Play Woodies: Origin, the short film, with sound"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2.5v19L22 12z"/></svg></i></button>
+  <i class="deck-glass" aria-hidden="true"></i>
+  <!-- the player's controls, over the film -->
+  <div class="deck" role="group" aria-label="Video player">
+    <i class="deck-turret" aria-hidden="true"></i>
+    <button type="button" class="deck-key deck-key--play" aria-label="Play"><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2.5v19L22 12z"/></svg><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h6v18H4zM14 3h6v18h-6z"/></svg></button>
+    <div class="deck-panel">
+      <div class="deck-keys"><button type="button" class="deck-key deck-key--back" aria-label="Back two seconds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16L1 12zM23 4v16L12 12z"/></svg></button><button type="button" class="deck-key deck-key--next" aria-label="Forward two seconds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 4v16l11-8zM12 4v16l11-8z"/></svg></button></div>
+      <div class="deck-lcd" aria-hidden="true"><canvas></canvas></div>
+      <div class="deck-seek" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i class="deck-fill"></i><i class="deck-thumb"></i></div>
+      <button type="button" class="deck-key deck-mute" aria-label="Sound off" aria-pressed="false"><svg class="i-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l6 5V4L7 9zM16 8.5v7a4 4 0 0 0 0-7zM16 4.2v2.1a6 6 0 0 1 0 11.4v2.1a8 8 0 0 0 0-15.6z"/></svg><svg class="i-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l6 5V4L7 9zM15.3 9.3l1.4-1.4 2.3 2.3 2.3-2.3 1.4 1.4-2.3 2.3 2.3 2.3-1.4 1.4-2.3-2.3-2.3 2.3-1.4-1.4 2.3-2.3z"/></svg></button>
+      <button type="button" class="deck-rate" aria-label="Speed: 1×">1×</button>
+    </div>
+    <button type="button" class="deck-key deck-close" aria-label="Close the film"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.6 3.5 12 9.9l6.4-6.4 2.1 2.1-6.4 6.4 6.4 6.4-2.1 2.1-6.4-6.4-6.4 6.4-2.1-2.1 6.4-6.4-6.4-6.4z"/></svg></button>
+  </div>
 </div>
 <div id="brood" aria-hidden="true">
-  <img src="assets/images/woodies/sticker-1.webp" alt="" width="501" height="501" decoding="async">
-  <img src="assets/images/woodies/sticker-2.webp" alt="" width="483" height="520" decoding="async">
-  <img src="assets/images/woodies/sticker-3.webp" alt="" width="520" height="471" decoding="async">
-  <img src="assets/images/woodies/sticker-4.webp" alt="" width="503" height="520" decoding="async">
-  <img src="assets/images/woodies/sticker-5.webp" alt="" width="484" height="520" decoding="async">
+  <img data-src="assets/images/woodies/sticker-1.webp" alt="" width="501" height="501" decoding="async">
+  <img data-src="assets/images/woodies/sticker-2.webp" alt="" width="483" height="520" decoding="async">
+  <img data-src="assets/images/woodies/sticker-3.webp" alt="" width="520" height="471" decoding="async">
+  <img data-src="assets/images/woodies/sticker-4.webp" alt="" width="503" height="520" decoding="async">
+  <img data-src="assets/images/woodies/sticker-5.webp" alt="" width="484" height="520" decoding="async">
 </div>
 <div id="pulse" aria-hidden="true"></div>
 <canvas id="frame" aria-hidden="true"></canvas>
@@ -842,7 +1054,8 @@ html:not(.js) canvas.piece { display: none; }
     <div class="panel panel--story panel--art">
       <div class="stage">
         <canvas class="piece" role="img" aria-label="Interplay, Austin palette, seed chris-3384, drawn live by its generator: orange, teal, yellow and cream shapes bloom in the middle of a navy field. Then a second hand's pen loops sweep across them."></canvas>
-        <img class="piece" src="assets/images/interplay/interplay-3384.webp" alt="Interplay, Austin palette, seed chris-3384: orange, teal, yellow and cream shapes bloom in the middle of a navy field, and a second hand's pen loops sweep across them." width="720" height="1018" loading="lazy" decoding="async">
+        <img class="piece" data-src="assets/images/interplay/interplay-3384.webp" alt="Interplay, Austin palette, seed chris-3384: orange, teal, yellow and cream shapes bloom in the middle of a navy field, and a second hand's pen loops sweep across them." width="720" height="1018" loading="lazy" decoding="async">
+        <noscript><img class="piece" src="assets/images/interplay/interplay-3384.webp" alt="Interplay, Austin palette, seed chris-3384: orange, teal, yellow and cream shapes bloom in the middle of a navy field, and a second hand's pen loops sweep across them." width="720" height="1018" loading="lazy" decoding="async"></noscript>
       </div>
       <div class="text lines">
         <h2 class="say say--over">In 2023, I started co-creating art with AI.</h2>
@@ -1020,7 +1233,7 @@ html:not(.js) canvas.piece { display: none; }
   // where each one settles, as fractions of the drawing area, with its size and tilt
   var NEST = [[0.26, 0.24, 1.0, -6], [0.74, 0.2, 0.92, 5], [0.5, 0.52, 1.1, 2], [0.2, 0.78, 0.9, 7], [0.78, 0.76, 1.0, -5]];
   var plates = {};
-  Array.prototype.slice.call(plate.querySelectorAll("img, video, canvas")).forEach(function (el) { plates[el.getAttribute("data-plate")] = el; });
+  Array.prototype.slice.call(plate.querySelectorAll("[data-plate]")).forEach(function (el) { plates[el.getAttribute("data-plate")] = el; });
   var ctx = canvas.getContext && canvas.getContext("2d");
   if (!ctx) { document.documentElement.classList.remove("js"); return; }
 
@@ -1073,7 +1286,7 @@ html:not(.js) canvas.piece { display: none; }
     var fine = gl.getShaderPrecisionFormat(gl.FRAGMENT_SHADER, gl.HIGH_FLOAT);
     if (!fine || !fine.precision) return null;   // the cloud pattern needs full precision
 
-    var SLOTS = 6, FPS = 24, FEATHER = 150;   // FPS is a ceiling: on a 60 Hz screen every third frame is drawn
+    var SLOTS = 6, FPS = 15, FEATHER = 150;   // the clouds move slowly, so 15 pictures a second is enough: on a 60 Hz screen every fourth frame is drawn
     var VERT = "attribute vec2 a; void main() { gl_Position = vec4(a, 0.0, 1.0); }";
     var FRAG = [
       "precision highp float;",
@@ -1219,8 +1432,14 @@ html:not(.js) canvas.piece { display: none; }
       }
     }
 
+    // A picture should take well under a millisecond to ask for. Where it takes several (a browser with no graphics
+    // card to hand, drawing the clouds on the processor), the sky is held still, as it is for reduced motion, and is
+    // drawn again only when the words it thins behind change.
+    var timed = 0, cost = 0, slow = false;
+    function held() { return slow || reduce.matches; }
+
     function render(now) {
-      var still = reduce.matches;
+      var still = held();
       var dt = lastT ? Math.min(100, now - lastT) : 0;
       lastT = now;
       if (!still) clock += dt / 1000;
@@ -1248,19 +1467,26 @@ html:not(.js) canvas.piece { display: none; }
       gl.uniform1f(loc.uScroll, still ? 0 : lastY);
       gl.uniform4fv(loc.uDim, dim);
       gl.uniform1fv(loc.uDimK, dimK);
+      var began = performance.now();
       gl.drawArrays(gl.TRIANGLES, 0, 3);
       pen.drawImage(cv, 0, 0);
+      if (!slow && timed < 12) {           // the first two pictures include setting up, so they are left out
+        if (++timed > 2) cost += performance.now() - began;
+        if (timed === 12 && cost / 10 > 5) slow = true;
+      }
       if (first) { first = false; box.classList.add("is-on"); }
       return settling;
     }
 
-    // The clouds are drawn about 20 times a second, and on every frame while the page scrolls or a rectangle is moving.
+    // The clouds are drawn 15 times a second, and on every frame while the page scrolls or a rectangle is moving.
+    // Where drawing is slow, at most four times a second, and only when something has changed.
     var settling = false;
     function frame(now) {
       raf = 0;
       if (lost || document.hidden || api.cover > 0.985) { lastT = 0; return; }
-      var still = reduce.matches;
+      var still = held();
       if (dirty || settling || (!still && (window.scrollY !== lastY || now - lastT >= 1000 / FPS - 3))) {
+        if (slow && lastT && now - lastT < 250) { raf = requestAnimationFrame(frame); return; }
         dirty = false;
         settling = render(now);
       }
@@ -1326,7 +1552,9 @@ html:not(.js) canvas.piece { display: none; }
       state: el.getAttribute("data-state"),
       panel: el.querySelector(".panel"),
       stage: el.querySelector(".stage"),
+      film: !!el.querySelector(".panel--film"),
       clips: Array.prototype.slice.call(el.querySelectorAll(".clip")),
+      shows: [el.getAttribute("data-state")].concat(Array.prototype.map.call(el.querySelectorAll(".say[data-state]"), function (say) { return say.getAttribute("data-state"); })),   // the states its lines use
       grid: el.querySelector(".projects"),
       cards: Array.prototype.slice.call(el.querySelectorAll(".project")),
       lines: Array.prototype.slice.call(el.querySelectorAll(".say")).map(function (say) {
@@ -1529,6 +1757,270 @@ html:not(.js) canvas.piece { display: none; }
   // The model, three.js and the viewer are fetched once, when the reader nears the Woodies chapter.
   // If any of it cannot load or run, the canvas shows a still render instead.
 
+  /* ---------- the player ---------- */
+  // The controls of the player. `use` is told which film's state is on screen and how visible it is, and the keys
+  // act on that film.
+  var deck = (function () {
+    var ui = plate.querySelector(".deck"), play = ui.querySelector(".deck-key--play"), back = ui.querySelector(".deck-key--back"), next = ui.querySelector(".deck-key--next");
+    var seek = ui.querySelector(".deck-seek"), lcd = ui.querySelector(".deck-lcd"), dots = lcd.querySelector("canvas"), rateKey = ui.querySelector(".deck-rate"), muteKey = ui.querySelector(".deck-mute");
+    var films = Array.prototype.slice.call(plate.querySelectorAll("video[data-film]"));
+    var RATES = [1, 1.5, 2, 0.5], rate = 0, ticking = 0, dragging = false, laid = null;
+    var api = { name: null, own: false, use: use, fit: fit };
+
+    // The player's size for a film, in a room bw wide and bh high: the largest at which the screen and the controls
+    // under it fit. The sums are the player's CSS: u is a hundredth of its width, and k, the size of the controls,
+    // follows u but never goes under what a thumb (or a mouse) needs, nor over what looks right on a large player.
+    // Every control is kept where the player is wide enough for them; a narrower one has the smaller set. Where
+    // even that does not fit, the controls are tried smaller, and at the last simply in proportion to the player.
+    function fit(st, bw, bh) {
+      var key = Math.round(bw) + "x" + Math.round(bh) + (touch.matches ? "t" : "m");
+      if (st.lay && st.lay.key === key) return st.lay;
+      var film = st.ratio, sound = st.sound ? 1 : 0, best = null, wanted = touch.matches ? 4.2 : 3.6, most = st.cinema ? 7.2 : 5.2;   // over the page the player is large, and its controls may be larger with it
+      [wanted, wanted * 0.86, wanted * 0.74, wanted * 0.63, 0].forEach(function (least) {
+        if (best) return;
+        [false, true].forEach(function (compact) {
+          if (best) return;
+          var dh = compact ? 23 : 27;                                                   // in k: the height under the screen
+          var narrowest = (compact ? 67 : 88) + sound * (compact ? 4 : 2);               // in k: the least width the controls fit in; a sound key asks a little more
+          function shape(w) {
+            var u = w / 100, k = Math.max(least, Math.min(most, u * 0.86)), fw = w - 3 * k - 9 * u;
+            return { w: w, h: 10 * u + fw / film + dh * k, k: k, ok: fw > 0 && w >= narrowest * k };
+          }
+          var s = shape(bw);
+          if (s.h > bh) {
+            for (var lo = 0, hi = bw, i = 0; i < 24; i++) { var mid = (lo + hi) / 2; if (shape(mid).h > bh) hi = mid; else lo = mid; }
+            s = shape(lo);
+          }
+          if (!s.ok) return;
+          s.compact = compact;
+          best = s;
+        });
+      });
+      best = best || { w: 0, h: 0, k: 4, compact: true };
+      best.none = best.w < 150 || best.h < 110;   // no room worth the name: the player is left out, as an empty frame would be
+      best.key = key;
+      st.lay = best;
+      return best;
+    }
+
+    function state() { return api.name ? STATES[api.name] : null; }
+    function film() { var st = state(); return st ? plates[st.plate] : null; }
+    function clock(t) { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + (t % 60 < 10 ? "0" : "") + (t % 60); }
+    // a film's length: what the file says, or, before it has been fetched, what its state says
+    function span(v, st) { return isFinite(v.duration) && v.duration ? v.duration : (st && st.length) || 0; }
+    function along(v, st) { var d = span(v, st); return d ? clamp(v.currentTime / d) : 0; }
+    function start(v) { var pl = v.play(); if (pl && pl.catch) pl.catch(function () {}); }
+
+    // the small screen, the play key and the groove say what the film is doing
+    function show() {
+      var v = film(), st = state();
+      if (!v) return;
+      var d = span(v, st), going = !v.paused && !v.ended;
+      // what the film is doing, and that it will start again where it does
+      lines[1] = (going ? "PLAY" : v.ended ? "END" : v.currentTime > 0 ? "PAUSE" : "READY") + (v.loop ? " · LOOP" : "");
+      lcd.setAttribute("data-note", lines[1]);
+      plate.classList.toggle("is-muted", v.muted);
+      muteKey.setAttribute("aria-pressed", v.muted ? "true" : "false");
+      tell(v, d);
+      plate.classList.toggle("is-playing", going);
+      play.setAttribute("aria-label", going ? "Pause" : "Play");
+      mark(along(v, st));
+      if (going && !ticking) ticking = requestAnimationFrame(tick);
+    }
+    // The small screen is a dot matrix: every letter is five dots wide and seven high (fewer for marks), and the dots
+    // that are not lit show faintly, as they do on a real one. A larger player has two lines, the time over what the
+    // player is doing; a small one has the time alone. Each line takes the largest whole dot that fits.
+    var GLYPHS = {
+      "0": "01110|10001|10011|10101|11001|10001|01110", "1": "00100|01100|00100|00100|00100|00100|01110", "2": "01110|10001|00001|00010|00100|01000|11111",
+      "3": "11110|00001|00001|01110|00001|00001|11110", "4": "00010|00110|01010|10010|11111|00010|00010", "5": "11111|10000|11110|00001|00001|10001|01110",
+      "6": "00110|01000|10000|11110|10001|10001|01110", "7": "11111|00001|00010|00100|01000|01000|01000", "8": "01110|10001|10001|01110|10001|10001|01110",
+      "9": "01110|10001|10001|01111|00001|00010|01100", ":": "0|1|1|0|1|1|0", ".": "0|0|0|0|0|0|1", "/": "001|001|010|010|010|100|100", " ": "00|00|00|00|00|00|00", "·": "0|0|0|1|0|0|0",
+      A: "01110|10001|10001|11111|10001|10001|10001", C: "01110|10001|10000|10000|10000|10001|01110", D: "11110|10001|10001|10001|10001|10001|11110",
+      E: "11111|10000|10000|11110|10000|10000|11111", L: "10000|10000|10000|10000|10000|10000|11111", N: "10001|11001|10101|10011|10001|10001|10001",
+      O: "01110|10001|10001|10001|10001|10001|01110", P: "11110|10001|10001|11110|10000|10000|10000", R: "11110|10001|10001|11110|10100|10010|10001",
+      S: "01111|10000|10000|01110|00001|00001|11110", U: "10001|10001|10001|10001|10001|10001|01110", Y: "10001|10001|01010|00100|00100|00100|00100"
+    };
+    Object.keys(GLYPHS).forEach(function (c) { GLYPHS[c] = GLYPHS[c].split("|"); });
+    var lines = ["", ""], drawn = "";
+    function paint(again) {
+      var w = lcd.clientWidth, h = lcd.clientHeight, real = Math.min(window.devicePixelRatio || 1, 3);
+      var two = !(laid && laid.compact), sig = lines[0] + "\n" + (two ? lines[1] : "") + "@" + w + "x" + h + plate.getAttribute("data-tone");
+      if (!w || !h || (sig === drawn && !again)) return;
+      drawn = sig;
+      var W = Math.round(w * real), H = Math.round(h * real), pen = dots.getContext("2d");
+      if (dots.width !== W || dots.height !== H) { dots.width = W; dots.height = H; }
+      pen.clearRect(0, 0, W, H);
+      var lit = getComputedStyle(plate).getPropertyValue("--lcd").trim() || "#cfe0ff", pad = Math.round(Math.max(H * 0.3, W * 0.045));   // clear of the screen's rounded corners
+      // one line: its text, the top of its band and the band's height
+      function line(text, top, tall) {
+        var cells = 0, i, c;
+        for (i = 0; i < text.length; i++) cells += (GLYPHS[text[i]] || GLYPHS[" "])[0].length + 1;
+        var size = Math.max(1, Math.floor(Math.min(tall / 7, (W - pad * 2) / Math.max(1, cells - 1))));
+        var gap = size > 2 ? Math.max(1, Math.round(size * 0.18)) : 0, y0 = Math.round(top + (tall - size * 7) / 2), x, y;
+        pen.fillStyle = lit;
+        pen.globalAlpha = 0.09;            // the dots that are not lit, across the whole line
+        for (x = pad; x + size <= W - pad; x += size) for (y = 0; y < 7; y++) pen.fillRect(x, y0 + y * size, size - gap, size - gap);
+        pen.globalAlpha = 1;
+        for (i = 0, x = pad; i < text.length; i++) {
+          c = GLYPHS[text[i]] || GLYPHS[" "];
+          for (y = 0; y < 7; y++) for (var j = 0; j < c[y].length; j++) if (c[y][j] === "1") pen.fillRect(x + j * size, y0 + y * size, size - gap, size - gap);
+          x += (c[0].length + 1) * size;
+        }
+      }
+      if (two) { line(lines[0], H * 0.1, H * 0.46); line(lines[1], H * 0.62, H * 0.26); }
+      else line(lines[0], H * 0.18, H * 0.64);
+    }
+    // the time: a small player has room for the time so far, a larger one for the length as well
+    function tell(v, d) {
+      lines[0] = clock(v.currentTime) + (laid && laid.compact ? "" : " / " + clock(d));
+      lcd.setAttribute("data-time", lines[0]);
+      paint();
+    }
+    function mark(at) {
+      seek.style.setProperty("--at", clamp(at).toFixed(4));
+      seek.setAttribute("aria-valuenow", Math.round(clamp(at) * 100));
+    }
+    // while a film plays the groove follows it on every frame; the words on the small screen change only with the film's own events
+    function tick() {
+      ticking = 0;
+      var v = film();
+      if (!v || v.paused || v.ended || !plate.classList.contains("has-deck")) return;
+      if (!dragging && v.duration) { mark(along(v, state())); tell(v, v.duration); }
+      ticking = requestAnimationFrame(tick);
+    }
+
+    var shownAt = -1;
+    function use(name, on, lay, moved) {
+      if (lay && lay.none) on = 0;
+      if (lay && lay !== laid) {           // the shape it has settled on for this room
+        laid = lay;
+        plate.classList.toggle("deck-compact", lay.compact);
+        if (name === api.name) show();
+      }
+      if (moved && on > 0.01) paint();     // the small screen is drawn again at its new size
+      if (on !== shownAt) {
+        shownAt = on;
+        plate.style.setProperty("--deck", on.toFixed(3));
+        plate.classList.toggle("has-deck", on > 0.01);
+        plate.classList.toggle("deck-live", on > 0.6);
+      }
+      if (name === api.name || !name) { if (!name && on <= 0.01) { api.name = null; api.own = false; } return; }
+      api.name = name;
+      api.own = false;
+      var st = state(), far = st.length > 60 ? "ten" : "two";
+      plate.classList.toggle("deck-sound", !!st.sound);
+      if (st.tone) plate.setAttribute("data-tone", st.tone); else plate.removeAttribute("data-tone");
+      drawn = "";
+      ui.setAttribute("aria-label", "Video player: " + (st.label || "Woodies: Origin, the short film"));
+      if (st.cinema) { ui.setAttribute("role", "dialog"); ui.setAttribute("aria-modal", "true"); } else { ui.setAttribute("role", "group"); ui.removeAttribute("aria-modal"); }
+      back.setAttribute("aria-label", "Back " + far + " seconds");
+      next.setAttribute("aria-label", "Forward " + far + " seconds");
+      show();
+    }
+
+    films.forEach(function (v) {
+      ["play", "pause", "ended", "timeupdate", "loadedmetadata", "seeked", "volumechange"].forEach(function (type) { v.addEventListener(type, function () { if (v === film()) show(); }); });
+    });
+
+    play.addEventListener("click", function () {
+      var v = film();
+      if (!v) return;
+      api.own = true;
+      if (v.paused || v.ended) {
+        if (v.ended || (v.duration && v.currentTime >= v.duration - 0.05)) v.currentTime = 0;
+        start(v);
+      } else v.pause();
+    });
+    function skip(by) {
+      var v = film(), st = state();
+      if (!v) return;
+      api.own = true;
+      if (!v.duration) return;
+      var to = v.currentTime + by * (st.length > 60 ? 10 : 2);   // a long film moves in longer steps
+      v.currentTime = v.loop ? (to + v.duration) % v.duration : Math.max(0, Math.min(v.duration - 0.05, to));
+    }
+    back.addEventListener("click", function () { skip(-1); });
+    next.addEventListener("click", function () { skip(1); });
+    muteKey.addEventListener("click", function () { var v = film(); if (v) v.muted = !v.muted; });
+    rateKey.addEventListener("click", function () {
+      rate = (rate + 1) % RATES.length;
+      var r = RATES[rate], text = (r === 0.5 ? "½" : r) + "×";
+      films.forEach(function (v) { v.defaultPlaybackRate = r; v.playbackRate = r; });
+      rateKey.textContent = text;
+      rateKey.setAttribute("aria-label", "Speed: " + text);
+    });
+
+    // the groove: press or drag along it to move through the film
+    function scrub(e) {
+      var v = film(), st = state(), b = seek.getBoundingClientRect(), thumb = b.height * 0.6;
+      if (!v) return;
+      var at = clamp((e.clientX - b.left - thumb / 2) / (b.width - thumb)), d = span(v, st);
+      if (!d) return;
+      v.currentTime = Math.min(d - 0.05, at * d);   // on a film not yet fetched this sets where it will start
+      mark(at);
+    }
+    seek.addEventListener("pointerdown", function (e) {
+      api.own = true;
+      dragging = true;
+      if (seek.setPointerCapture) { try { seek.setPointerCapture(e.pointerId); } catch (err) {} }
+      scrub(e);
+      e.preventDefault();
+    });
+    seek.addEventListener("pointermove", function (e) { if (dragging) scrub(e); });
+    ["pointerup", "pointercancel"].forEach(function (type) { seek.addEventListener(type, function () { dragging = false; }); });
+    seek.addEventListener("keydown", function (e) {
+      var v = film(), by = e.key === "ArrowRight" || e.key === "ArrowUp" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowDown" ? -1 : 0;
+      if (!by || !v || !v.duration) return;
+      api.own = true;
+      v.currentTime = Math.max(0, Math.min(v.duration - 0.05, v.currentTime + by * v.duration * 0.05));
+      e.preventDefault();
+    });
+    return api;
+  })();
+
+  /* ---------- the film, over the page ---------- */
+  // A press on the Woodies: Origin poster opens the film in the player over the page: `cinema.on` makes `origin` the
+  // state on screen, so the frame grows from the poster into the player in the middle of the screen. The film starts
+  // at once, since the press was the reader asking for it. While it is open the page does not scroll and the Tab key
+  // stays among the player's keys. The close key, a press on the dark round the player, or Escape closes it: the film
+  // stops and the frame shrinks back into the poster.
+  var cinema = { on: false };
+  var cinemaShade = document.getElementById("cinema"), posterKey = plate.querySelector(".poster-play"), closeKey = plate.querySelector(".deck-close");
+  function openCinema() {
+    if (cinema.on) return;
+    cinema.on = true;
+    var v = plates.origin, pl = v.play();
+    if (pl && pl.catch) pl.catch(function () {});
+    kick();
+    setTimeout(function () { if (cinema.on) plate.querySelector(".deck-key--play").focus({ preventScroll: true }); }, 350);
+  }
+  function closeCinema() {
+    if (!cinema.on) return;
+    cinema.on = false;
+    plates.origin.pause();
+    kick();
+    setTimeout(function () { if (!cinema.on) posterKey.focus({ preventScroll: true }); }, 450);   // back to the poster, once it is there to take it
+  }
+  posterKey.addEventListener("click", openCinema);
+  closeKey.addEventListener("click", closeCinema);
+  cinemaShade.addEventListener("click", closeCinema);
+  document.addEventListener("keydown", function (e) {
+    if (!cinema.on) return;
+    if (e.key === "Escape") { closeCinema(); return; }
+    if (e.key === "Tab") {                      // round and round the player's own keys
+      var keys = Array.prototype.filter.call(plate.querySelectorAll(".deck button, .deck [tabindex]"), function (el) { return el.getClientRects().length > 0; });
+      var at = keys.indexOf(document.activeElement), to = e.shiftKey ? (at <= 0 ? keys.length - 1 : at - 1) : (at < 0 || at === keys.length - 1 ? 0 : at + 1);
+      keys[to].focus({ preventScroll: true });
+      e.preventDefault();
+      return;
+    }
+    // the keys that would scroll the page behind
+    var onKey = e.target && e.target.closest && e.target.closest(".deck");
+    if (["PageUp", "PageDown", "Home", "End"].indexOf(e.key) >= 0 || (!onKey && [" ", "ArrowUp", "ArrowDown"].indexOf(e.key) >= 0)) e.preventDefault();
+  }, true);
+  window.addEventListener("wheel", function (e) { if (cinema.on) { e.preventDefault(); e.stopImmediatePropagation(); } }, { passive: false, capture: true });
+  window.addEventListener("touchmove", function (e) { if (cinema.on && !(e.target.closest && e.target.closest(".deck-seek"))) e.preventDefault(); }, { passive: false, capture: true });
+
   var model = plates.threed, viewer = null, viewerAsked = false, modelAt = 0, grab = null;
   function askViewer() {
     if (viewerAsked) return;
@@ -1536,10 +2028,16 @@ html:not(.js) canvas.piece { display: none; }
     var made = null;
     try {
       // written this way so a browser too old to know import() can still read the rest of this script
-      new Function("u", "return import(u)")("./assets/js/woodie-viewer.js").then(function (m) {
+      new Function("u", "return import(u)")("./assets/js/woodie-viewer.min.js").then(function (m) {
         made = m.mount(model, { model: "assets/models/woodie-1188.glb", idle: "assets/models/woodie-idle.glb" });
         return made.ready;
-      }).then(function () { viewer = made; kick(); }).catch(function () { model.classList.add("is-failed"); });
+      }).then(function () {
+        viewer = made;
+        kick();
+        // Draw it once in a quiet moment, while it is still off screen: the first picture has the model's shading to
+        // set up and its textures to hand over, and that is better paid for now than as the Woodie comes into view.
+        (window.requestIdleCallback || setTimeout)(function () { try { made.once(); } catch (e) {} }, { timeout: 2500 });
+      }).catch(function () { model.classList.add("is-failed"); });
     } catch (e) { model.classList.add("is-failed"); }
   }
   model.addEventListener("pointerdown", function (e) {
@@ -1596,6 +2094,8 @@ html:not(.js) canvas.piece { display: none; }
     document.head.appendChild(tag);
   }
   function pieceFailed() {
+    var still = art.stage.querySelector("img.piece");     // the finished piece as a picture, fetched only now that it is needed
+    if (still && !still.getAttribute("src")) still.src = still.getAttribute("data-src");
     art.stage.classList.add("piece-failed");
     art.phase = 5;
   }
@@ -1794,16 +2294,21 @@ html:not(.js) canvas.piece { display: none; }
     // lines that name a piece of work show it: the frame takes the picture's shape
     sync:      { ratio: 1139 / 733,  label: "The Walking Dead Story Sync", plate: "sync" },
     character: { ratio: 0, hidden: true, brood: true },   // six Woodies, in place of the frame
-    storysync: { ratio: 640 / 360,   label: "The Walking Dead Story Sync, AMC", plate: "storysync" },
+    // a film that plays on its own has the player (`deck`), which works out its shape from the film's (`ratio`) and
+    // the room it has. `tone` is the colour of its plastic
+    storysync: { ratio: 640 / 360, label: "The Walking Dead Story Sync, AMC", plate: "storysync", deck: true },
     madmen:    { ratio: 1200 / 810,  label: "Mad Men: The Fan Cut, AMC",   plate: "madmen" },
     dmv:       { ratio: 1200 / 810,  label: "California DMV",              plate: "dmv" },
     ultradao:  { ratio: 1,           plate: "ultradao", stages: ["ultradao-1", "ultradao-2", "ultradao-3", "ultradao-4", "ultradao-5", "ultradao-6"] },   // the art carries its own name
     sheet:     { ratio: 0, hidden: true },                // a sheet of real Woodies fills the page, in place of the frame
-    poster:    { ratio: 720 / 1081,  label: "Woodies: Origin",             plate: "poster" },
+    poster:    { ratio: 720 / 1081,  label: "Woodies: Origin. Press to play the film.", plate: "poster", opens: "origin" },
+    // the whole film, with sound, in the player over the page (`cinema`). No line shows it: a press on the poster does.
+    // It is never started for the reader (`manual`) and not fetched before (`length`, in seconds, stands in for what the file would say)
+    origin:    { ratio: 1280 / 720, tone: "lime", plate: "origin", deck: true, cinema: true, manual: true, sound: true, length: 219 },
     reel:      { ratio: 0, hidden: true },                // the film's loops are on screen
     threed:    { ratio: 4 / 5,       label: "Woodie #1188. Drag to turn it.", plate: "threed" },   // a real 3D model, on a canvas
-    assistant: { ratio: 560 / 604,   label: "Homebase Assistant, covering a shift", plate: "assistant" },
-    lift:      { ratio: 848 / 558,   label: "Homebase Assistant",          plate: "lift" },
+    assistant: { ratio: 560 / 604, tone: "grape", label: "Homebase Assistant, covering a shift", plate: "assistant", deck: true },
+    lift:      { ratio: 848 / 558,   label: "Homebase Assistant",          plate: "lift" },   // plays once as its line arrives, so it has no player
     // drawings that state the fact in their line
     // `tall` is the shape on a phone, where the drawing has more height than width to fill
     team:    { ratio: 0,      draw: "team" },      // loops that grow past any frame
@@ -1898,7 +2403,7 @@ html:not(.js) canvas.piece { display: none; }
     // film: the page goes dark, and the clips come up one after another and play
     var night = 0;
     segs.forEach(function (s) {
-      if (!s.clips.length) return;
+      if (!s.film) return;
       var on = s === current;
       if (on) night = Math.min(ease(q / 0.08), 1 - ease((q - 0.95) / 0.05));
       // the Woodies pictures load once the reader is within two sections of them
@@ -1925,9 +2430,11 @@ html:not(.js) canvas.piece { display: none; }
     contact.style.pointerEvents = fade < 0.5 ? "none" : "";
 
     showChapter(segs.indexOf(current));
+    fetchNear(segs.indexOf(current));
 
     var name = borrowed || current.state;
     if (endBox.top < vh * 0.35) name = "end";     // once the close has covered the last line
+    if (cinema.on) name = "origin";               // the film is open over the page, whatever the scroll says
     active = name;
     if (typeof pal !== "undefined" && pal) pal.set(name);
     progress = still ? 1 : clamp(run);
@@ -2002,6 +2509,10 @@ html:not(.js) canvas.piece { display: none; }
   function target() {
     var m = inset();
     var st = STATES[active];
+    if (st.cinema) {                             // the film's player, in the middle of the screen with a margin round it
+      var gap = Math.max(18, Math.min(vw, vh) * 0.05), big = deck.fit(st, vw - gap * 2, vh - gap * 2);
+      return { x: (vw - big.w) / 2, y: (vh - big.h) / 2, w: big.w, h: big.h };
+    }
     if (!st.ratio) return { x: m, y: m, w: vw - 2 * m, h: vh - 2 * m };
     // The frame sits on the grid. Its left edge is the stage's left edge: column 7 on a wide screen, the side margin
     // on a narrow one, where the words start too. It is as wide as the stage if its height allows, so a wide frame
@@ -2013,9 +2524,14 @@ html:not(.js) canvas.piece { display: none; }
     var bw = room.bw, y0 = room.y0;
     var bh = Math.max(0, region.y + region.h - y0 - LABEL);   // a very short screen leaves no room, never less than none
     var w, h;
-    var ratio = !wide.matches && region.h > region.w && st.tall ? st.tall : st.ratio;   // on an upright phone some drawings take a taller shape
-    w = Math.min(bw, bh * ratio);
-    h = w / ratio;
+    if (st.deck) {                               // a film's player works out its own shape for the room it has
+      var lay = deck.fit(st, bw, bh);
+      w = lay.w; h = lay.h;
+    } else {
+      var ratio = !wide.matches && region.h > region.w && st.tall ? st.tall : st.ratio;   // on an upright phone some drawings take a taller shape
+      w = Math.min(bw, bh * ratio);
+      h = w / ratio;
+    }
     return { x: x0, y: y0 + (bh - h) / 2, w: w, h: h };
   }
 
@@ -2912,6 +3428,46 @@ html:not(.js) canvas.piece { display: none; }
     ctx.strokeStyle = INK;
   };
 
+  // Pictures and films are fetched as the reader nears the section that shows them, not when the page loads. A
+  // picture waits with only `data-src`, and a film is not preloaded. Pictures come in for the section on screen, the
+  // one before it and the two after it; films, which are heavier, for the one on screen and its neighbours.
+  var fetched = {};
+  function fetchFor(name, films) {
+    var st = STATES[name], level = films ? 2 : 1;
+    if (!st || (fetched[name] || 0) >= level) return;
+    fetched[name] = level;
+    (st.stages || (st.plate ? [st.plate] : [])).forEach(function (plateName) {
+      var el = plates[plateName];
+      if (!el) return;
+      if (el.tagName === "IMG") { if (!el.getAttribute("src") && el.getAttribute("data-src")) el.src = el.getAttribute("data-src"); }
+      else if (el.tagName === "VIDEO" && st.manual) { if (!el.getAttribute("poster")) el.poster = el.getAttribute("data-poster"); }   // a film the reader starts: only its still
+      else if (films && el.tagName === "VIDEO" && el.preload !== "auto") { el.preload = "auto"; if (el.readyState === 0 && el.paused) el.load(); }
+    });
+    if (st.brood) brood.forEach(function (img) { if (!img.getAttribute("src")) img.src = img.getAttribute("data-src"); });
+    if (st.opens) fetchFor(st.opens, false);     // and the still of the film it opens
+  }
+  function fetchNear(at) {
+    for (var i = Math.max(0, at - 1); i <= Math.min(segs.length - 1, at + 2); i++) {
+      for (var j = 0; j < segs[i].shows.length; j++) fetchFor(segs[i].shows[j], i <= at + 1);
+    }
+  }
+
+  // A film plays only while it is on screen, and stops when it leaves. Once the reader has touched the player's
+  // controls the film is theirs (`deck.own`), and it is left as they set it until it leaves the screen.
+  function run(el, on, name) {
+    var once = el.hasAttribute("data-once");   // plays through one time and holds on its last frame
+    var theirs = deck.own && deck.name === name;
+    if (on > 0.05 && !theirs && !STATES[name].manual) {
+      if (el.paused && !el.ended && !reduce.matches) { var pl = el.play(); if (pl && pl.catch) pl.catch(function () {}); }
+      if (once && reduce.matches && el.duration && el.currentTime < el.duration - 0.1) el.currentTime = el.duration;
+    }
+    if (on <= 0.05 && !(STATES[name].cinema && cinema.on)) {   // the film over the page has just been started by the reader, before its player has come up
+      if (!el.paused) el.pause();
+      if (once && el.currentTime > 0) el.currentTime = 0;   // ready to play again next time
+    }
+  }
+
+  var plateAt = "";
   function draw() {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, vw, vh);
@@ -2927,7 +3483,10 @@ html:not(.js) canvas.piece { display: none; }
     });
 
     // the frame
-    ctx.globalAlpha = shown;
+    // a film's player stands in place of the outlined frame
+    var deckOn = 0, deckName = null;
+    NAMES.forEach(function (n) { if (STATES[n].deck && presence[n] * shown > deckOn) { deckOn = presence[n] * shown; deckName = n; } });
+    ctx.globalAlpha = shown * (1 - deckOn);
     ctx.strokeStyle = INK;
     ctx.lineWidth = 2;
     ctx.strokeRect(rect.x, rect.y, rect.w, rect.h);
@@ -2935,9 +3494,21 @@ html:not(.js) canvas.piece { display: none; }
     if (over) { over(); over = null; ctx.globalAlpha = 1; }
 
     // the plate follows the frame, and shows the picture of the state on screen
-    plate.style.transform = "translate(" + rect.x + "px, " + rect.y + "px)";
-    plate.style.width = rect.w + "px";
-    plate.style.height = rect.h + "px";
+    var lay = deckName ? STATES[deckName].lay : null;
+    var place = rect.x.toFixed(2) + "," + rect.y.toFixed(2) + "," + rect.w.toFixed(2) + "," + rect.h.toFixed(2) + (lay ? lay.key : "");
+    var moved = place !== plateAt;
+    if (moved) {                         // written only when it has moved: the player inside it is costly to lay out again
+      plateAt = place;
+      plate.style.transform = "translate(" + rect.x + "px, " + rect.y + "px)";
+      plate.style.width = rect.w + "px";
+      plate.style.height = rect.h + "px";
+      plate.style.setProperty("--u", (rect.w / 100).toFixed(3) + "px");
+      if (lay) {                         // while the frame is still on its way, the player keeps its proportions
+        var grown = lay.w ? rect.w / lay.w : 1;
+        plate.style.setProperty("--k", (lay.k * grown).toFixed(3) + "px");
+      }
+    }
+    deck.use(deckName, deckOn, lay, moved);
     NAMES.forEach(function (n) {
       var st = STATES[n];
       if (!st.plate) return;
@@ -2950,17 +3521,14 @@ html:not(.js) canvas.piece { display: none; }
       }
       var el = plates[st.plate], on = presence[n] * shown;
       el.style.opacity = on;
-      if (el.play) {                       // a film plays only while it is on screen
-        var once = el.hasAttribute("data-once");   // plays through one time and holds on its last frame
-        if (on > 0.05 && el.paused && !el.ended && !reduce.matches) { var pl = el.play(); if (pl && pl.catch) pl.catch(function () {}); }
-        if (on > 0.05 && once && reduce.matches && el.duration && el.currentTime < el.duration - 0.1) el.currentTime = el.duration;
-        if (on <= 0.05) {
-          if (!el.paused) el.pause();
-          if (once && el.currentTime > 0) el.currentTime = 0;   // ready to play again next time
-        }
-      }
+      if (el.play) run(el, on, n);
     });
 
+    cinemaShade.style.opacity = presence.origin;
+    document.documentElement.classList.toggle("cinema", cinema.on || presence.origin > 0.02);
+    var posterOn = presence.poster * shown;
+    posterKey.style.opacity = posterOn;
+    posterKey.classList.toggle("is-on", posterOn > 0.6 && !cinema.on);
     grove.style.opacity = presence.character;
     slate.style.opacity = presence.roblox;
     paperLayer.style.opacity = presence.art;
@@ -3052,6 +3620,7 @@ html:not(.js) canvas.piece { display: none; }
       reel:      { eyes: "wide",  mouth: "o",     watch: true },
       threed:    { eyes: "star",  mouth: "big",   watch: true },
       poster:    { eyes: "star",  mouth: "big",   watch: true },
+      origin:    { eyes: "star",  mouth: "big",   watch: true },
       assistant: { eyes: "wide",  mouth: "smile", watch: true },
       lift:      { eyes: "wide",  mouth: "big",   mark: "!", watch: true },
       team:      { eyes: "open",  mouth: "big",   watch: true },
