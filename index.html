@@ -137,7 +137,6 @@ ol { padding: 0; list-style: none; }
   top: 0;
   left: 0;
   z-index: 2;
-  overflow: hidden;
   pointer-events: none;
 }
 #plate img, #plate video {
@@ -166,6 +165,145 @@ ol { padding: 0; list-style: none; }
 #plate canvas.is-live { pointer-events: auto; }
 #plate canvas.is-live:active { cursor: grabbing; }
 #plate canvas.is-failed { background: url(assets/images/work/woodie-3d.webp) center / cover no-repeat; cursor: default; }   /* a still render, where 3D cannot run */
+/* the player: every film on the page plays inside one, a chunky machine from about the year 2000. It is brushed
+   metal with a swoosh of blue plastic let into it, chrome keys that sit off line with each other, and one yellow play
+   button far too big for the rest, in a round turret that sticks out past the corner of the body. A small screen
+   gives the time, a groove is for scrubbing, and a pill sets the speed. It is drawn in CSS alone, and every length
+   is a multiple of --u, a hundredth of the player's width, which the script sets, so the whole machine scales with
+   the frame. The film sits in the screen. A film taller than it is wide (`.deck-side`) has its controls down the
+   right side, so they stay large on a phone. The keys work: play and pause, back and forward (two seconds, or one
+   scene where the player holds several), the speed, and the groove. */
+#plate { --u: 6px; }
+.deck-shell, .deck-glass, .deck { position: absolute; inset: 0; opacity: var(--deck, 0); visibility: hidden; }
+#plate.has-deck .deck-shell, #plate.has-deck .deck-glass, #plate.has-deck .deck { visibility: visible; }
+.deck-shell i, .deck-shell span { position: absolute; display: block; }
+.deck-body, .deck-turret {          /* brushed metal, lit from the top left */
+  background:
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 0.08) 0 1px, rgb(0 0 0 / 0.035) 1px 2px, transparent 2px 4px),
+    linear-gradient(172deg, #fbfcfe 0%, #d7dbe4 9%, #aab0bd 34%, #cbcfd9 58%, #8d94a3 86%, #6e7584 100%);
+  box-shadow:
+    inset 0 calc(var(--u) * 0.5) 0 rgb(255 255 255 / 0.9),
+    inset 0 calc(var(--u) * -0.9) calc(var(--u) * 1.2) rgb(20 24 60 / 0.45),
+    inset calc(var(--u) * 0.5) 0 calc(var(--u) * 0.6) rgb(255 255 255 / 0.5),
+    inset calc(var(--u) * -0.5) 0 calc(var(--u) * 0.8) rgb(20 24 60 / 0.3),
+    0 0 0 1px rgb(10 14 60 / 0.55),
+    0 calc(var(--u) * 1.6) calc(var(--u) * 3.5) rgb(0 4 60 / 0.45),
+    0 calc(var(--u) * 0.3) calc(var(--u) * 0.6) rgb(0 4 60 / 0.5);
+}
+.deck-body { left: calc(var(--u) * 3); right: 0; top: 0; bottom: calc(var(--u) * 4); border-radius: calc(var(--u) * 8) calc(var(--u) * 3.5) calc(var(--u) * 5) calc(var(--u) * 4) / calc(var(--u) * 6.5) calc(var(--u) * 3.5) calc(var(--u) * 5) calc(var(--u) * 4); }
+.deck-turret { left: 0; bottom: 0; width: calc(var(--u) * 27); height: calc(var(--u) * 27); border-radius: 50%; }   /* the round housing of the play button: it stands out past the body's corner */
+.deck-turret::after {               /* blue plastic round the button */
+  content: ""; position: absolute; inset: calc(var(--u) * 1.9); border-radius: 50%;
+  background: linear-gradient(180deg, #000d85 0%, var(--signal) 48%, #5268ff 100%);
+  box-shadow: inset 0 calc(var(--u) * 0.7) calc(var(--u) * 1.1) rgb(0 0 40 / 0.75), inset 0 calc(var(--u) * -0.3) calc(var(--u) * 0.5) rgb(255 255 255 / 0.4), 0 calc(var(--u) * 0.25) 0 rgb(255 255 255 / 0.75);
+}
+.deck-grip {                        /* grooves to hold it by */
+  left: calc(var(--u) * 11); top: calc(var(--u) * 2.5); width: calc(var(--u) * 15); height: calc(var(--u) * 2.2);
+  background: repeating-linear-gradient(180deg, rgb(40 46 70 / 0.55) 0 1px, rgb(255 255 255 / 0.8) 1px 2px, transparent 2px calc(var(--u) * 0.74));
+}
+.deck-mark {                        /* the maker's mark, pressed into the metal */
+  right: calc(var(--u) * 9.5); top: calc(var(--u) * 2); font-size: calc(var(--u) * 2.5); line-height: 1.2; letter-spacing: 0.14em; white-space: nowrap;
+  color: rgb(52 58 80 / 0.8); text-shadow: 0 1px 0 rgb(255 255 255 / 0.75);
+}
+.deck-led {                         /* lit while the film plays */
+  right: calc(var(--u) * 5); top: calc(var(--u) * 2.5); width: calc(var(--u) * 2); height: calc(var(--u) * 2); border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #8d93a3, #3a3f50);
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 0.6), 0 1px 0 rgb(255 255 255 / 0.8);
+}
+#plate.is-playing .deck-led { background: radial-gradient(circle at 35% 30%, #fff, var(--live) 45%, #b98a00); box-shadow: 0 0 calc(var(--u) * 1.4) var(--live), 0 1px 0 rgb(255 255 255 / 0.8); }
+.deck-well {                        /* the dark surround the screen is set into */
+  left: calc(var(--u) * 6.3); top: calc(var(--u) * 5.8); width: calc(var(--u) * 90.4); height: calc(100% - calc(var(--u) * 33.6)); border-radius: calc(var(--u) * 2.6);
+  background: linear-gradient(180deg, #05060f, #171a2c);
+  box-shadow: inset 0 calc(var(--u) * 0.4) calc(var(--u) * 0.8) #000, 0 calc(var(--u) * 0.3) 0 rgb(255 255 255 / 0.8), 0 calc(var(--u) * -0.2) 0 rgb(0 0 0 / 0.35);
+}
+.deck-inlay {                       /* the swoosh: blue plastic let into the metal, thick under the keys and thinning away to the right */
+  left: calc(var(--u) * 25); bottom: calc(var(--u) * 6); width: calc(var(--u) * 71); height: calc(var(--u) * 19);
+  border-radius: calc(var(--u) * 9.5) calc(var(--u) * 56) calc(var(--u) * 2) calc(var(--u) * 9.5) / calc(var(--u) * 9.5) calc(var(--u) * 15.5) calc(var(--u) * 2) calc(var(--u) * 9.5);
+  background: linear-gradient(180deg, #000d85 0%, var(--signal) 48%, #5268ff 100%);
+  box-shadow: inset 0 calc(var(--u) * 0.7) calc(var(--u) * 1.1) rgb(0 0 40 / 0.75), inset 0 calc(var(--u) * -0.3) calc(var(--u) * 0.5) rgb(255 255 255 / 0.4), 0 calc(var(--u) * 0.25) 0 rgb(255 255 255 / 0.75);
+}
+#plate video, .deck-glass {         /* a film sits in the player's screen, not edge to edge */
+  inset: auto; left: calc(var(--u) * 7.5); top: calc(var(--u) * 7); width: calc(var(--u) * 88); height: calc(100% - calc(var(--u) * 36)); border-radius: calc(var(--u) * 1.5);
+}
+.deck-glass {                       /* the glass over the screen: a sheen across one corner, and shade round the edge */
+  background: linear-gradient(118deg, rgb(255 255 255 / 0.16) 0%, rgb(255 255 255 / 0.04) 30%, transparent 30.3%);
+  box-shadow: inset 0 0 calc(var(--u) * 1.6) rgb(0 0 0 / 0.65);
+  pointer-events: none;
+}
+.deck { pointer-events: none; }
+#plate.deck-live .deck-key, #plate.deck-live .deck-seek, #plate.deck-live .deck-rate { pointer-events: auto; }
+.deck-key, .deck-rate {
+  position: absolute; margin: 0; padding: 0; border: 0; font: inherit; cursor: pointer;
+  -webkit-tap-highlight-color: transparent; -webkit-appearance: none; appearance: none;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.deck-key, .deck-rate, .deck-thumb {   /* chrome: a bright dome in a dark collar */
+  color: #1c2140;
+  background: radial-gradient(circle at 34% 26%, #fff 0%, #eef0f5 18%, #b9bfcb 56%, #7c8393 100%);
+  box-shadow:
+    0 0 0 calc(var(--u) * 0.45) #4d5466, 0 0 0 calc(var(--u) * 0.85) rgb(255 255 255 / 0.5),
+    0 calc(var(--u) * 1) calc(var(--u) * 1.3) rgb(0 0 40 / 0.6),
+    inset 0 calc(var(--u) * -0.5) calc(var(--u) * 0.8) rgb(0 0 40 / 0.35), inset 0 calc(var(--u) * 0.4) calc(var(--u) * 0.5) #fff;
+}
+.deck-key { border-radius: 50%; }
+.deck-key::after, .deck-rate::after { content: ""; position: absolute; inset: -6px; border-radius: inherit; }   /* more room for a thumb */
+.deck-key svg { display: block; width: 44%; height: 44%; margin: auto; fill: currentColor; filter: drop-shadow(0 1px 0 rgb(255 255 255 / 0.55)); }
+.deck-key:active, .deck-rate:active { transform: translateY(calc(var(--u) * 0.3)) scale(0.97); box-shadow: 0 0 0 calc(var(--u) * 0.45) #4d5466, 0 0 0 calc(var(--u) * 0.85) rgb(255 255 255 / 0.5), 0 calc(var(--u) * 0.3) calc(var(--u) * 0.5) rgb(0 0 40 / 0.6), inset 0 calc(var(--u) * 0.6) calc(var(--u) * 0.9) rgb(0 0 40 / 0.45); }
+.deck-key--play {                   /* the big one: yellow, like a sweet */
+  left: calc(var(--u) * 4.25); bottom: calc(var(--u) * 4.25); width: calc(var(--u) * 18.5); height: calc(var(--u) * 18.5);
+  color: #3d2c00;
+  background: radial-gradient(circle at 34% 24%, #fffde0 0%, #fff27a 14%, var(--live) 42%, #e2a900 80%, #a36c00 100%);
+}
+.deck-key--back { left: calc(var(--u) * 29.5); bottom: calc(var(--u) * 7.3); width: calc(var(--u) * 8.5); height: calc(var(--u) * 8.5); }
+.deck-key--next { left: calc(var(--u) * 39.2); bottom: calc(var(--u) * 11.2); width: calc(var(--u) * 11.6); height: calc(var(--u) * 11.6); }
+.deck-key--play .i-pause, #plate.is-playing .deck-key--play .i-play { display: none; }
+#plate.is-playing .deck-key--play .i-pause { display: block; }
+.deck-key--play .i-play { transform: translateX(6%); }
+.deck-lcd {                         /* the small screen: the time, and what the player is doing */
+  position: absolute; right: calc(var(--u) * 4.5); bottom: calc(var(--u) * 16.3); width: calc(var(--u) * 41); height: calc(var(--u) * 9.4);
+  display: flex; flex-direction: column; justify-content: center; gap: calc(var(--u) * 0.8);
+  padding: 0 calc(var(--u) * 2.6); overflow: hidden; border-radius: calc(var(--u) * 1.5) calc(var(--u) * 5) calc(var(--u) * 1.5) calc(var(--u) * 5);
+  color: #cfe0ff; text-shadow: 0 0 calc(var(--u) * 0.9) rgb(110 150 255 / 0.95);
+  line-height: 1; white-space: nowrap; font-variant-numeric: tabular-nums;
+  background: linear-gradient(180deg, #03051a, #0b1548);
+  box-shadow: inset 0 calc(var(--u) * 0.5) calc(var(--u) * 0.9) #000, 0 calc(var(--u) * 0.25) 0 rgb(255 255 255 / 0.75), 0 0 0 calc(var(--u) * 0.4) #8d94a3;
+}
+.deck-lcd::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgb(0 0 0 / 0.3) 0 1px, transparent 1px 3px); }   /* its rows of dots */
+.deck-time { font-size: calc(var(--u) * 4); }
+.deck-note { font-size: calc(var(--u) * 2.6); letter-spacing: 0.12em; opacity: 0.8; }
+.deck-seek { position: absolute; left: calc(var(--u) * 55); bottom: calc(var(--u) * 7.2); width: calc(var(--u) * 26.5); height: calc(var(--u) * 5.6); cursor: pointer; touch-action: none; }
+.deck-seek::before {                /* the groove */
+  content: ""; position: absolute; left: 0; right: 0; top: 50%; height: calc(var(--u) * 2); margin-top: calc(var(--u) * -1); border-radius: calc(var(--u) * 1);
+  background: #080b1e; box-shadow: inset 0 calc(var(--u) * 0.3) calc(var(--u) * 0.5) #000, 0 calc(var(--u) * 0.2) 0 rgb(255 255 255 / 0.6);
+}
+.deck-seek::after { content: ""; position: absolute; inset: -8px 0; }
+.deck-fill {
+  position: absolute; left: calc(var(--u) * 0.4); top: 50%; height: calc(var(--u) * 1.2); margin-top: calc(var(--u) * -0.6); border-radius: calc(var(--u) * 0.6);
+  width: calc((100% - calc(var(--u) * 3.4)) * var(--at, 0) + calc(var(--u) * 1.3));
+  background: linear-gradient(90deg, #ffb400, var(--live)); box-shadow: 0 0 calc(var(--u) * 0.9) rgb(255 230 0 / 0.8);
+}
+.deck-thumb {
+  position: absolute; top: 0; left: calc((100% - calc(var(--u) * 3.4)) * var(--at, 0)); width: calc(var(--u) * 3.4); height: 100%; border-radius: calc(var(--u) * 1.2);
+  background: linear-gradient(90deg, #7c8393 0%, #f4f5f9 30%, #fff 48%, #b9bfcb 70%, #6d7484 100%);
+}
+.deck-rate { right: calc(var(--u) * 4.6); bottom: calc(var(--u) * 7); width: calc(var(--u) * 11); height: calc(var(--u) * 6); border-radius: calc(var(--u) * 3); font-size: calc(var(--u) * 3.1); line-height: 1; background: linear-gradient(180deg, #fff 0%, #dfe2ea 30%, #a9afbc 70%, #8a91a0 100%); }   /* the speed */
+.deck :focus-visible { outline: var(--line) solid var(--live); outline-offset: 3px; }
+/* a tall film: the screen on the left, the controls down the right, the turret at the bottom right */
+#plate.deck-side .deck-body { left: 0; right: calc(var(--u) * 3); border-radius: calc(var(--u) * 5) calc(var(--u) * 9) calc(var(--u) * 4) calc(var(--u) * 5) / calc(var(--u) * 5) calc(var(--u) * 7) calc(var(--u) * 4) calc(var(--u) * 5); }
+#plate.deck-side .deck-turret { left: auto; right: 0; }
+#plate.deck-side .deck-well { left: calc(var(--u) * 3.3); width: calc(var(--u) * 60.4); height: calc(100% - calc(var(--u) * 12.6)); }
+#plate.deck-side video, #plate.deck-side .deck-glass { left: calc(var(--u) * 4.5); width: calc(var(--u) * 58); height: calc(100% - calc(var(--u) * 15)); }
+#plate.deck-side .deck-grip { left: calc(var(--u) * 7); }
+#plate.deck-side .deck-mark { right: auto; left: calc(var(--u) * 26); }
+#plate.deck-side .deck-led { right: calc(var(--u) * 9); }
+#plate.deck-side .deck-lcd { right: calc(var(--u) * 7.5); bottom: auto; top: calc(var(--u) * 7); width: calc(var(--u) * 27); padding: 0 calc(var(--u) * 2); }
+#plate.deck-side .deck-time { font-size: calc(var(--u) * 3.5); }
+#plate.deck-side .deck-seek { left: auto; right: calc(var(--u) * 7.5); bottom: auto; top: calc(var(--u) * 19.3); width: calc(var(--u) * 27); }
+#plate.deck-side .deck-rate { right: calc(var(--u) * 7.5); bottom: auto; top: calc(var(--u) * 27.6); }
+#plate.deck-side .deck-inlay { left: auto; right: calc(var(--u) * 7.5); bottom: auto; top: calc(var(--u) * 35.6); width: calc(var(--u) * 27); height: calc(var(--u) * 15.4); border-radius: calc(var(--u) * 7.7); }
+#plate.deck-side .deck-key--back { left: auto; right: calc(var(--u) * 23.6); bottom: auto; top: calc(var(--u) * 40.6); }
+#plate.deck-side .deck-key--next { left: auto; right: calc(var(--u) * 9.2); bottom: auto; top: calc(var(--u) * 37.5); }
+#plate.deck-side .deck-key--play { left: auto; right: calc(var(--u) * 4.25); }
 /* the brood: Woodies stickers that come out of the middle of the drawing area and settle around it */
 #brood { position: fixed; inset: 0; z-index: 2; pointer-events: none; }
 #brood img {
@@ -649,25 +787,6 @@ html:not(.js) canvas.piece { display: none; }
   will-change: transform, opacity;
 }
 
-/* film: six short loops from Woodies: Origin, laid out off the grid */
-.reel { position: relative; }
-.clip {
-  position: absolute;
-  width: 46%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  opacity: 0;
-  outline: 1px solid rgb(255 255 255 / 0.1);
-  outline-offset: -1px;
-}
-.clip--1 { left: 2%;  top: 16%; width: 52%; }
-.clip--2 { left: 50%; top: 8%;  width: 44%; }
-.clip--3 { left: 30%; top: 40%; width: 58%; }
-.clip--4 { left: 0;   top: 62%; width: 40%; }
-.clip--5 { left: 56%; top: 66%; width: 42%; }
-.clip--6 { left: 16%; top: 30%; width: 34%; }
-
 @media (max-width: 899px) {
   .panel--film { padding-top: calc(var(--bar) + var(--s6)); }   /* keep the clips clear of the name and the contact link */
 }
@@ -744,22 +863,41 @@ html:not(.js) canvas.piece { display: none; }
 <div id="slate" aria-hidden="true"></div>
 <div id="paper" aria-hidden="true"></div>
 <div id="fall" aria-hidden="true"></div>
-<div id="plate" aria-hidden="true">
-  <img data-plate="sync" src="assets/images/work/story-sync.webp" alt="" width="1139" height="733" decoding="async">
-  <video data-plate="storysync" src="assets/video/story-sync.mp4" muted loop playsinline preload="none" width="640" height="360"></video>
-  <img data-plate="madmen" src="assets/images/work/mad-men-fan-cut.webp" alt="" width="1200" height="810" decoding="async">
-  <img data-plate="dmv" src="assets/images/work/california-dmv.webp" alt="" width="1200" height="810" decoding="async">
+<div id="plate">
+  <!-- the player's body, behind the film -->
+  <div class="deck-shell" aria-hidden="true"><i class="deck-body"></i><i class="deck-grip"></i><span class="deck-mark">CW·2000 VIDEO</span><i class="deck-led"></i><i class="deck-well"></i><i class="deck-inlay"></i><i class="deck-turret"></i></div>
+  <img aria-hidden="true" data-plate="sync" src="assets/images/work/story-sync.webp" alt="" width="1139" height="733" decoding="async">
+  <video aria-hidden="true" data-plate="storysync" src="assets/video/story-sync.mp4" muted loop playsinline preload="none" width="640" height="360"></video>
+  <img aria-hidden="true" data-plate="madmen" src="assets/images/work/mad-men-fan-cut.webp" alt="" width="1200" height="810" decoding="async">
+  <img aria-hidden="true" data-plate="dmv" src="assets/images/work/california-dmv.webp" alt="" width="1200" height="810" decoding="async">
   <!-- ULTRAPASS at each of its six staking levels: it grows as the two UltraDAO lines go by -->
-  <img data-plate="ultradao-1" src="assets/images/work/ultradao-1.webp" alt="" width="800" height="800" decoding="async">
-  <img data-plate="ultradao-2" src="assets/images/work/ultradao-2.webp" alt="" width="800" height="800" decoding="async">
-  <img data-plate="ultradao-3" src="assets/images/work/ultradao-3.webp" alt="" width="800" height="800" decoding="async">
-  <img data-plate="ultradao-4" src="assets/images/work/ultradao-4.webp" alt="" width="800" height="800" decoding="async">
-  <img data-plate="ultradao-5" src="assets/images/work/ultradao-5.webp" alt="" width="800" height="800" decoding="async">
-  <img data-plate="ultradao-6" src="assets/images/work/ultradao-6.webp" alt="" width="800" height="800" decoding="async">
-  <canvas data-plate="threed"></canvas>
-  <img data-plate="poster" src="assets/images/work/woodies-origin-poster.webp" alt="" width="720" height="1081" decoding="async">
-  <video data-plate="assistant" src="assets/video/homebase/assistant.mp4" muted loop playsinline preload="none" width="560" height="604"></video>
-  <video data-plate="lift" data-once src="assets/video/homebase/lift.mp4" muted playsinline preload="auto" width="848" height="558"></video>
+  <img aria-hidden="true" data-plate="ultradao-1" src="assets/images/work/ultradao-1.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-2" src="assets/images/work/ultradao-2.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-3" src="assets/images/work/ultradao-3.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-4" src="assets/images/work/ultradao-4.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-5" src="assets/images/work/ultradao-5.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-6" src="assets/images/work/ultradao-6.webp" alt="" width="800" height="800" decoding="async">
+  <canvas aria-hidden="true" data-plate="threed"></canvas>
+  <img aria-hidden="true" data-plate="poster" src="assets/images/work/woodies-origin-poster.webp" alt="" width="720" height="1081" decoding="async">
+  <video aria-hidden="true" data-plate="assistant" src="assets/video/homebase/assistant.mp4" muted loop playsinline preload="none" width="560" height="604"></video>
+  <video aria-hidden="true" data-plate="lift" data-once src="assets/video/homebase/lift.mp4" muted playsinline preload="auto" width="848" height="558"></video>
+  <!-- six scenes from Woodies: Origin, which the player shows one after another -->
+  <video aria-hidden="true" data-plate="clip-1" src="assets/video/woodies/clip-1.mp4" muted playsinline preload="none" width="480" height="270"></video>
+  <video aria-hidden="true" data-plate="clip-2" src="assets/video/woodies/clip-2.mp4" muted playsinline preload="none" width="480" height="270"></video>
+  <video aria-hidden="true" data-plate="clip-3" src="assets/video/woodies/clip-3.mp4" muted playsinline preload="none" width="480" height="270"></video>
+  <video aria-hidden="true" data-plate="clip-4" src="assets/video/woodies/clip-4.mp4" muted playsinline preload="none" width="480" height="270"></video>
+  <video aria-hidden="true" data-plate="clip-5" src="assets/video/woodies/clip-5.mp4" muted playsinline preload="none" width="480" height="270"></video>
+  <video aria-hidden="true" data-plate="clip-6" src="assets/video/woodies/clip-6.mp4" muted playsinline preload="none" width="480" height="270"></video>
+  <i class="deck-glass" aria-hidden="true"></i>
+  <!-- the player's controls, over the film -->
+  <div class="deck" role="group" aria-label="Video player">
+    <button type="button" class="deck-key deck-key--play" aria-label="Play"><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2.5v19L22 12z"/></svg><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h6v18H4zM14 3h6v18h-6z"/></svg></button>
+    <button type="button" class="deck-key deck-key--back" aria-label="Back two seconds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16L1 12zM23 4v16L12 12z"/></svg></button>
+    <button type="button" class="deck-key deck-key--next" aria-label="Forward two seconds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 4v16l11-8zM12 4v16l11-8z"/></svg></button>
+    <div class="deck-lcd" aria-hidden="true"><span class="deck-time">0:00 / 0:00</span><span class="deck-note">READY</span></div>
+    <div class="deck-seek" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i class="deck-fill"></i><i class="deck-thumb"></i></div>
+    <button type="button" class="deck-rate" aria-label="Speed: 1×">1×</button>
+  </div>
 </div>
 <div id="brood" aria-hidden="true">
   <img src="assets/images/woodies/sticker-1.webp" alt="" width="501" height="501" decoding="async">
@@ -899,14 +1037,7 @@ html:not(.js) canvas.piece { display: none; }
 
   <section class="seg" id="woodies" data-state="film">
     <div class="panel panel--story panel--film">
-      <div class="stage reel" aria-hidden="true">
-        <video class="clip clip--1" src="assets/video/woodies/clip-1.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
-        <video class="clip clip--2" src="assets/video/woodies/clip-2.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
-        <video class="clip clip--3" src="assets/video/woodies/clip-3.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
-        <video class="clip clip--4" src="assets/video/woodies/clip-4.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
-        <video class="clip clip--5" src="assets/video/woodies/clip-5.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
-        <video class="clip clip--6" src="assets/video/woodies/clip-6.mp4" muted loop playsinline preload="none" width="480" height="270"></video>
-      </div>
+      <div class="stage" aria-hidden="true"></div>
       <div class="text lines">
         <h2 class="say" data-state="sheet">We made <a href="https://woodiesofficial.com" target="_blank" rel="noopener">Woodies</a>, characters that began on the blockchain.</h2>
         <p class="say" data-state="sheet">Then they outgrew it.</p>
@@ -1326,7 +1457,7 @@ html:not(.js) canvas.piece { display: none; }
       state: el.getAttribute("data-state"),
       panel: el.querySelector(".panel"),
       stage: el.querySelector(".stage"),
-      clips: Array.prototype.slice.call(el.querySelectorAll(".clip")),
+      film: !!el.querySelector(".panel--film"),
       grid: el.querySelector(".projects"),
       cards: Array.prototype.slice.call(el.querySelectorAll(".project")),
       lines: Array.prototype.slice.call(el.querySelectorAll(".say")).map(function (say) {
@@ -1528,6 +1659,136 @@ html:not(.js) canvas.piece { display: none; }
   /* ---------- the 3D Woodie ---------- */
   // The model, three.js and the viewer are fetched once, when the reader nears the Woodies chapter.
   // If any of it cannot load or run, the canvas shows a still render instead.
+
+  /* ---------- the player ---------- */
+  // The controls of the player the films sit in. `use` is told which film's state is on screen and how visible it is;
+  // the keys act on that film. In a state with several films (`reel`), back and forward change the film, and each
+  // one hands over to the next when it ends.
+  var deck = (function () {
+    var ui = plate.querySelector(".deck"), play = ui.querySelector(".deck-key--play"), back = ui.querySelector(".deck-key--back"), next = ui.querySelector(".deck-key--next");
+    var seek = ui.querySelector(".deck-seek"), time = ui.querySelector(".deck-time"), note = ui.querySelector(".deck-note"), rateKey = ui.querySelector(".deck-rate");
+    var films = Array.prototype.slice.call(plate.querySelectorAll("video"));
+    var RATES = [1, 1.5, 2, 0.5], rate = 0, ticking = 0, dragging = false;
+    var api = { name: null, own: false, use: use };
+
+    function state() { return api.name ? STATES[api.name] : null; }
+    function film() { var st = state(); return !st ? null : st.reel ? plates[st.reel[st.track || 0]] : plates[st.plate]; }
+    function clock(t) { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + (t % 60 < 10 ? "0" : "") + (t % 60); }
+    function start(v) { var pl = v.play(); if (pl && pl.catch) pl.catch(function () {}); }
+
+    // the small screen, the play key and the groove say what the film is doing
+    function show() {
+      var v = film(), st = state();
+      if (!v) return;
+      var d = isFinite(v.duration) ? v.duration : 0, t = v.currentTime || 0, going = !v.paused && !v.ended;
+      time.textContent = clock(t) + " / " + clock(d);
+      note.textContent = (st.reel ? "SCENE " + ((st.track || 0) + 1) + "/" + st.reel.length + "  " : "") + (going ? "PLAY" : v.ended ? "END" : t > 0 ? "PAUSE" : "READY");
+      plate.classList.toggle("is-playing", going);
+      play.setAttribute("aria-label", going ? "Pause" : "Play");
+      mark(d ? t / d : 0);
+      if (going && !ticking) ticking = requestAnimationFrame(tick);
+    }
+    function mark(at) {
+      seek.style.setProperty("--at", clamp(at).toFixed(4));
+      seek.setAttribute("aria-valuenow", Math.round(clamp(at) * 100));
+    }
+    // while a film plays the groove follows it on every frame; the words on the small screen change only with the film's own events
+    function tick() {
+      ticking = 0;
+      var v = film();
+      if (!v || v.paused || v.ended || !plate.classList.contains("has-deck")) return;
+      if (!dragging && v.duration) mark(v.currentTime / v.duration);
+      ticking = requestAnimationFrame(tick);
+    }
+
+    function use(name, on) {
+      plate.style.setProperty("--deck", on.toFixed(3));
+      plate.classList.toggle("has-deck", on > 0.01);
+      plate.classList.toggle("deck-live", on > 0.6);
+      if (name === api.name || !name) { if (!name && on <= 0.01) { api.name = null; api.own = false; } return; }
+      api.name = name;
+      api.own = false;
+      var st = state(), many = !!st.reel;
+      plate.classList.toggle("deck-side", !!st.side);
+      back.setAttribute("aria-label", many ? "Previous scene" : "Back two seconds");
+      next.setAttribute("aria-label", many ? "Next scene" : "Forward two seconds");
+      show();
+    }
+
+    // several films: move to another one, and carry on playing if this one was
+    function turn(by, going) {
+      var st = state(), was = film();
+      if (!was.paused) was.pause();
+      st.track = ((st.track || 0) + by + st.reel.length) % st.reel.length;
+      var v = film();
+      try { v.currentTime = 0; } catch (e) {}
+      if (going) start(v);
+      show();
+      kick();
+    }
+
+    films.forEach(function (v) {
+      ["play", "pause", "timeupdate", "loadedmetadata", "seeked"].forEach(function (type) { v.addEventListener(type, function () { if (v === film()) show(); }); });
+      v.addEventListener("ended", function () {
+        if (v !== film()) return;
+        if (state().reel) turn(1, true); else show();
+      });
+    });
+
+    play.addEventListener("click", function () {
+      var v = film();
+      if (!v) return;
+      api.own = true;
+      if (v.paused || v.ended) {
+        if (v.ended || (v.duration && v.currentTime >= v.duration - 0.05)) v.currentTime = 0;
+        start(v);
+      } else v.pause();
+    });
+    function skip(by) {
+      var v = film(), st = state();
+      if (!v) return;
+      api.own = true;
+      if (st.reel) { turn(by, !v.paused && !v.ended); return; }
+      if (!v.duration) return;
+      var to = v.currentTime + by * 2;
+      v.currentTime = v.loop ? (to + v.duration) % v.duration : Math.max(0, Math.min(v.duration - 0.05, to));
+    }
+    back.addEventListener("click", function () { skip(-1); });
+    next.addEventListener("click", function () { skip(1); });
+    rateKey.addEventListener("click", function () {
+      rate = (rate + 1) % RATES.length;
+      var r = RATES[rate], text = (r === 0.5 ? "½" : r) + "×";
+      films.forEach(function (v) { v.defaultPlaybackRate = r; v.playbackRate = r; });
+      rateKey.textContent = text;
+      rateKey.setAttribute("aria-label", "Speed: " + text);
+    });
+
+    // the groove: press or drag along it to move through the film
+    function scrub(e) {
+      var v = film(), b = seek.getBoundingClientRect(), thumb = b.height * 0.6;
+      if (!v || !v.duration) return;
+      var at = clamp((e.clientX - b.left - thumb / 2) / (b.width - thumb));
+      v.currentTime = Math.min(v.duration - 0.05, at * v.duration);
+      mark(at);
+    }
+    seek.addEventListener("pointerdown", function (e) {
+      api.own = true;
+      dragging = true;
+      if (seek.setPointerCapture) { try { seek.setPointerCapture(e.pointerId); } catch (err) {} }
+      scrub(e);
+      e.preventDefault();
+    });
+    seek.addEventListener("pointermove", function (e) { if (dragging) scrub(e); });
+    ["pointerup", "pointercancel"].forEach(function (type) { seek.addEventListener(type, function () { dragging = false; }); });
+    seek.addEventListener("keydown", function (e) {
+      var v = film(), by = e.key === "ArrowRight" || e.key === "ArrowUp" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowDown" ? -1 : 0;
+      if (!by || !v || !v.duration) return;
+      api.own = true;
+      v.currentTime = Math.max(0, Math.min(v.duration - 0.05, v.currentTime + by * v.duration * 0.05));
+      e.preventDefault();
+    });
+    return api;
+  })();
 
   var model = plates.threed, viewer = null, viewerAsked = false, modelAt = 0, grab = null;
   function askViewer() {
@@ -1776,6 +2037,10 @@ html:not(.js) canvas.piece { display: none; }
   // One outlined frame stays on screen and takes the shape of a screen for each statement.
 
   var dpr = 1;
+  // A film plays in the player, so its frame takes the player's shape: the screen, plus the metal round it and the
+  // controls under it, or beside it where the film is taller than it is wide. The sums match the player's CSS.
+  function deckUnder(film) { return 100 / (36 + 88 / film); }
+  function deckBeside(film) { return 100 / (15 + 58 / film); }
   var STATES = {
     open:     { ratio: 0, label: "Scroll" },
     ask:      { ratio: 0, draw: "questions" },      // question marks, all over the page
@@ -1794,16 +2059,16 @@ html:not(.js) canvas.piece { display: none; }
     // lines that name a piece of work show it: the frame takes the picture's shape
     sync:      { ratio: 1139 / 733,  label: "The Walking Dead Story Sync", plate: "sync" },
     character: { ratio: 0, hidden: true, brood: true },   // six Woodies, in place of the frame
-    storysync: { ratio: 640 / 360,   label: "The Walking Dead Story Sync, AMC", plate: "storysync" },
+    storysync: { ratio: deckUnder(640 / 360), label: "The Walking Dead Story Sync, AMC", plate: "storysync", deck: true },
     madmen:    { ratio: 1200 / 810,  label: "Mad Men: The Fan Cut, AMC",   plate: "madmen" },
     dmv:       { ratio: 1200 / 810,  label: "California DMV",              plate: "dmv" },
     ultradao:  { ratio: 1,           plate: "ultradao", stages: ["ultradao-1", "ultradao-2", "ultradao-3", "ultradao-4", "ultradao-5", "ultradao-6"] },   // the art carries its own name
     sheet:     { ratio: 0, hidden: true },                // a sheet of real Woodies fills the page, in place of the frame
     poster:    { ratio: 720 / 1081,  label: "Woodies: Origin",             plate: "poster" },
-    reel:      { ratio: 0, hidden: true },                // the film's loops are on screen
+    reel:      { ratio: deckUnder(480 / 270), label: "Six scenes from Woodies: Origin", reel: ["clip-1", "clip-2", "clip-3", "clip-4", "clip-5", "clip-6"], deck: true },   // the player shows them one after another
     threed:    { ratio: 4 / 5,       label: "Woodie #1188. Drag to turn it.", plate: "threed" },   // a real 3D model, on a canvas
-    assistant: { ratio: 560 / 604,   label: "Homebase Assistant, covering a shift", plate: "assistant" },
-    lift:      { ratio: 848 / 558,   label: "Homebase Assistant",          plate: "lift" },
+    assistant: { ratio: deckBeside(560 / 604), label: "Homebase Assistant, covering a shift", plate: "assistant", deck: true, side: true },
+    lift:      { ratio: deckUnder(848 / 558), label: "Homebase Assistant", plate: "lift", deck: true },
     // drawings that state the fact in their line
     // `tall` is the shape on a phone, where the drawing has more height than width to fill
     team:    { ratio: 0,      draw: "team" },      // loops that grow past any frame
@@ -1895,24 +2160,14 @@ html:not(.js) canvas.piece { display: none; }
 
     // art: the first line drops away and starts the drawing, then the piece moves to its half of the screen
     if (art) artScroll(current, q, still);
-    // film: the page goes dark, and the clips come up one after another and play
+    // film: the page goes dark
     var night = 0;
     segs.forEach(function (s) {
-      if (!s.clips.length) return;
+      if (!s.film) return;
       var on = s === current;
       if (on) night = Math.min(ease(q / 0.08), 1 - ease((q - 0.95) / 0.05));
       // the Woodies pictures load once the reader is within two sections of them
       if (!woodiesNear && segs.indexOf(current) >= segs.indexOf(s) - 2) { woodiesNear = true; document.documentElement.classList.add("woodies-near"); askViewer(); }
-      // the clips belong to the line marked "reel": they come up through it and go as it leaves
-      var reel = -1, t = -1;
-      s.lines.forEach(function (line, j) { if (line.state === "reel") reel = j; });
-      if (on && reel >= 0 && q >= s.starts[reel] && q < s.starts[reel + 1]) t = (q - s.starts[reel]) / (s.starts[reel + 1] - s.starts[reel]);
-      s.clips.forEach(function (clip, i) {
-        var up = t < 0 ? 0 : ease((t - 0.08 - i * 0.05) / 0.1) * (1 - ease((t - 0.9) / 0.1));
-        clip.style.opacity = up;
-        if (up > 0.02 && clip.paused && !still) { var playing = clip.play(); if (playing && playing.catch) playing.catch(function () {}); }
-        if (up <= 0.02 && !clip.paused) clip.pause();
-      });
     });
     dark.style.opacity = night;
 
@@ -2912,6 +3167,21 @@ html:not(.js) canvas.piece { display: none; }
     ctx.strokeStyle = INK;
   };
 
+  // A film plays only while it is on screen, and stops when it leaves. Once the reader has touched the player's
+  // controls the film is theirs (`deck.own`), and it is left as they set it until it leaves the screen.
+  function run(el, on, name) {
+    var once = el.hasAttribute("data-once");   // plays through one time and holds on its last frame
+    var theirs = deck.own && deck.name === name;
+    if (on > 0.05 && !theirs) {
+      if (el.paused && !el.ended && !reduce.matches) { var pl = el.play(); if (pl && pl.catch) pl.catch(function () {}); }
+      if (once && reduce.matches && el.duration && el.currentTime < el.duration - 0.1) el.currentTime = el.duration;
+    }
+    if (on <= 0.05) {
+      if (!el.paused) el.pause();
+      if ((once || STATES[name].reel) && el.currentTime > 0) el.currentTime = 0;   // ready to play again next time
+    }
+  }
+
   function draw() {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, vw, vh);
@@ -2927,7 +3197,10 @@ html:not(.js) canvas.piece { display: none; }
     });
 
     // the frame
-    ctx.globalAlpha = shown;
+    // a film's player stands in place of the outlined frame
+    var deckOn = 0, deckName = null;
+    NAMES.forEach(function (n) { if (STATES[n].deck && presence[n] * shown > deckOn) { deckOn = presence[n] * shown; deckName = n; } });
+    ctx.globalAlpha = shown * (1 - deckOn);
     ctx.strokeStyle = INK;
     ctx.lineWidth = 2;
     ctx.strokeRect(rect.x, rect.y, rect.w, rect.h);
@@ -2938,8 +3211,15 @@ html:not(.js) canvas.piece { display: none; }
     plate.style.transform = "translate(" + rect.x + "px, " + rect.y + "px)";
     plate.style.width = rect.w + "px";
     plate.style.height = rect.h + "px";
+    plate.style.setProperty("--u", (rect.w / 100).toFixed(3) + "px");
+    deck.use(deckName, deckOn);
     NAMES.forEach(function (n) {
       var st = STATES[n];
+      if (st.reel) {                       // several films in one player: the one whose turn it is shows and plays
+        var up = presence[n] * shown, turn = st.track || 0;
+        st.reel.forEach(function (name, i) { var f = plates[name]; f.style.opacity = i === turn ? up : 0; run(f, i === turn ? up : 0, n); });
+        return;
+      }
       if (!st.plate) return;
       if (st.stages) {
         // a piece that grows: each stage comes up over the one before as the lines go by, and it never goes back on its own
@@ -2950,15 +3230,7 @@ html:not(.js) canvas.piece { display: none; }
       }
       var el = plates[st.plate], on = presence[n] * shown;
       el.style.opacity = on;
-      if (el.play) {                       // a film plays only while it is on screen
-        var once = el.hasAttribute("data-once");   // plays through one time and holds on its last frame
-        if (on > 0.05 && el.paused && !el.ended && !reduce.matches) { var pl = el.play(); if (pl && pl.catch) pl.catch(function () {}); }
-        if (on > 0.05 && once && reduce.matches && el.duration && el.currentTime < el.duration - 0.1) el.currentTime = el.duration;
-        if (on <= 0.05) {
-          if (!el.paused) el.pause();
-          if (once && el.currentTime > 0) el.currentTime = 0;   // ready to play again next time
-        }
-      }
+      if (el.play) run(el, on, n);
     });
 
     grove.style.opacity = presence.character;
