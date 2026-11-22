@@ -720,6 +720,15 @@ ol { padding: 0; list-style: none; }
   transition: opacity 1200ms var(--ease-out);
 }
 #sky.is-on { opacity: 1; }
+/* On a phone the browser's own bars float over the page, and some browsers show the page behind them, above the top
+   and below the bottom of the screen the page is laid out in. So there the sky and the other page colours run on
+   past both ends (`--over-top`, `--over-foot`), and whatever the browser shows of that is sky, not a flat band.
+   Nothing is laid out there: the words, the frame and the drawings keep to the screen. */
+@media (hover: none) and (pointer: coarse) {
+  :root { --over-top: 120px; --over-foot: 200px; }
+  #sky { top: calc(var(--over-top) * -1); height: calc(100vh + var(--over-top) + var(--over-foot)); height: calc(100lvh + var(--over-top) + var(--over-foot)); }
+  html #slate, html #dark, html #grove, html #paper, html #sheet { top: calc(var(--over-top) * -1); bottom: calc(var(--over-foot) * -1); }   /* `html` so this outranks each layer's own rule further down */
+}
 #sky canvas { position: absolute; top: 0; left: 0; display: block; image-rendering: pixelated; }
 /* the close has no colour of its own while the sky is on: the script cuts the last panel off at its top edge instead */
 .sky-on .end { background: none; }
@@ -1296,6 +1305,8 @@ html:not(.js) .reel { position: relative; }
       "uniform float uTime;",        // seconds
       "uniform float uScroll;",      // CSS px
       "uniform float uFeather;",     // how far past a rectangle the thinning reaches, in CSS px
+      "uniform float uTop;",         // how far the canvas starts above the top of the screen, in CSS px
+      "uniform float uView;",        // the height of the screen, in CSS px
       "uniform float uCalm;",        // 0..1: how far the clouds are held down
       "uniform vec4 uDim[" + SLOTS + "];",     // x, y, w, h in CSS px from the top left
       "uniform float uDimK[" + SLOTS + "];",   // how much each one thins the clouds, 0..1
@@ -1322,7 +1333,8 @@ html:not(.js) .reel { position: relative; }
       "  vec2 cell = floor(gl_FragCoord.xy);",
       "  cell.y = uRes.y - 1.0 - cell.y;",
       "  vec2 px = (cell + 0.5) * uCell;",
-      "  float y = px.y / (uRes.y * uCell);",                          // 0 at the top of the screen, 1 at the bottom
+      "  px.y -= uTop;",                                               // from here on, in the screen's own coordinates
+      "  float y = clamp(px.y / uView, -0.3, 1.3);",                   // 0 at the top of the screen, 1 at the bottom; the canvas may run a little past both
       "  vec2 p = px / uUnit;",
       "  p.x *= 0.6;",                                                 // clouds lie long
       "  float t = uTime * 0.012;",
@@ -1368,7 +1380,7 @@ html:not(.js) .reel { position: relative; }
       for (var i = 0; i < 3; i++) tones.push(k < 0 ? base[i] * (1 + k) : base[i] + (top[i] - base[i]) * k);
     });
 
-    var loc = null, cols = 0, rows = 0, cell = 3, unit = 600;
+    var loc = null, cols = 0, rows = 0, cell = 3, unit = 600, above = 0;
     var dim = new Float32Array(SLOTS * 4), dimK = new Float32Array(SLOTS), goal = [];
     var clock = 0, lastT = 0, lastY = -1, raf = 0, lost = false, dirty = true, first = true, calm = 0, calmTo = 0;
 
@@ -1393,7 +1405,7 @@ html:not(.js) .reel { position: relative; }
       gl.enableVertexAttribArray(at);
       gl.vertexAttribPointer(at, 2, gl.FLOAT, false, 0, 0);
       loc = {};
-      ["uRes", "uCell", "uUnit", "uTime", "uScroll", "uFeather", "uCalm", "uDim", "uDimK", "uTone"].forEach(function (n) { loc[n] = gl.getUniformLocation(prog, n); });
+      ["uRes", "uCell", "uUnit", "uTime", "uScroll", "uFeather", "uTop", "uView", "uCalm", "uDim", "uDimK", "uTone"].forEach(function (n) { loc[n] = gl.getUniformLocation(prog, n); });
       gl.uniform3fv(loc.uTone, new Float32Array(tones));
       gl.uniform1f(loc.uFeather, FEATHER);
       return true;
@@ -1406,6 +1418,7 @@ html:not(.js) .reel { position: relative; }
       var dev = Math.max(1, Math.round((w < 700 ? 2.5 : 3) * real));
       var c = Math.max(1, Math.ceil(w * real / dev)), r = Math.max(1, Math.ceil(h * real / dev));
       cell = dev / real;
+      above = Math.max(0, -box.getBoundingClientRect().top);   // on a phone the sky starts above the screen and ends below it
       unit = Math.max(380, Math.min(860, w * 0.52));
       if (c !== cols || r !== rows) {
         cols = c; rows = r;
@@ -1462,6 +1475,8 @@ html:not(.js) .reel { position: relative; }
       gl.uniform1f(loc.uCalm, calm);
       gl.uniform2f(loc.uRes, cols, rows);
       gl.uniform1f(loc.uCell, cell);
+      gl.uniform1f(loc.uTop, above);
+      gl.uniform1f(loc.uView, window.innerHeight || rows * cell);
       gl.uniform1f(loc.uUnit, unit);
       gl.uniform1f(loc.uTime, clock);
       gl.uniform1f(loc.uScroll, still ? 0 : lastY);
@@ -3788,6 +3803,11 @@ html:not(.js) .reel { position: relative; }
   });
   window.addEventListener("scroll", kick, { passive: true });
   window.addEventListener("resize", resize);
+  // A phone's browser bars fold away as the page scrolls and the screen grows. Not every browser calls that a resize
+  // of the window, but the visual viewport always reports it, so the page is fitted again then too.
+  if (window.visualViewport) window.visualViewport.addEventListener("resize", function () {
+    if (window.innerHeight !== vh || document.documentElement.clientWidth !== vw) resize();
+  });
   if (reduce.addEventListener) reduce.addEventListener("change", kick);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { kick(); });
   resize();
