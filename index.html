@@ -3482,6 +3482,30 @@ html:not(.js) .reel { position: relative; }
     }
   }
 
+  // The page itself takes the colour that is on screen: its blue, or the night, forest, slate or paper that has come
+  // up over it, mixed as those layers fade in and out. Nothing of the page shows that colour, since the layers cover
+  // it, but a phone's browser colours its own bars, above and below the page, from the page's background (and some
+  // from the theme colour, which is set to match), so the bars change with the page.
+  var PAGE = {
+    blue: hexRgb(SIGNAL), night: hexRgb(css.getPropertyValue("--night").trim()), grove: hexRgb(css.getPropertyValue("--grove").trim()),
+    slate: hexRgb(SLATE), paper: hexRgb(css.getPropertyValue("--paper").trim())
+  };
+  var themeMeta = document.querySelector('meta[name="theme-color"]'), pageTint = "";
+  function tintPage() {
+    var c = PAGE.blue.slice();
+    // in the order the layers lie, each over the last; the dark behind the open film comes last
+    [[PAGE.night, +dark.style.opacity || 0], [PAGE.grove, presence.character], [PAGE.slate, presence.roblox], [PAGE.paper, presence.art], [PAGE.night, presence.origin * 0.9]].forEach(function (layer) {
+      var a = clamp(layer[1]);
+      if (a > 0) for (var i = 0; i < 3; i++) c[i] += (layer[0][i] - c[i]) * a;
+    });
+    var tint = "rgb(" + Math.round(c[0]) + ", " + Math.round(c[1]) + ", " + Math.round(c[2]) + ")";
+    if (tint === pageTint) return;
+    pageTint = tint;
+    document.documentElement.style.backgroundColor = tint;
+    document.body.style.backgroundColor = tint;
+    if (themeMeta) themeMeta.setAttribute("content", tint);
+  }
+
   var plateAt = "";
   function draw() {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -3551,6 +3575,7 @@ html:not(.js) .reel { position: relative; }
     pulse.classList.toggle("is-on", presence.end > 0.01);
     // the sky rests while another page colour covers it
     if (sky) { sky.cover = Math.max(+dark.style.opacity || 0, presence.character, presence.roblox, presence.art); sky.wake(); }
+    tintPage();
 
     // the 3D Woodie: it turns a little with the scroll, and its idle animation runs only while it is on screen
     model.classList.toggle("is-live", active === "threed" && !!viewer);
