@@ -541,6 +541,8 @@ ol { padding: 0; list-style: none; }
 #sky canvas { position: absolute; top: 0; left: 0; display: block; image-rendering: pixelated; }
 /* the close has no colour of its own while the sky is on: the script cuts the last panel off at its top edge instead */
 .sky-on .end { background: none; }
+/* a chapter's name sits on the sky, not on a block of flat blue: a soft halo of the page's blue keeps it readable where it crosses a frame or a plate */
+.sky-on .tick-name { background: none; text-shadow: 0 0 1px var(--signal), 0 0 3px var(--signal), 0 0 6px var(--signal), 0 0 6px var(--signal), 0 0 14px var(--signal), 0 0 14px var(--signal); }
 /* the page turns slate behind the avatar */
 #slate {
   position: fixed;
@@ -1055,20 +1057,23 @@ html:not(.js) canvas.piece { display: none; }
   // The page's blue, with clouds. A fragment shader works out one tone for each square cell of a coarse grid: two decks
   // of drifting cloud, lit from above, placed on a ladder of six blues that runs from a deeper blue through the page's
   // own to the soft ink, with a 4×4 ordered dither between neighbouring tones. The clouds drift on their own and
-  // move up a little with the scroll, the near deck faster than the far one. They thin behind whatever is being read
-  // (`set` takes up to five rectangles), so the words, the frame and the navigation keep the plain blue behind them.
+  // move up a little with the scroll, the near deck faster than the far one. The bright clouds thin out as they near
+  // whatever is being read (`set` takes up to six rectangles): the words, the frame and the navigation keep the two
+  // quietest tones behind them, with no edge to show where the thinning starts.
   // It stops drawing while another page colour covers it or the tab is hidden. Reduced motion holds the clouds still.
   var sky = (function () {
-    var box = document.getElementById("sky"), cv = box.querySelector("canvas"), gl = null;
-    // The picture is kept between draws: the clouds are drawn less often than the screen is, and it must still be there in the frames between.
-    // The canvas is not marked opaque, though every cell is: an opaque one left a gap in the page above a film plate that had just moved.
-    var want = { alpha: true, antialias: false, depth: false, stencil: false, preserveDrawingBuffer: true, powerPreference: "low-power" };
+    // The shader draws on a canvas of its own that is never on the page, and each picture is copied to the 2D canvas
+    // that is. A WebGL canvas on the page itself lost a strip of sky wherever a film plate sat over it off centre:
+    // the browser left out the part it took to be hidden behind the film, and placed that part upside down.
+    var box = document.getElementById("sky"), view = box.querySelector("canvas"), pen = view.getContext && view.getContext("2d");
+    var cv = document.createElement("canvas"), gl = null;
+    var want = { alpha: false, antialias: false, depth: false, stencil: false, powerPreference: "low-power" };
     try { gl = cv.getContext("webgl", want) || cv.getContext("experimental-webgl", want); } catch (e) {}
-    if (!gl) return null;
+    if (!gl || !pen) return null;
     var fine = gl.getShaderPrecisionFormat(gl.FRAGMENT_SHADER, gl.HIGH_FLOAT);
     if (!fine || !fine.precision) return null;   // the cloud pattern needs full precision
 
-    var SLOTS = 5, FPS = 24, FEATHER = 170;   // FPS is a ceiling: on a 60 Hz screen every third frame is drawn
+    var SLOTS = 6, FPS = 24, FEATHER = 150;   // FPS is a ceiling: on a 60 Hz screen every third frame is drawn
     var VERT = "attribute vec2 a; void main() { gl_Position = vec4(a, 0.0, 1.0); }";
     var FRAG = [
       "precision highp float;",
@@ -1077,7 +1082,7 @@ html:not(.js) canvas.piece { display: none; }
       "uniform float uUnit;",        // CSS px to one unit of cloud
       "uniform float uTime;",        // seconds
       "uniform float uScroll;",      // CSS px
-      "uniform float uFeather;",     // how far past a rectangle the thinning fades out, in CSS px
+      "uniform float uFeather;",     // how far past a rectangle the thinning reaches, in CSS px
       "uniform float uCalm;",        // 0..1: how far the clouds are held down
       "uniform vec4 uDim[" + SLOTS + "];",     // x, y, w, h in CSS px from the top left
       "uniform float uDimK[" + SLOTS + "];",   // how much each one thins the clouds, 0..1
@@ -1113,24 +1118,25 @@ html:not(.js) canvas.piece { display: none; }
       "  float c = deck(near, t);",
       "  float above = deck(near - vec2(0.0, 0.08), t);",
       "  float haze = fbm(far + vec2(t * 0.35, 0.0));",
-      // how much is being read here: all of it inside a rectangle and a little way out, then fading. How far the fade
-      // reaches changes from place to place, so a clearing has a loose edge and never shows as a box
-      "  float reach = uFeather * mix(0.45, 1.5, noise(p * 2.3 + 3.1) * 0.6 + noise(p * 5.1 + 9.4) * 0.4);",
+      // How much is being read here: all of it inside a rectangle, falling away gently past it, further in some places
+      // than others. It only raises the bar a bright cloud has to clear, so the clouds thin out along their own edges
+      // as they near the words. The haze and the deeper patches of sky carry on behind the words unchanged, so the
+      // words sit in the same sky as everything else and never on a patch of their own.
+      "  float reach = uFeather * mix(0.6, 1.5, noise(p * 2.3 + 3.1) * 0.6 + noise(p * 5.1 + 9.4) * 0.4);",
       "  float m = 0.0;",
       "  for (int i = 0; i < " + SLOTS + "; i++) {",
       "    vec4 r = uDim[i];",
       "    vec2 d = max(r.xy - px, px - (r.xy + r.zw));",
-      "    float away = max(length(max(d, 0.0)) - 24.0, 0.0);",
-      "    m = max(m, uDimK[i] * (1.0 - smoothstep(0.0, reach, away)));",
+      "    float g = length(max(d, 0.0)) / reach;",
+      "    m = max(m, uDimK[i] * exp(-g * g));",
       "  }",
-      "  float low = mix(-0.05, 0.06, y) - m * 0.17;",                 // more cloud low on the screen, less at the top, and less where words are: the clouds draw back along their own edges
-      "  float body = smoothstep(0.5, 0.68, c + low);",
+      "  float low = mix(-0.05, 0.06, y);",                            // more cloud low on the screen, less at the top
+      "  float body = smoothstep(0.5, 0.68, c + low - m * 0.4);",
       "  float lit = clamp((c - above) * 10.0, -1.0, 1.0);",           // bright crowns, deeper undersides
       "  float v = 1.0",                                               // tone 1 is the page's blue
       "    + body * (2.3 + lit * 1.5)",
-      "    + smoothstep(0.49, 0.7, haze + low * 0.6) * 0.9 * (1.0 - m)",
-      "    - smoothstep(0.47, 0.33, haze) * (1.0 - body) * (1.0 - m) * 0.9;",   // open sky deepens between the clouds
-      "  v = mix(v, 1.0 + (v - 1.0) * 0.35, smoothstep(0.55, 1.0, m));",   // what is left right behind the words stays close to the plain blue
+      "    + smoothstep(0.49, 0.7, haze + low * 0.6) * 0.9",
+      "    - smoothstep(0.43, 0.3, haze) * (1.0 - body) * 0.9;",      // open sky deepens between the clouds
       "  v = 1.0 + (v - 1.0) * (v > 1.0 ? 1.0 - 0.5 * uCalm : 1.0);",      // under a drawing that runs over the whole page the clouds stay low on the ladder, so its lines read
       "  v = clamp(v, 0.0, 5.0);",
       "  float lo = floor(v);",
@@ -1191,15 +1197,16 @@ html:not(.js) canvas.piece { display: none; }
       if (c !== cols || r !== rows) {
         cols = c; rows = r;
         cv.width = c; cv.height = r;
-        cv.style.width = (c * cell) + "px";
-        cv.style.height = (r * cell) + "px";
+        view.width = c; view.height = r;
+        view.style.width = (c * cell) + "px";
+        view.style.height = (r * cell) + "px";
       }
       gl.viewport(0, 0, cols, rows);
       dirty = true;
       wake();
     }
 
-    // What the clouds thin behind: a list of up to five { x, y, w, h, k } in CSS px, or null for an empty place.
+    // What the clouds thin behind: a list of up to six { x, y, w, h, k } in CSS px, or null for an empty place.
     // A rectangle that is new fades in where it is; one that moves is followed. `hold` (0 or 1) keeps all the clouds low.
     function set(list, hold) {
       if (hold !== calmTo) { calmTo = hold; dirty = true; }
@@ -1242,6 +1249,7 @@ html:not(.js) canvas.piece { display: none; }
       gl.uniform4fv(loc.uDim, dim);
       gl.uniform1fv(loc.uDimK, dimK);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
+      pen.drawImage(cv, 0, 0);
       if (first) { first = false; box.classList.add("is-on"); }
       return settling;
     }
@@ -1956,7 +1964,7 @@ html:not(.js) canvas.piece { display: none; }
       // The close has no colour of its own over the sky, so it covers the last line by cutting that panel off at its top edge.
       var lastPanel = segs[segs.length - 1].panel, cut = lastPanel.offsetHeight - endBox.top;
       lastPanel.style.clipPath = cut > 0 ? "inset(0 0 " + cut.toFixed(1) + "px 0)" : "";
-      // The clouds thin behind what is read: the words, the frame, the cards or the close, the ticks, the name and the contact link.
+      // The bright clouds thin out near what is read: the words, the frame, the cards or the close, the ticks, the name and the contact link.
       var st = STATES[active], fr = st.ratio && !st.hidden ? target() : null, also = null;
       if (current.grid) { var gb = current.grid.getBoundingClientRect(); also = { x: gb.left, y: gb.top, w: gb.width, h: gb.height, k: 1 }; }
       if (endBox.top < vh) {
@@ -1964,13 +1972,13 @@ html:not(.js) canvas.piece { display: none; }
         var ex = Math.min(eb.left, wb2.left), ey = Math.min(eb.top, wb2.top);
         also = { x: ex, y: ey, w: Math.max(eb.right, wb2.right) - ex, h: Math.max(eb.bottom, wb2.bottom) - ey, k: 1 };
       }
-      var tb = topBar.getBoundingClientRect();
       sky.set([
         { x: avoid[0].x, y: avoid[0].y, w: avoid[0].w, h: Math.min(avoid[0].h, endBox.top - avoid[0].y), k: 1 },   // less whatever the close has covered
         fr && { x: fr.x, y: fr.y, w: fr.w, h: fr.h, k: 0.85 },
         also,
         { x: avoid[3].x, y: avoid[3].y, w: avoid[3].w, h: avoid[3].h, k: 0.8 },
-        { x: tb.left, y: tb.top, w: tb.width, h: tb.height, k: 0.8 }
+        { x: avoid[1].x, y: avoid[1].y, w: avoid[1].w, h: avoid[1].h, k: 0.8 },
+        { x: avoid[2].x, y: avoid[2].y, w: avoid[2].w, h: avoid[2].h, k: 0.8 }
       ], !st.ratio && st.draw ? 1 : 0);
     }
   }
