@@ -166,14 +166,27 @@ ol { padding: 0; list-style: none; }
 #plate canvas.is-live:active { cursor: grabbing; }
 #plate canvas.is-failed { background: url(assets/images/work/woodie-3d.webp) center / cover no-repeat; cursor: default; }   /* a still render, where 3D cannot run */
 /* the player: every film on the page plays inside one, a chunky machine from about the year 2000. It is brushed
-   metal with a swoosh of blue plastic let into it, chrome keys that sit off line with each other, and one yellow play
-   button far too big for the rest, in a round turret that sticks out past the corner of the body. A small screen
-   gives the time, a groove is for scrubbing, and a pill sets the speed. It is drawn in CSS alone, and every length
-   is a multiple of --u, a hundredth of the player's width, which the script sets, so the whole machine scales with
-   the frame. The film sits in the screen. A film taller than it is wide (`.deck-side`) has its controls down the
-   right side, so they stay large on a phone. The keys work: play and pause, back and forward (two seconds, or one
-   scene where the player holds several), the speed, and the groove. */
-#plate { --u: 6px; }
+   metal with a slab of coloured plastic let into it, chrome keys that sit off line with each other, and one yellow
+   play button far too big for the rest, in a round turret that sticks out past the corner of the body. A small
+   screen gives the time, a groove is for scrubbing, and a pill sets the speed. It is drawn in CSS alone.
+
+   Each player fits itself to the room it has and the film it holds. The script (`deck.fit`) tries the controls
+   under the screen and beside it (`.deck-side`), each with the full set of controls and a smaller set
+   (`.deck-compact`), and keeps the one that shows the film largest. Two lengths drive the drawing: --u, a hundredth
+   of the player's width, for the body and the screen, and --k for the controls, which follows --u on a large
+   player and stops shrinking on a small one, so a key is never too small for a thumb. The controls sit in a grid,
+   so the small screen and the groove take whatever width is left. The controls follow the film too: a player with
+   several films marks them along the groove (`.deck-many`), a film too short to skip through has no skip keys
+   (`.deck-solo`), and the plastic takes a colour that suits the film (`data-tone`). */
+#plate {
+  --u: 6px; --k: 5px; --slack: 0px;
+  --print: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;   /* what is printed on the machine. The page's serif is for the page: on the player it looked wrong */
+  --t: calc(var(--k) * 27); --p: calc(var(--k) * 18.5); --dh: calc(var(--k) * 27); --col: calc(var(--k) * 27);          /* the turret, the play button, the height under the screen, the width of a side column */
+  --p1: #000d85; --p2: var(--signal); --p3: #5268ff; --glow: 110 150 255; --lcd: #cfe0ff;   /* the plastic, and the light of the small screen */
+}
+#plate.deck-compact { --t: calc(var(--k) * 23); --p: calc(var(--k) * 15.5); --dh: calc(var(--k) * 23); --col: calc(var(--k) * 24); }
+#plate[data-tone="lime"] { --p1: #053a1a; --p2: #129a45; --p3: #6fe394; --glow: 90 255 150; --lcd: #d6ffe2; }     /* the forest */
+#plate[data-tone="grape"] { --p1: #2a0a63; --p2: #7a3fe0; --p3: #b596ff; --glow: 185 135 255; --lcd: #ecdcff; }   /* Homebase's purple */
 .deck-shell, .deck-glass, .deck { position: absolute; inset: 0; opacity: var(--deck, 0); visibility: hidden; }
 #plate.has-deck .deck-shell, #plate.has-deck .deck-glass, #plate.has-deck .deck { visibility: visible; }
 .deck-shell i, .deck-shell span { position: absolute; display: block; }
@@ -182,50 +195,48 @@ ol { padding: 0; list-style: none; }
     repeating-linear-gradient(90deg, rgb(255 255 255 / 0.08) 0 1px, rgb(0 0 0 / 0.035) 1px 2px, transparent 2px 4px),
     linear-gradient(172deg, #fbfcfe 0%, #d7dbe4 9%, #aab0bd 34%, #cbcfd9 58%, #8d94a3 86%, #6e7584 100%);
   box-shadow:
-    inset 0 calc(var(--u) * 0.5) 0 rgb(255 255 255 / 0.9),
-    inset 0 calc(var(--u) * -0.9) calc(var(--u) * 1.2) rgb(20 24 60 / 0.45),
-    inset calc(var(--u) * 0.5) 0 calc(var(--u) * 0.6) rgb(255 255 255 / 0.5),
-    inset calc(var(--u) * -0.5) 0 calc(var(--u) * 0.8) rgb(20 24 60 / 0.3),
+    inset 0 calc(var(--k) * 0.5) 0 rgb(255 255 255 / 0.9),
+    inset 0 calc(var(--k) * -0.9) calc(var(--k) * 1.2) rgb(20 24 60 / 0.45),
+    inset calc(var(--k) * 0.5) 0 calc(var(--k) * 0.6) rgb(255 255 255 / 0.5),
+    inset calc(var(--k) * -0.5) 0 calc(var(--k) * 0.8) rgb(20 24 60 / 0.3),
     0 0 0 1px rgb(10 14 60 / 0.55),
-    0 calc(var(--u) * 1.6) calc(var(--u) * 3.5) rgb(0 4 60 / 0.45),
-    0 calc(var(--u) * 0.3) calc(var(--u) * 0.6) rgb(0 4 60 / 0.5);
+    0 calc(var(--k) * 1.6) calc(var(--k) * 3.5) rgb(0 4 60 / 0.45),
+    0 calc(var(--k) * 0.3) calc(var(--k) * 0.6) rgb(0 4 60 / 0.5);
 }
-.deck-body { left: calc(var(--u) * 3); right: 0; top: 0; bottom: calc(var(--u) * 4); border-radius: calc(var(--u) * 8) calc(var(--u) * 3.5) calc(var(--u) * 5) calc(var(--u) * 4) / calc(var(--u) * 6.5) calc(var(--u) * 3.5) calc(var(--u) * 5) calc(var(--u) * 4); }
-.deck-turret { left: 0; bottom: 0; width: calc(var(--u) * 27); height: calc(var(--u) * 27); border-radius: 50%; }   /* the round housing of the play button: it stands out past the body's corner */
-.deck-turret::after {               /* blue plastic round the button */
-  content: ""; position: absolute; inset: calc(var(--u) * 1.9); border-radius: 50%;
-  background: linear-gradient(180deg, #000d85 0%, var(--signal) 48%, #5268ff 100%);
-  box-shadow: inset 0 calc(var(--u) * 0.7) calc(var(--u) * 1.1) rgb(0 0 40 / 0.75), inset 0 calc(var(--u) * -0.3) calc(var(--u) * 0.5) rgb(255 255 255 / 0.4), 0 calc(var(--u) * 0.25) 0 rgb(255 255 255 / 0.75);
+.deck-body { left: calc(var(--k) * 3); right: 0; top: 0; bottom: calc(var(--k) * 4); border-radius: calc(var(--u) * 8) calc(var(--u) * 3.5) calc(var(--k) * 5) calc(var(--k) * 4) / calc(var(--u) * 6.5) calc(var(--u) * 3.5) calc(var(--k) * 5) calc(var(--k) * 4); }
+.deck-turret { left: 0; bottom: 0; width: var(--t); height: var(--t); border-radius: 50%; }   /* the round housing of the play button: it stands out past the body's corner */
+.deck-turret::after {               /* plastic round the button */
+  content: ""; position: absolute; inset: calc(var(--k) * 1.9); border-radius: 50%;
+  background: linear-gradient(180deg, var(--p1) 0%, var(--p2) 48%, var(--p3) 100%);
+  box-shadow: inset 0 calc(var(--k) * 0.7) calc(var(--k) * 1.1) rgb(0 0 40 / 0.75), inset 0 calc(var(--k) * -0.3) calc(var(--k) * 0.5) rgb(255 255 255 / 0.4), 0 calc(var(--k) * 0.25) 0 rgb(255 255 255 / 0.75);
 }
 .deck-grip {                        /* grooves to hold it by */
-  left: calc(var(--u) * 11); top: calc(var(--u) * 2.5); width: calc(var(--u) * 15); height: calc(var(--u) * 2.2);
+  left: calc(var(--k) * 3 + var(--u) * 8); top: calc(var(--u) * 2.5); width: calc(var(--u) * 15); height: calc(var(--u) * 2.2);
   background: repeating-linear-gradient(180deg, rgb(40 46 70 / 0.55) 0 1px, rgb(255 255 255 / 0.8) 1px 2px, transparent 2px calc(var(--u) * 0.74));
 }
 .deck-mark {                        /* the maker's mark, pressed into the metal */
-  right: calc(var(--u) * 9.5); top: calc(var(--u) * 2); font-size: calc(var(--u) * 2.5); line-height: 1.2; letter-spacing: 0.14em; white-space: nowrap;
+  right: calc(var(--u) * 9.5); top: calc(var(--u) * 2.1); font: 700 calc(var(--u) * 2.1)/1.3 var(--print); letter-spacing: 0.2em; white-space: nowrap;
   color: rgb(52 58 80 / 0.8); text-shadow: 0 1px 0 rgb(255 255 255 / 0.75);
 }
+#plate.deck-compact .deck-mark { display: none; }   /* too small to read on a small player */
 .deck-led {                         /* lit while the film plays */
   right: calc(var(--u) * 5); top: calc(var(--u) * 2.5); width: calc(var(--u) * 2); height: calc(var(--u) * 2); border-radius: 50%;
   background: radial-gradient(circle at 35% 30%, #8d93a3, #3a3f50);
   box-shadow: inset 0 1px 1px rgb(0 0 0 / 0.6), 0 1px 0 rgb(255 255 255 / 0.8);
 }
 #plate.is-playing .deck-led { background: radial-gradient(circle at 35% 30%, #fff, var(--live) 45%, #b98a00); box-shadow: 0 0 calc(var(--u) * 1.4) var(--live), 0 1px 0 rgb(255 255 255 / 0.8); }
-.deck-well {                        /* the dark surround the screen is set into */
-  left: calc(var(--u) * 6.3); top: calc(var(--u) * 5.8); width: calc(var(--u) * 90.4); height: calc(100% - calc(var(--u) * 33.6)); border-radius: calc(var(--u) * 2.6);
+/* the screen: the film, the dark surround it is set into, and the glass over it. Under it is the height of the controls. */
+#plate video, .deck-glass, .deck-well {
+  inset: auto; left: calc(var(--k) * 3 + var(--u) * 4.5); top: calc(var(--u) * 7);
+  width: calc(100% - var(--k) * 3 - var(--u) * 9); height: calc(100% - var(--u) * 10 - var(--dh));
+  border-radius: calc(var(--u) * 1.5);
+}
+.deck-shell .deck-well {
+  margin: calc(var(--u) * -1.2); padding: calc(var(--u) * 1.2); box-sizing: content-box; border-radius: calc(var(--u) * 2.6);
   background: linear-gradient(180deg, #05060f, #171a2c);
   box-shadow: inset 0 calc(var(--u) * 0.4) calc(var(--u) * 0.8) #000, 0 calc(var(--u) * 0.3) 0 rgb(255 255 255 / 0.8), 0 calc(var(--u) * -0.2) 0 rgb(0 0 0 / 0.35);
 }
-.deck-inlay {                       /* the swoosh: blue plastic let into the metal, thick under the keys and thinning away to the right */
-  left: calc(var(--u) * 25); bottom: calc(var(--u) * 6); width: calc(var(--u) * 71); height: calc(var(--u) * 19);
-  border-radius: calc(var(--u) * 9.5) calc(var(--u) * 56) calc(var(--u) * 2) calc(var(--u) * 9.5) / calc(var(--u) * 9.5) calc(var(--u) * 15.5) calc(var(--u) * 2) calc(var(--u) * 9.5);
-  background: linear-gradient(180deg, #000d85 0%, var(--signal) 48%, #5268ff 100%);
-  box-shadow: inset 0 calc(var(--u) * 0.7) calc(var(--u) * 1.1) rgb(0 0 40 / 0.75), inset 0 calc(var(--u) * -0.3) calc(var(--u) * 0.5) rgb(255 255 255 / 0.4), 0 calc(var(--u) * 0.25) 0 rgb(255 255 255 / 0.75);
-}
-#plate video, .deck-glass {         /* a film sits in the player's screen, not edge to edge */
-  inset: auto; left: calc(var(--u) * 7.5); top: calc(var(--u) * 7); width: calc(var(--u) * 88); height: calc(100% - calc(var(--u) * 36)); border-radius: calc(var(--u) * 1.5);
-}
-.deck-glass {                       /* the glass over the screen: a sheen across one corner, and shade round the edge */
+.deck-glass {                       /* a sheen across one corner, and shade round the edge */
   background: linear-gradient(118deg, rgb(255 255 255 / 0.16) 0%, rgb(255 255 255 / 0.04) 30%, transparent 30.3%);
   box-shadow: inset 0 0 calc(var(--u) * 1.6) rgb(0 0 0 / 0.65);
   pointer-events: none;
@@ -233,7 +244,7 @@ ol { padding: 0; list-style: none; }
 .deck { pointer-events: none; }
 #plate.deck-live .deck-key, #plate.deck-live .deck-seek, #plate.deck-live .deck-rate { pointer-events: auto; }
 .deck-key, .deck-rate {
-  position: absolute; margin: 0; padding: 0; border: 0; font: inherit; cursor: pointer;
+  position: relative; flex: none; margin: 0; padding: 0; border: 0; cursor: pointer;
   -webkit-tap-highlight-color: transparent; -webkit-appearance: none; appearance: none;
   transition: transform var(--dur-fast) var(--ease-out);
 }
@@ -241,69 +252,102 @@ ol { padding: 0; list-style: none; }
   color: #1c2140;
   background: radial-gradient(circle at 34% 26%, #fff 0%, #eef0f5 18%, #b9bfcb 56%, #7c8393 100%);
   box-shadow:
-    0 0 0 calc(var(--u) * 0.45) #4d5466, 0 0 0 calc(var(--u) * 0.85) rgb(255 255 255 / 0.5),
-    0 calc(var(--u) * 1) calc(var(--u) * 1.3) rgb(0 0 40 / 0.6),
-    inset 0 calc(var(--u) * -0.5) calc(var(--u) * 0.8) rgb(0 0 40 / 0.35), inset 0 calc(var(--u) * 0.4) calc(var(--u) * 0.5) #fff;
+    0 0 0 calc(var(--k) * 0.45) #4d5466, 0 0 0 calc(var(--k) * 0.85) rgb(255 255 255 / 0.5),
+    0 calc(var(--k) * 1) calc(var(--k) * 1.3) rgb(0 0 40 / 0.6),
+    inset 0 calc(var(--k) * -0.5) calc(var(--k) * 0.8) rgb(0 0 40 / 0.35), inset 0 calc(var(--k) * 0.4) calc(var(--k) * 0.5) #fff;
 }
 .deck-key { border-radius: 50%; }
 .deck-key::after, .deck-rate::after { content: ""; position: absolute; inset: -6px; border-radius: inherit; }   /* more room for a thumb */
 .deck-key svg { display: block; width: 44%; height: 44%; margin: auto; fill: currentColor; filter: drop-shadow(0 1px 0 rgb(255 255 255 / 0.55)); }
-.deck-key:active, .deck-rate:active { transform: translateY(calc(var(--u) * 0.3)) scale(0.97); box-shadow: 0 0 0 calc(var(--u) * 0.45) #4d5466, 0 0 0 calc(var(--u) * 0.85) rgb(255 255 255 / 0.5), 0 calc(var(--u) * 0.3) calc(var(--u) * 0.5) rgb(0 0 40 / 0.6), inset 0 calc(var(--u) * 0.6) calc(var(--u) * 0.9) rgb(0 0 40 / 0.45); }
-.deck-key--play {                   /* the big one: yellow, like a sweet */
-  left: calc(var(--u) * 4.25); bottom: calc(var(--u) * 4.25); width: calc(var(--u) * 18.5); height: calc(var(--u) * 18.5);
+.deck-key:active, .deck-rate:active { transform: translateY(calc(var(--k) * 0.3)) scale(0.97); box-shadow: 0 0 0 calc(var(--k) * 0.45) #4d5466, 0 0 0 calc(var(--k) * 0.85) rgb(255 255 255 / 0.5), 0 calc(var(--k) * 0.3) calc(var(--k) * 0.5) rgb(0 0 40 / 0.6), inset 0 calc(var(--k) * 0.6) calc(var(--k) * 0.9) rgb(0 0 40 / 0.45); }
+.deck-key--play {                   /* the big one: yellow, like a sweet, in the middle of the turret */
+  position: absolute; left: calc((var(--t) - var(--p)) / 2); bottom: calc((var(--t) - var(--p)) / 2); width: var(--p); height: var(--p);
   color: #3d2c00;
   background: radial-gradient(circle at 34% 24%, #fffde0 0%, #fff27a 14%, var(--live) 42%, #e2a900 80%, #a36c00 100%);
 }
-.deck-key--back { left: calc(var(--u) * 29.5); bottom: calc(var(--u) * 7.3); width: calc(var(--u) * 8.5); height: calc(var(--u) * 8.5); }
-.deck-key--next { left: calc(var(--u) * 39.2); bottom: calc(var(--u) * 11.2); width: calc(var(--u) * 11.6); height: calc(var(--u) * 11.6); }
 .deck-key--play .i-pause, #plate.is-playing .deck-key--play .i-play { display: none; }
 #plate.is-playing .deck-key--play .i-pause { display: block; }
 .deck-key--play .i-play { transform: translateX(6%); }
-.deck-lcd {                         /* the small screen: the time, and what the player is doing */
-  position: absolute; right: calc(var(--u) * 4.5); bottom: calc(var(--u) * 16.3); width: calc(var(--u) * 41); height: calc(var(--u) * 9.4);
-  display: flex; flex-direction: column; justify-content: center; gap: calc(var(--u) * 0.8);
-  padding: 0 calc(var(--u) * 2.6); overflow: hidden; border-radius: calc(var(--u) * 1.5) calc(var(--u) * 5) calc(var(--u) * 1.5) calc(var(--u) * 5);
-  color: #cfe0ff; text-shadow: 0 0 calc(var(--u) * 0.9) rgb(110 150 255 / 0.95);
-  line-height: 1; white-space: nowrap; font-variant-numeric: tabular-nums;
-  background: linear-gradient(180deg, #03051a, #0b1548);
-  box-shadow: inset 0 calc(var(--u) * 0.5) calc(var(--u) * 0.9) #000, 0 calc(var(--u) * 0.25) 0 rgb(255 255 255 / 0.75), 0 0 0 calc(var(--u) * 0.4) #8d94a3;
+/* the panel: coloured plastic let into the metal, holding the rest of the controls in a grid. Under the screen it
+   starts behind the turret and runs to the right edge: the skip keys, then the small screen over the groove and the pill. */
+.deck-panel {
+  position: absolute; left: calc(var(--t) - var(--k) * 2); right: calc(var(--k) * 4); bottom: calc(var(--k) * 6); height: calc(var(--dh) - var(--k) * 7);
+  display: grid; align-items: center; column-gap: calc(var(--k) * 2); row-gap: calc(var(--k) * 1.8);
+  grid-template-columns: auto minmax(0, 1fr) auto; grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-areas: "keys lcd lcd" "keys seek rate";
+  padding: calc(var(--k) * 2) calc(var(--k) * 2.4) calc(var(--k) * 2) calc(var(--k) * 4.5);
+  border-radius: calc(var(--k) * 10) calc(var(--k) * 6) calc(var(--k) * 3) calc(var(--k) * 10);
+  background: linear-gradient(180deg, var(--p1) 0%, var(--p2) 48%, var(--p3) 100%);
+  box-shadow: inset 0 calc(var(--k) * 0.7) calc(var(--k) * 1.1) rgb(0 0 40 / 0.75), inset 0 calc(var(--k) * -0.3) calc(var(--k) * 0.5) rgb(255 255 255 / 0.4), 0 calc(var(--k) * 0.25) 0 rgb(255 255 255 / 0.75);
 }
-.deck-lcd::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgb(0 0 0 / 0.3) 0 1px, transparent 1px 3px); }   /* its rows of dots */
-.deck-time { font-size: calc(var(--u) * 4); }
-.deck-note { font-size: calc(var(--u) * 2.6); letter-spacing: 0.12em; opacity: 0.8; }
-.deck-seek { position: absolute; left: calc(var(--u) * 55); bottom: calc(var(--u) * 7.2); width: calc(var(--u) * 26.5); height: calc(var(--u) * 5.6); cursor: pointer; touch-action: none; }
+.deck-keys { grid-area: keys; align-self: stretch; display: flex; gap: calc(var(--k) * 2.2); }   /* as tall as the panel allows: the two keys sit at its top and its foot */
+.deck-key--back { width: calc(var(--k) * 8.5); height: calc(var(--k) * 8.5); align-self: flex-end; }      /* small and low */
+.deck-key--next { width: calc(var(--k) * 11.6); height: calc(var(--k) * 11.6); align-self: flex-start; }   /* larger and high */
+.deck-lcd {                         /* the small screen: the time, and what the player is doing, in lit dots (the script draws them) */
+  grid-area: lcd; align-self: stretch; position: relative; min-width: 0; overflow: hidden;
+  border-radius: calc(var(--k) * 1.5) calc(var(--k) * 4.5) calc(var(--k) * 1.5) calc(var(--k) * 4.5);
+  background: linear-gradient(180deg, #03051a, #0b1548);
+  box-shadow: inset 0 calc(var(--k) * 0.5) calc(var(--k) * 0.9) #000, 0 calc(var(--k) * 0.25) 0 rgb(255 255 255 / 0.6);
+}
+#plate .deck-lcd canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; opacity: 1; cursor: inherit; filter: drop-shadow(0 0 calc(var(--k) * 0.7) rgb(var(--glow) / 0.9)); }
+.deck-seek { grid-area: seek; position: relative; height: calc(var(--k) * 5.6); min-width: 0; cursor: pointer; touch-action: none; }
 .deck-seek::before {                /* the groove */
-  content: ""; position: absolute; left: 0; right: 0; top: 50%; height: calc(var(--u) * 2); margin-top: calc(var(--u) * -1); border-radius: calc(var(--u) * 1);
-  background: #080b1e; box-shadow: inset 0 calc(var(--u) * 0.3) calc(var(--u) * 0.5) #000, 0 calc(var(--u) * 0.2) 0 rgb(255 255 255 / 0.6);
+  content: ""; position: absolute; left: 0; right: 0; top: 50%; height: calc(var(--k) * 2); margin-top: calc(var(--k) * -1); border-radius: calc(var(--k) * 1);
+  background: #080b1e; box-shadow: inset 0 calc(var(--k) * 0.3) calc(var(--k) * 0.5) #000, 0 calc(var(--k) * 0.2) 0 rgb(255 255 255 / 0.6);
 }
 .deck-seek::after { content: ""; position: absolute; inset: -8px 0; }
 .deck-fill {
-  position: absolute; left: calc(var(--u) * 0.4); top: 50%; height: calc(var(--u) * 1.2); margin-top: calc(var(--u) * -0.6); border-radius: calc(var(--u) * 0.6);
-  width: calc((100% - calc(var(--u) * 3.4)) * var(--at, 0) + calc(var(--u) * 1.3));
-  background: linear-gradient(90deg, #ffb400, var(--live)); box-shadow: 0 0 calc(var(--u) * 0.9) rgb(255 230 0 / 0.8);
+  position: absolute; left: calc(var(--k) * 0.4); top: 50%; height: calc(var(--k) * 1.2); margin-top: calc(var(--k) * -0.6); border-radius: calc(var(--k) * 0.6);
+  width: calc((100% - var(--k) * 3.4) * var(--at, 0) + var(--k) * 1.3);
+  background: linear-gradient(90deg, #ffb400, var(--live)); box-shadow: 0 0 calc(var(--k) * 0.9) rgb(255 230 0 / 0.8);
 }
+.deck-marks {                       /* several films: a notch in the groove where each one starts */
+  display: none; position: absolute; left: calc(var(--k) * 1.7); right: calc(var(--k) * 1.7); top: 50%; height: calc(var(--k) * 3.6); margin-top: calc(var(--k) * -1.8); pointer-events: none;
+  background: repeating-linear-gradient(90deg, transparent 0 calc(100% / var(--n, 1) - 2px), rgb(255 255 255 / 0.85) calc(100% / var(--n, 1) - 2px) calc(100% / var(--n, 1)));
+  -webkit-mask: linear-gradient(90deg, #000 calc(100% - 3px), transparent calc(100% - 3px)); mask: linear-gradient(90deg, #000 calc(100% - 3px), transparent calc(100% - 3px));
+}
+#plate.deck-many .deck-marks { display: block; }
 .deck-thumb {
-  position: absolute; top: 0; left: calc((100% - calc(var(--u) * 3.4)) * var(--at, 0)); width: calc(var(--u) * 3.4); height: 100%; border-radius: calc(var(--u) * 1.2);
+  position: absolute; top: 0; left: calc((100% - var(--k) * 3.4) * var(--at, 0)); width: calc(var(--k) * 3.4); height: 100%; border-radius: calc(var(--k) * 1.2);
   background: linear-gradient(90deg, #7c8393 0%, #f4f5f9 30%, #fff 48%, #b9bfcb 70%, #6d7484 100%);
 }
-.deck-rate { right: calc(var(--u) * 4.6); bottom: calc(var(--u) * 7); width: calc(var(--u) * 11); height: calc(var(--u) * 6); border-radius: calc(var(--u) * 3); font-size: calc(var(--u) * 3.1); line-height: 1; background: linear-gradient(180deg, #fff 0%, #dfe2ea 30%, #a9afbc 70%, #8a91a0 100%); }   /* the speed */
+.deck-rate { grid-area: rate; width: calc(var(--k) * 10.5); height: calc(var(--k) * 5); border-radius: calc(var(--k) * 2.5); font: 700 calc(var(--k) * 2.6)/1 var(--print); background: linear-gradient(180deg, #fff 0%, #dfe2ea 30%, #a9afbc 70%, #8a91a0 100%); }   /* the speed */
 .deck :focus-visible { outline: var(--line) solid var(--live); outline-offset: 3px; }
-/* a tall film: the screen on the left, the controls down the right, the turret at the bottom right */
-#plate.deck-side .deck-body { left: 0; right: calc(var(--u) * 3); border-radius: calc(var(--u) * 5) calc(var(--u) * 9) calc(var(--u) * 4) calc(var(--u) * 5) / calc(var(--u) * 5) calc(var(--u) * 7) calc(var(--u) * 4) calc(var(--u) * 5); }
+/* a film too short to skip through: no skip keys, and the small screen takes their room */
+#plate.deck-solo .deck-keys { display: none; }
+#plate.deck-solo .deck-panel { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "lcd lcd" "seek rate"; }
+/* a small player: one line on the small screen, no pill, smaller keys */
+#plate.deck-compact .deck-panel { grid-template-areas: "keys lcd" "keys seek"; grid-template-columns: auto minmax(0, 1fr); padding: calc(var(--k) * 1.8) calc(var(--k) * 2) calc(var(--k) * 1.8) calc(var(--k) * 4.2); row-gap: calc(var(--k) * 1.4); border-radius: calc(var(--k) * 8) calc(var(--k) * 5) calc(var(--k) * 3) calc(var(--k) * 8); }
+#plate.deck-compact.deck-solo .deck-panel { grid-template-areas: "lcd" "seek"; grid-template-columns: minmax(0, 1fr); }
+#plate.deck-compact .deck-rate { display: none; }
+#plate.deck-compact .deck-seek { height: calc(var(--k) * 5.2); }
+#plate.deck-compact .deck-keys { gap: calc(var(--k) * 2); }
+#plate.deck-compact .deck-key--back { width: calc(var(--k) * 8); height: calc(var(--k) * 8); }
+#plate.deck-compact .deck-key--next { width: calc(var(--k) * 10); height: calc(var(--k) * 10); }
+/* the controls beside the screen: the film on the left, a column of controls on the right, the turret at its foot.
+   Where the column is taller than the film, the film sits in the middle of the height (--slack). */
+#plate.deck-side .deck-body { left: 0; right: calc(var(--k) * 3); border-radius: calc(var(--u) * 5) calc(var(--u) * 9) calc(var(--k) * 4) calc(var(--u) * 5) / calc(var(--u) * 5) calc(var(--u) * 7) calc(var(--k) * 4) calc(var(--u) * 5); }
 #plate.deck-side .deck-turret { left: auto; right: 0; }
-#plate.deck-side .deck-well { left: calc(var(--u) * 3.3); width: calc(var(--u) * 60.4); height: calc(100% - calc(var(--u) * 12.6)); }
-#plate.deck-side video, #plate.deck-side .deck-glass { left: calc(var(--u) * 4.5); width: calc(var(--u) * 58); height: calc(100% - calc(var(--u) * 15)); }
+#plate.deck-side video, #plate.deck-side .deck-glass, #plate.deck-side .deck-well {
+  left: calc(var(--u) * 4.5); top: calc(var(--u) * 7 + var(--slack) / 2);
+  width: calc(100% - var(--k) * 3 - var(--u) * 12 - var(--col)); height: calc(100% - var(--u) * 11 - var(--k) * 4 - var(--slack));
+}
 #plate.deck-side .deck-grip { left: calc(var(--u) * 7); }
 #plate.deck-side .deck-mark { right: auto; left: calc(var(--u) * 26); }
-#plate.deck-side .deck-led { right: calc(var(--u) * 9); }
-#plate.deck-side .deck-lcd { right: calc(var(--u) * 7.5); bottom: auto; top: calc(var(--u) * 7); width: calc(var(--u) * 27); padding: 0 calc(var(--u) * 2); }
-#plate.deck-side .deck-time { font-size: calc(var(--u) * 3.5); }
-#plate.deck-side .deck-seek { left: auto; right: calc(var(--u) * 7.5); bottom: auto; top: calc(var(--u) * 19.3); width: calc(var(--u) * 27); }
-#plate.deck-side .deck-rate { right: calc(var(--u) * 7.5); bottom: auto; top: calc(var(--u) * 27.6); }
-#plate.deck-side .deck-inlay { left: auto; right: calc(var(--u) * 7.5); bottom: auto; top: calc(var(--u) * 35.6); width: calc(var(--u) * 27); height: calc(var(--u) * 15.4); border-radius: calc(var(--u) * 7.7); }
-#plate.deck-side .deck-key--back { left: auto; right: calc(var(--u) * 23.6); bottom: auto; top: calc(var(--u) * 40.6); }
-#plate.deck-side .deck-key--next { left: auto; right: calc(var(--u) * 9.2); bottom: auto; top: calc(var(--u) * 37.5); }
-#plate.deck-side .deck-key--play { left: auto; right: calc(var(--u) * 4.25); }
+#plate.deck-side .deck-led { right: calc(var(--k) * 3 + var(--u) * 5); }
+#plate.deck-side .deck-key--play { left: auto; right: calc((var(--t) - var(--p)) / 2); }
+#plate.deck-side .deck-panel {
+  left: auto; right: calc(var(--k) * 3 + var(--u) * 4.5); top: calc(var(--u) * 7); bottom: calc(var(--t) + var(--k) * 0.6); width: var(--col); height: auto;
+  grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto minmax(0, 1fr) auto auto; row-gap: calc(var(--k) * 1.6);
+  grid-template-areas: "lcd" "seek" "." "keys" "rate";   /* the small screen and the groove at the top, the keys at the foot by the play button, and any spare height between them */
+  padding: calc(var(--k) * 2); border-radius: calc(var(--k) * 2) calc(var(--k) * 5) calc(var(--k) * 9) calc(var(--k) * 2);
+}
+#plate.deck-side .deck-lcd { height: calc(var(--k) * 9.4); align-self: auto; }
+#plate.deck-side .deck-keys { justify-content: center; height: calc(var(--k) * 14); }
+#plate.deck-side .deck-rate { justify-self: end; }
+#plate.deck-side.deck-compact .deck-panel { row-gap: calc(var(--k) * 1.5); padding: calc(var(--k) * 1.6); grid-template-rows: auto auto minmax(0, 1fr) auto; grid-template-areas: "lcd" "seek" "." "keys"; }
+#plate.deck-side.deck-compact .deck-lcd { height: calc(var(--k) * 6.2); }
+#plate.deck-side.deck-compact .deck-keys { height: calc(var(--k) * 12.5); }
 /* the brood: Woodies stickers that come out of the middle of the drawing area and settle around it */
 #brood { position: fixed; inset: 0; z-index: 2; pointer-events: none; }
 #brood img {
@@ -866,7 +910,7 @@ html:not(.js) canvas.piece { display: none; }
 <!-- Pictures here have `data-src` and films are not preloaded: the script fetches each one as the reader nears the section that shows it. -->
 <div id="plate">
   <!-- the player's body, behind the film -->
-  <div class="deck-shell" aria-hidden="true"><i class="deck-body"></i><i class="deck-grip"></i><span class="deck-mark">CW·2000 VIDEO</span><i class="deck-led"></i><i class="deck-well"></i><i class="deck-inlay"></i><i class="deck-turret"></i></div>
+  <div class="deck-shell" aria-hidden="true"><i class="deck-body"></i><i class="deck-grip"></i><span class="deck-mark">CW·2000 VIDEO</span><i class="deck-led"></i><i class="deck-well"></i><i class="deck-turret"></i></div>
   <img aria-hidden="true" data-plate="sync" data-src="assets/images/work/story-sync.webp" alt="" width="1139" height="733" decoding="async">
   <video aria-hidden="true" data-plate="storysync" src="assets/video/story-sync.mp4" muted loop playsinline preload="none" width="640" height="360"></video>
   <img aria-hidden="true" data-plate="madmen" data-src="assets/images/work/mad-men-fan-cut.webp" alt="" width="1200" height="810" decoding="async">
@@ -893,11 +937,12 @@ html:not(.js) canvas.piece { display: none; }
   <!-- the player's controls, over the film -->
   <div class="deck" role="group" aria-label="Video player">
     <button type="button" class="deck-key deck-key--play" aria-label="Play"><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2.5v19L22 12z"/></svg><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h6v18H4zM14 3h6v18h-6z"/></svg></button>
-    <button type="button" class="deck-key deck-key--back" aria-label="Back two seconds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16L1 12zM23 4v16L12 12z"/></svg></button>
-    <button type="button" class="deck-key deck-key--next" aria-label="Forward two seconds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 4v16l11-8zM12 4v16l11-8z"/></svg></button>
-    <div class="deck-lcd" aria-hidden="true"><span class="deck-time">0:00 / 0:00</span><span class="deck-note">READY</span></div>
-    <div class="deck-seek" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i class="deck-fill"></i><i class="deck-thumb"></i></div>
-    <button type="button" class="deck-rate" aria-label="Speed: 1×">1×</button>
+    <div class="deck-panel">
+      <div class="deck-keys"><button type="button" class="deck-key deck-key--back" aria-label="Back two seconds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16L1 12zM23 4v16L12 12z"/></svg></button><button type="button" class="deck-key deck-key--next" aria-label="Forward two seconds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 4v16l11-8zM12 4v16l11-8z"/></svg></button></div>
+      <div class="deck-lcd" aria-hidden="true"><canvas></canvas></div>
+      <div class="deck-seek" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i class="deck-marks"></i><i class="deck-fill"></i><i class="deck-thumb"></i></div>
+      <button type="button" class="deck-rate" aria-label="Speed: 1×">1×</button>
+    </div>
   </div>
 </div>
 <div id="brood" aria-hidden="true">
@@ -1153,7 +1198,7 @@ html:not(.js) canvas.piece { display: none; }
   // where each one settles, as fractions of the drawing area, with its size and tilt
   var NEST = [[0.26, 0.24, 1.0, -6], [0.74, 0.2, 0.92, 5], [0.5, 0.52, 1.1, 2], [0.2, 0.78, 0.9, 7], [0.78, 0.76, 1.0, -5]];
   var plates = {};
-  Array.prototype.slice.call(plate.querySelectorAll("img, video, canvas")).forEach(function (el) { plates[el.getAttribute("data-plate")] = el; });
+  Array.prototype.slice.call(plate.querySelectorAll("[data-plate]")).forEach(function (el) { plates[el.getAttribute("data-plate")] = el; });
   var ctx = canvas.getContext && canvas.getContext("2d");
   if (!ctx) { document.documentElement.classList.remove("js"); return; }
 
@@ -1682,27 +1727,136 @@ html:not(.js) canvas.piece { display: none; }
   // one hands over to the next when it ends.
   var deck = (function () {
     var ui = plate.querySelector(".deck"), play = ui.querySelector(".deck-key--play"), back = ui.querySelector(".deck-key--back"), next = ui.querySelector(".deck-key--next");
-    var seek = ui.querySelector(".deck-seek"), time = ui.querySelector(".deck-time"), note = ui.querySelector(".deck-note"), rateKey = ui.querySelector(".deck-rate");
+    var seek = ui.querySelector(".deck-seek"), lcd = ui.querySelector(".deck-lcd"), dots = lcd.querySelector("canvas"), rateKey = ui.querySelector(".deck-rate");
     var films = Array.prototype.slice.call(plate.querySelectorAll("video"));
-    var RATES = [1, 1.5, 2, 0.5], rate = 0, ticking = 0, dragging = false;
-    var api = { name: null, own: false, use: use };
+    var RATES = [1, 1.5, 2, 0.5], rate = 0, ticking = 0, dragging = false, laid = null;
+    var api = { name: null, own: false, use: use, fit: fit };
+
+    // The player's shape for a film, in a room bw wide and bh high. It tries the controls under the screen and
+    // beside it, each with the full set of controls and the smaller set, at the largest size that fits, and keeps
+    // the one that shows the film largest (the full set is worth a little film). The sums are the player's CSS:
+    // u is a hundredth of its width, and k, the size of the controls, follows u but never goes under what a thumb
+    // (or a mouse) needs, nor over what looks right on a large player.
+    function fit(st, bw, bh) {
+      var key = Math.round(bw) + "x" + Math.round(bh) + (touch.matches ? "t" : "m");
+      if (st.lay && st.lay.key === key) return st.lay;
+      var film = st.ratio, solo = !!st.solo, best = null, wanted = touch.matches ? 4.2 : 3.6;
+      // The controls are tried at the size a thumb (or a mouse) wants, then smaller, then, as a last resort, simply in
+      // proportion to the player. Smaller controls cost a share of the score, so they win only where they buy much more film.
+      [wanted, wanted * 0.86, wanted * 0.74, wanted * 0.63, 0].forEach(function (least) {
+        if (!least && best) return;
+        [0, 1, 2, 3].forEach(function (c) {
+          var side = c > 1, compact = c % 2 === 1;
+          var dh = compact ? 23 : 27, col = compact ? 24 : 27, column = compact ? 55.2 : 72;   // in k: under the screen; a side column's width and its height with the turret
+          var narrowest = compact ? (solo ? 46 : 67) : (solo ? 63 : 88);                     // in k: the least width the controls fit under the screen
+          function shape(w) {
+            var u = w / 100, k = Math.max(least, Math.min(5.2, u * 0.86)), fw, h, slack = 0;
+            if (side) {
+              fw = w - 3 * k - 12 * u - col * k;
+              h = 11 * u + fw / film + 4 * k;
+              if (h < 7 * u + column * k) { slack = 7 * u + column * k - h; h += slack; }
+            } else {
+              fw = w - 3 * k - 9 * u;
+              h = 10 * u + fw / film + dh * k;
+            }
+            return { w: w, h: h, k: k, slack: slack, film: fw > 0 ? fw * fw / film : 0, ok: side ? fw > w * 0.3 : w >= narrowest * k };
+          }
+          var s = shape(bw);
+          if (s.h > bh) {
+            for (var lo = 0, hi = bw, i = 0; i < 24; i++) { var mid = (lo + hi) / 2; if (shape(mid).h > bh) hi = mid; else lo = mid; }
+            s = shape(lo);
+          }
+          if (!s.ok) return;
+          s.score = s.film * (compact ? 0.88 : 1) * Math.pow(least ? least / wanted : 0.3, 1.5);
+          s.side = side; s.compact = compact;
+          if (!best || s.score > best.score) best = s;
+        });
+      });
+      best = best || { w: 0, h: 0, k: 4, slack: 0, side: false, compact: true };
+      best.none = best.w < 150 || best.h < 110;   // no room worth the name: the player is left out, as an empty frame would be
+      best.key = key;
+      st.lay = best;
+      return best;
+    }
 
     function state() { return api.name ? STATES[api.name] : null; }
     function film() { var st = state(); return !st ? null : st.reel ? plates[st.reel[st.track || 0]] : plates[st.plate]; }
-    function clock(t) { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + (t % 60 < 10 ? "0" : "") + (t % 60); }
+    // the time, to the second, or to the tenth for a film only a few seconds long
+    function clock(t, fine) {
+      t = Math.max(0, t || 0);
+      var whole = Math.floor(t + (fine ? 0.0001 : 0));
+      return Math.floor(whole / 60) + ":" + (whole % 60 < 10 ? "0" : "") + (whole % 60) + (fine ? "." + Math.floor((t - whole) * 10 + 0.001) : "");
+    }
+    // how far along the groove: through the film, or through all the films of a player with several
+    function along(v, st) {
+      var d = isFinite(v.duration) ? v.duration : 0, part = d ? clamp(v.currentTime / d) : 0;
+      return st.reel ? ((st.track || 0) + part) / st.reel.length : part;
+    }
     function start(v) { var pl = v.play(); if (pl && pl.catch) pl.catch(function () {}); }
 
     // the small screen, the play key and the groove say what the film is doing
     function show() {
       var v = film(), st = state();
       if (!v) return;
-      var d = isFinite(v.duration) ? v.duration : 0, t = v.currentTime || 0, going = !v.paused && !v.ended;
-      time.textContent = clock(t) + " / " + clock(d);
-      note.textContent = (st.reel ? "SCENE " + ((st.track || 0) + 1) + "/" + st.reel.length + "  " : "") + (going ? "PLAY" : v.ended ? "END" : t > 0 ? "PAUSE" : "READY");
+      var d = isFinite(v.duration) ? v.duration : 0, going = !v.paused && !v.ended;
+      // what kind of film it is, then what it is doing
+      lines[1] = (st.reel ? "SCENE " + ((st.track || 0) + 1) + "/" + st.reel.length : v.loop ? "LOOP" : "ONCE") + " · " + (going ? "PLAY" : v.ended ? "END" : v.currentTime > 0 ? "PAUSE" : "READY");
+      lcd.setAttribute("data-note", lines[1]);
+      tell(v, d);
       plate.classList.toggle("is-playing", going);
       play.setAttribute("aria-label", going ? "Pause" : "Play");
-      mark(d ? t / d : 0);
+      mark(along(v, st));
       if (going && !ticking) ticking = requestAnimationFrame(tick);
+    }
+    // The small screen is a dot matrix: every letter is five dots wide and seven high (fewer for marks), and the dots
+    // that are not lit show faintly, as they do on a real one. A larger player has two lines, the time over what the
+    // player is doing; a small one has the time alone. Each line takes the largest whole dot that fits.
+    var GLYPHS = {
+      "0": "01110|10001|10011|10101|11001|10001|01110", "1": "00100|01100|00100|00100|00100|00100|01110", "2": "01110|10001|00001|00010|00100|01000|11111",
+      "3": "11110|00001|00001|01110|00001|00001|11110", "4": "00010|00110|01010|10010|11111|00010|00010", "5": "11111|10000|11110|00001|00001|10001|01110",
+      "6": "00110|01000|10000|11110|10001|10001|01110", "7": "11111|00001|00010|00100|01000|01000|01000", "8": "01110|10001|10001|01110|10001|10001|01110",
+      "9": "01110|10001|10001|01111|00001|00010|01100", ":": "0|1|1|0|1|1|0", ".": "0|0|0|0|0|0|1", "/": "001|001|010|010|010|100|100", " ": "00|00|00|00|00|00|00", "·": "0|0|0|1|0|0|0",
+      A: "01110|10001|10001|11111|10001|10001|10001", C: "01110|10001|10000|10000|10000|10001|01110", D: "11110|10001|10001|10001|10001|10001|11110",
+      E: "11111|10000|10000|11110|10000|10000|11111", L: "10000|10000|10000|10000|10000|10000|11111", N: "10001|11001|10101|10011|10001|10001|10001",
+      O: "01110|10001|10001|10001|10001|10001|01110", P: "11110|10001|10001|11110|10000|10000|10000", R: "11110|10001|10001|11110|10100|10010|10001",
+      S: "01111|10000|10000|01110|00001|00001|11110", U: "10001|10001|10001|10001|10001|10001|01110", Y: "10001|10001|01010|00100|00100|00100|00100"
+    };
+    Object.keys(GLYPHS).forEach(function (c) { GLYPHS[c] = GLYPHS[c].split("|"); });
+    var lines = ["", ""], drawn = "";
+    function paint(again) {
+      var w = lcd.clientWidth, h = lcd.clientHeight, real = Math.min(window.devicePixelRatio || 1, 3);
+      var two = !(laid && laid.compact), sig = lines[0] + "\n" + (two ? lines[1] : "") + "@" + w + "x" + h + plate.getAttribute("data-tone");
+      if (!w || !h || (sig === drawn && !again)) return;
+      drawn = sig;
+      var W = Math.round(w * real), H = Math.round(h * real), pen = dots.getContext("2d");
+      if (dots.width !== W || dots.height !== H) { dots.width = W; dots.height = H; }
+      pen.clearRect(0, 0, W, H);
+      var lit = getComputedStyle(plate).getPropertyValue("--lcd").trim() || "#cfe0ff", pad = Math.round(H * 0.16);
+      // one line: its text, the top of its band and the band's height
+      function line(text, top, tall) {
+        var cells = 0, i, c;
+        for (i = 0; i < text.length; i++) cells += (GLYPHS[text[i]] || GLYPHS[" "])[0].length + 1;
+        var size = Math.max(1, Math.floor(Math.min(tall / 7, (W - pad * 2) / Math.max(1, cells - 1))));
+        var gap = size > 2 ? Math.max(1, Math.round(size * 0.18)) : 0, y0 = Math.round(top + (tall - size * 7) / 2), x, y;
+        pen.fillStyle = lit;
+        pen.globalAlpha = 0.09;            // the dots that are not lit, across the whole line
+        for (x = pad; x + size <= W - pad; x += size) for (y = 0; y < 7; y++) pen.fillRect(x, y0 + y * size, size - gap, size - gap);
+        pen.globalAlpha = 1;
+        for (i = 0, x = pad; i < text.length; i++) {
+          c = GLYPHS[text[i]] || GLYPHS[" "];
+          for (y = 0; y < 7; y++) for (var j = 0; j < c[y].length; j++) if (c[y][j] === "1") pen.fillRect(x + j * size, y0 + y * size, size - gap, size - gap);
+          x += (c[0].length + 1) * size;
+        }
+      }
+      if (two) { line(lines[0], H * 0.1, H * 0.46); line(lines[1], H * 0.62, H * 0.26); }
+      else line(lines[0], H * 0.18, H * 0.64);
+    }
+    // the time: a small player has room for the time so far, a larger one for the length as well
+    function tell(v, d) {
+      var fine = d > 0 && d < 10;
+      lines[0] = clock(v.currentTime, fine) + (laid && laid.compact ? "" : " / " + clock(d, fine));
+      lcd.setAttribute("data-time", lines[0]);
+      paint();
     }
     function mark(at) {
       seek.style.setProperty("--at", clamp(at).toFixed(4));
@@ -1713,12 +1867,20 @@ html:not(.js) canvas.piece { display: none; }
       ticking = 0;
       var v = film();
       if (!v || v.paused || v.ended || !plate.classList.contains("has-deck")) return;
-      if (!dragging && v.duration) mark(v.currentTime / v.duration);
+      if (!dragging && v.duration) { mark(along(v, state())); tell(v, v.duration); }
       ticking = requestAnimationFrame(tick);
     }
 
     var shownAt = -1;
-    function use(name, on) {
+    function use(name, on, lay, moved) {
+      if (lay && lay.none) on = 0;
+      if (lay && lay !== laid) {           // the shape it has settled on for this room
+        laid = lay;
+        plate.classList.toggle("deck-side", lay.side);
+        plate.classList.toggle("deck-compact", lay.compact);
+        if (name === api.name) show();
+      }
+      if (moved && on > 0.01) paint();     // the small screen is drawn again at its new size
       if (on !== shownAt) {
         shownAt = on;
         plate.style.setProperty("--deck", on.toFixed(3));
@@ -1729,19 +1891,23 @@ html:not(.js) canvas.piece { display: none; }
       api.name = name;
       api.own = false;
       var st = state(), many = !!st.reel;
-      plate.classList.toggle("deck-side", !!st.side);
+      plate.classList.toggle("deck-many", many);
+      plate.classList.toggle("deck-solo", !!st.solo);
+      if (st.tone) plate.setAttribute("data-tone", st.tone); else plate.removeAttribute("data-tone");
+      drawn = "";
+      seek.style.setProperty("--n", many ? st.reel.length : 1);
       back.setAttribute("aria-label", many ? "Previous scene" : "Back two seconds");
       next.setAttribute("aria-label", many ? "Next scene" : "Forward two seconds");
       show();
     }
 
     // several films: move to another one, and carry on playing if this one was
-    function turn(by, going) {
+    function turn(by, going, part) {
       var st = state(), was = film();
       if (!was.paused) was.pause();
       st.track = ((st.track || 0) + by + st.reel.length) % st.reel.length;
       var v = film();
-      try { v.currentTime = 0; } catch (e) {}
+      try { v.currentTime = part && v.duration ? part * v.duration : 0; } catch (e) {}
       if (going) start(v);
       show();
       kick();
@@ -1785,10 +1951,16 @@ html:not(.js) canvas.piece { display: none; }
 
     // the groove: press or drag along it to move through the film
     function scrub(e) {
-      var v = film(), b = seek.getBoundingClientRect(), thumb = b.height * 0.6;
-      if (!v || !v.duration) return;
-      var at = clamp((e.clientX - b.left - thumb / 2) / (b.width - thumb));
-      v.currentTime = Math.min(v.duration - 0.05, at * v.duration);
+      var v = film(), st = state(), b = seek.getBoundingClientRect(), thumb = b.height * 0.6;
+      if (!v) return;
+      var at = clamp((e.clientX - b.left - thumb / 2) / (b.width - thumb)), part = at;
+      if (st.reel) {                       // the groove runs through every film: find the one under the thumb
+        var n = st.reel.length, i = Math.min(n - 1, Math.floor(at * n));
+        part = at * n - i;
+        if (i !== (st.track || 0)) { turn(i - (st.track || 0), !v.paused && !v.ended, part); mark(at); return; }
+      }
+      if (!v.duration) return;
+      v.currentTime = Math.min(v.duration - 0.05, part * v.duration);
       mark(at);
     }
     seek.addEventListener("pointerdown", function (e) {
@@ -2065,10 +2237,6 @@ html:not(.js) canvas.piece { display: none; }
   // One outlined frame stays on screen and takes the shape of a screen for each statement.
 
   var dpr = 1;
-  // A film plays in the player, so its frame takes the player's shape: the screen, plus the metal round it and the
-  // controls under it, or beside it where the film is taller than it is wide. The sums match the player's CSS.
-  function deckUnder(film) { return 100 / (36 + 88 / film); }
-  function deckBeside(film) { return 100 / (15 + 58 / film); }
   var STATES = {
     open:     { ratio: 0, label: "Scroll" },
     ask:      { ratio: 0, draw: "questions" },      // question marks, all over the page
@@ -2087,16 +2255,18 @@ html:not(.js) canvas.piece { display: none; }
     // lines that name a piece of work show it: the frame takes the picture's shape
     sync:      { ratio: 1139 / 733,  label: "The Walking Dead Story Sync", plate: "sync" },
     character: { ratio: 0, hidden: true, brood: true },   // six Woodies, in place of the frame
-    storysync: { ratio: deckUnder(640 / 360), label: "The Walking Dead Story Sync, AMC", plate: "storysync", deck: true },
+    // a film plays in the player (`deck`), which works out its own shape from the film's (`ratio`) and the room it has.
+    // `tone` is the colour of its plastic; `solo` is a film too short to skip through
+    storysync: { ratio: 640 / 360, label: "The Walking Dead Story Sync, AMC", plate: "storysync", deck: true },
     madmen:    { ratio: 1200 / 810,  label: "Mad Men: The Fan Cut, AMC",   plate: "madmen" },
     dmv:       { ratio: 1200 / 810,  label: "California DMV",              plate: "dmv" },
     ultradao:  { ratio: 1,           plate: "ultradao", stages: ["ultradao-1", "ultradao-2", "ultradao-3", "ultradao-4", "ultradao-5", "ultradao-6"] },   // the art carries its own name
     sheet:     { ratio: 0, hidden: true },                // a sheet of real Woodies fills the page, in place of the frame
     poster:    { ratio: 720 / 1081,  label: "Woodies: Origin",             plate: "poster" },
-    reel:      { ratio: deckUnder(480 / 270), label: "Six scenes from Woodies: Origin", reel: ["clip-1", "clip-2", "clip-3", "clip-4", "clip-5", "clip-6"], deck: true },   // the player shows them one after another
+    reel:      { ratio: 480 / 270, tone: "lime", label: "Six scenes from Woodies: Origin", reel: ["clip-1", "clip-2", "clip-3", "clip-4", "clip-5", "clip-6"], deck: true },   // the player shows them one after another
     threed:    { ratio: 4 / 5,       label: "Woodie #1188. Drag to turn it.", plate: "threed" },   // a real 3D model, on a canvas
-    assistant: { ratio: deckBeside(560 / 604), label: "Homebase Assistant, covering a shift", plate: "assistant", deck: true, side: true },
-    lift:      { ratio: deckUnder(848 / 558), label: "Homebase Assistant", plate: "lift", deck: true },
+    assistant: { ratio: 560 / 604, tone: "grape", label: "Homebase Assistant, covering a shift", plate: "assistant", deck: true },
+    lift:      { ratio: 848 / 558, tone: "grape", solo: true, label: "Homebase Assistant", plate: "lift", deck: true },
     // drawings that state the fact in their line
     // `tall` is the shape on a phone, where the drawing has more height than width to fill
     team:    { ratio: 0,      draw: "team" },      // loops that grow past any frame
@@ -2297,9 +2467,14 @@ html:not(.js) canvas.piece { display: none; }
     var bw = room.bw, y0 = room.y0;
     var bh = Math.max(0, region.y + region.h - y0 - LABEL);   // a very short screen leaves no room, never less than none
     var w, h;
-    var ratio = !wide.matches && region.h > region.w && st.tall ? st.tall : st.ratio;   // on an upright phone some drawings take a taller shape
-    w = Math.min(bw, bh * ratio);
-    h = w / ratio;
+    if (st.deck) {                               // a film's player works out its own shape for the room it has
+      var lay = deck.fit(st, bw, bh);
+      w = lay.w; h = lay.h;
+    } else {
+      var ratio = !wide.matches && region.h > region.w && st.tall ? st.tall : st.ratio;   // on an upright phone some drawings take a taller shape
+      w = Math.min(bw, bh * ratio);
+      h = w / ratio;
+    }
     return { x: x0, y: y0 + (bh - h) / 2, w: w, h: h };
   }
 
@@ -3260,15 +3435,22 @@ html:not(.js) canvas.piece { display: none; }
     if (over) { over(); over = null; ctx.globalAlpha = 1; }
 
     // the plate follows the frame, and shows the picture of the state on screen
-    var place = rect.x.toFixed(2) + "," + rect.y.toFixed(2) + "," + rect.w.toFixed(2) + "," + rect.h.toFixed(2);
-    if (place !== plateAt) {             // written only when it has moved: the player inside it is costly to lay out again
+    var lay = deckName ? STATES[deckName].lay : null;
+    var place = rect.x.toFixed(2) + "," + rect.y.toFixed(2) + "," + rect.w.toFixed(2) + "," + rect.h.toFixed(2) + (lay ? lay.key : "");
+    var moved = place !== plateAt;
+    if (moved) {                         // written only when it has moved: the player inside it is costly to lay out again
       plateAt = place;
       plate.style.transform = "translate(" + rect.x + "px, " + rect.y + "px)";
       plate.style.width = rect.w + "px";
       plate.style.height = rect.h + "px";
       plate.style.setProperty("--u", (rect.w / 100).toFixed(3) + "px");
+      if (lay) {                         // while the frame is still on its way, the player keeps its proportions
+        var grown = lay.w ? rect.w / lay.w : 1;
+        plate.style.setProperty("--k", (lay.k * grown).toFixed(3) + "px");
+        plate.style.setProperty("--slack", (lay.slack * grown).toFixed(2) + "px");
+      }
     }
-    deck.use(deckName, deckOn);
+    deck.use(deckName, deckOn, lay, moved);
     NAMES.forEach(function (n) {
       var st = STATES[n];
       if (st.reel) {                       // several films in one player: the one whose turn it is shows and plays
