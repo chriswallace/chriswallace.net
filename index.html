@@ -863,24 +863,25 @@ html:not(.js) canvas.piece { display: none; }
 <div id="slate" aria-hidden="true"></div>
 <div id="paper" aria-hidden="true"></div>
 <div id="fall" aria-hidden="true"></div>
+<!-- Pictures here have `data-src` and films are not preloaded: the script fetches each one as the reader nears the section that shows it. -->
 <div id="plate">
   <!-- the player's body, behind the film -->
   <div class="deck-shell" aria-hidden="true"><i class="deck-body"></i><i class="deck-grip"></i><span class="deck-mark">CW·2000 VIDEO</span><i class="deck-led"></i><i class="deck-well"></i><i class="deck-inlay"></i><i class="deck-turret"></i></div>
-  <img aria-hidden="true" data-plate="sync" src="assets/images/work/story-sync.webp" alt="" width="1139" height="733" decoding="async">
+  <img aria-hidden="true" data-plate="sync" data-src="assets/images/work/story-sync.webp" alt="" width="1139" height="733" decoding="async">
   <video aria-hidden="true" data-plate="storysync" src="assets/video/story-sync.mp4" muted loop playsinline preload="none" width="640" height="360"></video>
-  <img aria-hidden="true" data-plate="madmen" src="assets/images/work/mad-men-fan-cut.webp" alt="" width="1200" height="810" decoding="async">
-  <img aria-hidden="true" data-plate="dmv" src="assets/images/work/california-dmv.webp" alt="" width="1200" height="810" decoding="async">
+  <img aria-hidden="true" data-plate="madmen" data-src="assets/images/work/mad-men-fan-cut.webp" alt="" width="1200" height="810" decoding="async">
+  <img aria-hidden="true" data-plate="dmv" data-src="assets/images/work/california-dmv.webp" alt="" width="1200" height="810" decoding="async">
   <!-- ULTRAPASS at each of its six staking levels: it grows as the two UltraDAO lines go by -->
-  <img aria-hidden="true" data-plate="ultradao-1" src="assets/images/work/ultradao-1.webp" alt="" width="800" height="800" decoding="async">
-  <img aria-hidden="true" data-plate="ultradao-2" src="assets/images/work/ultradao-2.webp" alt="" width="800" height="800" decoding="async">
-  <img aria-hidden="true" data-plate="ultradao-3" src="assets/images/work/ultradao-3.webp" alt="" width="800" height="800" decoding="async">
-  <img aria-hidden="true" data-plate="ultradao-4" src="assets/images/work/ultradao-4.webp" alt="" width="800" height="800" decoding="async">
-  <img aria-hidden="true" data-plate="ultradao-5" src="assets/images/work/ultradao-5.webp" alt="" width="800" height="800" decoding="async">
-  <img aria-hidden="true" data-plate="ultradao-6" src="assets/images/work/ultradao-6.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-1" data-src="assets/images/work/ultradao-1.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-2" data-src="assets/images/work/ultradao-2.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-3" data-src="assets/images/work/ultradao-3.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-4" data-src="assets/images/work/ultradao-4.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-5" data-src="assets/images/work/ultradao-5.webp" alt="" width="800" height="800" decoding="async">
+  <img aria-hidden="true" data-plate="ultradao-6" data-src="assets/images/work/ultradao-6.webp" alt="" width="800" height="800" decoding="async">
   <canvas aria-hidden="true" data-plate="threed"></canvas>
-  <img aria-hidden="true" data-plate="poster" src="assets/images/work/woodies-origin-poster.webp" alt="" width="720" height="1081" decoding="async">
+  <img aria-hidden="true" data-plate="poster" data-src="assets/images/work/woodies-origin-poster.webp" alt="" width="720" height="1081" decoding="async">
   <video aria-hidden="true" data-plate="assistant" src="assets/video/homebase/assistant.mp4" muted loop playsinline preload="none" width="560" height="604"></video>
-  <video aria-hidden="true" data-plate="lift" data-once src="assets/video/homebase/lift.mp4" muted playsinline preload="auto" width="848" height="558"></video>
+  <video aria-hidden="true" data-plate="lift" data-once src="assets/video/homebase/lift.mp4" muted playsinline preload="none" width="848" height="558"></video>
   <!-- six scenes from Woodies: Origin, which the player shows one after another -->
   <video aria-hidden="true" data-plate="clip-1" src="assets/video/woodies/clip-1.mp4" muted playsinline preload="none" width="480" height="270"></video>
   <video aria-hidden="true" data-plate="clip-2" src="assets/video/woodies/clip-2.mp4" muted playsinline preload="none" width="480" height="270"></video>
@@ -900,11 +901,11 @@ html:not(.js) canvas.piece { display: none; }
   </div>
 </div>
 <div id="brood" aria-hidden="true">
-  <img src="assets/images/woodies/sticker-1.webp" alt="" width="501" height="501" decoding="async">
-  <img src="assets/images/woodies/sticker-2.webp" alt="" width="483" height="520" decoding="async">
-  <img src="assets/images/woodies/sticker-3.webp" alt="" width="520" height="471" decoding="async">
-  <img src="assets/images/woodies/sticker-4.webp" alt="" width="503" height="520" decoding="async">
-  <img src="assets/images/woodies/sticker-5.webp" alt="" width="484" height="520" decoding="async">
+  <img data-src="assets/images/woodies/sticker-1.webp" alt="" width="501" height="501" decoding="async">
+  <img data-src="assets/images/woodies/sticker-2.webp" alt="" width="483" height="520" decoding="async">
+  <img data-src="assets/images/woodies/sticker-3.webp" alt="" width="520" height="471" decoding="async">
+  <img data-src="assets/images/woodies/sticker-4.webp" alt="" width="503" height="520" decoding="async">
+  <img data-src="assets/images/woodies/sticker-5.webp" alt="" width="484" height="520" decoding="async">
 </div>
 <div id="pulse" aria-hidden="true"></div>
 <canvas id="frame" aria-hidden="true"></canvas>
@@ -980,7 +981,8 @@ html:not(.js) canvas.piece { display: none; }
     <div class="panel panel--story panel--art">
       <div class="stage">
         <canvas class="piece" role="img" aria-label="Interplay, Austin palette, seed chris-3384, drawn live by its generator: orange, teal, yellow and cream shapes bloom in the middle of a navy field. Then a second hand's pen loops sweep across them."></canvas>
-        <img class="piece" src="assets/images/interplay/interplay-3384.webp" alt="Interplay, Austin palette, seed chris-3384: orange, teal, yellow and cream shapes bloom in the middle of a navy field, and a second hand's pen loops sweep across them." width="720" height="1018" loading="lazy" decoding="async">
+        <img class="piece" data-src="assets/images/interplay/interplay-3384.webp" alt="Interplay, Austin palette, seed chris-3384: orange, teal, yellow and cream shapes bloom in the middle of a navy field, and a second hand's pen loops sweep across them." width="720" height="1018" loading="lazy" decoding="async">
+        <noscript><img class="piece" src="assets/images/interplay/interplay-3384.webp" alt="Interplay, Austin palette, seed chris-3384: orange, teal, yellow and cream shapes bloom in the middle of a navy field, and a second hand's pen loops sweep across them." width="720" height="1018" loading="lazy" decoding="async"></noscript>
       </div>
       <div class="text lines">
         <h2 class="say say--over">In 2023, I started co-creating art with AI.</h2>
@@ -1204,7 +1206,7 @@ html:not(.js) canvas.piece { display: none; }
     var fine = gl.getShaderPrecisionFormat(gl.FRAGMENT_SHADER, gl.HIGH_FLOAT);
     if (!fine || !fine.precision) return null;   // the cloud pattern needs full precision
 
-    var SLOTS = 6, FPS = 24, FEATHER = 150;   // FPS is a ceiling: on a 60 Hz screen every third frame is drawn
+    var SLOTS = 6, FPS = 15, FEATHER = 150;   // the clouds move slowly, so 15 pictures a second is enough: on a 60 Hz screen every fourth frame is drawn
     var VERT = "attribute vec2 a; void main() { gl_Position = vec4(a, 0.0, 1.0); }";
     var FRAG = [
       "precision highp float;",
@@ -1350,8 +1352,14 @@ html:not(.js) canvas.piece { display: none; }
       }
     }
 
+    // A picture should take well under a millisecond to ask for. Where it takes several (a browser with no graphics
+    // card to hand, drawing the clouds on the processor), the sky is held still, as it is for reduced motion, and is
+    // drawn again only when the words it thins behind change.
+    var timed = 0, cost = 0, slow = false;
+    function held() { return slow || reduce.matches; }
+
     function render(now) {
-      var still = reduce.matches;
+      var still = held();
       var dt = lastT ? Math.min(100, now - lastT) : 0;
       lastT = now;
       if (!still) clock += dt / 1000;
@@ -1379,19 +1387,26 @@ html:not(.js) canvas.piece { display: none; }
       gl.uniform1f(loc.uScroll, still ? 0 : lastY);
       gl.uniform4fv(loc.uDim, dim);
       gl.uniform1fv(loc.uDimK, dimK);
+      var began = performance.now();
       gl.drawArrays(gl.TRIANGLES, 0, 3);
       pen.drawImage(cv, 0, 0);
+      if (!slow && timed < 12) {           // the first two pictures include setting up, so they are left out
+        if (++timed > 2) cost += performance.now() - began;
+        if (timed === 12 && cost / 10 > 5) slow = true;
+      }
       if (first) { first = false; box.classList.add("is-on"); }
       return settling;
     }
 
-    // The clouds are drawn about 20 times a second, and on every frame while the page scrolls or a rectangle is moving.
+    // The clouds are drawn 15 times a second, and on every frame while the page scrolls or a rectangle is moving.
+    // Where drawing is slow, at most four times a second, and only when something has changed.
     var settling = false;
     function frame(now) {
       raf = 0;
       if (lost || document.hidden || api.cover > 0.985) { lastT = 0; return; }
-      var still = reduce.matches;
+      var still = held();
       if (dirty || settling || (!still && (window.scrollY !== lastY || now - lastT >= 1000 / FPS - 3))) {
+        if (slow && lastT && now - lastT < 250) { raf = requestAnimationFrame(frame); return; }
         dirty = false;
         settling = render(now);
       }
@@ -1458,6 +1473,7 @@ html:not(.js) canvas.piece { display: none; }
       panel: el.querySelector(".panel"),
       stage: el.querySelector(".stage"),
       film: !!el.querySelector(".panel--film"),
+      shows: [el.getAttribute("data-state")].concat(Array.prototype.map.call(el.querySelectorAll(".say[data-state]"), function (say) { return say.getAttribute("data-state"); })),   // the states its lines use
       grid: el.querySelector(".projects"),
       cards: Array.prototype.slice.call(el.querySelectorAll(".project")),
       lines: Array.prototype.slice.call(el.querySelectorAll(".say")).map(function (say) {
@@ -1701,10 +1717,14 @@ html:not(.js) canvas.piece { display: none; }
       ticking = requestAnimationFrame(tick);
     }
 
+    var shownAt = -1;
     function use(name, on) {
-      plate.style.setProperty("--deck", on.toFixed(3));
-      plate.classList.toggle("has-deck", on > 0.01);
-      plate.classList.toggle("deck-live", on > 0.6);
+      if (on !== shownAt) {
+        shownAt = on;
+        plate.style.setProperty("--deck", on.toFixed(3));
+        plate.classList.toggle("has-deck", on > 0.01);
+        plate.classList.toggle("deck-live", on > 0.6);
+      }
       if (name === api.name || !name) { if (!name && on <= 0.01) { api.name = null; api.own = false; } return; }
       api.name = name;
       api.own = false;
@@ -1797,10 +1817,16 @@ html:not(.js) canvas.piece { display: none; }
     var made = null;
     try {
       // written this way so a browser too old to know import() can still read the rest of this script
-      new Function("u", "return import(u)")("./assets/js/woodie-viewer.js").then(function (m) {
+      new Function("u", "return import(u)")("./assets/js/woodie-viewer.min.js").then(function (m) {
         made = m.mount(model, { model: "assets/models/woodie-1188.glb", idle: "assets/models/woodie-idle.glb" });
         return made.ready;
-      }).then(function () { viewer = made; kick(); }).catch(function () { model.classList.add("is-failed"); });
+      }).then(function () {
+        viewer = made;
+        kick();
+        // Draw it once in a quiet moment, while it is still off screen: the first picture has the model's shading to
+        // set up and its textures to hand over, and that is better paid for now than as the Woodie comes into view.
+        (window.requestIdleCallback || setTimeout)(function () { try { made.once(); } catch (e) {} }, { timeout: 2500 });
+      }).catch(function () { model.classList.add("is-failed"); });
     } catch (e) { model.classList.add("is-failed"); }
   }
   model.addEventListener("pointerdown", function (e) {
@@ -1857,6 +1883,8 @@ html:not(.js) canvas.piece { display: none; }
     document.head.appendChild(tag);
   }
   function pieceFailed() {
+    var still = art.stage.querySelector("img.piece");     // the finished piece as a picture, fetched only now that it is needed
+    if (still && !still.getAttribute("src")) still.src = still.getAttribute("data-src");
     art.stage.classList.add("piece-failed");
     art.phase = 5;
   }
@@ -2180,6 +2208,7 @@ html:not(.js) canvas.piece { display: none; }
     contact.style.pointerEvents = fade < 0.5 ? "none" : "";
 
     showChapter(segs.indexOf(current));
+    fetchNear(segs.indexOf(current));
 
     var name = borrowed || current.state;
     if (endBox.top < vh * 0.35) name = "end";     // once the close has covered the last line
@@ -3167,6 +3196,28 @@ html:not(.js) canvas.piece { display: none; }
     ctx.strokeStyle = INK;
   };
 
+  // Pictures and films are fetched as the reader nears the section that shows them, not when the page loads. A
+  // picture waits with only `data-src`, and a film is not preloaded. Pictures come in for the section on screen, the
+  // one before it and the two after it; films, which are heavier, for the one on screen and its neighbours.
+  var fetched = {};
+  function fetchFor(name, films) {
+    var st = STATES[name], level = films ? 2 : 1;
+    if (!st || (fetched[name] || 0) >= level) return;
+    fetched[name] = level;
+    (st.stages || st.reel || (st.plate ? [st.plate] : [])).forEach(function (plateName) {
+      var el = plates[plateName];
+      if (!el) return;
+      if (el.tagName === "IMG") { if (!el.getAttribute("src") && el.getAttribute("data-src")) el.src = el.getAttribute("data-src"); }
+      else if (films && el.tagName === "VIDEO" && el.preload !== "auto") { el.preload = "auto"; if (el.readyState === 0 && el.paused) el.load(); }
+    });
+    if (st.brood) brood.forEach(function (img) { if (!img.getAttribute("src")) img.src = img.getAttribute("data-src"); });
+  }
+  function fetchNear(at) {
+    for (var i = Math.max(0, at - 1); i <= Math.min(segs.length - 1, at + 2); i++) {
+      for (var j = 0; j < segs[i].shows.length; j++) fetchFor(segs[i].shows[j], i <= at + 1);
+    }
+  }
+
   // A film plays only while it is on screen, and stops when it leaves. Once the reader has touched the player's
   // controls the film is theirs (`deck.own`), and it is left as they set it until it leaves the screen.
   function run(el, on, name) {
@@ -3182,6 +3233,7 @@ html:not(.js) canvas.piece { display: none; }
     }
   }
 
+  var plateAt = "";
   function draw() {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, vw, vh);
@@ -3208,10 +3260,14 @@ html:not(.js) canvas.piece { display: none; }
     if (over) { over(); over = null; ctx.globalAlpha = 1; }
 
     // the plate follows the frame, and shows the picture of the state on screen
-    plate.style.transform = "translate(" + rect.x + "px, " + rect.y + "px)";
-    plate.style.width = rect.w + "px";
-    plate.style.height = rect.h + "px";
-    plate.style.setProperty("--u", (rect.w / 100).toFixed(3) + "px");
+    var place = rect.x.toFixed(2) + "," + rect.y.toFixed(2) + "," + rect.w.toFixed(2) + "," + rect.h.toFixed(2);
+    if (place !== plateAt) {             // written only when it has moved: the player inside it is costly to lay out again
+      plateAt = place;
+      plate.style.transform = "translate(" + rect.x + "px, " + rect.y + "px)";
+      plate.style.width = rect.w + "px";
+      plate.style.height = rect.h + "px";
+      plate.style.setProperty("--u", (rect.w / 100).toFixed(3) + "px");
+    }
     deck.use(deckName, deckOn);
     NAMES.forEach(function (n) {
       var st = STATES[n];
