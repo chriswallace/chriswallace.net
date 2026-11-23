@@ -68,6 +68,7 @@
   --gutter: clamp(1.75rem, 10vw - 1.75rem, 5.5rem);   /* 28px on a phone, wider from 560px, 88px from about 1160px */
   --col-gap: clamp(1rem, 0.25rem + 1.6vw, 2rem);
   --bar: calc(var(--gutter) + var(--s12)); /* room for the name and the contact link */
+  --foot: 0px;                             /* room for an app's own bar laid over the foot of the page (see .in-x) */
   --when-col: 6.5rem;     /* the date column */
   --tick-row: 22px;       /* the spacing of the chapter ticks */
   --stage-h: 36svh;       /* height of the drawing's stage on narrow screens */
@@ -576,8 +577,12 @@ ol { padding: 0; list-style: none; }
 .panel {
   display: grid;
   gap: var(--s6);
-  padding: var(--bar) var(--gutter) var(--gutter);
+  padding: var(--bar) var(--gutter) calc(var(--gutter) + var(--foot));
 }
+/* X's browser inside its app lays the page out under its own bar at the foot of the screen (the close key, the
+   address and the post's actions) and does not say so to the page: the screen it reports runs on behind that bar.
+   So there the words and the frames keep clear of the bottom 120px or so. */
+html.in-x { --foot: 92px; }
 .js .seg { position: relative; height: calc(var(--len) * 1svh); }
 /* one rest point per line: where the line is fully lit. Touch scrolling settles on these; the wheel does the same in script. */
 .rest { position: absolute; left: 0; width: 1px; height: 1px; pointer-events: none; }
@@ -599,7 +604,7 @@ ol { padding: 0; list-style: none; }
 .panel--words { align-content: center; }
 /* the principles: one drawing runs through all four. On an upright phone the words sit low and the drawing takes the top of the screen. */
 @media (max-width: 899px) and (orientation: portrait) {
-  .panel--finale { align-content: end; padding-bottom: calc(var(--gutter) + var(--s12)); }
+  .panel--finale { align-content: end; padding-bottom: calc(var(--gutter) + var(--s12) + var(--foot)); }
 }
 .panel--story {
   grid-template-rows: var(--stage-h) minmax(0, 1fr);
@@ -886,7 +891,7 @@ html:not(.js) .reel { position: relative; }
   justify-content: flex-end;
   gap: var(--s6);
   min-height: 100svh;
-  padding: var(--s16) var(--gutter) calc(var(--gutter) + var(--s12)); /* the frame's label sits under the text */
+  padding: var(--s16) var(--gutter) calc(var(--gutter) + var(--s12) + var(--foot)); /* the frame's label sits under the text */
 }
 .write {
   align-self: flex-start;
@@ -936,7 +941,7 @@ html:not(.js) .reel { position: relative; }
 </style>
 </head>
 <body>
-<script>document.documentElement.classList.add("js");</script>
+<script>document.documentElement.classList.add("js"); if (/\bTwitter\b/.test(navigator.userAgent) && /iPhone|iPad|iPod/.test(navigator.userAgent)) document.documentElement.classList.add("in-x");</script>
 <div id="sky" aria-hidden="true"><canvas></canvas></div>
 <div id="dark" aria-hidden="true"></div>
 <div id="sheet" aria-hidden="true"><div class="plane"></div></div>
@@ -2291,6 +2296,7 @@ html:not(.js) .reel { position: relative; }
   // One outlined frame stays on screen and takes the shape of a screen for each statement.
 
   var dpr = 1;
+  var foot = 0;              // the foot of the screen an app's own bar covers (--foot): frames keep clear of it
   var STATES = {
     open:     { ratio: 0, label: "Scroll" },
     ask:      { ratio: 0, draw: "questions" },      // question marks, all over the page
@@ -2353,6 +2359,7 @@ html:not(.js) .reel { position: relative; }
   function resize() {
     vw = document.documentElement.clientWidth;
     vh = window.innerHeight;
+    foot = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--foot")) || 0;
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     canvas.width = Math.round(vw * dpr);
     canvas.height = Math.round(vh * dpr);
@@ -2525,10 +2532,10 @@ html:not(.js) .reel { position: relative; }
     var m = inset();
     var st = STATES[active];
     if (st.cinema) {                             // the film's player, in the middle of the screen with a margin round it
-      var gap = Math.max(18, Math.min(vw, vh) * 0.05), big = deck.fit(st, vw - gap * 2, vh - gap * 2);
-      return { x: (vw - big.w) / 2, y: (vh - big.h) / 2, w: big.w, h: big.h };
+      var gap = Math.max(18, Math.min(vw, vh) * 0.05), big = deck.fit(st, vw - gap * 2, vh - foot - gap * 2);
+      return { x: (vw - big.w) / 2, y: (vh - foot - big.h) / 2, w: big.w, h: big.h };
     }
-    if (!st.ratio) return { x: m, y: m, w: vw - 2 * m, h: vh - 2 * m };
+    if (!st.ratio) return { x: m, y: m, w: vw - 2 * m, h: vh - foot - 2 * m };
     // The frame sits on the grid. Its left edge is the stage's left edge: column 7 on a wide screen, the side margin
     // on a narrow one, where the words start too. It is as wide as the stage if its height allows, so a wide frame
     // ends at the right margin, under the contact link, or a little before the ticks where they sit inside that margin. The frame and its label are centred in the height they have.
@@ -3074,7 +3081,7 @@ html:not(.js) .reel { position: relative; }
     [[9, 3], [6.6, 6], [4.8, 9], [3.5, 12]].forEach(function (size) {      // radius in hundredths of the screen, and how many
       var rad = size[0] * base, tries = 0, made = 0;
       while (made < size[1] && tries++ < 260) {
-        var x = edge + rad * 1.25 + rnd() * (vw - 2 * (edge + rad * 1.25)), y = edge + rad * 1.25 + rnd() * (vh - 2 * (edge + rad * 1.25)), ok = true, n;
+        var x = edge + rad * 1.25 + rnd() * (vw - 2 * (edge + rad * 1.25)), y = edge + rad * 1.25 + rnd() * (vh - foot - 2 * (edge + rad * 1.25)), ok = true, n;
         for (n = 0; ok && n < avoid.length; n++) {
           var b = avoid[n], pad = rad * 1.2 + base * (n === 0 ? 3 : 1.5);
           if (b.w && x > b.x - pad && x < b.x + b.w + pad && y > b.y - pad && y < b.y + b.h + pad) ok = false;
@@ -3335,7 +3342,7 @@ html:not(.js) .reel { position: relative; }
     // More ideas, all over the page: one to a cell of a loose grid. A cell is left empty where its idea would touch
     // the words, the name, the contact link, the ticks, or the ideas already round the question.
     var page = [], cell = Math.max(76, Math.min(vw, vh) * 0.135), edge = inset() + s * 2.2;
-    var cols = Math.floor((vw - edge * 2) / cell), rows = Math.floor((vh - edge * 2) / cell), gx = (vw - cols * cell) / 2, gy = (vh - rows * cell) / 2;
+    var cols = Math.floor((vw - edge * 2) / cell), rows = Math.floor((vh - foot - edge * 2) / cell), gx = (vw - cols * cell) / 2, gy = (vh - foot - rows * cell) / 2;
     for (var row = 0; row < rows; row++) {
       for (var col = 0; col < cols; col++) {
         var h1 = hash(col, row), h2 = hash(row + 7, col + 3), h3 = hash(col + 13, row + 29);
