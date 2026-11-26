@@ -359,6 +359,316 @@ ol { padding: 0; list-style: none; }
   object-fit: contain;
   will-change: transform, opacity;
 }
+/* the computer: a home computer from 1983 with its drives and its green monitor, beside the lines that say hello.
+   It is a real 3D model made of CSS boxes: every face is an element placed with a transform, and the keys stand on
+   the sloped front. Nothing in it is a picture. The script adds the keys and draws the screen's dots.
+
+   One length drives it: --u, a share of its own width, read with a container unit, so the script only says where
+   it stands. A face (`.f`) gives its size and the place of its middle in plain numbers of --u (--w, --h, --x, --y,
+   --z, with y up as a negative number, and the ground at 0) and how it is turned (--r). The slope of the keyboard
+   is worked out from its run and its drop (`hypot`, `atan2`). Faces that meet at an edge are let into each other a
+   little (a side sits 0.12 in from the front's end, a top 0.1 under its rim) and have square corners there: faces
+   that only touch leave a hairline of the page showing along the edge.
+
+   What moves is held in registered custom properties, so each one can be animated or eased as a number:
+   --px and --py turn the model a little toward the pointer, on a spring (`linear()`); --turn turns it with the
+   scroll, from a view timeline on its section where the browser has one (the script sets it elsewhere);
+   --down is how far a key is pressed; --warm is how lit the screen is. */
+@property --px { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --py { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --turn { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --down { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --warm { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --lamp { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --flick { syntax: "<number>"; inherits: true; initial-value: 1; }
+#iie {
+  display: none;                     /* shown only where the browser has what it is built with (.iie-ok, set by the script) */
+  position: fixed; top: 0; left: 0; z-index: 2;
+  container-type: size;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent;
+  --case: oklch(0.86 0.034 88);                                    /* the beige of the plastic, lit from the front */
+  --case-top: color-mix(in oklab, var(--case), white 34%);         /* a face that looks up at the light */
+  --case-side: color-mix(in oklab, var(--case), #23286b 40%);      /* a face turned away from it, with the page's blue in its shade */
+  --ink-case: color-mix(in oklab, var(--case), #2a2118 74%);       /* what is printed on the plastic */
+  --key: #4d443c;
+  --phos: #5dff8c;                                                 /* the green of the screen */
+  --print: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --spring: linear(0, 0.3 7%, 0.78 17%, 1.06 27%, 1.13 34%, 1.08 43%, 1 55%, 0.98 65%, 1 82%, 1);
+  transition: --warm 900ms ease-out, --lamp 300ms ease-out;
+}
+.iie-ok #iie { display: block; }
+#iie.is-power { --lamp: 1; }
+#iie.is-on { --warm: 1; }
+#iie .iie-view { position: absolute; inset: 0; perspective: 340cqw; perspective-origin: 50% 40%; }
+#iie .iie-rig {
+  --u: 1cqw;
+  position: absolute; left: 49%; top: 79.5%; width: 0; height: 0;   /* the middle of the ground it stands on */
+  transform-style: preserve-3d;
+  transform: rotateX(calc(-15deg - var(--py) * 3deg)) rotateY(calc(-27deg + var(--turn) * 11deg + var(--px) * 7deg));
+  transition: --px 1300ms var(--spring), --py 1300ms var(--spring);
+}
+@keyframes iie-turn { from { --turn: 0; } to { --turn: 1; } }
+@supports (animation-timeline: view()) and (timeline-scope: --a) {
+  body { timeline-scope: --hello; }
+  .seg[data-state="hello"] { view-timeline: --hello block; }
+  /* from the section's top reaching the top of the screen to its foot reaching it: the same span its lines take */
+  #iie .iie-rig { animation: iie-turn linear both; animation-timeline: --hello; animation-range: exit-crossing 0% exit-crossing 100%; }
+}
+#iie {
+  .f {
+    --r: rotate(0deg);
+    position: absolute; display: block;
+    left: calc(var(--w) * var(--u) / -2); top: calc(var(--h) * var(--u) / -2);
+    width: calc(var(--w) * var(--u)); height: calc(var(--h) * var(--u));
+    transform: translate3d(calc(var(--x, 0) * var(--u)), calc(var(--y, 0) * var(--u)), calc(var(--z, 0) * var(--u))) var(--r);
+  }
+  :where(.f) :where(i, span, div) { position: absolute; display: block; }
+
+  /* the shadow on the ground */
+  .iie-floor {
+    --w: 70; --h: 74; --x: 5; --y: 0.2; --z: -3; --r: rotateX(90deg);
+    border-radius: calc(var(--u) * 5);
+    background: rgb(0 5 64 / 0.6);
+    box-shadow: 0 0 calc(var(--u) * 6) calc(var(--u) * 3) rgb(0 5 64 / 0.6), calc(var(--u) * 6) calc(var(--u) * -4) calc(var(--u) * 18) calc(var(--u) * 4) rgb(0 5 64 / 0.35);
+  }
+
+  /* the computer: a flat lid at the back, a slope down to the front with the keyboard let into it, and a low front edge */
+  .b-lid {
+    --w: 70; --h: 47; --y: -19; --z: -13.5; --r: rotateX(90deg);   /* its front edge runs on a little under the slope, so the two faces meet without a seam */
+    background: linear-gradient(0deg, var(--case-top) 0%, var(--case-top) 2%, color-mix(in oklab, var(--case-top), #1d2060 48%) 9%, color-mix(in oklab, var(--case-top), #1d2060 30%) 100%);   /* the drives stand on it: their shade falls on the strip in front of them */
+  }
+  .b-slope {
+    --run: 28; --drop: 10;
+    --w: 70; --y: -14; --z: 23; --r: rotateX(calc(90deg - atan2(var(--drop), var(--run))));
+    height: hypot(calc(var(--run) * var(--u)), calc(var(--drop) * var(--u)));
+    top: calc(hypot(calc(var(--run) * var(--u)), calc(var(--drop) * var(--u))) / -2);
+    transform-style: preserve-3d;
+    border-radius: 0 0 0 calc(var(--u) * 0.8);
+    background: linear-gradient(180deg, var(--case-top) 0%, color-mix(in oklab, var(--case-top), var(--case) 70%) 100%);
+    box-shadow: inset 0 calc(var(--u) * 0.3) calc(var(--u) * 0.3) rgb(255 255 255 / 0.55), inset calc(var(--u) * -0.3) 0 calc(var(--u) * 0.4) rgb(40 40 100 / 0.2);
+  }
+  .b-front {
+    --w: 70; --h: 9; --y: -4.5; --z: 37;
+    border-radius: calc(var(--u) * 0.8) 0 0 calc(var(--u) * 1.2);
+    background: linear-gradient(180deg, color-mix(in oklab, var(--case), white 16%) 0%, var(--case) 22%, color-mix(in oklab, var(--case), #23286b 34%) 100%);
+    box-shadow: inset 0 calc(var(--u) * 0.25) 0 rgb(255 255 255 / 0.6);
+  }
+  .b-right {
+    --w: 74; --h: 19; --x: 34.88; --y: -9.5; --r: rotateY(90deg);
+    clip-path: polygon(0 100%, 0 52.63%, 37.84% 0, 100% 0, 100% 100%);   /* its left edge is the front: the low front edge, the slope, then the lid */
+    background:
+      repeating-linear-gradient(90deg, rgb(20 22 70 / 0.6) 0 calc(var(--u) * 0.55), transparent calc(var(--u) * 0.55) calc(var(--u) * 1.7)) 76% 34% / 34% 30% no-repeat,   /* the air slots */
+      linear-gradient(90deg, var(--case-side) 0%, color-mix(in oklab, var(--case-side), #10134a 30%) 100%);
+  }
+
+  /* the drives: one wide box with two black faces, between the computer and its monitor */
+  .d-front {
+    --w: 68; --h: 14; --y: -26; --z: 6;
+    transform-style: preserve-3d;
+    border-radius: calc(var(--u) * 0.7) 0 0 calc(var(--u) * 0.7);
+    background: linear-gradient(180deg, color-mix(in oklab, var(--case), #23286b 26%) 0%, var(--case) 26%, color-mix(in oklab, var(--case), #23286b 16%) 100%);   /* the monitor's shade along its top */
+    box-shadow: inset 0 calc(var(--u) * -0.25) 0 rgb(40 40 100 / 0.25);
+  }
+  .d-top { --w: 68; --h: 42; --y: -32.9; --z: -15; --r: rotateX(90deg); background: color-mix(in oklab, var(--case-top), #14174f 62%); }
+  .d-right { --w: 42; --h: 14; --x: 33.88; --y: -26; --z: -15; --r: rotateY(90deg); background: linear-gradient(90deg, var(--case-side), color-mix(in oklab, var(--case-side), #10134a 30%)); }
+  .bay {
+    left: calc(var(--u) * (2.6 + var(--n) * 32.8)); top: calc(var(--u) * 1.5); width: calc(var(--u) * 30); height: calc(var(--u) * 11);
+    transform-style: preserve-3d;
+    border-radius: calc(var(--u) * 0.7);
+    background: linear-gradient(180deg, #2a2b32 0%, #131418 55%, #0b0c0f 100%);
+    box-shadow: 0 0 0 calc(var(--u) * 0.2) rgb(30 24 40 / 0.6), 0 calc(var(--u) * 0.35) 0 rgb(255 255 255 / 0.5), inset 0 calc(var(--u) * 0.25) 0 rgb(255 255 255 / 0.1);
+    font: 400 calc(var(--u) * 1.3)/1 var(--print); letter-spacing: 0.04em; color: #cfcabd;
+  }
+  .bay-slot {                        /* where the disk goes in */
+    left: calc(var(--u) * 2.2); right: calc(var(--u) * 2.2); top: calc(var(--u) * 4.5); height: calc(var(--u) * 1.3);
+    border-radius: calc(var(--u) * 0.3); background: #000;
+    box-shadow: 0 calc(var(--u) * 0.15) 0 rgb(255 255 255 / 0.12), inset 0 calc(var(--u) * 0.3) calc(var(--u) * 0.3) #000;
+  }
+  .bay-disk {                        /* a disk, lying flat inside. With the door up it sits part of the way out */
+    left: calc(var(--u) * 4); top: calc(var(--u) * -5.9); width: calc(var(--u) * 22); height: calc(var(--u) * 22);
+    border-radius: calc(var(--u) * 0.3);
+    background:
+      linear-gradient(180deg, transparent 0 76%, #e9e4d4 76% 96%, transparent 96%) 12% 0 / 46% 100% no-repeat,   /* its label, at the edge you hold */
+      linear-gradient(180deg, #23242a, #0e0f12);
+    transform: translateZ(calc(var(--u) * -12)) rotateX(90deg);
+    transition: transform 520ms var(--spring);
+  }
+  .bay.is-open .bay-disk { transform: translateZ(calc(var(--u) * -5.5)) rotateX(90deg); }
+  .bay-door {                        /* the door: hinged along its top, it lifts to let the disk out */
+    left: calc(var(--u) * 9.5); top: calc(var(--u) * 2.3); width: calc(var(--u) * 11); height: calc(var(--u) * 4.6);
+    border-radius: calc(var(--u) * 0.5);
+    background: linear-gradient(180deg, #474a53 0%, #2a2c33 50%, #18191d 100%);
+    box-shadow: inset 0 calc(var(--u) * 0.2) 0 rgb(255 255 255 / 0.22), inset 0 calc(var(--u) * -0.2) 0 rgb(0 0 0 / 0.5), 0 calc(var(--u) * 0.3) calc(var(--u) * 0.5) rgb(0 0 0 / 0.7);
+    transform-origin: 50% 0; transform: rotateX(0deg);
+    transition: transform 460ms var(--spring);
+  }
+  .bay.is-open .bay-door { transform: rotateX(76deg); }
+  .bay-led {                         /* lit red while the drive reads */
+    left: calc(var(--u) * 2.8); bottom: calc(var(--u) * 1.7); width: calc(var(--u) * 1.3); height: calc(var(--u) * 1.3); border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #b0443c, #4a0e0c 70%);
+    box-shadow: inset 0 0 0 calc(var(--u) * 0.12) rgb(0 0 0 / 0.6);
+  }
+  .bay.is-busy .bay-led {
+    background: radial-gradient(circle at 35% 30%, #fff, #ff4a3d 45%, #b30d00);
+    box-shadow: 0 0 calc(var(--u) * 1.6) #ff4a3d, 0 0 calc(var(--u) * 0.4) #ff8a80;
+    animation: iie-read 210ms steps(1, end) infinite;
+  }
+  .bay-mark { right: calc(var(--u) * 2.6); bottom: calc(var(--u) * 1.7); display: flex; align-items: center; gap: calc(var(--u) * 0.7); }
+
+  /* the monitor: on a foot, on the drives. Its face has a deep recess with the tube in it. */
+  .m-foot { --w: 46; --h: 2.4; --y: -34.2; --z: 2; background: color-mix(in oklab, var(--case), #10134a 66%); }
+  .m-foot-r { --w: 34; --h: 2.4; --x: 23; --y: -34.2; --z: -15; --r: rotateY(90deg); background: color-mix(in oklab, var(--case), #0b0d3a 76%); }
+  .m-front {
+    --w: 64; --h: 48; --y: -59.4; --z: 7;
+    border-radius: calc(var(--u) * 1.2) 0 0 calc(var(--u) * 1.2);
+    background: linear-gradient(176deg, color-mix(in oklab, var(--case), white 20%) 0%, var(--case) 34%, color-mix(in oklab, var(--case), #23286b 14%) 100%);
+    box-shadow: inset 0 calc(var(--u) * 0.3) 0 rgb(255 255 255 / 0.65), inset 0 calc(var(--u) * -0.3) 0 rgb(40 40 100 / 0.22), inset calc(var(--u) * -0.3) 0 calc(var(--u) * 0.4) rgb(40 40 100 / 0.16);
+  }
+  .m-top {
+    --w: 64; --h: 43; --y: -83.28; --z: -14.5; --r: rotateX(90deg);
+    background:
+      repeating-linear-gradient(90deg, rgb(60 50 60 / 0.55) 0 calc(var(--u) * 0.6), transparent calc(var(--u) * 0.6) calc(var(--u) * 1.9)) 50% 22% / 62% 26% no-repeat,   /* the air slots over the tube */
+      linear-gradient(180deg, color-mix(in oklab, var(--case-top), var(--case) 50%), var(--case-top));
+  }
+  .m-right {
+    --w: 43; --h: 48; --x: 31.88; --y: -59.4; --z: -14.5; --r: rotateY(90deg);
+    background: linear-gradient(90deg, var(--case-side) 0%, color-mix(in oklab, var(--case-side), #10134a 34%) 100%);
+  }
+  .crt-bezel {                       /* the recess: its walls slope in to the glass */
+    left: calc(var(--u) * 7); top: calc(var(--u) * 4.6); width: calc(var(--u) * 50); height: calc(var(--u) * 37);
+    border-radius: calc(var(--u) * 2.6);
+    background: linear-gradient(180deg, color-mix(in oklab, var(--case), #15163f 62%) 0%, color-mix(in oklab, var(--case), #15163f 40%) 30%, color-mix(in oklab, var(--case), #15163f 16%) 100%);
+    box-shadow:
+      inset 0 calc(var(--u) * 0.6) calc(var(--u) * 1) rgb(8 8 40 / 0.6),
+      inset 0 0 calc(var(--u) * 2.4) rgb(from var(--phos) r g b / calc(var(--warm) * 0.22)),   /* the screen's light on the walls round it */
+      0 calc(var(--u) * 0.25) 0 rgb(255 255 255 / 0.7), 0 calc(var(--u) * -0.2) 0 rgb(40 40 100 / 0.25);
+  }
+  .crt {                             /* the tube: dark glass, bulging, with the picture a little way in from its edge */
+    inset: calc(var(--u) * 1.25) calc(var(--u) * 2);
+    overflow: hidden;
+    border-radius: calc(var(--u) * 3.4) / calc(var(--u) * 3.8);
+    background: radial-gradient(ellipse 120% 120% at 50% 46%, #0d2414 0%, #05100a 55%, #010302 100%);
+    box-shadow: 0 0 0 calc(var(--u) * 0.3) #08080b;
+  }
+  .crt canvas {
+    position: absolute; left: 7%; top: 7.5%; width: 86%; height: 85%; display: block;
+    opacity: calc(var(--warm) * var(--flick));
+    transform: scale(0.6, 0.006);    /* off: the picture is one short line in the middle */
+    filter: drop-shadow(0 0 calc(var(--u) * 0.3) rgb(from var(--phos) r g b / 0.9)) drop-shadow(0 0 calc(var(--u) * 1.5) rgb(from var(--phos) r g b / 0.4));
+    transition: transform 240ms cubic-bezier(0.5, 0, 0.9, 0.4);
+  }
+  &.is-on .crt canvas { transform: none; transition: transform 520ms cubic-bezier(0.2, 1.5, 0.4, 1) 160ms; animation: iie-flicker 3.7s steps(1, end) infinite; }
+  &.is-bell .crt canvas { filter: brightness(1.7) drop-shadow(0 0 calc(var(--u) * 1.2) var(--phos)); }
+  .crt::before {                     /* the glow of the lit tube, and a faint band that rolls down it */
+    content: ""; position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, transparent 0%, rgb(from var(--phos) r g b / 0.07) 50%, transparent 100%) 0 0 / 100% 22% no-repeat,
+      radial-gradient(ellipse at 50% 50%, rgb(from var(--phos) r g b / 0.16), transparent 72%);
+    opacity: var(--warm);
+    animation: iie-roll 7s linear infinite;
+  }
+  .crt::after {                      /* the glass: a sheen that moves as the model turns, and shade toward its edge */
+    content: ""; position: absolute; inset: 0; border-radius: inherit;
+    background:
+      radial-gradient(ellipse 52% 36% at calc(30% - var(--px) * 14% - var(--turn) * 10%) calc(19% + var(--py) * 8%), rgb(255 255 255 / 0.2), transparent 72%),
+      linear-gradient(118deg, rgb(255 255 255 / 0.07) 0%, rgb(255 255 255 / 0.02) 26%, transparent 26.4%),
+      radial-gradient(ellipse 100% 100% at 50% 50%, transparent 58%, rgb(0 0 0 / 0.6) 100%);
+    box-shadow: inset 0 0 calc(var(--u) * 2.2) rgb(0 0 0 / 0.9);
+  }
+  .m-mark { left: calc(var(--u) * 7.4); bottom: calc(var(--u) * 2); display: flex; align-items: center; gap: calc(var(--u) * 0.8); font: 400 calc(var(--u) * 1.9)/1 var(--print); letter-spacing: 0.02em; color: var(--ink-case); white-space: nowrap; }
+  .m-led {                           /* lit while the monitor is on */
+    right: calc(var(--u) * 12.2); bottom: calc(var(--u) * 2.4); width: calc(var(--u) * 1); height: calc(var(--u) * 1); border-radius: 50%;
+    background: color-mix(in oklab, #24402b, #8dffab calc(var(--warm) * 100%));
+    box-shadow: 0 0 calc(var(--u) * 1.4 * var(--warm)) var(--phos), inset 0 0 0 calc(var(--u) * 0.12) rgb(0 0 0 / 0.5);
+  }
+  .m-power {                         /* the monitor's own switch: a rocker */
+    right: calc(var(--u) * 7); bottom: calc(var(--u) * 1.6); width: calc(var(--u) * 3.6); height: calc(var(--u) * 2.4); border-radius: calc(var(--u) * 0.4);
+    background: linear-gradient(90deg, #2c2d33 0 50%, #55585f 50% 100%);
+    box-shadow: 0 0 0 calc(var(--u) * 0.25) #17181c, 0 calc(var(--u) * 0.3) 0 rgb(255 255 255 / 0.6), inset 0 calc(var(--u) * 0.2) 0 rgb(255 255 255 / 0.2);
+  }
+  &.is-on .m-power { background: linear-gradient(90deg, #55585f 0 50%, #2c2d33 50% 100%); }
+
+  /* the six stripes, on each maker's mark */
+  .iie-stripes {
+    position: static; flex: none; width: calc(var(--u) * 2.1); height: calc(var(--u) * 2.1); border-radius: calc(var(--u) * 0.4);
+    background: linear-gradient(180deg, #61bb46 0 16.67%, #fdb827 0 33.33%, #f5821f 0 50%, #e03a3e 0 66.67%, #963d97 0 83.33%, #009ddc 0);
+  }
+  .bay-mark .iie-stripes { width: calc(var(--u) * 1.4); height: calc(var(--u) * 1.4); border-radius: calc(var(--u) * 0.25); }
+  .iie-badge { left: calc(var(--u) * 6.4); top: calc(var(--u) * 2.3); display: flex; align-items: center; gap: calc(var(--u) * 0.9); font: 400 calc(var(--u) * 2.3)/1 var(--print); letter-spacing: 0.01em; color: var(--ink-case); white-space: nowrap; }
+  .iie-badge b { font-weight: 400; font-style: italic; }
+
+  /* the keyboard: a dark well in the slope, with the keys standing in it */
+  .iie-well {
+    left: calc(var(--u) * 6.2); top: calc(var(--u) * 7.3); width: calc(var(--u) * 57.6); height: calc(var(--u) * 17.5);   /* wide enough for RESET at its right end, with room round it */
+    transform-style: preserve-3d;
+    border-radius: calc(var(--u) * 0.9);
+    background: linear-gradient(180deg, #14110f 0%, #26211d 100%);
+    box-shadow: inset 0 calc(var(--u) * 0.6) calc(var(--u) * 0.8) rgb(0 0 0 / 0.85), 0 calc(var(--u) * 0.25) 0 rgb(255 255 255 / 0.7), 0 calc(var(--u) * -0.2) 0 rgb(60 50 90 / 0.3);
+  }
+  .iie-lamp {                        /* lit while the computer is on */
+    left: calc(var(--u) * 0.9); bottom: calc(var(--u) * 1.25); width: calc(var(--u) * 2.2); height: calc(var(--u) * 1.3); border-radius: calc(var(--u) * 0.25);
+    background: color-mix(in oklab, #4a4a44, #fffbe0 calc(var(--lamp) * 100%));
+    box-shadow: 0 0 calc(var(--u) * 1.5 * var(--lamp)) #fff3ad, inset 0 0 0 calc(var(--u) * 0.15) rgb(0 0 0 / 0.5);
+  }
+  .iie-keys { left: calc(var(--u) * 3.9); top: calc(var(--u) * 0.75); transform-style: preserve-3d; --kp: calc(var(--u) * 3.2); --gap: calc(var(--u) * 0.36); --lift: calc(var(--u) * 1.5); }
+  /* a key: its top, raised off the well, with a front and a right side hanging from it. Pressed, it sinks most of
+     the way and its sides shorten with it; let go, it springs back. The top has square corners: its sides are
+     flat and run the whole of each edge, so a top with round corners left each side's end sticking out past the
+     corner as a point. The soft look comes from the shading on the top (a lit rim, and a shallow dish in the
+     middle), not from its outline. Do not round the top's corners, and do not stop the sides short of them: that
+     was tried, and the tops looked as if they floated. */
+  .key {
+    position: absolute; display: grid; place-items: center;
+    left: calc(var(--x) * var(--kp)); top: calc(var(--y) * var(--kp));
+    width: calc(var(--w) * var(--kp) - var(--gap)); height: calc(var(--kp) - var(--gap));
+    --rise: calc(var(--lift) * (1 - var(--down) * 0.74));
+    transform-style: preserve-3d;
+    transform: translateZ(var(--rise));
+    background:
+      radial-gradient(ellipse 66% 60% at 50% 47%, rgb(255 255 255 / 0.08) 0%, rgb(255 255 255 / 0.03) 60%, transparent 100%),   /* the dish a finger sits in */
+      linear-gradient(170deg, color-mix(in oklab, var(--key), white 16%) 0%, var(--key) 46%, color-mix(in oklab, var(--key), black 14%) 100%);
+    box-shadow: inset 0 0 0 calc(var(--u) * 0.18) rgb(255 255 255 / 0.09), inset 0 calc(var(--u) * 0.3) calc(var(--u) * 0.3) rgb(255 255 255 / 0.12), inset 0 calc(var(--u) * -0.35) calc(var(--u) * 0.4) rgb(0 0 0 / 0.35);
+    font: 700 calc(var(--u) * 1.28)/1 var(--print); font-style: normal; color: #f6f1e6; text-align: center; white-space: pre-line;
+    cursor: pointer;
+    transition: --down 300ms var(--spring);
+  }
+  .key::before {                     /* its front */
+    content: ""; position: absolute; left: 0; right: 0; top: 100%; height: var(--rise);
+    transform-origin: 50% 0; transform: rotateX(-90deg);
+    background: linear-gradient(180deg, color-mix(in oklab, var(--key), black 24%), color-mix(in oklab, var(--key), black 52%));
+  }
+  .key::after {                      /* its right side */
+    content: ""; position: absolute; top: 0; bottom: 0; left: 100%; width: var(--rise);
+    transform-origin: 0 50%; transform: rotateY(90deg);
+    background: color-mix(in oklab, var(--key), black 58%);
+  }
+  .key:active, .key.is-down, .key.is-locked { --down: 1; transition: --down 50ms ease-out; }
+  .key--two { font-size: calc(var(--u) * 1.02); line-height: 1.12; }
+  .key--two b { position: static; font-weight: inherit; }
+  .key--word { font-size: calc(var(--u) * 0.62); font-weight: 400; letter-spacing: 0.03em; line-height: 1.15; }
+  .key--left, .key--right, .key--down, .key--up { font-size: calc(var(--u) * 1.3); }
+  .key--open i, .key--solid i { position: static; width: calc(var(--u) * 1.15); height: calc(var(--u) * 1.15); border-radius: calc(var(--u) * 0.3); border: calc(var(--u) * 0.2) solid currentColor; }
+  .key--solid i { background: currentColor; }
+  .key--reset { --key: #5a5048; }
+  &.is-booting .key { animation: iie-ripple 520ms ease-out calc(var(--i) * 24ms) both; }   /* the keys dip in a wave as it starts */
+  &.is-live .key, &.is-live .bay, &.is-live .m-power { pointer-events: auto; }
+  .bay, .m-power { cursor: pointer; }
+}
+@media (hover: hover) and (pointer: fine) {
+  #iie .key:hover:not(:active, .is-down, .is-locked) { --down: 0.16; color: #fff; }
+  #iie .bay:hover .bay-door { filter: brightness(1.25); }
+}
+@supports (corner-shape: squircle) {
+  #iie .crt { corner-shape: squircle; border-radius: calc(var(--u) * 7.5) / calc(var(--u) * 8); }
+}
+@keyframes iie-ripple { 0%, 100% { --down: 0; } 38% { --down: 0.9; } }
+@keyframes iie-read { 0% { opacity: 1; } 50% { opacity: 0.45; } }
+@keyframes iie-flicker { 0%, 100% { --flick: 1; } 41% { --flick: 0.93; } 43% { --flick: 1; } 78% { --flick: 0.96; } 80% { --flick: 1; } }
+@keyframes iie-roll { from { background-position: 0 -30%, 0 0; } to { background-position: 0 130%, 0 0; } }
+@media (prefers-reduced-motion: reduce) {
+  #iie .iie-rig, #iie .crt canvas, #iie .crt::before, #iie.is-booting .key, #iie .bay.is-busy .bay-led { animation: none; }
+}
 #frame-label {
   position: fixed;
   top: 0;
@@ -994,6 +1304,37 @@ html:not(.js) .reel { position: relative; }
   <img data-src="assets/images/woodies/sticker-4.webp" alt="" width="503" height="520" decoding="async">
   <img data-src="assets/images/woodies/sticker-5.webp" alt="" width="484" height="520" decoding="async">
 </div>
+<!-- The computer beside the lines that say hello: a 3D model made of CSS boxes. The script adds its keys and draws its screen. -->
+<div id="iie" aria-hidden="true">
+  <div class="iie-view">
+    <div class="iie-rig">
+      <i class="f iie-floor"></i>
+      <i class="f b-lid"></i>
+      <i class="f b-right"></i>
+      <i class="f b-front"></i>
+      <div class="f b-slope">
+        <span class="iie-badge"><i class="iie-stripes"></i>chris <b>//e</b></span>
+        <div class="iie-well"><i class="iie-lamp"></i><div class="iie-keys"></div></div>
+      </div>
+      <i class="f d-top"></i>
+      <i class="f d-right"></i>
+      <div class="f d-front">
+        <div class="bay" style="--n: 0"><i class="bay-disk"></i><i class="bay-slot"></i><i class="bay-door"></i><i class="bay-led"></i><span class="bay-mark"><i class="iie-stripes"></i>drive 1</span></div>
+        <div class="bay" style="--n: 1"><i class="bay-disk"></i><i class="bay-slot"></i><i class="bay-door"></i><i class="bay-led"></i><span class="bay-mark"><i class="iie-stripes"></i>drive 2</span></div>
+      </div>
+      <i class="f m-foot"></i>
+      <i class="f m-foot-r"></i>
+      <i class="f m-top"></i>
+      <i class="f m-right"></i>
+      <div class="f m-front">
+        <div class="crt-bezel"><div class="crt"><canvas width="420" height="324"></canvas></div></div>
+        <span class="m-mark"><i class="iie-stripes"></i>monitor //</span>
+        <i class="m-led"></i>
+        <i class="m-power"></i>
+      </div>
+    </div>
+  </div>
+</div>
 <div id="pulse" aria-hidden="true"></div>
 <canvas id="frame" aria-hidden="true"></canvas>
 <p id="frame-label" aria-hidden="true"></p>
@@ -1031,9 +1372,11 @@ html:not(.js) .reel { position: relative; }
     </div>
   </section>
 
-  <section class="seg" data-state="quiet">
-    <div class="panel panel--words">
-      <div class="lines">
+  <!-- The computer needs time: its section is longer than its lines alone would make it (`data-min`), and the wheel moves the page less while it is on screen (`data-gear`). -->
+  <section class="seg" data-state="hello" data-min="150" data-gear="0.7">
+    <div class="panel panel--story">
+      <div class="stage" aria-hidden="true"></div>
+      <div class="text lines">
         <h2 class="say">Hi, I’m Chris.</h2>
         <p class="say">I’ve been a designer, technologist, and founder for 20+ years.</p>
         <p class="say">I learn by making things.</p>
@@ -1573,6 +1916,7 @@ html:not(.js) .reel { position: relative; }
       panel: el.querySelector(".panel"),
       stage: el.querySelector(".stage"),
       film: !!el.querySelector(".panel--film"),
+      gear: parseFloat(el.getAttribute("data-gear")) || 1,   // how much of a wheel step this section uses: under 1 where there is something to stay with
       clips: Array.prototype.slice.call(el.querySelectorAll(".clip")),
       shows: [el.getAttribute("data-state")].concat(Array.prototype.map.call(el.querySelectorAll(".say[data-state]"), function (say) { return say.getAttribute("data-state"); })),   // the states its lines use
       grid: el.querySelector(".projects"),
@@ -2292,6 +2636,340 @@ html:not(.js) .reel { position: relative; }
     art.canvas.style.opacity = slot === 0 && !art.dropped && art.phase > 0 ? 0.2 : 1;
   }
 
+  /* ---------- the computer ---------- */
+  // The machine beside the lines that say hello. Its body is CSS; this is what it does. It comes on as its section
+  // arrives and starts up from its first drive. Then it types a command for each line as the line comes up, pressing
+  // its own keys: HELLO, then CATALOG, then RUN, which draws the page's mascot a row at a time. Between commands the
+  // reader can type on it, on their own keyboard or by pressing its keys. RESET starts it again, a drive's door
+  // lifts to let its disk out, and the monitor has a switch of its own. The model turns a little toward the pointer.
+  // One command is in no list: WOODIES brings a real Woodie up on the screen from the second drive, a new one each time.
+  // The screen is 20 letters by 12 lines, each letter five dots by seven in a cell of seven by nine, drawn on a
+  // canvas three canvas pixels to the dot with every third row left dark, as the lines of a tube are.
+  var iie = (function () {
+    var el = document.getElementById("iie");
+    var can = window.CSS && CSS.supports && typeof CSSPropertyRule !== "undefined" && ["container-type: size", "selector(&)", "color: color-mix(in oklab, red, blue)", "color: rgb(from red r g b)", "width: hypot(1px, 1px)"].every(function (q) { return CSS.supports(q); });
+    var seg = null;
+    segs.forEach(function (s) { if (s.state === "hello") seg = s; });
+    if (!el || !can || !seg) return null;
+    document.documentElement.classList.add("iie-ok");
+    var rig = el.querySelector(".iie-rig"), keysBox = el.querySelector(".iie-keys"), cv = el.querySelector("canvas"), pen = cv.getContext("2d");
+    var bays = Array.prototype.slice.call(el.querySelectorAll(".bay")), monKey = el.querySelector(".m-power");
+    var cssTurn = CSS.supports("animation-timeline: view()") && CSS.supports("timeline-scope: --a");   // where the scroll turns it in CSS
+
+    // the keys, a row at a time. One letter is a key; two are a key with a second mark over the first; a word is a key with a name.
+    var LAYOUT = [
+      "ESC 1! 2@ 3# 4$ 5% 6^ 7& 8* 9( 0) -_ =+ DELETE",
+      "TAB Q W E R T Y U I O P [{ ]}",
+      "CONTROL A S D F G H J K L ;: '\" RETURN",
+      "SHIFT Z X C V B N M ,< .> /? RSHIFT",
+      "CAPS `~ \\| OPEN SPACE SOLID LEFT RIGHT DOWN UP"
+    ];
+    var WORDS = { ESC: "ESC", DELETE: "DELETE", TAB: "TAB", CONTROL: "CONTROL", RETURN: "RETURN", SHIFT: "SHIFT", RSHIFT: "SHIFT", CAPS: "CAPS\nLOCK", OPEN: "", SOLID: "", SPACE: "", LEFT: "←", RIGHT: "→", DOWN: "↓", UP: "↑", RESET: "RESET" };
+    var WIDE = { DELETE: 2, TAB: 1.5, CONTROL: 1.75, RETURN: 2.25, SHIFT: 2.25, RSHIFT: 2.75, CAPS: 1.5, SPACE: 5.5 };
+    var keyOf = {};
+    function addKey(name, x, y) {
+      var k = document.createElement("i"), word = WORDS[name] !== undefined, w = WIDE[name] || 1;
+      k.className = "key" + (word ? " key--word key--" + name.toLowerCase() : name.length === 2 ? " key--two" : "");
+      k.style.cssText = "--x:" + x + ";--y:" + y + ";--w:" + w + ";--i:" + (x + y * 1.6).toFixed(2);
+      if (word) { k.textContent = WORDS[name]; if (name === "OPEN" || name === "SOLID") k.appendChild(document.createElement("i")); keyOf[name] = k; }
+      else if (name.length === 2) { var b = document.createElement("b"); b.textContent = name[1]; k.appendChild(b); k.appendChild(document.createTextNode(name[0])); keyOf[name[0]] = keyOf[name[1]] = k; }
+      else { k.textContent = name; keyOf[name] = k; }
+      k.setAttribute("data-k", word ? name : name[0]);
+      keysBox.appendChild(k);
+      return w;
+    }
+    LAYOUT.forEach(function (row, y) { var x = 0; row.split(" ").forEach(function (name) { x += addKey(name, x, y); }); });
+    addKey("RESET", 15.35, 0);         // off to one side, where a stray finger will not find it
+    keyOf[" "] = keyOf.SPACE; keyOf["\n"] = keyOf.RETURN; keyOf["\b"] = keyOf.DELETE;
+    function press(k, ms) {
+      if (!k) return;
+      k.classList.add("is-down");
+      clearTimeout(k.up);
+      k.up = setTimeout(function () { k.classList.remove("is-down"); }, ms || 90);
+    }
+
+    // the letters: 64 of them, from the space to the underline, seven rows each, one base-32 digit to the row
+    var FONT = "00000004444404aaa0000aavavaa4fke5u4op248j38kk8lid444000048ggg8442111244le4el4044v4400000448000v000000000401248g0ehjlphe4c4444eeh168gvv1261he26aiv22vgu11he78guhhev124888ehhehheehhf12s00404000040448248g84200v0v008421248eh24404ehlnmgf4ahhvhhuhhuhhuehgggheuhhhhhuvgguggvvggugggfgggjhfhhhvhhhe44444e11111hehikokihggggggvhrllhhhhhpljhhehhhhheuhhugggehhhliduhhukihehge1hev444444hhhhhhehhhhha4hhhllrhhha4ahhhha4444v1248gvvooooov0g84210v33333v004ah00000000v";
+    var GLYPH = [];
+    for (var gi = 0; gi < 64; gi++) GLYPH.push(FONT.substr(gi * 7, 7).split("").map(function (d) { return parseInt(d, 32); }));
+    // the mascot, as the program draws it: # is a lit square, o a half-lit one
+    var FACE = ["........o.......", "........#.......", "....########....", "..############..", ".##############.", ".####.#####.###.", ".###..####..###.", ".###..####..###.", ".##############.", ".####.####.####.", ".#####....#####.", ".##############.", "..############..", "...###....###..."];
+    var COLS = 20, ROWS = 12, DOT = 3, SIDE = 5;   // letters across, lines down, canvas pixels to a dot, dots to a square of the picture
+    var PHOS = getComputedStyle(el).getPropertyValue("--phos").trim() || "#5dff8c";
+    var PW = 87, PH = 90;              // a picture from a disk, in dots: it has the first ten lines of the screen
+    var text = [], cx = 0, cy = 0, top = 0, line = "", plots = null, pic = null, picRows = 0, asking = false, blink = true;
+    var queue = [], timer = 0, stepping = false, painting = 0, powered = false, monitor = true, ran = {}, slot = -1, blinker = 0;
+
+    function dot(x, y, w) { pen.fillRect(x * DOT, y * DOT, (w || 1) * DOT, DOT - 1); }
+    function paint() {
+      painting = 0;
+      pen.clearRect(0, 0, cv.width, cv.height);
+      pen.fillStyle = PHOS;
+      var i, r, c, x, y, g;
+      if (pic) for (y = 0; y < picRows; y++) for (x = 0; x < PW; x++) {     // the rows of the picture that are in so far, a run of lit dots at a time
+        if (!pic[y * PW + x]) continue;
+        for (c = x; c < PW && pic[y * PW + c]; c++);
+        dot(26 + x, y, c - x);
+        x = c;
+      }
+      if (plots) for (i = 0; i < plots.length; i++) {
+        for (y = 0; y < SIDE; y++) for (x = 0; x < SIDE; x++) if (plots[i][2] || (x + y) % 2 === 0) dot(30 + plots[i][0] * SIDE + x, 5 + plots[i][1] * SIDE + y);
+      }
+      for (r = top; r < ROWS; r++) for (c = 0; c < text[r].length; c++) {
+        g = GLYPH[text[r].charCodeAt(c) - 32];
+        if (!g) continue;
+        for (y = 0; y < 7; y++) for (x = 0; x < 5; x++) if (g[y] >> (4 - x) & 1) dot(c * 7 + 1 + x, r * 9 + y);
+      }
+      if (asking && blink && !queue.length) for (y = -1; y < 8; y++) dot(cx * 7, cy * 9 + y, 7);   // the cursor: a block that flashes
+    }
+    function show() { if (!painting) painting = requestAnimationFrame(paint); }
+
+    // the screen as a terminal: letters go in at the cursor, and the lines move up when the last one is full
+    function newline() {
+      cx = 0;
+      if (cy < ROWS - 1) { cy++; return; }
+      for (var r = top; r < ROWS - 1; r++) text[r] = text[r + 1];
+      text[ROWS - 1] = "";
+    }
+    function put(ch) {
+      var s = text[cy];
+      while (s.length < cx) s += " ";
+      text[cy] = s.slice(0, cx) + ch;
+      if (++cx >= COLS) newline();
+    }
+    function home(from) {              // clear the lines from `from` down: all of them for words alone, the last few under a picture
+      top = from;
+      plots = null; pic = null;
+      for (var r = 0; r < ROWS; r++) if (r >= from || !text[r]) text[r] = "";
+      cx = 0; cy = from;
+    }
+    // What the machine does is a queue of steps. Each step does one thing and says how long to wait before the next.
+    // The reader's keys join the same queue, so what they type while a program runs comes out after it.
+    function pause(ms) { return function () { return ms; }; }
+    function say(s, ms) { return function () { for (var i = 0; i < s.length; i++) put(s[i]); newline(); return ms === undefined ? 45 : ms; }; }
+    function words() { if (top) home(0); return 0; }      // back from the picture to words alone
+    function ready() { put("]"); line = ""; asking = true; return 0; }
+    function bell() { el.classList.add("is-bell"); setTimeout(function () { el.classList.remove("is-bell"); }, 150); return 0; }
+    function busy(i, ms) {
+      var b = bays[i];
+      b.classList.add("is-busy");
+      clearTimeout(b.done);
+      b.done = setTimeout(function () { b.classList.remove("is-busy"); }, ms);
+    }
+    function typed(ch) {
+      return function () {
+        if (!asking) return 0;
+        press(keyOf[ch], ch === "\n" ? 120 : 0);
+        if (ch === "\n") { asking = false; newline(); queue = run(line.trim()).concat([ready], queue); line = ""; return 90; }
+        if (ch === "\b") { if (line) { line = line.slice(0, -1); cx--; text[cy] = text[cy].slice(0, cx); } return 0; }
+        if (line.length >= COLS - 2) return bell();
+        line += ch; put(ch);
+        return 0;
+      };
+    }
+    function auto(cmd) {               // the machine types a command itself
+      queue.push(pause(320));
+      cmd.split("").forEach(function (ch, i) { queue.push(typed(ch), pause(54 + (i * 37) % 40)); });
+      queue.push(pause(140), typed("\n"));
+      go();
+    }
+    function run(cmd) {
+      var out = [];
+      if (cmd === "HELLO") out.push(words, say("HI, I'M CHRIS."));
+      else if (cmd === "CATALOG") {
+        if (bays[0].classList.contains("is-open")) return [pause(500), say(""), say("I/O ERROR"), bell];   // no disk in the first drive
+        out.push(words, function () { busy(0, 1300); return 260; });
+        ["", "DISK VOLUME 254", "", "*A 002 HELLO", " B 020 DESIGNER", " B 020 TECHNOLOGIST", " B 020 FOUNDER", " A 005 MAKER", ""].forEach(function (s) { out.push(say(s, 105)); });
+      } else if (cmd === "RUN" || cmd === "RUN MAKER") {
+        out.push(function () { home(9); plots = []; return 220; });
+        FACE.forEach(function (row, y) {
+          out.push(function () { for (var x = 0; x < row.length; x++) if (row[x] !== ".") plots.push([x, y, row[x] === "#"]); return 75; });
+        });
+        out.push(pause(200), say("TRY IT: TYPE HELP"));
+      } else if (cmd === "LIST") {
+        out.push(words);
+        ["", "10 REM MAKER", "20 GR", "30 FOR Y = 0 TO 13", "40 GOSUB 100: NEXT", "50 PRINT \"TRY IT\"", "60 END", ""].forEach(function (s) { out.push(say(s, 70)); });
+      } else if (cmd === "HELP") {
+        out.push(words);
+        ["", "TYPE ONE OF THESE:", "", " HELLO    CATALOG", " RUN      LIST", " HOME     GR", ""].forEach(function (s) { out.push(say(s, 60)); });
+      }
+      else if (cmd === "WOODIES" || cmd === "WOODIE") {   // not in HELP: for the reader who tries it
+        if (bays[1].classList.contains("is-open")) return [pause(500), say(""), say("I/O ERROR"), bell];   // their disk is in the second drive
+        out.push(function () { home(10); fetchWoodie(); busy(1, 900); return 450; }, loadPic);
+      }
+      else if (cmd === "HOME" || cmd === "TEXT") out.push(function () { home(0); return 0; });
+      else if (cmd === "GR") out.push(function () { home(9); plots = []; return 0; });
+      else if (cmd === "PR#6" || cmd === "REBOOT") out.push(function () { boot(); return 0; });
+      else if (cmd) out.push(say("?SYNTAX ERROR"), bell);
+      return out;
+    }
+    // WOODIES: a real Woodie, one of the stickers, brought up on the screen as lit dots. The picture is made small,
+    // turned to light and dark, and each dot is lit or left dark with what it was out by passed on to the dots after
+    // it (Atkinson's way, from the first Macintosh), so shades come out as patterns of dots. Nothing redraws the art:
+    // these are its own pixels. It comes in from the second drive a few rows at a time, as a picture loads from a disk.
+    var woodie = { n: 0, loading: false, bits: null, tries: 0 }, hold = false;
+    function fetchWoodie() {
+      var from = brood[[0, 3, 1][woodie.n++ % 3]], img = new Image();   // the three that read as dots: the two busiest stickers come out as noise at this size
+      woodie.loading = true; woodie.bits = null; woodie.tries = 0;
+      img.onload = function () {
+        try { woodie.bits = dither(img); } catch (e) {}
+        woodie.loading = false;
+      };
+      img.onerror = function () { woodie.loading = false; };
+      img.src = from.getAttribute("data-src");
+    }
+    function dither(img) {
+      var c = document.createElement("canvas"), g = c.getContext("2d"), i, x, y;
+      c.width = PW; c.height = PH;
+      var k = Math.min(PW / img.naturalWidth, PH / img.naturalHeight), w = img.naturalWidth * k, h = img.naturalHeight * k;
+      g.imageSmoothingQuality = "high";
+      g.drawImage(img, (PW - w) / 2, (PH - h) / 2, w, h);
+      var d = g.getImageData(0, 0, PW, PH).data, v = new Float32Array(PW * PH), out = new Uint8Array(PW * PH);
+      for (i = 0; i < PW * PH; i++) {
+        var light = (0.299 * d[i * 4] + 0.587 * d[i * 4 + 1] + 0.114 * d[i * 4 + 2]) / 255 * (d[i * 4 + 3] / 255);   // on black, as the screen is
+        v[i] = clamp((light - 0.1) / 0.72);
+      }
+      for (y = 0; y < PH; y++) for (x = 0; x < PW; x++) {
+        i = y * PW + x;
+        var on = v[i] > 0.5, e = (v[i] - (on ? 1 : 0)) / 8;
+        out[i] = on ? 1 : 0;
+        if (x + 1 < PW) v[i + 1] += e;
+        if (x + 2 < PW) v[i + 2] += e;
+        if (y + 1 < PH) { if (x > 0) v[i + PW - 1] += e; v[i + PW] += e; if (x + 1 < PW) v[i + PW + 1] += e; }
+        if (y + 2 < PH) v[i + PW * 2] += e;
+      }
+      return out;
+    }
+    function loadPic() {
+      if (woodie.loading && woodie.tries++ < 80) { queue.unshift(loadPic); busy(1, 400); hold = true; return 150; }   // the drive reads until the picture is in
+      if (!woodie.bits) { queue.unshift(say("I/O ERROR"), bell); return 0; }
+      pic = woodie.bits; picRows = 0;
+      var rows = [];
+      for (var y = 0; y < PH; y += 3) rows.push(function () { picRows = Math.min(PH, picRows + 3); busy(1, 300); return 32; });
+      rows.push(function () { if (pal) pal.jolt(); return 260; }, say("AGAIN FOR ANOTHER"));
+      queue = rows.concat(queue);
+      return 0;
+    }
+    function step() {
+      timer = 0;
+      stepping = true;
+      hold = false;
+      var wait = 0, n = 0, all = reduce.matches;   // steps that take no time run together; reduced motion runs them all at once, but for a step that is waiting on a file
+      while (queue.length && n++ < 2000 && (!wait || (all && !hold))) wait = queue.shift()() || 0;
+      stepping = false;
+      show();
+      if (queue.length || wait) timer = setTimeout(step, all && !hold ? 0 : wait);
+    }
+    function go() { if (!timer && !stepping) step(); }
+    function key(ch) { if (powered) { queue.push(typed(ch)); go(); } }
+
+    function boot() {                  // start up: the first drive reads, the name comes up, then the prompt
+      clearTimeout(timer); timer = 0;
+      asking = false; line = ""; text = []; home(0);
+      el.classList.remove("is-booting"); void el.offsetWidth; el.classList.add("is-booting");
+      queue = [pause(420), function () { busy(0, 1100); text[0] = "      CHRIS ]["; return 850; }, function () { cy = 2; return 0; }, ready, pause(260)];
+      go();
+    }
+    function power(on) {
+      powered = on;
+      el.classList.toggle("is-power", on);
+      clearInterval(blinker);
+      if (on) {
+        ran = {}; slot = -1;
+        blinker = setInterval(function () { blink = !blink; if (asking && !queue.length) show(); }, 380);
+        boot();
+      } else {                         // gone from the screen: it is switched off, and starts fresh next time
+        clearTimeout(timer); timer = 0; queue = []; monitor = true;
+        bays.forEach(function (b) { b.classList.remove("is-open", "is-busy"); });
+        Array.prototype.forEach.call(keysBox.querySelectorAll(".is-locked"), function (k) { k.classList.remove("is-locked"); });
+        el.classList.remove("is-booting");
+        rig.style.setProperty("--px", 0); rig.style.setProperty("--py", 0);
+      }
+      el.classList.toggle("is-on", on && monitor);
+    }
+
+    // a key of the machine, pressed by the reader
+    function hit(k) {
+      var name = k.getAttribute("data-k");
+      if (name === "RESET") boot();
+      else if (name === "RETURN") key("\n");
+      else if (name === "DELETE" || name === "LEFT") key("\b");
+      else if (name === "SPACE") key(" ");
+      else if (name === "CAPS") k.classList.toggle("is-locked");     // it stays down, as the real one does
+      else if (name.length === 1) key(name);
+    }
+    var byMouse = false;
+    el.addEventListener("pointerdown", function (e) {
+      byMouse = e.pointerType === "mouse";
+      var k = e.target.closest && e.target.closest(".key");
+      if (k && byMouse && !e.button) { e.preventDefault(); hit(k); }   // a mouse acts as it goes down; a finger on release, so a swipe that starts on a key still scrolls
+    });
+    el.addEventListener("click", function (e) {
+      var t = e.target.closest ? e.target : null;
+      if (!t) return;
+      var k = t.closest(".key"), bay = t.closest(".bay");
+      if (k && !byMouse) { press(k, 130); hit(k); }
+      if (bay) {
+        var open = bay.classList.toggle("is-open");
+        if (!open) busy(bays.indexOf(bay), 800);      // the door is down again: the drive finds its disk
+      }
+      if (t === monKey) { monitor = !monitor; el.classList.toggle("is-on", powered && monitor); }
+    });
+    // the reader's own keyboard, while the machine is on screen. Space is left to the page, which scrolls with it.
+    var live = false;
+    window.addEventListener("keydown", function (e) {
+      if (!live || e.metaKey || e.ctrlKey || e.altKey || e.defaultPrevented) return;
+      if (e.target && e.target.closest && e.target.closest("a, button, input, textarea, select, [role=slider]")) return;
+      var k = e.key;
+      if (k === "Enter") key("\n");
+      else if (k === "Backspace") key("\b");
+      else if (k.length === 1 && k !== " ") { k = k.toUpperCase(); if (GLYPH[k.charCodeAt(0) - 32]) key(k); else press(keyOf[k]); }
+    });
+    // it turns a little toward the pointer
+    var at = null, pointer = "";
+    window.addEventListener("pointermove", function (e) {
+      if (!live || !at || e.pointerType !== "mouse" || reduce.matches) return;
+      var px = Math.max(-1, Math.min(1, (e.clientX - at.x - at.w / 2) / (vw * 0.5))), py = Math.max(-1, Math.min(1, (e.clientY - at.y - at.h / 2) / (vh * 0.5)));
+      var sig = px.toFixed(2) + "," + py.toFixed(2);
+      if (sig === pointer) return;
+      pointer = sig;
+      rig.style.setProperty("--px", px.toFixed(2));
+      rig.style.setProperty("--py", py.toFixed(2));
+    }, { passive: true });
+
+    // `k` is how present it is, 0 to 1. `p` is how far through its lines the scroll is, or null while another section is on screen.
+    var shownAt = -1, placed = "";
+    function use(k, p) {
+      if (p !== null) {                // it stands where a frame would, and stays there as it fades when its section leaves
+        var t = fitted(STATES.hello.box), sig = [t.x, t.y, t.w, t.h].map(Math.round).join(",");
+        if (sig !== placed) {
+          placed = sig; at = t;
+          el.style.transform = "translate(" + Math.round(t.x) + "px, " + Math.round(t.y) + "px)";
+          el.style.width = Math.round(t.w) + "px";
+          el.style.height = Math.round(t.h) + "px";
+        }
+        if (!cssTurn) rig.style.setProperty("--turn", p.toFixed(3));
+      }
+      if (k !== shownAt) {
+        shownAt = k;
+        el.style.opacity = k.toFixed(3);
+        el.style.visibility = k > 0.01 ? "visible" : "hidden";
+        el.style.display = k > 0.01 ? "" : "none";     // off the page altogether while unseen: each of its faces is a layer of its own
+        live = k > 0.6;
+        el.classList.toggle("is-live", live);
+      }
+      if (k > 0.5 && !powered) power(true); else if (k < 0.01 && powered) power(false);
+      if (p === null || !powered) return;
+      var s = 0;
+      while (s < seg.lines.length - 1 && p >= seg.starts[s + 1]) s++;
+      if (s === slot) return;
+      slot = s;
+      var cmd = ["HELLO", "CATALOG", "RUN"][s];
+      if (cmd && !ran[s]) { ran[s] = true; auto(cmd); }
+    }
+    return { use: use };
+  })();
+
   /* ---------- the frame ---------- */
   // One outlined frame stays on screen and takes the shape of a screen for each statement.
 
@@ -2303,6 +2981,7 @@ html:not(.js) .reel { position: relative; }
     make:     { ratio: 4 / 5,   label: "Tap or click to add a floor", draw: "game" },
     art:      { ratio: 0, hidden: true },      // the art itself is on screen
     quiet:    { ratio: 0 },
+    hello:    { ratio: 0, box: { ratio: 0.86 } },   // the computer, which is elements of its own (#iie): `box` is the shape of the room it takes, where a frame would stand
     liftux:   { ratio: 16 / 10, tall: 10 / 16, draw: "merge" },
     tenup:    { ratio: 16 / 10, draw: "web" },
     ultra:    { ratio: 1,       draw: "chain" },
@@ -2355,6 +3034,7 @@ html:not(.js) .reel { position: relative; }
   var raf = 0, last = 0;
   var over = null;           // something a drawing asks to have drawn after the frame, so it stands in front of the border
   var built = 0;             // floors added to the tower by clicking
+  var gearNow = 1;           // the wheel's gear for the section on screen
 
   function resize() {
     vw = document.documentElement.clientWidth;
@@ -2382,6 +3062,7 @@ html:not(.js) .reel { position: relative; }
         q = clamp(-b.top / (b.height - (s.last ? vh : 0)));
       }
     });
+    gearNow = current.gear;
     var borrowed = null, run = 0, sharing = [];
     // One line of the section is on screen at a time. Each line fades in, lights up word by word, and gives way to the next.
     segs.forEach(function (s) {
@@ -2494,7 +3175,7 @@ html:not(.js) .reel { position: relative; }
       var lastPanel = segs[segs.length - 1].panel, cut = lastPanel.offsetHeight - endBox.top;
       lastPanel.style.clipPath = cut > 0 ? "inset(0 0 " + cut.toFixed(1) + "px 0)" : "";
       // The bright clouds thin out near what is read: the words, the frame, the cards or the close, the ticks, the name and the contact link.
-      var st = STATES[active], fr = st.ratio && !st.hidden ? target() : null, also = null;
+      var st = STATES[active], fr = st.ratio && !st.hidden ? target() : st.box ? fitted(st.box) : null, also = null;
       if (current.grid) { var gb = current.grid.getBoundingClientRect(); also = { x: gb.left, y: gb.top, w: gb.width, h: gb.height, k: 1 }; }
       if (endBox.top < vh) {
         var eb = endSay.getBoundingClientRect(), wb2 = endWrite.getBoundingClientRect();
@@ -2536,6 +3217,10 @@ html:not(.js) .reel { position: relative; }
       return { x: (vw - big.w) / 2, y: (vh - foot - big.h) / 2, w: big.w, h: big.h };
     }
     if (!st.ratio) return { x: m, y: m, w: vw - 2 * m, h: vh - foot - 2 * m };
+    return fitted(st);
+  }
+  // A frame of a state's shape, fitted to the stage on screen.
+  function fitted(st) {
     // The frame sits on the grid. Its left edge is the stage's left edge: column 7 on a wide screen, the side margin
     // on a narrow one, where the words start too. It is as wide as the stage if its height allows, so a wide frame
     // ends at the right margin, under the contact link, or a little before the ticks where they sit inside that margin. The frame and its label are centred in the height they have.
@@ -3575,6 +4260,7 @@ html:not(.js) .reel { position: relative; }
     var posterOn = presence.poster * shown;
     posterKey.style.opacity = posterOn;
     posterKey.classList.toggle("is-on", posterOn > 0.6 && !cinema.on);
+    if (iie) iie.use(presence.hello, active === "hello" ? progress : null);
     grove.style.opacity = presence.character;
     slate.style.opacity = presence.roblox;
     paperLayer.style.opacity = presence.art;
@@ -3649,6 +4335,7 @@ html:not(.js) .reel { position: relative; }
       make:     { eyes: "open",  mouth: "smile", watch: true },
       art:      { eyes: "star",  mouth: "big",   watch: true },
       quiet:    { eyes: "open",  mouth: "smile", read: true },
+      hello:    { eyes: "star",  mouth: "big",   watch: true },
       liftux:   { eyes: "happy", mouth: "big",   watch: true },
       tenup:    { eyes: "open",  mouth: "smile", watch: true },
       ultra:    { eyes: "open",  mouth: "big",   watch: true },
@@ -3777,7 +4464,7 @@ html:not(.js) .reel { position: relative; }
   /* ---------- the wheel: smoothed, and settling on a line's rest point ---------- */
   // Only the mouse wheel and trackpad are changed. Touch, keys, the scrollbar and links scroll as the browser does.
 
-  var GEAR = 1;              // how much of each wheel step is used
+  var GEAR = 1;              // how much of each wheel step is used. A section can lower it for itself (`data-gear`)
   var WEIGHT = 190;          // ms. Higher is heavier.
   var glide = { at: 0, to: 0, raf: 0, last: 0 };
 
@@ -3804,7 +4491,7 @@ html:not(.js) .reel { position: relative; }
     var unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? vh : 1;
     if (!glide.raf) glide.at = glide.to = window.scrollY;
     var max = document.documentElement.scrollHeight - vh;
-    glide.to = Math.max(0, Math.min(max, glide.to + e.deltaY * unit * GEAR));
+    glide.to = Math.max(0, Math.min(max, glide.to + e.deltaY * unit * GEAR * gearNow));
     if (e.deltaY) wheelDir = e.deltaY > 0 ? 1 : -1;
     if (!glide.raf) glide.raf = requestAnimationFrame(glideStep);
     clearTimeout(settleTimer);
